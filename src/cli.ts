@@ -14,14 +14,14 @@ const program = new Command();
 
 program
   .name('repvet')
-  .description('Check package maintainer reputation (npm, PyPI, crates.io, RubyGems, Go, Packagist, NuGet)')
+  .description('Check package maintainer reputation (12 ecosystems supported)')
   .version('0.2.0');
 
 program
   .command('check <package>')
   .description('Check reputation of a single package')
   .option('--json', 'Output as JSON')
-  .option('-e, --ecosystem <ecosystem>', 'Package ecosystem (npm, pypi, crates, rubygems, go, packagist, nuget)', 'npm')
+  .option('-e, --ecosystem <ecosystem>', 'Ecosystem: npm, pypi, crates, rubygems, go, packagist, nuget, maven, hex, pub, cpan, cocoapods', 'npm')
   .action(async (packageName: string, options: { json?: boolean; ecosystem?: string }) => {
     try {
       const ecosystem = validateEcosystem(options.ecosystem || 'npm');
@@ -122,7 +122,7 @@ program
   });
 
 function validateEcosystem(eco: string): Ecosystem {
-  const valid = ['npm', 'pypi', 'crates', 'rubygems', 'go', 'packagist', 'nuget'];
+  const valid = ['npm', 'pypi', 'crates', 'rubygems', 'go', 'packagist', 'nuget', 'maven', 'hex', 'pub', 'cpan', 'cocoapods'];
   if (!valid.includes(eco.toLowerCase())) {
     throw new Error(`Invalid ecosystem: ${eco}. Use: ${valid.join(', ')}`);
   }
@@ -237,6 +237,101 @@ function parseDepFile(fileName: string, content: string): { packages: string[]; 
       packages.push(match[1]);
     }
     return { packages, ecosystem: 'nuget' };
+  }
+  
+  if (fileName === 'pom.xml') {
+    // Parse Maven POM
+    const packages: string[] = [];
+    const depPattern = /<dependency>[\s\S]*?<groupId>([^<]+)<\/groupId>[\s\S]*?<artifactId>([^<]+)<\/artifactId>/g;
+    let match;
+    while ((match = depPattern.exec(content)) !== null) {
+      packages.push(`${match[1]}:${match[2]}`);
+    }
+    return { packages, ecosystem: 'maven' };
+  }
+  
+  if (fileName === 'build.gradle' || fileName === 'build.gradle.kts') {
+    // Parse Gradle (Java/Kotlin)
+    const packages: string[] = [];
+    const depPattern = /(?:implementation|api|compileOnly|runtimeOnly|testImplementation)\s*[(\s]['"]([^'"]+)['"]/g;
+    let match;
+    while ((match = depPattern.exec(content)) !== null) {
+      // Convert "group:artifact:version" to "group:artifact"
+      const parts = match[1].split(':');
+      if (parts.length >= 2) {
+        packages.push(`${parts[0]}:${parts[1]}`);
+      }
+    }
+    return { packages, ecosystem: 'maven' };
+  }
+  
+  if (fileName === 'mix.exs') {
+    // Parse Elixir Mix dependencies
+    const packages: string[] = [];
+    const depPattern = /\{:([a-z_]+),/g;
+    let match;
+    while ((match = depPattern.exec(content)) !== null) {
+      packages.push(match[1]);
+    }
+    return { packages, ecosystem: 'hex' };
+  }
+  
+  if (fileName === 'pubspec.yaml') {
+    // Parse Dart/Flutter pubspec
+    const packages: string[] = [];
+    const lines = content.split('\n');
+    let inDependencies = false;
+    
+    for (const line of lines) {
+      if (line.match(/^dependencies:/)) {
+        inDependencies = true;
+        continue;
+      }
+      if (line.match(/^[a-z_]+:/) && !line.startsWith(' ')) {
+        inDependencies = false;
+        continue;
+      }
+      if (inDependencies) {
+        const match = line.match(/^\s+([a-z_0-9]+):/);
+        if (match && !match[1].startsWith('flutter')) {
+          packages.push(match[1]);
+        }
+      }
+    }
+    return { packages, ecosystem: 'pub' };
+  }
+  
+  if (fileName === 'cpanfile' || fileName === 'Makefile.PL' || fileName === 'Build.PL') {
+    // Parse Perl dependencies
+    const packages: string[] = [];
+    const requiresPattern = /requires\s+['"]([^'"]+)['"]/g;
+    let match;
+    while ((match = requiresPattern.exec(content)) !== null) {
+      packages.push(match[1].replace(/::/g, '-'));
+    }
+    return { packages, ecosystem: 'cpan' };
+  }
+  
+  if (fileName === 'Podfile') {
+    // Parse CocoaPods
+    const packages: string[] = [];
+    const podPattern = /pod\s+['"]([^'"]+)['"]/g;
+    let match;
+    while ((match = podPattern.exec(content)) !== null) {
+      packages.push(match[1]);
+    }
+    return { packages, ecosystem: 'cocoapods' };
+  }
+  
+  if (fileName === 'Package.swift') {
+    // Parse Swift Package Manager
+    const packages: string[] = [];
+    const depPattern = /\.package\s*\([^)]*name:\s*"([^"]+)"/g;
+    let match;
+    while ((match = depPattern.exec(content)) !== null) {
+      packages.push(match[1]);
+    }
+    return { packages, ecosystem: 'cocoapods' }; // Use CocoaPods for Swift too
   }
   
   throw new Error(`Unsupported file format: ${fileName}`);

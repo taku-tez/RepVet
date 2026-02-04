@@ -34,8 +34,10 @@ const OSV_API = 'https://api.osv.dev/v1';
 /**
  * Query OSV for vulnerabilities affecting a package
  */
+type OSVEcosystem = 'npm' | 'PyPI' | 'crates.io' | 'Go' | 'RubyGems' | 'Packagist' | 'NuGet' | 'Maven' | 'Hex' | 'Pub' | 'CPAN' | 'CocoaPods';
+
 export async function queryPackageVulnerabilities(
-  ecosystem: 'npm' | 'PyPI' | 'crates.io' | 'Go' | 'RubyGems' | 'Packagist' | 'NuGet',
+  ecosystem: OSVEcosystem,
   packageName: string
 ): Promise<OSVVulnerability[]> {
   try {
@@ -89,7 +91,7 @@ export interface VulnerabilityAnalysis {
 }
 
 export async function analyzeVulnerabilityHistory(
-  ecosystem: 'npm' | 'PyPI' | 'crates.io' | 'Go' | 'RubyGems' | 'Packagist' | 'NuGet',
+  ecosystem: OSVEcosystem,
   packageName: string
 ): Promise<VulnerabilityAnalysis> {
   const vulns = await queryPackageVulnerabilities(ecosystem, packageName);

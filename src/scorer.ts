@@ -16,6 +16,11 @@ import { fetchRubyGemsPackageInfo } from './registry/rubygems.js';
 import { fetchGoPackageInfo } from './registry/golang.js';
 import { fetchPackagistPackageInfo } from './registry/packagist.js';
 import { fetchNuGetPackageInfo } from './registry/nuget.js';
+import { fetchMavenPackageInfo } from './registry/maven.js';
+import { fetchHexPackageInfo } from './registry/hex.js';
+import { fetchPubPackageInfo } from './registry/pub.js';
+import { fetchCPANPackageInfo } from './registry/cpan.js';
+import { fetchCocoaPodsPackageInfo } from './registry/cocoapods.js';
 import { parseGitHubUrl, fetchLastCommitDate } from './registry/github.js';
 import { hasMalwareHistory, getMalwareDetails } from './malware/known-packages.js';
 import { analyzeVulnerabilityHistory } from './osv/client.js';
@@ -53,6 +58,11 @@ const ESTABLISHED_THRESHOLDS = {
   rubygems: { downloads: 10000000, releaseCount: 50 },
   packagist: { downloads: 10000000, releaseCount: 100 },
   nuget: { downloads: 10000000, releaseCount: 50 },
+  maven: { downloads: 1000000, releaseCount: 50 },
+  hex: { downloads: 1000000, releaseCount: 30 },
+  pub: { downloads: 1000000, releaseCount: 30 },
+  cpan: { downloads: 100000, releaseCount: 30 },
+  cocoapods: { downloads: 1000000, releaseCount: 30 },
 };
 
 function applyConfidence(points: number, confidence: 'high' | 'medium' | 'low'): number {
@@ -83,13 +93,25 @@ async function fetchPackageByEcosystem(name: string, ecosystem: Ecosystem): Prom
       return fetchPackagistPackageInfo(name);
     case 'nuget':
       return fetchNuGetPackageInfo(name);
+    case 'maven':
+      return fetchMavenPackageInfo(name);
+    case 'hex':
+      return fetchHexPackageInfo(name);
+    case 'pub':
+      return fetchPubPackageInfo(name);
+    case 'cpan':
+      return fetchCPANPackageInfo(name);
+    case 'cocoapods':
+      return fetchCocoaPodsPackageInfo(name);
     default:
       throw new Error(`Unsupported ecosystem: ${ecosystem}`);
   }
 }
 
-function mapEcosystemToOSV(ecosystem: Ecosystem): 'npm' | 'PyPI' | 'crates.io' | 'Go' | 'RubyGems' | 'Packagist' | 'NuGet' {
-  const mapping: Record<Ecosystem, 'npm' | 'PyPI' | 'crates.io' | 'Go' | 'RubyGems' | 'Packagist' | 'NuGet'> = {
+type OSVEcosystem = 'npm' | 'PyPI' | 'crates.io' | 'Go' | 'RubyGems' | 'Packagist' | 'NuGet' | 'Maven' | 'Hex' | 'Pub' | 'CPAN' | 'CocoaPods';
+
+function mapEcosystemToOSV(ecosystem: Ecosystem): OSVEcosystem {
+  const mapping: Record<Ecosystem, OSVEcosystem> = {
     npm: 'npm',
     pypi: 'PyPI',
     crates: 'crates.io',
@@ -97,6 +119,11 @@ function mapEcosystemToOSV(ecosystem: Ecosystem): 'npm' | 'PyPI' | 'crates.io' |
     rubygems: 'RubyGems',
     packagist: 'Packagist',
     nuget: 'NuGet',
+    maven: 'Maven',
+    hex: 'Hex',
+    pub: 'Pub',
+    cpan: 'CPAN',
+    cocoapods: 'CocoaPods',
   };
   return mapping[ecosystem];
 }
