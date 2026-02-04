@@ -22,7 +22,9 @@ import { fetchPubPackageInfo, checkPubDiscontinued, PubPackageData } from './reg
 import { fetchCPANPackageInfo, checkCPANOwnershipTransfer, checkCPANDeprecated, CPANPackageData } from './registry/cpan.js';
 import { fetchCocoaPodsPackageInfo, checkCocoaPodsDeprecated, checkCocoaPodsOwnershipTransfer, CocoaPodsPackageData } from './registry/cocoapods.js';
 import { fetchCondaPackageInfo, checkCondaOwnershipTransfer, CondaPackageData } from './registry/conda.js';
-import { parseGitHubUrl, fetchLastCommitDate } from './registry/github.js';
+import { parseRepoUrl, fetchLastCommitDate } from './registry/github.js';
+import { fetchGitLabRepoInfo } from './registry/gitlab.js';
+import { fetchBitbucketRepoInfo } from './registry/bitbucket.js';
 import { hasMalwareHistory, getMalwareDetails } from './malware/known-packages.js';
 import { analyzeVulnerabilityHistory, OSVEcosystem } from './osv/client.js';
 
@@ -687,38 +689,54 @@ export async function checkPackageReputation(
     }
   }
   
-  // Check 4: Last commit staleness
+  // Check 4: Last commit staleness (GitHub, GitLab, Bitbucket)
   if (packageInfo.repository?.url) {
-    const githubInfo = parseGitHubUrl(packageInfo.repository.url);
-    if (githubInfo) {
-      const commitInfo = await fetchLastCommitDate(githubInfo.owner, githubInfo.repo);
-      if (commitInfo.lastCommitDate) {
-        lastCommitDate = commitInfo.lastCommitDate;
-        const days = commitInfo.daysSinceLastCommit;
-        
-        if (days !== null) {
-          if (days > 365 * 3) {
-            deductions.push({
-              reason: `Last commit over 3 years ago (${Math.round(days / 365)} years)`,
-              points: DEDUCTIONS.STALE_3_YEARS,
-              confidence: 'high',
-            });
-            score -= DEDUCTIONS.STALE_3_YEARS;
-          } else if (days > 365 * 2) {
-            deductions.push({
-              reason: `Last commit over 2 years ago (${Math.round(days / 365)} years)`,
-              points: DEDUCTIONS.STALE_2_YEARS,
-              confidence: 'high',
-            });
-            score -= DEDUCTIONS.STALE_2_YEARS;
-          } else if (days > 365) {
-            deductions.push({
-              reason: `Last commit over 1 year ago (${days} days)`,
-              points: DEDUCTIONS.STALE_1_YEAR,
-              confidence: 'high',
-            });
-            score -= DEDUCTIONS.STALE_1_YEAR;
-          }
+    const repoInfo = parseRepoUrl(packageInfo.repository.url);
+    if (repoInfo) {
+      let days: number | null = null;
+      
+      if (repoInfo.host === 'github') {
+        const commitInfo = await fetchLastCommitDate(repoInfo.owner, repoInfo.repo);
+        if (commitInfo.lastCommitDate) {
+          lastCommitDate = commitInfo.lastCommitDate;
+          days = commitInfo.daysSinceLastCommit;
+        }
+      } else if (repoInfo.host === 'gitlab') {
+        const gitlabInfo = await fetchGitLabRepoInfo(repoInfo.owner, repoInfo.repo);
+        if (gitlabInfo.lastActivityAt) {
+          lastCommitDate = gitlabInfo.lastActivityAt;
+          days = gitlabInfo.daysSinceLastActivity;
+        }
+      } else if (repoInfo.host === 'bitbucket') {
+        const bitbucketInfo = await fetchBitbucketRepoInfo(repoInfo.owner, repoInfo.repo);
+        if (bitbucketInfo.updatedOn) {
+          lastCommitDate = bitbucketInfo.updatedOn;
+          days = bitbucketInfo.daysSinceLastUpdate;
+        }
+      }
+      
+      if (days !== null) {
+        if (days > 365 * 3) {
+          deductions.push({
+            reason: `Last commit over 3 years ago (${Math.round(days / 365)} years)`,
+            points: DEDUCTIONS.STALE_3_YEARS,
+            confidence: 'high',
+          });
+          score -= DEDUCTIONS.STALE_3_YEARS;
+        } else if (days > 365 * 2) {
+          deductions.push({
+            reason: `Last commit over 2 years ago (${Math.round(days / 365)} years)`,
+            points: DEDUCTIONS.STALE_2_YEARS,
+            confidence: 'high',
+          });
+          score -= DEDUCTIONS.STALE_2_YEARS;
+        } else if (days > 365) {
+          deductions.push({
+            reason: `Last commit over 1 year ago (${days} days)`,
+            points: DEDUCTIONS.STALE_1_YEAR,
+            confidence: 'high',
+          });
+          score -= DEDUCTIONS.STALE_1_YEAR;
         }
       }
     }

@@ -4,6 +4,58 @@
 
 import { fetchWithRetry } from './utils.js';
 
+export type RepoHost = 'github' | 'gitlab' | 'bitbucket';
+
+export interface ParsedRepoUrl {
+  host: RepoHost;
+  owner: string;
+  repo: string;
+}
+
+/**
+ * Parse repository URL to extract host, owner, and repo
+ * Supports GitHub, GitLab, and Bitbucket
+ */
+export function parseRepoUrl(url: string): ParsedRepoUrl | null {
+  // GitHub patterns
+  const githubPatterns = [
+    /github\.com[/:]([\w.-]+)\/([\w.-]+?)(?:\.git)?$/,
+    /github\.com[/:]([\w.-]+)\/([\w.-]+)/,
+  ];
+  for (const pattern of githubPatterns) {
+    const match = url.match(pattern);
+    if (match) {
+      return { host: 'github', owner: match[1], repo: match[2] };
+    }
+  }
+  
+  // GitLab patterns (including self-hosted and groups)
+  const gitlabPatterns = [
+    /gitlab\.com[/:]([\w.-]+(?:\/[\w.-]+)*)\/([\w.-]+?)(?:\.git)?$/,
+    /gitlab\.com[/:]([\w.-]+)\/([\w.-]+)/,
+  ];
+  for (const pattern of gitlabPatterns) {
+    const match = url.match(pattern);
+    if (match) {
+      return { host: 'gitlab', owner: match[1], repo: match[2] };
+    }
+  }
+  
+  // Bitbucket patterns
+  const bitbucketPatterns = [
+    /bitbucket\.org[/:]([\w.-]+)\/([\w.-]+?)(?:\.git)?$/,
+    /bitbucket\.org[/:]([\w.-]+)\/([\w.-]+)/,
+  ];
+  for (const pattern of bitbucketPatterns) {
+    const match = url.match(pattern);
+    if (match) {
+      return { host: 'bitbucket', owner: match[1], repo: match[2] };
+    }
+  }
+  
+  return null;
+}
+
 export interface GitHubCommitInfo {
   lastCommitDate: string | null;
   daysSinceLastCommit: number | null;
