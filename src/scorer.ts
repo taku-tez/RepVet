@@ -40,6 +40,7 @@ const DEDUCTIONS = {
   
   // Security history
   MALWARE_HISTORY: 50,
+  SECURITY_HOLDING: 50,     // npm replaced this with security placeholder (was malicious)
   DEPRECATED: 10,           // Package marked as deprecated
   
   // Vulnerabilities
@@ -167,6 +168,16 @@ export async function checkPackageReputation(
         confidence: 'high',
       });
       score -= DEDUCTIONS.DEPRECATED;
+    }
+    
+    // Check 0.5: Security holding package (npm replaced malicious package)
+    if (npmData.isSecurityHoldingPackage) {
+      deductions.push({
+        reason: 'Security holding package - npm removed malicious versions',
+        points: DEDUCTIONS.SECURITY_HOLDING,
+        confidence: 'high',
+      });
+      score -= DEDUCTIONS.SECURITY_HOLDING;
     }
   }
   

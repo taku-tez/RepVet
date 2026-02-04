@@ -15,6 +15,7 @@ export interface NpmPackageData {
   ecosystem: 'npm';
   downloads?: number;
   deprecated?: string;
+  isSecurityHoldingPackage?: boolean;  // npm replaced malicious package
 }
 
 export async function fetchPackageInfo(packageName: string): Promise<NpmPackageData | null> {
@@ -35,6 +36,15 @@ export async function fetchPackageInfo(packageName: string): Promise<NpmPackageD
     // Check if latest version is deprecated
     const deprecated = latestData['deprecated'] as string | undefined;
     
+    // Check if this is a security holding package (npm replaced malicious package)
+    // Indicators: version is 0.0.1-security, description contains "security holding"
+    const description = (latestData['description'] as string) || (data['description'] as string) || '';
+    const isSecurityHoldingPackage = 
+      latestVersion === '0.0.1-security' || 
+      latestVersion.endsWith('-security') ||
+      description.toLowerCase().includes('security holding') ||
+      description.toLowerCase().includes('security placeholder');
+    
     return {
       name: data['name'] as string,
       version: latestVersion,
@@ -43,6 +53,7 @@ export async function fetchPackageInfo(packageName: string): Promise<NpmPackageD
       time: data['time'] as Record<string, string>,
       ecosystem: 'npm',
       deprecated,
+      isSecurityHoldingPackage,
     };
   } catch (error) {
     throw new Error(`Failed to fetch package info: ${error}`);
