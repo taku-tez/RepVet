@@ -55,7 +55,7 @@ export async function fetchGoPackageInfo(modulePath: string): Promise<PackageInf
     
     // Extract maintainers from module path (github.com/user/repo -> user)
     const maintainers: Array<{ name: string }> = [];
-    const githubMatch = normalizedPath.match(/github\.com\/([^\/]+)/);
+    const githubMatch = normalizedPath.match(/github\.com\/([^/]+)/);
     if (githubMatch) {
       maintainers.push({ name: githubMatch[1] });
     }
@@ -75,6 +75,7 @@ export async function fetchGoPackageInfo(modulePath: string): Promise<PackageInf
       ecosystem: 'go',
     };
   } catch (error) {
-    throw new Error(`Failed to fetch Go module info: ${error}`);
+    const message = error instanceof Error ? error.message : String(error);
+    throw new Error(`Failed to fetch Go module info: ${message}`);
   }
 }

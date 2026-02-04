@@ -56,7 +56,7 @@ export async function fetchHexPackageInfo(packageName: string): Promise<PackageI
     // Repository URL
     let repoUrl: string | undefined;
     if (data.meta?.links) {
-      for (const [key, url] of Object.entries(data.meta.links)) {
+      for (const [_key, url] of Object.entries(data.meta.links)) {
         if (url.includes('github.com') || url.includes('gitlab.com')) {
           repoUrl = url;
           break;
@@ -74,6 +74,7 @@ export async function fetchHexPackageInfo(packageName: string): Promise<PackageI
       downloads: data.downloads?.all,
     };
   } catch (error) {
-    throw new Error(`Failed to fetch Hex package info: ${error}`);
+    const message = error instanceof Error ? error.message : String(error);
+    throw new Error(`Failed to fetch Hex package info: ${message}`);
   }
 }

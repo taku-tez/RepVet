@@ -117,6 +117,7 @@ export async function fetchNuGetPackageInfo(packageName: string): Promise<Packag
       ecosystem: 'nuget',
     };
   } catch (error) {
-    throw new Error(`Failed to fetch NuGet package info: ${error}`);
+    const message = error instanceof Error ? error.message : String(error);
+    throw new Error(`Failed to fetch NuGet package info: ${message}`);
   }
 }

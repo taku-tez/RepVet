@@ -72,7 +72,7 @@ export async function fetchPubPackageInfo(packageName: string): Promise<PackageI
     // If still no maintainers, try to extract from repository URL
     if (maintainers.length === 0) {
       const repoUrl = pubspec.repository || pubspec.homepage || '';
-      const githubMatch = repoUrl.match(/github\.com\/([^\/]+)/);
+      const githubMatch = repoUrl.match(/github\.com\/([^/]+)/);
       if (githubMatch) {
         maintainers.push({ name: githubMatch[1] });
       }
@@ -99,6 +99,7 @@ export async function fetchPubPackageInfo(packageName: string): Promise<PackageI
       ecosystem: 'pub',
     };
   } catch (error) {
-    throw new Error(`Failed to fetch pub.dev package info: ${error}`);
+    const message = error instanceof Error ? error.message : String(error);
+    throw new Error(`Failed to fetch pub.dev package info: ${message}`);
   }
 }

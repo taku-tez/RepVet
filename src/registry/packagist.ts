@@ -73,6 +73,7 @@ export async function fetchPackagistPackageInfo(packageName: string): Promise<Pa
       downloads: pkg.downloads?.total,
     };
   } catch (error) {
-    throw new Error(`Failed to fetch Packagist package info: ${error}`);
+    const message = error instanceof Error ? error.message : String(error);
+    throw new Error(`Failed to fetch Packagist package info: ${message}`);
   }
 }

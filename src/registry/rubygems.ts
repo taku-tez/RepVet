@@ -67,7 +67,8 @@ export async function fetchRubyGemsPackageInfo(packageName: string): Promise<Pac
       downloads: data.downloads,
     };
   } catch (error) {
-    throw new Error(`Failed to fetch RubyGems package info: ${error}`);
+    const message = error instanceof Error ? error.message : String(error);
+    throw new Error(`Failed to fetch RubyGems package info: ${message}`);
   }
 }
 
@@ -87,7 +88,8 @@ export async function checkRubyGemsOwnershipTransfer(packageName: string): Promi
       return { transferred: false, confidence: 'low' };
     }
     
-    const owners = await ownersResponse.json() as Array<{
+    // Parse owners to verify API response
+    const _owners = await ownersResponse.json() as Array<{
       id: number;
       handle: string;
     }>;

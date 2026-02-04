@@ -174,6 +174,7 @@ export async function fetchPyPIPackageInfo(packageName: string): Promise<Package
       downloads,
     };
   } catch (error) {
-    throw new Error(`Failed to fetch PyPI package info: ${error}`);
+    const message = error instanceof Error ? error.message : String(error);
+    throw new Error(`Failed to fetch PyPI package info: ${message}`);
   }
 }

@@ -1,6 +1,6 @@
 # RepVet 🔍
 
-Maintainer reputation checker for npm, PyPI, and crates.io packages. Part of the **xxVet** security CLI series.
+Maintainer reputation checker for **12 package ecosystems**. Part of the **xxVet** security CLI series.
 
 [![npm version](https://img.shields.io/npm/v/repvet.svg)](https://www.npmjs.com/package/repvet)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -14,6 +14,23 @@ Supply chain attacks often exploit:
 - ⚠️ **Deprecated packages** still in use
 
 RepVet helps you identify risky dependencies before they become a problem.
+
+## Supported Ecosystems
+
+| Ecosystem | Language | Registry | Deprecated | Ownership | Vulns |
+|-----------|----------|----------|------------|-----------|-------|
+| npm | JavaScript/TypeScript | npmjs.com | ✅ | ✅ | ✅ OSV |
+| PyPI | Python | pypi.org | ❌ | ❌ | ✅ OSV |
+| crates.io | Rust | crates.io | ❌ | ✅ | ✅ OSV |
+| RubyGems | Ruby | rubygems.org | ❌ | ❌ | ✅ OSV |
+| Go | Go | proxy.golang.org | ❌ | ❌ | ✅ OSV |
+| Packagist | PHP | packagist.org | ❌ | ❌ | ✅ OSV |
+| NuGet | .NET | nuget.org | ❌ | ❌ | ✅ OSV |
+| Maven | Java/Kotlin | maven.org | ❌ | ❌ | ✅ OSV |
+| Hex | Elixir/Erlang | hex.pm | ❌ | ❌ | ✅ OSV |
+| pub.dev | Dart/Flutter | pub.dev | ❌ | ❌ | ✅ OSV |
+| CPAN | Perl | metacpan.org | ❌ | ❌ | ✅ OSV |
+| CocoaPods | Swift/ObjC | cocoapods.org | ❌ | ❌ | ✅ OSV |
 
 ## Installation
 
@@ -43,19 +60,76 @@ repvet check requests -e pypi
 # crates.io
 repvet check serde -e crates
 # → Score: 97/100 (LOW risk)
+
+# RubyGems
+repvet check rails -e rubygems
+
+# Go modules
+repvet check github.com/gin-gonic/gin -e go
+
+# PHP Composer
+repvet check laravel/framework -e packagist
+
+# .NET
+repvet check Newtonsoft.Json -e nuget
+
+# Java/Kotlin
+repvet check org.apache.commons:commons-lang3 -e maven
+
+# Elixir
+repvet check phoenix -e hex
+
+# Dart/Flutter
+repvet check http -e pub
+
+# Perl
+repvet check Moose -e cpan
+
+# Swift/Objective-C
+repvet check Alamofire -e cocoapods
 ```
 
 ### Scan dependency files
 
 ```bash
-# package.json (npm)
+# npm
 repvet scan ./package.json
 
-# requirements.txt (PyPI)
+# Python
 repvet scan ./requirements.txt
 
-# Cargo.toml (Rust)
+# Rust
 repvet scan ./Cargo.toml
+
+# Ruby
+repvet scan ./Gemfile
+
+# Go
+repvet scan ./go.mod
+
+# PHP
+repvet scan ./composer.json
+
+# .NET
+repvet scan ./MyProject.csproj
+
+# Java Maven
+repvet scan ./pom.xml
+
+# Java Gradle
+repvet scan ./build.gradle
+
+# Elixir
+repvet scan ./mix.exs
+
+# Dart/Flutter
+repvet scan ./pubspec.yaml
+
+# Perl
+repvet scan ./cpanfile
+
+# Swift/Objective-C
+repvet scan ./Podfile
 
 # Filter by threshold
 repvet scan ./package.json --threshold 80
@@ -78,6 +152,7 @@ RepVet uses a **deduction-based** scoring system starting at 100:
 | Check | Deduction | Notes |
 |-------|-----------|-------|
 | Past malware incident | -50 | Known supply chain attacks |
+| Security holding package | -50 | npm replaced malicious package |
 | Critical vulns in history | -15 | From OSV database |
 | Ownership transfer | -15 | Suspicious rapid changes |
 | High severity vulns | -10 | From OSV database |
@@ -107,23 +182,21 @@ Established projects (high downloads, many releases) get lower confidence penalt
 | 40-59 | HIGH | 🔴 Avoid if possible |
 | 0-39 | CRITICAL | ❌ Do not use |
 
-## Ecosystems
-
-| Ecosystem | Registry | Deprecated | Ownership | Vulns |
-|-----------|----------|------------|-----------|-------|
-| npm | ✅ | ✅ | ✅ | ✅ OSV |
-| PyPI | ✅ | ❌ | ❌ | ✅ OSV |
-| crates.io | ✅ | ❌ | ✅ | ✅ OSV |
-
 ## Malware Database
 
-RepVet includes a database of 30+ known malicious packages:
+RepVet includes a database of 30+ known malicious packages across multiple ecosystems:
 
-- **Supply chain attacks**: event-stream, coa, rc, ua-parser-js
-- **Typosquatting**: crossenv, mongose, loadsh, babelcli
-- **Sabotage**: colors, faker
-- **Protestware**: node-ipc
-- **Crypto stealers**: ethers-provider2, faster_log
+**npm:**
+- Supply chain attacks: event-stream, coa, rc, ua-parser-js
+- Typosquatting: crossenv, mongose, loadsh, babelcli
+- Sabotage: colors, faker
+- Protestware: node-ipc
+
+**PyPI:**
+- num2words (malicious versions 0.5.15/0.5.16 in 2025)
+
+**crates.io:**
+- faster_log (typosquat of fast_log - crypto wallet stealer)
 
 ## CI Integration
 
@@ -133,6 +206,13 @@ RepVet includes a database of 30+ known malicious packages:
   run: |
     npm install -g repvet
     repvet scan ./package.json --fail-under 60
+
+# Multiple ecosystems
+- name: Check all dependencies
+  run: |
+    repvet scan ./package.json --fail-under 60
+    repvet scan ./requirements.txt --fail-under 60
+    repvet scan ./Cargo.toml --fail-under 60
 ```
 
 ## Environment Variables

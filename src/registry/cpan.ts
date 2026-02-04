@@ -97,6 +97,7 @@ export async function fetchCPANPackageInfo(packageName: string): Promise<Package
       ecosystem: 'cpan',
     };
   } catch (error) {
-    throw new Error(`Failed to fetch CPAN package info: ${error}`);
+    const message = error instanceof Error ? error.message : String(error);
+    throw new Error(`Failed to fetch CPAN package info: ${message}`);
   }
 }

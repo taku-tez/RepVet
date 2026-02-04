@@ -77,6 +77,7 @@ export async function fetchCocoaPodsPackageInfo(packageName: string): Promise<Pa
       ecosystem: 'cocoapods',
     };
   } catch (error) {
-    throw new Error(`Failed to fetch CocoaPods package info: ${error}`);
+    const message = error instanceof Error ? error.message : String(error);
+    throw new Error(`Failed to fetch CocoaPods package info: ${message}`);
   }
 }

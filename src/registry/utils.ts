@@ -28,7 +28,7 @@ export const NO_TRANSFER_DETECTED: OwnershipTransferResult = {
  */
 export async function fetchJsonOrNull<T>(
   url: string,
-  options: RequestInit = {}
+  options: Parameters<typeof fetch>[1] = {}
 ): Promise<T | null> {
   const response = await fetch(url, options);
   
@@ -62,7 +62,7 @@ export function cleanRepoUrl(url: string | undefined): string | undefined {
   if (!url) return undefined;
   
   // Clean up git:// URLs
-  let cleaned = url
+  const cleaned = url
     .replace(/^git:\/\//, 'https://')
     .replace(/\.git$/, '');
   
@@ -149,7 +149,7 @@ export function daysBetween(date1: Date | string, date2: Date | string): number 
 /**
  * Get a User-Agent header for API requests
  */
-export function getDefaultHeaders(): HeadersInit {
+export function getDefaultHeaders(): Record<string, string> {
   return {
     'User-Agent': 'RepVet/0.7.0 (https://github.com/taku-tez/RepVet)',
   };

@@ -67,7 +67,8 @@ export async function fetchCratesPackageInfo(packageName: string): Promise<Packa
       downloads: data.crate.downloads,
     };
   } catch (error) {
-    throw new Error(`Failed to fetch crates.io package info: ${error}`);
+    const message = error instanceof Error ? error.message : String(error);
+    throw new Error(`Failed to fetch crates.io package info: ${message}`);
   }
 }
 

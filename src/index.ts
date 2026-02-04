@@ -19,5 +19,7 @@ export { fetchCPANPackageInfo } from './registry/cpan.js';
 export { fetchCocoaPodsPackageInfo } from './registry/cocoapods.js';
 export { parseGitHubUrl, fetchLastCommitDate } from './registry/github.js';
 export { hasMalwareHistory, getMalwareDetails, KNOWN_MALWARE_PACKAGES } from './malware/known-packages.js';
+export type { OwnershipTransferResult } from './registry/utils.js';
+export { cleanRepoUrl, isValidRepoUrl, parseMaintainerString } from './registry/utils.js';
 export { queryPackageVulnerabilities, analyzeVulnerabilityHistory } from './osv/client.js';
 export * from './types.js';

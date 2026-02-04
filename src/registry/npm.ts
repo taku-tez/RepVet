@@ -2,8 +2,7 @@
  * npm Registry API
  */
 
-import { PackageInfo } from '../types.js';
-import { OwnershipTransferResult, NO_TRANSFER_DETECTED, fetchJsonOrNull } from './utils.js';
+import { OwnershipTransferResult, NO_TRANSFER_DETECTED } from './utils.js';
 
 const NPM_REGISTRY = 'https://registry.npmjs.org';
 

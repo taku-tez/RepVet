@@ -52,7 +52,7 @@ export async function fetchMavenPackageInfo(coordinate: string): Promise<Package
     const time: Record<string, string> = {};
     
     // Try to get POM for latest version to extract developer info
-    let maintainers: Array<{ name: string }> = [];
+    const maintainers: Array<{ name: string }> = [];
     
     if (latestVersion) {
       try {
@@ -106,6 +106,7 @@ export async function fetchMavenPackageInfo(coordinate: string): Promise<Package
       downloads: versions.length * 10000, // Rough estimate based on version count
     };
   } catch (error) {
-    throw new Error(`Failed to fetch Maven package info: ${error}`);
+    const message = error instanceof Error ? error.message : String(error);
+    throw new Error(`Failed to fetch Maven package info: ${message}`);
   }
 }
