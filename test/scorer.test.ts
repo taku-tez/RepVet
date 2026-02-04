@@ -85,6 +85,23 @@ describe('Scorer', () => {
     });
   });
 
+  describe('NuGet packages', () => {
+    it('should score a healthy NuGet package', async () => {
+      const result = await checkPackageReputation('Newtonsoft.Json', 'nuget');
+      expect(result.score).toBeGreaterThanOrEqual(80);
+      expect(result.ecosystem).toBe('nuget');
+    });
+
+    it('should detect deprecated NuGet packages', async () => {
+      // Microsoft.Azure.DocumentDB is deprecated in favor of Microsoft.Azure.Cosmos
+      const result = await checkPackageReputation('Microsoft.Azure.DocumentDB', 'nuget');
+      const hasDeprecation = result.deductions.some(d => 
+        d.reason.toLowerCase().includes('deprecated')
+      );
+      expect(hasDeprecation).toBe(true);
+    });
+  });
+
   describe('risk levels', () => {
     it('should assign correct risk levels', async () => {
       // HIGH risk (malware)

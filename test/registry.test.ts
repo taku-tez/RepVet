@@ -10,7 +10,7 @@ import { fetchCratesPackageInfo } from '../src/registry/crates.js';
 import { fetchRubyGemsPackageInfo } from '../src/registry/rubygems.js';
 import { fetchGoPackageInfo } from '../src/registry/golang.js';
 import { fetchPackagistPackageInfo } from '../src/registry/packagist.js';
-import { fetchNuGetPackageInfo } from '../src/registry/nuget.js';
+import { fetchNuGetPackageInfo, checkNuGetDeprecated, checkNuGetOwnershipTransfer } from '../src/registry/nuget.js';
 import { fetchHexPackageInfo } from '../src/registry/hex.js';
 import { fetchPubPackageInfo } from '../src/registry/pub.js';
 import { fetchCondaPackageInfo, parseEnvironmentYaml } from '../src/registry/conda.js';
@@ -133,6 +133,50 @@ describe('Registry modules', () => {
       expect(info).not.toBeNull();
       expect(info?.name).toBe('Newtonsoft.Json');
       expect(info?.ecosystem).toBe('nuget');
+    });
+
+    it('should fetch owners for popular packages', async () => {
+      const info = await fetchNuGetPackageInfo('Newtonsoft.Json');
+      expect(info).not.toBeNull();
+      expect(info?.owners).toBeDefined();
+      expect(info?.owners?.length).toBeGreaterThan(0);
+    });
+
+    it('should detect deprecated packages', async () => {
+      // Microsoft.Azure.DocumentDB is deprecated in favor of Microsoft.Azure.Cosmos
+      const result = await checkNuGetDeprecated('Microsoft.Azure.DocumentDB');
+      expect(result.isDeprecated).toBe(true);
+      expect(result.reasons).toContain('Legacy');
+      expect(result.alternatePackage).toBe('Microsoft.Azure.Cosmos');
+    });
+
+    it('should return not deprecated for active packages', async () => {
+      const result = await checkNuGetDeprecated('Newtonsoft.Json');
+      expect(result.isDeprecated).toBe(false);
+    });
+
+    it('should include deprecation info in package data', async () => {
+      const info = await fetchNuGetPackageInfo('Microsoft.Azure.DocumentDB');
+      expect(info).not.toBeNull();
+      expect(info?.deprecated).toBeDefined();
+      expect(info?.deprecated).toContain('Microsoft.Azure.Cosmos');
+    });
+
+    it('should check ownership transfer (no transfer expected for stable packages)', async () => {
+      const result = await checkNuGetOwnershipTransfer('Newtonsoft.Json');
+      expect(result.confidence).toBeDefined();
+      // Newtonsoft.Json has stable authorship (James Newton-King)
+      expect(result.transferred).toBe(false);
+    });
+
+    it('should handle non-existent package in deprecation check', async () => {
+      const result = await checkNuGetDeprecated('this-package-does-not-exist-xyz123');
+      expect(result.isDeprecated).toBe(false);
+    });
+
+    it('should handle non-existent package in ownership check', async () => {
+      const result = await checkNuGetOwnershipTransfer('this-package-does-not-exist-xyz123');
+      expect(result.transferred).toBe(false);
     });
   });
 

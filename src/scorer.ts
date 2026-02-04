@@ -15,7 +15,7 @@ import { fetchCratesPackageInfo, checkCratesOwnershipTransfer } from './registry
 import { fetchRubyGemsPackageInfo } from './registry/rubygems.js';
 import { fetchGoPackageInfo } from './registry/golang.js';
 import { fetchPackagistPackageInfo } from './registry/packagist.js';
-import { fetchNuGetPackageInfo } from './registry/nuget.js';
+import { fetchNuGetPackageInfo, checkNuGetDeprecated, checkNuGetOwnershipTransfer, NuGetPackageData } from './registry/nuget.js';
 import { fetchMavenPackageInfo } from './registry/maven.js';
 import { fetchHexPackageInfo } from './registry/hex.js';
 import { fetchPubPackageInfo } from './registry/pub.js';
@@ -205,6 +205,17 @@ export async function checkPackageReputation(
       });
       score -= DEDUCTIONS.SECURITY_HOLDING;
     }
+  } else if (ecosystem === 'nuget') {
+    // Check for NuGet deprecation (already fetched in packageInfo)
+    const nugetData = packageInfo as NuGetPackageData;
+    if (nugetData.deprecated) {
+      deductions.push({
+        reason: `Package deprecated: ${nugetData.deprecated.slice(0, 100)}${nugetData.deprecated.length > 100 ? '...' : ''}`,
+        points: DEDUCTIONS.DEPRECATED,
+        confidence: 'high',
+      });
+      score -= DEDUCTIONS.DEPRECATED;
+    }
   } else if (ecosystem === 'pypi') {
     // Check for yanked versions (PyPI's equivalent of deprecation)
     const yankedResult = await checkPyPIYanked(packageName);
@@ -272,6 +283,18 @@ export async function checkPackageReputation(
       const points = applyConfidence(DEDUCTIONS.OWNERSHIP_TRANSFER, transferResult.confidence);
       deductions.push({
         reason: transferResult.details || 'Author/maintainer change detected',
+        points,
+        confidence: transferResult.confidence,
+      });
+      score -= points;
+    }
+  } else if (ecosystem === 'nuget') {
+    const transferResult = await checkNuGetOwnershipTransfer(packageName);
+    if (transferResult.transferred) {
+      hasOwnershipTransfer = true;
+      const points = applyConfidence(DEDUCTIONS.OWNERSHIP_TRANSFER, transferResult.confidence);
+      deductions.push({
+        reason: transferResult.details || 'Author change detected',
         points,
         confidence: transferResult.confidence,
       });
