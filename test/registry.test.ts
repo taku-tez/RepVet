@@ -13,10 +13,10 @@ import { fetchPackagistPackageInfo, checkPackagistAbandoned, checkPackagistOwner
 import { fetchNuGetPackageInfo, checkNuGetDeprecated, checkNuGetOwnershipTransfer } from '../src/registry/nuget.js';
 import { fetchHexPackageInfo, checkHexRetired, HexPackageData } from '../src/registry/hex.js';
 import { fetchPubPackageInfo, checkPubDiscontinued, PubPackageData } from '../src/registry/pub.js';
-import { fetchCondaPackageInfo, parseEnvironmentYaml } from '../src/registry/conda.js';
-import { fetchCocoaPodsPackageInfo, checkCocoaPodsDeprecated, CocoaPodsPackageData } from '../src/registry/cocoapods.js';
+import { fetchCondaPackageInfo, parseEnvironmentYaml, checkCondaOwnershipTransfer } from '../src/registry/conda.js';
+import { fetchCocoaPodsPackageInfo, checkCocoaPodsDeprecated, checkCocoaPodsOwnershipTransfer, CocoaPodsPackageData } from '../src/registry/cocoapods.js';
 import { fetchMavenPackageInfo, checkMavenRelocation } from '../src/registry/maven.js';
-import { fetchCPANPackageInfo, checkCPANDeprecated } from '../src/registry/cpan.js';
+import { fetchCPANPackageInfo, checkCPANDeprecated, checkCPANOwnershipTransfer } from '../src/registry/cpan.js';
 
 // Use longer timeout for API calls
 jest.setTimeout(30000);
@@ -425,6 +425,28 @@ describe('Registry modules', () => {
       expect(info).not.toBeNull();
       expect(info?.repository?.url).toContain('github.com');
     });
+
+    it('should check ownership transfer (no recent transfer expected for stable packages)', async () => {
+      const result = await checkCocoaPodsOwnershipTransfer('Alamofire');
+      expect(result.confidence).toBeDefined();
+      // Alamofire has stable ownership
+      expect(result.transferred).toBe(false);
+    });
+
+    it('should return correct structure from ownership transfer check', async () => {
+      const result = await checkCocoaPodsOwnershipTransfer('AFNetworking');
+      expect(typeof result.transferred).toBe('boolean');
+      expect(['high', 'medium', 'low']).toContain(result.confidence);
+      // If transferred, should have details
+      if (result.transferred) {
+        expect(result.details).toBeDefined();
+      }
+    });
+
+    it('should handle non-existent package in ownership check', async () => {
+      const result = await checkCocoaPodsOwnershipTransfer('this-package-does-not-exist-xyz123');
+      expect(result.transferred).toBe(false);
+    });
   });
 
   describe('Conda (Anaconda)', () => {
@@ -453,6 +475,19 @@ describe('Registry modules', () => {
       const info = await fetchCondaPackageInfo('numpy', 'conda-forge');
       expect(info).not.toBeNull();
       expect(info?.channel).toBe('conda-forge');
+    });
+
+    it('should check ownership transfer (conda-forge has many uploaders, expected)', async () => {
+      const result = await checkCondaOwnershipTransfer('numpy', 'conda-forge');
+      expect(typeof result.transferred).toBe('boolean');
+      expect(['high', 'medium', 'low']).toContain(result.confidence);
+      // conda-forge packages typically have many uploaders (community maintained)
+      // so transfer detection is less meaningful here
+    });
+
+    it('should handle non-existent package in ownership check', async () => {
+      const result = await checkCondaOwnershipTransfer('this-package-does-not-exist-xyz123', 'conda-forge');
+      expect(result.transferred).toBe(false);
     });
   });
 
@@ -580,6 +615,27 @@ dependencies:
       // Note: This will likely fail as Moose-Util is not a separate dist
       // Keeping to demonstrate :: -> - conversion
       expect(info).toBeDefined();
+    });
+
+    it('should check ownership transfer (stable modules expected)', async () => {
+      const result = await checkCPANOwnershipTransfer('Moose');
+      expect(typeof result.transferred).toBe('boolean');
+      expect(['high', 'medium', 'low']).toContain(result.confidence);
+    });
+
+    it('should return correct structure from ownership transfer check', async () => {
+      const result = await checkCPANOwnershipTransfer('DateTime');
+      expect(typeof result.transferred).toBe('boolean');
+      expect(result.confidence).toBeDefined();
+      // If transferred, should have details
+      if (result.transferred) {
+        expect(result.details).toBeDefined();
+      }
+    });
+
+    it('should handle non-existent package in ownership check', async () => {
+      const result = await checkCPANOwnershipTransfer('This-Package-Does-Not-Exist-12345');
+      expect(result.transferred).toBe(false);
     });
   });
 });

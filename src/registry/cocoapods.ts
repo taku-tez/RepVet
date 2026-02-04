@@ -177,6 +177,107 @@ export async function fetchCocoaPodsPackageInfo(packageName: string): Promise<Co
 }
 
 /**
+ * CocoaPods ownership transfer result
+ */
+export interface CocoaPodsOwnershipTransferResult {
+  transferred: boolean;
+  confidence: 'high' | 'medium' | 'low';
+  details?: string;
+  newOwners?: Array<{ name: string; addedAt: string }>;
+}
+
+/**
+ * Check for ownership transfer in CocoaPods packages
+ * 
+ * Uses trunk API which provides owners array with created_at timestamps.
+ * Flags if new owner(s) were added recently (within 30 days).
+ */
+export async function checkCocoaPodsOwnershipTransfer(
+  packageName: string
+): Promise<CocoaPodsOwnershipTransferResult> {
+  try {
+    const response = await fetchWithRetry(
+      `${COCOAPODS_TRUNK}/${encodeURIComponent(packageName)}`,
+      { timeoutMs: 10000 }
+    );
+    
+    if (!response.ok) {
+      return { transferred: false, confidence: 'low' };
+    }
+    
+    const data = await response.json() as {
+      versions: Array<{
+        name: string;
+        created_at: string;
+      }>;
+      owners: Array<{
+        name: string;
+        email: string;
+        created_at: string;  // When owner was added
+      }>;
+    };
+    
+    if (!data.owners || data.owners.length < 1) {
+      return { transferred: false, confidence: 'low' };
+    }
+    
+    // Check if any owner was added recently (within 30 days)
+    const thirtyDaysAgo = Date.now() - (30 * 24 * 60 * 60 * 1000);
+    const recentOwners = data.owners.filter(owner => {
+      const addedAt = new Date(owner.created_at).getTime();
+      return addedAt > thirtyDaysAgo;
+    });
+    
+    if (recentOwners.length === 0) {
+      return { transferred: false, confidence: 'high' };
+    }
+    
+    // Check if this is a complete ownership change (all owners are new)
+    const allOwnersRecent = data.owners.every(owner => {
+      const addedAt = new Date(owner.created_at).getTime();
+      return addedAt > thirtyDaysAgo;
+    });
+    
+    // Also check first version date - if package is brand new, new owners are expected
+    const sortedVersions = [...data.versions].sort(
+      (a, b) => new Date(a.created_at).getTime() - new Date(b.created_at).getTime()
+    );
+    const firstVersionDate = sortedVersions[0]?.created_at;
+    const packageIsNew = firstVersionDate && 
+      new Date(firstVersionDate).getTime() > thirtyDaysAgo;
+    
+    // If package is new, new owners are expected
+    if (packageIsNew) {
+      return { transferred: false, confidence: 'high' };
+    }
+    
+    // Complete ownership change is highly suspicious
+    if (allOwnersRecent && data.versions.length > 1) {
+      return {
+        transferred: true,
+        confidence: 'high',
+        details: `All owners added within last 30 days on existing package`,
+        newOwners: recentOwners.map(o => ({ name: o.name || o.email, addedAt: o.created_at })),
+      };
+    }
+    
+    // Partial ownership change - new owner added
+    if (recentOwners.length > 0) {
+      return {
+        transferred: true,
+        confidence: 'medium',
+        details: `${recentOwners.length} new owner(s) added within last 30 days`,
+        newOwners: recentOwners.map(o => ({ name: o.name || o.email, addedAt: o.created_at })),
+      };
+    }
+    
+    return { transferred: false, confidence: 'high' };
+  } catch {
+    return { transferred: false, confidence: 'low' };
+  }
+}
+
+/**
  * Check if a CocoaPods package is deprecated
  * Fetches the latest podspec and checks for deprecated/deprecated_in_favor_of fields
  */

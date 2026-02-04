@@ -16,12 +16,12 @@ import { fetchRubyGemsPackageInfo, checkRubyGemsYanked } from './registry/rubyge
 import { fetchGoPackageInfo, checkGoDeprecated, checkGoRetracted, GoPackageData } from './registry/golang.js';
 import { fetchPackagistPackageInfo, checkPackagistAbandoned, checkPackagistOwnershipTransfer, PackagistPackageData } from './registry/packagist.js';
 import { fetchNuGetPackageInfo, checkNuGetDeprecated, checkNuGetOwnershipTransfer, NuGetPackageData } from './registry/nuget.js';
-import { fetchMavenPackageInfo } from './registry/maven.js';
+import { fetchMavenPackageInfo, checkMavenRelocation, MavenPackageData } from './registry/maven.js';
 import { fetchHexPackageInfo, checkHexRetired, HexPackageData } from './registry/hex.js';
 import { fetchPubPackageInfo, checkPubDiscontinued, PubPackageData } from './registry/pub.js';
-import { fetchCPANPackageInfo } from './registry/cpan.js';
-import { fetchCocoaPodsPackageInfo, checkCocoaPodsDeprecated, CocoaPodsPackageData } from './registry/cocoapods.js';
-import { fetchCondaPackageInfo } from './registry/conda.js';
+import { fetchCPANPackageInfo, checkCPANOwnershipTransfer, checkCPANDeprecated, CPANPackageData } from './registry/cpan.js';
+import { fetchCocoaPodsPackageInfo, checkCocoaPodsDeprecated, checkCocoaPodsOwnershipTransfer, CocoaPodsPackageData } from './registry/cocoapods.js';
+import { fetchCondaPackageInfo, checkCondaOwnershipTransfer, CondaPackageData } from './registry/conda.js';
 import { parseGitHubUrl, fetchLastCommitDate } from './registry/github.js';
 import { hasMalwareHistory, getMalwareDetails } from './malware/known-packages.js';
 import { analyzeVulnerabilityHistory, OSVEcosystem } from './osv/client.js';
@@ -475,6 +475,64 @@ export async function checkPackageReputation(
         score -= DEDUCTIONS.DEPRECATED;
       }
     }
+  } else if (ecosystem === 'maven') {
+    // Check for Maven relocation (artifact moved to new coordinates)
+    const mavenData = packageInfo as MavenPackageData;
+    // First check if already detected in fetchMavenPackageInfo
+    if (mavenData.deprecated) {
+      const msg = mavenData.relocatedTo
+        ? `Artifact relocated to ${mavenData.relocatedTo}`
+        : `Artifact deprecated: ${mavenData.deprecated.slice(0, 100)}${mavenData.deprecated.length > 100 ? '...' : ''}`;
+      deductions.push({
+        reason: msg,
+        points: DEDUCTIONS.DEPRECATED,
+        confidence: 'high',
+      });
+      score -= DEDUCTIONS.DEPRECATED;
+    } else {
+      // Double-check with checkMavenRelocation for reliability
+      const relocationResult = await checkMavenRelocation(packageName);
+      if (relocationResult.relocated) {
+        const newCoord = relocationResult.newGroupId && relocationResult.newArtifactId
+          ? `${relocationResult.newGroupId}:${relocationResult.newArtifactId}`
+          : relocationResult.newGroupId || relocationResult.newArtifactId;
+        const msg = newCoord
+          ? `Artifact relocated to ${newCoord}`
+          : relocationResult.message || 'Artifact marked as relocated';
+        deductions.push({
+          reason: msg,
+          points: DEDUCTIONS.DEPRECATED,
+          confidence: 'high',
+        });
+        score -= DEDUCTIONS.DEPRECATED;
+      }
+    }
+  } else if (ecosystem === 'cpan') {
+    // Check for CPAN deprecated modules
+    const cpanData = packageInfo as CPANPackageData;
+    // First check if already detected in fetchCPANPackageInfo
+    if (cpanData.deprecated) {
+      deductions.push({
+        reason: `Module deprecated: ${cpanData.deprecated.slice(0, 100)}${cpanData.deprecated.length > 100 ? '...' : ''}`,
+        points: DEDUCTIONS.DEPRECATED,
+        confidence: 'high',
+      });
+      score -= DEDUCTIONS.DEPRECATED;
+    } else {
+      // Double-check with checkCPANDeprecated for reliability
+      const deprecatedResult = await checkCPANDeprecated(packageName);
+      if (deprecatedResult.deprecated) {
+        const msg = deprecatedResult.reason
+          ? `Module deprecated: ${deprecatedResult.reason.slice(0, 100)}${deprecatedResult.reason.length > 100 ? '...' : ''}`
+          : 'Module marked as deprecated';
+        deductions.push({
+          reason: msg,
+          points: DEDUCTIONS.DEPRECATED,
+          confidence: 'high',
+        });
+        score -= DEDUCTIONS.DEPRECATED;
+      }
+    }
   }
   
   // Check 1: Malware history (-50) - all ecosystems
@@ -546,6 +604,43 @@ export async function checkPackageReputation(
       const points = applyConfidence(DEDUCTIONS.OWNERSHIP_TRANSFER, transferResult.confidence);
       deductions.push({
         reason: transferResult.details || 'Author change detected',
+        points,
+        confidence: transferResult.confidence,
+      });
+      score -= points;
+    }
+  } else if (ecosystem === 'cocoapods') {
+    const transferResult = await checkCocoaPodsOwnershipTransfer(packageName);
+    if (transferResult.transferred) {
+      hasOwnershipTransfer = true;
+      const points = applyConfidence(DEDUCTIONS.OWNERSHIP_TRANSFER, transferResult.confidence);
+      deductions.push({
+        reason: transferResult.details || 'New owner(s) added recently',
+        points,
+        confidence: transferResult.confidence,
+      });
+      score -= points;
+    }
+  } else if (ecosystem === 'cpan') {
+    const transferResult = await checkCPANOwnershipTransfer(packageName);
+    if (transferResult.transferred) {
+      hasOwnershipTransfer = true;
+      const points = applyConfidence(DEDUCTIONS.OWNERSHIP_TRANSFER, transferResult.confidence);
+      deductions.push({
+        reason: transferResult.details || 'Author change detected',
+        points,
+        confidence: transferResult.confidence,
+      });
+      score -= points;
+    }
+  } else if (ecosystem === 'conda') {
+    const condaData = packageInfo as CondaPackageData;
+    const transferResult = await checkCondaOwnershipTransfer(packageName, condaData.channel);
+    if (transferResult.transferred) {
+      hasOwnershipTransfer = true;
+      const points = applyConfidence(DEDUCTIONS.OWNERSHIP_TRANSFER, transferResult.confidence);
+      deductions.push({
+        reason: transferResult.details || 'Multiple uploaders detected',
         points,
         confidence: transferResult.confidence,
       });

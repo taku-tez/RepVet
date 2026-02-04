@@ -3,7 +3,7 @@
  */
 
 import { PackageInfo } from '../types.js';
-import { fetchWithRetry } from './utils.js';
+import { fetchWithRetry, OwnershipTransferResult, NO_TRANSFER_DETECTED } from './utils.js';
 
 const METACPAN_API = 'https://fastapi.metacpan.org/v1';
 
@@ -140,6 +140,113 @@ export async function fetchCPANPackageInfo(packageName: string): Promise<CPANPac
   } catch (error) {
     const message = error instanceof Error ? error.message : String(error);
     throw new Error(`Failed to fetch CPAN package info: ${message}`);
+  }
+}
+
+/**
+ * Check for ownership transfer in CPAN packages
+ * 
+ * Uses MetaCPAN release history to detect author changes between versions.
+ * CPAN has the concept of PAUSE ID (author) per release.
+ */
+export async function checkCPANOwnershipTransfer(
+  packageName: string
+): Promise<OwnershipTransferResult> {
+  try {
+    const distName = packageName.replace(/::/g, '-');
+    
+    // Fetch release history with author info
+    const response = await fetchWithRetry(
+      `${METACPAN_API}/release/_search?q=distribution:${encodeURIComponent(distName)}&sort=date:desc&size=50`,
+      { timeoutMs: 10000 }
+    );
+    
+    if (!response.ok) {
+      return NO_TRANSFER_DETECTED;
+    }
+    
+    const data = await response.json() as {
+      hits: {
+        hits: Array<{
+          _source: {
+            author: string;
+            date: string;
+            version: string;
+          };
+        }>;
+      };
+    };
+    
+    const releases = data.hits.hits
+      .map(h => h._source)
+      .filter(r => r.author && r.date)
+      .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+    
+    if (releases.length < 2) {
+      return NO_TRANSFER_DETECTED;
+    }
+    
+    // Track author changes
+    const authors = new Set<string>();
+    let lastAuthor: string | undefined;
+    let authorChanges = 0;
+    let lastChangeDetails: string | undefined;
+    
+    for (let i = releases.length - 1; i >= 0; i--) {
+      const release = releases[i];
+      const author = release.author.toUpperCase(); // PAUSE IDs are case-insensitive
+      authors.add(author);
+      
+      if (lastAuthor && author !== lastAuthor) {
+        authorChanges++;
+        lastChangeDetails = `Author changed from ${lastAuthor} to ${author} at version ${release.version}`;
+      }
+      lastAuthor = author;
+    }
+    
+    // Single author change might be legitimate transfer (co-maint, etc.)
+    // Multiple changes are more suspicious
+    if (authorChanges > 0) {
+      // Check if the most recent change was very recent (within 30 days)
+      const latestRelease = releases[0];
+      const previousRelease = releases.find(r => r.author !== latestRelease.author);
+      
+      if (previousRelease) {
+        const daysBetween = (new Date(latestRelease.date).getTime() - 
+          new Date(previousRelease.date).getTime()) / (1000 * 60 * 60 * 24);
+        
+        // Quick author change after long gap is suspicious
+        if (daysBetween < 30 && releases[0].author !== releases[1].author) {
+          return {
+            transferred: true,
+            confidence: 'high',
+            details: `Author changed to ${latestRelease.author} within ${Math.round(daysBetween)} days`,
+          };
+        }
+      }
+      
+      // Multiple author changes are suspicious
+      if (authorChanges > 1) {
+        return {
+          transferred: true,
+          confidence: 'medium',
+          details: `${authors.size} different authors across release history`,
+        };
+      }
+      
+      // Single change - low confidence
+      if (authorChanges === 1) {
+        return {
+          transferred: true,
+          confidence: 'low',
+          details: lastChangeDetails,
+        };
+      }
+    }
+    
+    return { transferred: false, confidence: 'high' };
+  } catch {
+    return NO_TRANSFER_DETECTED;
   }
 }
 

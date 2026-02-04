@@ -29,9 +29,9 @@ RepVet helps you identify risky dependencies before they become a problem.
 | Maven | Java/Kotlin | maven.org | ❌ | ❌ | ✅ OSV |
 | Hex | Elixir/Erlang | hex.pm | ✅ retired | ❌ | ✅ OSV |
 | pub.dev | Dart/Flutter | pub.dev | ✅ discontinued | ❌ | ✅ OSV |
-| CPAN | Perl | metacpan.org | ❌ | ❌ | ✅ OSV |
-| CocoaPods | Swift/ObjC | cocoapods.org | ✅ | ❌ | ✅ OSV |
-| Conda | Python/R/Data Science | anaconda.org | ❌ | ❌ | ❌ |
+| CPAN | Perl | metacpan.org | ✅ | ✅ | ✅ OSV |
+| CocoaPods | Swift/ObjC | cocoapods.org | ✅ | ✅ | ✅ OSV |
+| Conda | Python/R/Data Science | anaconda.org | ❌ | ✅ | ❌ |
 
 ## Installation
 
