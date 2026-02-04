@@ -234,8 +234,8 @@ function parseDepFile(fileName: string, content: string): { packages: string[]; 
     return { packages, ecosystem: 'crates' };
   }
   
-  if (fileName === 'Gemfile' || fileName === 'Gemfile.lock' || fileName.endsWith('.gemspec')) {
-    // Parse Ruby gem dependencies
+  if (fileName === 'Gemfile' || fileName.endsWith('.gemspec')) {
+    // Parse Ruby gem dependencies (Gemfile.lock is handled separately below)
     const packages: string[] = [];
     const gemPattern = /gem\s+['"]([a-zA-Z0-9_-]+)['"]/g;
     let match;
