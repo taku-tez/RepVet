@@ -22,7 +22,7 @@ import { fetchPubPackageInfo, checkPubDiscontinued, PubPackageData } from './reg
 import { fetchCPANPackageInfo, checkCPANOwnershipTransfer, checkCPANDeprecated, CPANPackageData } from './registry/cpan.js';
 import { fetchCocoaPodsPackageInfo, checkCocoaPodsDeprecated, checkCocoaPodsOwnershipTransfer, CocoaPodsPackageData } from './registry/cocoapods.js';
 import { fetchCondaPackageInfo, checkCondaOwnershipTransfer, CondaPackageData } from './registry/conda.js';
-import { parseRepoUrl, fetchLastCommitDate } from './registry/github.js';
+import { parseRepoUrl, fetchLastCommitDate, fetchRepoInfo } from './registry/github.js';
 import { fetchGitLabRepoInfo } from './registry/gitlab.js';
 import { fetchBitbucketRepoInfo } from './registry/bitbucket.js';
 import { hasMalwareHistory, getMalwareDetails } from './malware/known-packages.js';
@@ -36,6 +36,7 @@ const DEDUCTIONS = {
   STALE_1_YEAR: 5,
   STALE_2_YEARS: 10,
   STALE_3_YEARS: 15,
+  ARCHIVED: 15,             // Repository is archived (no longer maintained)
   
   // Ownership
   OWNERSHIP_TRANSFER: 15,
@@ -144,7 +145,8 @@ function isEstablishedProject(packageInfo: PackageInfo): boolean {
 
 export async function checkPackageReputation(
   packageName: string, 
-  ecosystem: Ecosystem = 'npm'
+  ecosystem: Ecosystem = 'npm',
+  version?: string
 ): Promise<ReputationResult> {
   const deductions: Deduction[] = [];
   let score = BASE_SCORE;
@@ -689,30 +691,46 @@ export async function checkPackageReputation(
     }
   }
   
-  // Check 4: Last commit staleness (GitHub, GitLab, Bitbucket)
+  // Check 4: Last commit staleness and archived status (GitHub, GitLab, Bitbucket)
   if (packageInfo.repository?.url) {
     const repoInfo = parseRepoUrl(packageInfo.repository.url);
     if (repoInfo) {
       let days: number | null = null;
+      let isArchived = false;
       
       if (repoInfo.host === 'github') {
-        const commitInfo = await fetchLastCommitDate(repoInfo.owner, repoInfo.repo);
-        if (commitInfo.lastCommitDate) {
-          lastCommitDate = commitInfo.lastCommitDate;
-          days = commitInfo.daysSinceLastCommit;
+        // Use fetchRepoInfo to get both commit date and archived status
+        const githubInfo = await fetchRepoInfo(repoInfo.owner, repoInfo.repo);
+        if (githubInfo.lastCommitDate) {
+          lastCommitDate = githubInfo.lastCommitDate;
+          days = githubInfo.daysSinceLastCommit;
         }
+        isArchived = githubInfo.archived;
       } else if (repoInfo.host === 'gitlab') {
         const gitlabInfo = await fetchGitLabRepoInfo(repoInfo.owner, repoInfo.repo);
         if (gitlabInfo.lastActivityAt) {
           lastCommitDate = gitlabInfo.lastActivityAt;
           days = gitlabInfo.daysSinceLastActivity;
         }
+        isArchived = gitlabInfo.archived;
       } else if (repoInfo.host === 'bitbucket') {
         const bitbucketInfo = await fetchBitbucketRepoInfo(repoInfo.owner, repoInfo.repo);
         if (bitbucketInfo.updatedOn) {
           lastCommitDate = bitbucketInfo.updatedOn;
           days = bitbucketInfo.daysSinceLastUpdate;
         }
+        // Note: Bitbucket doesn't have explicit archived status in public API
+        isArchived = bitbucketInfo.archived;
+      }
+      
+      // Check: Repository archived
+      if (isArchived) {
+        deductions.push({
+          reason: 'Repository is archived (no longer maintained)',
+          points: DEDUCTIONS.ARCHIVED,
+          confidence: 'high',
+        });
+        score -= DEDUCTIONS.ARCHIVED;
       }
       
       if (days !== null) {
@@ -744,6 +762,8 @@ export async function checkPackageReputation(
   
   // Check 5: Vulnerability history (OSV)
   // Note: Some ecosystems (e.g., conda) are not supported by OSV
+  // When version is specified, OSV returns vulns affecting that specific version
+  // When no version, OSV returns all historical vulns for the package
   const osvEcosystem = mapEcosystemToOSV(ecosystem);
   try {
     if (!osvEcosystem) {
@@ -752,7 +772,8 @@ export async function checkPackageReputation(
     }
     const vulnAnalysis = await analyzeVulnerabilityHistory(
       osvEcosystem,
-      packageName
+      packageName,
+      version
     );
     
     if (vulnAnalysis.totalVulns > 0) {
