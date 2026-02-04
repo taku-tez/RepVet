@@ -7,15 +7,20 @@
 
 import { Command } from 'commander';
 import chalk from 'chalk';
+import { createRequire } from 'module';
 import { checkPackageReputation } from './scorer.js';
 import { ReputationResult, Ecosystem } from './types.js';
+
+// Get version from package.json (single source of truth)
+const require = createRequire(import.meta.url);
+const packageJson = require('../package.json');
 
 const program = new Command();
 
 program
   .name('repvet')
   .description('Check package maintainer reputation (12 ecosystems supported)')
-  .version('0.2.0');
+  .version(packageJson.version);
 
 program
   .command('check <package>')
@@ -69,49 +74,69 @@ program
       const threshold = parseInt(options.threshold || '100', 10);
       const failUnder = options.failUnder ? parseInt(options.failUnder, 10) : undefined;
       
-      const results: ReputationResult[] = [];
+      const allResults: ReputationResult[] = [];
+      const filteredResults: ReputationResult[] = [];
       let hasFailure = false;
+      let skippedCount = 0;
       
-      console.log(chalk.dim(`Scanning ${packages.length} ${ecosystem} packages...\n`));
+      if (!options.json) {
+        console.log(chalk.dim(`Scanning ${packages.length} ${ecosystem} packages...\n`));
+      }
       
       for (const pkg of packages) {
         try {
           const result = await checkPackageReputation(pkg, ecosystem);
+          allResults.push(result);
           if (result.score < threshold) {
-            results.push(result);
+            filteredResults.push(result);
           }
           if (failUnder !== undefined && result.score < failUnder) {
             hasFailure = true;
           }
         } catch {
           // Skip packages that fail (not found, etc)
+          skippedCount++;
         }
       }
       
       if (options.json) {
+        // Separate all results from filtered results for clarity
+        const allSummary = summarizeResults(allResults);
+        const filteredSummary = summarizeResults(filteredResults);
         console.log(JSON.stringify({
           ecosystem,
-          total: packages.length,
-          results,
+          scanned: packages.length,
+          successful: allResults.length,
+          skipped: skippedCount,
+          summary: allSummary,
+          threshold,
+          filteredCount: filteredResults.length,
+          filteredSummary,
+          allResults,
+          filteredResults,
         }, null, 2));
       } else {
-        if (results.length === 0) {
+        if (filteredResults.length === 0) {
           console.log(chalk.green('✓ All packages above threshold'));
         } else {
           console.log(chalk.bold(`Packages below threshold (${threshold}):\n`));
-          for (const result of results) {
+          for (const result of filteredResults) {
             printResult(result);
             console.log('');
           }
         }
         
-        // Summary
-        const summary = summarizeResults(results);
+        // Summary based on ALL packages, not just filtered
+        const summary = summarizeResults(allResults);
         console.log(chalk.dim('─'.repeat(50)));
-        console.log(`Total: ${packages.length} | ` + 
-          chalk.red(`High Risk: ${summary.high + summary.critical}`) + ' | ' +
+        console.log(`Scanned: ${allResults.length}/${packages.length} | ` + 
+          chalk.red(`Critical: ${summary.critical}`) + ' | ' +
+          chalk.red(`High: ${summary.high}`) + ' | ' +
           chalk.yellow(`Medium: ${summary.medium}`) + ' | ' +
           chalk.green(`Low: ${summary.low}`));
+        if (skippedCount > 0) {
+          console.log(chalk.dim(`Skipped: ${skippedCount} (not found or API error)`));
+        }
       }
       
       process.exit(hasFailure ? 1 : 0);
