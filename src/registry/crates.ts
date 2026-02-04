@@ -10,7 +10,7 @@ export async function fetchCratesPackageInfo(packageName: string): Promise<Packa
   try {
     const response = await fetch(`${CRATES_API}/${encodeURIComponent(packageName)}`, {
       headers: {
-        'User-Agent': 'RepVet/0.1.0 (https://github.com/taku-tez/RepVet)',
+        'User-Agent': 'RepVet/0.2.0 (https://github.com/taku-tez/RepVet)',
       },
     });
     
@@ -29,10 +29,12 @@ export async function fetchCratesPackageInfo(packageName: string): Promise<Packa
         repository?: string;
         created_at: string;
         updated_at: string;
+        downloads: number;
       };
       versions: Array<{
         num: string;
         created_at: string;
+        downloads: number;
         published_by?: { login: string; name?: string };
       }>;
     };
@@ -62,6 +64,7 @@ export async function fetchCratesPackageInfo(packageName: string): Promise<Packa
         : undefined,
       time,
       ecosystem: 'crates',
+      downloads: data.crate.downloads,
     };
   } catch (error) {
     throw new Error(`Failed to fetch crates.io package info: ${error}`);
@@ -70,6 +73,8 @@ export async function fetchCratesPackageInfo(packageName: string): Promise<Packa
 
 /**
  * Check ownership transfer for Rust crates
+ * 
+ * Improved: Only flag truly suspicious transfers, not normal maintainer succession
  */
 export async function checkCratesOwnershipTransfer(packageName: string): Promise<{
   transferred: boolean;
@@ -79,16 +84,21 @@ export async function checkCratesOwnershipTransfer(packageName: string): Promise
   try {
     const response = await fetch(`${CRATES_API}/${encodeURIComponent(packageName)}`, {
       headers: {
-        'User-Agent': 'RepVet/0.1.0',
+        'User-Agent': 'RepVet/0.2.0',
       },
     });
     
     if (!response.ok) return { transferred: false, confidence: 'low' };
     
     const data = await response.json() as {
+      crate: {
+        downloads: number;
+        created_at: string;
+      };
       versions: Array<{
         num: string;
         created_at: string;
+        downloads: number;
         published_by?: { login: string };
       }>;
     };
@@ -99,32 +109,61 @@ export async function checkCratesOwnershipTransfer(packageName: string): Promise
     
     if (versions.length < 2) return { transferred: false, confidence: 'low' };
     
+    // Calculate project age
+    const projectAgeYears = (Date.now() - new Date(data.crate.created_at).getTime()) / (365 * 24 * 60 * 60 * 1000);
+    const isEstablished = projectAgeYears > 2 || data.crate.downloads > 1000000;
+    
     // Track publisher changes
     let lastPublisher = versions[0].published_by?.login;
     let transfers = 0;
+    let recentTransfers = 0; // Transfers in last 6 months
     let transferDetails: string | undefined;
+    
+    const sixMonthsAgo = Date.now() - (180 * 24 * 60 * 60 * 1000);
     
     for (let i = 1; i < versions.length; i++) {
       const currentPublisher = versions[i].published_by?.login;
       if (currentPublisher && lastPublisher && currentPublisher !== lastPublisher) {
-        const daysBetween = (
-          new Date(versions[i].created_at).getTime() - 
-          new Date(versions[i - 1].created_at).getTime()
-        ) / (1000 * 60 * 60 * 24);
+        const versionDate = new Date(versions[i].created_at).getTime();
+        const daysBetween = (versionDate - new Date(versions[i - 1].created_at).getTime()) / (1000 * 60 * 60 * 24);
         
-        if (daysBetween < 30) {
-          transfers++;
-          transferDetails = `Publisher changed from ${lastPublisher} to ${currentPublisher} in ${Math.round(daysBetween)} days`;
+        transfers++;
+        
+        // Only flag recent transfers as suspicious
+        if (versionDate > sixMonthsAgo) {
+          recentTransfers++;
+          if (daysBetween < 7) {
+            transferDetails = `Very rapid publisher change: ${lastPublisher} → ${currentPublisher} in ${Math.round(daysBetween)} days`;
+          }
         }
       }
       lastPublisher = currentPublisher;
     }
     
-    return {
-      transferred: transfers > 0,
-      confidence: transfers > 1 ? 'high' : 'medium',
-      details: transferDetails,
-    };
+    // For established projects, only flag very suspicious patterns
+    if (isEstablished) {
+      // Multiple transfers is ok for old projects (normal team evolution)
+      // Only flag if there's a very recent rapid transfer
+      if (recentTransfers > 0 && transferDetails) {
+        return {
+          transferred: true,
+          confidence: 'low', // Low confidence for established projects
+          details: transferDetails,
+        };
+      }
+      return { transferred: false, confidence: 'high' };
+    }
+    
+    // For newer projects, flag transfers with higher confidence
+    if (transfers > 0) {
+      return {
+        transferred: true,
+        confidence: recentTransfers > 1 ? 'high' : transfers > 2 ? 'medium' : 'low',
+        details: transferDetails || `${transfers} publisher change(s) in project history`,
+      };
+    }
+    
+    return { transferred: false, confidence: 'high' };
   } catch {
     return { transferred: false, confidence: 'low' };
   }

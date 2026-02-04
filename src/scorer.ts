@@ -3,10 +3,9 @@
  * 
  * Scoring: Start at 100, apply deductions only
  * 
- * Deduction points adjusted by confidence:
- * - High confidence: full points
- * - Medium confidence: 75% of points
- * - Low confidence: 50% of points
+ * Deduction points adjusted by:
+ * - Confidence (high/medium/low)
+ * - Project maturity (established projects get leniency)
  */
 
 import { Deduction, ReputationResult, PackageInfo, Ecosystem, VulnerabilityStats } from './types.js';
@@ -22,22 +21,30 @@ const BASE_SCORE = 100;
 // Deduction points (maximum values)
 const DEDUCTIONS = {
   // Activity
-  STALE_1_YEAR: 5,         // 最終コミット1年以上前
-  STALE_2_YEARS: 10,       // 最終コミット2年以上前
-  STALE_3_YEARS: 15,       // 最終コミット3年以上前
+  STALE_1_YEAR: 5,
+  STALE_2_YEARS: 10,
+  STALE_3_YEARS: 15,
   
   // Ownership
-  OWNERSHIP_TRANSFER: 15,   // パッケージ所有権移転（急激な変更）
-  SINGLE_MAINTAINER: 5,     // 単一メンテナ（バス係数リスク）
+  OWNERSHIP_TRANSFER: 15,
+  SINGLE_MAINTAINER: 5,
   
   // Security history
-  MALWARE_HISTORY: 50,      // 過去にマルウェア混入
+  MALWARE_HISTORY: 50,
   
-  // Vulnerabilities (from OSV)
-  VULN_CRITICAL: 15,        // Critical脆弱性あり
-  VULN_HIGH: 10,            // High脆弱性あり  
-  VULN_UNFIXED: 10,         // 未修正の脆弱性あり
-  VULN_RECENT_MANY: 5,      // 直近1年に3件以上の脆弱性
+  // Vulnerabilities
+  VULN_CRITICAL: 15,
+  VULN_HIGH: 10,
+  VULN_UNFIXED: 10,
+  VULN_RECENT_MANY: 5,
+};
+
+// Thresholds for "established" projects
+const ESTABLISHED_THRESHOLDS = {
+  npm: { downloads: 1000000, releaseCount: 50 },
+  pypi: { downloads: 100000, releaseCount: 50 },
+  crates: { downloads: 1000000, releaseCount: 30 },
+  go: { downloads: 100000, releaseCount: 20 },
 };
 
 function applyConfidence(points: number, confidence: 'high' | 'medium' | 'low'): number {
@@ -75,6 +82,14 @@ function mapEcosystemToOSV(ecosystem: Ecosystem): 'npm' | 'PyPI' | 'crates.io' |
   return mapping[ecosystem];
 }
 
+function isEstablishedProject(packageInfo: PackageInfo): boolean {
+  const thresholds = ESTABLISHED_THRESHOLDS[packageInfo.ecosystem];
+  const releaseCount = packageInfo.time ? Object.keys(packageInfo.time).length : 0;
+  
+  return (packageInfo.downloads || 0) >= thresholds.downloads || 
+         releaseCount >= thresholds.releaseCount;
+}
+
 export async function checkPackageReputation(
   packageName: string, 
   ecosystem: Ecosystem = 'npm'
@@ -88,11 +103,13 @@ export async function checkPackageReputation(
     throw new Error(`Package not found: ${packageName} (${ecosystem})`);
   }
   
-  const maintainers = packageInfo.maintainers.map(m => m.name);
+  const maintainers = packageInfo.maintainers.map(m => m.name).filter(Boolean);
   let lastCommitDate: string | undefined;
   let hasOwnershipTransfer = false;
   let hasMalware = false;
   let vulnerabilityStats: VulnerabilityStats | undefined;
+  
+  const isEstablished = isEstablishedProject(packageInfo);
   
   // Check 1: Malware history (-50) - npm only for now
   if (ecosystem === 'npm' && hasMalwareHistory(packageName)) {
@@ -107,7 +124,7 @@ export async function checkPackageReputation(
     score -= points;
   }
   
-  // Check 2: Ownership transfer (improved detection)
+  // Check 2: Ownership transfer
   if (ecosystem === 'npm') {
     const transferResult = await checkOwnershipTransfer(packageName);
     if (transferResult.transferred) {
@@ -134,14 +151,31 @@ export async function checkPackageReputation(
     }
   }
   
-  // Check 3: Single maintainer risk
-  if (maintainers.length === 1) {
-    deductions.push({
-      reason: 'Single maintainer (bus factor risk)',
-      points: DEDUCTIONS.SINGLE_MAINTAINER,
-      confidence: 'high',
-    });
-    score -= DEDUCTIONS.SINGLE_MAINTAINER;
+  // Check 3: Single maintainer risk (skip for established projects with org maintainers)
+  const hasOrgMaintainer = maintainers.some(m => 
+    m.toLowerCase().includes('inc') || 
+    m.toLowerCase().includes('llc') ||
+    m.toLowerCase().includes('team') ||
+    m.toLowerCase().includes('foundation') ||
+    m.toLowerCase() === 'google' ||
+    m.toLowerCase() === 'amazon' ||
+    m.toLowerCase() === 'microsoft' ||
+    m.toLowerCase() === 'facebook' ||
+    m.toLowerCase() === 'meta'
+  );
+  
+  if (maintainers.length === 1 && !hasOrgMaintainer) {
+    // For established projects, lower confidence
+    const confidence = isEstablished ? 'low' : 'high';
+    const points = applyConfidence(DEDUCTIONS.SINGLE_MAINTAINER, confidence);
+    if (points > 0) {
+      deductions.push({
+        reason: 'Single maintainer (bus factor risk)',
+        points,
+        confidence,
+      });
+      score -= points;
+    }
   }
   
   // Check 4: Last commit staleness
@@ -197,16 +231,21 @@ export async function checkPackageReputation(
         hasUnfixed: vulnAnalysis.hasUnfixedVulns,
       };
       
+      // For established projects with many historical vulns, be more lenient
+      // They have long histories, so more vulns is expected
+      const vulnConfidence = isEstablished && vulnAnalysis.totalVulns > 20 ? 'low' : 'high';
+      
       if (vulnAnalysis.criticalCount > 0) {
+        const points = applyConfidence(DEDUCTIONS.VULN_CRITICAL, vulnConfidence);
         deductions.push({
           reason: `${vulnAnalysis.criticalCount} critical vulnerability(ies) in history`,
-          points: DEDUCTIONS.VULN_CRITICAL,
-          confidence: 'high',
+          points,
+          confidence: vulnConfidence,
         });
-        score -= DEDUCTIONS.VULN_CRITICAL;
+        score -= points;
       }
       
-      if (vulnAnalysis.highCount > 0) {
+      if (vulnAnalysis.highCount > 0 && vulnConfidence === 'high') {
         deductions.push({
           reason: `${vulnAnalysis.highCount} high severity vulnerability(ies) in history`,
           points: DEDUCTIONS.VULN_HIGH,
@@ -215,16 +254,21 @@ export async function checkPackageReputation(
         score -= DEDUCTIONS.VULN_HIGH;
       }
       
-      if (vulnAnalysis.hasUnfixedVulns) {
+      // Only flag unfixed vulns for non-established projects
+      // Large projects often have advisory entries that aren't really "unfixed"
+      if (vulnAnalysis.hasUnfixedVulns && !isEstablished) {
+        const points = applyConfidence(DEDUCTIONS.VULN_UNFIXED, 'medium');
         deductions.push({
           reason: 'Has unfixed vulnerabilities',
-          points: DEDUCTIONS.VULN_UNFIXED,
+          points,
           confidence: 'medium',
         });
-        score -= applyConfidence(DEDUCTIONS.VULN_UNFIXED, 'medium');
+        score -= points;
       }
       
-      if (vulnAnalysis.recentVulns >= 3) {
+      // Many recent vulns threshold scales with project size
+      const recentVulnThreshold = isEstablished ? 10 : 3;
+      if (vulnAnalysis.recentVulns >= recentVulnThreshold) {
         deductions.push({
           reason: `${vulnAnalysis.recentVulns} vulnerabilities in the past year`,
           points: DEDUCTIONS.VULN_RECENT_MANY,
@@ -245,7 +289,7 @@ export async function checkPackageReputation(
     score: finalScore,
     riskLevel: getRiskLevel(finalScore),
     deductions,
-    maintainers,
+    maintainers: maintainers.length > 0 ? maintainers : ['Unknown'],
     lastCommitDate,
     hasOwnershipTransfer,
     hasMalwareHistory: hasMalware,

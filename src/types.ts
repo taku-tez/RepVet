@@ -11,6 +11,7 @@ export interface PackageInfo {
   repository?: RepositoryInfo;
   time?: Record<string, string>;
   ecosystem: Ecosystem;
+  downloads?: number; // For adjusting scoring based on popularity
 }
 
 export interface Maintainer {
