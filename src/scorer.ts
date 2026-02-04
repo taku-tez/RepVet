@@ -9,7 +9,7 @@
  */
 
 import { Deduction, ReputationResult, PackageInfo, Ecosystem, VulnerabilityStats } from './types.js';
-import { fetchPackageInfo, checkOwnershipTransfer } from './registry/npm.js';
+import { fetchPackageInfo, checkOwnershipTransfer, NpmPackageData } from './registry/npm.js';
 import { fetchPyPIPackageInfo } from './registry/pypi.js';
 import { fetchCratesPackageInfo, checkCratesOwnershipTransfer } from './registry/crates.js';
 import { parseGitHubUrl, fetchLastCommitDate } from './registry/github.js';
@@ -31,6 +31,7 @@ const DEDUCTIONS = {
   
   // Security history
   MALWARE_HISTORY: 50,
+  DEPRECATED: 10,           // Package marked as deprecated
   
   // Vulnerabilities
   VULN_CRITICAL: 15,
@@ -110,6 +111,19 @@ export async function checkPackageReputation(
   let vulnerabilityStats: VulnerabilityStats | undefined;
   
   const isEstablished = isEstablishedProject(packageInfo);
+  
+  // Check 0: Deprecated package
+  if (ecosystem === 'npm') {
+    const npmData = packageInfo as NpmPackageData;
+    if (npmData.deprecated) {
+      deductions.push({
+        reason: `Package deprecated: ${npmData.deprecated.slice(0, 100)}${npmData.deprecated.length > 100 ? '...' : ''}`,
+        points: DEDUCTIONS.DEPRECATED,
+        confidence: 'high',
+      });
+      score -= DEDUCTIONS.DEPRECATED;
+    }
+  }
   
   // Check 1: Malware history (-50) - npm only for now
   if (ecosystem === 'npm' && hasMalwareHistory(packageName)) {

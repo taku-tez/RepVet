@@ -6,7 +6,18 @@ import { PackageInfo } from '../types.js';
 
 const NPM_REGISTRY = 'https://registry.npmjs.org';
 
-export async function fetchPackageInfo(packageName: string): Promise<PackageInfo | null> {
+export interface NpmPackageData {
+  name: string;
+  version: string;
+  maintainers: Array<{ name: string; email?: string }>;
+  repository?: { type: string; url: string };
+  time?: Record<string, string>;
+  ecosystem: 'npm';
+  downloads?: number;
+  deprecated?: string;
+}
+
+export async function fetchPackageInfo(packageName: string): Promise<NpmPackageData | null> {
   try {
     const response = await fetch(`${NPM_REGISTRY}/${encodeURIComponent(packageName)}`);
     if (!response.ok) {
@@ -21,13 +32,17 @@ export async function fetchPackageInfo(packageName: string): Promise<PackageInfo
     const versions = data['versions'] as Record<string, Record<string, unknown>> || {};
     const latestData = versions[latestVersion] || {};
     
+    // Check if latest version is deprecated
+    const deprecated = latestData['deprecated'] as string | undefined;
+    
     return {
       name: data['name'] as string,
       version: latestVersion,
       maintainers: (data['maintainers'] as Array<{name: string; email?: string}>) || [],
-      repository: latestData['repository'] as PackageInfo['repository'],
+      repository: latestData['repository'] as NpmPackageData['repository'],
       time: data['time'] as Record<string, string>,
       ecosystem: 'npm',
+      deprecated,
     };
   } catch (error) {
     throw new Error(`Failed to fetch package info: ${error}`);
