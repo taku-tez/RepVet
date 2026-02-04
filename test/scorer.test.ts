@@ -83,6 +83,34 @@ describe('Scorer', () => {
       );
       expect(hasMalwareDeduction).toBe(true);
     });
+
+    it('should not penalize for old yanked versions in established crates', async () => {
+      // rand has some yanked versions but is well-maintained
+      const result = await checkPackageReputation('rand', 'crates');
+      // Latest version is not yanked, score should still be high
+      expect(result.score).toBeGreaterThanOrEqual(85);
+    });
+  });
+
+  describe('RubyGems packages', () => {
+    it('should score a Ruby gem appropriately', async () => {
+      const result = await checkPackageReputation('rails', 'rubygems');
+      // rails has many historical vulnerabilities, so score may be lower
+      // but should still be MEDIUM risk or better (score >= 60)
+      expect(result.score).toBeGreaterThanOrEqual(60);
+      expect(result.ecosystem).toBe('rubygems');
+      expect(['LOW', 'MEDIUM']).toContain(result.riskLevel);
+    });
+
+    it('should handle gems with clean history', async () => {
+      const result = await checkPackageReputation('rake', 'rubygems');
+      expect(result.score).toBeGreaterThanOrEqual(85);
+      // Should not have yanked-related deductions if latest is not yanked
+      const hasYankedDeduction = result.deductions.some(d =>
+        d.reason.toLowerCase().includes('yanked')
+      );
+      expect(hasYankedDeduction).toBe(false);
+    });
   });
 
   describe('NuGet packages', () => {

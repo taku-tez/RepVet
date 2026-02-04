@@ -20,17 +20,17 @@ RepVet helps you identify risky dependencies before they become a problem.
 | Ecosystem | Language | Registry | Deprecated | Ownership | Vulns |
 |-----------|----------|----------|------------|-----------|-------|
 | npm | JavaScript/TypeScript | npmjs.com | ✅ | ✅ | ✅ OSV |
-| PyPI | Python | pypi.org | ❌ | ❌ | ✅ OSV |
-| crates.io | Rust | crates.io | ❌ | ✅ | ✅ OSV |
-| RubyGems | Ruby | rubygems.org | ❌ | ❌ | ✅ OSV |
-| Go | Go | proxy.golang.org | ❌ | ❌ | ✅ OSV |
-| Packagist | PHP | packagist.org | ❌ | ❌ | ✅ OSV |
-| NuGet | .NET | nuget.org | ❌ | ❌ | ✅ OSV |
+| PyPI | Python | pypi.org | ✅ yanked | ✅ | ✅ OSV |
+| crates.io | Rust | crates.io | ✅ yanked | ✅ | ✅ OSV |
+| RubyGems | Ruby | rubygems.org | ✅ yanked | ❌ | ✅ OSV |
+| Go | Go | proxy.golang.org | ✅ retracted | ❌ | ✅ OSV |
+| Packagist | PHP | packagist.org | ✅ abandoned | ✅ | ✅ OSV |
+| NuGet | .NET | nuget.org | ✅ | ✅ | ✅ OSV |
 | Maven | Java/Kotlin | maven.org | ❌ | ❌ | ✅ OSV |
-| Hex | Elixir/Erlang | hex.pm | ❌ | ❌ | ✅ OSV |
-| pub.dev | Dart/Flutter | pub.dev | ❌ | ❌ | ✅ OSV |
+| Hex | Elixir/Erlang | hex.pm | ✅ retired | ❌ | ✅ OSV |
+| pub.dev | Dart/Flutter | pub.dev | ✅ discontinued | ❌ | ✅ OSV |
 | CPAN | Perl | metacpan.org | ❌ | ❌ | ✅ OSV |
-| CocoaPods | Swift/ObjC | cocoapods.org | ❌ | ❌ | ✅ OSV |
+| CocoaPods | Swift/ObjC | cocoapods.org | ✅ | ❌ | ✅ OSV |
 
 ## Installation
 

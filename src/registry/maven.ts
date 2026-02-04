@@ -3,6 +3,7 @@
  */
 
 import { PackageInfo } from '../types.js';
+import { fetchWithRetry } from './utils.js';
 
 const MAVEN_REPO = 'https://repo1.maven.org/maven2';
 
@@ -17,7 +18,27 @@ function parseCoordinate(coordinate: string): { groupId: string; artifactId: str
   return null;
 }
 
-export async function fetchMavenPackageInfo(coordinate: string): Promise<PackageInfo | null> {
+/**
+ * Relocation detection result
+ */
+export interface MavenRelocationResult {
+  relocated: boolean;
+  newGroupId?: string;
+  newArtifactId?: string;
+  newVersion?: string;
+  message?: string;
+}
+
+/**
+ * Extended Maven package data with relocation info
+ */
+export interface MavenPackageData extends PackageInfo {
+  ecosystem: 'maven';
+  deprecated?: string;           // Deprecation/relocation message
+  relocatedTo?: string;          // New coordinate if relocated
+}
+
+export async function fetchMavenPackageInfo(coordinate: string): Promise<MavenPackageData | null> {
   try {
     const parsed = parseCoordinate(coordinate);
     if (!parsed) {
@@ -29,7 +50,7 @@ export async function fetchMavenPackageInfo(coordinate: string): Promise<Package
     
     // Fetch maven-metadata.xml
     const metadataUrl = `${MAVEN_REPO}/${groupPath}/${artifactId}/maven-metadata.xml`;
-    const response = await fetch(metadataUrl);
+    const response = await fetchWithRetry(metadataUrl, { timeoutMs: 10000 });
     
     if (!response.ok) {
       if (response.status === 404) {
@@ -51,15 +72,37 @@ export async function fetchMavenPackageInfo(coordinate: string): Promise<Package
     // Build time map (Maven doesn't provide timestamps in metadata)
     const time: Record<string, string> = {};
     
-    // Try to get POM for latest version to extract developer info
+    // Try to get POM for latest version to extract developer info and relocation
     const maintainers: Array<{ name: string }> = [];
+    let deprecated: string | undefined;
+    let relocatedTo: string | undefined;
+    let repoUrl: string | undefined;
     
     if (latestVersion) {
       try {
         const pomUrl = `${MAVEN_REPO}/${groupPath}/${artifactId}/${latestVersion}/${artifactId}-${latestVersion}.pom`;
-        const pomResponse = await fetch(pomUrl);
+        const pomResponse = await fetchWithRetry(pomUrl, { timeoutMs: 10000 });
         if (pomResponse.ok) {
           const pom = await pomResponse.text();
+          
+          // Check for relocation
+          const relocationMatch = pom.match(/<relocation>([\s\S]*?)<\/relocation>/);
+          if (relocationMatch) {
+            const relocation = relocationMatch[1];
+            const newGroupId = relocation.match(/<groupId>([^<]+)<\/groupId>/)?.[1];
+            const newArtifactId = relocation.match(/<artifactId>([^<]+)<\/artifactId>/)?.[1];
+            const message = relocation.match(/<message>([^<]+)<\/message>/)?.[1];
+            
+            // Build new coordinate
+            const newCoords: string[] = [];
+            if (newGroupId) newCoords.push(newGroupId);
+            else newCoords.push(groupId);
+            if (newArtifactId) newCoords.push(newArtifactId);
+            else newCoords.push(artifactId);
+            
+            relocatedTo = newCoords.join(':');
+            deprecated = message || `Relocated to ${relocatedTo}`;
+          }
           
           // Extract developers
           const developerMatches = pom.matchAll(/<developer>[\s\S]*?<name>([^<]+)<\/name>[\s\S]*?<\/developer>/g);
@@ -74,26 +117,16 @@ export async function fetchMavenPackageInfo(coordinate: string): Promise<Package
               maintainers.push({ name: orgMatch[1].trim() });
             }
           }
+          
+          // Repository URL from SCM
+          const scmMatch = pom.match(/<scm>[\s\S]*?<url>([^<]+)<\/url>/);
+          if (scmMatch && (scmMatch[1].includes('github.com') || scmMatch[1].includes('gitlab.com'))) {
+            repoUrl = scmMatch[1];
+          }
         }
       } catch {
         // Ignore POM fetch errors
       }
-    }
-    
-    // Repository URL from SCM
-    let repoUrl: string | undefined;
-    try {
-      const pomUrl = `${MAVEN_REPO}/${groupPath}/${artifactId}/${latestVersion}/${artifactId}-${latestVersion}.pom`;
-      const pomResponse = await fetch(pomUrl);
-      if (pomResponse.ok) {
-        const pom = await pomResponse.text();
-        const scmMatch = pom.match(/<scm>[\s\S]*?<url>([^<]+)<\/url>/);
-        if (scmMatch && (scmMatch[1].includes('github.com') || scmMatch[1].includes('gitlab.com'))) {
-          repoUrl = scmMatch[1];
-        }
-      }
-    } catch {
-      // Ignore
     }
     
     return {
@@ -104,9 +137,78 @@ export async function fetchMavenPackageInfo(coordinate: string): Promise<Package
       time,
       ecosystem: 'maven',
       downloads: versions.length * 10000, // Rough estimate based on version count
+      deprecated,
+      relocatedTo,
     };
   } catch (error) {
     const message = error instanceof Error ? error.message : String(error);
     throw new Error(`Failed to fetch Maven package info: ${message}`);
+  }
+}
+
+/**
+ * Check for relocation in a Maven artifact
+ * 
+ * Maven uses <relocation> element in POM to indicate artifact has moved
+ * to a new groupId/artifactId
+ */
+export async function checkMavenRelocation(coordinate: string): Promise<MavenRelocationResult> {
+  try {
+    const parsed = parseCoordinate(coordinate);
+    if (!parsed) {
+      return { relocated: false };
+    }
+    
+    const { groupId, artifactId } = parsed;
+    const groupPath = groupId.replace(/\./g, '/');
+    
+    // Fetch maven-metadata.xml to get latest version
+    const metadataUrl = `${MAVEN_REPO}/${groupPath}/${artifactId}/maven-metadata.xml`;
+    const metaResponse = await fetchWithRetry(metadataUrl, { timeoutMs: 10000 });
+    
+    if (!metaResponse.ok) {
+      return { relocated: false };
+    }
+    
+    const xml = await metaResponse.text();
+    const releaseMatch = xml.match(/<release>([^<]+)<\/release>/);
+    const latestMatch = xml.match(/<latest>([^<]+)<\/latest>/);
+    const latestVersion = releaseMatch?.[1] || latestMatch?.[1];
+    
+    if (!latestVersion) {
+      return { relocated: false };
+    }
+    
+    // Fetch POM for latest version
+    const pomUrl = `${MAVEN_REPO}/${groupPath}/${artifactId}/${latestVersion}/${artifactId}-${latestVersion}.pom`;
+    const pomResponse = await fetchWithRetry(pomUrl, { timeoutMs: 10000 });
+    
+    if (!pomResponse.ok) {
+      return { relocated: false };
+    }
+    
+    const pom = await pomResponse.text();
+    
+    // Check for relocation element
+    const relocationMatch = pom.match(/<relocation>([\s\S]*?)<\/relocation>/);
+    if (!relocationMatch) {
+      return { relocated: false };
+    }
+    
+    const relocation = relocationMatch[1];
+    const newGroupId = relocation.match(/<groupId>([^<]+)<\/groupId>/)?.[1];
+    const newArtifactId = relocation.match(/<artifactId>([^<]+)<\/artifactId>/)?.[1];
+    const newVersion = relocation.match(/<version>([^<]+)<\/version>/)?.[1];
+    const message = relocation.match(/<message>([^<]+)<\/message>/)?.[1];
+    
+    return {
+      relocated: true,
+      newGroupId,
+      newArtifactId,
+      newVersion,
+      message,
+    };
+  } catch {
+    return { relocated: false };
   }
 }

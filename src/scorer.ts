@@ -11,8 +11,8 @@
 import { Deduction, ReputationResult, PackageInfo, Ecosystem, VulnerabilityStats } from './types.js';
 import { fetchPackageInfo, checkOwnershipTransfer, NpmPackageData } from './registry/npm.js';
 import { fetchPyPIPackageInfo, checkPyPIYanked, checkPyPIOwnershipTransfer } from './registry/pypi.js';
-import { fetchCratesPackageInfo, checkCratesOwnershipTransfer } from './registry/crates.js';
-import { fetchRubyGemsPackageInfo } from './registry/rubygems.js';
+import { fetchCratesPackageInfo, checkCratesOwnershipTransfer, checkCratesYanked } from './registry/crates.js';
+import { fetchRubyGemsPackageInfo, checkRubyGemsYanked } from './registry/rubygems.js';
 import { fetchGoPackageInfo, checkGoDeprecated, checkGoRetracted, GoPackageData } from './registry/golang.js';
 import { fetchPackagistPackageInfo, checkPackagistAbandoned, checkPackagistOwnershipTransfer, PackagistPackageData } from './registry/packagist.js';
 import { fetchNuGetPackageInfo, checkNuGetDeprecated, checkNuGetOwnershipTransfer, NuGetPackageData } from './registry/nuget.js';
@@ -223,6 +223,47 @@ export async function checkPackageReputation(
       // Latest version is yanked - high severity
       deductions.push({
         reason: `Latest version is yanked${yankedResult.yankedVersions.find(v => v.reason)?.reason ? `: ${yankedResult.yankedVersions.find(v => v.reason)?.reason}` : ''}`,
+        points: DEDUCTIONS.DEPRECATED,
+        confidence: 'high',
+      });
+      score -= DEDUCTIONS.DEPRECATED;
+    } else if (yankedResult.yankedRatio > 0.3) {
+      // Many versions yanked (>30%) - suspicious
+      deductions.push({
+        reason: `High yanked version ratio (${yankedResult.yankedVersions.length} yanked versions)`,
+        points: Math.round(DEDUCTIONS.DEPRECATED * 0.5),
+        confidence: 'medium',
+      });
+      score -= Math.round(DEDUCTIONS.DEPRECATED * 0.5);
+    }
+  } else if (ecosystem === 'crates') {
+    // Check for yanked versions (crates.io's deprecation mechanism)
+    const yankedResult = await checkCratesYanked(packageName);
+    if (yankedResult.latestIsYanked) {
+      // Latest version is yanked - high severity
+      const yankMessage = yankedResult.yankedVersions[0]?.message;
+      deductions.push({
+        reason: `Latest version is yanked${yankMessage ? `: ${yankMessage.slice(0, 100)}${yankMessage.length > 100 ? '...' : ''}` : ''}`,
+        points: DEDUCTIONS.DEPRECATED,
+        confidence: 'high',
+      });
+      score -= DEDUCTIONS.DEPRECATED;
+    } else if (yankedResult.yankedRatio > 0.3) {
+      // Many versions yanked (>30%) - suspicious
+      deductions.push({
+        reason: `High yanked version ratio (${yankedResult.yankedVersions.length} yanked versions)`,
+        points: Math.round(DEDUCTIONS.DEPRECATED * 0.5),
+        confidence: 'medium',
+      });
+      score -= Math.round(DEDUCTIONS.DEPRECATED * 0.5);
+    }
+  } else if (ecosystem === 'rubygems') {
+    // Check for yanked versions in RubyGems
+    const yankedResult = await checkRubyGemsYanked(packageName);
+    if (yankedResult.latestIsYanked) {
+      // Latest version is yanked - high severity
+      deductions.push({
+        reason: 'Latest version is yanked',
         points: DEDUCTIONS.DEPRECATED,
         confidence: 'high',
       });

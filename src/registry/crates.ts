@@ -73,6 +73,69 @@ export async function fetchCratesPackageInfo(packageName: string): Promise<Packa
 }
 
 /**
+ * Check for yanked versions in a Rust crate
+ * 
+ * Returns information about yanked versions including:
+ * - Whether the latest version is yanked
+ * - List of yanked versions with their yank messages (if any)
+ * - Ratio of yanked versions
+ */
+export async function checkCratesYanked(packageName: string): Promise<{
+  hasYanked: boolean;
+  latestIsYanked: boolean;
+  yankedVersions: Array<{ version: string; message?: string }>;
+  yankedRatio: number;
+}> {
+  try {
+    const response = await fetch(`${CRATES_API}/${encodeURIComponent(packageName)}`, {
+      headers: {
+        'User-Agent': 'RepVet/0.2.0 (https://github.com/taku-tez/RepVet)',
+      },
+    });
+    
+    if (!response.ok) {
+      return { hasYanked: false, latestIsYanked: false, yankedVersions: [], yankedRatio: 0 };
+    }
+    
+    const data = await response.json() as {
+      crate: {
+        max_version: string;
+      };
+      versions: Array<{
+        num: string;
+        yanked: boolean;
+        yank_message?: string | null;
+        created_at: string;
+      }>;
+    };
+    
+    // Sort versions by created_at (newest first)
+    const sortedVersions = data.versions.sort(
+      (a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime()
+    );
+    
+    const yankedVersions = sortedVersions
+      .filter(v => v.yanked)
+      .map(v => ({
+        version: v.num,
+        message: v.yank_message || undefined,
+      }));
+    
+    const latestVersion = sortedVersions[0];
+    const latestIsYanked = latestVersion?.yanked === true;
+    
+    return {
+      hasYanked: yankedVersions.length > 0,
+      latestIsYanked,
+      yankedVersions,
+      yankedRatio: sortedVersions.length > 0 ? yankedVersions.length / sortedVersions.length : 0,
+    };
+  } catch {
+    return { hasYanked: false, latestIsYanked: false, yankedVersions: [], yankedRatio: 0 };
+  }
+}
+
+/**
  * Check ownership transfer for Rust crates
  * 
  * Improved: Only flag truly suspicious transfers, not normal maintainer succession

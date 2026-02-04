@@ -6,8 +6,8 @@
 import { describe, it, expect, jest } from '@jest/globals';
 import { fetchPackageInfo } from '../src/registry/npm.js';
 import { fetchPyPIPackageInfo, checkPyPIYanked, checkPyPIOwnershipTransfer } from '../src/registry/pypi.js';
-import { fetchCratesPackageInfo } from '../src/registry/crates.js';
-import { fetchRubyGemsPackageInfo } from '../src/registry/rubygems.js';
+import { fetchCratesPackageInfo, checkCratesYanked } from '../src/registry/crates.js';
+import { fetchRubyGemsPackageInfo, checkRubyGemsYanked } from '../src/registry/rubygems.js';
 import { fetchGoPackageInfo, checkGoDeprecated, checkGoRetracted } from '../src/registry/golang.js';
 import { fetchPackagistPackageInfo, checkPackagistAbandoned, checkPackagistOwnershipTransfer } from '../src/registry/packagist.js';
 import { fetchNuGetPackageInfo, checkNuGetDeprecated, checkNuGetOwnershipTransfer } from '../src/registry/nuget.js';
@@ -15,6 +15,8 @@ import { fetchHexPackageInfo, checkHexRetired, HexPackageData } from '../src/reg
 import { fetchPubPackageInfo, checkPubDiscontinued, PubPackageData } from '../src/registry/pub.js';
 import { fetchCondaPackageInfo, parseEnvironmentYaml } from '../src/registry/conda.js';
 import { fetchCocoaPodsPackageInfo, checkCocoaPodsDeprecated, CocoaPodsPackageData } from '../src/registry/cocoapods.js';
+import { fetchMavenPackageInfo, checkMavenRelocation } from '../src/registry/maven.js';
+import { fetchCPANPackageInfo, checkCPANDeprecated } from '../src/registry/cpan.js';
 
 // Use longer timeout for API calls
 jest.setTimeout(30000);
@@ -99,6 +101,27 @@ describe('Registry modules', () => {
       expect(info?.ecosystem).toBe('crates');
       expect(info?.downloads).toBeGreaterThan(0);
     });
+
+    it('should detect yanked versions in rand', async () => {
+      // rand has some yanked versions (e.g., 0.7.1, 0.4.4)
+      const result = await checkCratesYanked('rand');
+      expect(result.hasYanked).toBe(true);
+      expect(result.yankedVersions.length).toBeGreaterThan(0);
+      // Latest should not be yanked
+      expect(result.latestIsYanked).toBe(false);
+    });
+
+    it('should return no yanked for clean packages', async () => {
+      const result = await checkCratesYanked('serde');
+      // serde is a very clean package
+      expect(result.latestIsYanked).toBe(false);
+    });
+
+    it('should handle non-existent package in yanked check', async () => {
+      const result = await checkCratesYanked('this-crate-does-not-exist-xyz123');
+      expect(result.hasYanked).toBe(false);
+      expect(result.yankedVersions).toHaveLength(0);
+    });
   });
 
   describe('RubyGems', () => {
@@ -107,6 +130,27 @@ describe('Registry modules', () => {
       expect(info).not.toBeNull();
       expect(info?.name).toBe('rails');
       expect(info?.ecosystem).toBe('rubygems');
+    });
+
+    it('should check yanked versions (no yanks expected for rails)', async () => {
+      const result = await checkRubyGemsYanked('rails');
+      // rails is well-maintained, latest should not be yanked
+      expect(result.latestIsYanked).toBe(false);
+    });
+
+    it('should handle non-existent package in yanked check', async () => {
+      const result = await checkRubyGemsYanked('this-gem-does-not-exist-xyz123');
+      expect(result.hasYanked).toBe(false);
+      expect(result.yankedVersions).toHaveLength(0);
+    });
+
+    it('should check yanked structure for any gem', async () => {
+      // Test the structure of the return value for any gem
+      const result = await checkRubyGemsYanked('rake');
+      expect(typeof result.hasYanked).toBe('boolean');
+      expect(typeof result.latestIsYanked).toBe('boolean');
+      expect(Array.isArray(result.yankedVersions)).toBe(true);
+      expect(typeof result.yankedRatio).toBe('number');
     });
   });
 

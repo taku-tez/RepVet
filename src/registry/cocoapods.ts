@@ -2,15 +2,106 @@
  * CocoaPods (Swift/Objective-C) Registry API
  */
 
+import { createHash } from 'crypto';
 import { PackageInfo } from '../types.js';
+import { fetchWithRetry, cleanRepoUrl } from './utils.js';
 
-const COCOAPODS_API = 'https://cdn.cocoapods.org';
 const COCOAPODS_TRUNK = 'https://trunk.cocoapods.org/api/v1/pods';
+const COCOAPODS_SPECS_CDN = 'https://cdn.jsdelivr.net/cocoa/Specs';
+const COCOAPODS_SPECS_GITHUB = 'https://raw.githubusercontent.com/CocoaPods/Specs/master/Specs';
 
-export async function fetchCocoaPodsPackageInfo(packageName: string): Promise<PackageInfo | null> {
+/**
+ * CocoaPods deprecation result
+ */
+export interface CocoaPodsDeprecationResult {
+  deprecated: boolean;
+  message?: string;
+  replacement?: string;  // deprecated_in_favor_of value
+}
+
+/**
+ * Extended CocoaPods package data with deprecation info
+ */
+export interface CocoaPodsPackageData extends PackageInfo {
+  ecosystem: 'cocoapods';
+  deprecated?: string;           // Deprecation message for compatibility with npm pattern
+  deprecatedInFavorOf?: string;  // Replacement package name
+}
+
+/**
+ * podspec.json structure (partial)
+ */
+interface PodSpec {
+  name: string;
+  version: string;
+  summary?: string;
+  homepage?: string;
+  deprecated?: boolean | string;
+  deprecated_in_favor_of?: string;
+  source?: {
+    git?: string;
+    http?: string;
+  };
+  authors?: Record<string, string> | string;
+}
+
+/**
+ * Calculate MD5 hash prefix for CocoaPods Specs path
+ * The Specs repo uses first 3 characters of MD5 hash as directory structure
+ */
+function getSpecsPathPrefix(podName: string): string {
+  const hash = createHash('md5').update(podName).digest('hex');
+  return `${hash[0]}/${hash[1]}/${hash[2]}`;
+}
+
+/**
+ * Fetch podspec.json from CDN or GitHub
+ */
+async function fetchPodSpec(
+  podName: string,
+  version: string
+): Promise<PodSpec | null> {
+  const pathPrefix = getSpecsPathPrefix(podName);
+  const specPath = `${pathPrefix}/${podName}/${version}/${podName}.podspec.json`;
+  
+  // Try jsdelivr CDN first (faster)
   try {
-    // Try trunk API first
-    const response = await fetch(`${COCOAPODS_TRUNK}/${encodeURIComponent(packageName)}`);
+    const cdnResponse = await fetchWithRetry(
+      `${COCOAPODS_SPECS_CDN}/${specPath}`,
+      { timeoutMs: 5000 }
+    );
+    
+    if (cdnResponse.ok) {
+      return await cdnResponse.json() as PodSpec;
+    }
+  } catch {
+    // Fall through to GitHub
+  }
+  
+  // Fallback to GitHub raw
+  try {
+    const ghResponse = await fetchWithRetry(
+      `${COCOAPODS_SPECS_GITHUB}/${specPath}`,
+      { timeoutMs: 5000 }
+    );
+    
+    if (ghResponse.ok) {
+      return await ghResponse.json() as PodSpec;
+    }
+  } catch {
+    // Ignore
+  }
+  
+  return null;
+}
+
+export async function fetchCocoaPodsPackageInfo(packageName: string): Promise<CocoaPodsPackageData | null> {
+  try {
+    // Try trunk API first for basic info
+    const response = await fetchWithRetry(
+      `${COCOAPODS_TRUNK}/${encodeURIComponent(packageName)}`,
+      { timeoutMs: 10000 }
+    );
     
     if (!response.ok) {
       if (response.status === 404) {
@@ -20,7 +111,6 @@ export async function fetchCocoaPodsPackageInfo(packageName: string): Promise<Pa
     }
     
     const data = await response.json() as {
-      name: string;
       versions: Array<{
         name: string;
         created_at: string;
@@ -40,44 +130,119 @@ export async function fetchCocoaPodsPackageInfo(packageName: string): Promise<Pa
       time[version.name] = version.created_at;
     }
     
-    // Latest version
-    const latestVersion = data.versions[0]?.name || '';
+    // Latest version (find the most recent by created_at)
+    const sortedVersions = [...data.versions].sort(
+      (a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime()
+    );
+    const latestVersion = sortedVersions[0]?.name || '';
     
-    // Try to get podspec for repository URL
+    // Fetch podspec for repository URL and deprecation info
     let repoUrl: string | undefined;
-    try {
-      // CocoaPods specs are stored in a specific structure
-      const firstLetter = packageName.charAt(0).toLowerCase();
-      const specUrl = `${COCOAPODS_API}/Specs/${firstLetter}/${firstLetter}/${firstLetter}/${packageName}/${latestVersion}/${packageName}.podspec.json`;
-      const specResponse = await fetch(specUrl);
+    let deprecated: string | undefined;
+    let deprecatedInFavorOf: string | undefined;
+    
+    if (latestVersion) {
+      const podspec = await fetchPodSpec(packageName, latestVersion);
       
-      if (specResponse.ok) {
-        const spec = await specResponse.json() as {
-          source?: {
-            git?: string;
-          };
-          homepage?: string;
-        };
+      if (podspec) {
+        // Repository URL
+        repoUrl = cleanRepoUrl(podspec.source?.git || podspec.homepage);
         
-        repoUrl = spec.source?.git || spec.homepage;
-        if (repoUrl && !repoUrl.includes('github.com') && !repoUrl.includes('gitlab.com')) {
-          repoUrl = undefined;
+        // Deprecation info
+        if (podspec.deprecated_in_favor_of) {
+          deprecatedInFavorOf = podspec.deprecated_in_favor_of;
+          deprecated = `Deprecated in favor of ${podspec.deprecated_in_favor_of}`;
+        } else if (podspec.deprecated) {
+          deprecated = typeof podspec.deprecated === 'string' 
+            ? podspec.deprecated 
+            : 'Package marked as deprecated';
         }
       }
-    } catch {
-      // Ignore spec fetch errors
     }
     
     return {
-      name: data.name,
+      name: packageName,
       version: latestVersion,
       maintainers,
       repository: repoUrl ? { type: 'git', url: repoUrl } : undefined,
       time,
       ecosystem: 'cocoapods',
+      deprecated,
+      deprecatedInFavorOf,
     };
   } catch (error) {
     const message = error instanceof Error ? error.message : String(error);
     throw new Error(`Failed to fetch CocoaPods package info: ${message}`);
+  }
+}
+
+/**
+ * Check if a CocoaPods package is deprecated
+ * Fetches the latest podspec and checks for deprecated/deprecated_in_favor_of fields
+ */
+export async function checkCocoaPodsDeprecated(
+  packageName: string
+): Promise<CocoaPodsDeprecationResult> {
+  try {
+    // First get version list from trunk API
+    const response = await fetchWithRetry(
+      `${COCOAPODS_TRUNK}/${encodeURIComponent(packageName)}`,
+      { timeoutMs: 10000 }
+    );
+    
+    if (!response.ok) {
+      return { deprecated: false };
+    }
+    
+    const data = await response.json() as {
+      versions: Array<{
+        name: string;
+        created_at: string;
+      }>;
+    };
+    
+    if (!data.versions || data.versions.length === 0) {
+      return { deprecated: false };
+    }
+    
+    // Get latest version
+    const sortedVersions = [...data.versions].sort(
+      (a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime()
+    );
+    const latestVersion = sortedVersions[0]?.name;
+    
+    if (!latestVersion) {
+      return { deprecated: false };
+    }
+    
+    // Fetch podspec
+    const podspec = await fetchPodSpec(packageName, latestVersion);
+    
+    if (!podspec) {
+      return { deprecated: false };
+    }
+    
+    // Check deprecation fields
+    if (podspec.deprecated_in_favor_of) {
+      return {
+        deprecated: true,
+        replacement: podspec.deprecated_in_favor_of,
+        message: `Use ${podspec.deprecated_in_favor_of} instead`,
+      };
+    }
+    
+    if (podspec.deprecated) {
+      return {
+        deprecated: true,
+        message: typeof podspec.deprecated === 'string' 
+          ? podspec.deprecated 
+          : 'Package marked as deprecated',
+      };
+    }
+    
+    return { deprecated: false };
+  } catch {
+    // Error fetching - assume not deprecated
+    return { deprecated: false };
   }
 }

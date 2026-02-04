@@ -73,6 +73,57 @@ export async function fetchRubyGemsPackageInfo(packageName: string): Promise<Pac
 }
 
 /**
+ * Check for yanked versions in a Ruby gem
+ * 
+ * Note: RubyGems API returns yanked versions separately.
+ * The versions endpoint may include 'yanked' field for each version.
+ */
+export async function checkRubyGemsYanked(packageName: string): Promise<{
+  hasYanked: boolean;
+  latestIsYanked: boolean;
+  yankedVersions: Array<{ version: string }>;
+  yankedRatio: number;
+}> {
+  try {
+    const versionsResponse = await fetch(`${RUBYGEMS_API}/versions/${encodeURIComponent(packageName)}.json`);
+    
+    if (!versionsResponse.ok) {
+      return { hasYanked: false, latestIsYanked: false, yankedVersions: [], yankedRatio: 0 };
+    }
+    
+    const versions = await versionsResponse.json() as Array<{
+      number: string;
+      created_at: string;
+      yanked?: boolean | null;
+      prerelease?: boolean;
+    }>;
+    
+    // Sort by created_at (newest first)
+    const sortedVersions = versions.sort(
+      (a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime()
+    );
+    
+    // Filter yanked versions (yanked can be true, false, or null/undefined)
+    const yankedVersions = sortedVersions
+      .filter(v => v.yanked === true)
+      .map(v => ({ version: v.number }));
+    
+    // Find latest non-prerelease version, or just latest if all are prerelease
+    const latestStable = sortedVersions.find(v => !v.prerelease) || sortedVersions[0];
+    const latestIsYanked = latestStable?.yanked === true;
+    
+    return {
+      hasYanked: yankedVersions.length > 0,
+      latestIsYanked,
+      yankedVersions,
+      yankedRatio: sortedVersions.length > 0 ? yankedVersions.length / sortedVersions.length : 0,
+    };
+  } catch {
+    return { hasYanked: false, latestIsYanked: false, yankedVersions: [], yankedRatio: 0 };
+  }
+}
+
+/**
  * Check ownership transfer for Ruby gems
  */
 export async function checkRubyGemsOwnershipTransfer(packageName: string): Promise<{
