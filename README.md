@@ -1,6 +1,6 @@
 # RepVet 🔍
 
-Maintainer reputation checker for npm packages. Part of the **xxVet** security CLI series.
+Maintainer reputation checker for npm, PyPI, and crates.io packages. Part of the **xxVet** security CLI series.
 
 ## Why?
 
@@ -17,25 +17,41 @@ npm install -g repvet
 ### Check a single package
 
 ```bash
+# npm (default)
 repvet check lodash
-# → Score: 100/100 (LOW risk)
-# → Maintainers: jdalton
+# → Score: 92/100 (LOW risk)
 
 repvet check event-stream
-# → Score: 50/100 (MEDIUM risk)
-# → Deductions:
+# → Score: 22/100 (CRITICAL risk)
 #   -50: Past malware incident: Bitcoin wallet stealer (2018)
+#   -15: Last commit over 3 years ago
+#   -5: Single maintainer
+
+# PyPI
+repvet check requests -e pypi
+# → Score: 95/100 (LOW risk)
+
+# crates.io
+repvet check serde -e crates
+# → Score: 95/100 (LOW risk)
 ```
 
-### Scan package.json
+### Scan dependency files
 
 ```bash
+# package.json (npm)
 repvet scan ./package.json
 
-# Only show packages below score 80
+# requirements.txt (PyPI)
+repvet scan ./requirements.txt
+
+# Cargo.toml (Rust)
+repvet scan ./Cargo.toml
+
+# Filter by threshold
 repvet scan ./package.json --threshold 80
 
-# Fail CI if any package scores below 50
+# CI mode (exit 1 if any package below score)
 repvet scan ./package.json --fail-under 50
 ```
 
@@ -50,19 +66,42 @@ repvet scan ./package.json --json
 
 RepVet uses a **deduction-based** scoring system starting at 100:
 
-| Check | Deduction |
-|-------|-----------|
-| Last commit > 1 year ago | -10 |
-| Package ownership transferred | -20 |
-| Past malware incident | -50 |
+| Check | Deduction | Notes |
+|-------|-----------|-------|
+| Past malware incident | -50 | Known supply chain attacks |
+| Critical vulns in history | -15 | From OSV database |
+| Ownership transfer | -15 | Suspicious rapid changes |
+| High severity vulns | -10 | From OSV database |
+| Unfixed vulnerabilities | -10 | Adjusted by confidence |
+| Last commit > 3 years | -15 | - |
+| Last commit > 2 years | -10 | - |
+| Last commit > 1 year | -5 | - |
+| Single maintainer | -5 | Bus factor risk |
+| Many recent vulns (3+/year) | -5 | - |
+
+### Confidence-adjusted scoring
+
+Deductions are adjusted by confidence level:
+- **High**: 100% of points
+- **Medium**: 75% of points  
+- **Low**: 50% of points
 
 ## Risk Levels
 
 | Score | Risk |
 |-------|------|
 | 80-100 | LOW |
-| 50-79 | MEDIUM |
-| 0-49 | HIGH |
+| 60-79 | MEDIUM |
+| 40-59 | HIGH |
+| 0-39 | CRITICAL |
+
+## Ecosystems
+
+| Ecosystem | Registry | Ownership Detection | Vuln History |
+|-----------|----------|---------------------|--------------|
+| npm | ✅ | ✅ | ✅ OSV |
+| PyPI | ✅ | ❌ | ✅ OSV |
+| crates.io | ✅ | ✅ | ✅ OSV |
 
 ## Environment Variables
 
