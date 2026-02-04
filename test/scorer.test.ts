@@ -2,12 +2,13 @@
  * Scorer tests
  */
 
-import { describe, it, expect } from '@jest/globals';
+import { describe, it, expect, jest } from '@jest/globals';
 import { checkPackageReputation } from '../src/scorer.js';
 
+// Use longer timeout for API calls
+jest.setTimeout(30000);
+
 describe('Scorer', () => {
-  // Use longer timeout for API calls
-  jest.setTimeout(30000);
 
   describe('npm packages', () => {
     it('should score a healthy package highly', async () => {
