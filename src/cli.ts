@@ -353,10 +353,16 @@ function printResult(result: ReputationResult): void {
     : chalk.bgRed.white;
   
   const ecosystemBadge = chalk.dim(`[${result.ecosystem}]`);
+  const deletedBadge = result.isDeleted ? chalk.bgRed.white(' DELETED/REMOVED ') : '';
   
-  console.log(chalk.bold(`📦 ${result.package}`) + ' ' + ecosystemBadge);
+  console.log(chalk.bold(`📦 ${result.package}`) + ' ' + ecosystemBadge + deletedBadge);
   console.log(`   Score: ${scoreColor(`${result.score}/100`)} (${result.riskLevel} risk)`);
-  console.log(`   Maintainers: ${result.maintainers.join(', ') || 'Unknown'}`);
+  
+  if (result.isDeleted) {
+    console.log(chalk.red(`   ⚠️  This package was removed from ${result.ecosystem} (known malware)`));
+  } else {
+    console.log(`   Maintainers: ${result.maintainers.join(', ') || 'Unknown'}`);
+  }
   
   if (result.lastCommitDate) {
     console.log(`   Last Commit: ${result.lastCommitDate.split('T')[0]}`);

@@ -144,9 +144,32 @@ export async function checkPackageReputation(
   const deductions: Deduction[] = [];
   let score = BASE_SCORE;
   
+  // Check for known malware FIRST (before registry lookup)
+  // This allows detection of removed/deleted malicious packages
+  const isMalwareKnown = hasMalwareHistory(packageName);
+  const malwareDetails = isMalwareKnown ? getMalwareDetails(packageName) : null;
+  
   // Fetch package info
   const packageInfo = await fetchPackageByEcosystem(packageName, ecosystem);
   if (!packageInfo) {
+    // If package is deleted but known malware, return special result
+    if (isMalwareKnown) {
+      return {
+        package: packageName,
+        ecosystem,
+        score: 0,
+        riskLevel: 'CRITICAL',
+        deductions: [{
+          reason: `REMOVED/DELETED malicious package${malwareDetails ? `: ${malwareDetails}` : ''}`,
+          points: BASE_SCORE,
+          confidence: 'high',
+        }],
+        maintainers: [],
+        hasOwnershipTransfer: false,
+        hasMalwareHistory: true,
+        isDeleted: true,
+      };
+    }
     throw new Error(`Package not found: ${packageName} (${ecosystem})`);
   }
   

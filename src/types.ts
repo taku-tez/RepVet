@@ -35,6 +35,7 @@ export interface ReputationResult {
   hasOwnershipTransfer: boolean;
   hasMalwareHistory: boolean;
   vulnerabilityStats?: VulnerabilityStats;
+  isDeleted?: boolean;  // Package was removed from registry (but is known malware)
 }
 
 export interface Deduction {

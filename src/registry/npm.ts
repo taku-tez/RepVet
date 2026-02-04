@@ -3,6 +3,7 @@
  */
 
 import { PackageInfo } from '../types.js';
+import { OwnershipTransferResult, NO_TRANSFER_DETECTED, fetchJsonOrNull } from './utils.js';
 
 const NPM_REGISTRY = 'https://registry.npmjs.org';
 
@@ -56,15 +57,12 @@ export async function fetchPackageInfo(packageName: string): Promise<NpmPackageD
       isSecurityHoldingPackage,
     };
   } catch (error) {
-    throw new Error(`Failed to fetch package info: ${error}`);
+    const message = error instanceof Error ? error.message : String(error);
+    throw new Error(`Failed to fetch npm package info: ${message}`);
   }
 }
 
-export interface OwnershipTransferResult {
-  transferred: boolean;
-  confidence: 'high' | 'medium' | 'low';
-  details?: string;
-}
+// OwnershipTransferResult is now imported from utils.ts
 
 /**
  * Check if package has suspicious ownership transfer
@@ -150,6 +148,6 @@ export async function checkOwnershipTransfer(packageName: string): Promise<Owner
     
     return { transferred: false, confidence: 'high' };
   } catch {
-    return { transferred: false, confidence: 'low' };
+    return NO_TRANSFER_DETECTED;
   }
 }
