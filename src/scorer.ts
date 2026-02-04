@@ -21,9 +21,10 @@ import { fetchHexPackageInfo } from './registry/hex.js';
 import { fetchPubPackageInfo } from './registry/pub.js';
 import { fetchCPANPackageInfo } from './registry/cpan.js';
 import { fetchCocoaPodsPackageInfo } from './registry/cocoapods.js';
+import { fetchCondaPackageInfo } from './registry/conda.js';
 import { parseGitHubUrl, fetchLastCommitDate } from './registry/github.js';
 import { hasMalwareHistory, getMalwareDetails } from './malware/known-packages.js';
-import { analyzeVulnerabilityHistory } from './osv/client.js';
+import { analyzeVulnerabilityHistory, OSVEcosystem } from './osv/client.js';
 
 const BASE_SCORE = 100;
 
@@ -64,6 +65,7 @@ const ESTABLISHED_THRESHOLDS = {
   pub: { downloads: 1000000, releaseCount: 30 },
   cpan: { downloads: 100000, releaseCount: 30 },
   cocoapods: { downloads: 1000000, releaseCount: 30 },
+  conda: { downloads: 10000000, releaseCount: 100 },  // conda-forge packages have high revision counts
 };
 
 function applyConfidence(points: number, confidence: 'high' | 'medium' | 'low'): number {
@@ -104,15 +106,15 @@ async function fetchPackageByEcosystem(name: string, ecosystem: Ecosystem): Prom
       return fetchCPANPackageInfo(name);
     case 'cocoapods':
       return fetchCocoaPodsPackageInfo(name);
+    case 'conda':
+      return fetchCondaPackageInfo(name);
     default:
       throw new Error(`Unsupported ecosystem: ${ecosystem}`);
   }
 }
 
-type OSVEcosystem = 'npm' | 'PyPI' | 'crates.io' | 'Go' | 'RubyGems' | 'Packagist' | 'NuGet' | 'Maven' | 'Hex' | 'Pub' | 'CPAN' | 'CocoaPods';
-
-function mapEcosystemToOSV(ecosystem: Ecosystem): OSVEcosystem {
-  const mapping: Record<Ecosystem, OSVEcosystem> = {
+function mapEcosystemToOSV(ecosystem: Ecosystem): OSVEcosystem | null {
+  const mapping: Record<Ecosystem, OSVEcosystem | null> = {
     npm: 'npm',
     pypi: 'PyPI',
     crates: 'crates.io',
@@ -125,6 +127,7 @@ function mapEcosystemToOSV(ecosystem: Ecosystem): OSVEcosystem {
     pub: 'Pub',
     cpan: 'CPAN',
     cocoapods: 'CocoaPods',
+    conda: null,  // OSV doesn't support Conda ecosystem yet
   };
   return mapping[ecosystem];
 }
@@ -309,9 +312,15 @@ export async function checkPackageReputation(
   }
   
   // Check 5: Vulnerability history (OSV)
+  // Note: Some ecosystems (e.g., conda) are not supported by OSV
+  const osvEcosystem = mapEcosystemToOSV(ecosystem);
   try {
+    if (!osvEcosystem) {
+      // Skip OSV check for unsupported ecosystems
+      throw new Error('OSV not supported for this ecosystem');
+    }
     const vulnAnalysis = await analyzeVulnerabilityHistory(
-      mapEcosystemToOSV(ecosystem),
+      osvEcosystem,
       packageName
     );
     

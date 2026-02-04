@@ -161,7 +161,7 @@ const OSV_API = 'https://api.osv.dev/v1';
 /**
  * Query OSV for vulnerabilities affecting a package
  */
-type OSVEcosystem = 'npm' | 'PyPI' | 'crates.io' | 'Go' | 'RubyGems' | 'Packagist' | 'NuGet' | 'Maven' | 'Hex' | 'Pub' | 'CPAN' | 'CocoaPods';
+export type OSVEcosystem = 'npm' | 'PyPI' | 'crates.io' | 'Go' | 'RubyGems' | 'Packagist' | 'NuGet' | 'Maven' | 'Hex' | 'Pub' | 'CPAN' | 'CocoaPods';
 
 export async function queryPackageVulnerabilities(
   ecosystem: OSVEcosystem,

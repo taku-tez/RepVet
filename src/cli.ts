@@ -10,6 +10,7 @@ import chalk from 'chalk';
 import { createRequire } from 'module';
 import { checkPackageReputation } from './scorer.js';
 import { ReputationResult, Ecosystem } from './types.js';
+import { parseEnvironmentYaml } from './registry/conda.js';
 
 // Get version from package.json (single source of truth)
 const require = createRequire(import.meta.url);
@@ -26,7 +27,7 @@ program
   .command('check <package>')
   .description('Check reputation of a single package')
   .option('--json', 'Output as JSON')
-  .option('-e, --ecosystem <ecosystem>', 'Ecosystem: npm, pypi, crates, rubygems, go, packagist, nuget, maven, hex, pub, cpan, cocoapods', 'npm')
+  .option('-e, --ecosystem <ecosystem>', 'Ecosystem: npm, pypi, crates, rubygems, go, packagist, nuget, maven, hex, pub, cpan, cocoapods, conda', 'npm')
   .action(async (packageName: string, options: { json?: boolean; ecosystem?: string }) => {
     try {
       const ecosystem = validateEcosystem(options.ecosystem || 'npm');
@@ -147,7 +148,7 @@ program
   });
 
 function validateEcosystem(eco: string): Ecosystem {
-  const valid = ['npm', 'pypi', 'crates', 'rubygems', 'go', 'packagist', 'nuget', 'maven', 'hex', 'pub', 'cpan', 'cocoapods'];
+  const valid = ['npm', 'pypi', 'crates', 'rubygems', 'go', 'packagist', 'nuget', 'maven', 'hex', 'pub', 'cpan', 'cocoapods', 'conda'];
   if (!valid.includes(eco.toLowerCase())) {
     throw new Error(`Invalid ecosystem: ${eco}. Use: ${valid.join(', ')}`);
   }
@@ -301,6 +302,13 @@ function parseDepFile(fileName: string, content: string): { packages: string[]; 
       packages.push(match[1]);
     }
     return { packages, ecosystem: 'cocoapods' }; // Use CocoaPods for Swift too
+  }
+  
+  if (fileName === 'environment.yml' || fileName === 'environment.yaml' || 
+      fileName.endsWith('/environment.yml') || fileName.endsWith('/environment.yaml')) {
+    // Parse Conda environment file
+    const { condaPackages } = parseEnvironmentYaml(content);
+    return { packages: condaPackages, ecosystem: 'conda' };
   }
   
   throw new Error(`Unsupported file format: ${fileName}`);

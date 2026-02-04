@@ -13,6 +13,7 @@ import { fetchPackagistPackageInfo } from '../src/registry/packagist.js';
 import { fetchNuGetPackageInfo } from '../src/registry/nuget.js';
 import { fetchHexPackageInfo } from '../src/registry/hex.js';
 import { fetchPubPackageInfo } from '../src/registry/pub.js';
+import { fetchCondaPackageInfo, parseEnvironmentYaml } from '../src/registry/conda.js';
 
 // Use longer timeout for API calls
 jest.setTimeout(30000);
@@ -121,6 +122,97 @@ describe('Registry modules', () => {
       expect(info).not.toBeNull();
       expect(info?.name).toBe('http');
       expect(info?.ecosystem).toBe('pub');
+    });
+  });
+
+  describe('Conda (Anaconda)', () => {
+    it('should fetch package info for numpy from conda-forge', async () => {
+      const info = await fetchCondaPackageInfo('numpy');
+      expect(info).not.toBeNull();
+      expect(info?.name).toBe('numpy');
+      expect(info?.ecosystem).toBe('conda');
+      expect(info?.channel).toBe('conda-forge');
+      expect(info?.repository?.url).toContain('github.com');
+    });
+
+    it('should fetch package info for pandas', async () => {
+      const info = await fetchCondaPackageInfo('pandas');
+      expect(info).not.toBeNull();
+      expect(info?.name).toBe('pandas');
+      expect(info?.ecosystem).toBe('conda');
+    });
+
+    it('should return null for non-existent package', async () => {
+      const info = await fetchCondaPackageInfo('this-package-definitely-does-not-exist-12345');
+      expect(info).toBeNull();
+    });
+
+    it('should fetch from specific channel', async () => {
+      const info = await fetchCondaPackageInfo('numpy', 'conda-forge');
+      expect(info).not.toBeNull();
+      expect(info?.channel).toBe('conda-forge');
+    });
+  });
+
+  describe('parseEnvironmentYaml', () => {
+    it('should parse basic environment.yml', () => {
+      const content = `
+name: myenv
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - numpy=1.21
+  - pandas>=1.3
+  - scipy
+  - python=3.9
+`;
+      const result = parseEnvironmentYaml(content);
+      expect(result.condaPackages).toContain('numpy');
+      expect(result.condaPackages).toContain('pandas');
+      expect(result.condaPackages).toContain('scipy');
+      expect(result.condaPackages).not.toContain('python');
+      expect(result.channels).toContain('conda-forge');
+      expect(result.channels).toContain('defaults');
+    });
+
+    it('should parse environment.yml with pip packages', () => {
+      const content = `
+name: ml-env
+dependencies:
+  - numpy
+  - pandas
+  - pip:
+    - requests
+    - flask>=2.0
+`;
+      const result = parseEnvironmentYaml(content);
+      expect(result.condaPackages).toContain('numpy');
+      expect(result.condaPackages).toContain('pandas');
+      expect(result.pipPackages).toContain('requests');
+      expect(result.pipPackages).toContain('flask');
+    });
+
+    it('should handle empty dependencies', () => {
+      const content = `
+name: empty
+channels:
+  - defaults
+`;
+      const result = parseEnvironmentYaml(content);
+      expect(result.condaPackages).toHaveLength(0);
+      expect(result.pipPackages).toHaveLength(0);
+    });
+
+    it('should skip python and pip entries', () => {
+      const content = `
+dependencies:
+  - python=3.10
+  - pip
+  - numpy
+`;
+      const result = parseEnvironmentYaml(content);
+      expect(result.condaPackages).toEqual(['numpy']);
     });
   });
 });
