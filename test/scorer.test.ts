@@ -46,6 +46,17 @@ describe('Scorer', () => {
       expect(result.maintainers.length).toBeGreaterThan(1);
       expect(result.score).toBe(100);
     });
+
+    it('should detect PyPI malware history', async () => {
+      // num2words had malicious versions 0.5.15/0.5.16 in 2025
+      const result = await checkPackageReputation('num2words', 'pypi');
+      expect(result.hasMalwareHistory).toBe(true);
+      expect(result.score).toBeLessThan(50);
+      const hasMalwareDeduction = result.deductions.some(d =>
+        d.reason.toLowerCase().includes('malware')
+      );
+      expect(hasMalwareDeduction).toBe(true);
+    });
   });
 
   describe('crates.io packages', () => {
@@ -60,6 +71,17 @@ describe('Scorer', () => {
       // Score may be < 100 due to vulnerabilities, but should not have false positive deductions
       expect(result.score).toBeGreaterThanOrEqual(85);
       expect(result.hasOwnershipTransfer).toBe(false);
+    });
+
+    it('should detect crates.io malware history', async () => {
+      // faster_log was a typosquat of fast_log - crypto wallet stealer in 2025
+      const result = await checkPackageReputation('faster_log', 'crates');
+      expect(result.hasMalwareHistory).toBe(true);
+      expect(result.score).toBeLessThan(50);
+      const hasMalwareDeduction = result.deductions.some(d =>
+        d.reason.toLowerCase().includes('malware')
+      );
+      expect(hasMalwareDeduction).toBe(true);
     });
   });
 

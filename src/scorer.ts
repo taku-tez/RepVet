@@ -181,8 +181,8 @@ export async function checkPackageReputation(
     }
   }
   
-  // Check 1: Malware history (-50) - npm only for now
-  if (ecosystem === 'npm' && hasMalwareHistory(packageName)) {
+  // Check 1: Malware history (-50) - all ecosystems
+  if (hasMalwareHistory(packageName)) {
     hasMalware = true;
     const details = getMalwareDetails(packageName);
     const points = DEDUCTIONS.MALWARE_HISTORY;
