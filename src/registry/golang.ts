@@ -8,8 +8,10 @@
  */
 
 import { PackageInfo } from '../types.js';
+import { fetchWithRetry, OwnershipTransferResult, NO_TRANSFER_DETECTED } from './utils.js';
 
 const GO_PROXY = 'https://proxy.golang.org';
+const GITHUB_API = 'https://api.github.com';
 
 export interface GoPackageData extends PackageInfo {
   deprecated?: string;      // Deprecation message if module is deprecated
@@ -296,4 +298,198 @@ export async function getGoModuleFullInfo(modulePath: string): Promise<GoPackage
   }
   
   return packageInfo;
+}
+
+// ============================================================
+// Ownership Transfer Detection via go.mod module path changes
+// ============================================================
+
+/**
+ * GitHub API headers
+ */
+function getGitHubHeaders(): Record<string, string> {
+  return {
+    'Accept': 'application/vnd.github.v3+json',
+    'User-Agent': 'RepVet/0.7.2',
+    ...(process.env.GITHUB_TOKEN ? { 'Authorization': `token ${process.env.GITHUB_TOKEN}` } : {}),
+  };
+}
+
+/**
+ * Extract GitHub owner from a Go module path
+ * e.g., "github.com/old-owner/repo" -> "old-owner"
+ */
+function extractModuleOwner(goModContent: string): string | null {
+  // Match the module line: module github.com/owner/repo
+  const moduleMatch = goModContent.match(/^module\s+(github\.com\/([^/\s]+)\/[^\s]+)/m);
+  if (!moduleMatch) return null;
+  return moduleMatch[2]; // Return the owner part
+}
+
+/**
+ * Extract full module path from go.mod content
+ * e.g., "module github.com/owner/repo/v2" -> "github.com/owner/repo/v2"
+ */
+function extractModulePath(goModContent: string): string | null {
+  const moduleMatch = goModContent.match(/^module\s+(\S+)/m);
+  return moduleMatch ? moduleMatch[1] : null;
+}
+
+/**
+ * Check if the module path change is just a major version change
+ * e.g., "github.com/owner/repo" -> "github.com/owner/repo/v2" is NOT ownership transfer
+ */
+function isMajorVersionChange(oldModulePath: string, newModulePath: string): boolean {
+  // Remove /v2, /v3, etc. suffix for comparison
+  const stripMajorVersion = (path: string) => path.replace(/\/v\d+$/, '');
+  return stripMajorVersion(oldModulePath) === stripMajorVersion(newModulePath);
+}
+
+interface GitHubTag {
+  name: string;
+  commit: {
+    sha: string;
+  };
+}
+
+/**
+ * Fetch tags from GitHub repository (sorted by creation date)
+ */
+async function fetchGitHubTags(owner: string, repo: string): Promise<GitHubTag[]> {
+  try {
+    const response = await fetchWithRetry(
+      `${GITHUB_API}/repos/${owner}/${repo}/tags?per_page=100`,
+      {
+        headers: getGitHubHeaders(),
+        timeoutMs: 10000,
+      }
+    );
+    
+    if (!response.ok) {
+      return [];
+    }
+    
+    return await response.json() as GitHubTag[];
+  } catch {
+    return [];
+  }
+}
+
+/**
+ * Fetch go.mod content for a specific tag/ref
+ */
+async function fetchGoModContent(owner: string, repo: string, ref: string): Promise<string | null> {
+  try {
+    // GitHub raw content API
+    const response = await fetchWithRetry(
+      `https://raw.githubusercontent.com/${owner}/${repo}/${ref}/go.mod`,
+      {
+        headers: {
+          'User-Agent': 'RepVet/0.7.2',
+          ...(process.env.GITHUB_TOKEN ? { 'Authorization': `token ${process.env.GITHUB_TOKEN}` } : {}),
+        },
+        timeoutMs: 5000,
+      }
+    );
+    
+    if (!response.ok) {
+      return null;
+    }
+    
+    return await response.text();
+  } catch {
+    return null;
+  }
+}
+
+/**
+ * Check for ownership transfer by comparing go.mod module paths
+ * across the repository's tag history.
+ * 
+ * This detects cases where a module was transferred between GitHub users/orgs
+ * by looking at changes in the module declaration in go.mod.
+ * 
+ * Only supports GitHub-hosted modules.
+ */
+export async function checkGoOwnershipTransfer(modulePath: string): Promise<OwnershipTransferResult> {
+  // 1. Extract GitHub owner/repo from module path
+  const normalizedPath = modulePath.replace(/^go:\/\//, '');
+  const match = normalizedPath.match(/github\.com\/([^/]+)\/([^/]+)/);
+  if (!match) {
+    // Not a GitHub module - skip
+    return NO_TRANSFER_DETECTED;
+  }
+  
+  const [, owner, repoWithVersion] = match;
+  // Remove /v2, /v3, etc. from repo name
+  const repo = repoWithVersion.replace(/\/v\d+$/, '');
+  
+  // 2. Fetch tag list
+  const tags = await fetchGitHubTags(owner, repo);
+  if (tags.length < 2) {
+    // Need at least 2 tags to compare
+    return NO_TRANSFER_DETECTED;
+  }
+  
+  // 3. Get oldest and latest tags
+  // GitHub returns tags in reverse chronological order (newest first)
+  const latestTag = tags[0].name;
+  const oldestTag = tags[tags.length - 1].name;
+  
+  // 4. Fetch go.mod for both tags
+  const [oldGoMod, newGoMod] = await Promise.all([
+    fetchGoModContent(owner, repo, oldestTag),
+    fetchGoModContent(owner, repo, latestTag),
+  ]);
+  
+  if (!oldGoMod || !newGoMod) {
+    // Can't compare - go.mod might not exist in older versions
+    return NO_TRANSFER_DETECTED;
+  }
+  
+  // 5. Extract module paths and owners
+  const oldModulePath = extractModulePath(oldGoMod);
+  const newModulePath = extractModulePath(newGoMod);
+  
+  if (!oldModulePath || !newModulePath) {
+    return NO_TRANSFER_DETECTED;
+  }
+  
+  const oldOwner = extractModuleOwner(oldGoMod);
+  const newOwner = extractModuleOwner(newGoMod);
+  
+  if (!oldOwner || !newOwner) {
+    return NO_TRANSFER_DETECTED;
+  }
+  
+  // 6. Compare owners (case-insensitive for GitHub)
+  if (oldOwner.toLowerCase() !== newOwner.toLowerCase()) {
+    // Make sure it's not just a major version change
+    if (!isMajorVersionChange(oldModulePath, newModulePath)) {
+      return {
+        transferred: true,
+        confidence: 'high',
+        details: `Module owner changed from '${oldOwner}' to '${newOwner}' (detected via go.mod: ${oldestTag} → ${latestTag})`,
+      };
+    }
+  }
+  
+  // Also check if the module path itself changed significantly
+  // (e.g., repo was forked and module path updated)
+  if (oldModulePath !== newModulePath) {
+    const oldOwnerFromPath = extractModuleOwner(oldGoMod);
+    const newOwnerFromPath = extractModuleOwner(newGoMod);
+    
+    if (oldOwnerFromPath && newOwnerFromPath && 
+        oldOwnerFromPath.toLowerCase() !== newOwnerFromPath.toLowerCase() &&
+        !isMajorVersionChange(oldModulePath, newModulePath)) {
+      return {
+        transferred: true,
+        confidence: 'medium',
+        details: `Module path changed from '${oldModulePath}' to '${newModulePath}' (tags: ${oldestTag} → ${latestTag})`,
+      };
+    }
+  }
+  
+  return NO_TRANSFER_DETECTED;
 }

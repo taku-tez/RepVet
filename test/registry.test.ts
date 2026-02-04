@@ -8,11 +8,11 @@ import { fetchPackageInfo } from '../src/registry/npm.js';
 import { fetchPyPIPackageInfo, checkPyPIYanked, checkPyPIOwnershipTransfer } from '../src/registry/pypi.js';
 import { fetchCratesPackageInfo, checkCratesYanked } from '../src/registry/crates.js';
 import { fetchRubyGemsPackageInfo, checkRubyGemsYanked } from '../src/registry/rubygems.js';
-import { fetchGoPackageInfo, checkGoDeprecated, checkGoRetracted } from '../src/registry/golang.js';
+import { fetchGoPackageInfo, checkGoDeprecated, checkGoRetracted, checkGoOwnershipTransfer } from '../src/registry/golang.js';
 import { fetchPackagistPackageInfo, checkPackagistAbandoned, checkPackagistOwnershipTransfer } from '../src/registry/packagist.js';
 import { fetchNuGetPackageInfo, checkNuGetDeprecated, checkNuGetOwnershipTransfer } from '../src/registry/nuget.js';
-import { fetchHexPackageInfo, checkHexRetired, HexPackageData } from '../src/registry/hex.js';
-import { fetchPubPackageInfo, checkPubDiscontinued, PubPackageData } from '../src/registry/pub.js';
+import { fetchHexPackageInfo, checkHexRetired, checkHexOwnershipTransfer, HexPackageData } from '../src/registry/hex.js';
+import { fetchPubPackageInfo, checkPubDiscontinued, checkPubOwnershipTransfer, PubPackageData } from '../src/registry/pub.js';
 import { fetchCondaPackageInfo, parseEnvironmentYaml, checkCondaOwnershipTransfer } from '../src/registry/conda.js';
 import { fetchCocoaPodsPackageInfo, checkCocoaPodsDeprecated, checkCocoaPodsOwnershipTransfer, CocoaPodsPackageData } from '../src/registry/cocoapods.js';
 import { fetchMavenPackageInfo, checkMavenRelocation } from '../src/registry/maven.js';
@@ -199,6 +199,43 @@ describe('Registry modules', () => {
       const result = await checkGoRetracted('github.com/nonexistent/module-xyz123');
       expect(result.hasRetractions).toBe(false);
     });
+
+    // Ownership transfer detection tests
+    it('should detect no ownership transfer for stable modules', async () => {
+      // gin-gonic/gin has been maintained by the same org
+      const result = await checkGoOwnershipTransfer('github.com/gin-gonic/gin');
+      expect(result.transferred).toBe(false);
+    });
+
+    it('should skip non-GitHub modules', async () => {
+      // gopkg.in modules should be skipped
+      const result = await checkGoOwnershipTransfer('gopkg.in/yaml.v3');
+      expect(result.transferred).toBe(false);
+      expect(result.confidence).toBe('low');
+    });
+
+    it('should skip golang.org modules', async () => {
+      const result = await checkGoOwnershipTransfer('golang.org/x/tools');
+      expect(result.transferred).toBe(false);
+      expect(result.confidence).toBe('low');
+    });
+
+    it('should handle go:// prefix in module path', async () => {
+      const result = await checkGoOwnershipTransfer('go://github.com/gin-gonic/gin');
+      expect(result.transferred).toBe(false);
+    });
+
+    it('should handle modules with /v2 suffix', async () => {
+      // github.com/go-playground/validator/v10 should work
+      const result = await checkGoOwnershipTransfer('github.com/go-playground/validator/v10');
+      expect(result.transferred).toBe(false);
+    });
+
+    it('should handle non-existent module', async () => {
+      const result = await checkGoOwnershipTransfer('github.com/nonexistent/module-xyz123');
+      // Should return no transfer (graceful failure)
+      expect(result.transferred).toBe(false);
+    });
   });
 
   describe('Packagist', () => {
@@ -348,6 +385,28 @@ describe('Registry modules', () => {
       expect(typeof result.latestIsRetired).toBe('boolean');
       expect(Array.isArray(result.retiredReleases)).toBe(true);
     });
+
+    it('should check ownership transfer (no transfer expected for stable packages)', async () => {
+      const result = await checkHexOwnershipTransfer('phoenix');
+      expect(result.confidence).toBeDefined();
+      // Phoenix has stable ownership (chrismccord, etc.)
+      expect(result.transferred).toBe(false);
+    });
+
+    it('should return correct structure from ownership transfer check', async () => {
+      const result = await checkHexOwnershipTransfer('ecto');
+      expect(typeof result.transferred).toBe('boolean');
+      expect(['high', 'medium', 'low']).toContain(result.confidence);
+      // If transferred, should have details
+      if (result.transferred) {
+        expect(result.details).toBeDefined();
+      }
+    });
+
+    it('should handle non-existent package in ownership check', async () => {
+      const result = await checkHexOwnershipTransfer('this-package-does-not-exist-xyz123');
+      expect(result.transferred).toBe(false);
+    });
   });
 
   describe('pub.dev', () => {
@@ -379,6 +438,28 @@ describe('Registry modules', () => {
     it('should return null for non-existent package', async () => {
       const info = await fetchPubPackageInfo('this-package-definitely-does-not-exist-12345');
       expect(info).toBeNull();
+    });
+
+    it('should check ownership transfer (no transfer expected for stable packages)', async () => {
+      const result = await checkPubOwnershipTransfer('http');
+      expect(result.confidence).toBeDefined();
+      // http is maintained by dart-lang team
+      expect(result.transferred).toBe(false);
+    });
+
+    it('should return correct structure from ownership transfer check', async () => {
+      const result = await checkPubOwnershipTransfer('provider');
+      expect(typeof result.transferred).toBe('boolean');
+      expect(['high', 'medium', 'low']).toContain(result.confidence);
+      // If transferred, should have details
+      if (result.transferred) {
+        expect(result.details).toBeDefined();
+      }
+    });
+
+    it('should handle non-existent package in ownership check', async () => {
+      const result = await checkPubOwnershipTransfer('this-package-does-not-exist-xyz123');
+      expect(result.transferred).toBe(false);
     });
   });
 

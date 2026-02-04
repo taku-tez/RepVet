@@ -13,7 +13,7 @@ import { fetchPackageInfo, checkOwnershipTransfer, NpmPackageData } from './regi
 import { fetchPyPIPackageInfo, checkPyPIYanked, checkPyPIOwnershipTransfer } from './registry/pypi.js';
 import { fetchCratesPackageInfo, checkCratesOwnershipTransfer, checkCratesYanked } from './registry/crates.js';
 import { fetchRubyGemsPackageInfo, checkRubyGemsYanked } from './registry/rubygems.js';
-import { fetchGoPackageInfo, checkGoDeprecated, checkGoRetracted, GoPackageData } from './registry/golang.js';
+import { fetchGoPackageInfo, checkGoDeprecated, checkGoRetracted, checkGoOwnershipTransfer, GoPackageData } from './registry/golang.js';
 import { fetchPackagistPackageInfo, checkPackagistAbandoned, checkPackagistOwnershipTransfer, PackagistPackageData } from './registry/packagist.js';
 import { fetchNuGetPackageInfo, checkNuGetDeprecated, checkNuGetOwnershipTransfer, NuGetPackageData } from './registry/nuget.js';
 import { fetchMavenPackageInfo, checkMavenRelocation, MavenPackageData } from './registry/maven.js';
@@ -641,6 +641,18 @@ export async function checkPackageReputation(
       const points = applyConfidence(DEDUCTIONS.OWNERSHIP_TRANSFER, transferResult.confidence);
       deductions.push({
         reason: transferResult.details || 'Multiple uploaders detected',
+        points,
+        confidence: transferResult.confidence,
+      });
+      score -= points;
+    }
+  } else if (ecosystem === 'go') {
+    const transferResult = await checkGoOwnershipTransfer(packageName);
+    if (transferResult.transferred) {
+      hasOwnershipTransfer = true;
+      const points = applyConfidence(DEDUCTIONS.OWNERSHIP_TRANSFER, transferResult.confidence);
+      deductions.push({
+        reason: transferResult.details || 'Module owner change detected via go.mod',
         points,
         confidence: transferResult.confidence,
       });
