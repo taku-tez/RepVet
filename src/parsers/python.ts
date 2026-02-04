@@ -6,6 +6,8 @@
  * - pyproject.toml
  */
 
+import { readFileSync, existsSync } from 'node:fs';
+import { dirname, resolve } from 'node:path';
 import { PackageDependency } from '../types.js';
 
 /**
@@ -40,18 +42,14 @@ export function parseRequirementsTxt(content: string, filePath?: string, visited
       
       if (filePath && includedFile) {
         try {
-          // Import fs and path synchronously for recursive parsing
-          const fsModule = require('fs');
-          const pathModule = require('path');
-          
           // Resolve relative path based on current file's directory
-          const baseDir = pathModule.dirname(filePath);
-          const includedPath = pathModule.resolve(baseDir, includedFile);
+          const baseDir = dirname(filePath);
+          const includedPath = resolve(baseDir, includedFile);
           
           // Skip if already visited (prevent circular includes)
           if (!visited.has(includedPath)) {
-            if (fsModule.existsSync(includedPath)) {
-              const includedContent = fsModule.readFileSync(includedPath, 'utf-8');
+            if (existsSync(includedPath)) {
+              const includedContent = readFileSync(includedPath, 'utf-8');
               const includedPackages = parseRequirementsTxt(includedContent, includedPath, visited);
               packages.push(...includedPackages);
             }
@@ -196,10 +194,11 @@ export function parsePyprojectToml(content: string): string[] {
   // ========== PEP 621 format ==========
   // [project]
   // dependencies = ["requests>=2.28.0", "flask[async]>=2.0"]
+  // Or inline: dependencies = ["requests"]
   
-  // Match project.dependencies array (multi-line)
-  // Use \n\s*\] to match closing bracket on its own line (avoids matching [extras] in deps)
-  const projectDepsRegex = /\[project\][\s\S]*?dependencies\s*=\s*\[([\s\S]*?)\n\s*\]/;
+  // Match project.dependencies array (both multi-line and inline)
+  // Use non-greedy match with ] that may or may not be on a new line
+  const projectDepsRegex = /\[project\][\s\S]*?dependencies\s*=\s*\[([\s\S]*?)\]/;
   const projectDepsMatch = content.match(projectDepsRegex);
   if (projectDepsMatch) {
     const depsArray = projectDepsMatch[1];
@@ -217,8 +216,8 @@ export function parsePyprojectToml(content: string): string[] {
   const optionalMatch = content.match(optionalDepsRegex);
   if (optionalMatch) {
     const section = optionalMatch[1];
-    // Find all arrays in this section
-    const arrayRegex = /\w+\s*=\s*\[([\s\S]*?)\]/g;
+    // Find all arrays in this section (support hyphens in key names like docs-extra)
+    const arrayRegex = /[\w-]+\s*=\s*\[([\s\S]*?)\]/g;
     let arrayMatch;
     while ((arrayMatch = arrayRegex.exec(section)) !== null) {
       const depStrings = arrayMatch[1].match(/"([^"]+)"/g) || [];

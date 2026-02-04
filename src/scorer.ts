@@ -153,8 +153,9 @@ export async function checkPackageReputation(
   
   // Check for known malware FIRST (before registry lookup)
   // This allows detection of removed/deleted malicious packages
-  const isMalwareKnown = hasMalwareHistory(packageName);
-  const malwareDetails = isMalwareKnown ? getMalwareDetails(packageName) : null;
+  // Pass ecosystem to avoid false positives (e.g., same name in different ecosystems)
+  const isMalwareKnown = hasMalwareHistory(packageName, ecosystem);
+  const malwareDetails = isMalwareKnown ? getMalwareDetails(packageName, ecosystem) : null;
   
   // Fetch package info
   const packageInfo = await fetchPackageByEcosystem(packageName, ecosystem);
@@ -540,9 +541,10 @@ export async function checkPackageReputation(
   }
   
   // Check 1: Malware history (-50) - all ecosystems
-  if (hasMalwareHistory(packageName)) {
+  // Pass ecosystem to avoid false positives (e.g., same name in different ecosystems)
+  if (hasMalwareHistory(packageName, ecosystem)) {
     hasMalware = true;
-    const details = getMalwareDetails(packageName);
+    const details = getMalwareDetails(packageName, ecosystem);
     const points = DEDUCTIONS.MALWARE_HISTORY;
     deductions.push({
       reason: `Past malware incident${details ? `: ${details}` : ''}`,

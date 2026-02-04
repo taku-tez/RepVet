@@ -118,7 +118,41 @@ program
       
       const threshold = parseInt(options.threshold || '100', 10);
       const failUnder = options.failUnder ? parseInt(options.failUnder, 10) : undefined;
-      const concurrency = Math.max(1, Math.min(20, parseInt(options.concurrency || String(DEFAULT_CONCURRENCY), 10)));
+      const concurrency = parseInt(options.concurrency || String(DEFAULT_CONCURRENCY), 10);
+      
+      // Validate numeric options
+      if (!Number.isFinite(threshold)) {
+        const errMsg = `Invalid threshold value: ${options.threshold}. Must be a number.`;
+        if (options.json) {
+          console.log(JSON.stringify({ error: errMsg }));
+        } else {
+          console.error(chalk.red(`Error: ${errMsg}`));
+        }
+        process.exit(1);
+      }
+      
+      if (failUnder !== undefined && !Number.isFinite(failUnder)) {
+        const errMsg = `Invalid fail-under value: ${options.failUnder}. Must be a number.`;
+        if (options.json) {
+          console.log(JSON.stringify({ error: errMsg }));
+        } else {
+          console.error(chalk.red(`Error: ${errMsg}`));
+        }
+        process.exit(1);
+      }
+      
+      if (!Number.isFinite(concurrency) || concurrency < 1) {
+        const errMsg = `Invalid concurrency value: ${options.concurrency}. Must be a positive number.`;
+        if (options.json) {
+          console.log(JSON.stringify({ error: errMsg }));
+        } else {
+          console.error(chalk.red(`Error: ${errMsg}`));
+        }
+        process.exit(1);
+      }
+      
+      // Clamp concurrency to safe range
+      const safeConcurrency = Math.max(1, Math.min(20, concurrency));
       
       // Determine files to scan
       let filesToScan: string[];
@@ -147,7 +181,7 @@ program
       }
       
       const fileResults: FileResult[] = [];
-      const limit = pLimit(concurrency);
+      const limit = pLimit(safeConcurrency);
       
       const checkPackage = async (pkg: PackageDependency, ecosystem: Ecosystem): Promise<{ result?: ReputationResult; skipped?: SkippedPackage }> => {
         try {
@@ -514,14 +548,9 @@ function parseDepFile(fileName: string, content: string): { packages: PackageDep
   }
   
   if (fileName === 'Package.swift') {
-    // Parse Swift Package Manager
-    const packageNames: string[] = [];
-    const depPattern = /\.package\s*\([^)]*name:\s*"([^"]+)"/g;
-    let match;
-    while ((match = depPattern.exec(content)) !== null) {
-      packageNames.push(match[1]);
-    }
-    return { packages: packageNames.map(name => ({ name })), ecosystem: 'cocoapods' }; // Use CocoaPods for Swift too
+    // Swift Package Manager is not supported - it's a separate ecosystem from CocoaPods
+    // CocoaPods API doesn't work for SwiftPM packages
+    throw new Error('Swift Package Manager (Package.swift) is not yet supported. Use CocoaPods (Podfile) instead.');
   }
   
   if (fileName === 'environment.yml' || fileName === 'environment.yaml' || 
