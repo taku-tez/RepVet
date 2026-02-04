@@ -2,7 +2,7 @@
  * RepVet Types
  */
 
-export type Ecosystem = 'npm' | 'pypi' | 'crates' | 'go';
+export type Ecosystem = 'npm' | 'pypi' | 'crates' | 'go' | 'rubygems';
 
 export interface PackageInfo {
   name: string;

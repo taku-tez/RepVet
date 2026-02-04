@@ -35,7 +35,7 @@ const OSV_API = 'https://api.osv.dev/v1';
  * Query OSV for vulnerabilities affecting a package
  */
 export async function queryPackageVulnerabilities(
-  ecosystem: 'npm' | 'PyPI' | 'crates.io' | 'Go',
+  ecosystem: 'npm' | 'PyPI' | 'crates.io' | 'Go' | 'RubyGems',
   packageName: string
 ): Promise<OSVVulnerability[]> {
   try {
@@ -89,7 +89,7 @@ export interface VulnerabilityAnalysis {
 }
 
 export async function analyzeVulnerabilityHistory(
-  ecosystem: 'npm' | 'PyPI' | 'crates.io' | 'Go',
+  ecosystem: 'npm' | 'PyPI' | 'crates.io' | 'Go' | 'RubyGems',
   packageName: string
 ): Promise<VulnerabilityAnalysis> {
   const vulns = await queryPackageVulnerabilities(ecosystem, packageName);

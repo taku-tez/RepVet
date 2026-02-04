@@ -14,14 +14,14 @@ const program = new Command();
 
 program
   .name('repvet')
-  .description('Check package maintainer reputation (npm, PyPI, crates.io)')
+  .description('Check package maintainer reputation (npm, PyPI, crates.io, RubyGems, Go)')
   .version('0.2.0');
 
 program
   .command('check <package>')
   .description('Check reputation of a single package')
   .option('--json', 'Output as JSON')
-  .option('-e, --ecosystem <ecosystem>', 'Package ecosystem (npm, pypi, crates)', 'npm')
+  .option('-e, --ecosystem <ecosystem>', 'Package ecosystem (npm, pypi, crates, rubygems, go)', 'npm')
   .action(async (packageName: string, options: { json?: boolean; ecosystem?: string }) => {
     try {
       const ecosystem = validateEcosystem(options.ecosystem || 'npm');
@@ -122,7 +122,7 @@ program
   });
 
 function validateEcosystem(eco: string): Ecosystem {
-  const valid = ['npm', 'pypi', 'crates'];
+  const valid = ['npm', 'pypi', 'crates', 'rubygems', 'go'];
   if (!valid.includes(eco.toLowerCase())) {
     throw new Error(`Invalid ecosystem: ${eco}. Use: ${valid.join(', ')}`);
   }
@@ -174,6 +174,45 @@ function parseDepFile(fileName: string, content: string): { packages: string[]; 
       }
     }
     return { packages, ecosystem: 'crates' };
+  }
+  
+  if (fileName === 'Gemfile' || fileName === 'Gemfile.lock' || fileName.endsWith('.gemspec')) {
+    // Parse Ruby gem dependencies
+    const packages: string[] = [];
+    const gemPattern = /gem\s+['"]([a-zA-Z0-9_-]+)['"]/g;
+    let match;
+    while ((match = gemPattern.exec(content)) !== null) {
+      if (!packages.includes(match[1])) {
+        packages.push(match[1]);
+      }
+    }
+    return { packages, ecosystem: 'rubygems' };
+  }
+  
+  if (fileName === 'go.mod') {
+    // Parse Go module dependencies
+    const packages: string[] = [];
+    const lines = content.split('\n');
+    let inRequire = false;
+    
+    for (const line of lines) {
+      const trimmed = line.trim();
+      if (trimmed.startsWith('require (')) {
+        inRequire = true;
+        continue;
+      }
+      if (trimmed === ')') {
+        inRequire = false;
+        continue;
+      }
+      if (inRequire || trimmed.startsWith('require ')) {
+        const moduleMatch = trimmed.match(/^(?:require\s+)?([^\s]+)\s+v/);
+        if (moduleMatch) {
+          packages.push(moduleMatch[1]);
+        }
+      }
+    }
+    return { packages, ecosystem: 'go' };
   }
   
   throw new Error(`Unsupported file format: ${fileName}`);

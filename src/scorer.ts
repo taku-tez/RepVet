@@ -12,6 +12,8 @@ import { Deduction, ReputationResult, PackageInfo, Ecosystem, VulnerabilityStats
 import { fetchPackageInfo, checkOwnershipTransfer, NpmPackageData } from './registry/npm.js';
 import { fetchPyPIPackageInfo } from './registry/pypi.js';
 import { fetchCratesPackageInfo, checkCratesOwnershipTransfer } from './registry/crates.js';
+import { fetchRubyGemsPackageInfo } from './registry/rubygems.js';
+import { fetchGoPackageInfo } from './registry/golang.js';
 import { parseGitHubUrl, fetchLastCommitDate } from './registry/github.js';
 import { hasMalwareHistory, getMalwareDetails } from './malware/known-packages.js';
 import { analyzeVulnerabilityHistory } from './osv/client.js';
@@ -46,6 +48,7 @@ const ESTABLISHED_THRESHOLDS = {
   pypi: { downloads: 100000, releaseCount: 50 },
   crates: { downloads: 1000000, releaseCount: 30 },
   go: { downloads: 100000, releaseCount: 20 },
+  rubygems: { downloads: 10000000, releaseCount: 50 },
 };
 
 function applyConfidence(points: number, confidence: 'high' | 'medium' | 'low'): number {
@@ -68,17 +71,22 @@ async function fetchPackageByEcosystem(name: string, ecosystem: Ecosystem): Prom
       return fetchPyPIPackageInfo(name);
     case 'crates':
       return fetchCratesPackageInfo(name);
+    case 'rubygems':
+      return fetchRubyGemsPackageInfo(name);
+    case 'go':
+      return fetchGoPackageInfo(name);
     default:
       throw new Error(`Unsupported ecosystem: ${ecosystem}`);
   }
 }
 
-function mapEcosystemToOSV(ecosystem: Ecosystem): 'npm' | 'PyPI' | 'crates.io' | 'Go' {
-  const mapping: Record<Ecosystem, 'npm' | 'PyPI' | 'crates.io' | 'Go'> = {
+function mapEcosystemToOSV(ecosystem: Ecosystem): 'npm' | 'PyPI' | 'crates.io' | 'Go' | 'RubyGems' {
+  const mapping: Record<Ecosystem, 'npm' | 'PyPI' | 'crates.io' | 'Go' | 'RubyGems'> = {
     npm: 'npm',
     pypi: 'PyPI',
     crates: 'crates.io',
     go: 'Go',
+    rubygems: 'RubyGems',
   };
   return mapping[ecosystem];
 }
