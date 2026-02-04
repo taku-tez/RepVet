@@ -3,13 +3,22 @@
  */
 
 import { describe, it, expect } from '@jest/globals';
+import { readFileSync } from 'node:fs';
+import { dirname, join } from 'node:path';
+import { fileURLToPath } from 'node:url';
 import {
   isValidRepoUrl,
   cleanRepoUrl,
   parseMaintainerString,
   splitMaintainerList,
   daysBetween,
+  getDefaultHeaders,
 } from '../../src/registry/utils.js';
+
+// Load package.json for version check
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+const packageJson = JSON.parse(readFileSync(join(__dirname, '../../package.json'), 'utf-8'));
 
 describe('Registry Utils', () => {
 
@@ -105,6 +114,20 @@ describe('Registry Utils', () => {
 
     it('should return positive value regardless of order', () => {
       expect(daysBetween('2024-01-08', '2024-01-01')).toBe(7);
+    });
+  });
+
+  describe('getDefaultHeaders', () => {
+    it('should return User-Agent with current version', () => {
+      const headers = getDefaultHeaders();
+      expect(headers['User-Agent']).toBe(`RepVet/${packageJson.version} (https://github.com/taku-tez/RepVet)`);
+    });
+
+    it('should have User-Agent matching package.json version', () => {
+      const headers = getDefaultHeaders();
+      const match = headers['User-Agent'].match(/RepVet\/(\d+\.\d+\.\d+)/);
+      expect(match).not.toBeNull();
+      expect(match![1]).toBe(packageJson.version);
     });
   });
 });

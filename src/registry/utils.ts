@@ -3,7 +3,17 @@
  * Common functions shared across ecosystem registry modules
  */
 
+import { readFileSync } from 'node:fs';
+import { dirname, join } from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { PackageInfo, Maintainer } from '../types.js';
+
+// Get version from package.json
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+const packageJsonPath = join(__dirname, '../../package.json');
+const packageJson = JSON.parse(readFileSync(packageJsonPath, 'utf-8'));
+const VERSION = packageJson.version as string;
 
 /**
  * Ownership transfer result
@@ -263,6 +273,6 @@ export function daysBetween(date1: Date | string, date2: Date | string): number 
  */
 export function getDefaultHeaders(): Record<string, string> {
   return {
-    'User-Agent': 'RepVet/0.7.0 (https://github.com/taku-tez/RepVet)',
+    'User-Agent': `RepVet/${VERSION} (https://github.com/taku-tez/RepVet)`,
   };
 }
