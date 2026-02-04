@@ -3,7 +3,7 @@
  */
 
 import { describe, it, expect, jest } from '@jest/globals';
-import { checkPackageReputation } from '../src/scorer.js';
+import { checkPackageReputation } from '../../src/scorer.js';
 
 // Use longer timeout for API calls
 jest.setTimeout(30000);

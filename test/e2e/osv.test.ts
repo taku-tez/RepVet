@@ -3,7 +3,7 @@
  */
 
 import { describe, it, expect, jest } from '@jest/globals';
-import { queryPackageVulnerabilities, analyzeVulnerabilityHistory } from '../src/osv/client.js';
+import { queryPackageVulnerabilities, analyzeVulnerabilityHistory } from '../../src/osv/client.js';
 
 // Use longer timeout for API calls
 jest.setTimeout(30000);

@@ -8,9 +8,12 @@
 import { Command } from 'commander';
 import chalk from 'chalk';
 import { createRequire } from 'module';
+import pLimit from 'p-limit';
 import { checkPackageReputation } from './scorer.js';
 import { ReputationResult, Ecosystem } from './types.js';
 import { parseEnvironmentYaml } from './registry/conda.js';
+
+const DEFAULT_CONCURRENCY = 5;
 
 // Get version from package.json (single source of truth)
 const require = createRequire(import.meta.url);
@@ -56,7 +59,8 @@ program
   .option('--json', 'Output as JSON')
   .option('--threshold <score>', 'Only show packages below this score', '100')
   .option('--fail-under <score>', 'Exit with code 1 if any package scores below this')
-  .action(async (file: string, options: { json?: boolean; threshold?: string; failUnder?: string }) => {
+  .option('-c, --concurrency <number>', 'Number of concurrent API requests', String(DEFAULT_CONCURRENCY))
+  .action(async (file: string, options: { json?: boolean; threshold?: string; failUnder?: string; concurrency?: string }) => {
     try {
       const fs = await import('fs');
       const path = await import('path');
@@ -74,6 +78,7 @@ program
       
       const threshold = parseInt(options.threshold || '100', 10);
       const failUnder = options.failUnder ? parseInt(options.failUnder, 10) : undefined;
+      const concurrency = Math.max(1, Math.min(20, parseInt(options.concurrency || String(DEFAULT_CONCURRENCY), 10)));
       
       const allResults: ReputationResult[] = [];
       const filteredResults: ReputationResult[] = [];
@@ -81,12 +86,29 @@ program
       let skippedCount = 0;
       
       if (!options.json) {
-        console.log(chalk.dim(`Scanning ${packages.length} ${ecosystem} packages...\n`));
+        console.log(chalk.dim(`Scanning ${packages.length} ${ecosystem} packages (concurrency: ${concurrency})...\n`));
       }
       
-      for (const pkg of packages) {
+      // Parallel scanning with rate limiting
+      const limit = pLimit(concurrency);
+      
+      const checkPackage = async (pkg: string): Promise<{ result?: ReputationResult; skipped: boolean }> => {
         try {
           const result = await checkPackageReputation(pkg, ecosystem);
+          return { result, skipped: false };
+        } catch {
+          return { result: undefined, skipped: true };
+        }
+      };
+      
+      const results = await Promise.all(
+        packages.map(pkg => limit(() => checkPackage(pkg)))
+      );
+      
+      for (const { result, skipped } of results) {
+        if (skipped) {
+          skippedCount++;
+        } else if (result) {
           allResults.push(result);
           if (result.score < threshold) {
             filteredResults.push(result);
@@ -94,9 +116,6 @@ program
           if (failUnder !== undefined && result.score < failUnder) {
             hasFailure = true;
           }
-        } catch {
-          // Skip packages that fail (not found, etc)
-          skippedCount++;
         }
       }
       

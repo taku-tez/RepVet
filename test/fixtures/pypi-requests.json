@@ -1,0 +1,20 @@
+{
+  "info": {
+    "author": "Kenneth Reitz",
+    "author_email": "me@kennethreitz.org",
+    "description": "Python HTTP for Humans.",
+    "home_page": "https://requests.readthedocs.io",
+    "name": "requests",
+    "project_urls": {
+      "Source": "https://github.com/psf/requests"
+    },
+    "version": "2.31.0"
+  },
+  "releases": {
+    "2.31.0": [
+      {
+        "upload_time": "2023-05-22T15:00:00"
+      }
+    ]
+  }
+}

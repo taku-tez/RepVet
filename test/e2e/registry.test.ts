@@ -4,19 +4,19 @@
  */
 
 import { describe, it, expect, jest } from '@jest/globals';
-import { fetchPackageInfo } from '../src/registry/npm.js';
-import { fetchPyPIPackageInfo, checkPyPIYanked, checkPyPIOwnershipTransfer } from '../src/registry/pypi.js';
-import { fetchCratesPackageInfo, checkCratesYanked } from '../src/registry/crates.js';
-import { fetchRubyGemsPackageInfo, checkRubyGemsYanked } from '../src/registry/rubygems.js';
-import { fetchGoPackageInfo, checkGoDeprecated, checkGoRetracted, checkGoOwnershipTransfer } from '../src/registry/golang.js';
-import { fetchPackagistPackageInfo, checkPackagistAbandoned, checkPackagistOwnershipTransfer } from '../src/registry/packagist.js';
-import { fetchNuGetPackageInfo, checkNuGetDeprecated, checkNuGetOwnershipTransfer } from '../src/registry/nuget.js';
-import { fetchHexPackageInfo, checkHexRetired, checkHexOwnershipTransfer, HexPackageData } from '../src/registry/hex.js';
-import { fetchPubPackageInfo, checkPubDiscontinued, checkPubOwnershipTransfer, PubPackageData } from '../src/registry/pub.js';
-import { fetchCondaPackageInfo, parseEnvironmentYaml, checkCondaOwnershipTransfer } from '../src/registry/conda.js';
-import { fetchCocoaPodsPackageInfo, checkCocoaPodsDeprecated, checkCocoaPodsOwnershipTransfer, CocoaPodsPackageData } from '../src/registry/cocoapods.js';
-import { fetchMavenPackageInfo, checkMavenRelocation } from '../src/registry/maven.js';
-import { fetchCPANPackageInfo, checkCPANDeprecated, checkCPANOwnershipTransfer } from '../src/registry/cpan.js';
+import { fetchPackageInfo } from '../../src/registry/npm.js';
+import { fetchPyPIPackageInfo, checkPyPIYanked, checkPyPIOwnershipTransfer } from '../../src/registry/pypi.js';
+import { fetchCratesPackageInfo, checkCratesYanked } from '../../src/registry/crates.js';
+import { fetchRubyGemsPackageInfo, checkRubyGemsYanked } from '../../src/registry/rubygems.js';
+import { fetchGoPackageInfo, checkGoDeprecated, checkGoRetracted, checkGoOwnershipTransfer } from '../../src/registry/golang.js';
+import { fetchPackagistPackageInfo, checkPackagistAbandoned, checkPackagistOwnershipTransfer } from '../../src/registry/packagist.js';
+import { fetchNuGetPackageInfo, checkNuGetDeprecated, checkNuGetOwnershipTransfer } from '../../src/registry/nuget.js';
+import { fetchHexPackageInfo, checkHexRetired, checkHexOwnershipTransfer, HexPackageData } from '../../src/registry/hex.js';
+import { fetchPubPackageInfo, checkPubDiscontinued, checkPubOwnershipTransfer, PubPackageData } from '../../src/registry/pub.js';
+import { fetchCondaPackageInfo, parseEnvironmentYaml, checkCondaOwnershipTransfer } from '../../src/registry/conda.js';
+import { fetchCocoaPodsPackageInfo, checkCocoaPodsDeprecated, checkCocoaPodsOwnershipTransfer, CocoaPodsPackageData } from '../../src/registry/cocoapods.js';
+import { fetchMavenPackageInfo, checkMavenRelocation } from '../../src/registry/maven.js';
+import { fetchCPANPackageInfo, checkCPANDeprecated, checkCPANOwnershipTransfer } from '../../src/registry/cpan.js';
 
 // Use longer timeout for API calls
 jest.setTimeout(30000);

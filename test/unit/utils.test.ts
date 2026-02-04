@@ -9,7 +9,7 @@ import {
   parseMaintainerString,
   splitMaintainerList,
   daysBetween,
-} from '../src/registry/utils.js';
+} from '../../src/registry/utils.js';
 
 describe('Registry Utils', () => {
 
