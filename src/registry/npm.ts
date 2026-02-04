@@ -2,9 +2,10 @@
  * npm Registry API
  */
 
-import { OwnershipTransferResult, NO_TRANSFER_DETECTED } from './utils.js';
+import { OwnershipTransferResult, NO_TRANSFER_DETECTED, fetchWithRetry } from './utils.js';
 
 const NPM_REGISTRY = 'https://registry.npmjs.org';
+const NPM_DOWNLOADS_API = 'https://api.npmjs.org/downloads/point/last-week';
 
 export interface NpmPackageData {
   name: string;
@@ -14,13 +15,37 @@ export interface NpmPackageData {
   time?: Record<string, string>;
   ecosystem: 'npm';
   downloads?: number;
+  weeklyDownloads?: number;
   deprecated?: string;
   isSecurityHoldingPackage?: boolean;  // npm replaced malicious package
 }
 
+/**
+ * Fetch weekly download count from npm API
+ */
+async function fetchWeeklyDownloads(packageName: string): Promise<number | undefined> {
+  try {
+    const response = await fetchWithRetry(
+      `${NPM_DOWNLOADS_API}/${encodeURIComponent(packageName)}`,
+      { timeoutMs: 5000 }
+    );
+    if (!response.ok) {
+      return undefined;
+    }
+    const data = await response.json() as { downloads?: number };
+    return data.downloads;
+  } catch {
+    // Download count is optional, don't fail the whole request
+    return undefined;
+  }
+}
+
 export async function fetchPackageInfo(packageName: string): Promise<NpmPackageData | null> {
   try {
-    const response = await fetch(`${NPM_REGISTRY}/${encodeURIComponent(packageName)}`);
+    const response = await fetchWithRetry(
+      `${NPM_REGISTRY}/${encodeURIComponent(packageName)}`,
+      { timeoutMs: 5000 }
+    );
     if (!response.ok) {
       if (response.status === 404) {
         return null;
@@ -45,6 +70,9 @@ export async function fetchPackageInfo(packageName: string): Promise<NpmPackageD
       description.toLowerCase().includes('security holding') ||
       description.toLowerCase().includes('security placeholder');
     
+    // Fetch weekly downloads (non-blocking - will be undefined if fails)
+    const weeklyDownloads = await fetchWeeklyDownloads(packageName);
+    
     return {
       name: data['name'] as string,
       version: latestVersion,
@@ -54,6 +82,8 @@ export async function fetchPackageInfo(packageName: string): Promise<NpmPackageD
       ecosystem: 'npm',
       deprecated,
       isSecurityHoldingPackage,
+      weeklyDownloads,
+      downloads: weeklyDownloads,  // For compatibility with established project detection
     };
   } catch (error) {
     const message = error instanceof Error ? error.message : String(error);

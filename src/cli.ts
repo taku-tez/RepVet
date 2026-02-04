@@ -167,37 +167,12 @@ function parseDepFile(fileName: string, content: string): { packages: string[]; 
   }
   
   if (fileName === 'requirements.txt' || fileName.endsWith('.txt')) {
-    const packages = content
-      .split('\n')
-      .map(line => line.trim())
-      .filter(line => line && !line.startsWith('#') && !line.startsWith('-'))
-      .map(line => {
-        // Extract package name from pip format: package==1.0.0, package>=1.0
-        const match = line.match(/^([a-zA-Z0-9_-]+)/);
-        return match ? match[1] : '';
-      })
-      .filter(Boolean);
+    const packages = parseRequirementsTxt(content);
     return { packages, ecosystem: 'pypi' };
   }
   
   if (fileName === 'Cargo.toml' || fileName.endsWith('/Cargo.toml')) {
-    // Simple TOML parsing for dependencies
-    const packages: string[] = [];
-    const depSectionRegex = /\[dependencies\]([\s\S]*?)(?:\[|$)/;
-    const devDepSectionRegex = /\[dev-dependencies\]([\s\S]*?)(?:\[|$)/;
-    
-    for (const regex of [depSectionRegex, devDepSectionRegex]) {
-      const match = content.match(regex);
-      if (match) {
-        const lines = match[1].split('\n');
-        for (const line of lines) {
-          const pkgMatch = line.match(/^([a-zA-Z0-9_-]+)\s*=/);
-          if (pkgMatch) {
-            packages.push(pkgMatch[1]);
-          }
-        }
-      }
-    }
+    const packages = parseCargoToml(content);
     return { packages, ecosystem: 'crates' };
   }
   
@@ -215,28 +190,7 @@ function parseDepFile(fileName: string, content: string): { packages: string[]; 
   }
   
   if (fileName === 'go.mod') {
-    // Parse Go module dependencies
-    const packages: string[] = [];
-    const lines = content.split('\n');
-    let inRequire = false;
-    
-    for (const line of lines) {
-      const trimmed = line.trim();
-      if (trimmed.startsWith('require (')) {
-        inRequire = true;
-        continue;
-      }
-      if (trimmed === ')') {
-        inRequire = false;
-        continue;
-      }
-      if (inRequire || trimmed.startsWith('require ')) {
-        const moduleMatch = trimmed.match(/^(?:require\s+)?([^\s]+)\s+v/);
-        if (moduleMatch) {
-          packages.push(moduleMatch[1]);
-        }
-      }
-    }
+    const packages = parseGoMod(content);
     return { packages, ecosystem: 'go' };
   }
   
@@ -276,17 +230,7 @@ function parseDepFile(fileName: string, content: string): { packages: string[]; 
   }
   
   if (fileName === 'build.gradle' || fileName === 'build.gradle.kts') {
-    // Parse Gradle (Java/Kotlin)
-    const packages: string[] = [];
-    const depPattern = /(?:implementation|api|compileOnly|runtimeOnly|testImplementation)\s*[(\s]['"]([^'"]+)['"]/g;
-    let match;
-    while ((match = depPattern.exec(content)) !== null) {
-      // Convert "group:artifact:version" to "group:artifact"
-      const parts = match[1].split(':');
-      if (parts.length >= 2) {
-        packages.push(`${parts[0]}:${parts[1]}`);
-      }
-    }
+    const packages = parseBuildGradle(content);
     return { packages, ecosystem: 'maven' };
   }
   
@@ -408,6 +352,270 @@ function printResult(result: ReputationResult): void {
       console.log(chalk.red(`     -${d.points}: ${d.reason}`) + confidenceBadge);
     }
   }
+}
+
+/**
+ * Parse requirements.txt with support for:
+ * - -r (recursive includes) - noted but not followed
+ * - VCS URLs (git+https://..., etc.)
+ * - Comments and blank lines
+ * - Editable installs (-e)
+ */
+function parseRequirementsTxt(content: string): string[] {
+  const packages: string[] = [];
+  const lines = content.split('\n');
+  
+  for (const line of lines) {
+    const trimmed = line.trim();
+    
+    // Skip empty lines and comments
+    if (!trimmed || trimmed.startsWith('#')) {
+      continue;
+    }
+    
+    // Skip recursive includes (-r) and constraint files (-c)
+    // In a full implementation, these would be followed
+    if (trimmed.startsWith('-r ') || trimmed.startsWith('-c ')) {
+      continue;
+    }
+    
+    // Handle editable installs: -e git+https://...#egg=package_name
+    if (trimmed.startsWith('-e ')) {
+      const eggMatch = trimmed.match(/#egg=([a-zA-Z0-9_-]+)/);
+      if (eggMatch) {
+        packages.push(eggMatch[1]);
+      }
+      continue;
+    }
+    
+    // Skip other pip options (-i, --index-url, etc.)
+    if (trimmed.startsWith('-') || trimmed.startsWith('--')) {
+      continue;
+    }
+    
+    // Handle VCS URLs: git+https://github.com/user/repo.git@tag#egg=package_name
+    if (trimmed.match(/^(git|hg|svn|bzr)\+/)) {
+      const eggMatch = trimmed.match(/#egg=([a-zA-Z0-9_-]+)/);
+      if (eggMatch) {
+        packages.push(eggMatch[1]);
+      }
+      continue;
+    }
+    
+    // Standard package specification: package==1.0.0, package>=1.0, package[extra]>=1.0
+    const match = trimmed.match(/^([a-zA-Z0-9][a-zA-Z0-9._-]*)(?:\[.*?\])?/);
+    if (match) {
+      packages.push(match[1]);
+    }
+  }
+  
+  return [...new Set(packages)]; // Deduplicate
+}
+
+/**
+ * Parse Cargo.toml with support for:
+ * - [dependencies]
+ * - [dev-dependencies]
+ * - [build-dependencies]
+ * - [workspace.dependencies]
+ * - Inline tables and multi-line specifications
+ */
+function parseCargoToml(content: string): string[] {
+  const packages: string[] = [];
+  
+  // Match all dependency sections including workspace
+  const depSections = [
+    /\[dependencies\]([\s\S]*?)(?=\n\[|$)/g,
+    /\[dev-dependencies\]([\s\S]*?)(?=\n\[|$)/g,
+    /\[build-dependencies\]([\s\S]*?)(?=\n\[|$)/g,
+    /\[workspace\.dependencies\]([\s\S]*?)(?=\n\[|$)/g,
+  ];
+  
+  for (const regex of depSections) {
+    let match;
+    while ((match = regex.exec(content)) !== null) {
+      const section = match[1];
+      const lines = section.split('\n');
+      
+      for (const line of lines) {
+        // Skip comments
+        if (line.trim().startsWith('#')) continue;
+        
+        // Match package name (supports dotted names like foo.bar)
+        // Examples:
+        //   serde = "1.0"
+        //   serde = { version = "1.0", features = ["derive"] }
+        //   tokio.workspace = true
+        const pkgMatch = line.match(/^([a-zA-Z0-9_-]+)(?:\.[a-zA-Z_]+)?\s*=/);
+        if (pkgMatch) {
+          packages.push(pkgMatch[1]);
+        }
+      }
+    }
+  }
+  
+  // Also match [dependencies.package_name] style
+  const inlineDepRegex = /\[(?:dev-)?dependencies\.([a-zA-Z0-9_-]+)\]/g;
+  let inlineMatch;
+  while ((inlineMatch = inlineDepRegex.exec(content)) !== null) {
+    packages.push(inlineMatch[1]);
+  }
+  
+  return [...new Set(packages)]; // Deduplicate
+}
+
+/**
+ * Parse go.mod with support for:
+ * - require blocks and single-line requires
+ * - replace directives (extract original module)
+ * - exclude directives (skip these)
+ * - Indirect dependencies (included)
+ */
+function parseGoMod(content: string): string[] {
+  const packages: string[] = [];
+  const excludedModules = new Set<string>();
+  const lines = content.split('\n');
+  
+  let inRequire = false;
+  let inExclude = false;
+  let inReplace = false;
+  
+  for (const line of lines) {
+    const trimmed = line.trim();
+    
+    // Track block state
+    if (trimmed.startsWith('require (') || trimmed === 'require(') {
+      inRequire = true;
+      continue;
+    }
+    if (trimmed.startsWith('exclude (') || trimmed === 'exclude(') {
+      inExclude = true;
+      continue;
+    }
+    if (trimmed.startsWith('replace (') || trimmed === 'replace(') {
+      inReplace = true;
+      continue;
+    }
+    if (trimmed === ')') {
+      inRequire = false;
+      inExclude = false;
+      inReplace = false;
+      continue;
+    }
+    
+    // Handle exclude directives
+    if (inExclude || trimmed.startsWith('exclude ')) {
+      const moduleMatch = trimmed.match(/^(?:exclude\s+)?([^\s]+)/);
+      if (moduleMatch) {
+        excludedModules.add(moduleMatch[1]);
+      }
+      continue;
+    }
+    
+    // Handle replace directives - we still want to check the original module
+    if (inReplace || trimmed.startsWith('replace ')) {
+      const replaceMatch = trimmed.match(/^(?:replace\s+)?([^\s]+)\s+=>/);
+      if (replaceMatch) {
+        packages.push(replaceMatch[1]);
+      }
+      continue;
+    }
+    
+    // Handle require directives
+    if (inRequire || trimmed.startsWith('require ')) {
+      // Match module path and version
+      // Examples:
+      //   github.com/gin-gonic/gin v1.9.0
+      //   github.com/gin-gonic/gin v1.9.0 // indirect
+      const moduleMatch = trimmed.match(/^(?:require\s+)?([^\s]+)\s+v[^\s]+/);
+      if (moduleMatch) {
+        packages.push(moduleMatch[1]);
+      }
+    }
+  }
+  
+  // Remove excluded modules
+  return packages.filter(pkg => !excludedModules.has(pkg));
+}
+
+/**
+ * Parse build.gradle / build.gradle.kts with support for:
+ * - Single-line dependencies
+ * - Multi-line dependencies
+ * - Various configuration names (implementation, api, compileOnly, etc.)
+ * - Kotlin DSL syntax
+ */
+function parseBuildGradle(content: string): string[] {
+  const packages: string[] = [];
+  
+  // Configuration names that indicate dependencies
+  const configs = [
+    'implementation',
+    'api',
+    'compileOnly',
+    'runtimeOnly',
+    'testImplementation',
+    'testRuntimeOnly',
+    'androidTestImplementation',
+    'kapt',
+    'annotationProcessor',
+    'classpath',
+  ];
+  
+  const configPattern = configs.join('|');
+  
+  // Kotlin DSL: implementation("group:artifact:version")
+  const kotlinDslRegex = new RegExp(
+    `(?:${configPattern})\\s*\\(\\s*["']([^"']+)["']\\s*\\)`,
+    'g'
+  );
+  
+  let match;
+  while ((match = kotlinDslRegex.exec(content)) !== null) {
+    const dep = match[1];
+    const parts = dep.split(':');
+    if (parts.length >= 2) {
+      packages.push(`${parts[0]}:${parts[1]}`);
+    }
+  }
+  
+  // Groovy DSL: implementation 'group:artifact:version'
+  const groovyDslRegex = new RegExp(
+    `(?:${configPattern})\\s+["']([^"']+)["']`,
+    'g'
+  );
+  
+  while ((match = groovyDslRegex.exec(content)) !== null) {
+    const dep = match[1];
+    const parts = dep.split(':');
+    if (parts.length >= 2) {
+      packages.push(`${parts[0]}:${parts[1]}`);
+    }
+  }
+  
+  // Multi-line dependency blocks:
+  // implementation(group: "com.example", name: "library", version: "1.0")
+  const multiLineRegex = new RegExp(
+    `(?:${configPattern})\\s*\\([^)]*group\\s*[=:]\\s*["']([^"']+)["'][^)]*name\\s*[=:]\\s*["']([^"']+)["']`,
+    'g'
+  );
+  
+  while ((match = multiLineRegex.exec(content)) !== null) {
+    packages.push(`${match[1]}:${match[2]}`);
+  }
+  
+  // Kotlin DSL with named parameters in different order:
+  // implementation(name = "library", group = "com.example", version = "1.0")
+  const kotlinNamedRegex = new RegExp(
+    `(?:${configPattern})\\s*\\([^)]*name\\s*=\\s*["']([^"']+)["'][^)]*group\\s*=\\s*["']([^"']+)["']`,
+    'g'
+  );
+  
+  while ((match = kotlinNamedRegex.exec(content)) !== null) {
+    packages.push(`${match[2]}:${match[1]}`);
+  }
+  
+  return [...new Set(packages)]; // Deduplicate
 }
 
 program.parse();

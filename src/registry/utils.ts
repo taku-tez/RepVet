@@ -23,14 +23,126 @@ export const NO_TRANSFER_DETECTED: OwnershipTransferResult = {
 };
 
 /**
+ * Fetch options with timeout and retry configuration
+ */
+export interface FetchWithRetryOptions {
+  timeoutMs?: number;
+  maxRetries?: number;
+  retryDelayMs?: number;
+  headers?: Record<string, string>;
+}
+
+const DEFAULT_FETCH_OPTIONS: Required<FetchWithRetryOptions> = {
+  timeoutMs: 5000,
+  maxRetries: 3,
+  retryDelayMs: 500,
+  headers: {},
+};
+
+/**
+ * Sleep for a given number of milliseconds
+ */
+function sleep(ms: number): Promise<void> {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+/**
+ * Fetch with timeout support
+ */
+async function fetchWithTimeout(
+  url: string,
+  options: RequestInit & { timeoutMs?: number } = {}
+): Promise<Response> {
+  const { timeoutMs = DEFAULT_FETCH_OPTIONS.timeoutMs, ...fetchOptions } = options;
+  
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), timeoutMs);
+  
+  try {
+    const response = await fetch(url, {
+      ...fetchOptions,
+      signal: controller.signal,
+    });
+    return response;
+  } finally {
+    clearTimeout(timeoutId);
+  }
+}
+
+/**
+ * Fetch with exponential backoff retry
+ * Returns null for 404, throws for other errors after exhausting retries
+ */
+export async function fetchWithRetry(
+  url: string,
+  options: FetchWithRetryOptions & RequestInit = {}
+): Promise<Response> {
+  const {
+    timeoutMs = DEFAULT_FETCH_OPTIONS.timeoutMs,
+    maxRetries = DEFAULT_FETCH_OPTIONS.maxRetries,
+    retryDelayMs = DEFAULT_FETCH_OPTIONS.retryDelayMs,
+    headers = {},
+    ...fetchOptions
+  } = options;
+  
+  let lastError: Error | null = null;
+  
+  for (let attempt = 0; attempt < maxRetries; attempt++) {
+    try {
+      const response = await fetchWithTimeout(url, {
+        ...fetchOptions,
+        timeoutMs,
+        headers: {
+          ...getDefaultHeaders(),
+          ...headers,
+        },
+      });
+      
+      // Don't retry client errors (4xx) except rate limiting
+      if (response.status >= 400 && response.status < 500 && response.status !== 429) {
+        return response;
+      }
+      
+      // Retry server errors and rate limiting
+      if (response.status >= 500 || response.status === 429) {
+        lastError = new Error(`HTTP ${response.status}: ${response.statusText}`);
+        if (attempt < maxRetries - 1) {
+          const delay = retryDelayMs * Math.pow(2, attempt);
+          await sleep(delay);
+          continue;
+        }
+      }
+      
+      return response;
+    } catch (error) {
+      lastError = error instanceof Error ? error : new Error(String(error));
+      
+      // Abort errors (timeout) should be retried
+      if (lastError.name === 'AbortError') {
+        lastError = new Error(`Request timed out after ${timeoutMs}ms`);
+      }
+      
+      if (attempt < maxRetries - 1) {
+        const delay = retryDelayMs * Math.pow(2, attempt);
+        await sleep(delay);
+        continue;
+      }
+    }
+  }
+  
+  throw new Error(`Failed to fetch ${url} after ${maxRetries} attempts: ${lastError?.message}`);
+}
+
+/**
  * Safely fetch JSON from a URL with proper error handling
  * Returns null for 404, throws for other errors
+ * Now with timeout and exponential backoff retry
  */
 export async function fetchJsonOrNull<T>(
   url: string,
-  options: Parameters<typeof fetch>[1] = {}
+  options: FetchWithRetryOptions & RequestInit = {}
 ): Promise<T | null> {
-  const response = await fetch(url, options);
+  const response = await fetchWithRetry(url, options);
   
   if (!response.ok) {
     if (response.status === 404) {

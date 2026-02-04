@@ -3,12 +3,15 @@
  * https://osv.dev/
  */
 
+import { fetchWithRetry } from '../registry/utils.js';
+
 /**
  * Extract CVSS base score from CVSS vector string
- * Supports CVSS v3.0, v3.1, and v4.0 formats
+ * Supports CVSS v2, v3.0, v3.1, and v4.0 formats
  * 
  * Example inputs:
  * - "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H" -> 9.8 (calculated)
+ * - "AV:N/AC:L/Au:N/C:P/I:P/A:P" -> 7.5 (CVSS v2)
  * - "9.8" -> 9.8 (direct score)
  */
 function extractCvssScore(vectorOrScore: string): number {
@@ -18,7 +21,12 @@ function extractCvssScore(vectorOrScore: string): number {
     return directScore;
   }
   
-  // Parse CVSS vector string
+  // Check for CVSS v2 vector (no "CVSS:" prefix, has "Au:" metric)
+  if (!vectorOrScore.startsWith('CVSS:') && vectorOrScore.includes('Au:')) {
+    return extractCvssV2Score(vectorOrScore);
+  }
+  
+  // Parse CVSS 3.x/4.x vector string
   if (!vectorOrScore.startsWith('CVSS:')) {
     return 0;
   }
@@ -71,6 +79,47 @@ function extractCvssScore(vectorOrScore: string): number {
   return Math.round(baseScore * 10) / 10;
 }
 
+/**
+ * Extract CVSS v2 score from vector string
+ * CVSS v2 format: AV:N/AC:L/Au:N/C:P/I:P/A:P
+ */
+function extractCvssV2Score(vector: string): number {
+  const metrics: Record<string, string> = {};
+  const parts = vector.split('/');
+  
+  for (const part of parts) {
+    const [key, value] = part.split(':');
+    if (key && value) {
+      metrics[key] = value;
+    }
+  }
+  
+  // CVSS v2 metrics
+  // Access Vector (AV): L=0.395, A=0.646, N=1.0
+  // Access Complexity (AC): H=0.35, M=0.61, L=0.71
+  // Authentication (Au): M=0.45, S=0.56, N=0.704
+  // Confidentiality Impact (C): N=0, P=0.275, C=0.660
+  // Integrity Impact (I): N=0, P=0.275, C=0.660
+  // Availability Impact (A): N=0, P=0.275, C=0.660
+  
+  const avScore = { L: 0.395, A: 0.646, N: 1.0 }[metrics.AV] || 0.5;
+  const acScore = { H: 0.35, M: 0.61, L: 0.71 }[metrics.AC] || 0.5;
+  const auScore = { M: 0.45, S: 0.56, N: 0.704 }[metrics.Au] || 0.5;
+  
+  const cScore = { N: 0, P: 0.275, C: 0.660 }[metrics.C] || 0;
+  const iScore = { N: 0, P: 0.275, C: 0.660 }[metrics.I] || 0;
+  const aScore = { N: 0, P: 0.275, C: 0.660 }[metrics.A] || 0;
+  
+  // CVSS v2 base score formula
+  const impact = 10.41 * (1 - (1 - cScore) * (1 - iScore) * (1 - aScore));
+  const exploitability = 20 * avScore * acScore * auScore;
+  
+  const fImpact = impact === 0 ? 0 : 1.176;
+  const baseScore = ((0.6 * impact) + (0.4 * exploitability) - 1.5) * fImpact;
+  
+  return Math.round(Math.max(0, Math.min(10, baseScore)) * 10) / 10;
+}
+
 export interface OSVVulnerability {
   id: string;
   summary?: string;
@@ -81,9 +130,13 @@ export interface OSVVulnerability {
   }>;
   database_specific?: {
     severity?: string; // e.g., "CRITICAL", "HIGH", "MEDIUM", "LOW"
-    cvss?: number;
+    cvss?: number | string | { score?: number; vectorString?: string };
+    cvss_v2?: number | string | { score?: number; vectorString?: string };
+    cvss_v3?: number | string | { score?: number; vectorString?: string };
     cwe_ids?: string[];
     github_reviewed?: boolean;
+    // NVD format
+    nvd_published_at?: string;
   };
   affected: Array<{
     package: {
@@ -115,7 +168,7 @@ export async function queryPackageVulnerabilities(
   packageName: string
 ): Promise<OSVVulnerability[]> {
   try {
-    const response = await fetch(`${OSV_API}/query`, {
+    const response = await fetchWithRetry(`${OSV_API}/query`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -126,6 +179,7 @@ export async function queryPackageVulnerabilities(
           name: packageName,
         },
       }),
+      timeoutMs: 5000,
     });
     
     if (!response.ok) {
@@ -144,12 +198,64 @@ export async function queryPackageVulnerabilities(
  */
 export async function getVulnerabilityById(id: string): Promise<OSVVulnerability | null> {
   try {
-    const response = await fetch(`${OSV_API}/vulns/${id}`);
+    const response = await fetchWithRetry(`${OSV_API}/vulns/${id}`, { timeoutMs: 5000 });
     if (!response.ok) return null;
     return await response.json() as OSVVulnerability;
   } catch {
     return null;
   }
+}
+
+/**
+ * Extract CVSS score from database_specific field
+ * Handles various formats used by different databases
+ */
+function extractDatabaseSpecificCvss(dbSpecific: OSVVulnerability['database_specific']): number {
+  if (!dbSpecific) return 0;
+  
+  // Try cvss_v3 first (preferred)
+  if (dbSpecific.cvss_v3) {
+    if (typeof dbSpecific.cvss_v3 === 'number') {
+      return dbSpecific.cvss_v3;
+    }
+    if (typeof dbSpecific.cvss_v3 === 'string') {
+      return extractCvssScore(dbSpecific.cvss_v3);
+    }
+    if (typeof dbSpecific.cvss_v3 === 'object') {
+      if (dbSpecific.cvss_v3.score) return dbSpecific.cvss_v3.score;
+      if (dbSpecific.cvss_v3.vectorString) return extractCvssScore(dbSpecific.cvss_v3.vectorString);
+    }
+  }
+  
+  // Try generic cvss field
+  if (dbSpecific.cvss) {
+    if (typeof dbSpecific.cvss === 'number') {
+      return dbSpecific.cvss;
+    }
+    if (typeof dbSpecific.cvss === 'string') {
+      return extractCvssScore(dbSpecific.cvss);
+    }
+    if (typeof dbSpecific.cvss === 'object') {
+      if (dbSpecific.cvss.score) return dbSpecific.cvss.score;
+      if (dbSpecific.cvss.vectorString) return extractCvssScore(dbSpecific.cvss.vectorString);
+    }
+  }
+  
+  // Fallback to cvss_v2
+  if (dbSpecific.cvss_v2) {
+    if (typeof dbSpecific.cvss_v2 === 'number') {
+      return dbSpecific.cvss_v2;
+    }
+    if (typeof dbSpecific.cvss_v2 === 'string') {
+      return extractCvssScore(dbSpecific.cvss_v2);
+    }
+    if (typeof dbSpecific.cvss_v2 === 'object') {
+      if (dbSpecific.cvss_v2.score) return dbSpecific.cvss_v2.score;
+      if (dbSpecific.cvss_v2.vectorString) return extractCvssScore(dbSpecific.cvss_v2.vectorString);
+    }
+  }
+  
+  return 0;
 }
 
 /**
@@ -178,7 +284,7 @@ export async function analyzeVulnerabilityHistory(
   let hasUnfixedVulns = false;
   
   for (const vuln of vulns) {
-    // Check severity - try multiple sources
+    // Check severity - try multiple sources in order of preference
     let severityScore = 0;
     
     // 1. Try database_specific.severity (GitHub Advisory format)
@@ -193,7 +299,7 @@ export async function analyzeVulnerabilityHistory(
       severityScore = 2.0;
     }
     
-    // 2. Try CVSS vector parsing (preferred if available)
+    // 2. Try CVSS vector parsing from severity array (CVSS v3/v4 preferred)
     for (const sev of vuln.severity || []) {
       if (sev.type === 'CVSS_V3' || sev.type === 'CVSS_V4') {
         const cvssScore = extractCvssScore(sev.score);
@@ -203,7 +309,27 @@ export async function analyzeVulnerabilityHistory(
       }
     }
     
-    // 3. Count based on final severity
+    // 3. Try CVSS v2 from severity array if no v3/v4
+    if (severityScore === 0 || severityScore < 7) {
+      for (const sev of vuln.severity || []) {
+        if (sev.type === 'CVSS_V2') {
+          const cvssScore = extractCvssScore(sev.score);
+          if (cvssScore > severityScore) {
+            severityScore = cvssScore;
+          }
+        }
+      }
+    }
+    
+    // 4. Try database_specific.cvss fields (various formats)
+    if (severityScore === 0 || severityScore < 7) {
+      const dbCvss = extractDatabaseSpecificCvss(vuln.database_specific);
+      if (dbCvss > severityScore) {
+        severityScore = dbCvss;
+      }
+    }
+    
+    // 5. Count based on final severity
     if (severityScore >= 9.0) criticalCount++;
     else if (severityScore >= 7.0) highCount++;
     
