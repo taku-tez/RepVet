@@ -39,9 +39,9 @@ export async function fetchPubPackageInfo(packageName: string): Promise<PackageI
     const maintainers: Array<{ name: string }> = [];
     const pubspec = data.latest.pubspec;
     
+    // Try pubspec authors first
     if (pubspec.authors) {
       for (const author of pubspec.authors) {
-        // Parse "Name <email>" format
         const nameMatch = author.match(/^([^<]+)/);
         if (nameMatch) {
           maintainers.push({ name: nameMatch[1].trim() });
@@ -51,6 +51,30 @@ export async function fetchPubPackageInfo(packageName: string): Promise<PackageI
       const nameMatch = pubspec.author.match(/^([^<]+)/);
       if (nameMatch) {
         maintainers.push({ name: nameMatch[1].trim() });
+      }
+    }
+    
+    // If no maintainers from pubspec, try publisher endpoint
+    if (maintainers.length === 0) {
+      try {
+        const publisherResponse = await fetch(`${PUB_API}/packages/${encodeURIComponent(packageName)}/publisher`);
+        if (publisherResponse.ok) {
+          const publisherData = await publisherResponse.json() as { publisherId?: string };
+          if (publisherData.publisherId) {
+            maintainers.push({ name: publisherData.publisherId });
+          }
+        }
+      } catch {
+        // Ignore publisher fetch errors
+      }
+    }
+    
+    // If still no maintainers, try to extract from repository URL
+    if (maintainers.length === 0) {
+      const repoUrl = pubspec.repository || pubspec.homepage || '';
+      const githubMatch = repoUrl.match(/github\.com\/([^\/]+)/);
+      if (githubMatch) {
+        maintainers.push({ name: githubMatch[1] });
       }
     }
     
