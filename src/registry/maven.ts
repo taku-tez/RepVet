@@ -158,7 +158,7 @@ async function getVersionsFromDirectory(groupPath: string, artifactId: string): 
     
     const html = await response.text();
     // Match version directories like href="1.7.0/"
-    const versionPattern = /href="([0-9][^"\/]*)\/?"/g;
+    const versionPattern = /href="([0-9][^"/]*)\/?"/g;
     const versions: string[] = [];
     let match;
     while ((match = versionPattern.exec(html)) !== null) {

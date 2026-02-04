@@ -3,7 +3,7 @@
  */
 
 import { PackageInfo } from '../types.js';
-import { OwnershipTransferResult, NO_TRANSFER_DETECTED, fetchWithRetry, daysBetween } from './utils.js';
+import { OwnershipTransferResult, NO_TRANSFER_DETECTED, fetchWithRetry } from './utils.js';
 
 const PACKAGIST_API = 'https://packagist.org';
 const PACKAGIST_P2_API = 'https://repo.packagist.org/p2';
