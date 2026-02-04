@@ -165,20 +165,31 @@ export type OSVEcosystem = 'npm' | 'PyPI' | 'crates.io' | 'Go' | 'RubyGems' | 'P
 
 export async function queryPackageVulnerabilities(
   ecosystem: OSVEcosystem,
-  packageName: string
+  packageName: string,
+  version?: string
 ): Promise<OSVVulnerability[]> {
   try {
+    // Build query payload - include version if available for precise matching
+    const queryPayload: {
+      package: { ecosystem: string; name: string };
+      version?: string;
+    } = {
+      package: {
+        ecosystem,
+        name: packageName,
+      },
+    };
+    
+    if (version) {
+      queryPayload.version = version;
+    }
+    
     const response = await fetchWithRetry(`${OSV_API}/query`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({
-        package: {
-          ecosystem,
-          name: packageName,
-        },
-      }),
+      body: JSON.stringify(queryPayload),
       timeoutMs: 5000,
     });
     
@@ -272,9 +283,10 @@ export interface VulnerabilityAnalysis {
 
 export async function analyzeVulnerabilityHistory(
   ecosystem: OSVEcosystem,
-  packageName: string
+  packageName: string,
+  version?: string
 ): Promise<VulnerabilityAnalysis> {
-  const vulns = await queryPackageVulnerabilities(ecosystem, packageName);
+  const vulns = await queryPackageVulnerabilities(ecosystem, packageName, version);
   
   const oneYearAgo = Date.now() - 365 * 24 * 60 * 60 * 1000;
   

@@ -25,3 +25,4 @@ export { cleanRepoUrl, isValidRepoUrl, parseMaintainerString, fetchWithRetry } f
 export type { FetchWithRetryOptions } from './registry/utils.js';
 export { queryPackageVulnerabilities, analyzeVulnerabilityHistory } from './osv/client.js';
 export * from './types.js';
+export type { PackageDependency } from './types.js';

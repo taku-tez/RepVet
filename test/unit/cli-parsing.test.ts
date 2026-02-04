@@ -334,6 +334,126 @@ dependencies {
       expect(packages).toContain('com.example:kapt-lib');
     });
   });
+
+  describe('pyproject.toml parsing', () => {
+    it('should parse PEP 621 project.dependencies', () => {
+      const content = `
+[project]
+name = "my-project"
+version = "1.0.0"
+
+dependencies = [
+    "requests>=2.28.0",
+    "flask[async]>=2.0",
+    "django~=4.0",
+]
+`;
+      const packages = parsePyprojectToml(content);
+      expect(packages).toContain('requests');
+      expect(packages).toContain('flask');
+      expect(packages).toContain('django');
+    });
+
+    it('should parse PEP 621 optional-dependencies', () => {
+      const content = `
+[project]
+name = "my-project"
+dependencies = ["requests"]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "black",
+]
+test = [
+    "coverage",
+]
+`;
+      const packages = parsePyprojectToml(content);
+      expect(packages).toContain('requests');
+      expect(packages).toContain('pytest');
+      expect(packages).toContain('black');
+      expect(packages).toContain('coverage');
+    });
+
+    it('should parse Poetry tool.poetry.dependencies', () => {
+      const content = `
+[tool.poetry]
+name = "my-poetry-project"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+requests = "^2.28.0"
+flask = {version = "^2.0", extras = ["async"]}
+django = "~4.0"
+`;
+      const packages = parsePyprojectToml(content);
+      expect(packages).toContain('requests');
+      expect(packages).toContain('flask');
+      expect(packages).toContain('django');
+      expect(packages).not.toContain('python'); // Should exclude python
+    });
+
+    it('should parse Poetry dev-dependencies', () => {
+      const content = `
+[tool.poetry.dependencies]
+requests = "^2.28.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.0"
+black = "^23.0"
+`;
+      const packages = parsePyprojectToml(content);
+      expect(packages).toContain('requests');
+      expect(packages).toContain('pytest');
+      expect(packages).toContain('black');
+    });
+
+    it('should parse Poetry group dependencies', () => {
+      const content = `
+[tool.poetry.dependencies]
+requests = "^2.28.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.0"
+
+[tool.poetry.group.test.dependencies]
+coverage = "^7.0"
+`;
+      const packages = parsePyprojectToml(content);
+      expect(packages).toContain('requests');
+      expect(packages).toContain('pytest');
+      expect(packages).toContain('coverage');
+    });
+
+    it('should handle mixed PEP 621 and Poetry', () => {
+      const content = `
+[project]
+name = "mixed-project"
+dependencies = [
+    "requests>=2.28.0",
+]
+
+[tool.poetry.dependencies]
+flask = "^2.0"
+`;
+      const packages = parsePyprojectToml(content);
+      expect(packages).toContain('requests');
+      expect(packages).toContain('flask');
+    });
+
+    it('should deduplicate packages', () => {
+      const content = `
+[project]
+dependencies = ["requests>=2.28.0"]
+
+[tool.poetry.dependencies]
+requests = "^2.28.0"
+`;
+      const packages = parsePyprojectToml(content);
+      expect(packages.filter(p => p === 'requests')).toHaveLength(1);
+    });
+  });
 });
 
 // Helper functions extracted from cli.ts for testing
@@ -593,6 +713,87 @@ function parseBuildGradle(content: string): string[] {
   
   while ((match = kotlinNamedRegex.exec(content)) !== null) {
     packages.push(`${match[2]}:${match[1]}`);
+  }
+  
+  return [...new Set(packages)];
+}
+
+function parsePyprojectToml(content: string): string[] {
+  const packages: string[] = [];
+  
+  // Helper to extract package name from PEP 508 requirement string
+  const extractPkgName = (req: string): string | null => {
+    const match = req.match(/^([a-zA-Z0-9][a-zA-Z0-9._-]*)(?:\[.*?\])?/);
+    return match ? match[1] : null;
+  };
+  
+  // PEP 621: project.dependencies
+  // Use \n\s*\] to match closing bracket on its own line (avoids matching [extras] in deps)
+  const projectDepsRegex = /\[project\][\s\S]*?dependencies\s*=\s*\[([\s\S]*?)\n\s*\]/;
+  const projectDepsMatch = content.match(projectDepsRegex);
+  if (projectDepsMatch) {
+    const depsArray = projectDepsMatch[1];
+    const depStrings = depsArray.match(/"([^"]+)"/g) || [];
+    for (const quoted of depStrings) {
+      const dep = quoted.replace(/"/g, '');
+      const pkgName = extractPkgName(dep);
+      if (pkgName) packages.push(pkgName);
+    }
+  }
+  
+  // PEP 621: project.optional-dependencies.*
+  const optionalDepsRegex = /\[project\.optional-dependencies\]([\s\S]*?)(?=\n\[|$)/;
+  const optionalMatch = content.match(optionalDepsRegex);
+  if (optionalMatch) {
+    const section = optionalMatch[1];
+    const arrayRegex = /\w+\s*=\s*\[([\s\S]*?)\]/g;
+    let arrayMatch;
+    while ((arrayMatch = arrayRegex.exec(section)) !== null) {
+      const depStrings = arrayMatch[1].match(/"([^"]+)"/g) || [];
+      for (const quoted of depStrings) {
+        const dep = quoted.replace(/"/g, '');
+        const pkgName = extractPkgName(dep);
+        if (pkgName) packages.push(pkgName);
+      }
+    }
+  }
+  
+  // Poetry: tool.poetry.dependencies and tool.poetry.dev-dependencies
+  const poetrySections = [
+    /\[tool\.poetry\.dependencies\]([\s\S]*?)(?=\n\[|$)/,
+    /\[tool\.poetry\.dev-dependencies\]([\s\S]*?)(?=\n\[|$)/,
+  ];
+  
+  for (const regex of poetrySections) {
+    const match = content.match(regex);
+    if (match) {
+      const section = match[1];
+      const lines = section.split('\n');
+      for (const line of lines) {
+        const trimmed = line.trim();
+        if (trimmed.startsWith('#')) continue;
+        const pkgMatch = trimmed.match(/^([a-zA-Z0-9][a-zA-Z0-9._-]*)\s*=/);
+        if (pkgMatch && pkgMatch[1] !== 'python') {
+          packages.push(pkgMatch[1]);
+        }
+      }
+    }
+  }
+  
+  // Poetry group dependencies: [tool.poetry.group.*.dependencies]
+  const groupRegex = /\[tool\.poetry\.group\.\w+\.dependencies\]([\s\S]*?)(?=\n\[|$)/g;
+  let groupMatch;
+  while ((groupMatch = groupRegex.exec(content)) !== null) {
+    const section = groupMatch[1];
+    const lines = section.split('\n');
+    for (const line of lines) {
+      const trimmed = line.trim();
+      if (trimmed.startsWith('#')) continue;
+      const pkgMatch = trimmed.match(/^([a-zA-Z0-9][a-zA-Z0-9._-]*)\s*=/);
+      if (pkgMatch && pkgMatch[1] !== 'python') {
+        packages.push(pkgMatch[1]);
+      }
+    }
   }
   
   return [...new Set(packages)];

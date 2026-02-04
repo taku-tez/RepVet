@@ -4,6 +4,14 @@
 
 export type Ecosystem = 'npm' | 'pypi' | 'crates' | 'go' | 'rubygems' | 'packagist' | 'nuget' | 'maven' | 'hex' | 'pub' | 'cpan' | 'cocoapods' | 'conda';
 
+/**
+ * Package dependency with optional version info (from lock files)
+ */
+export interface PackageDependency {
+  name: string;
+  version?: string;
+}
+
 export interface PackageInfo {
   name: string;
   version: string;

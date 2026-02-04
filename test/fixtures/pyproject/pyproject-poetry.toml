@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "my-poetry-project"
+version = "1.0.0"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+requests = "^2.28.0"
+flask = {version = "^2.0", extras = ["async"]}
+django = "~4.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.0"
+black = "^23.0"
+mypy = "^1.0"
+
+[tool.poetry.group.test.dependencies]
+coverage = "^7.0"

@@ -1,0 +1,11 @@
+# Some projects use both PEP 621 and Poetry-style
+[project]
+name = "mixed-project"
+version = "1.0.0"
+dependencies = [
+    "requests>=2.28.0",
+]
+
+[tool.poetry.dependencies]
+# This shouldn't duplicate if also in project.dependencies
+flask = "^2.0"

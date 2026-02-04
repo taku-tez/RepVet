@@ -10,7 +10,7 @@ import chalk from 'chalk';
 import { createRequire } from 'module';
 import pLimit from 'p-limit';
 import { checkPackageReputation } from './scorer.js';
-import { ReputationResult, Ecosystem } from './types.js';
+import { ReputationResult, Ecosystem, PackageDependency } from './types.js';
 import { parseEnvironmentYaml } from './registry/conda.js';
 
 const DEFAULT_CONCURRENCY = 5;
@@ -18,6 +18,34 @@ const DEFAULT_CONCURRENCY = 5;
 // Get version from package.json (single source of truth)
 const require = createRequire(import.meta.url);
 const packageJson = require('../package.json');
+
+// Supported dependency files for monorepo scanning
+const SUPPORTED_DEP_FILES = [
+  'package.json',
+  'package-lock.json',
+  'yarn.lock',
+  'pnpm-lock.yaml',
+  'requirements.txt',
+  'pyproject.toml',
+  'poetry.lock',
+  'Pipfile.lock',
+  'Cargo.toml',
+  'Cargo.lock',
+  'Gemfile',
+  'Gemfile.lock',
+  'go.mod',
+  'composer.json',
+  'pom.xml',
+  'build.gradle',
+  'build.gradle.kts',
+  'mix.exs',
+  'pubspec.yaml',
+  'cpanfile',
+  'Podfile',
+  'Package.swift',
+  'environment.yml',
+  'environment.yaml',
+];
 
 const program = new Command();
 
@@ -59,94 +87,173 @@ interface SkippedPackage {
 }
 
 program
-  .command('scan <file>')
-  .description('Scan dependency file (package.json, requirements.txt, Cargo.toml)')
+  .command('scan <path>')
+  .description('Scan dependency file or directory (monorepo support)')
   .option('--json', 'Output as JSON')
   .option('--threshold <score>', 'Only show packages below this score', '100')
   .option('--fail-under <score>', 'Exit with code 1 if any package scores below this')
   .option('-c, --concurrency <number>', 'Number of concurrent API requests', String(DEFAULT_CONCURRENCY))
   .option('--show-skipped', 'Show details of skipped packages')
-  .action(async (file: string, options: { json?: boolean; threshold?: string; failUnder?: string; concurrency?: string; showSkipped?: boolean }) => {
+  .action(async (inputPath: string, options: { json?: boolean; threshold?: string; failUnder?: string; concurrency?: string; showSkipped?: boolean }) => {
     try {
       const fs = await import('fs');
       const path = await import('path');
       
-      const filePath = path.resolve(file);
-      const content = fs.readFileSync(filePath, 'utf-8');
-      const fileName = path.basename(filePath);
-      
-      // Set file path for recursive includes in requirements.txt
-      (globalThis as unknown as { __repvetFilePath?: string }).__repvetFilePath = filePath;
-      
-      const { packages, ecosystem } = parseDepFile(fileName, content);
-      
-      if (packages.length === 0) {
-        console.log(chalk.yellow('No dependencies found'));
-        process.exit(0);
-      }
+      const resolvedPath = path.resolve(inputPath);
+      const stat = fs.statSync(resolvedPath);
       
       const threshold = parseInt(options.threshold || '100', 10);
       const failUnder = options.failUnder ? parseInt(options.failUnder, 10) : undefined;
       const concurrency = Math.max(1, Math.min(20, parseInt(options.concurrency || String(DEFAULT_CONCURRENCY), 10)));
       
-      const allResults: ReputationResult[] = [];
-      const filteredResults: ReputationResult[] = [];
-      const skippedPackages: SkippedPackage[] = [];
-      let hasFailure = false;
-      
-      if (!options.json) {
-        console.log(chalk.dim(`Scanning ${packages.length} ${ecosystem} packages (concurrency: ${concurrency})...\n`));
+      // Determine files to scan
+      let filesToScan: string[];
+      if (stat.isDirectory()) {
+        filesToScan = findDepFiles(resolvedPath, fs, path);
+        if (filesToScan.length === 0) {
+          if (options.json) {
+            console.log(JSON.stringify({ error: 'No dependency files found in directory' }));
+          } else {
+            console.log(chalk.yellow('No dependency files found in directory'));
+          }
+          process.exit(0);
+        }
+      } else {
+        filesToScan = [resolvedPath];
       }
       
-      // Parallel scanning with rate limiting
+      // Scan each file
+      interface FileResult {
+        path: string;
+        relativePath: string;
+        ecosystem: Ecosystem;
+        packageNames: string[];
+        results: ReputationResult[];
+        skipped: SkippedPackage[];
+      }
+      
+      const fileResults: FileResult[] = [];
       const limit = pLimit(concurrency);
       
-      const checkPackage = async (pkg: string): Promise<{ result?: ReputationResult; skipped?: SkippedPackage }> => {
+      const checkPackage = async (pkg: PackageDependency, ecosystem: Ecosystem): Promise<{ result?: ReputationResult; skipped?: SkippedPackage }> => {
         try {
-          const result = await checkPackageReputation(pkg, ecosystem);
+          // Pass version to checkPackageReputation for precise OSV matching
+          const result = await checkPackageReputation(pkg.name, ecosystem, pkg.version);
           return { result };
         } catch (error) {
           const reason = error instanceof Error ? error.message : String(error);
-          return { skipped: { name: pkg, reason } };
+          return { skipped: { name: pkg.name, reason } };
         }
       };
       
-      const results = await Promise.all(
-        packages.map(pkg => limit(() => checkPackage(pkg)))
-      );
-      
-      for (const { result, skipped } of results) {
-        if (skipped) {
-          skippedPackages.push(skipped);
-        } else if (result) {
-          allResults.push(result);
-          if (result.score < threshold) {
-            filteredResults.push(result);
+      for (const filePath of filesToScan) {
+        const content = fs.readFileSync(filePath, 'utf-8');
+        const fileName = path.basename(filePath);
+        
+        // Set file path for recursive includes in requirements.txt
+        (globalThis as unknown as { __repvetFilePath?: string }).__repvetFilePath = filePath;
+        
+        try {
+          const { packages, ecosystem } = parseDepFile(fileName, content);
+          
+          if (packages.length === 0) continue;
+          
+          // Extract package names for display (version info preserved in packages array)
+          const packageNames = packages.map(p => p.name);
+          
+          const relativePath = stat.isDirectory() 
+            ? path.relative(resolvedPath, filePath)
+            : fileName;
+          
+          if (!options.json) {
+            console.log(chalk.dim(`Scanning ${relativePath} (${packageNames.length} ${ecosystem} packages)...`));
           }
-          if (failUnder !== undefined && result.score < failUnder) {
-            hasFailure = true;
+          
+          const checkResults = await Promise.all(
+            packages.map(pkg => limit(() => checkPackage(pkg, ecosystem)))
+          );
+          
+          const results: ReputationResult[] = [];
+          const skipped: SkippedPackage[] = [];
+          
+          for (const { result, skipped: skip } of checkResults) {
+            if (skip) skipped.push(skip);
+            if (result) results.push(result);
           }
+          
+          fileResults.push({
+            path: filePath,
+            relativePath,
+            ecosystem,
+            packageNames,
+            results,
+            skipped,
+          });
+        } catch (e) {
+          // Skip unsupported files silently in directory mode
+          if (!stat.isDirectory()) throw e;
         }
       }
       
+      // Aggregate results
+      const allResults: ReputationResult[] = [];
+      const allSkipped: SkippedPackage[] = [];
+      let totalPackages = 0;
+      
+      for (const fr of fileResults) {
+        allResults.push(...fr.results);
+        allSkipped.push(...fr.skipped);
+        totalPackages += fr.packageNames.length;
+      }
+      
+      const filteredResults = allResults.filter(r => r.score < threshold);
+      const hasFailure = failUnder !== undefined && allResults.some(r => r.score < failUnder);
+      
       if (options.json) {
-        // Separate all results from filtered results for clarity
-        const allSummary = summarizeResults(allResults);
-        const filteredSummary = summarizeResults(filteredResults);
-        console.log(JSON.stringify({
-          ecosystem,
-          scanned: packages.length,
-          successful: allResults.length,
-          skipped: skippedPackages.length,
-          skippedPackages,
-          summary: allSummary,
-          threshold,
-          filteredCount: filteredResults.length,
-          filteredSummary,
-          allResults,
-          filteredResults,
-        }, null, 2));
+        // Multi-file JSON output
+        const summary = summarizeResults(allResults);
+        const output = stat.isDirectory()
+          ? {
+              mode: 'directory',
+              path: resolvedPath,
+              filesScanned: fileResults.length,
+              files: fileResults.map(fr => ({
+                path: fr.relativePath,
+                ecosystem: fr.ecosystem,
+                packageCount: fr.packageNames.length,
+                successCount: fr.results.length,
+                skippedCount: fr.skipped.length,
+                results: fr.results,
+                skipped: fr.skipped,
+              })),
+              summary: {
+                totalPackages,
+                totalSuccessful: allResults.length,
+                totalSkipped: allSkipped.length,
+                ...summary,
+              },
+              threshold,
+              filteredCount: filteredResults.length,
+              filteredResults,
+            }
+          : {
+              mode: 'file',
+              ecosystem: fileResults[0]?.ecosystem,
+              scanned: totalPackages,
+              successful: allResults.length,
+              skipped: allSkipped.length,
+              skippedPackages: allSkipped,
+              summary: summarizeResults(allResults),
+              threshold,
+              filteredCount: filteredResults.length,
+              filteredSummary: summarizeResults(filteredResults),
+              allResults,
+              filteredResults,
+            };
+        console.log(JSON.stringify(output, null, 2));
       } else {
+        console.log('');
+        
         if (filteredResults.length === 0) {
           console.log(chalk.green('✓ All packages above threshold'));
         } else {
@@ -157,19 +264,24 @@ program
           }
         }
         
-        // Summary based on ALL packages, not just filtered
         const summary = summarizeResults(allResults);
         console.log(chalk.dim('─'.repeat(50)));
-        console.log(`Scanned: ${allResults.length}/${packages.length} | ` + 
+        
+        if (stat.isDirectory()) {
+          console.log(chalk.dim(`Files scanned: ${fileResults.length}`));
+        }
+        
+        console.log(`Scanned: ${allResults.length}/${totalPackages} | ` + 
           chalk.red(`Critical: ${summary.critical}`) + ' | ' +
           chalk.red(`High: ${summary.high}`) + ' | ' +
           chalk.yellow(`Medium: ${summary.medium}`) + ' | ' +
           chalk.green(`Low: ${summary.low}`));
-        if (skippedPackages.length > 0) {
-          console.log(chalk.dim(`Skipped: ${skippedPackages.length} (not found or API error)`));
+        
+        if (allSkipped.length > 0) {
+          console.log(chalk.dim(`Skipped: ${allSkipped.length} (not found or API error)`));
           if (options.showSkipped) {
             console.log(chalk.dim('\nSkipped packages:'));
-            for (const sp of skippedPackages) {
+            for (const sp of allSkipped) {
               console.log(chalk.dim(`  • ${sp.name}: ${sp.reason}`));
             }
           }
@@ -178,10 +290,47 @@ program
       
       process.exit(hasFailure ? 1 : 0);
     } catch (error) {
-      console.error(chalk.red(`Error: ${error}`));
+      if (options.json) {
+        console.log(JSON.stringify({ error: String(error) }));
+      } else {
+        console.error(chalk.red(`Error: ${error}`));
+      }
       process.exit(1);
     }
   });
+
+/**
+ * Recursively find supported dependency files in a directory
+ */
+function findDepFiles(
+  dir: string,
+  fs: typeof import('fs'),
+  path: typeof import('path'),
+  maxDepth = 5,
+  currentDepth = 0
+): string[] {
+  if (currentDepth > maxDepth) return [];
+  
+  const files: string[] = [];
+  const entries = fs.readdirSync(dir, { withFileTypes: true });
+  
+  for (const entry of entries) {
+    // Skip common non-project directories
+    if (entry.isDirectory()) {
+      if (['node_modules', '.git', 'vendor', 'target', '__pycache__', '.venv', 'venv', 'dist', 'build'].includes(entry.name)) {
+        continue;
+      }
+      const subDir = path.join(dir, entry.name);
+      files.push(...findDepFiles(subDir, fs, path, maxDepth, currentDepth + 1));
+    } else if (entry.isFile()) {
+      if (SUPPORTED_DEP_FILES.includes(entry.name)) {
+        files.push(path.join(dir, entry.name));
+      }
+    }
+  }
+  
+  return files;
+}
 
 function validateEcosystem(eco: string): Ecosystem {
   const valid = ['npm', 'pypi', 'crates', 'rubygems', 'go', 'packagist', 'nuget', 'maven', 'hex', 'pub', 'cpan', 'cocoapods', 'conda'];
@@ -191,7 +340,7 @@ function validateEcosystem(eco: string): Ecosystem {
   return eco.toLowerCase() as Ecosystem;
 }
 
-function parseDepFile(fileName: string, content: string): { packages: string[]; ecosystem: Ecosystem } {
+function parseDepFile(fileName: string, content: string): { packages: PackageDependency[]; ecosystem: Ecosystem } {
   if (fileName === 'package.json' || fileName.endsWith('/package.json')) {
     const pkg = JSON.parse(content) as { 
       dependencies?: Record<string, string>; 
@@ -214,10 +363,10 @@ function parseDepFile(fileName: string, content: string): { packages: string[]; 
     };
     
     // Merge object keys with bundled array
-    const packages = [...new Set([...Object.keys(allDeps), ...bundled])];
+    const packageNames = [...new Set([...Object.keys(allDeps), ...bundled])];
     
     return {
-      packages,
+      packages: packageNames.map(name => ({ name })),
       ecosystem: 'npm',
     };
   }
@@ -225,31 +374,31 @@ function parseDepFile(fileName: string, content: string): { packages: string[]; 
   if (fileName === 'requirements.txt' || fileName.endsWith('.txt')) {
     // For recursive includes, we need the file path
     // If called from scan command, filePath is available
-    const packages = parseRequirementsTxt(content, (globalThis as unknown as { __repvetFilePath?: string }).__repvetFilePath);
-    return { packages, ecosystem: 'pypi' };
+    const packageNames = parseRequirementsTxt(content, (globalThis as unknown as { __repvetFilePath?: string }).__repvetFilePath);
+    return { packages: packageNames.map(name => ({ name })), ecosystem: 'pypi' };
   }
   
   if (fileName === 'Cargo.toml' || fileName.endsWith('/Cargo.toml')) {
-    const packages = parseCargoToml(content);
-    return { packages, ecosystem: 'crates' };
+    const packageNames = parseCargoToml(content);
+    return { packages: packageNames.map(name => ({ name })), ecosystem: 'crates' };
   }
   
   if (fileName === 'Gemfile' || fileName.endsWith('.gemspec')) {
     // Parse Ruby gem dependencies (Gemfile.lock is handled separately below)
-    const packages: string[] = [];
+    const packageNames: string[] = [];
     const gemPattern = /gem\s+['"]([a-zA-Z0-9_-]+)['"]/g;
     let match;
     while ((match = gemPattern.exec(content)) !== null) {
-      if (!packages.includes(match[1])) {
-        packages.push(match[1]);
+      if (!packageNames.includes(match[1])) {
+        packageNames.push(match[1]);
       }
     }
-    return { packages, ecosystem: 'rubygems' };
+    return { packages: packageNames.map(name => ({ name })), ecosystem: 'rubygems' };
   }
   
   if (fileName === 'go.mod') {
-    const packages = parseGoMod(content);
-    return { packages, ecosystem: 'go' };
+    const packageNames = parseGoMod(content);
+    return { packages: packageNames.map(name => ({ name })), ecosystem: 'go' };
   }
   
   if (fileName === 'composer.json') {
@@ -258,54 +407,54 @@ function parseDepFile(fileName: string, content: string): { packages: string[]; 
       require?: Record<string, string>; 
       'require-dev'?: Record<string, string> 
     };
-    const packages = Object.keys({ 
+    const packageNames = Object.keys({ 
       ...pkg.require, 
       ...pkg['require-dev'] 
     }).filter(p => !p.startsWith('php') && !p.startsWith('ext-'));
-    return { packages, ecosystem: 'packagist' };
+    return { packages: packageNames.map(name => ({ name })), ecosystem: 'packagist' };
   }
   
   if (fileName.endsWith('.csproj') || fileName.endsWith('.fsproj')) {
     // Parse .NET project file
-    const packages: string[] = [];
+    const packageNames: string[] = [];
     const packageRefPattern = /<PackageReference\s+Include="([^"]+)"/g;
     let match;
     while ((match = packageRefPattern.exec(content)) !== null) {
-      packages.push(match[1]);
+      packageNames.push(match[1]);
     }
-    return { packages, ecosystem: 'nuget' };
+    return { packages: packageNames.map(name => ({ name })), ecosystem: 'nuget' };
   }
   
   if (fileName === 'pom.xml') {
     // Parse Maven POM
-    const packages: string[] = [];
+    const packageNames: string[] = [];
     const depPattern = /<dependency>[\s\S]*?<groupId>([^<]+)<\/groupId>[\s\S]*?<artifactId>([^<]+)<\/artifactId>/g;
     let match;
     while ((match = depPattern.exec(content)) !== null) {
-      packages.push(`${match[1]}:${match[2]}`);
+      packageNames.push(`${match[1]}:${match[2]}`);
     }
-    return { packages, ecosystem: 'maven' };
+    return { packages: packageNames.map(name => ({ name })), ecosystem: 'maven' };
   }
   
   if (fileName === 'build.gradle' || fileName === 'build.gradle.kts') {
-    const packages = parseBuildGradle(content);
-    return { packages, ecosystem: 'maven' };
+    const packageNames = parseBuildGradle(content);
+    return { packages: packageNames.map(name => ({ name })), ecosystem: 'maven' };
   }
   
   if (fileName === 'mix.exs') {
     // Parse Elixir Mix dependencies
-    const packages: string[] = [];
+    const packageNames: string[] = [];
     const depPattern = /\{:([a-z_]+),/g;
     let match;
     while ((match = depPattern.exec(content)) !== null) {
-      packages.push(match[1]);
+      packageNames.push(match[1]);
     }
-    return { packages, ecosystem: 'hex' };
+    return { packages: packageNames.map(name => ({ name })), ecosystem: 'hex' };
   }
   
   if (fileName === 'pubspec.yaml') {
     // Parse Dart/Flutter pubspec
-    const packages: string[] = [];
+    const packageNames: string[] = [];
     const lines = content.split('\n');
     let inDependencies = false;
     
@@ -321,51 +470,57 @@ function parseDepFile(fileName: string, content: string): { packages: string[]; 
       if (inDependencies) {
         const match = line.match(/^\s+([a-z_0-9]+):/);
         if (match && !match[1].startsWith('flutter')) {
-          packages.push(match[1]);
+          packageNames.push(match[1]);
         }
       }
     }
-    return { packages, ecosystem: 'pub' };
+    return { packages: packageNames.map(name => ({ name })), ecosystem: 'pub' };
   }
   
   if (fileName === 'cpanfile' || fileName === 'Makefile.PL' || fileName === 'Build.PL') {
     // Parse Perl dependencies
-    const packages: string[] = [];
+    const packageNames: string[] = [];
     const requiresPattern = /requires\s+['"]([^'"]+)['"]/g;
     let match;
     while ((match = requiresPattern.exec(content)) !== null) {
-      packages.push(match[1].replace(/::/g, '-'));
+      packageNames.push(match[1].replace(/::/g, '-'));
     }
-    return { packages, ecosystem: 'cpan' };
+    return { packages: packageNames.map(name => ({ name })), ecosystem: 'cpan' };
   }
   
   if (fileName === 'Podfile') {
     // Parse CocoaPods
-    const packages: string[] = [];
+    const packageNames: string[] = [];
     const podPattern = /pod\s+['"]([^'"]+)['"]/g;
     let match;
     while ((match = podPattern.exec(content)) !== null) {
-      packages.push(match[1]);
+      packageNames.push(match[1]);
     }
-    return { packages, ecosystem: 'cocoapods' };
+    return { packages: packageNames.map(name => ({ name })), ecosystem: 'cocoapods' };
   }
   
   if (fileName === 'Package.swift') {
     // Parse Swift Package Manager
-    const packages: string[] = [];
+    const packageNames: string[] = [];
     const depPattern = /\.package\s*\([^)]*name:\s*"([^"]+)"/g;
     let match;
     while ((match = depPattern.exec(content)) !== null) {
-      packages.push(match[1]);
+      packageNames.push(match[1]);
     }
-    return { packages, ecosystem: 'cocoapods' }; // Use CocoaPods for Swift too
+    return { packages: packageNames.map(name => ({ name })), ecosystem: 'cocoapods' }; // Use CocoaPods for Swift too
   }
   
   if (fileName === 'environment.yml' || fileName === 'environment.yaml' || 
       fileName.endsWith('/environment.yml') || fileName.endsWith('/environment.yaml')) {
     // Parse Conda environment file
     const { condaPackages } = parseEnvironmentYaml(content);
-    return { packages: condaPackages, ecosystem: 'conda' };
+    return { packages: condaPackages.map(name => ({ name })), ecosystem: 'conda' };
+  }
+  
+  if (fileName === 'pyproject.toml' || fileName.endsWith('/pyproject.toml')) {
+    // Parse pyproject.toml (PEP 621 and Poetry)
+    const packages = parsePyprojectToml(content);
+    return { packages: packages.map(name => ({ name })), ecosystem: 'pypi' };
   }
   
   // ========== Lock Files ==========
@@ -373,44 +528,37 @@ function parseDepFile(fileName: string, content: string): { packages: string[]; 
   // npm: package-lock.json, npm-shrinkwrap.json
   if (fileName === 'package-lock.json' || fileName === 'npm-shrinkwrap.json' ||
       fileName.endsWith('/package-lock.json') || fileName.endsWith('/npm-shrinkwrap.json')) {
-    const packages = parsePackageLock(content);
-    return { packages, ecosystem: 'npm' };
+    return { packages: parsePackageLock(content), ecosystem: 'npm' };
   }
   
   // yarn: yarn.lock
   if (fileName === 'yarn.lock' || fileName.endsWith('/yarn.lock')) {
-    const packages = parseYarnLock(content);
-    return { packages, ecosystem: 'npm' };
+    return { packages: parseYarnLock(content), ecosystem: 'npm' };
   }
   
   // pnpm: pnpm-lock.yaml
   if (fileName === 'pnpm-lock.yaml' || fileName.endsWith('/pnpm-lock.yaml')) {
-    const packages = parsePnpmLock(content);
-    return { packages, ecosystem: 'npm' };
+    return { packages: parsePnpmLock(content), ecosystem: 'npm' };
   }
   
   // Python: poetry.lock
   if (fileName === 'poetry.lock' || fileName.endsWith('/poetry.lock')) {
-    const packages = parsePoetryLock(content);
-    return { packages, ecosystem: 'pypi' };
+    return { packages: parsePoetryLock(content), ecosystem: 'pypi' };
   }
   
   // Python: Pipfile.lock
   if (fileName === 'Pipfile.lock' || fileName.endsWith('/Pipfile.lock')) {
-    const packages = parsePipfileLock(content);
-    return { packages, ecosystem: 'pypi' };
+    return { packages: parsePipfileLock(content), ecosystem: 'pypi' };
   }
   
   // Rust: Cargo.lock
   if (fileName === 'Cargo.lock' || fileName.endsWith('/Cargo.lock')) {
-    const packages = parseCargoLock(content);
-    return { packages, ecosystem: 'crates' };
+    return { packages: parseCargoLock(content), ecosystem: 'crates' };
   }
   
   // Ruby: Gemfile.lock
   if (fileName === 'Gemfile.lock' || fileName.endsWith('/Gemfile.lock')) {
-    const packages = parseGemfileLock(content);
-    return { packages, ecosystem: 'rubygems' };
+    return { packages: parseGemfileLock(content), ecosystem: 'rubygems' };
   }
   
   throw new Error(`Unsupported file format: ${fileName}`);
@@ -761,38 +909,48 @@ function parseBuildGradle(content: string): string[] {
 /**
  * Parse package-lock.json / npm-shrinkwrap.json
  * Supports lockfileVersion 1, 2, and 3
+ * Returns package names with versions
  */
-function parsePackageLock(content: string): string[] {
+function parsePackageLock(content: string): PackageDependency[] {
   const lock = JSON.parse(content) as {
-    packages?: Record<string, unknown>;
-    dependencies?: Record<string, unknown>;
+    packages?: Record<string, { version?: string }>;
+    dependencies?: Record<string, { version?: string }>;
   };
   
   // v2/v3 format: "packages" object with "node_modules/pkg" keys
   // v1 format: "dependencies" object with pkg names as keys
   const packagesObj = lock.packages || lock.dependencies || {};
   
-  const packages = Object.keys(packagesObj)
-    .filter(p => {
-      // Skip empty string key (root package in v2/v3)
-      if (!p) return false;
-      // Skip workspace packages (local paths)
-      if (p.startsWith('node_modules/') && p.includes('node_modules/node_modules/')) return false;
-      return true;
-    })
-    .map(p => p.replace(/^node_modules\//, ''))
-    // Handle scoped packages
-    .filter(p => p.length > 0);
+  const deps: PackageDependency[] = [];
+  const seen = new Set<string>();
   
-  return [...new Set(packages)];
+  for (const [key, value] of Object.entries(packagesObj)) {
+    // Skip empty string key (root package in v2/v3)
+    if (!key) continue;
+    // Skip workspace packages (local paths)
+    if (key.startsWith('node_modules/') && key.includes('node_modules/node_modules/')) continue;
+    
+    const name = key.replace(/^node_modules\//, '');
+    if (!name || seen.has(name)) continue;
+    seen.add(name);
+    
+    deps.push({
+      name,
+      version: value?.version,
+    });
+  }
+  
+  return deps;
 }
 
 /**
  * Parse yarn.lock (Yarn Classic v1 and Yarn Berry v2+)
  * Format: "package@version:" or "package@npm:version:"
+ * Returns package names with resolved versions
  */
-function parseYarnLock(content: string): string[] {
-  const packages: string[] = [];
+function parseYarnLock(content: string): PackageDependency[] {
+  const deps: PackageDependency[] = [];
+  const seen = new Map<string, string>(); // name -> version
   
   // Match package entries at the start of lines
   // Yarn v1: "package@^1.0.0":
@@ -801,164 +959,259 @@ function parseYarnLock(content: string): string[] {
   // Yarn Berry: "package@npm:^1.0.0":
   const lines = content.split('\n');
   
+  let currentPackage: string | null = null;
+  
   for (const line of lines) {
-    // Skip comments and indented lines
-    if (line.startsWith('#') || line.startsWith(' ') || line.startsWith('\t')) {
+    // Skip comments
+    if (line.startsWith('#')) {
       continue;
     }
     
-    // Match package declarations
-    // Handle scoped packages: "@scope/package@version"
-    // Handle regular packages: "package@version"
-    // Can be: "pkg@version": or pkg@version: (with or without quotes)
-    
-    // Try scoped package first: "@scope/package@version"
-    const scopedMatch = line.match(/^"?(@[^/]+\/[^@\s"]+)@/);
-    if (scopedMatch && scopedMatch[1]) {
-      packages.push(scopedMatch[1]);
+    // Check for version line (indented with "version")
+    if (currentPackage && line.match(/^\s+version\s+["']?([^"'\s]+)["']?/)) {
+      const versionMatch = line.match(/^\s+version\s+["']?([^"'\s]+)["']?/);
+      if (versionMatch && !seen.has(currentPackage)) {
+        seen.set(currentPackage, versionMatch[1]);
+      }
       continue;
     }
     
-    // Regular package: "package@version"
-    const match = line.match(/^"?([^@\s"]+)@/);
-    if (match && match[1]) {
-      // Skip internal yarn entries
-      if (!match[1].startsWith('__')) {
-        packages.push(match[1]);
+    // Match package declarations (non-indented lines)
+    if (!line.startsWith(' ') && !line.startsWith('\t')) {
+      // Try scoped package first: "@scope/package@version"
+      const scopedMatch = line.match(/^"?(@[^/]+\/[^@\s"]+)@/);
+      if (scopedMatch && scopedMatch[1]) {
+        currentPackage = scopedMatch[1];
+        continue;
+      }
+      
+      // Regular package: "package@version"
+      const match = line.match(/^"?([^@\s"]+)@/);
+      if (match && match[1]) {
+        // Skip internal yarn entries
+        if (!match[1].startsWith('__')) {
+          currentPackage = match[1];
+        }
       }
     }
   }
   
-  return [...new Set(packages)];
+  // Convert Map to PackageDependency array
+  for (const [name, version] of seen) {
+    deps.push({ name, version });
+  }
+  
+  return deps;
 }
 
 /**
  * Parse pnpm-lock.yaml
  * Format: YAML with packages/dependencies objects
+ * Returns package names with versions from packages section
  */
-function parsePnpmLock(content: string): string[] {
-  const packages: string[] = [];
+function parsePnpmLock(content: string): PackageDependency[] {
+  const deps: PackageDependency[] = [];
+  const seen = new Set<string>();
   
-  // Match package entries in dependencies section
-  // Format: /package@version: or /package/version:
-  // Also handles: '@scope/package': version
-  
-  // Simple line-by-line parsing (avoid YAML dependency)
+  // Two-pass parsing: first collect from packages (with versions), then from dependencies
   const lines = content.split('\n');
-  let inPackages = false;
-  let inDependencies = false;
   
+  // Pass 1: Extract packages with versions from packages section
+  let inPackages = false;
   for (const line of lines) {
     const trimmed = line.trim();
     
-    // Detect section headers (allow trailing content like specifier)
     if (/^packages:\s*$/.test(trimmed)) {
       inPackages = true;
-      inDependencies = false;
       continue;
     }
-    if (/^(dependencies|devDependencies|optionalDependencies):\s*$/.test(trimmed)) {
-      inDependencies = true;
-      inPackages = false;
-      continue;
-    }
-    // New top-level section (NOT indented - starts at column 0, ends with colon)
-    // Only check non-indented lines to avoid false positives from nested keys
+    // New top-level section ends packages
     if (!line.startsWith(' ') && /^[a-zA-Z][a-zA-Z0-9]*:\s*$/.test(trimmed)) {
-      inPackages = false;
-      inDependencies = false;
+      if (inPackages) break; // Done with packages section
       continue;
     }
     
     if (inPackages) {
       // Match: /package@version: or /@scope/package@version:
-      const pkgMatch = trimmed.match(/^\/?(@?[^@(]+)[@(]/);
-      if (pkgMatch && pkgMatch[1]) {
-        const pkg = pkgMatch[1].replace(/^\//, '');
-        if (pkg && !pkg.startsWith('/')) {
-          packages.push(pkg);
-        }
-      }
-    }
-    
-    if (inDependencies) {
-      // Match: 'package': or '@scope/package': (with optional quotes)
-      // Package names are indented with exactly 2 spaces
-      // Properties (specifier, version) are indented with 4+ spaces
-      if (line.match(/^  [^ ]/)) {
-        const depMatch = line.match(/^  ['"]?(@?[a-zA-Z0-9_@/.-]+)['"]?\s*:/);
-        if (depMatch && depMatch[1]) {
-          packages.push(depMatch[1]);
+      const pkgMatch = trimmed.match(/^\/?(@?[^@(]+)@([^(:]+)/);
+      if (pkgMatch && pkgMatch[1] && pkgMatch[2]) {
+        const name = pkgMatch[1].replace(/^\//, '');
+        const version = pkgMatch[2];
+        if (name && !name.startsWith('/') && !seen.has(name)) {
+          seen.add(name);
+          deps.push({ name, version });
         }
       }
     }
   }
   
-  return [...new Set(packages)];
+  // Pass 2: Add any packages from dependencies section that weren't in packages
+  let inDependencies = false;
+  for (const line of lines) {
+    const trimmed = line.trim();
+    
+    if (/^(dependencies|devDependencies|optionalDependencies):\s*$/.test(trimmed)) {
+      inDependencies = true;
+      continue;
+    }
+    if (/^packages:\s*$/.test(trimmed)) {
+      inDependencies = false;
+      continue;
+    }
+    if (!line.startsWith(' ') && /^[a-zA-Z][a-zA-Z0-9]*:\s*$/.test(trimmed)) {
+      inDependencies = false;
+      continue;
+    }
+    
+    if (inDependencies && line.match(/^  [^ ]/)) {
+      const depMatch = line.match(/^  ['"]?(@?[a-zA-Z0-9_@/.-]+)['"]?\s*:/);
+      if (depMatch && depMatch[1] && !seen.has(depMatch[1])) {
+        seen.add(depMatch[1]);
+        deps.push({ name: depMatch[1] });
+      }
+    }
+  }
+  
+  return deps;
 }
 
 /**
  * Parse poetry.lock (TOML format)
- * Format: [[package]] sections with name = "package"
+ * Format: [[package]] sections with name = "package" and version = "..."
+ * Returns package names with versions
  */
-function parsePoetryLock(content: string): string[] {
-  const packages: string[] = [];
+function parsePoetryLock(content: string): PackageDependency[] {
+  const deps: PackageDependency[] = [];
+  const seen = new Set<string>();
   
-  // Match name = "package" within [[package]] sections
-  const namePattern = /^name\s*=\s*"([^"]+)"/gm;
-  let match;
+  // Split into [[package]] blocks and parse each
+  const lines = content.split('\n');
+  let currentName: string | null = null;
+  let currentVersion: string | null = null;
   
-  while ((match = namePattern.exec(content)) !== null) {
-    if (match[1]) {
-      packages.push(match[1]);
+  for (const line of lines) {
+    // New package block
+    if (line.trim() === '[[package]]') {
+      // Save previous package if exists
+      if (currentName && !seen.has(currentName)) {
+        seen.add(currentName);
+        deps.push({ name: currentName, version: currentVersion || undefined });
+      }
+      currentName = null;
+      currentVersion = null;
+      continue;
+    }
+    
+    // Match name = "..."
+    const nameMatch = line.match(/^name\s*=\s*"([^"]+)"/);
+    if (nameMatch) {
+      currentName = nameMatch[1];
+      continue;
+    }
+    
+    // Match version = "..."
+    const versionMatch = line.match(/^version\s*=\s*"([^"]+)"/);
+    if (versionMatch) {
+      currentVersion = versionMatch[1];
+      continue;
     }
   }
   
-  return [...new Set(packages)];
+  // Don't forget the last package
+  if (currentName && !seen.has(currentName)) {
+    deps.push({ name: currentName, version: currentVersion || undefined });
+  }
+  
+  return deps;
 }
 
 /**
  * Parse Pipfile.lock (JSON format)
  * Format: {"default": {...}, "develop": {...}}
+ * Returns package names with versions
  */
-function parsePipfileLock(content: string): string[] {
+function parsePipfileLock(content: string): PackageDependency[] {
   const lock = JSON.parse(content) as {
-    default?: Record<string, unknown>;
-    develop?: Record<string, unknown>;
+    default?: Record<string, { version?: string }>;
+    develop?: Record<string, { version?: string }>;
   };
   
-  const defaultPkgs = Object.keys(lock.default || {});
-  const devPkgs = Object.keys(lock.develop || {});
+  const deps: PackageDependency[] = [];
+  const seen = new Set<string>();
   
-  return [...new Set([...defaultPkgs, ...devPkgs])];
+  // Process both default and develop dependencies
+  for (const section of [lock.default, lock.develop]) {
+    if (!section) continue;
+    for (const [name, info] of Object.entries(section)) {
+      if (seen.has(name)) continue;
+      seen.add(name);
+      // Pipfile.lock stores version as "==1.0.0", strip the prefix
+      const version = info?.version?.replace(/^==/, '');
+      deps.push({ name, version });
+    }
+  }
+  
+  return deps;
 }
 
 /**
  * Parse Cargo.lock (TOML format)
- * Format: [[package]] sections with name = "package"
+ * Format: [[package]] sections with name = "package" and version = "..."
+ * Returns package names with versions
  */
-function parseCargoLock(content: string): string[] {
-  const packages: string[] = [];
+function parseCargoLock(content: string): PackageDependency[] {
+  const deps: PackageDependency[] = [];
+  const seen = new Set<string>();
   
-  // Match name = "package" within [[package]] sections
-  const namePattern = /^name\s*=\s*"([^"]+)"/gm;
-  let match;
+  // Split into [[package]] blocks and parse each
+  const lines = content.split('\n');
+  let currentName: string | null = null;
+  let currentVersion: string | null = null;
   
-  while ((match = namePattern.exec(content)) !== null) {
-    if (match[1]) {
-      packages.push(match[1]);
+  for (const line of lines) {
+    // New package block
+    if (line.trim() === '[[package]]') {
+      // Save previous package if exists
+      if (currentName && !seen.has(currentName)) {
+        seen.add(currentName);
+        deps.push({ name: currentName, version: currentVersion || undefined });
+      }
+      currentName = null;
+      currentVersion = null;
+      continue;
+    }
+    
+    // Match name = "..."
+    const nameMatch = line.match(/^name\s*=\s*"([^"]+)"/);
+    if (nameMatch) {
+      currentName = nameMatch[1];
+      continue;
+    }
+    
+    // Match version = "..."
+    const versionMatch = line.match(/^version\s*=\s*"([^"]+)"/);
+    if (versionMatch) {
+      currentVersion = versionMatch[1];
+      continue;
     }
   }
   
-  return [...new Set(packages)];
+  // Don't forget the last package
+  if (currentName && !seen.has(currentName)) {
+    deps.push({ name: currentName, version: currentVersion || undefined });
+  }
+  
+  return deps;
 }
 
 /**
  * Parse Gemfile.lock
  * Format: GEM section with specs, each gem indented with name (version)
+ * Returns package names with versions
  */
-function parseGemfileLock(content: string): string[] {
-  const packages: string[] = [];
+function parseGemfileLock(content: string): PackageDependency[] {
+  const deps: PackageDependency[] = [];
+  const seen = new Set<string>();
   const lines = content.split('\n');
   
   let inSpecs = false;
@@ -979,9 +1232,112 @@ function parseGemfileLock(content: string): string[] {
     if (inSpecs) {
       // Match gem entries: "    gem_name (version)"
       // Top-level gems have 4 spaces, dependencies have 6+
-      const gemMatch = line.match(/^    ([a-zA-Z0-9_-]+)\s+\(/);
-      if (gemMatch && gemMatch[1]) {
-        packages.push(gemMatch[1]);
+      const gemMatch = line.match(/^    ([a-zA-Z0-9_-]+)\s+\(([^)]+)\)/);
+      if (gemMatch && gemMatch[1] && !seen.has(gemMatch[1])) {
+        seen.add(gemMatch[1]);
+        deps.push({ name: gemMatch[1], version: gemMatch[2] });
+      }
+    }
+  }
+  
+  return deps;
+}
+
+/**
+ * Parse pyproject.toml with support for:
+ * - PEP 621: project.dependencies array
+ * - PEP 621: project.optional-dependencies.*
+ * - Poetry: tool.poetry.dependencies
+ * - Poetry: tool.poetry.dev-dependencies
+ * - Poetry: tool.poetry.group.*.dependencies
+ */
+function parsePyprojectToml(content: string): string[] {
+  const packages: string[] = [];
+  
+  // Helper to extract package name from PEP 508 requirement string
+  // Examples: "requests>=2.28.0", "flask[async]>=2.0", "django~=4.0"
+  const extractPkgName = (req: string): string | null => {
+    const match = req.match(/^([a-zA-Z0-9][a-zA-Z0-9._-]*)(?:\[.*?\])?/);
+    return match ? match[1] : null;
+  };
+  
+  // ========== PEP 621 format ==========
+  // [project]
+  // dependencies = ["requests>=2.28.0", "flask[async]>=2.0"]
+  
+  // Match project.dependencies array (multi-line)
+  // Use \n\s*\] to match closing bracket on its own line (avoids matching [extras] in deps)
+  const projectDepsRegex = /\[project\][\s\S]*?dependencies\s*=\s*\[([\s\S]*?)\n\s*\]/;
+  const projectDepsMatch = content.match(projectDepsRegex);
+  if (projectDepsMatch) {
+    const depsArray = projectDepsMatch[1];
+    // Extract quoted strings from array
+    const depStrings = depsArray.match(/"([^"]+)"/g) || [];
+    for (const quoted of depStrings) {
+      const dep = quoted.replace(/"/g, '');
+      const pkgName = extractPkgName(dep);
+      if (pkgName) packages.push(pkgName);
+    }
+  }
+  
+  // Match project.optional-dependencies.* arrays
+  const optionalDepsRegex = /\[project\.optional-dependencies\]([\s\S]*?)(?=\n\[|$)/;
+  const optionalMatch = content.match(optionalDepsRegex);
+  if (optionalMatch) {
+    const section = optionalMatch[1];
+    // Find all arrays in this section
+    const arrayRegex = /\w+\s*=\s*\[([\s\S]*?)\]/g;
+    let arrayMatch;
+    while ((arrayMatch = arrayRegex.exec(section)) !== null) {
+      const depStrings = arrayMatch[1].match(/"([^"]+)"/g) || [];
+      for (const quoted of depStrings) {
+        const dep = quoted.replace(/"/g, '');
+        const pkgName = extractPkgName(dep);
+        if (pkgName) packages.push(pkgName);
+      }
+    }
+  }
+  
+  // ========== Poetry format ==========
+  // [tool.poetry.dependencies]
+  // requests = "^2.28.0"
+  // flask = {version = "^2.0", extras = ["async"]}
+  
+  const poetrySections = [
+    /\[tool\.poetry\.dependencies\]([\s\S]*?)(?=\n\[|$)/,
+    /\[tool\.poetry\.dev-dependencies\]([\s\S]*?)(?=\n\[|$)/,
+  ];
+  
+  for (const regex of poetrySections) {
+    const match = content.match(regex);
+    if (match) {
+      const section = match[1];
+      const lines = section.split('\n');
+      for (const line of lines) {
+        const trimmed = line.trim();
+        // Skip comments
+        if (trimmed.startsWith('#')) continue;
+        // Match: package = "version" or package = { ... }
+        const pkgMatch = trimmed.match(/^([a-zA-Z0-9][a-zA-Z0-9._-]*)\s*=/);
+        if (pkgMatch && pkgMatch[1] !== 'python') {
+          packages.push(pkgMatch[1]);
+        }
+      }
+    }
+  }
+  
+  // Poetry group dependencies: [tool.poetry.group.dev.dependencies]
+  const groupRegex = /\[tool\.poetry\.group\.\w+\.dependencies\]([\s\S]*?)(?=\n\[|$)/g;
+  let groupMatch;
+  while ((groupMatch = groupRegex.exec(content)) !== null) {
+    const section = groupMatch[1];
+    const lines = section.split('\n');
+    for (const line of lines) {
+      const trimmed = line.trim();
+      if (trimmed.startsWith('#')) continue;
+      const pkgMatch = trimmed.match(/^([a-zA-Z0-9][a-zA-Z0-9._-]*)\s*=/);
+      if (pkgMatch && pkgMatch[1] !== 'python') {
+        packages.push(pkgMatch[1]);
       }
     }
   }
