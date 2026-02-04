@@ -23,12 +23,12 @@ RepVet helps you identify risky dependencies before they become a problem.
 | PyPI | Python | pypi.org | ✅ yanked | ✅ | ✅ OSV |
 | crates.io | Rust | crates.io | ✅ yanked | ✅ | ✅ OSV |
 | RubyGems | Ruby | rubygems.org | ✅ yanked | ✅ | ✅ OSV |
-| Go | Go | proxy.golang.org | ✅ deprecated/retract | ❌ | ✅ OSV |
+| Go | Go | proxy.golang.org | ✅ deprecated/retract | ✅ | ✅ OSV |
 | Packagist | PHP | packagist.org | ✅ abandoned | ✅ | ✅ OSV |
 | NuGet | .NET | nuget.org | ✅ | ✅ | ✅ OSV |
-| Maven | Java/Kotlin | maven.org | ❌ | ❌ | ✅ OSV |
-| Hex | Elixir/Erlang | hex.pm | ✅ retired | ❌ | ✅ OSV |
-| pub.dev | Dart/Flutter | pub.dev | ✅ discontinued | ❌ | ✅ OSV |
+| Maven | Java/Kotlin | maven.org | ✅ relocation | ❌ | ✅ OSV |
+| Hex | Elixir/Erlang | hex.pm | ✅ retired | ✅ | ✅ OSV |
+| pub.dev | Dart/Flutter | pub.dev | ✅ discontinued | ✅ | ✅ OSV |
 | CPAN | Perl | metacpan.org | ✅ | ✅ | ✅ OSV |
 | CocoaPods | Swift/ObjC | cocoapods.org | ✅ | ✅ | ✅ OSV |
 | Conda | Python/R/Data Science | anaconda.org | ❌ | ✅ | ❌ * |
