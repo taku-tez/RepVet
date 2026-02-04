@@ -1,0 +1,373 @@
+/**
+ * Lock file parsing tests
+ */
+
+import { describe, it, expect } from '@jest/globals';
+import * as fs from 'fs';
+import * as path from 'path';
+import { fileURLToPath } from 'url';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const fixturesDir = path.join(__dirname, '../fixtures/lockfiles');
+
+// Import parsing functions (duplicated from cli.ts since they're not exported)
+
+function parsePackageLock(content: string): string[] {
+  const lock = JSON.parse(content) as {
+    packages?: Record<string, unknown>;
+    dependencies?: Record<string, unknown>;
+  };
+  
+  const packagesObj = lock.packages || lock.dependencies || {};
+  
+  const packages = Object.keys(packagesObj)
+    .filter(p => {
+      if (!p) return false;
+      if (p.startsWith('node_modules/') && p.includes('node_modules/node_modules/')) return false;
+      return true;
+    })
+    .map(p => p.replace(/^node_modules\//, ''))
+    .filter(p => p.length > 0);
+  
+  return [...new Set(packages)];
+}
+
+function parseYarnLock(content: string): string[] {
+  const packages: string[] = [];
+  const lines = content.split('\n');
+  
+  for (const line of lines) {
+    if (line.startsWith('#') || line.startsWith(' ') || line.startsWith('\t')) {
+      continue;
+    }
+    
+    const match = line.match(/^"?([^@\s"]+)@/);
+    if (match && match[1]) {
+      if (!match[1].startsWith('__')) {
+        packages.push(match[1]);
+      }
+    }
+  }
+  
+  return [...new Set(packages)];
+}
+
+function parsePnpmLock(content: string): string[] {
+  const packages: string[] = [];
+  const lines = content.split('\n');
+  let inPackages = false;
+  let inDependencies = false;
+  
+  for (const line of lines) {
+    const trimmed = line.trim();
+    
+    if (trimmed === 'packages:') {
+      inPackages = true;
+      inDependencies = false;
+      continue;
+    }
+    if (trimmed === 'dependencies:' || trimmed === 'devDependencies:' || trimmed === 'optionalDependencies:') {
+      inDependencies = true;
+      inPackages = false;
+      continue;
+    }
+    if (/^[a-z]+:$/.test(trimmed) && !trimmed.startsWith('/')) {
+      inPackages = false;
+      inDependencies = false;
+      continue;
+    }
+    
+    if (inPackages) {
+      const pkgMatch = trimmed.match(/^\/?(@?[^@(]+)[@(]/);
+      if (pkgMatch && pkgMatch[1]) {
+        const pkg = pkgMatch[1].replace(/^\//, '');
+        if (pkg && !pkg.startsWith('/')) {
+          packages.push(pkg);
+        }
+      }
+    }
+    
+    if (inDependencies) {
+      const depMatch = trimmed.match(/^['"]?(@?[^'":\s]+)['"]?:/);
+      if (depMatch && depMatch[1]) {
+        packages.push(depMatch[1]);
+      }
+    }
+  }
+  
+  return [...new Set(packages)];
+}
+
+function parsePoetryLock(content: string): string[] {
+  const packages: string[] = [];
+  const namePattern = /^name\s*=\s*"([^"]+)"/gm;
+  let match;
+  
+  while ((match = namePattern.exec(content)) !== null) {
+    if (match[1]) {
+      packages.push(match[1]);
+    }
+  }
+  
+  return [...new Set(packages)];
+}
+
+function parsePipfileLock(content: string): string[] {
+  const lock = JSON.parse(content) as {
+    default?: Record<string, unknown>;
+    develop?: Record<string, unknown>;
+  };
+  
+  const defaultPkgs = Object.keys(lock.default || {});
+  const devPkgs = Object.keys(lock.develop || {});
+  
+  return [...new Set([...defaultPkgs, ...devPkgs])];
+}
+
+function parseCargoLock(content: string): string[] {
+  const packages: string[] = [];
+  const namePattern = /^name\s*=\s*"([^"]+)"/gm;
+  let match;
+  
+  while ((match = namePattern.exec(content)) !== null) {
+    if (match[1]) {
+      packages.push(match[1]);
+    }
+  }
+  
+  return [...new Set(packages)];
+}
+
+function parseGemfileLock(content: string): string[] {
+  const packages: string[] = [];
+  const lines = content.split('\n');
+  let inSpecs = false;
+  
+  for (const line of lines) {
+    if (line === '  specs:') {
+      inSpecs = true;
+      continue;
+    }
+    
+    if (inSpecs && line.match(/^[A-Z]/)) {
+      inSpecs = false;
+      continue;
+    }
+    
+    if (inSpecs) {
+      const gemMatch = line.match(/^    ([a-zA-Z0-9_-]+)\s+\(/);
+      if (gemMatch && gemMatch[1]) {
+        packages.push(gemMatch[1]);
+      }
+    }
+  }
+  
+  return [...new Set(packages)];
+}
+
+describe('Lock File Parsing', () => {
+
+  describe('package-lock.json parsing', () => {
+    it('should parse lockfileVersion 3 format', () => {
+      const content = fs.readFileSync(path.join(fixturesDir, 'package-lock.json'), 'utf-8');
+      const packages = parsePackageLock(content);
+      
+      expect(packages).toContain('chalk');
+      expect(packages).toContain('commander');
+      expect(packages).toContain('@types/node');
+    });
+
+    it('should skip root package entry', () => {
+      const content = JSON.stringify({
+        name: 'test',
+        lockfileVersion: 3,
+        packages: {
+          '': { name: 'test' },
+          'node_modules/lodash': { version: '4.17.21' }
+        }
+      });
+      const packages = parsePackageLock(content);
+      expect(packages).toEqual(['lodash']);
+    });
+
+    it('should handle lockfileVersion 1 format', () => {
+      const content = JSON.stringify({
+        name: 'test',
+        lockfileVersion: 1,
+        dependencies: {
+          'lodash': { version: '4.17.21' },
+          'chalk': { version: '5.0.0' }
+        }
+      });
+      const packages = parsePackageLock(content);
+      expect(packages).toContain('lodash');
+      expect(packages).toContain('chalk');
+    });
+  });
+
+  describe('yarn.lock parsing', () => {
+    it('should parse yarn v1 format', () => {
+      const content = fs.readFileSync(path.join(fixturesDir, 'yarn.lock'), 'utf-8');
+      const packages = parseYarnLock(content);
+      
+      expect(packages).toContain('chalk');
+      expect(packages).toContain('commander');
+      expect(packages).toContain('@types/node');
+      expect(packages).toContain('lodash');
+    });
+
+    it('should skip comments', () => {
+      const content = `# yarn lockfile v1
+
+chalk@^5.0.0:
+  version "5.3.0"
+`;
+      const packages = parseYarnLock(content);
+      expect(packages).toEqual(['chalk']);
+    });
+
+    it('should handle multiple version ranges for same package', () => {
+      const content = `
+lodash@^4.0.0, lodash@^4.17.0:
+  version "4.17.21"
+
+lodash@^3.0.0:
+  version "3.10.1"
+`;
+      const packages = parseYarnLock(content);
+      expect(packages).toEqual(['lodash']);
+    });
+  });
+
+  describe('pnpm-lock.yaml parsing', () => {
+    it('should parse pnpm lockfile format', () => {
+      const content = fs.readFileSync(path.join(fixturesDir, 'pnpm-lock.yaml'), 'utf-8');
+      const packages = parsePnpmLock(content);
+      
+      expect(packages).toContain('chalk');
+      expect(packages).toContain('commander');
+      expect(packages).toContain('@types/node');
+      expect(packages).toContain('typescript');
+    });
+
+    it('should handle dependencies section', () => {
+      const content = `
+lockfileVersion: '6.0'
+
+dependencies:
+  express:
+    specifier: ^4.18.0
+    version: 4.18.2
+`;
+      const packages = parsePnpmLock(content);
+      expect(packages).toContain('express');
+    });
+  });
+
+  describe('poetry.lock parsing', () => {
+    it('should parse poetry lockfile', () => {
+      const content = fs.readFileSync(path.join(fixturesDir, 'poetry.lock'), 'utf-8');
+      const packages = parsePoetryLock(content);
+      
+      expect(packages).toContain('requests');
+      expect(packages).toContain('urllib3');
+      expect(packages).toContain('certifi');
+    });
+
+    it('should handle TOML format', () => {
+      const content = `
+[[package]]
+name = "django"
+version = "4.2.0"
+
+[[package]]
+name = "gunicorn"
+version = "21.0.0"
+`;
+      const packages = parsePoetryLock(content);
+      expect(packages).toContain('django');
+      expect(packages).toContain('gunicorn');
+    });
+  });
+
+  describe('Pipfile.lock parsing', () => {
+    it('should parse Pipfile.lock', () => {
+      const content = fs.readFileSync(path.join(fixturesDir, 'Pipfile.lock'), 'utf-8');
+      const packages = parsePipfileLock(content);
+      
+      expect(packages).toContain('requests');
+      expect(packages).toContain('urllib3');
+      expect(packages).toContain('pytest');
+      expect(packages).toContain('black');
+    });
+
+    it('should handle default and develop sections', () => {
+      const content = JSON.stringify({
+        default: { 'flask': {} },
+        develop: { 'pytest': {} }
+      });
+      const packages = parsePipfileLock(content);
+      expect(packages).toContain('flask');
+      expect(packages).toContain('pytest');
+    });
+  });
+
+  describe('Cargo.lock parsing', () => {
+    it('should parse Cargo.lock', () => {
+      const content = fs.readFileSync(path.join(fixturesDir, 'Cargo.lock'), 'utf-8');
+      const packages = parseCargoLock(content);
+      
+      expect(packages).toContain('serde');
+      expect(packages).toContain('serde_derive');
+      expect(packages).toContain('tokio');
+    });
+
+    it('should handle TOML package sections', () => {
+      const content = `
+[[package]]
+name = "rand"
+version = "0.8.5"
+
+[[package]]
+name = "rand_core"
+version = "0.6.4"
+`;
+      const packages = parseCargoLock(content);
+      expect(packages).toContain('rand');
+      expect(packages).toContain('rand_core');
+    });
+  });
+
+  describe('Gemfile.lock parsing', () => {
+    it('should parse Gemfile.lock', () => {
+      const content = fs.readFileSync(path.join(fixturesDir, 'Gemfile.lock'), 'utf-8');
+      const packages = parseGemfileLock(content);
+      
+      expect(packages).toContain('rails');
+      expect(packages).toContain('actioncable');
+      expect(packages).toContain('actionpack');
+      expect(packages).toContain('rack');
+      expect(packages).toContain('puma');
+      expect(packages).toContain('nio4r');
+    });
+
+    it('should only parse top-level gems (4 spaces indent)', () => {
+      const content = `
+GEM
+  remote: https://rubygems.org/
+  specs:
+    main-gem (1.0.0)
+      dependency-gem (~> 2.0)
+    other-gem (2.0.0)
+
+PLATFORMS
+  ruby
+`;
+      const packages = parseGemfileLock(content);
+      expect(packages).toContain('main-gem');
+      expect(packages).toContain('other-gem');
+      expect(packages).not.toContain('dependency-gem');
+    });
+  });
+
+});

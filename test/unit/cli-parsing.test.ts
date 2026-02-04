@@ -14,6 +14,54 @@ const require = createRequire(import.meta.url);
 
 describe('Dependency File Parsing', () => {
 
+  describe('package.json parsing', () => {
+    it('should parse all dependency types', () => {
+      const content = JSON.stringify({
+        dependencies: { 'lodash': '^4.17.21' },
+        devDependencies: { 'jest': '^29.0.0' },
+        optionalDependencies: { 'fsevents': '^2.3.0' },
+        peerDependencies: { 'react': '>=18.0.0' },
+        bundledDependencies: ['internal-pkg'],
+      });
+      const packages = parsePackageJson(content);
+      expect(packages).toContain('lodash');
+      expect(packages).toContain('jest');
+      expect(packages).toContain('fsevents');
+      expect(packages).toContain('react');
+      expect(packages).toContain('internal-pkg');
+    });
+
+    it('should handle bundledDependencies as object', () => {
+      const content = JSON.stringify({
+        dependencies: { 'express': '^4.18.0' },
+        bundledDependencies: { 'bundled-a': '1.0.0', 'bundled-b': '2.0.0' },
+      });
+      const packages = parsePackageJson(content);
+      expect(packages).toContain('express');
+      expect(packages).toContain('bundled-a');
+      expect(packages).toContain('bundled-b');
+    });
+
+    it('should handle missing dependency fields', () => {
+      const content = JSON.stringify({
+        name: 'test-package',
+        version: '1.0.0',
+        dependencies: { 'chalk': '^5.0.0' },
+      });
+      const packages = parsePackageJson(content);
+      expect(packages).toEqual(['chalk']);
+    });
+
+    it('should deduplicate packages across dependency types', () => {
+      const content = JSON.stringify({
+        dependencies: { 'shared-pkg': '^1.0.0' },
+        peerDependencies: { 'shared-pkg': '^1.0.0' },
+      });
+      const packages = parsePackageJson(content);
+      expect(packages.filter(p => p === 'shared-pkg')).toHaveLength(1);
+    });
+  });
+
   describe('requirements.txt parsing', () => {
     it('should parse standard package specifications', () => {
       const content = `
@@ -455,6 +503,31 @@ function parseGoMod(content: string): string[] {
   }
   
   return packages.filter(pkg => !excludedModules.has(pkg));
+}
+
+function parsePackageJson(content: string): string[] {
+  const pkg = JSON.parse(content) as { 
+    dependencies?: Record<string, string>; 
+    devDependencies?: Record<string, string>;
+    optionalDependencies?: Record<string, string>;
+    peerDependencies?: Record<string, string>;
+    bundledDependencies?: string[] | Record<string, string>;
+  };
+  
+  // Handle bundledDependencies which can be an array or object
+  const bundled = Array.isArray(pkg.bundledDependencies)
+    ? pkg.bundledDependencies
+    : Object.keys(pkg.bundledDependencies || {});
+  
+  const allDeps = {
+    ...pkg.dependencies,
+    ...pkg.devDependencies,
+    ...pkg.optionalDependencies,
+    ...pkg.peerDependencies,
+  };
+  
+  // Merge object keys with bundled array
+  return [...new Set([...Object.keys(allDeps), ...bundled])];
 }
 
 function parseBuildGradle(content: string): string[] {

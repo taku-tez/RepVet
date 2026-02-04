@@ -1,0 +1,26 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    rails (7.1.2)
+      actioncable (= 7.1.2)
+      actionmailbox (= 7.1.2)
+      actionmailer (= 7.1.2)
+    actioncable (7.1.2)
+      actionpack (= 7.1.2)
+    actionpack (7.1.2)
+      rack (>= 2.2.4)
+    rack (3.0.8)
+    puma (6.4.0)
+      nio4r (~> 2.0)
+    nio4r (2.5.9)
+
+PLATFORMS
+  ruby
+  x86_64-linux
+
+DEPENDENCIES
+  rails (~> 7.1)
+  puma (~> 6.0)
+
+BUNDLED WITH
+   2.4.22
