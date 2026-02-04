@@ -42,7 +42,8 @@ export async function fetchMavenPackageInfo(coordinate: string): Promise<MavenPa
   try {
     const parsed = parseCoordinate(coordinate);
     if (!parsed) {
-      throw new Error(`Invalid Maven coordinate: ${coordinate}. Use format: groupId:artifactId`);
+      // Return null for invalid coordinates instead of throwing
+      return null;
     }
     
     const { groupId, artifactId } = parsed;
@@ -150,7 +151,10 @@ export async function fetchMavenPackageInfo(coordinate: string): Promise<MavenPa
  * Check for relocation in a Maven artifact
  * 
  * Maven uses <relocation> element in POM to indicate artifact has moved
- * to a new groupId/artifactId
+ * to a new groupId/artifactId.
+ * 
+ * Checks all versions since relocation POMs are often published as a
+ * separate version after the last "real" version.
  */
 export async function checkMavenRelocation(coordinate: string): Promise<MavenRelocationResult> {
   try {
@@ -162,7 +166,7 @@ export async function checkMavenRelocation(coordinate: string): Promise<MavenRel
     const { groupId, artifactId } = parsed;
     const groupPath = groupId.replace(/\./g, '/');
     
-    // Fetch maven-metadata.xml to get latest version
+    // Fetch maven-metadata.xml to get all versions
     const metadataUrl = `${MAVEN_REPO}/${groupPath}/${artifactId}/maven-metadata.xml`;
     const metaResponse = await fetchWithRetry(metadataUrl, { timeoutMs: 10000 });
     
@@ -171,43 +175,57 @@ export async function checkMavenRelocation(coordinate: string): Promise<MavenRel
     }
     
     const xml = await metaResponse.text();
-    const releaseMatch = xml.match(/<release>([^<]+)<\/release>/);
-    const latestMatch = xml.match(/<latest>([^<]+)<\/latest>/);
-    const latestVersion = releaseMatch?.[1] || latestMatch?.[1];
     
-    if (!latestVersion) {
+    // Get all versions
+    const versionsMatch = xml.matchAll(/<version>([^<]+)<\/version>/g);
+    const versions = Array.from(versionsMatch).map(m => m[1]);
+    
+    if (versions.length === 0) {
       return { relocated: false };
     }
     
-    // Fetch POM for latest version
-    const pomUrl = `${MAVEN_REPO}/${groupPath}/${artifactId}/${latestVersion}/${artifactId}-${latestVersion}.pom`;
-    const pomResponse = await fetchWithRetry(pomUrl, { timeoutMs: 10000 });
+    // Check the last few versions for relocation (relocation POMs are usually at the end)
+    // Also check known relocation versions if present
+    const versionsToCheck = new Set<string>();
     
-    if (!pomResponse.ok) {
-      return { relocated: false };
+    // Add last 3 versions
+    for (let i = versions.length - 1; i >= Math.max(0, versions.length - 3); i--) {
+      versionsToCheck.add(versions[i]);
     }
     
-    const pom = await pomResponse.text();
-    
-    // Check for relocation element
-    const relocationMatch = pom.match(/<relocation>([\s\S]*?)<\/relocation>/);
-    if (!relocationMatch) {
-      return { relocated: false };
+    // Check each version for relocation
+    for (const version of versionsToCheck) {
+      try {
+        const pomUrl = `${MAVEN_REPO}/${groupPath}/${artifactId}/${version}/${artifactId}-${version}.pom`;
+        const pomResponse = await fetchWithRetry(pomUrl, { timeoutMs: 5000 });
+        
+        if (!pomResponse.ok) continue;
+        
+        const pom = await pomResponse.text();
+        
+        // Check for relocation element
+        const relocationMatch = pom.match(/<relocation>([\s\S]*?)<\/relocation>/);
+        if (relocationMatch) {
+          const relocation = relocationMatch[1];
+          const newGroupId = relocation.match(/<groupId>([^<]+)<\/groupId>/)?.[1];
+          const newArtifactId = relocation.match(/<artifactId>([^<]+)<\/artifactId>/)?.[1];
+          const newVersion = relocation.match(/<version>([^<]+)<\/version>/)?.[1];
+          const message = relocation.match(/<message>([^<]+)<\/message>/)?.[1];
+          
+          return {
+            relocated: true,
+            newGroupId,
+            newArtifactId,
+            newVersion,
+            message,
+          };
+        }
+      } catch {
+        // Continue to next version
+      }
     }
     
-    const relocation = relocationMatch[1];
-    const newGroupId = relocation.match(/<groupId>([^<]+)<\/groupId>/)?.[1];
-    const newArtifactId = relocation.match(/<artifactId>([^<]+)<\/artifactId>/)?.[1];
-    const newVersion = relocation.match(/<version>([^<]+)<\/version>/)?.[1];
-    const message = relocation.match(/<message>([^<]+)<\/message>/)?.[1];
-    
-    return {
-      relocated: true,
-      newGroupId,
-      newArtifactId,
-      newVersion,
-      message,
-    };
+    return { relocated: false };
   } catch {
     return { relocated: false };
   }

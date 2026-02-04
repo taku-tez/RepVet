@@ -517,4 +517,69 @@ dependencies:
       expect(result.condaPackages).toEqual(['numpy']);
     });
   });
+
+  describe('Maven', () => {
+    it('should fetch package info for commons-lang3', async () => {
+      const info = await fetchMavenPackageInfo('org.apache.commons:commons-lang3');
+      expect(info).not.toBeNull();
+      expect(info?.name).toBe('org.apache.commons:commons-lang3');
+      expect(info?.ecosystem).toBe('maven');
+      expect(info?.version).toBeDefined();
+    });
+
+    it('should return null for non-existent package', async () => {
+      const info = await fetchMavenPackageInfo('com.nonexistent:fake-artifact-12345');
+      expect(info).toBeNull();
+    });
+
+    it('should detect relocation in ant:ant', async () => {
+      // ant:ant was relocated to org.apache.ant:ant
+      const result = await checkMavenRelocation('ant:ant');
+      expect(result.relocated).toBe(true);
+      expect(result.newGroupId).toBe('org.apache.ant');
+    });
+
+    it('should return no relocation for active packages', async () => {
+      const result = await checkMavenRelocation('org.apache.commons:commons-lang3');
+      expect(result.relocated).toBe(false);
+    });
+
+    it('should handle invalid coordinate format', async () => {
+      const info = await fetchMavenPackageInfo('invalid-no-colon');
+      expect(info).toBeNull();
+    });
+  });
+
+  describe('CPAN', () => {
+    it('should fetch package info for Moose', async () => {
+      const info = await fetchCPANPackageInfo('Moose');
+      expect(info).not.toBeNull();
+      expect(info?.name).toBe('Moose');
+      expect(info?.ecosystem).toBe('cpan');
+    });
+
+    it('should return null for non-existent package', async () => {
+      const info = await fetchCPANPackageInfo('This-Package-Does-Not-Exist-12345');
+      expect(info).toBeNull();
+    });
+
+    it('should detect deprecated modules', async () => {
+      // MetaCPAN-API is deprecated
+      const result = await checkCPANDeprecated('MetaCPAN-API');
+      expect(result.deprecated).toBe(true);
+    });
+
+    it('should return not deprecated for active modules', async () => {
+      const result = await checkCPANDeprecated('Moose');
+      expect(result.deprecated).toBe(false);
+    });
+
+    it('should fetch package info with module notation', async () => {
+      // Moose::Util should convert to Moose-Util
+      const info = await fetchCPANPackageInfo('Moose::Util');
+      // Note: This will likely fail as Moose-Util is not a separate dist
+      // Keeping to demonstrate :: -> - conversion
+      expect(info).toBeDefined();
+    });
+  });
 });

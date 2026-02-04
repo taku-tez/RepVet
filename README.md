@@ -1,6 +1,6 @@
 # RepVet 🔍
 
-Maintainer reputation checker for **12 package ecosystems**. Part of the **xxVet** security CLI series.
+Maintainer reputation checker for **13 package ecosystems**. Part of the **xxVet** security CLI series.
 
 [![npm version](https://img.shields.io/npm/v/repvet.svg)](https://www.npmjs.com/package/repvet)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -22,8 +22,8 @@ RepVet helps you identify risky dependencies before they become a problem.
 | npm | JavaScript/TypeScript | npmjs.com | ✅ | ✅ | ✅ OSV |
 | PyPI | Python | pypi.org | ✅ yanked | ✅ | ✅ OSV |
 | crates.io | Rust | crates.io | ✅ yanked | ✅ | ✅ OSV |
-| RubyGems | Ruby | rubygems.org | ✅ yanked | ❌ | ✅ OSV |
-| Go | Go | proxy.golang.org | ✅ retracted | ❌ | ✅ OSV |
+| RubyGems | Ruby | rubygems.org | ✅ yanked | ✅ | ✅ OSV |
+| Go | Go | proxy.golang.org | ✅ deprecated/retract | ❌ | ✅ OSV |
 | Packagist | PHP | packagist.org | ✅ abandoned | ✅ | ✅ OSV |
 | NuGet | .NET | nuget.org | ✅ | ✅ | ✅ OSV |
 | Maven | Java/Kotlin | maven.org | ❌ | ❌ | ✅ OSV |
@@ -31,6 +31,7 @@ RepVet helps you identify risky dependencies before they become a problem.
 | pub.dev | Dart/Flutter | pub.dev | ✅ discontinued | ❌ | ✅ OSV |
 | CPAN | Perl | metacpan.org | ❌ | ❌ | ✅ OSV |
 | CocoaPods | Swift/ObjC | cocoapods.org | ✅ | ❌ | ✅ OSV |
+| Conda | Python/R/Data Science | anaconda.org | ❌ | ❌ | ❌ |
 
 ## Installation
 
@@ -87,6 +88,9 @@ repvet check Moose -e cpan
 
 # Swift/Objective-C
 repvet check Alamofire -e cocoapods
+
+# Conda (Python/R data science)
+repvet check numpy -e conda
 ```
 
 ### Scan dependency files
@@ -130,6 +134,9 @@ repvet scan ./cpanfile
 
 # Swift/Objective-C
 repvet scan ./Podfile
+
+# Conda
+repvet scan ./environment.yml
 
 # Filter by threshold
 repvet scan ./package.json --threshold 80
