@@ -3,6 +3,8 @@
  */
 
 import { describe, it, expect } from '@jest/globals';
+import { createRequire } from 'module';
+const require = createRequire(import.meta.url);
 
 // We need to test the parsing functions directly
 // They are not exported, so we'll use a workaround by importing the module
@@ -59,13 +61,53 @@ git+ssh://git@github.com/user/repo.git#egg=another-pkg
       expect(packages).toContain('localpackage');
     });
 
-    it('should skip -r and -c directives', () => {
+    it('should skip -r and -c directives when no file path provided', () => {
       const content = `
 -r base.txt
 -c constraints.txt
 requests==2.28.0
       `;
+      // Without file path, -r/-c are skipped
       const packages = parseRequirementsTxt(content);
+      expect(packages).toEqual(['requests']);
+    });
+
+    it('should follow -r includes when file path is provided', async () => {
+      // This test uses the fixtures directory
+      const fs = await import('fs');
+      const path = await import('path');
+      const { fileURLToPath } = await import('url');
+      const __dirname = path.dirname(fileURLToPath(import.meta.url));
+      const fixturesDir = path.join(__dirname, '../fixtures/requirements');
+      const mainFile = path.join(fixturesDir, 'requirements.txt');
+      
+      if (fs.existsSync(mainFile)) {
+        const content = fs.readFileSync(mainFile, 'utf-8');
+        const packages = parseRequirementsTxt(content, mainFile);
+        
+        // Should include packages from main file
+        expect(packages).toContain('requests');
+        expect(packages).toContain('flask');
+        
+        // Should include packages from -r requirements-dev.txt
+        expect(packages).toContain('pytest');
+        expect(packages).toContain('black');
+        expect(packages).toContain('mypy');
+        
+        // Should include packages from -c constraints.txt
+        expect(packages).toContain('urllib3');
+        expect(packages).toContain('setuptools');
+      }
+    });
+
+    it('should handle circular includes safely', () => {
+      // Create a Set to simulate visited paths
+      const visitedPaths = new Set<string>();
+      visitedPaths.add('/fake/path/requirements.txt');
+      
+      const content = `-r requirements.txt\nrequests==2.28.0`;
+      // Should not infinite loop, should just return packages without following circular ref
+      const packages = parseRequirementsTxt(content, '/fake/path/requirements.txt', visitedPaths);
       expect(packages).toEqual(['requests']);
     });
 
@@ -249,9 +291,15 @@ dependencies {
 // Helper functions extracted from cli.ts for testing
 // In production, these would be exported or tested through integration tests
 
-function parseRequirementsTxt(content: string): string[] {
+function parseRequirementsTxt(content: string, filePath?: string, visitedPaths?: Set<string>): string[] {
   const packages: string[] = [];
   const lines = content.split('\n');
+  
+  // Track visited files to prevent circular includes
+  const visited = visitedPaths ?? new Set<string>();
+  if (filePath) {
+    visited.add(filePath);
+  }
   
   for (const line of lines) {
     const trimmed = line.trim();
@@ -260,7 +308,29 @@ function parseRequirementsTxt(content: string): string[] {
       continue;
     }
     
+    // Handle recursive includes (-r) and constraint files (-c)
     if (trimmed.startsWith('-r ') || trimmed.startsWith('-c ')) {
+      const includedFile = trimmed.replace(/^-[rc]\s+/, '').trim();
+      
+      if (filePath && includedFile) {
+        try {
+          const fs = require('fs');
+          const path = require('path');
+          
+          const baseDir = path.dirname(filePath);
+          const includedPath = path.resolve(baseDir, includedFile);
+          
+          if (!visited.has(includedPath)) {
+            if (fs.existsSync(includedPath)) {
+              const includedContent = fs.readFileSync(includedPath, 'utf-8');
+              const includedPackages = parseRequirementsTxt(includedContent, includedPath, visited);
+              packages.push(...includedPackages);
+            }
+          }
+        } catch {
+          // Silently skip if file cannot be read
+        }
+      }
       continue;
     }
     

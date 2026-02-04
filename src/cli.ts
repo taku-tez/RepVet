@@ -69,6 +69,9 @@ program
       const content = fs.readFileSync(filePath, 'utf-8');
       const fileName = path.basename(filePath);
       
+      // Set file path for recursive includes in requirements.txt
+      (globalThis as unknown as { __repvetFilePath?: string }).__repvetFilePath = filePath;
+      
       const { packages, ecosystem } = parseDepFile(fileName, content);
       
       if (packages.length === 0) {
@@ -187,7 +190,9 @@ function parseDepFile(fileName: string, content: string): { packages: string[]; 
   }
   
   if (fileName === 'requirements.txt' || fileName.endsWith('.txt')) {
-    const packages = parseRequirementsTxt(content);
+    // For recursive includes, we need the file path
+    // If called from scan command, filePath is available
+    const packages = parseRequirementsTxt(content, (globalThis as unknown as { __repvetFilePath?: string }).__repvetFilePath);
     return { packages, ecosystem: 'pypi' };
   }
   
@@ -383,14 +388,21 @@ function printResult(result: ReputationResult): void {
 
 /**
  * Parse requirements.txt with support for:
- * - -r (recursive includes) - noted but not followed
+ * - -r (recursive includes) - follows and parses included files
+ * - -c (constraint files) - follows and parses constraint files  
  * - VCS URLs (git+https://..., etc.)
  * - Comments and blank lines
  * - Editable installs (-e)
  */
-function parseRequirementsTxt(content: string): string[] {
+function parseRequirementsTxt(content: string, filePath?: string, visitedPaths?: Set<string>): string[] {
   const packages: string[] = [];
   const lines = content.split('\n');
+  
+  // Track visited files to prevent circular includes
+  const visited = visitedPaths ?? new Set<string>();
+  if (filePath) {
+    visited.add(filePath);
+  }
   
   for (const line of lines) {
     const trimmed = line.trim();
@@ -400,9 +412,32 @@ function parseRequirementsTxt(content: string): string[] {
       continue;
     }
     
-    // Skip recursive includes (-r) and constraint files (-c)
-    // In a full implementation, these would be followed
+    // Handle recursive includes (-r) and constraint files (-c)
     if (trimmed.startsWith('-r ') || trimmed.startsWith('-c ')) {
+      const includedFile = trimmed.replace(/^-[rc]\s+/, '').trim();
+      
+      if (filePath && includedFile) {
+        try {
+          // Import fs and path synchronously for recursive parsing
+          const fsModule = require('fs');
+          const pathModule = require('path');
+          
+          // Resolve relative path based on current file's directory
+          const baseDir = pathModule.dirname(filePath);
+          const includedPath = pathModule.resolve(baseDir, includedFile);
+          
+          // Skip if already visited (prevent circular includes)
+          if (!visited.has(includedPath)) {
+            if (fsModule.existsSync(includedPath)) {
+              const includedContent = fsModule.readFileSync(includedPath, 'utf-8');
+              const includedPackages = parseRequirementsTxt(includedContent, includedPath, visited);
+              packages.push(...includedPackages);
+            }
+          }
+        } catch {
+          // Silently skip if file cannot be read
+        }
+      }
       continue;
     }
     

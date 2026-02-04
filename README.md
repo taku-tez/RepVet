@@ -31,7 +31,9 @@ RepVet helps you identify risky dependencies before they become a problem.
 | pub.dev | Dart/Flutter | pub.dev | ✅ discontinued | ❌ | ✅ OSV |
 | CPAN | Perl | metacpan.org | ✅ | ✅ | ✅ OSV |
 | CocoaPods | Swift/ObjC | cocoapods.org | ✅ | ✅ | ✅ OSV |
-| Conda | Python/R/Data Science | anaconda.org | ❌ | ✅ | ❌ |
+| Conda | Python/R/Data Science | anaconda.org | ❌ | ✅ | ❌ * |
+
+\* **Conda vulnerability limitation**: No free, OSS vulnerability database exists for Conda packages. Anaconda's CVE curation is a commercial feature. For Python packages distributed via Conda, consider also scanning the corresponding `requirements.txt` with PyPI ecosystem for vulnerability coverage.
 
 ## Installation
 
