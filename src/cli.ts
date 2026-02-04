@@ -14,14 +14,14 @@ const program = new Command();
 
 program
   .name('repvet')
-  .description('Check package maintainer reputation (npm, PyPI, crates.io, RubyGems, Go)')
+  .description('Check package maintainer reputation (npm, PyPI, crates.io, RubyGems, Go, Packagist, NuGet)')
   .version('0.2.0');
 
 program
   .command('check <package>')
   .description('Check reputation of a single package')
   .option('--json', 'Output as JSON')
-  .option('-e, --ecosystem <ecosystem>', 'Package ecosystem (npm, pypi, crates, rubygems, go)', 'npm')
+  .option('-e, --ecosystem <ecosystem>', 'Package ecosystem (npm, pypi, crates, rubygems, go, packagist, nuget)', 'npm')
   .action(async (packageName: string, options: { json?: boolean; ecosystem?: string }) => {
     try {
       const ecosystem = validateEcosystem(options.ecosystem || 'npm');
@@ -122,7 +122,7 @@ program
   });
 
 function validateEcosystem(eco: string): Ecosystem {
-  const valid = ['npm', 'pypi', 'crates', 'rubygems', 'go'];
+  const valid = ['npm', 'pypi', 'crates', 'rubygems', 'go', 'packagist', 'nuget'];
   if (!valid.includes(eco.toLowerCase())) {
     throw new Error(`Invalid ecosystem: ${eco}. Use: ${valid.join(', ')}`);
   }
@@ -213,6 +213,30 @@ function parseDepFile(fileName: string, content: string): { packages: string[]; 
       }
     }
     return { packages, ecosystem: 'go' };
+  }
+  
+  if (fileName === 'composer.json') {
+    // Parse PHP Composer dependencies
+    const pkg = JSON.parse(content) as { 
+      require?: Record<string, string>; 
+      'require-dev'?: Record<string, string> 
+    };
+    const packages = Object.keys({ 
+      ...pkg.require, 
+      ...pkg['require-dev'] 
+    }).filter(p => !p.startsWith('php') && !p.startsWith('ext-'));
+    return { packages, ecosystem: 'packagist' };
+  }
+  
+  if (fileName.endsWith('.csproj') || fileName.endsWith('.fsproj')) {
+    // Parse .NET project file
+    const packages: string[] = [];
+    const packageRefPattern = /<PackageReference\s+Include="([^"]+)"/g;
+    let match;
+    while ((match = packageRefPattern.exec(content)) !== null) {
+      packages.push(match[1]);
+    }
+    return { packages, ecosystem: 'nuget' };
   }
   
   throw new Error(`Unsupported file format: ${fileName}`);

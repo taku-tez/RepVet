@@ -14,6 +14,8 @@ import { fetchPyPIPackageInfo } from './registry/pypi.js';
 import { fetchCratesPackageInfo, checkCratesOwnershipTransfer } from './registry/crates.js';
 import { fetchRubyGemsPackageInfo } from './registry/rubygems.js';
 import { fetchGoPackageInfo } from './registry/golang.js';
+import { fetchPackagistPackageInfo } from './registry/packagist.js';
+import { fetchNuGetPackageInfo } from './registry/nuget.js';
 import { parseGitHubUrl, fetchLastCommitDate } from './registry/github.js';
 import { hasMalwareHistory, getMalwareDetails } from './malware/known-packages.js';
 import { analyzeVulnerabilityHistory } from './osv/client.js';
@@ -49,6 +51,8 @@ const ESTABLISHED_THRESHOLDS = {
   crates: { downloads: 1000000, releaseCount: 30 },
   go: { downloads: 100000, releaseCount: 20 },
   rubygems: { downloads: 10000000, releaseCount: 50 },
+  packagist: { downloads: 10000000, releaseCount: 100 },
+  nuget: { downloads: 10000000, releaseCount: 50 },
 };
 
 function applyConfidence(points: number, confidence: 'high' | 'medium' | 'low'): number {
@@ -75,18 +79,24 @@ async function fetchPackageByEcosystem(name: string, ecosystem: Ecosystem): Prom
       return fetchRubyGemsPackageInfo(name);
     case 'go':
       return fetchGoPackageInfo(name);
+    case 'packagist':
+      return fetchPackagistPackageInfo(name);
+    case 'nuget':
+      return fetchNuGetPackageInfo(name);
     default:
       throw new Error(`Unsupported ecosystem: ${ecosystem}`);
   }
 }
 
-function mapEcosystemToOSV(ecosystem: Ecosystem): 'npm' | 'PyPI' | 'crates.io' | 'Go' | 'RubyGems' {
-  const mapping: Record<Ecosystem, 'npm' | 'PyPI' | 'crates.io' | 'Go' | 'RubyGems'> = {
+function mapEcosystemToOSV(ecosystem: Ecosystem): 'npm' | 'PyPI' | 'crates.io' | 'Go' | 'RubyGems' | 'Packagist' | 'NuGet' {
+  const mapping: Record<Ecosystem, 'npm' | 'PyPI' | 'crates.io' | 'Go' | 'RubyGems' | 'Packagist' | 'NuGet'> = {
     npm: 'npm',
     pypi: 'PyPI',
     crates: 'crates.io',
     go: 'Go',
     rubygems: 'RubyGems',
+    packagist: 'Packagist',
+    nuget: 'NuGet',
   };
   return mapping[ecosystem];
 }
