@@ -102,6 +102,32 @@ describe('Scorer', () => {
     });
   });
 
+  describe('Packagist packages', () => {
+    it('should score a healthy Packagist package', async () => {
+      const result = await checkPackageReputation('laravel/framework', 'packagist');
+      expect(result.score).toBeGreaterThanOrEqual(80);
+      expect(result.ecosystem).toBe('packagist');
+    });
+
+    it('should detect abandoned Packagist packages', async () => {
+      // phpunit/php-token-stream is marked as abandoned
+      const result = await checkPackageReputation('phpunit/php-token-stream', 'packagist');
+      const hasAbandoned = result.deductions.some(d => 
+        d.reason.toLowerCase().includes('abandoned')
+      );
+      expect(hasAbandoned).toBe(true);
+    });
+
+    it('should detect abandoned with replacement', async () => {
+      // swiftmailer/swiftmailer is abandoned, suggests symfony/mailer
+      const result = await checkPackageReputation('swiftmailer/swiftmailer', 'packagist');
+      const hasReplacement = result.deductions.some(d => 
+        d.reason.toLowerCase().includes('symfony/mailer')
+      );
+      expect(hasReplacement).toBe(true);
+    });
+  });
+
   describe('risk levels', () => {
     it('should assign correct risk levels', async () => {
       // HIGH risk (malware)

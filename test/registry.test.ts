@@ -8,8 +8,8 @@ import { fetchPackageInfo } from '../src/registry/npm.js';
 import { fetchPyPIPackageInfo, checkPyPIYanked, checkPyPIOwnershipTransfer } from '../src/registry/pypi.js';
 import { fetchCratesPackageInfo } from '../src/registry/crates.js';
 import { fetchRubyGemsPackageInfo } from '../src/registry/rubygems.js';
-import { fetchGoPackageInfo } from '../src/registry/golang.js';
-import { fetchPackagistPackageInfo } from '../src/registry/packagist.js';
+import { fetchGoPackageInfo, checkGoDeprecated, checkGoRetracted } from '../src/registry/golang.js';
+import { fetchPackagistPackageInfo, checkPackagistAbandoned, checkPackagistOwnershipTransfer } from '../src/registry/packagist.js';
 import { fetchNuGetPackageInfo, checkNuGetDeprecated, checkNuGetOwnershipTransfer } from '../src/registry/nuget.js';
 import { fetchHexPackageInfo } from '../src/registry/hex.js';
 import { fetchPubPackageInfo } from '../src/registry/pub.js';
@@ -116,6 +116,44 @@ describe('Registry modules', () => {
       expect(info?.ecosystem).toBe('go');
       expect(info?.repository?.url).toContain('github.com');
     });
+
+    it('should detect deprecated modules', async () => {
+      // github.com/golang/protobuf is deprecated in favor of google.golang.org/protobuf
+      const result = await checkGoDeprecated('github.com/golang/protobuf');
+      expect(result.deprecated).toBe(true);
+      expect(result.message).toContain('google.golang.org/protobuf');
+    });
+
+    it('should return not deprecated for active modules', async () => {
+      const result = await checkGoDeprecated('github.com/gin-gonic/gin');
+      expect(result.deprecated).toBe(false);
+    });
+
+    it('should detect retracted versions', async () => {
+      // github.com/hashicorp/consul/api has retracted v1.28.0
+      const result = await checkGoRetracted('github.com/hashicorp/consul/api');
+      expect(result.hasRetractions).toBe(true);
+      expect(result.retractions.length).toBeGreaterThan(0);
+      // Should have a reason for at least one retraction
+      const withReason = result.retractions.find(r => r.reason);
+      expect(withReason).toBeDefined();
+    });
+
+    it('should return no retractions for clean modules', async () => {
+      const result = await checkGoRetracted('github.com/gin-gonic/gin');
+      expect(result.hasRetractions).toBe(false);
+      expect(result.latestRetracted).toBe(false);
+    });
+
+    it('should handle non-existent module in deprecation check', async () => {
+      const result = await checkGoDeprecated('github.com/nonexistent/module-xyz123');
+      expect(result.deprecated).toBe(false);
+    });
+
+    it('should handle non-existent module in retracted check', async () => {
+      const result = await checkGoRetracted('github.com/nonexistent/module-xyz123');
+      expect(result.hasRetractions).toBe(false);
+    });
   });
 
   describe('Packagist', () => {
@@ -124,6 +162,47 @@ describe('Registry modules', () => {
       expect(info).not.toBeNull();
       expect(info?.name).toBe('laravel/framework');
       expect(info?.ecosystem).toBe('packagist');
+    });
+
+    it('should detect abandoned packages', async () => {
+      // phpunit/php-token-stream is marked as abandoned
+      const result = await checkPackagistAbandoned('phpunit/php-token-stream');
+      expect(result.abandoned).toBe(true);
+    });
+
+    it('should detect abandoned packages with replacement', async () => {
+      // swiftmailer/swiftmailer is abandoned in favor of symfony/mailer
+      const result = await checkPackagistAbandoned('swiftmailer/swiftmailer');
+      expect(result.abandoned).toBe(true);
+      expect(result.replacement).toBe('symfony/mailer');
+    });
+
+    it('should return not abandoned for active packages', async () => {
+      const result = await checkPackagistAbandoned('laravel/framework');
+      expect(result.abandoned).toBe(false);
+    });
+
+    it('should include abandoned info in package data', async () => {
+      const info = await fetchPackagistPackageInfo('phpunit/php-token-stream');
+      expect(info).not.toBeNull();
+      expect(info?.abandoned).toBe(true);
+    });
+
+    it('should check ownership transfer (no transfer expected for stable packages)', async () => {
+      const result = await checkPackagistOwnershipTransfer('laravel/framework');
+      expect(result.confidence).toBeDefined();
+      // laravel/framework has stable authorship (Taylor Otwell)
+      expect(result.transferred).toBe(false);
+    });
+
+    it('should handle non-existent package in abandoned check', async () => {
+      const result = await checkPackagistAbandoned('this-vendor/does-not-exist-xyz123');
+      expect(result.abandoned).toBe(false);
+    });
+
+    it('should handle non-existent package in ownership check', async () => {
+      const result = await checkPackagistOwnershipTransfer('this-vendor/does-not-exist-xyz123');
+      expect(result.transferred).toBe(false);
     });
   });
 

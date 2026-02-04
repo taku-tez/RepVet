@@ -13,8 +13,8 @@ import { fetchPackageInfo, checkOwnershipTransfer, NpmPackageData } from './regi
 import { fetchPyPIPackageInfo, checkPyPIYanked, checkPyPIOwnershipTransfer } from './registry/pypi.js';
 import { fetchCratesPackageInfo, checkCratesOwnershipTransfer } from './registry/crates.js';
 import { fetchRubyGemsPackageInfo } from './registry/rubygems.js';
-import { fetchGoPackageInfo } from './registry/golang.js';
-import { fetchPackagistPackageInfo } from './registry/packagist.js';
+import { fetchGoPackageInfo, checkGoDeprecated, checkGoRetracted, GoPackageData } from './registry/golang.js';
+import { fetchPackagistPackageInfo, checkPackagistAbandoned, checkPackagistOwnershipTransfer, PackagistPackageData } from './registry/packagist.js';
 import { fetchNuGetPackageInfo, checkNuGetDeprecated, checkNuGetOwnershipTransfer, NuGetPackageData } from './registry/nuget.js';
 import { fetchMavenPackageInfo } from './registry/maven.js';
 import { fetchHexPackageInfo } from './registry/hex.js';
@@ -236,6 +236,69 @@ export async function checkPackageReputation(
       });
       score -= Math.round(DEDUCTIONS.DEPRECATED * 0.5);
     }
+  } else if (ecosystem === 'packagist') {
+    // Check for abandoned package (Packagist's deprecation equivalent)
+    const packagistData = packageInfo as PackagistPackageData;
+    // First check if already detected in fetchPackagistPackageInfo
+    if (packagistData.abandoned) {
+      const msg = packagistData.abandonedReplacement 
+        ? `Package abandoned, use ${packagistData.abandonedReplacement} instead`
+        : 'Package marked as abandoned';
+      deductions.push({
+        reason: msg,
+        points: DEDUCTIONS.DEPRECATED,
+        confidence: 'high',
+      });
+      score -= DEDUCTIONS.DEPRECATED;
+    } else {
+      // Double-check with p2 API for more reliable detection
+      const abandonedResult = await checkPackagistAbandoned(packageName);
+      if (abandonedResult.abandoned) {
+        const msg = abandonedResult.replacement
+          ? `Package abandoned, use ${abandonedResult.replacement} instead`
+          : 'Package marked as abandoned';
+        deductions.push({
+          reason: msg,
+          points: DEDUCTIONS.DEPRECATED,
+          confidence: 'high',
+        });
+        score -= DEDUCTIONS.DEPRECATED;
+      }
+    }
+  } else if (ecosystem === 'go') {
+    // Check for Go module deprecation (// Deprecated: comment in go.mod)
+    const deprecatedResult = await checkGoDeprecated(packageName);
+    if (deprecatedResult.deprecated) {
+      const msg = deprecatedResult.message 
+        ? `Module deprecated: ${deprecatedResult.message.slice(0, 100)}${deprecatedResult.message.length > 100 ? '...' : ''}`
+        : 'Module marked as deprecated';
+      deductions.push({
+        reason: msg,
+        points: DEDUCTIONS.DEPRECATED,
+        confidence: 'high',
+      });
+      score -= DEDUCTIONS.DEPRECATED;
+    }
+    
+    // Check for retracted versions (retract directive in go.mod)
+    const retractedResult = await checkGoRetracted(packageName);
+    if (retractedResult.latestRetracted) {
+      // Latest version is retracted - high severity
+      deductions.push({
+        reason: 'Latest version is retracted',
+        points: DEDUCTIONS.DEPRECATED,
+        confidence: 'high',
+      });
+      score -= DEDUCTIONS.DEPRECATED;
+    } else if (retractedResult.hasRetractions && retractedResult.retractions.length > 2) {
+      // Many retracted versions - suspicious
+      deductions.push({
+        reason: `Multiple versions retracted (${retractedResult.retractions.length})`,
+        points: Math.round(DEDUCTIONS.DEPRECATED * 0.5),
+        confidence: 'medium',
+      });
+      score -= Math.round(DEDUCTIONS.DEPRECATED * 0.5);
+    }
   }
   
   // Check 1: Malware history (-50) - all ecosystems
@@ -290,6 +353,18 @@ export async function checkPackageReputation(
     }
   } else if (ecosystem === 'nuget') {
     const transferResult = await checkNuGetOwnershipTransfer(packageName);
+    if (transferResult.transferred) {
+      hasOwnershipTransfer = true;
+      const points = applyConfidence(DEDUCTIONS.OWNERSHIP_TRANSFER, transferResult.confidence);
+      deductions.push({
+        reason: transferResult.details || 'Author change detected',
+        points,
+        confidence: transferResult.confidence,
+      });
+      score -= points;
+    }
+  } else if (ecosystem === 'packagist') {
+    const transferResult = await checkPackagistOwnershipTransfer(packageName);
     if (transferResult.transferred) {
       hasOwnershipTransfer = true;
       const points = applyConfidence(DEDUCTIONS.OWNERSHIP_TRANSFER, transferResult.confidence);
