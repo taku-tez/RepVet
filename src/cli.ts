@@ -851,18 +851,20 @@ function parsePnpmLock(content: string): string[] {
   for (const line of lines) {
     const trimmed = line.trim();
     
-    // Detect section headers
-    if (trimmed === 'packages:') {
+    // Detect section headers (allow trailing content like specifier)
+    if (/^packages:\s*$/.test(trimmed)) {
       inPackages = true;
       inDependencies = false;
       continue;
     }
-    if (trimmed === 'dependencies:' || trimmed === 'devDependencies:' || trimmed === 'optionalDependencies:') {
+    if (/^(dependencies|devDependencies|optionalDependencies):\s*$/.test(trimmed)) {
       inDependencies = true;
       inPackages = false;
       continue;
     }
-    if (/^[a-z]+:$/.test(trimmed) && !trimmed.startsWith('/')) {
+    // New top-level section (NOT indented - starts at column 0, ends with colon)
+    // Only check non-indented lines to avoid false positives from nested keys
+    if (!line.startsWith(' ') && /^[a-zA-Z][a-zA-Z0-9]*:\s*$/.test(trimmed)) {
       inPackages = false;
       inDependencies = false;
       continue;
@@ -880,10 +882,14 @@ function parsePnpmLock(content: string): string[] {
     }
     
     if (inDependencies) {
-      // Match: 'package': version or '@scope/package': version
-      const depMatch = trimmed.match(/^['"]?(@?[^'":\s]+)['"]?:/);
-      if (depMatch && depMatch[1]) {
-        packages.push(depMatch[1]);
+      // Match: 'package': or '@scope/package': (with optional quotes)
+      // Package names are indented with exactly 2 spaces
+      // Properties (specifier, version) are indented with 4+ spaces
+      if (line.match(/^  [^ ]/)) {
+        const depMatch = line.match(/^  ['"]?(@?[a-zA-Z0-9_@/.-]+)['"]?\s*:/);
+        if (depMatch && depMatch[1]) {
+          packages.push(depMatch[1]);
+        }
       }
     }
   }

@@ -41,6 +41,14 @@ function parseYarnLock(content: string): string[] {
       continue;
     }
     
+    // Try scoped package first: "@scope/package@version"
+    const scopedMatch = line.match(/^"?(@[^/]+\/[^@\s"]+)@/);
+    if (scopedMatch && scopedMatch[1]) {
+      packages.push(scopedMatch[1]);
+      continue;
+    }
+    
+    // Regular package: "package@version"
     const match = line.match(/^"?([^@\s"]+)@/);
     if (match && match[1]) {
       if (!match[1].startsWith('__')) {
@@ -61,17 +69,18 @@ function parsePnpmLock(content: string): string[] {
   for (const line of lines) {
     const trimmed = line.trim();
     
-    if (trimmed === 'packages:') {
+    if (/^packages:\s*$/.test(trimmed)) {
       inPackages = true;
       inDependencies = false;
       continue;
     }
-    if (trimmed === 'dependencies:' || trimmed === 'devDependencies:' || trimmed === 'optionalDependencies:') {
+    if (/^(dependencies|devDependencies|optionalDependencies):\s*$/.test(trimmed)) {
       inDependencies = true;
       inPackages = false;
       continue;
     }
-    if (/^[a-z]+:$/.test(trimmed) && !trimmed.startsWith('/')) {
+    // New top-level section (NOT indented - starts at column 0)
+    if (!line.startsWith(' ') && /^[a-zA-Z][a-zA-Z0-9]*:\s*$/.test(trimmed)) {
       inPackages = false;
       inDependencies = false;
       continue;
@@ -88,9 +97,12 @@ function parsePnpmLock(content: string): string[] {
     }
     
     if (inDependencies) {
-      const depMatch = trimmed.match(/^['"]?(@?[^'":\s]+)['"]?:/);
-      if (depMatch && depMatch[1]) {
-        packages.push(depMatch[1]);
+      // Package names are indented with exactly 2 spaces
+      if (line.match(/^  [^ ]/)) {
+        const depMatch = line.match(/^  ['"]?(@?[a-zA-Z0-9_@/.-]+)['"]?\s*:/);
+        if (depMatch && depMatch[1]) {
+          packages.push(depMatch[1]);
+        }
       }
     }
   }
