@@ -148,13 +148,37 @@ export async function fetchMavenPackageInfo(coordinate: string): Promise<MavenPa
 }
 
 /**
+ * Get all versions from directory listing (for relocation POMs not in metadata.xml)
+ */
+async function getVersionsFromDirectory(groupPath: string, artifactId: string): Promise<string[]> {
+  try {
+    const dirUrl = `${MAVEN_REPO}/${groupPath}/${artifactId}/`;
+    const response = await fetchWithRetry(dirUrl, { timeoutMs: 10000 });
+    if (!response.ok) return [];
+    
+    const html = await response.text();
+    // Match version directories like href="1.7.0/"
+    const versionPattern = /href="([0-9][^"\/]*)\/?"/g;
+    const versions: string[] = [];
+    let match;
+    while ((match = versionPattern.exec(html)) !== null) {
+      versions.push(match[1]);
+    }
+    return versions;
+  } catch {
+    return [];
+  }
+}
+
+/**
  * Check for relocation in a Maven artifact
  * 
  * Maven uses <relocation> element in POM to indicate artifact has moved
  * to a new groupId/artifactId.
  * 
- * Checks all versions since relocation POMs are often published as a
- * separate version after the last "real" version.
+ * Checks versions from both metadata.xml and directory listing since
+ * relocation POMs are often published as separate versions not listed
+ * in metadata.xml.
  */
 export async function checkMavenRelocation(coordinate: string): Promise<MavenRelocationResult> {
   try {
@@ -166,35 +190,39 @@ export async function checkMavenRelocation(coordinate: string): Promise<MavenRel
     const { groupId, artifactId } = parsed;
     const groupPath = groupId.replace(/\./g, '/');
     
-    // Fetch maven-metadata.xml to get all versions
-    const metadataUrl = `${MAVEN_REPO}/${groupPath}/${artifactId}/maven-metadata.xml`;
-    const metaResponse = await fetchWithRetry(metadataUrl, { timeoutMs: 10000 });
+    // Get versions from metadata.xml
+    const metadataVersions: string[] = [];
+    try {
+      const metadataUrl = `${MAVEN_REPO}/${groupPath}/${artifactId}/maven-metadata.xml`;
+      const metaResponse = await fetchWithRetry(metadataUrl, { timeoutMs: 10000 });
+      
+      if (metaResponse.ok) {
+        const xml = await metaResponse.text();
+        const versionsMatch = xml.matchAll(/<version>([^<]+)<\/version>/g);
+        metadataVersions.push(...Array.from(versionsMatch).map(m => m[1]));
+      }
+    } catch {
+      // Continue with directory listing
+    }
     
-    if (!metaResponse.ok) {
+    // Also get versions from directory listing (catches relocation-only versions)
+    const dirVersions = await getVersionsFromDirectory(groupPath, artifactId);
+    
+    // Combine and dedupe versions
+    const allVersions = [...new Set([...metadataVersions, ...dirVersions])];
+    
+    if (allVersions.length === 0) {
       return { relocated: false };
     }
     
-    const xml = await metaResponse.text();
-    
-    // Get all versions
-    const versionsMatch = xml.matchAll(/<version>([^<]+)<\/version>/g);
-    const versions = Array.from(versionsMatch).map(m => m[1]);
-    
-    if (versions.length === 0) {
-      return { relocated: false };
-    }
+    // Sort versions (simple sort, good enough for version strings)
+    allVersions.sort();
     
     // Check the last few versions for relocation (relocation POMs are usually at the end)
-    // Also check known relocation versions if present
-    const versionsToCheck = new Set<string>();
-    
-    // Add last 3 versions
-    for (let i = versions.length - 1; i >= Math.max(0, versions.length - 3); i--) {
-      versionsToCheck.add(versions[i]);
-    }
+    const versionsToCheck = allVersions.slice(-5);  // Check last 5 versions
     
     // Check each version for relocation
-    for (const version of versionsToCheck) {
+    for (const version of versionsToCheck.reverse()) {  // Start from newest
       try {
         const pomUrl = `${MAVEN_REPO}/${groupPath}/${artifactId}/${version}/${artifactId}-${version}.pom`;
         const pomResponse = await fetchWithRetry(pomUrl, { timeoutMs: 5000 });
