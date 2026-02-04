@@ -10,7 +10,7 @@
 
 import { Deduction, ReputationResult, PackageInfo, Ecosystem, VulnerabilityStats } from './types.js';
 import { fetchPackageInfo, checkOwnershipTransfer, NpmPackageData } from './registry/npm.js';
-import { fetchPyPIPackageInfo } from './registry/pypi.js';
+import { fetchPyPIPackageInfo, checkPyPIYanked, checkPyPIOwnershipTransfer } from './registry/pypi.js';
 import { fetchCratesPackageInfo, checkCratesOwnershipTransfer } from './registry/crates.js';
 import { fetchRubyGemsPackageInfo } from './registry/rubygems.js';
 import { fetchGoPackageInfo } from './registry/golang.js';
@@ -205,6 +205,26 @@ export async function checkPackageReputation(
       });
       score -= DEDUCTIONS.SECURITY_HOLDING;
     }
+  } else if (ecosystem === 'pypi') {
+    // Check for yanked versions (PyPI's equivalent of deprecation)
+    const yankedResult = await checkPyPIYanked(packageName);
+    if (yankedResult.latestIsYanked) {
+      // Latest version is yanked - high severity
+      deductions.push({
+        reason: `Latest version is yanked${yankedResult.yankedVersions.find(v => v.reason)?.reason ? `: ${yankedResult.yankedVersions.find(v => v.reason)?.reason}` : ''}`,
+        points: DEDUCTIONS.DEPRECATED,
+        confidence: 'high',
+      });
+      score -= DEDUCTIONS.DEPRECATED;
+    } else if (yankedResult.yankedRatio > 0.3) {
+      // Many versions yanked (>30%) - suspicious
+      deductions.push({
+        reason: `High yanked version ratio (${yankedResult.yankedVersions.length} yanked versions)`,
+        points: Math.round(DEDUCTIONS.DEPRECATED * 0.5),
+        confidence: 'medium',
+      });
+      score -= Math.round(DEDUCTIONS.DEPRECATED * 0.5);
+    }
   }
   
   // Check 1: Malware history (-50) - all ecosystems
@@ -240,6 +260,18 @@ export async function checkPackageReputation(
       const points = applyConfidence(DEDUCTIONS.OWNERSHIP_TRANSFER, transferResult.confidence);
       deductions.push({
         reason: transferResult.details || 'Publisher change detected',
+        points,
+        confidence: transferResult.confidence,
+      });
+      score -= points;
+    }
+  } else if (ecosystem === 'pypi') {
+    const transferResult = await checkPyPIOwnershipTransfer(packageName);
+    if (transferResult.transferred) {
+      hasOwnershipTransfer = true;
+      const points = applyConfidence(DEDUCTIONS.OWNERSHIP_TRANSFER, transferResult.confidence);
+      deductions.push({
+        reason: transferResult.details || 'Author/maintainer change detected',
         points,
         confidence: transferResult.confidence,
       });

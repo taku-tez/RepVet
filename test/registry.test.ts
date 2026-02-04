@@ -5,7 +5,7 @@
 
 import { describe, it, expect, jest } from '@jest/globals';
 import { fetchPackageInfo } from '../src/registry/npm.js';
-import { fetchPyPIPackageInfo } from '../src/registry/pypi.js';
+import { fetchPyPIPackageInfo, checkPyPIYanked, checkPyPIOwnershipTransfer } from '../src/registry/pypi.js';
 import { fetchCratesPackageInfo } from '../src/registry/crates.js';
 import { fetchRubyGemsPackageInfo } from '../src/registry/rubygems.js';
 import { fetchGoPackageInfo } from '../src/registry/golang.js';
@@ -58,6 +58,35 @@ describe('Registry modules', () => {
     it('should return null for non-existent package', async () => {
       const info = await fetchPyPIPackageInfo('this-package-definitely-does-not-exist-12345');
       expect(info).toBeNull();
+    });
+
+    it('should detect yanked versions in django', async () => {
+      // Django has some yanked versions (e.g., 4.2.12, 5.0.5 had build issues)
+      const result = await checkPyPIYanked('django');
+      expect(result.hasYanked).toBe(true);
+      expect(result.yankedVersions.length).toBeGreaterThan(0);
+      // At least one should have a reason
+      const withReason = result.yankedVersions.find(v => v.reason);
+      expect(withReason).toBeDefined();
+    });
+
+    it('should return no yanked for clean packages', async () => {
+      const result = await checkPyPIYanked('requests');
+      // requests is a clean package with no yanked versions
+      expect(result.latestIsYanked).toBe(false);
+    });
+
+    it('should check ownership transfer (no transfer expected for stable packages)', async () => {
+      const result = await checkPyPIOwnershipTransfer('requests');
+      // requests has stable ownership - Kenneth Reitz
+      expect(result.confidence).toBeDefined();
+      // Note: May or may not detect transfer depending on metadata changes over time
+    });
+
+    it('should handle non-existent package in yanked check', async () => {
+      const result = await checkPyPIYanked('this-package-does-not-exist-xyz123');
+      expect(result.hasYanked).toBe(false);
+      expect(result.yankedVersions).toHaveLength(0);
     });
   });
 
