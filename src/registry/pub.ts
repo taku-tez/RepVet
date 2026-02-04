@@ -3,10 +3,24 @@
  */
 
 import { PackageInfo } from '../types.js';
+import { fetchWithRetry } from './utils.js';
 
 const PUB_API = 'https://pub.dev/api';
 
-export async function fetchPubPackageInfo(packageName: string): Promise<PackageInfo | null> {
+export interface PubPackageData extends PackageInfo {
+  ecosystem: 'pub';
+  isDiscontinued?: boolean;
+  replacedBy?: string;
+  isUnlisted?: boolean;
+}
+
+export interface PubDiscontinuedResult {
+  isDiscontinued: boolean;
+  isUnlisted: boolean;
+  replacedBy?: string;
+}
+
+export async function fetchPubPackageInfo(packageName: string): Promise<PubPackageData | null> {
   try {
     const response = await fetch(`${PUB_API}/packages/${encodeURIComponent(packageName)}`);
     if (!response.ok) {
@@ -18,6 +32,9 @@ export async function fetchPubPackageInfo(packageName: string): Promise<PackageI
     
     const data = await response.json() as {
       name: string;
+      isDiscontinued?: boolean;
+      replacedBy?: string;
+      isUnlisted?: boolean;
       latest: {
         version: string;
         pubspec: {
@@ -97,9 +114,50 @@ export async function fetchPubPackageInfo(packageName: string): Promise<PackageI
       repository: repoUrl ? { type: 'git', url: repoUrl } : undefined,
       time,
       ecosystem: 'pub',
+      isDiscontinued: data.isDiscontinued,
+      replacedBy: data.replacedBy,
+      isUnlisted: data.isUnlisted,
     };
   } catch (error) {
     const message = error instanceof Error ? error.message : String(error);
     throw new Error(`Failed to fetch pub.dev package info: ${message}`);
+  }
+}
+
+/**
+ * Check if a pub.dev package is discontinued or unlisted
+ * 
+ * pub.dev has two status flags:
+ * - isDiscontinued: Package is discontinued, optionally with replacedBy suggestion
+ * - isUnlisted: Package is hidden from search results (still downloadable)
+ * 
+ * Examples of discontinued packages:
+ * - pedantic (replaced by: lints)
+ * - angular (deprecated)
+ */
+export async function checkPubDiscontinued(packageName: string): Promise<PubDiscontinuedResult> {
+  try {
+    const response = await fetchWithRetry(
+      `${PUB_API}/packages/${encodeURIComponent(packageName)}`,
+      { timeoutMs: 5000 }
+    );
+    
+    if (!response.ok) {
+      return { isDiscontinued: false, isUnlisted: false };
+    }
+    
+    const data = await response.json() as {
+      isDiscontinued?: boolean;
+      replacedBy?: string;
+      isUnlisted?: boolean;
+    };
+    
+    return {
+      isDiscontinued: data.isDiscontinued ?? false,
+      isUnlisted: data.isUnlisted ?? false,
+      replacedBy: data.replacedBy,
+    };
+  } catch {
+    return { isDiscontinued: false, isUnlisted: false };
   }
 }

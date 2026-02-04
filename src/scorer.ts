@@ -17,10 +17,10 @@ import { fetchGoPackageInfo, checkGoDeprecated, checkGoRetracted, GoPackageData 
 import { fetchPackagistPackageInfo, checkPackagistAbandoned, checkPackagistOwnershipTransfer, PackagistPackageData } from './registry/packagist.js';
 import { fetchNuGetPackageInfo, checkNuGetDeprecated, checkNuGetOwnershipTransfer, NuGetPackageData } from './registry/nuget.js';
 import { fetchMavenPackageInfo } from './registry/maven.js';
-import { fetchHexPackageInfo } from './registry/hex.js';
-import { fetchPubPackageInfo } from './registry/pub.js';
+import { fetchHexPackageInfo, checkHexRetired, HexPackageData } from './registry/hex.js';
+import { fetchPubPackageInfo, checkPubDiscontinued, PubPackageData } from './registry/pub.js';
 import { fetchCPANPackageInfo } from './registry/cpan.js';
-import { fetchCocoaPodsPackageInfo } from './registry/cocoapods.js';
+import { fetchCocoaPodsPackageInfo, checkCocoaPodsDeprecated, CocoaPodsPackageData } from './registry/cocoapods.js';
 import { fetchCondaPackageInfo } from './registry/conda.js';
 import { parseGitHubUrl, fetchLastCommitDate } from './registry/github.js';
 import { hasMalwareHistory, getMalwareDetails } from './malware/known-packages.js';
@@ -298,6 +298,141 @@ export async function checkPackageReputation(
         confidence: 'medium',
       });
       score -= Math.round(DEDUCTIONS.DEPRECATED * 0.5);
+    }
+  } else if (ecosystem === 'hex') {
+    // Check for Hex retired releases
+    const hexData = packageInfo as HexPackageData;
+    // First check if already detected in fetchHexPackageInfo
+    if (hexData.retired) {
+      const reasonMap: Record<string, string> = {
+        deprecated: 'Package deprecated',
+        renamed: 'Package renamed',
+        security: 'Security issues',
+        invalid: 'Invalid package',
+        other: 'Retired',
+      };
+      const reasonText = reasonMap[hexData.retirementReason || 'other'] || 'Retired';
+      const msg = hexData.retirementMessage
+        ? `${reasonText}: ${hexData.retirementMessage.slice(0, 100)}${hexData.retirementMessage.length > 100 ? '...' : ''}`
+        : reasonText;
+      
+      // Security-related retirements get higher severity
+      const points = hexData.retirementReason === 'security'
+        ? DEDUCTIONS.DEPRECATED * 2
+        : DEDUCTIONS.DEPRECATED;
+      
+      deductions.push({
+        reason: msg,
+        points,
+        confidence: 'high',
+      });
+      score -= points;
+    } else {
+      // Double-check with checkHexRetired for full retirement info
+      const retiredResult = await checkHexRetired(packageName);
+      if (retiredResult.latestIsRetired) {
+        const latest = retiredResult.retiredReleases[0];
+        const reasonMap: Record<string, string> = {
+          deprecated: 'Package deprecated',
+          renamed: 'Package renamed',
+          security: 'Security issues',
+          invalid: 'Invalid package',
+          other: 'Retired',
+        };
+        const reasonText = reasonMap[latest?.reason || 'other'] || 'Retired';
+        const msg = latest?.message
+          ? `${reasonText}: ${latest.message.slice(0, 100)}${latest.message.length > 100 ? '...' : ''}`
+          : reasonText;
+        
+        // Security-related retirements get higher severity
+        const points = latest?.reason === 'security'
+          ? DEDUCTIONS.DEPRECATED * 2
+          : DEDUCTIONS.DEPRECATED;
+        
+        deductions.push({
+          reason: msg,
+          points,
+          confidence: 'high',
+        });
+        score -= points;
+      } else if (retiredResult.hasRetiredReleases && retiredResult.retiredReleases.length > 2) {
+        // Many retired releases - suspicious
+        deductions.push({
+          reason: `Multiple versions retired (${retiredResult.retiredReleases.length})`,
+          points: Math.round(DEDUCTIONS.DEPRECATED * 0.5),
+          confidence: 'medium',
+        });
+        score -= Math.round(DEDUCTIONS.DEPRECATED * 0.5);
+      }
+    }
+  } else if (ecosystem === 'pub') {
+    // Check for pub.dev discontinued/unlisted packages
+    const pubData = packageInfo as PubPackageData;
+    // First check if already detected in fetchPubPackageInfo
+    if (pubData.isDiscontinued) {
+      const msg = pubData.replacedBy
+        ? `Package discontinued, use ${pubData.replacedBy} instead`
+        : 'Package marked as discontinued';
+      deductions.push({
+        reason: msg,
+        points: DEDUCTIONS.DEPRECATED,
+        confidence: 'high',
+      });
+      score -= DEDUCTIONS.DEPRECATED;
+    } else {
+      // Double-check with checkPubDiscontinued for reliability
+      const discontinuedResult = await checkPubDiscontinued(packageName);
+      if (discontinuedResult.isDiscontinued) {
+        const msg = discontinuedResult.replacedBy
+          ? `Package discontinued, use ${discontinuedResult.replacedBy} instead`
+          : 'Package marked as discontinued';
+        deductions.push({
+          reason: msg,
+          points: DEDUCTIONS.DEPRECATED,
+          confidence: 'high',
+        });
+        score -= DEDUCTIONS.DEPRECATED;
+      }
+    }
+    
+    // Check for unlisted packages (hidden from search, but still downloadable)
+    // Lower severity than discontinued - could be intentional hiding
+    if (pubData.isUnlisted) {
+      deductions.push({
+        reason: 'Package is unlisted (hidden from search)',
+        points: Math.round(DEDUCTIONS.DEPRECATED * 0.5),
+        confidence: 'medium',
+      });
+      score -= Math.round(DEDUCTIONS.DEPRECATED * 0.5);
+    }
+  } else if (ecosystem === 'cocoapods') {
+    // Check for CocoaPods deprecated packages
+    const cocoapodsData = packageInfo as CocoaPodsPackageData;
+    // First check if already detected in fetchCocoaPodsPackageInfo
+    if (cocoapodsData.deprecated) {
+      const msg = cocoapodsData.deprecatedInFavorOf
+        ? `Package deprecated in favor of ${cocoapodsData.deprecatedInFavorOf}`
+        : `Package deprecated: ${cocoapodsData.deprecated.slice(0, 100)}${cocoapodsData.deprecated.length > 100 ? '...' : ''}`;
+      deductions.push({
+        reason: msg,
+        points: DEDUCTIONS.DEPRECATED,
+        confidence: 'high',
+      });
+      score -= DEDUCTIONS.DEPRECATED;
+    } else {
+      // Double-check with checkCocoaPodsDeprecated for reliability
+      const deprecatedResult = await checkCocoaPodsDeprecated(packageName);
+      if (deprecatedResult.deprecated) {
+        const msg = deprecatedResult.replacement
+          ? `Package deprecated in favor of ${deprecatedResult.replacement}`
+          : deprecatedResult.message || 'Package marked as deprecated';
+        deductions.push({
+          reason: msg,
+          points: DEDUCTIONS.DEPRECATED,
+          confidence: 'high',
+        });
+        score -= DEDUCTIONS.DEPRECATED;
+      }
     }
   }
   

@@ -11,9 +11,10 @@ import { fetchRubyGemsPackageInfo } from '../src/registry/rubygems.js';
 import { fetchGoPackageInfo, checkGoDeprecated, checkGoRetracted } from '../src/registry/golang.js';
 import { fetchPackagistPackageInfo, checkPackagistAbandoned, checkPackagistOwnershipTransfer } from '../src/registry/packagist.js';
 import { fetchNuGetPackageInfo, checkNuGetDeprecated, checkNuGetOwnershipTransfer } from '../src/registry/nuget.js';
-import { fetchHexPackageInfo } from '../src/registry/hex.js';
-import { fetchPubPackageInfo } from '../src/registry/pub.js';
+import { fetchHexPackageInfo, checkHexRetired, HexPackageData } from '../src/registry/hex.js';
+import { fetchPubPackageInfo, checkPubDiscontinued, PubPackageData } from '../src/registry/pub.js';
 import { fetchCondaPackageInfo, parseEnvironmentYaml } from '../src/registry/conda.js';
+import { fetchCocoaPodsPackageInfo, checkCocoaPodsDeprecated, CocoaPodsPackageData } from '../src/registry/cocoapods.js';
 
 // Use longer timeout for API calls
 jest.setTimeout(30000);
@@ -266,6 +267,43 @@ describe('Registry modules', () => {
       expect(info?.name).toBe('phoenix');
       expect(info?.ecosystem).toBe('hex');
     });
+
+    it('should fetch owners for popular packages', async () => {
+      const info = await fetchHexPackageInfo('phoenix') as HexPackageData;
+      expect(info).not.toBeNull();
+      expect(info?.owners).toBeDefined();
+      expect(info?.owners?.length).toBeGreaterThan(0);
+      // Phoenix has well-known maintainers
+      expect(info?.owners).toContain('chrismccord');
+    });
+
+    it('should return null for non-existent package', async () => {
+      const info = await fetchHexPackageInfo('this-package-definitely-does-not-exist-12345');
+      expect(info).toBeNull();
+    });
+
+    it('should check retired releases (no retirements expected for phoenix)', async () => {
+      const result = await checkHexRetired('phoenix');
+      expect(result.latestIsRetired).toBe(false);
+      // Phoenix is actively maintained, should have no/few retired releases
+    });
+
+    it('should handle non-existent package in retired check', async () => {
+      const result = await checkHexRetired('this-package-does-not-exist-xyz123');
+      expect(result.hasRetiredReleases).toBe(false);
+      expect(result.latestIsRetired).toBe(false);
+      expect(result.retiredReleases).toHaveLength(0);
+    });
+
+    it('should detect retired releases when present', async () => {
+      // Note: This test verifies the checkHexRetired function works correctly
+      // If a package with retired releases is found, this test can be updated
+      // Currently testing the structure of the return value
+      const result = await checkHexRetired('hackney');
+      expect(typeof result.hasRetiredReleases).toBe('boolean');
+      expect(typeof result.latestIsRetired).toBe('boolean');
+      expect(Array.isArray(result.retiredReleases)).toBe(true);
+    });
   });
 
   describe('pub.dev', () => {
@@ -274,6 +312,74 @@ describe('Registry modules', () => {
       expect(info).not.toBeNull();
       expect(info?.name).toBe('http');
       expect(info?.ecosystem).toBe('pub');
+    });
+
+    it('should detect discontinued package (pedantic)', async () => {
+      const info = await fetchPubPackageInfo('pedantic');
+      expect(info).not.toBeNull();
+      expect(info?.isDiscontinued).toBe(true);
+      expect(info?.replacedBy).toBe('lints');
+    });
+
+    it('should use checkPubDiscontinued for discontinued detection', async () => {
+      const result = await checkPubDiscontinued('pedantic');
+      expect(result.isDiscontinued).toBe(true);
+      expect(result.replacedBy).toBe('lints');
+    });
+
+    it('should return not discontinued for active package', async () => {
+      const result = await checkPubDiscontinued('http');
+      expect(result.isDiscontinued).toBe(false);
+    });
+
+    it('should return null for non-existent package', async () => {
+      const info = await fetchPubPackageInfo('this-package-definitely-does-not-exist-12345');
+      expect(info).toBeNull();
+    });
+  });
+
+  describe('CocoaPods', () => {
+    it('should fetch package info for Alamofire', async () => {
+      const info = await fetchCocoaPodsPackageInfo('Alamofire');
+      expect(info).not.toBeNull();
+      expect(info?.name).toBe('Alamofire');
+      expect(info?.ecosystem).toBe('cocoapods');
+      expect(info?.maintainers.length).toBeGreaterThan(0);
+    });
+
+    it('should return null for non-existent package', async () => {
+      const info = await fetchCocoaPodsPackageInfo('this-package-definitely-does-not-exist-12345');
+      expect(info).toBeNull();
+    });
+
+    it('should detect deprecated packages (AFNetworking)', async () => {
+      // AFNetworking is deprecated in favor of Alamofire
+      const info = await fetchCocoaPodsPackageInfo('AFNetworking') as CocoaPodsPackageData;
+      expect(info).not.toBeNull();
+      expect(info?.deprecated).toBeDefined();
+      expect(info?.deprecatedInFavorOf).toBe('Alamofire');
+    });
+
+    it('should use checkCocoaPodsDeprecated for deprecation detection', async () => {
+      const result = await checkCocoaPodsDeprecated('AFNetworking');
+      expect(result.deprecated).toBe(true);
+      expect(result.replacement).toBe('Alamofire');
+    });
+
+    it('should return not deprecated for active packages', async () => {
+      const result = await checkCocoaPodsDeprecated('Alamofire');
+      expect(result.deprecated).toBe(false);
+    });
+
+    it('should handle non-existent package in deprecated check', async () => {
+      const result = await checkCocoaPodsDeprecated('this-package-does-not-exist-xyz123');
+      expect(result.deprecated).toBe(false);
+    });
+
+    it('should include repository URL when available', async () => {
+      const info = await fetchCocoaPodsPackageInfo('AFNetworking');
+      expect(info).not.toBeNull();
+      expect(info?.repository?.url).toContain('github.com');
     });
   });
 

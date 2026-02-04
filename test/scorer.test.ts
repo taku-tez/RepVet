@@ -128,6 +128,28 @@ describe('Scorer', () => {
     });
   });
 
+  describe('pub.dev packages', () => {
+    it('should score a healthy pub.dev package', async () => {
+      const result = await checkPackageReputation('http', 'pub');
+      expect(result.score).toBeGreaterThanOrEqual(85);
+      expect(result.ecosystem).toBe('pub');
+    });
+
+    it('should detect discontinued pub.dev packages', async () => {
+      // pedantic is discontinued, replaced by lints
+      const result = await checkPackageReputation('pedantic', 'pub');
+      const hasDiscontinued = result.deductions.some(d => 
+        d.reason.toLowerCase().includes('discontinued')
+      );
+      expect(hasDiscontinued).toBe(true);
+      // Should mention the replacement
+      const hasReplacement = result.deductions.some(d => 
+        d.reason.toLowerCase().includes('lints')
+      );
+      expect(hasReplacement).toBe(true);
+    });
+  });
+
   describe('risk levels', () => {
     it('should assign correct risk levels', async () => {
       // HIGH risk (malware)
