@@ -79,7 +79,7 @@ export function parseBunLock(content: string): PackageDependency[] {
   const deps: PackageDependency[] = [];
   const seen = new Set<string>();
 
-  for (const [key, value] of Object.entries(lock.packages)) {
+  for (const [_key, value] of Object.entries(lock.packages)) {
     if (!Array.isArray(value) || value.length === 0) continue;
 
     const resolved = value[0] as string;

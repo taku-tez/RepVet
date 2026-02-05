@@ -5,7 +5,7 @@
  */
 
 import { createRequire } from 'module';
-import { ReputationResult, Deduction } from './types.js';
+import { ReputationResult } from './types.js';
 
 const require = createRequire(import.meta.url);
 const packageJson = require('../package.json');
@@ -104,9 +104,6 @@ export function toSarif(
   for (const result of results) {
     // Skip LOW-risk packages with no deductions (clean)
     if (result.riskLevel === 'LOW' && result.deductions.length === 0) continue;
-
-    // Summary result per package
-    const pkgUri = packageUri(result.package, result.ecosystem);
 
     // One result per deduction for granular reporting
     for (const d of result.deductions) {
@@ -208,24 +205,3 @@ export function toSarif(
   };
 }
 
-/**
- * Build a package URI for registry linking
- */
-function packageUri(name: string, ecosystem: string): string {
-  switch (ecosystem) {
-    case 'npm': return `https://www.npmjs.com/package/${name}`;
-    case 'pypi': return `https://pypi.org/project/${name}`;
-    case 'crates': return `https://crates.io/crates/${name}`;
-    case 'rubygems': return `https://rubygems.org/gems/${name}`;
-    case 'go': return `https://pkg.go.dev/${name}`;
-    case 'packagist': return `https://packagist.org/packages/${name}`;
-    case 'nuget': return `https://www.nuget.org/packages/${name}`;
-    case 'maven': return `https://search.maven.org/search?q=${name}`;
-    case 'hex': return `https://hex.pm/packages/${name}`;
-    case 'pub': return `https://pub.dev/packages/${name}`;
-    case 'cpan': return `https://metacpan.org/pod/${name}`;
-    case 'cocoapods': return `https://cocoapods.org/pods/${name}`;
-    case 'conda': return `https://anaconda.org/conda-forge/${name}`;
-    default: return name;
-  }
-}

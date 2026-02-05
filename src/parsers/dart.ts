@@ -42,7 +42,6 @@ export function parsePubspecLock(content: string): PackageDependency[] {
   let currentPackage: string | null = null;
   let currentVersion: string | null = null;
   let currentSource: string | null = null;
-  let indent = 0;
 
   for (const line of lines) {
     // Detect "packages:" top-level section
@@ -68,7 +67,7 @@ export function parsePubspecLock(content: string): PackageDependency[] {
     if (!inPackages) continue;
 
     // Package name line: exactly 2 spaces + name + colon
-    const pkgMatch = line.match(/^  ([a-zA-Z0-9_]+):\s*$/);
+    const pkgMatch = line.match(/^ {2}([a-zA-Z0-9_]+):\s*$/);
     if (pkgMatch) {
       // Flush previous package
       if (currentPackage && currentSource === 'hosted' && !seen.has(currentPackage)) {
@@ -78,7 +77,6 @@ export function parsePubspecLock(content: string): PackageDependency[] {
       currentPackage = pkgMatch[1];
       currentVersion = null;
       currentSource = null;
-      indent = 2;
       continue;
     }
 
