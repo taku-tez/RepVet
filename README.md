@@ -1,6 +1,6 @@
 # RepVet 🔍
 
-Maintainer reputation checker for **13 package ecosystems**. Part of the **xxVet** security CLI series.
+Maintainer reputation checker for **14 package ecosystems**. Part of the **xxVet** security CLI series.
 
 [![npm version](https://img.shields.io/npm/v/repvet.svg)](https://www.npmjs.com/package/repvet)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -18,8 +18,8 @@ RepVet helps you identify risky dependencies before they become a problem.
 
 ## Features
 
-- **13 Ecosystem Support**: npm, PyPI, crates.io, RubyGems, Go, Packagist, NuGet, Maven, Hex, pub.dev, CPAN, CocoaPods, Conda
-- **9 Lockfile Formats**: package-lock.json, yarn.lock, pnpm-lock.yaml, poetry.lock, Pipfile.lock, Cargo.lock, Gemfile.lock, composer.lock, mix.lock
+- **14 Ecosystem Support**: npm, PyPI, crates.io, RubyGems, Go, Packagist, NuGet, Maven, Hex, pub.dev, CPAN, CocoaPods, Conda (+ uv)
+- **10 Lockfile Formats**: package-lock.json, yarn.lock, pnpm-lock.yaml, poetry.lock, Pipfile.lock, Cargo.lock, Gemfile.lock, composer.lock, mix.lock, uv.lock
 - **Version-aware Vulnerability Matching**: OSV queries use actual dependency versions for precise CVE matching
 - **Monorepo & Directory Scanning**: Recursively scan entire project directories
 - **Multi-VCS Support**: GitHub, GitLab, and Bitbucket repository analysis
@@ -77,6 +77,7 @@ RepVet helps you identify risky dependencies before they become a problem.
 | Podfile | CocoaPods | ❌ | Ranges |
 | Podfile.lock | CocoaPods | ✅ | ✅ Exact |
 | bun.lock | npm | ✅ | ✅ Exact |
+| uv.lock | PyPI | ✅ | ✅ Exact |
 | environment.yml | Conda + PyPI | ❌ | Partial |
 
 ## Installation

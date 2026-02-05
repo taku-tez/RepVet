@@ -767,4 +767,103 @@ COCOAPODS: 1.15.2
     });
   });
 
+  describe('uv.lock', () => {
+    function parseUvLock(content: string): string[] {
+      const deps: string[] = [];
+      const seen = new Set<string>();
+      const blocks = content.split(/^\[\[package\]\]\s*$/m);
+
+      for (const block of blocks) {
+        if (!block.trim()) continue;
+        const nameMatch = block.match(/^name\s*=\s*"([^"]+)"/m);
+        if (!nameMatch) continue;
+        const name = nameMatch[1];
+        if (/^source\s*=\s*\{[^}]*(?:virtual|editable|path)\s*=/m.test(block)) continue;
+        if (!seen.has(name)) {
+          seen.add(name);
+          deps.push(name);
+        }
+      }
+      return deps;
+    }
+
+    it('should parse uv.lock from fixture', () => {
+      const content = fs.readFileSync(path.join(fixturesDir, 'uv.lock'), 'utf-8');
+      const packages = parseUvLock(content);
+      expect(packages).toContain('requests');
+      expect(packages).toContain('flask');
+      expect(packages).toContain('certifi');
+      expect(packages).toContain('click');
+      expect(packages).toContain('urllib3');
+      expect(packages).toContain('jinja2');
+      expect(packages).toContain('werkzeug');
+    });
+
+    it('should skip virtual/local project packages', () => {
+      const content = fs.readFileSync(path.join(fixturesDir, 'uv.lock'), 'utf-8');
+      const packages = parseUvLock(content);
+      expect(packages).not.toContain('my-project');
+    });
+
+    it('should skip editable packages', () => {
+      const content = `version = 1
+requires-python = ">=3.12"
+
+[[package]]
+name = "my-lib"
+version = "0.1.0"
+source = { editable = "." }
+
+[[package]]
+name = "requests"
+version = "2.32.4"
+source = { registry = "https://pypi.org/simple" }
+`;
+      const packages = parseUvLock(content);
+      expect(packages).toHaveLength(1);
+      expect(packages).toContain('requests');
+      expect(packages).not.toContain('my-lib');
+    });
+
+    it('should skip path dependencies', () => {
+      const content = `version = 1
+
+[[package]]
+name = "local-dep"
+version = "1.0.0"
+source = { path = "../local-dep" }
+
+[[package]]
+name = "flask"
+version = "3.1.0"
+source = { registry = "https://pypi.org/simple" }
+`;
+      const packages = parseUvLock(content);
+      expect(packages).toHaveLength(1);
+      expect(packages).toContain('flask');
+    });
+
+    it('should handle empty uv.lock', () => {
+      const content = `version = 1
+requires-python = ">=3.12"
+`;
+      const packages = parseUvLock(content);
+      expect(packages).toHaveLength(0);
+    });
+
+    it('should deduplicate packages', () => {
+      const content = fs.readFileSync(path.join(fixturesDir, 'uv.lock'), 'utf-8');
+      const packages = parseUvLock(content);
+      const unique = new Set(packages);
+      expect(packages.length).toBe(unique.size);
+    });
+
+    it('should extract correct count from fixture', () => {
+      const content = fs.readFileSync(path.join(fixturesDir, 'uv.lock'), 'utf-8');
+      const packages = parseUvLock(content);
+      // 13 total packages minus 1 virtual (my-project) = 12
+      expect(packages).toHaveLength(12);
+    });
+  });
+
 });

@@ -942,4 +942,79 @@ COCOAPODS: 1.15.2
     });
   });
 
+  describe('uv.lock (with versions)', () => {
+    function parseUvLock(content: string): PackageDependency[] {
+      const deps: PackageDependency[] = [];
+      const seen = new Set<string>();
+      const blocks = content.split(/^\[\[package\]\]\s*$/m);
+
+      for (const block of blocks) {
+        if (!block.trim()) continue;
+        const nameMatch = block.match(/^name\s*=\s*"([^"]+)"/m);
+        if (!nameMatch) continue;
+        const name = nameMatch[1];
+        if (/^source\s*=\s*\{[^}]*(?:virtual|editable|path)\s*=/m.test(block)) continue;
+        const versionMatch = block.match(/^version\s*=\s*"([^"]+)"/m);
+        const version = versionMatch ? versionMatch[1] : undefined;
+        if (!seen.has(name)) {
+          seen.add(name);
+          deps.push({ name, version });
+        }
+      }
+      return deps;
+    }
+
+    it('should parse uv.lock with versions from fixture', () => {
+      const content = fs.readFileSync(path.join(fixturesDir, 'uv.lock'), 'utf-8');
+      const packages = parseUvLock(content);
+
+      const requests = packages.find(p => p.name === 'requests');
+      expect(requests).toBeDefined();
+      expect(requests?.version).toBe('2.32.4');
+
+      const flask = packages.find(p => p.name === 'flask');
+      expect(flask).toBeDefined();
+      expect(flask?.version).toBe('3.1.0');
+
+      const certifi = packages.find(p => p.name === 'certifi');
+      expect(certifi).toBeDefined();
+      expect(certifi?.version).toBe('2024.12.14');
+    });
+
+    it('should skip virtual project (no version extracted)', () => {
+      const content = fs.readFileSync(path.join(fixturesDir, 'uv.lock'), 'utf-8');
+      const packages = parseUvLock(content);
+      expect(packages.find(p => p.name === 'my-project')).toBeUndefined();
+    });
+
+    it('should extract all non-virtual package versions', () => {
+      const content = fs.readFileSync(path.join(fixturesDir, 'uv.lock'), 'utf-8');
+      const packages = parseUvLock(content);
+      // All registry packages should have versions
+      for (const pkg of packages) {
+        expect(pkg.version).toBeDefined();
+      }
+    });
+
+    it('should handle package without version', () => {
+      const content = `version = 1
+
+[[package]]
+name = "mystery"
+source = { registry = "https://pypi.org/simple" }
+`;
+      const packages = parseUvLock(content);
+      expect(packages).toHaveLength(1);
+      expect(packages[0]?.name).toBe('mystery');
+      expect(packages[0]?.version).toBeUndefined();
+    });
+
+    it('should extract correct count', () => {
+      const content = fs.readFileSync(path.join(fixturesDir, 'uv.lock'), 'utf-8');
+      const packages = parseUvLock(content);
+      // 13 total - 1 virtual = 12 registry packages
+      expect(packages).toHaveLength(12);
+    });
+  });
+
 });

@@ -1,0 +1,141 @@
+version = 1
+requires-python = ">=3.12"
+
+[options]
+exclude-newer = "2026-02-06T00:00:00Z"
+
+[[package]]
+name = "my-project"
+version = "0.1.0"
+source = { virtual = "." }
+dependencies = [
+  { name = "flask" },
+  { name = "requests" },
+]
+
+[[package]]
+name = "blinker"
+version = "1.9.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/21/28/9b3f50ce0e048515135495f198351908d99540d69bfdc8c1d15b73dc55ce/blinker-1.9.0.tar.gz", hash = "sha256:b4ce2265a7abece45e7cc896e98dbebe6cead56bcf805a3d23136d145f5445bf", size = 22460 }
+wheels = [
+  { url = "https://files.pythonhosted.org/packages/10/cb/f2ad4230dc2eb1a249571f36e72a7770e56f7f4862c2f0716b462e0af0e1/blinker-1.9.0-py3-none-any.whl", hash = "sha256:ba0efaa9080b619ff2f3459d1d500c57bddea4a6b424b60a91141db6fd2f08bc", size = 8458 },
+]
+
+[[package]]
+name = "certifi"
+version = "2024.12.14"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/c2/02/a95f2b11e207f68bc64d7aae9666fed2e2b3f307748d5123dffb72a1bbea/certifi-2024.12.14.tar.gz", hash = "sha256:b650d30f370c2b724812bee08008be0c4163b163ddaec3f2546c1caf65f191db", size = 166010 }
+wheels = [
+  { url = "https://files.pythonhosted.org/packages/a5/32/8f6669fc4798494966bf446c8c4a162e0b5d893dff088afddf76414f70e1/certifi-2024.12.14-py3-none-any.whl", hash = "sha256:1275f7a45be9464efc1173084eaa30f866fe2e47d389406136d332ed4967ec56", size = 164927 },
+]
+
+[[package]]
+name = "charset-normalizer"
+version = "3.4.1"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/16/b0/572805e227f01586461c80e0fd25d65a2115599cc9dad142fee4b747c357/charset_normalizer-3.4.1.tar.gz", hash = "sha256:44251f18cd68a75b56585dd00dae26183e102cd5e0f9f1466e6df5da2ed64ea3", size = 123188 }
+wheels = [
+  { url = "https://files.pythonhosted.org/packages/fake/charset_normalizer-3.4.1-cp312-cp312-manylinux_2_17_x86_64.whl", hash = "sha256:fake", size = 100000 },
+]
+
+[[package]]
+name = "flask"
+version = "3.1.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+  { name = "blinker" },
+  { name = "click" },
+  { name = "itsdangerous" },
+  { name = "jinja2" },
+  { name = "werkzeug" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/fake/flask-3.1.0.tar.gz", hash = "sha256:fake", size = 680000 }
+wheels = [
+  { url = "https://files.pythonhosted.org/packages/fake/flask-3.1.0-py3-none-any.whl", hash = "sha256:fake", size = 103000 },
+]
+
+[[package]]
+name = "click"
+version = "8.1.8"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/fake/click-8.1.8.tar.gz", hash = "sha256:fake", size = 226593 }
+wheels = [
+  { url = "https://files.pythonhosted.org/packages/fake/click-8.1.8-py3-none-any.whl", hash = "sha256:fake", size = 98188 },
+]
+
+[[package]]
+name = "idna"
+version = "3.10"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/fake/idna-3.10.tar.gz", hash = "sha256:fake", size = 190490 }
+wheels = [
+  { url = "https://files.pythonhosted.org/packages/fake/idna-3.10-py3-none-any.whl", hash = "sha256:fake", size = 70442 },
+]
+
+[[package]]
+name = "itsdangerous"
+version = "2.2.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/fake/itsdangerous-2.2.0.tar.gz", hash = "sha256:fake", size = 54410 }
+wheels = [
+  { url = "https://files.pythonhosted.org/packages/fake/itsdangerous-2.2.0-py3-none-any.whl", hash = "sha256:fake", size = 16234 },
+]
+
+[[package]]
+name = "jinja2"
+version = "3.1.5"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+  { name = "markupsafe" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/fake/jinja2-3.1.5.tar.gz", hash = "sha256:fake", size = 244310 }
+wheels = [
+  { url = "https://files.pythonhosted.org/packages/fake/jinja2-3.1.5-py3-none-any.whl", hash = "sha256:fake", size = 134000 },
+]
+
+[[package]]
+name = "markupsafe"
+version = "3.0.2"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/fake/markupsafe-3.0.2.tar.gz", hash = "sha256:fake", size = 20537 }
+wheels = [
+  { url = "https://files.pythonhosted.org/packages/fake/markupsafe-3.0.2-cp312-cp312-manylinux_2_17_x86_64.whl", hash = "sha256:fake", size = 23000 },
+]
+
+[[package]]
+name = "requests"
+version = "2.32.4"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+  { name = "certifi" },
+  { name = "charset-normalizer" },
+  { name = "idna" },
+  { name = "urllib3" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/fake/requests-2.32.4.tar.gz", hash = "sha256:fake", size = 131218 }
+wheels = [
+  { url = "https://files.pythonhosted.org/packages/fake/requests-2.32.4-py3-none-any.whl", hash = "sha256:fake", size = 64928 },
+]
+
+[[package]]
+name = "urllib3"
+version = "2.3.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/fake/urllib3-2.3.0.tar.gz", hash = "sha256:fake", size = 307000 }
+wheels = [
+  { url = "https://files.pythonhosted.org/packages/fake/urllib3-2.3.0-py3-none-any.whl", hash = "sha256:fake", size = 128000 },
+]
+
+[[package]]
+name = "werkzeug"
+version = "3.1.3"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+  { name = "markupsafe" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/fake/werkzeug-3.1.3.tar.gz", hash = "sha256:fake", size = 803000 }
+wheels = [
+  { url = "https://files.pythonhosted.org/packages/fake/werkzeug-3.1.3-py3-none-any.whl", hash = "sha256:fake", size = 230000 },
+]

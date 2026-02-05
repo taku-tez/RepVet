@@ -13,6 +13,7 @@
  * - Dart/Flutter: pubspec.lock
  * - CocoaPods: Podfile.lock
  * - Bun: bun.lock
+ * - uv: uv.lock
  */
 
 // npm ecosystem
@@ -47,3 +48,6 @@ export { parsePodfileLock } from './cocoapods.js';
 
 // Bun ecosystem
 export { parseBunLock } from './bun.js';
+
+// uv (Python) ecosystem
+export { parseUvLock } from './uv.js';

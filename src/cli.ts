@@ -30,6 +30,7 @@ import {
   parsePubspecLock,
   parsePodfileLock,
   parseBunLock,
+  parseUvLock,
 } from './parsers/index.js';
 
 const DEFAULT_CONCURRENCY = 5;
@@ -68,6 +69,7 @@ const SUPPORTED_DEP_FILES = [
   'Podfile',
   'Podfile.lock',
   'bun.lock',
+  'uv.lock',
   'Package.swift',
   'environment.yml',
   'environment.yaml',
@@ -84,7 +86,7 @@ const program = new Command();
 
 program
   .name('repvet')
-  .description('Check package maintainer reputation (13 ecosystems supported)')
+  .description('Check package maintainer reputation (14 ecosystems supported)')
   .version(packageJson.version);
 
 program
@@ -662,6 +664,11 @@ function parseDepFile(fileName: string, content: string): Array<{ packages: Pack
   // CocoaPods: Podfile.lock
   if (fileName === 'Podfile.lock' || fileName.endsWith('/Podfile.lock')) {
     return [{ packages: parsePodfileLock(content), ecosystem: 'cocoapods' }];
+  }
+  
+  // Python (uv): uv.lock
+  if (fileName === 'uv.lock' || fileName.endsWith('/uv.lock')) {
+    return [{ packages: parseUvLock(content), ecosystem: 'pypi' }];
   }
   
   // Bun: bun.lock (text-based JSONC lockfile)
