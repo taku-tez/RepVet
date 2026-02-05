@@ -215,6 +215,17 @@ Upload to GitHub Code Scanning:
     sarif_file: results.sarif
 ```
 
+### CSV output
+
+Export results in [RFC 4180](https://datatracker.ietf.org/doc/html/rfc4180) CSV format for spreadsheets, databases, or custom analysis:
+
+```bash
+repvet scan ./package.json --csv > results.csv
+repvet scan . --csv --fail-under 50 > results.csv
+```
+
+CSV columns include: `package`, `ecosystem`, `score`, `risk_level`, `maintainers`, `deduction_count`, `deduction_reasons`, `deduction_points_total`, `vuln_total`, `vuln_critical`, `vuln_high`, `vuln_recent`, `vuln_unfixed`, `has_ownership_transfer`, `has_malware_history`, `is_deleted`, `last_commit_date`.
+
 ## Scoring
 
 RepVet uses a **deduction-based** scoring system starting at 100:

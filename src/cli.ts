@@ -13,6 +13,7 @@ import { checkPackageReputation } from './scorer.js';
 import { ReputationResult, Ecosystem, PackageDependency } from './types.js';
 import { parseEnvironmentYaml } from './registry/conda.js';
 import { toSarif } from './sarif.js';
+import { toCsv } from './csv.js';
 import {
   parsePackageLock,
   parseYarnLock,
@@ -127,11 +128,12 @@ program
   .description('Scan dependency file or directory (monorepo support)')
   .option('--json', 'Output as JSON')
   .option('--sarif', 'Output as SARIF v2.1.0 (Static Analysis Results Interchange Format)')
+  .option('--csv', 'Output as CSV (RFC 4180)')
   .option('--threshold <score>', 'Only show packages below this score', '100')
   .option('--fail-under <score>', 'Exit with code 1 if any package scores below this')
   .option('-c, --concurrency <number>', 'Number of concurrent API requests', String(DEFAULT_CONCURRENCY))
   .option('--show-skipped', 'Show details of skipped packages')
-  .action(async (inputPath: string, options: { json?: boolean; sarif?: boolean; threshold?: string; failUnder?: string; concurrency?: string; showSkipped?: boolean }) => {
+  .action(async (inputPath: string, options: { json?: boolean; sarif?: boolean; csv?: boolean; threshold?: string; failUnder?: string; concurrency?: string; showSkipped?: boolean }) => {
     try {
       const fs = await import('fs');
       const path = await import('path');
@@ -286,6 +288,12 @@ program
       if (options.sarif) {
         const sarifOutput = toSarif(allResults, inputPath);
         console.log(JSON.stringify(sarifOutput, null, 2));
+        process.exit(hasFailure ? 1 : 0);
+      }
+      
+      if (options.csv) {
+        const csvOutput = toCsv(allResults);
+        console.log(csvOutput);
         process.exit(hasFailure ? 1 : 0);
       }
       
