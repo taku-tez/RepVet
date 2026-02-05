@@ -133,7 +133,8 @@ program
   .option('--fail-under <score>', 'Exit with code 1 if any package scores below this')
   .option('-c, --concurrency <number>', 'Number of concurrent API requests', String(DEFAULT_CONCURRENCY))
   .option('--show-skipped', 'Show details of skipped packages')
-  .action(async (inputPath: string, options: { json?: boolean; sarif?: boolean; csv?: boolean; threshold?: string; failUnder?: string; concurrency?: string; showSkipped?: boolean }) => {
+  .option('-i, --ignore <patterns...>', 'Ignore packages matching patterns (glob or prefix match)')
+  .action(async (inputPath: string, options: { json?: boolean; sarif?: boolean; csv?: boolean; threshold?: string; failUnder?: string; concurrency?: string; showSkipped?: boolean; ignore?: string[] }) => {
     try {
       const fs = await import('fs');
       const path = await import('path');
@@ -219,6 +220,27 @@ program
         }
       };
       
+      // Helper to check if package name matches any ignore pattern
+      const ignorePatterns = options.ignore || [];
+      const shouldIgnore = (pkgName: string): boolean => {
+        for (const pattern of ignorePatterns) {
+          // Support glob-like wildcards: * matches any sequence, ? matches single char
+          if (pattern.includes('*') || pattern.includes('?')) {
+            // Convert glob to regex
+            const regexPattern = pattern
+              .replace(/[.+^${}()|[\]\\]/g, '\\$&')  // escape regex special chars (except * and ?)
+              .replace(/\*/g, '.*')                   // * -> .*
+              .replace(/\?/g, '.');                   // ? -> .
+            const regex = new RegExp(`^${regexPattern}$`, 'i');
+            if (regex.test(pkgName)) return true;
+          } else {
+            // Exact match or prefix match (e.g., "@types/" matches "@types/node")
+            if (pkgName === pattern || pkgName.startsWith(pattern)) return true;
+          }
+        }
+        return false;
+      };
+      
       for (const filePath of filesToScan) {
         const content = fs.readFileSync(filePath, 'utf-8');
         const fileName = path.basename(filePath);
@@ -237,19 +259,32 @@ program
           for (const { packages, ecosystem } of parseResults) {
             if (packages.length === 0) continue;
           
+            // Filter out ignored packages
+            const ignoredPackages: SkippedPackage[] = [];
+            const packagesToCheck = packages.filter(pkg => {
+              if (shouldIgnore(pkg.name)) {
+                ignoredPackages.push({ name: pkg.name, reason: 'ignored by --ignore pattern' });
+                return false;
+              }
+              return true;
+            });
+          
             // Extract package names for display (version info preserved in packages array)
             const packageNames = packages.map(p => p.name);
           
           if (!options.json && !options.sarif) {
-            console.log(chalk.dim(`Scanning ${relativePath} (${packageNames.length} ${ecosystem} packages)...`));
+            const ignoredCount = ignoredPackages.length;
+            const checkCount = packagesToCheck.length;
+            const ignoreNote = ignoredCount > 0 ? `, ${ignoredCount} ignored` : '';
+            console.log(chalk.dim(`Scanning ${relativePath} (${checkCount} ${ecosystem} packages${ignoreNote})...`));
           }
           
           const checkResults = await Promise.all(
-            packages.map(pkg => limit(() => checkPackage(pkg, ecosystem)))
+            packagesToCheck.map(pkg => limit(() => checkPackage(pkg, ecosystem)))
           );
           
           const results: ReputationResult[] = [];
-          const skipped: SkippedPackage[] = [];
+          const skipped: SkippedPackage[] = [...ignoredPackages];
           
           for (const { result, skipped: skip } of checkResults) {
             if (skip) skipped.push(skip);

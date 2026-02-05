@@ -456,6 +456,85 @@ requests = "^2.28.0"
   });
 });
 
+describe('Ignore Pattern Matching', () => {
+  // Helper function mirroring the implementation in cli.ts
+  const shouldIgnore = (pkgName: string, patterns: string[]): boolean => {
+    for (const pattern of patterns) {
+      if (pattern.includes('*') || pattern.includes('?')) {
+        const regexPattern = pattern
+          .replace(/[.+^${}()|[\]\\]/g, '\\$&')
+          .replace(/\*/g, '.*')
+          .replace(/\?/g, '.');
+        const regex = new RegExp(`^${regexPattern}$`, 'i');
+        if (regex.test(pkgName)) return true;
+      } else {
+        if (pkgName === pattern || pkgName.startsWith(pattern)) return true;
+      }
+    }
+    return false;
+  };
+
+  it('should match exact package names', () => {
+    expect(shouldIgnore('lodash', ['lodash'])).toBe(true);
+    expect(shouldIgnore('lodash', ['express'])).toBe(false);
+  });
+
+  it('should match prefix patterns', () => {
+    expect(shouldIgnore('@types/node', ['@types/'])).toBe(true);
+    expect(shouldIgnore('@types/express', ['@types/'])).toBe(true);
+    expect(shouldIgnore('@babel/core', ['@types/'])).toBe(false);
+  });
+
+  it('should match glob patterns with *', () => {
+    expect(shouldIgnore('@types/node', ['@types/*'])).toBe(true);
+    expect(shouldIgnore('@types/express', ['@types/*'])).toBe(true);
+    expect(shouldIgnore('@babel/core', ['@types/*'])).toBe(false);
+  });
+
+  it('should match glob patterns with ?', () => {
+    expect(shouldIgnore('test1', ['test?'])).toBe(true);
+    expect(shouldIgnore('testa', ['test?'])).toBe(true);
+    expect(shouldIgnore('test12', ['test?'])).toBe(false);
+    expect(shouldIgnore('test', ['test?'])).toBe(false);
+  });
+
+  it('should match complex glob patterns', () => {
+    expect(shouldIgnore('@org/pkg-utils', ['@org/pkg-*'])).toBe(true);
+    expect(shouldIgnore('@org/pkg-core', ['@org/pkg-*'])).toBe(true);
+    expect(shouldIgnore('@org/other', ['@org/pkg-*'])).toBe(false);
+  });
+
+  it('should match multiple patterns', () => {
+    const patterns = ['@types/*', 'lodash', '@babel/*'];
+    expect(shouldIgnore('@types/node', patterns)).toBe(true);
+    expect(shouldIgnore('lodash', patterns)).toBe(true);
+    expect(shouldIgnore('@babel/core', patterns)).toBe(true);
+    expect(shouldIgnore('express', patterns)).toBe(false);
+  });
+
+  it('should be case insensitive for glob patterns', () => {
+    expect(shouldIgnore('MyPackage', ['mypackage'])).toBe(false); // exact match is case sensitive
+    expect(shouldIgnore('MyPackage', ['*package'])).toBe(true); // glob is case insensitive
+    expect(shouldIgnore('MYPACKAGE', ['*package'])).toBe(true);
+  });
+
+  it('should escape regex special characters', () => {
+    expect(shouldIgnore('pkg.name', ['pkg.name'])).toBe(true);
+    expect(shouldIgnore('pkgXname', ['pkg.name'])).toBe(false); // . is literal, not regex wildcard
+    expect(shouldIgnore('pkg.utils', ['pkg.*'])).toBe(true); // but * is glob
+  });
+
+  it('should handle empty patterns array', () => {
+    expect(shouldIgnore('lodash', [])).toBe(false);
+  });
+
+  it('should handle scoped packages', () => {
+    expect(shouldIgnore('@org/package', ['@org/*'])).toBe(true);
+    expect(shouldIgnore('@org/package', ['@org/'])).toBe(true);
+    expect(shouldIgnore('@other/package', ['@org/*'])).toBe(false);
+  });
+});
+
 // Helper functions extracted from cli.ts for testing
 // In production, these would be exported or tested through integration tests
 
