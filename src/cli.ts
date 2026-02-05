@@ -33,7 +33,7 @@ const DEFAULT_CONCURRENCY = 5;
 const require = createRequire(import.meta.url);
 const packageJson = require('../package.json');
 
-// Supported dependency files for monorepo scanning
+// Supported dependency files for monorepo scanning (exact names)
 const SUPPORTED_DEP_FILES = [
   'package.json',
   'package-lock.json',
@@ -55,17 +55,26 @@ const SUPPORTED_DEP_FILES = [
   'mix.exs',
   'pubspec.yaml',
   'cpanfile',
+  'Makefile.PL',
+  'Build.PL',
   'Podfile',
   'Package.swift',
   'environment.yml',
   'environment.yaml',
 ];
 
+// Supported file extensions for monorepo scanning
+const SUPPORTED_DEP_EXTENSIONS = [
+  '.csproj',    // NuGet (.NET C#)
+  '.fsproj',    // NuGet (.NET F#)
+  '.gemspec',   // RubyGems
+];
+
 const program = new Command();
 
 program
   .name('repvet')
-  .description('Check package maintainer reputation (12 ecosystems supported)')
+  .description('Check package maintainer reputation (13 ecosystems supported)')
   .version(packageJson.version);
 
 program
@@ -202,16 +211,18 @@ program
         (globalThis as unknown as { __repvetFilePath?: string }).__repvetFilePath = filePath;
         
         try {
-          const { packages, ecosystem } = parseDepFile(fileName, content);
-          
-          if (packages.length === 0) continue;
-          
-          // Extract package names for display (version info preserved in packages array)
-          const packageNames = packages.map(p => p.name);
+          const parseResults = parseDepFile(fileName, content);
           
           const relativePath = stat.isDirectory() 
             ? path.relative(resolvedPath, filePath)
             : fileName;
+          
+          // parseDepFile returns array (supports multi-ecosystem files like environment.yml)
+          for (const { packages, ecosystem } of parseResults) {
+            if (packages.length === 0) continue;
+          
+            // Extract package names for display (version info preserved in packages array)
+            const packageNames = packages.map(p => p.name);
           
           if (!options.json) {
             console.log(chalk.dim(`Scanning ${relativePath} (${packageNames.length} ${ecosystem} packages)...`));
@@ -237,6 +248,7 @@ program
             results,
             skipped,
           });
+          }  // end of parseResults loop
         } catch (e) {
           // Skip unsupported files silently in directory mode
           if (!stat.isDirectory()) throw e;
@@ -371,8 +383,17 @@ function findDepFiles(
       const subDir = path.join(dir, entry.name);
       files.push(...findDepFiles(subDir, fs, path, maxDepth, currentDepth + 1));
     } else if (entry.isFile()) {
+      // Check exact file names
       if (SUPPORTED_DEP_FILES.includes(entry.name)) {
         files.push(path.join(dir, entry.name));
+      } else {
+        // Check file extensions
+        for (const ext of SUPPORTED_DEP_EXTENSIONS) {
+          if (entry.name.endsWith(ext)) {
+            files.push(path.join(dir, entry.name));
+            break;
+          }
+        }
       }
     }
   }
@@ -388,7 +409,7 @@ function validateEcosystem(eco: string): Ecosystem {
   return eco.toLowerCase() as Ecosystem;
 }
 
-function parseDepFile(fileName: string, content: string): { packages: PackageDependency[]; ecosystem: Ecosystem } {
+function parseDepFile(fileName: string, content: string): Array<{ packages: PackageDependency[]; ecosystem: Ecosystem }> {
   if (fileName === 'package.json' || fileName.endsWith('/package.json')) {
     const pkg = JSON.parse(content) as { 
       dependencies?: Record<string, string>; 
@@ -413,22 +434,22 @@ function parseDepFile(fileName: string, content: string): { packages: PackageDep
     // Merge object keys with bundled array
     const packageNames = [...new Set([...Object.keys(allDeps), ...bundled])];
     
-    return {
+    return [{
       packages: packageNames.map(name => ({ name })),
       ecosystem: 'npm',
-    };
+    }];
   }
   
   if (fileName === 'requirements.txt' || fileName.endsWith('.txt')) {
     // For recursive includes, we need the file path
     // If called from scan command, filePath is available
     const packageNames = parseRequirementsTxt(content, (globalThis as unknown as { __repvetFilePath?: string }).__repvetFilePath);
-    return { packages: packageNames.map(name => ({ name })), ecosystem: 'pypi' };
+    return [{ packages: packageNames.map(name => ({ name })), ecosystem: 'pypi' }];
   }
   
   if (fileName === 'Cargo.toml' || fileName.endsWith('/Cargo.toml')) {
     const packageNames = parseCargoToml(content);
-    return { packages: packageNames.map(name => ({ name })), ecosystem: 'crates' };
+    return [{ packages: packageNames.map(name => ({ name })), ecosystem: 'crates' }];
   }
   
   if (fileName === 'Gemfile' || fileName.endsWith('.gemspec')) {
@@ -441,12 +462,12 @@ function parseDepFile(fileName: string, content: string): { packages: PackageDep
         packageNames.push(match[1]);
       }
     }
-    return { packages: packageNames.map(name => ({ name })), ecosystem: 'rubygems' };
+    return [{ packages: packageNames.map(name => ({ name })), ecosystem: 'rubygems' }];
   }
   
   if (fileName === 'go.mod') {
     const packageNames = parseGoMod(content);
-    return { packages: packageNames.map(name => ({ name })), ecosystem: 'go' };
+    return [{ packages: packageNames.map(name => ({ name })), ecosystem: 'go' }];
   }
   
   if (fileName === 'composer.json') {
@@ -459,7 +480,7 @@ function parseDepFile(fileName: string, content: string): { packages: PackageDep
       ...pkg.require, 
       ...pkg['require-dev'] 
     }).filter(p => !p.startsWith('php') && !p.startsWith('ext-'));
-    return { packages: packageNames.map(name => ({ name })), ecosystem: 'packagist' };
+    return [{ packages: packageNames.map(name => ({ name })), ecosystem: 'packagist' }];
   }
   
   if (fileName.endsWith('.csproj') || fileName.endsWith('.fsproj')) {
@@ -470,7 +491,7 @@ function parseDepFile(fileName: string, content: string): { packages: PackageDep
     while ((match = packageRefPattern.exec(content)) !== null) {
       packageNames.push(match[1]);
     }
-    return { packages: packageNames.map(name => ({ name })), ecosystem: 'nuget' };
+    return [{ packages: packageNames.map(name => ({ name })), ecosystem: 'nuget' }];
   }
   
   if (fileName === 'pom.xml') {
@@ -481,12 +502,12 @@ function parseDepFile(fileName: string, content: string): { packages: PackageDep
     while ((match = depPattern.exec(content)) !== null) {
       packageNames.push(`${match[1]}:${match[2]}`);
     }
-    return { packages: packageNames.map(name => ({ name })), ecosystem: 'maven' };
+    return [{ packages: packageNames.map(name => ({ name })), ecosystem: 'maven' }];
   }
   
   if (fileName === 'build.gradle' || fileName === 'build.gradle.kts') {
     const packageNames = parseBuildGradle(content);
-    return { packages: packageNames.map(name => ({ name })), ecosystem: 'maven' };
+    return [{ packages: packageNames.map(name => ({ name })), ecosystem: 'maven' }];
   }
   
   if (fileName === 'mix.exs') {
@@ -497,7 +518,7 @@ function parseDepFile(fileName: string, content: string): { packages: PackageDep
     while ((match = depPattern.exec(content)) !== null) {
       packageNames.push(match[1]);
     }
-    return { packages: packageNames.map(name => ({ name })), ecosystem: 'hex' };
+    return [{ packages: packageNames.map(name => ({ name })), ecosystem: 'hex' }];
   }
   
   if (fileName === 'pubspec.yaml') {
@@ -522,7 +543,7 @@ function parseDepFile(fileName: string, content: string): { packages: PackageDep
         }
       }
     }
-    return { packages: packageNames.map(name => ({ name })), ecosystem: 'pub' };
+    return [{ packages: packageNames.map(name => ({ name })), ecosystem: 'pub' }];
   }
   
   if (fileName === 'cpanfile' || fileName === 'Makefile.PL' || fileName === 'Build.PL') {
@@ -533,7 +554,7 @@ function parseDepFile(fileName: string, content: string): { packages: PackageDep
     while ((match = requiresPattern.exec(content)) !== null) {
       packageNames.push(match[1].replace(/::/g, '-'));
     }
-    return { packages: packageNames.map(name => ({ name })), ecosystem: 'cpan' };
+    return [{ packages: packageNames.map(name => ({ name })), ecosystem: 'cpan' }];
   }
   
   if (fileName === 'Podfile') {
@@ -544,7 +565,7 @@ function parseDepFile(fileName: string, content: string): { packages: PackageDep
     while ((match = podPattern.exec(content)) !== null) {
       packageNames.push(match[1]);
     }
-    return { packages: packageNames.map(name => ({ name })), ecosystem: 'cocoapods' };
+    return [{ packages: packageNames.map(name => ({ name })), ecosystem: 'cocoapods' }];
   }
   
   if (fileName === 'Package.swift') {
@@ -555,15 +576,24 @@ function parseDepFile(fileName: string, content: string): { packages: PackageDep
   
   if (fileName === 'environment.yml' || fileName === 'environment.yaml' || 
       fileName.endsWith('/environment.yml') || fileName.endsWith('/environment.yaml')) {
-    // Parse Conda environment file
-    const { condaPackages } = parseEnvironmentYaml(content);
-    return { packages: condaPackages.map(name => ({ name })), ecosystem: 'conda' };
+    // Parse Conda environment file (may contain both conda and pip dependencies)
+    const { condaPackages, pipPackages } = parseEnvironmentYaml(content);
+    const results: Array<{ packages: PackageDependency[]; ecosystem: Ecosystem }> = [];
+    
+    if (condaPackages.length > 0) {
+      results.push({ packages: condaPackages.map(name => ({ name })), ecosystem: 'conda' });
+    }
+    if (pipPackages.length > 0) {
+      results.push({ packages: pipPackages.map(name => ({ name })), ecosystem: 'pypi' });
+    }
+    
+    return results.length > 0 ? results : [{ packages: [], ecosystem: 'conda' }];
   }
   
   if (fileName === 'pyproject.toml' || fileName.endsWith('/pyproject.toml')) {
     // Parse pyproject.toml (PEP 621 and Poetry)
     const packages = parsePyprojectToml(content);
-    return { packages: packages.map(name => ({ name })), ecosystem: 'pypi' };
+    return [{ packages: packages.map(name => ({ name })), ecosystem: 'pypi' }];
   }
   
   // ========== Lock Files ==========
@@ -571,37 +601,37 @@ function parseDepFile(fileName: string, content: string): { packages: PackageDep
   // npm: package-lock.json, npm-shrinkwrap.json
   if (fileName === 'package-lock.json' || fileName === 'npm-shrinkwrap.json' ||
       fileName.endsWith('/package-lock.json') || fileName.endsWith('/npm-shrinkwrap.json')) {
-    return { packages: parsePackageLock(content), ecosystem: 'npm' };
+    return [{ packages: parsePackageLock(content), ecosystem: 'npm' }];
   }
   
   // yarn: yarn.lock
   if (fileName === 'yarn.lock' || fileName.endsWith('/yarn.lock')) {
-    return { packages: parseYarnLock(content), ecosystem: 'npm' };
+    return [{ packages: parseYarnLock(content), ecosystem: 'npm' }];
   }
   
   // pnpm: pnpm-lock.yaml
   if (fileName === 'pnpm-lock.yaml' || fileName.endsWith('/pnpm-lock.yaml')) {
-    return { packages: parsePnpmLock(content), ecosystem: 'npm' };
+    return [{ packages: parsePnpmLock(content), ecosystem: 'npm' }];
   }
   
   // Python: poetry.lock
   if (fileName === 'poetry.lock' || fileName.endsWith('/poetry.lock')) {
-    return { packages: parsePoetryLock(content), ecosystem: 'pypi' };
+    return [{ packages: parsePoetryLock(content), ecosystem: 'pypi' }];
   }
   
   // Python: Pipfile.lock
   if (fileName === 'Pipfile.lock' || fileName.endsWith('/Pipfile.lock')) {
-    return { packages: parsePipfileLock(content), ecosystem: 'pypi' };
+    return [{ packages: parsePipfileLock(content), ecosystem: 'pypi' }];
   }
   
   // Rust: Cargo.lock
   if (fileName === 'Cargo.lock' || fileName.endsWith('/Cargo.lock')) {
-    return { packages: parseCargoLock(content), ecosystem: 'crates' };
+    return [{ packages: parseCargoLock(content), ecosystem: 'crates' }];
   }
   
   // Ruby: Gemfile.lock
   if (fileName === 'Gemfile.lock' || fileName.endsWith('/Gemfile.lock')) {
-    return { packages: parseGemfileLock(content), ecosystem: 'rubygems' };
+    return [{ packages: parseGemfileLock(content), ecosystem: 'rubygems' }];
   }
   
   throw new Error(`Unsupported file format: ${fileName}`);

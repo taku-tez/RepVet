@@ -1,6 +1,6 @@
 # RepVet 🔍
 
-Maintainer reputation checker for **14 package ecosystems**. Part of the **xxVet** security CLI series.
+Maintainer reputation checker for **13 package ecosystems**. Part of the **xxVet** security CLI series.
 
 [![npm version](https://img.shields.io/npm/v/repvet.svg)](https://www.npmjs.com/package/repvet)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -18,7 +18,7 @@ RepVet helps you identify risky dependencies before they become a problem.
 
 ## Features
 
-- **14 Ecosystem Support**: npm, PyPI, crates.io, RubyGems, Go, Packagist, NuGet, Maven, Hex, pub.dev, CPAN, CocoaPods, SwiftPM, Conda
+- **13 Ecosystem Support**: npm, PyPI, crates.io, RubyGems, Go, Packagist, NuGet, Maven, Hex, pub.dev, CPAN, CocoaPods, Conda
 - **7 Lockfile Formats**: package-lock.json, yarn.lock, pnpm-lock.yaml, poetry.lock, Pipfile.lock, Cargo.lock, Gemfile.lock
 - **Version-aware Vulnerability Matching**: OSV queries use actual dependency versions for precise CVE matching
 - **Monorepo & Directory Scanning**: Recursively scan entire project directories
@@ -43,7 +43,6 @@ RepVet helps you identify risky dependencies before they become a problem.
 | pub.dev | Dart/Flutter | pub.dev | ✅ discontinued | ✅ | ✅ OSV | ✅ |
 | CPAN | Perl | metacpan.org | ✅ | ✅ | ✅ OSV | ✅ |
 | CocoaPods | Swift/ObjC | cocoapods.org | ✅ | ✅ | ✅ OSV | ✅ |
-| SwiftPM | Swift | Package.swift | — | — | ✅ OSV | ✅ |
 | Conda | Python/R/Data Science | anaconda.org | ❌ | ✅ | ❌ * | ✅ |
 
 \* **Conda vulnerability limitation**: No free, OSS vulnerability database exists for Conda packages. Anaconda's CVE curation is a commercial feature. For Python packages distributed via Conda, consider also scanning the corresponding `requirements.txt` with PyPI ecosystem for vulnerability coverage.
@@ -73,8 +72,7 @@ RepVet helps you identify risky dependencies before they become a problem.
 | pubspec.yaml | pub.dev | ❌ | Ranges |
 | cpanfile | CPAN | ❌ | Ranges |
 | Podfile | CocoaPods | ❌ | Ranges |
-| Package.swift | SwiftPM | ❌ | Ranges |
-| environment.yml | Conda | ❌ | Partial |
+| environment.yml | Conda + PyPI | ❌ | Partial |
 
 ## Installation
 
