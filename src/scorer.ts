@@ -12,13 +12,13 @@ import { Deduction, ReputationResult, PackageInfo, Ecosystem, VulnerabilityStats
 import { fetchPackageInfo, checkOwnershipTransfer, NpmPackageData } from './registry/npm.js';
 import { fetchPyPIPackageInfo, checkPyPIYanked, checkPyPIOwnershipTransfer } from './registry/pypi.js';
 import { fetchCratesPackageInfo, checkCratesOwnershipTransfer, checkCratesYanked } from './registry/crates.js';
-import { fetchRubyGemsPackageInfo, checkRubyGemsYanked } from './registry/rubygems.js';
+import { fetchRubyGemsPackageInfo, checkRubyGemsYanked, checkRubyGemsOwnershipTransfer } from './registry/rubygems.js';
 import { fetchGoPackageInfo, checkGoDeprecated, checkGoRetracted, checkGoOwnershipTransfer } from './registry/golang.js';
 import { fetchPackagistPackageInfo, checkPackagistAbandoned, checkPackagistOwnershipTransfer, PackagistPackageData } from './registry/packagist.js';
 import { fetchNuGetPackageInfo, checkNuGetOwnershipTransfer, NuGetPackageData } from './registry/nuget.js';
 import { fetchMavenPackageInfo, checkMavenRelocation, MavenPackageData } from './registry/maven.js';
-import { fetchHexPackageInfo, checkHexRetired, HexPackageData } from './registry/hex.js';
-import { fetchPubPackageInfo, checkPubDiscontinued, PubPackageData } from './registry/pub.js';
+import { fetchHexPackageInfo, checkHexRetired, checkHexOwnershipTransfer, HexPackageData } from './registry/hex.js';
+import { fetchPubPackageInfo, checkPubDiscontinued, checkPubOwnershipTransfer, PubPackageData } from './registry/pub.js';
 import { fetchCPANPackageInfo, checkCPANOwnershipTransfer, checkCPANDeprecated, CPANPackageData } from './registry/cpan.js';
 import { fetchCocoaPodsPackageInfo, checkCocoaPodsDeprecated, checkCocoaPodsOwnershipTransfer, CocoaPodsPackageData } from './registry/cocoapods.js';
 import { fetchCondaPackageInfo, checkCondaOwnershipTransfer, CondaPackageData } from './registry/conda.js';
@@ -579,6 +579,18 @@ export async function checkPackageReputation(
       });
       score -= points;
     }
+  } else if (ecosystem === 'rubygems') {
+    const transferResult = await checkRubyGemsOwnershipTransfer(packageName);
+    if (transferResult.transferred) {
+      hasOwnershipTransfer = true;
+      const points = applyConfidence(DEDUCTIONS.OWNERSHIP_TRANSFER, transferResult.confidence);
+      deductions.push({
+        reason: transferResult.details || 'Owner change detected',
+        points,
+        confidence: transferResult.confidence,
+      });
+      score -= points;
+    }
   } else if (ecosystem === 'pypi') {
     const transferResult = await checkPyPIOwnershipTransfer(packageName);
     if (transferResult.transferred) {
@@ -647,6 +659,30 @@ export async function checkPackageReputation(
       const points = applyConfidence(DEDUCTIONS.OWNERSHIP_TRANSFER, transferResult.confidence);
       deductions.push({
         reason: transferResult.details || 'Multiple uploaders detected',
+        points,
+        confidence: transferResult.confidence,
+      });
+      score -= points;
+    }
+  } else if (ecosystem === 'hex') {
+    const transferResult = await checkHexOwnershipTransfer(packageName);
+    if (transferResult.transferred) {
+      hasOwnershipTransfer = true;
+      const points = applyConfidence(DEDUCTIONS.OWNERSHIP_TRANSFER, transferResult.confidence);
+      deductions.push({
+        reason: transferResult.details || 'Owner change detected',
+        points,
+        confidence: transferResult.confidence,
+      });
+      score -= points;
+    }
+  } else if (ecosystem === 'pub') {
+    const transferResult = await checkPubOwnershipTransfer(packageName);
+    if (transferResult.transferred) {
+      hasOwnershipTransfer = true;
+      const points = applyConfidence(DEDUCTIONS.OWNERSHIP_TRANSFER, transferResult.confidence);
+      deductions.push({
+        reason: transferResult.details || 'Publisher change detected',
         points,
         confidence: transferResult.confidence,
       });
