@@ -72,6 +72,7 @@ RepVet helps you identify risky dependencies before they become a problem.
 | mix.exs | Hex | ❌ | Ranges |
 | mix.lock | Hex | ✅ | ✅ Exact |
 | pubspec.yaml | pub.dev | ❌ | Ranges |
+| pubspec.lock | pub.dev | ✅ | ✅ Exact |
 | cpanfile | CPAN | ❌ | Ranges |
 | Podfile | CocoaPods | ❌ | Ranges |
 | environment.yml | Conda + PyPI | ❌ | Partial |

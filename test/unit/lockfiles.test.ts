@@ -444,4 +444,138 @@ PLATFORMS
     });
   });
 
+  describe('pubspec.lock parsing', () => {
+    function parsePubspecLock(content: string): string[] {
+      const deps: string[] = [];
+      const seen = new Set<string>();
+      const lines = content.split('\n');
+
+      let inPackages = false;
+      let currentPackage: string | null = null;
+      let currentSource: string | null = null;
+
+      for (const line of lines) {
+        if (/^packages:\s*$/.test(line)) {
+          inPackages = true;
+          continue;
+        }
+        if (inPackages && /^[a-z]/.test(line) && !line.startsWith(' ')) {
+          if (currentPackage && currentSource === 'hosted' && !seen.has(currentPackage)) {
+            seen.add(currentPackage);
+            deps.push(currentPackage);
+          }
+          inPackages = false;
+          currentPackage = null;
+          currentSource = null;
+          continue;
+        }
+        if (!inPackages) continue;
+
+        const pkgMatch = line.match(/^  ([a-zA-Z0-9_]+):\s*$/);
+        if (pkgMatch) {
+          if (currentPackage && currentSource === 'hosted' && !seen.has(currentPackage)) {
+            seen.add(currentPackage);
+            deps.push(currentPackage);
+          }
+          currentPackage = pkgMatch[1];
+          currentSource = null;
+          continue;
+        }
+
+        const sourceMatch = line.match(/^\s+source:\s*(\S+)/);
+        if (sourceMatch) {
+          currentSource = sourceMatch[1];
+          continue;
+        }
+      }
+
+      // Flush last package
+      if (currentPackage && currentSource === 'hosted' && !seen.has(currentPackage)) {
+        seen.add(currentPackage);
+        deps.push(currentPackage);
+      }
+
+      return deps;
+    }
+
+    it('should parse pubspec.lock from fixture', () => {
+      const content = fs.readFileSync(path.join(fixturesDir, 'pubspec.lock'), 'utf-8');
+      const packages = parsePubspecLock(content);
+      expect(packages).toContain('http');
+      expect(packages).toContain('provider');
+      expect(packages).toContain('json_annotation');
+      expect(packages).toContain('async');
+      expect(packages).toContain('collection');
+      expect(packages).toContain('meta');
+      expect(packages).toContain('path');
+    });
+
+    it('should only include hosted packages (not sdk, path, git)', () => {
+      const content = fs.readFileSync(path.join(fixturesDir, 'pubspec.lock'), 'utf-8');
+      const packages = parsePubspecLock(content);
+      // SDK packages
+      expect(packages).not.toContain('flutter');
+      expect(packages).not.toContain('flutter_test');
+      // Path packages
+      expect(packages).not.toContain('my_local_pkg');
+      // Git packages
+      expect(packages).not.toContain('my_git_dep');
+    });
+
+    it('should extract correct count of hosted packages', () => {
+      const content = fs.readFileSync(path.join(fixturesDir, 'pubspec.lock'), 'utf-8');
+      const packages = parsePubspecLock(content);
+      // 10 hosted packages in fixture (async, collection, cupertino_icons, http, http_parser, json_annotation, matcher, meta, path, provider)
+      expect(packages).toHaveLength(10);
+    });
+
+    it('should handle minimal pubspec.lock', () => {
+      const content = `packages:
+  http:
+    dependency: "direct main"
+    description:
+      name: http
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.2.0"
+sdks:
+  dart: ">=3.0.0 <4.0.0"
+`;
+      const packages = parsePubspecLock(content);
+      expect(packages).toContain('http');
+      expect(packages).toHaveLength(1);
+    });
+
+    it('should handle empty packages section', () => {
+      const content = `packages:
+sdks:
+  dart: ">=3.0.0 <4.0.0"
+`;
+      const packages = parsePubspecLock(content);
+      expect(packages).toHaveLength(0);
+    });
+
+    it('should skip sdk dependencies', () => {
+      const content = `packages:
+  flutter:
+    dependency: "direct main"
+    description: flutter
+    source: sdk
+    version: "0.0.0"
+  http:
+    dependency: "direct main"
+    description:
+      name: http
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.2.0"
+sdks:
+  dart: ">=3.0.0"
+`;
+      const packages = parsePubspecLock(content);
+      expect(packages).toContain('http');
+      expect(packages).not.toContain('flutter');
+    });
+  });
+
 });

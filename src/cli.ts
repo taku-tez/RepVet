@@ -27,6 +27,7 @@ import {
   parseGemfileLock,
   parseComposerLock,
   parseMixLock,
+  parsePubspecLock,
 } from './parsers/index.js';
 
 const DEFAULT_CONCURRENCY = 5;
@@ -58,6 +59,7 @@ const SUPPORTED_DEP_FILES = [
   'mix.exs',
   'mix.lock',
   'pubspec.yaml',
+  'pubspec.lock',
   'cpanfile',
   'Makefile.PL',
   'Build.PL',
@@ -646,6 +648,11 @@ function parseDepFile(fileName: string, content: string): Array<{ packages: Pack
   // Ruby: Gemfile.lock
   if (fileName === 'Gemfile.lock' || fileName.endsWith('/Gemfile.lock')) {
     return [{ packages: parseGemfileLock(content), ecosystem: 'rubygems' }];
+  }
+  
+  // Dart/Flutter: pubspec.lock
+  if (fileName === 'pubspec.lock' || fileName.endsWith('/pubspec.lock')) {
+    return [{ packages: parsePubspecLock(content), ecosystem: 'pub' }];
   }
   
   throw new Error(`Unsupported file format: ${fileName}`);

@@ -10,6 +10,7 @@
  * - Ruby: Gemfile.lock
  * - PHP: composer.lock
  * - Elixir: mix.lock
+ * - Dart/Flutter: pubspec.lock
  */
 
 // npm ecosystem
@@ -35,3 +36,6 @@ export { parseComposerLock } from './php.js';
 
 // Elixir ecosystem
 export { parseMixLock } from './elixir.js';
+
+// Dart/Flutter ecosystem
+export { parsePubspecLock } from './dart.js';

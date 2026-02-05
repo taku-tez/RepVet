@@ -585,4 +585,124 @@ PLATFORMS
     });
   });
 
+  describe('pubspec.lock version extraction', () => {
+    function parsePubspecLock(content: string): PackageDependency[] {
+      const deps: PackageDependency[] = [];
+      const seen = new Set<string>();
+      const lines = content.split('\n');
+
+      let inPackages = false;
+      let currentPackage: string | null = null;
+      let currentVersion: string | null = null;
+      let currentSource: string | null = null;
+
+      for (const line of lines) {
+        if (/^packages:\s*$/.test(line)) {
+          inPackages = true;
+          continue;
+        }
+        if (inPackages && /^[a-z]/.test(line) && !line.startsWith(' ')) {
+          if (currentPackage && currentSource === 'hosted' && !seen.has(currentPackage)) {
+            seen.add(currentPackage);
+            deps.push({ name: currentPackage, version: currentVersion || undefined });
+          }
+          inPackages = false;
+          currentPackage = null;
+          currentVersion = null;
+          currentSource = null;
+          continue;
+        }
+        if (!inPackages) continue;
+
+        const pkgMatch = line.match(/^  ([a-zA-Z0-9_]+):\s*$/);
+        if (pkgMatch) {
+          if (currentPackage && currentSource === 'hosted' && !seen.has(currentPackage)) {
+            seen.add(currentPackage);
+            deps.push({ name: currentPackage, version: currentVersion || undefined });
+          }
+          currentPackage = pkgMatch[1];
+          currentVersion = null;
+          currentSource = null;
+          continue;
+        }
+
+        const sourceMatch = line.match(/^\s+source:\s*(\S+)/);
+        if (sourceMatch) {
+          currentSource = sourceMatch[1];
+          continue;
+        }
+
+        const versionMatch = line.match(/^\s+version:\s*"([^"]+)"/);
+        if (versionMatch) {
+          currentVersion = versionMatch[1];
+          continue;
+        }
+      }
+
+      if (currentPackage && currentSource === 'hosted' && !seen.has(currentPackage)) {
+        seen.add(currentPackage);
+        deps.push({ name: currentPackage, version: currentVersion || undefined });
+      }
+
+      return deps;
+    }
+
+    it('should extract versions from fixture file', () => {
+      const content = fs.readFileSync(path.join(fixturesDir, 'pubspec.lock'), 'utf-8');
+      const packages = parsePubspecLock(content);
+
+      const http = packages.find(p => p.name === 'http');
+      expect(http).toBeDefined();
+      expect(http?.version).toBe('1.2.0');
+
+      const provider = packages.find(p => p.name === 'provider');
+      expect(provider).toBeDefined();
+      expect(provider?.version).toBe('6.1.1');
+
+      const async_ = packages.find(p => p.name === 'async');
+      expect(async_).toBeDefined();
+      expect(async_?.version).toBe('2.11.0');
+    });
+
+    it('should extract correct hosted package count', () => {
+      const content = fs.readFileSync(path.join(fixturesDir, 'pubspec.lock'), 'utf-8');
+      const packages = parsePubspecLock(content);
+      // 10 hosted, excluding sdk/path/git deps
+      expect(packages).toHaveLength(10);
+    });
+
+    it('should not include sdk/path/git packages', () => {
+      const content = fs.readFileSync(path.join(fixturesDir, 'pubspec.lock'), 'utf-8');
+      const packages = parsePubspecLock(content);
+      expect(packages.find(p => p.name === 'flutter')).toBeUndefined();
+      expect(packages.find(p => p.name === 'flutter_test')).toBeUndefined();
+      expect(packages.find(p => p.name === 'my_local_pkg')).toBeUndefined();
+      expect(packages.find(p => p.name === 'my_git_dep')).toBeUndefined();
+    });
+
+    it('should handle inline version/source', () => {
+      const content = `packages:
+  http:
+    dependency: "direct main"
+    description:
+      name: http
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.2.0"
+  path:
+    dependency: transitive
+    description:
+      name: path
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.9.0"
+sdks:
+  dart: ">=3.0.0"
+`;
+      const packages = parsePubspecLock(content);
+      expect(packages.find(p => p.name === 'http')?.version).toBe('1.2.0');
+      expect(packages.find(p => p.name === 'path')?.version).toBe('1.9.0');
+    });
+  });
+
 });
