@@ -197,6 +197,24 @@ repvet check lodash --json
 repvet scan ./package.json --json
 ```
 
+### SARIF output
+
+Export results in [SARIF v2.1.0](https://docs.oasis-open.org/sarif/sarif/v2.1.0/sarif-v2.1.0.html) format for integration with GitHub Code Scanning, Azure DevOps, and other SARIF-compatible tools:
+
+```bash
+repvet scan ./package.json --sarif > results.sarif
+repvet scan . --sarif --fail-under 50 > results.sarif
+```
+
+Upload to GitHub Code Scanning:
+
+```yaml
+- name: Upload SARIF
+  uses: github/codeql-action/upload-sarif@v3
+  with:
+    sarif_file: results.sarif
+```
+
 ## Scoring
 
 RepVet uses a **deduction-based** scoring system starting at 100:

@@ -12,6 +12,7 @@ import pLimit from 'p-limit';
 import { checkPackageReputation } from './scorer.js';
 import { ReputationResult, Ecosystem, PackageDependency } from './types.js';
 import { parseEnvironmentYaml } from './registry/conda.js';
+import { toSarif } from './sarif.js';
 import {
   parsePackageLock,
   parseYarnLock,
@@ -125,11 +126,12 @@ program
   .command('scan <path>')
   .description('Scan dependency file or directory (monorepo support)')
   .option('--json', 'Output as JSON')
+  .option('--sarif', 'Output as SARIF v2.1.0 (Static Analysis Results Interchange Format)')
   .option('--threshold <score>', 'Only show packages below this score', '100')
   .option('--fail-under <score>', 'Exit with code 1 if any package scores below this')
   .option('-c, --concurrency <number>', 'Number of concurrent API requests', String(DEFAULT_CONCURRENCY))
   .option('--show-skipped', 'Show details of skipped packages')
-  .action(async (inputPath: string, options: { json?: boolean; threshold?: string; failUnder?: string; concurrency?: string; showSkipped?: boolean }) => {
+  .action(async (inputPath: string, options: { json?: boolean; sarif?: boolean; threshold?: string; failUnder?: string; concurrency?: string; showSkipped?: boolean }) => {
     try {
       const fs = await import('fs');
       const path = await import('path');
@@ -236,7 +238,7 @@ program
             // Extract package names for display (version info preserved in packages array)
             const packageNames = packages.map(p => p.name);
           
-          if (!options.json) {
+          if (!options.json && !options.sarif) {
             console.log(chalk.dim(`Scanning ${relativePath} (${packageNames.length} ${ecosystem} packages)...`));
           }
           
@@ -280,6 +282,12 @@ program
       
       const filteredResults = allResults.filter(r => r.score < threshold);
       const hasFailure = failUnder !== undefined && allResults.some(r => r.score < failUnder);
+      
+      if (options.sarif) {
+        const sarifOutput = toSarif(allResults, inputPath);
+        console.log(JSON.stringify(sarifOutput, null, 2));
+        process.exit(hasFailure ? 1 : 0);
+      }
       
       if (options.json) {
         // Multi-file JSON output

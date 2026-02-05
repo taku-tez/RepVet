@@ -24,5 +24,6 @@ export type { OwnershipTransferResult } from './registry/utils.js';
 export { cleanRepoUrl, isValidRepoUrl, parseMaintainerString, fetchWithRetry } from './registry/utils.js';
 export type { FetchWithRetryOptions } from './registry/utils.js';
 export { queryPackageVulnerabilities, analyzeVulnerabilityHistory } from './osv/client.js';
+export { toSarif } from './sarif.js';
 export * from './types.js';
 export type { PackageDependency } from './types.js';
