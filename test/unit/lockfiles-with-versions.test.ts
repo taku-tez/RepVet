@@ -525,4 +525,64 @@ PLATFORMS
     });
   });
 
+  describe('mix.lock version extraction', () => {
+    function parseMixLock(content: string): PackageDependency[] {
+      const deps: PackageDependency[] = [];
+      const seen = new Set<string>();
+      const hexPattern = /"([^"]+)":\s*\{:hex,\s*:[\w]+,\s*"([^"]+)"/g;
+      let match: RegExpExecArray | null;
+      while ((match = hexPattern.exec(content)) !== null) {
+        const name = match[1];
+        const version = match[2];
+        if (name && !seen.has(name)) {
+          seen.add(name);
+          deps.push({ name, version });
+        }
+      }
+      return deps;
+    }
+
+    it('should extract versions from fixture file', () => {
+      const content = fs.readFileSync(path.join(fixturesDir, 'mix.lock'), 'utf-8');
+      const packages = parseMixLock(content);
+
+      const phoenix = packages.find(p => p.name === 'phoenix');
+      expect(phoenix).toBeDefined();
+      expect(phoenix?.version).toBe('1.7.10');
+
+      const ecto = packages.find(p => p.name === 'ecto');
+      expect(ecto).toBeDefined();
+      expect(ecto?.version).toBe('3.11.1');
+
+      const jason = packages.find(p => p.name === 'jason');
+      expect(jason).toBeDefined();
+      expect(jason?.version).toBe('1.4.1');
+    });
+
+    it('should extract correct package count (hex only)', () => {
+      const content = fs.readFileSync(path.join(fixturesDir, 'mix.lock'), 'utf-8');
+      const packages = parseMixLock(content);
+      // 13 hex packages, excluding git and path deps
+      expect(packages).toHaveLength(13);
+    });
+
+    it('should handle packages with underscore names', () => {
+      const content = `%{
+  "db_connection": {:hex, :db_connection, "2.6.0", "hash", [:mix], [], "hexpm", "sha"},
+  "ecto_sql": {:hex, :ecto_sql, "3.11.1", "hash", [:mix], [], "hexpm", "sha"},
+  "phoenix_pubsub": {:hex, :phoenix_pubsub, "2.1.3", "hash", [:mix], [], "hexpm", "sha"},
+}`;
+      const packages = parseMixLock(content);
+      expect(packages.find(p => p.name === 'db_connection')?.version).toBe('2.6.0');
+      expect(packages.find(p => p.name === 'ecto_sql')?.version).toBe('3.11.1');
+      expect(packages.find(p => p.name === 'phoenix_pubsub')?.version).toBe('2.1.3');
+    });
+
+    it('should handle empty mix.lock', () => {
+      const content = '%{}';
+      const packages = parseMixLock(content);
+      expect(packages).toEqual([]);
+    });
+  });
+
 });

@@ -26,6 +26,7 @@ import {
   parseBuildGradle,
   parseGemfileLock,
   parseComposerLock,
+  parseMixLock,
 } from './parsers/index.js';
 
 const DEFAULT_CONCURRENCY = 5;
@@ -55,6 +56,7 @@ const SUPPORTED_DEP_FILES = [
   'build.gradle',
   'build.gradle.kts',
   'mix.exs',
+  'mix.lock',
   'pubspec.yaml',
   'cpanfile',
   'Makefile.PL',
@@ -488,6 +490,11 @@ function parseDepFile(fileName: string, content: string): Array<{ packages: Pack
   // PHP: composer.lock
   if (fileName === 'composer.lock' || fileName.endsWith('/composer.lock')) {
     return [{ packages: parseComposerLock(content), ecosystem: 'packagist' }];
+  }
+  
+  // Elixir: mix.lock
+  if (fileName === 'mix.lock' || fileName.endsWith('/mix.lock')) {
+    return [{ packages: parseMixLock(content), ecosystem: 'hex' }];
   }
   
   if (fileName.endsWith('.csproj') || fileName.endsWith('.fsproj')) {

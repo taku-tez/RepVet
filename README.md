@@ -19,7 +19,7 @@ RepVet helps you identify risky dependencies before they become a problem.
 ## Features
 
 - **13 Ecosystem Support**: npm, PyPI, crates.io, RubyGems, Go, Packagist, NuGet, Maven, Hex, pub.dev, CPAN, CocoaPods, Conda
-- **7 Lockfile Formats**: package-lock.json, yarn.lock, pnpm-lock.yaml, poetry.lock, Pipfile.lock, Cargo.lock, Gemfile.lock
+- **9 Lockfile Formats**: package-lock.json, yarn.lock, pnpm-lock.yaml, poetry.lock, Pipfile.lock, Cargo.lock, Gemfile.lock, composer.lock, mix.lock
 - **Version-aware Vulnerability Matching**: OSV queries use actual dependency versions for precise CVE matching
 - **Monorepo & Directory Scanning**: Recursively scan entire project directories
 - **Multi-VCS Support**: GitHub, GitLab, and Bitbucket repository analysis
@@ -65,10 +65,12 @@ RepVet helps you identify risky dependencies before they become a problem.
 | Gemfile.lock | RubyGems | ✅ | ✅ Exact |
 | go.mod | Go | ❌ | ✅ Exact |
 | composer.json | Packagist | ❌ | Ranges |
+| composer.lock | Packagist | ✅ | ✅ Exact |
 | pom.xml | Maven | ❌ | Ranges |
 | build.gradle | Maven | ❌ | Ranges |
 | build.gradle.kts | Maven | ❌ | Ranges |
 | mix.exs | Hex | ❌ | Ranges |
+| mix.lock | Hex | ✅ | ✅ Exact |
 | pubspec.yaml | pub.dev | ❌ | Ranges |
 | cpanfile | CPAN | ❌ | Ranges |
 | Podfile | CocoaPods | ❌ | Ranges |

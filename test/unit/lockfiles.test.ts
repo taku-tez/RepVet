@@ -382,4 +382,66 @@ PLATFORMS
     });
   });
 
+  describe('mix.lock parsing', () => {
+    function parseMixLock(content: string): string[] {
+      const deps: string[] = [];
+      const seen = new Set<string>();
+      const hexPattern = /"([^"]+)":\s*\{:hex,\s*:[\w]+,\s*"([^"]+)"/g;
+      let match: RegExpExecArray | null;
+      while ((match = hexPattern.exec(content)) !== null) {
+        const name = match[1];
+        if (name && !seen.has(name)) {
+          seen.add(name);
+          deps.push(name);
+        }
+      }
+      return deps;
+    }
+
+    it('should parse mix.lock from fixture', () => {
+      const content = fs.readFileSync(path.join(fixturesDir, 'mix.lock'), 'utf-8');
+      const packages = parseMixLock(content);
+      expect(packages.length).toBeGreaterThanOrEqual(10);
+      expect(packages).toContain('phoenix');
+      expect(packages).toContain('ecto');
+      expect(packages).toContain('jason');
+      expect(packages).toContain('postgrex');
+    });
+
+    it('should only include hex packages, not git or path deps', () => {
+      const content = fs.readFileSync(path.join(fixturesDir, 'mix.lock'), 'utf-8');
+      const packages = parseMixLock(content);
+      expect(packages).not.toContain('my_git_dep');
+      expect(packages).not.toContain('local_dep');
+    });
+
+    it('should handle inline format', () => {
+      const content = `%{"plug": {:hex, :plug, "1.15.3", "hash", [:mix], [], "hexpm", "sha"}, "cowboy": {:hex, :cowboy, "2.12.0", "hash", [:rebar3], [], "hexpm", "sha"}}`;
+      const packages = parseMixLock(content);
+      expect(packages).toContain('plug');
+      expect(packages).toContain('cowboy');
+      expect(packages).toHaveLength(2);
+    });
+
+    it('should skip git dependencies', () => {
+      const content = `%{
+  "hex_pkg": {:hex, :hex_pkg, "1.0.0", "hash", [:mix], [], "hexpm", "sha"},
+  "git_dep": {:git, "https://github.com/user/repo.git", "abc123", [branch: "main"]},
+}`;
+      const packages = parseMixLock(content);
+      expect(packages).toContain('hex_pkg');
+      expect(packages).not.toContain('git_dep');
+    });
+
+    it('should skip path dependencies', () => {
+      const content = `%{
+  "hex_pkg": {:hex, :hex_pkg, "2.0.0", "hash", [:mix], [], "hexpm", "sha"},
+  "path_dep": {:path, "../local"},
+}`;
+      const packages = parseMixLock(content);
+      expect(packages).toContain('hex_pkg');
+      expect(packages).not.toContain('path_dep');
+    });
+  });
+
 });

@@ -8,6 +8,8 @@
  * - Go: go.mod
  * - Gradle/Maven: build.gradle, build.gradle.kts
  * - Ruby: Gemfile.lock
+ * - PHP: composer.lock
+ * - Elixir: mix.lock
  */
 
 // npm ecosystem
@@ -30,3 +32,6 @@ export { parseGemfileLock } from './ruby.js';
 
 // PHP ecosystem
 export { parseComposerLock } from './php.js';
+
+// Elixir ecosystem
+export { parseMixLock } from './elixir.js';
