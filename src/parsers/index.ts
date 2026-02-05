@@ -27,3 +27,6 @@ export { parseBuildGradle } from './gradle.js';
 
 // Ruby ecosystem
 export { parseGemfileLock } from './ruby.js';
+
+// PHP ecosystem
+export { parseComposerLock } from './php.js';

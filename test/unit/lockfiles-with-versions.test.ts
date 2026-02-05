@@ -278,6 +278,38 @@ function parseGemfileLock(content: string): PackageDependency[] {
   return deps;
 }
 
+function parseComposerLock(content: string): PackageDependency[] {
+  const deps: PackageDependency[] = [];
+  const seen = new Set<string>();
+  
+  try {
+    const lock = JSON.parse(content) as {
+      packages?: Array<{ name: string; version: string }>;
+      'packages-dev'?: Array<{ name: string; version: string }>;
+    };
+    
+    const allPackages = [
+      ...(lock.packages || []),
+      ...(lock['packages-dev'] || []),
+    ];
+    
+    for (const pkg of allPackages) {
+      if (!pkg.name || seen.has(pkg.name)) continue;
+      // Skip PHP version constraints and extensions, not packages like 'phpunit/phpunit'
+      if (pkg.name === 'php' || pkg.name.startsWith('ext-')) continue;
+      
+      seen.add(pkg.name);
+      const version = pkg.version?.replace(/^v/, '');
+      
+      deps.push({ name: pkg.name, version });
+    }
+  } catch {
+    return [];
+  }
+  
+  return deps;
+}
+
 describe('Lock File Parsing with Version Extraction', () => {
 
   describe('package-lock.json version extraction', () => {
@@ -442,6 +474,54 @@ PLATFORMS
       
       expect(packages.find(p => p.name === 'rack')?.version).toBe('2.2.7');
       expect(packages.find(p => p.name === 'rails')?.version).toBe('7.0.5');
+    });
+  });
+
+  describe('composer.lock version extraction', () => {
+    it('should extract versions from fixture file', () => {
+      const content = fs.readFileSync(path.join(fixturesDir, 'composer.lock'), 'utf-8');
+      const packages = parseComposerLock(content);
+      
+      const monolog = packages.find(p => p.name === 'monolog/monolog');
+      expect(monolog).toBeDefined();
+      expect(monolog?.version).toBe('3.5.0');
+      
+      // Symfony console has 'v' prefix that should be stripped
+      const symfony = packages.find(p => p.name === 'symfony/console');
+      expect(symfony).toBeDefined();
+      expect(symfony?.version).toBe('6.4.3');
+    });
+
+    it('should include packages-dev', () => {
+      const content = fs.readFileSync(path.join(fixturesDir, 'composer.lock'), 'utf-8');
+      const packages = parseComposerLock(content);
+      
+      const phpunit = packages.find(p => p.name === 'phpunit/phpunit');
+      expect(phpunit).toBeDefined();
+      expect(phpunit?.version).toBe('10.5.5');
+    });
+
+    it('should correctly parse JSON format', () => {
+      const content = JSON.stringify({
+        packages: [
+          { name: 'laravel/framework', version: 'v10.0.0' },
+          { name: 'guzzlehttp/guzzle', version: '7.8.0' }
+        ],
+        'packages-dev': [
+          { name: 'mockery/mockery', version: '1.6.0' }
+        ]
+      });
+      const packages = parseComposerLock(content);
+      
+      expect(packages.find(p => p.name === 'laravel/framework')?.version).toBe('10.0.0');
+      expect(packages.find(p => p.name === 'guzzlehttp/guzzle')?.version).toBe('7.8.0');
+      expect(packages.find(p => p.name === 'mockery/mockery')?.version).toBe('1.6.0');
+    });
+
+    it('should handle empty lock file', () => {
+      const content = JSON.stringify({ packages: [], 'packages-dev': [] });
+      const packages = parseComposerLock(content);
+      expect(packages).toEqual([]);
     });
   });
 

@@ -25,6 +25,7 @@ import {
   parseGoMod,
   parseBuildGradle,
   parseGemfileLock,
+  parseComposerLock,
 } from './parsers/index.js';
 
 const DEFAULT_CONCURRENCY = 5;
@@ -49,6 +50,7 @@ const SUPPORTED_DEP_FILES = [
   'Gemfile.lock',
   'go.mod',
   'composer.json',
+  'composer.lock',
   'pom.xml',
   'build.gradle',
   'build.gradle.kts',
@@ -481,6 +483,11 @@ function parseDepFile(fileName: string, content: string): Array<{ packages: Pack
       ...pkg['require-dev'] 
     }).filter(p => !p.startsWith('php') && !p.startsWith('ext-'));
     return [{ packages: packageNames.map(name => ({ name })), ecosystem: 'packagist' }];
+  }
+  
+  // PHP: composer.lock
+  if (fileName === 'composer.lock' || fileName.endsWith('/composer.lock')) {
+    return [{ packages: parseComposerLock(content), ecosystem: 'packagist' }];
   }
   
   if (fileName.endsWith('.csproj') || fileName.endsWith('.fsproj')) {
