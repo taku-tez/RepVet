@@ -28,6 +28,7 @@ import {
   parseComposerLock,
   parseMixLock,
   parsePubspecLock,
+  parsePodfileLock,
 } from './parsers/index.js';
 
 const DEFAULT_CONCURRENCY = 5;
@@ -64,6 +65,7 @@ const SUPPORTED_DEP_FILES = [
   'Makefile.PL',
   'Build.PL',
   'Podfile',
+  'Podfile.lock',
   'Package.swift',
   'environment.yml',
   'environment.yaml',
@@ -653,6 +655,11 @@ function parseDepFile(fileName: string, content: string): Array<{ packages: Pack
   // Dart/Flutter: pubspec.lock
   if (fileName === 'pubspec.lock' || fileName.endsWith('/pubspec.lock')) {
     return [{ packages: parsePubspecLock(content), ecosystem: 'pub' }];
+  }
+  
+  // CocoaPods: Podfile.lock
+  if (fileName === 'Podfile.lock' || fileName.endsWith('/Podfile.lock')) {
+    return [{ packages: parsePodfileLock(content), ecosystem: 'cocoapods' }];
   }
   
   throw new Error(`Unsupported file format: ${fileName}`);

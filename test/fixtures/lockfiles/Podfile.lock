@@ -1,0 +1,78 @@
+PODS:
+  - Alamofire (5.9.1)
+  - Firebase (10.24.0):
+    - Firebase/Core (= 10.24.0)
+  - Firebase/Core (10.24.0):
+    - FirebaseAnalytics (~> 10.24.0)
+    - GoogleUtilities/Environment (~> 7.13)
+  - FirebaseAnalytics (10.24.0):
+    - FirebaseAnalytics/AdIdSupport (= 10.24.0)
+    - GoogleAppMeasurement (= 10.24.0)
+  - GoogleAppMeasurement (10.24.0):
+    - GoogleAppMeasurement/AdIdSupport (= 10.24.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.11)
+  - GoogleUtilities/AppDelegateSwizzler (7.13.0):
+    - GoogleUtilities/Environment
+    - GoogleUtilities/Logger
+    - GoogleUtilities/Network
+  - GoogleUtilities/Environment (7.13.0):
+    - GoogleUtilities/Privacy
+  - GoogleUtilities/Logger (7.13.0):
+    - GoogleUtilities/Environment
+  - GoogleUtilities/Network (7.13.0):
+    - GoogleUtilities/Logger
+    - GoogleUtilities/NSData+zlib
+  - GoogleUtilities/NSData+zlib (7.13.0)
+  - GoogleUtilities/Privacy (7.13.0)
+  - Kingfisher (7.11.0)
+  - Moya (15.0.0):
+    - Moya/Core (= 15.0.0)
+  - Moya/Core (15.0.0):
+    - Alamofire (~> 5.0)
+  - R.swift (7.5.0)
+  - SDWebImage (5.19.1):
+    - SDWebImage/Core (= 5.19.1)
+  - SDWebImage/Core (5.19.1)
+  - SnapKit (5.7.1)
+  - SwiftyJSON (5.0.2)
+
+DEPENDENCIES:
+  - Alamofire (~> 5.9)
+  - Firebase (~> 10.24)
+  - Kingfisher (~> 7.11)
+  - Moya (~> 15.0)
+  - R.swift (~> 7.5)
+  - SDWebImage (~> 5.19)
+  - SnapKit (~> 5.7)
+  - SwiftyJSON (~> 5.0)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - Firebase
+    - FirebaseAnalytics
+    - GoogleAppMeasurement
+    - GoogleUtilities
+    - Kingfisher
+    - Moya
+    - R.swift
+    - SDWebImage
+    - SnapKit
+    - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: afb0a89da67e5f3d4fb38db6b0a0a34b23baa89f
+  Firebase: 26b040b20866a55f55eb3611b9fcf3ae64816b86
+  FirebaseAnalytics: 23717de130b779aa8a0029f9d26dedeb01231ef1
+  GoogleAppMeasurement: aaa234756b342efe6bfb8ede8e084b7c82665f7c
+  GoogleUtilities: d053d902a0e11b4e0425c2f5014f2c58cc7ef624
+  Kingfisher: 9878dc6a8c491b7ab6b48183b1d4090a7cb55e4c
+  Moya: bb9d33fba04e80e8e78cd42fbe5a8a6c1a22ddcd
+  R.swift: 39517a87d8ecfd7ceb31adc62b5bcb41b49e65e4
+  SDWebImage: 40b0b4053e36c660a764958bff99aaee6937084e
+  SnapKit: d612e99e678a2d3b95b60b0705b05c7a2b1c3489
+  SwiftyJSON: f5b1bf1cd8dd53cd25887ac0eedabf474642e8e9
+
+PODFILE CHECKSUM: abc123def456789
+
+COCOAPODS: 1.15.2

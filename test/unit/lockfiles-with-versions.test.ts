@@ -705,4 +705,133 @@ sdks:
     });
   });
 
+  describe('Podfile.lock (CocoaPods)', () => {
+    function parsePodfileLock(content: string): PackageDependency[] {
+      const deps: PackageDependency[] = [];
+      const seen = new Set<string>();
+      const lines = content.split('\n');
+
+      let inPods = false;
+
+      for (const line of lines) {
+        if (line === 'PODS:') {
+          inPods = true;
+          continue;
+        }
+
+        if (inPods && /^[A-Z]/.test(line)) {
+          break;
+        }
+
+        if (!inPods) continue;
+
+        const podMatch = line.match(/^ {2}- ([^\s(]+)\s+\(([^)]+)\)/);
+        if (!podMatch || !podMatch[1]) continue;
+
+        const fullName = podMatch[1];
+        const rootName = fullName.includes('/') ? fullName.split('/')[0] : fullName;
+        const version = podMatch[2];
+
+        if (!rootName || seen.has(rootName)) continue;
+        seen.add(rootName);
+
+        deps.push({ name: rootName, version });
+      }
+
+      return deps;
+    }
+
+    it('should extract versions from fixture file', () => {
+      const content = fs.readFileSync(path.join(fixturesDir, 'Podfile.lock'), 'utf-8');
+      const packages = parsePodfileLock(content);
+
+      const alamofire = packages.find(p => p.name === 'Alamofire');
+      expect(alamofire).toBeDefined();
+      expect(alamofire?.version).toBe('5.9.1');
+
+      const firebase = packages.find(p => p.name === 'Firebase');
+      expect(firebase).toBeDefined();
+      expect(firebase?.version).toBe('10.24.0');
+
+      const snapkit = packages.find(p => p.name === 'SnapKit');
+      expect(snapkit).toBeDefined();
+      expect(snapkit?.version).toBe('5.7.1');
+    });
+
+    it('should deduplicate subspecs to root pod name', () => {
+      const content = fs.readFileSync(path.join(fixturesDir, 'Podfile.lock'), 'utf-8');
+      const packages = parsePodfileLock(content);
+
+      // Firebase appears as Firebase, Firebase/Core — should be deduplicated
+      const firebaseEntries = packages.filter(p => p.name === 'Firebase');
+      expect(firebaseEntries).toHaveLength(1);
+
+      // SDWebImage appears as SDWebImage, SDWebImage/Core — should be deduplicated
+      const sdwebEntries = packages.filter(p => p.name === 'SDWebImage');
+      expect(sdwebEntries).toHaveLength(1);
+
+      // GoogleUtilities has many subspecs — should be one entry
+      const guEntries = packages.filter(p => p.name === 'GoogleUtilities');
+      expect(guEntries).toHaveLength(1);
+    });
+
+    it('should extract correct unique root pod count', () => {
+      const content = fs.readFileSync(path.join(fixturesDir, 'Podfile.lock'), 'utf-8');
+      const packages = parsePodfileLock(content);
+      // Root pods: Alamofire, Firebase, FirebaseAnalytics, GoogleAppMeasurement,
+      //            GoogleUtilities, Kingfisher, Moya, R.swift, SDWebImage, SnapKit, SwiftyJSON
+      expect(packages).toHaveLength(11);
+    });
+
+    it('should handle simple Podfile.lock', () => {
+      const content = `PODS:
+  - AFNetworking (4.0.1)
+  - MBProgressHUD (1.2.0)
+
+DEPENDENCIES:
+  - AFNetworking (~> 4.0)
+  - MBProgressHUD (~> 1.2)
+
+COCOAPODS: 1.15.2
+`;
+      const packages = parsePodfileLock(content);
+      expect(packages).toHaveLength(2);
+      expect(packages[0]?.name).toBe('AFNetworking');
+      expect(packages[0]?.version).toBe('4.0.1');
+      expect(packages[1]?.name).toBe('MBProgressHUD');
+      expect(packages[1]?.version).toBe('1.2.0');
+    });
+
+    it('should handle empty PODS section', () => {
+      const content = `PODS:
+
+DEPENDENCIES:
+
+COCOAPODS: 1.15.2
+`;
+      const packages = parsePodfileLock(content);
+      expect(packages).toHaveLength(0);
+    });
+
+    it('should not include sub-dependencies', () => {
+      const content = `PODS:
+  - Moya (15.0.0):
+    - Moya/Core (= 15.0.0)
+  - Moya/Core (15.0.0):
+    - Alamofire (~> 5.0)
+
+DEPENDENCIES:
+  - Moya (~> 15.0)
+
+COCOAPODS: 1.15.2
+`;
+      const packages = parsePodfileLock(content);
+      // Moya and Moya/Core both resolve to "Moya", should be one entry
+      // Alamofire listed as sub-dep under Moya/Core should not be extracted
+      // (it's indented 4 spaces, not 2)
+      expect(packages).toHaveLength(1);
+      expect(packages[0]?.name).toBe('Moya');
+    });
+  });
+
 });

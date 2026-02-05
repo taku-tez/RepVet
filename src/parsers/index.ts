@@ -11,6 +11,7 @@
  * - PHP: composer.lock
  * - Elixir: mix.lock
  * - Dart/Flutter: pubspec.lock
+ * - CocoaPods: Podfile.lock
  */
 
 // npm ecosystem
@@ -39,3 +40,6 @@ export { parseMixLock } from './elixir.js';
 
 // Dart/Flutter ecosystem
 export { parsePubspecLock } from './dart.js';
+
+// CocoaPods ecosystem
+export { parsePodfileLock } from './cocoapods.js';

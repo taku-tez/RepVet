@@ -578,4 +578,95 @@ sdks:
     });
   });
 
+  describe('Podfile.lock parsing', () => {
+    function parsePodfileLock(content: string): string[] {
+      const deps: string[] = [];
+      const seen = new Set<string>();
+      const lines = content.split('\n');
+
+      let inPods = false;
+
+      for (const line of lines) {
+        if (line === 'PODS:') {
+          inPods = true;
+          continue;
+        }
+
+        if (inPods && /^[A-Z]/.test(line)) {
+          break;
+        }
+
+        if (!inPods) continue;
+
+        const podMatch = line.match(/^ {2}- ([^\s(]+)\s+\(([^)]+)\)/);
+        if (!podMatch || !podMatch[1]) continue;
+
+        const fullName = podMatch[1];
+        const rootName = fullName.includes('/') ? fullName.split('/')[0] : fullName;
+
+        if (!rootName || seen.has(rootName)) continue;
+        seen.add(rootName);
+
+        deps.push(rootName);
+      }
+
+      return deps;
+    }
+
+    it('should parse Podfile.lock from fixture', () => {
+      const content = fs.readFileSync(path.join(fixturesDir, 'Podfile.lock'), 'utf-8');
+      const packages = parsePodfileLock(content);
+      expect(packages).toContain('Alamofire');
+      expect(packages).toContain('Firebase');
+      expect(packages).toContain('Kingfisher');
+      expect(packages).toContain('Moya');
+      expect(packages).toContain('SDWebImage');
+      expect(packages).toContain('SnapKit');
+      expect(packages).toContain('SwiftyJSON');
+    });
+
+    it('should deduplicate subspecs', () => {
+      const content = fs.readFileSync(path.join(fixturesDir, 'Podfile.lock'), 'utf-8');
+      const packages = parsePodfileLock(content);
+      // Firebase and Firebase/Core should be deduplicated to Firebase
+      expect(packages.filter(p => p === 'Firebase')).toHaveLength(1);
+      // GoogleUtilities has many subspecs — one entry
+      expect(packages.filter(p => p === 'GoogleUtilities')).toHaveLength(1);
+    });
+
+    it('should extract correct root pod count', () => {
+      const content = fs.readFileSync(path.join(fixturesDir, 'Podfile.lock'), 'utf-8');
+      const packages = parsePodfileLock(content);
+      expect(packages).toHaveLength(11);
+    });
+
+    it('should handle empty PODS section', () => {
+      const content = `PODS:
+
+DEPENDENCIES:
+
+COCOAPODS: 1.15.2
+`;
+      const packages = parsePodfileLock(content);
+      expect(packages).toHaveLength(0);
+    });
+
+    it('should parse simple Podfile.lock', () => {
+      const content = `PODS:
+  - AFNetworking (4.0.1)
+  - MBProgressHUD (1.2.0)
+
+DEPENDENCIES:
+  - AFNetworking (~> 4.0)
+  - MBProgressHUD (~> 1.2)
+
+COCOAPODS: 1.15.2
+`;
+      const packages = parsePodfileLock(content);
+      expect(packages).toHaveLength(2);
+      expect(packages).toContain('AFNetworking');
+      expect(packages).toContain('MBProgressHUD');
+    });
+  });
+
 });
