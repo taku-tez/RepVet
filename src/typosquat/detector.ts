@@ -3,9 +3,16 @@
  * Combines similarity algorithms and pattern detection
  */
 
-import { combinedSimilarity, levenshteinSimilarity, jaroWinklerSimilarity } from './similarity.js';
-import { detectPatterns, PatternMatch, TyposquatPattern } from './patterns.js';
-import { getPopularPackages, getPopularPackageInfo, PopularPackage } from './popular-packages.js';
+import { 
+  combinedSimilarity, 
+  levenshteinSimilarity, 
+  damerauLevenshteinSimilarity,
+  jaroWinklerSimilarity,
+  ngramSimilarity,
+  couldBeSimilar,
+} from './similarity.js';
+import { detectPatterns, PatternMatch } from './patterns.js';
+import { getPopularPackages, getHighValueTargets, PopularPackage } from './popular-packages.js';
 
 export interface TyposquatMatch {
   /** The package being checked */
@@ -17,7 +24,9 @@ export interface TyposquatMatch {
   /** Individual similarity scores */
   scores: {
     levenshtein: number;
+    damerauLevenshtein: number;
     jaroWinkler: number;
+    ngram: number;
     combined: number;
   };
   /** Detected manipulation patterns */
@@ -26,31 +35,104 @@ export interface TyposquatMatch {
   risk: 'LOW' | 'MEDIUM' | 'HIGH' | 'CRITICAL';
   /** Target package info (downloads, etc.) */
   targetInfo?: PopularPackage;
+  /** Reason for flagging */
+  reason: string;
 }
 
 export interface DetectorOptions {
-  /** Minimum similarity threshold (0-1), default 0.8 */
+  /** Minimum similarity threshold (0-1), default 0.75 */
   threshold?: number;
   /** Maximum number of matches to return per package */
   maxMatches?: number;
   /** Ecosystem to check against */
   ecosystem?: 'npm' | 'pypi';
+  /** Only check against high-value targets */
+  highValueOnly?: boolean;
+  /** Include pattern-only matches (lower similarity but matching pattern) */
+  includePatternMatches?: boolean;
 }
 
-const DEFAULT_THRESHOLD = 0.8;
+const DEFAULT_THRESHOLD = 0.75;
 const DEFAULT_MAX_MATCHES = 3;
 
+// Pattern match threshold - if a pattern is detected, accept lower similarity
+const PATTERN_MATCH_THRESHOLD = 0.65;
+
 /**
- * Calculate risk level based on similarity and patterns
+ * Calculate risk level based on similarity, patterns, and target value
  */
-function calculateRisk(similarity: number, patterns: PatternMatch[]): 'LOW' | 'MEDIUM' | 'HIGH' | 'CRITICAL' {
-  // High-confidence patterns with high similarity = CRITICAL
-  const hasHighConfidencePattern = patterns.some(p => p.confidence >= 0.9);
+function calculateRisk(
+  similarity: number, 
+  patterns: PatternMatch[], 
+  isHighValue: boolean
+): 'LOW' | 'MEDIUM' | 'HIGH' | 'CRITICAL' {
+  // High-confidence patterns (homoglyph, scope confusion) are most dangerous
+  const hasDangerousPattern = patterns.some(p => 
+    p.pattern === 'homoglyph' || 
+    p.pattern === 'scope-confusion' ||
+    (p.pattern === 'character-swap' && p.confidence >= 0.9)
+  );
   
-  if (similarity >= 0.95 && hasHighConfidencePattern) return 'CRITICAL';
-  if (similarity >= 0.9 && patterns.length > 0) return 'HIGH';
-  if (similarity >= 0.85 || (similarity >= 0.8 && patterns.length > 0)) return 'MEDIUM';
+  const hasHighConfidencePattern = patterns.some(p => p.confidence >= 0.85);
+  const patternCount = patterns.length;
+  
+  // High-value targets get elevated risk
+  const valueMultiplier = isHighValue ? 1 : 0;
+  
+  // CRITICAL: Very high similarity + dangerous pattern + high-value target
+  if (similarity >= 0.92 && hasDangerousPattern) return 'CRITICAL';
+  if (similarity >= 0.95 && isHighValue) return 'CRITICAL';
+  
+  // HIGH: High similarity with patterns or high-value target
+  if (similarity >= 0.88 && (hasHighConfidencePattern || isHighValue)) return 'HIGH';
+  if (similarity >= 0.9 && patternCount > 0) return 'HIGH';
+  
+  // MEDIUM: Moderate similarity with patterns
+  if (similarity >= 0.8 || (similarity >= 0.75 && patternCount > 0)) return 'MEDIUM';
+  if (similarity >= 0.7 && hasDangerousPattern) return 'MEDIUM';
+  
   return 'LOW';
+}
+
+/**
+ * Generate human-readable reason for the match
+ */
+function generateReason(match: TyposquatMatch): string {
+  const parts: string[] = [];
+  
+  if (match.patterns.length > 0) {
+    const patternNames = match.patterns.map(p => {
+      switch (p.pattern) {
+        case 'character-swap': return 'swapped characters';
+        case 'character-duplicate': return 'duplicated character';
+        case 'character-omission': return 'missing character';
+        case 'character-insertion': return 'extra character';
+        case 'homoglyph': return 'lookalike characters';
+        case 'hyphen-manipulation': return 'hyphen manipulation';
+        case 'scope-confusion': return 'scope confusion';
+        case 'version-suffix': return 'suspicious suffix';
+        case 'prefix-suffix': return 'suspicious prefix';
+        case 'common-typo': return 'keyboard typo';
+        case 'bitsquat': return 'bit flip';
+        default: return p.pattern;
+      }
+    });
+    parts.push(`Detected: ${patternNames.join(', ')}`);
+  }
+  
+  parts.push(`${(match.similarity * 100).toFixed(0)}% similar to "${match.target}"`);
+  
+  if (match.targetInfo?.weeklyDownloads) {
+    const dl = match.targetInfo.weeklyDownloads;
+    const formatted = dl >= 1000000 ? `${(dl / 1000000).toFixed(0)}M` : `${(dl / 1000).toFixed(0)}K`;
+    parts.push(`(${formatted}/week)`);
+  }
+  
+  if (match.targetInfo?.highValue) {
+    parts.push('⚠️ High-value target');
+  }
+  
+  return parts.join(' ');
 }
 
 /**
@@ -64,51 +146,79 @@ export function checkTyposquat(
     threshold = DEFAULT_THRESHOLD,
     maxMatches = DEFAULT_MAX_MATCHES,
     ecosystem = 'npm',
+    highValueOnly = false,
+    includePatternMatches = true,
   } = options;
   
-  const popularPackages = getPopularPackages(ecosystem);
+  const popularPackages = highValueOnly 
+    ? getHighValueTargets(ecosystem) 
+    : getPopularPackages(ecosystem);
+  
   const matches: TyposquatMatch[] = [];
+  const nameLower = packageName.toLowerCase();
   
   for (const target of popularPackages) {
+    const targetLower = target.name.toLowerCase();
+    
     // Skip if checking against itself
-    if (packageName.toLowerCase() === target.name.toLowerCase()) continue;
+    if (nameLower === targetLower) continue;
     
-    // Quick length check to skip obviously different packages
-    const lenDiff = Math.abs(packageName.length - target.name.length);
-    if (lenDiff > 3) continue;
+    // Quick filter for performance
+    if (!couldBeSimilar(nameLower, targetLower, threshold * 0.8)) continue;
     
-    // Calculate similarities
-    const levSim = levenshteinSimilarity(packageName.toLowerCase(), target.name.toLowerCase());
-    const jwSim = jaroWinklerSimilarity(packageName.toLowerCase(), target.name.toLowerCase());
-    const combined = combinedSimilarity(packageName.toLowerCase(), target.name.toLowerCase());
-    
-    // Skip if below threshold
-    if (combined < threshold) continue;
+    // Calculate all similarity scores
+    const levSim = levenshteinSimilarity(nameLower, targetLower);
+    const damSim = damerauLevenshteinSimilarity(nameLower, targetLower);
+    const jwSim = jaroWinklerSimilarity(nameLower, targetLower);
+    const ngramSim = ngramSimilarity(nameLower, targetLower, 2);
+    const combined = combinedSimilarity(nameLower, targetLower);
     
     // Detect patterns
     const patterns = detectPatterns(packageName, target.name);
     
-    // Calculate risk
-    const risk = calculateRisk(combined, patterns);
+    // Determine if this is a match
+    const effectiveThreshold = (includePatternMatches && patterns.length > 0) 
+      ? Math.min(threshold, PATTERN_MATCH_THRESHOLD)
+      : threshold;
     
-    matches.push({
+    if (combined < effectiveThreshold && patterns.length === 0) continue;
+    
+    // Skip if similarity is too low even with patterns
+    if (combined < 0.5) continue;
+    
+    // Calculate risk
+    const isHighValue = target.highValue ?? false;
+    const risk = calculateRisk(combined, patterns, isHighValue);
+    
+    const match: TyposquatMatch = {
       package: packageName,
       target: target.name,
       similarity: combined,
       scores: {
         levenshtein: levSim,
+        damerauLevenshtein: damSim,
         jaroWinkler: jwSim,
+        ngram: ngramSim,
         combined,
       },
       patterns,
       risk,
       targetInfo: target,
-    });
+      reason: '', // Will be set below
+    };
+    
+    match.reason = generateReason(match);
+    matches.push(match);
   }
   
-  // Sort by similarity (descending) and return top matches
+  // Sort by risk level first, then similarity
+  const riskOrder = { 'CRITICAL': 0, 'HIGH': 1, 'MEDIUM': 2, 'LOW': 3 };
   return matches
-    .sort((a, b) => b.similarity - a.similarity)
+    .sort((a, b) => {
+      const riskDiff = riskOrder[a.risk] - riskOrder[b.risk];
+      if (riskDiff !== 0) return riskDiff;
+      return b.similarity - a.similarity;
+    })
     .slice(0, maxMatches);
 }
 
@@ -132,10 +242,51 @@ export function checkTyposquatBatch(
 }
 
 /**
+ * Get summary statistics for a batch check
+ */
+export function getTyposquatSummary(results: Map<string, TyposquatMatch[]>): {
+  total: number;
+  critical: number;
+  high: number;
+  medium: number;
+  low: number;
+  topTargets: string[];
+} {
+  let critical = 0, high = 0, medium = 0, low = 0;
+  const targetCounts = new Map<string, number>();
+  
+  for (const matches of results.values()) {
+    for (const match of matches) {
+      switch (match.risk) {
+        case 'CRITICAL': critical++; break;
+        case 'HIGH': high++; break;
+        case 'MEDIUM': medium++; break;
+        case 'LOW': low++; break;
+      }
+      targetCounts.set(match.target, (targetCounts.get(match.target) || 0) + 1);
+    }
+  }
+  
+  const topTargets = Array.from(targetCounts.entries())
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 5)
+    .map(([target]) => target);
+  
+  return {
+    total: critical + high + medium + low,
+    critical,
+    high,
+    medium,
+    low,
+    topTargets,
+  };
+}
+
+/**
  * Format typosquat match for display
  */
 export function formatTyposquatMatch(match: TyposquatMatch): string {
-  const riskColors: Record<string, string> = {
+  const riskIcons: Record<string, string> = {
     LOW: '🟢',
     MEDIUM: '🟡',
     HIGH: '🟠',
@@ -144,7 +295,7 @@ export function formatTyposquatMatch(match: TyposquatMatch): string {
   
   const lines: string[] = [];
   
-  lines.push(`${riskColors[match.risk]} ${match.package} → similar to "${match.target}"`);
+  lines.push(`${riskIcons[match.risk]} ${match.package} → similar to "${match.target}"`);
   lines.push(`   Similarity: ${(match.similarity * 100).toFixed(1)}%`);
   
   if (match.targetInfo?.weeklyDownloads) {
@@ -156,8 +307,12 @@ export function formatTyposquatMatch(match: TyposquatMatch): string {
   }
   
   if (match.patterns.length > 0) {
-    const patternNames = match.patterns.map(p => p.pattern).join(', ');
-    lines.push(`   Patterns: ${patternNames}`);
+    const patternDescs = match.patterns.map(p => `${p.pattern} (${(p.confidence * 100).toFixed(0)}%)`);
+    lines.push(`   Patterns: ${patternDescs.join(', ')}`);
+  }
+  
+  if (match.targetInfo?.highValue) {
+    lines.push(`   ⚠️  High-value security target`);
   }
   
   lines.push(`   Risk: ${match.risk}`);

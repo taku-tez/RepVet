@@ -11,11 +11,13 @@ export type TyposquatPattern =
   | 'hyphen-manipulation' // react-dom -> reactdom, react_dom
   | 'scope-confusion'     // @babel/core -> babel-core
   | 'version-suffix'      // lodash -> lodash2, lodashjs
-  | 'common-typo';        // general keyboard proximity
+  | 'common-typo'         // general keyboard proximity
+  | 'bitsquat'            // single bit flip in character
+  | 'prefix-suffix'       // lodash -> lodash-cli, pre-lodash
+  | 'phonetic';           // similar pronunciation
 
 /**
- * Common keyboard proximity typos
- * Maps each character to its neighboring keys
+ * Common keyboard proximity typos (QWERTY layout)
  */
 const KEYBOARD_NEIGHBORS: Record<string, string[]> = {
   'a': ['s', 'q', 'z', 'w'],
@@ -47,23 +49,74 @@ const KEYBOARD_NEIGHBORS: Record<string, string[]> = {
 };
 
 /**
- * Common homoglyphs (visually similar characters)
+ * Extended homoglyphs (visually similar characters)
+ * Including Unicode confusables
  */
 const HOMOGLYPHS: Record<string, string[]> = {
-  'l': ['1', 'I', '|'],
-  '1': ['l', 'I', '|'],
-  'I': ['l', '1', '|'],
-  'o': ['0', 'O'],
-  '0': ['o', 'O'],
-  'O': ['o', '0'],
-  's': ['5', '$'],
-  '5': ['s', 'S'],
-  'a': ['@', '4'],
-  'e': ['3'],
-  'g': ['9', 'q'],
-  'q': ['g', '9'],
-  'b': ['6'],
-  't': ['7', '+'],
+  // Latin lowercase
+  'a': ['@', '4', 'α', 'а', 'ɑ', 'ạ', 'ą'],
+  'b': ['6', 'ƅ', 'Ь', 'ḅ'],
+  'c': ['ϲ', 'с', 'ç', 'ċ', '('],
+  'd': ['ԁ', 'ḍ', 'ɗ'],
+  'e': ['3', 'є', 'е', 'ė', 'ẹ', 'ę'],
+  'f': ['ƒ'],
+  'g': ['9', 'ɡ', 'ġ', 'ģ'],
+  'h': ['һ', 'ḥ'],
+  'i': ['1', 'l', '|', 'í', 'ì', 'ї', 'і', 'ı'],
+  'j': ['ј', 'ʝ'],
+  'k': ['κ', 'к', 'ķ'],
+  'l': ['1', 'I', '|', 'ⅼ', 'ł', 'ľ'],
+  'm': ['rn', 'ṃ', 'ⅿ'],
+  'n': ['ո', 'ñ', 'ń', 'ṇ'],
+  'o': ['0', 'О', 'о', 'ο', 'օ', 'ọ', 'ø'],
+  'p': ['р', 'ρ', 'ṗ'],
+  'q': ['ԛ', 'գ'],
+  'r': ['г', 'ṛ', 'ŕ'],
+  's': ['5', '$', 'ѕ', 'ś', 'ș', 'ṣ'],
+  't': ['7', '+', 'τ', 'т', 'ț', 'ṭ'],
+  'u': ['μ', 'υ', 'ս', 'ụ', 'ű'],
+  'v': ['ν', 'ѵ', 'ṿ'],
+  'w': ['ѡ', 'ẃ', 'ẁ', 'ẅ'],
+  'x': ['х', '×', 'ẋ'],
+  'y': ['ү', 'у', 'ý', 'ỳ'],
+  'z': ['ż', 'ź', 'ẓ'],
+  // Numbers
+  '0': ['o', 'O', 'О', 'ο'],
+  '1': ['l', 'I', 'i', '|'],
+  '2': ['z', 'ƨ'],
+  '3': ['e', 'з', 'ε'],
+  '4': ['a', 'ч'],
+  '5': ['s', 'ѕ'],
+  '6': ['b', 'б'],
+  '7': ['t', '7'],
+  '8': ['b', '&'],
+  '9': ['g', 'q'],
+  // Uppercase
+  'A': ['Α', 'А', 'Ａ'],
+  'B': ['Β', 'В', 'Ｂ'],
+  'C': ['Ϲ', 'С', 'Ｃ'],
+  'D': ['Ｄ'],
+  'E': ['Ε', 'Е', 'Ｅ'],
+  'H': ['Η', 'Н', 'Ｈ'],
+  'I': ['l', '1', 'Ι', 'І', 'Ｉ'],
+  'K': ['Κ', 'К', 'Ｋ'],
+  'M': ['Μ', 'М', 'Ｍ'],
+  'N': ['Ν', 'Ｎ'],
+  'O': ['0', 'Ο', 'О', 'Ｏ'],
+  'P': ['Ρ', 'Р', 'Ｐ'],
+  'S': ['Ѕ', 'Ｓ'],
+  'T': ['Τ', 'Т', 'Ｔ'],
+  'X': ['Χ', 'Х', 'Ｘ'],
+  'Y': ['Υ', 'У', 'Ｙ'],
+  'Z': ['Ζ', 'Ｚ'],
+};
+
+/**
+ * Common prefix/suffix additions in typosquatting
+ */
+const SUSPICIOUS_AFFIXES = {
+  prefixes: ['get-', 'node-', 'npm-', 'js-', 'my-', 'the-', 'official-', 'original-', 'real-', 'better-', 'fast-', 'super-', 'ultra-'],
+  suffixes: ['-js', '-node', '-npm', '-cli', '-lib', '-core', '-utils', '-helper', '-dev', '-prod', '-next', '-beta', '-alpha', '2', '3', 'js', 'node'],
 };
 
 export interface PatternMatch {
@@ -88,7 +141,7 @@ export function detectPatterns(name: string, target: string): PatternMatch[] {
     matches.push({
       pattern: 'character-swap',
       description: 'Adjacent characters swapped',
-      confidence: 0.9,
+      confidence: 0.95,
     });
   }
   
@@ -97,7 +150,7 @@ export function detectPatterns(name: string, target: string): PatternMatch[] {
     matches.push({
       pattern: 'character-duplicate',
       description: 'Character duplicated',
-      confidence: 0.85,
+      confidence: 0.9,
     });
   }
   
@@ -106,7 +159,7 @@ export function detectPatterns(name: string, target: string): PatternMatch[] {
     matches.push({
       pattern: 'character-omission',
       description: 'Character omitted',
-      confidence: 0.85,
+      confidence: 0.9,
     });
   }
   
@@ -115,16 +168,17 @@ export function detectPatterns(name: string, target: string): PatternMatch[] {
     matches.push({
       pattern: 'character-insertion',
       description: 'Extra character inserted',
-      confidence: 0.8,
+      confidence: 0.85,
     });
   }
   
   // Homoglyph substitution
-  if (hasHomoglyphSubstitution(name, target)) {
+  const homoglyphResult = detectHomoglyph(name, target);
+  if (homoglyphResult) {
     matches.push({
       pattern: 'homoglyph',
-      description: 'Visually similar character substitution',
-      confidence: 0.95,
+      description: homoglyphResult.description,
+      confidence: homoglyphResult.confidence,
     });
   }
   
@@ -140,13 +194,16 @@ export function detectPatterns(name: string, target: string): PatternMatch[] {
     matches.push(scopeMatch);
   }
   
-  // Version suffix (pkg -> pkg2, pkgjs)
-  if (hasVersionSuffix(nameLower, targetLower)) {
-    matches.push({
-      pattern: 'version-suffix',
-      description: 'Version or JS suffix added',
-      confidence: 0.7,
-    });
+  // Version/type suffix (pkg -> pkg2, pkgjs)
+  const suffixMatch = detectSuffixManipulation(nameLower, targetLower);
+  if (suffixMatch) {
+    matches.push(suffixMatch);
+  }
+  
+  // Prefix manipulation (pkg -> get-pkg)
+  const prefixMatch = detectPrefixManipulation(nameLower, targetLower);
+  if (prefixMatch) {
+    matches.push(prefixMatch);
   }
   
   // Common keyboard typo
@@ -154,7 +211,16 @@ export function detectPatterns(name: string, target: string): PatternMatch[] {
     matches.push({
       pattern: 'common-typo',
       description: 'Keyboard proximity typo',
-      confidence: 0.75,
+      confidence: 0.8,
+    });
+  }
+  
+  // Bitsquat (single bit flip)
+  if (isBitsquat(nameLower, targetLower)) {
+    matches.push({
+      pattern: 'bitsquat',
+      description: 'Single bit flip in character',
+      confidence: 0.85,
     });
   }
   
@@ -211,7 +277,7 @@ function isCharacterInsertion(a: string, b: string): boolean {
   let j = 0;
   let insertions = 0;
   
-  for (let i = 0; i < a.length && j <= b.length; i++) {
+  for (let i = 0; i < a.length; i++) {
     if (j < b.length && a[i] === b[j]) {
       j++;
     } else {
@@ -223,23 +289,28 @@ function isCharacterInsertion(a: string, b: string): boolean {
   return insertions === 1;
 }
 
-function hasHomoglyphSubstitution(a: string, b: string): boolean {
-  if (a.length !== b.length) return false;
+function detectHomoglyph(a: string, b: string): { description: string; confidence: number } | null {
+  if (a.length !== b.length) return null;
   
-  let homoglyphCount = 0;
+  const substitutions: string[] = [];
   
   for (let i = 0; i < a.length; i++) {
     if (a[i] === b[i]) continue;
     
-    const homoglyphs = HOMOGLYPHS[b[i].toLowerCase()] || [];
+    const homoglyphs = HOMOGLYPHS[b[i]] || HOMOGLYPHS[b[i].toLowerCase()] || [];
     if (homoglyphs.includes(a[i]) || homoglyphs.includes(a[i].toLowerCase())) {
-      homoglyphCount++;
+      substitutions.push(`${b[i]}→${a[i]}`);
     } else {
-      return false;
+      return null;
     }
   }
   
-  return homoglyphCount > 0 && homoglyphCount <= 2;
+  if (substitutions.length === 0) return null;
+  
+  return {
+    description: `Homoglyph substitution: ${substitutions.join(', ')}`,
+    confidence: substitutions.length === 1 ? 0.95 : 0.9,
+  };
 }
 
 function detectHyphenManipulation(a: string, b: string): PatternMatch | null {
@@ -274,22 +345,53 @@ function detectScopeConfusion(a: string, b: string): PatternMatch | null {
       return {
         pattern: 'scope-confusion',
         description: 'Scoped package name confusion',
-        confidence: 0.85,
+        confidence: 0.9,
       };
+    }
+  }
+  
+  // Reverse: scope-pkg vs @scope/pkg
+  for (const sep of ['-', '_', '']) {
+    const match = a.match(new RegExp(`^([a-z]+)${sep === '' ? '' : '\\' + sep}([a-z].+)$`));
+    if (match) {
+      const [, maybeScope, maybePkg] = match;
+      if (b === `@${maybeScope}/${maybePkg}`) {
+        return {
+          pattern: 'scope-confusion',
+          description: 'Scoped package name confusion',
+          confidence: 0.85,
+        };
+      }
     }
   }
   
   return null;
 }
 
-function hasVersionSuffix(a: string, b: string): boolean {
-  const suffixes = ['2', '3', 'js', '-js', '.js', 'next', '-next'];
-  
-  for (const suffix of suffixes) {
-    if (a === b + suffix) return true;
+function detectSuffixManipulation(a: string, b: string): PatternMatch | null {
+  for (const suffix of SUSPICIOUS_AFFIXES.suffixes) {
+    if (a === b + suffix) {
+      return {
+        pattern: 'version-suffix',
+        description: `Suspicious suffix added: "${suffix}"`,
+        confidence: suffix.match(/^\d+$/) ? 0.85 : 0.75,
+      };
+    }
   }
-  
-  return false;
+  return null;
+}
+
+function detectPrefixManipulation(a: string, b: string): PatternMatch | null {
+  for (const prefix of SUSPICIOUS_AFFIXES.prefixes) {
+    if (a === prefix + b) {
+      return {
+        pattern: 'prefix-suffix',
+        description: `Suspicious prefix added: "${prefix}"`,
+        confidence: 0.7,
+      };
+    }
+  }
+  return null;
 }
 
 function isKeyboardTypo(a: string, b: string): boolean {
@@ -309,4 +411,77 @@ function isKeyboardTypo(a: string, b: string): boolean {
   }
   
   return typoCount === 1;
+}
+
+/**
+ * Detect bitsquat (single bit flip)
+ * This can occur due to memory errors and is used in attacks
+ */
+function isBitsquat(a: string, b: string): boolean {
+  if (a.length !== b.length) return false;
+  
+  let bitFlips = 0;
+  
+  for (let i = 0; i < a.length; i++) {
+    if (a[i] === b[i]) continue;
+    
+    const charA = a.charCodeAt(i);
+    const charB = b.charCodeAt(i);
+    const xor = charA ^ charB;
+    
+    // Check if exactly one bit is different
+    if (xor !== 0 && (xor & (xor - 1)) === 0) {
+      bitFlips++;
+    } else {
+      return false;
+    }
+  }
+  
+  return bitFlips === 1;
+}
+
+/**
+ * Get all possible typosquat variants of a package name
+ * Useful for proactive checking
+ */
+export function generateTyposquatVariants(name: string): string[] {
+  const variants: Set<string> = new Set();
+  
+  // Character swap
+  for (let i = 0; i < name.length - 1; i++) {
+    const arr = name.split('');
+    [arr[i], arr[i + 1]] = [arr[i + 1], arr[i]];
+    variants.add(arr.join(''));
+  }
+  
+  // Character omission
+  for (let i = 0; i < name.length; i++) {
+    variants.add(name.slice(0, i) + name.slice(i + 1));
+  }
+  
+  // Character duplication
+  for (let i = 0; i < name.length; i++) {
+    variants.add(name.slice(0, i + 1) + name[i] + name.slice(i + 1));
+  }
+  
+  // Common keyboard typos
+  for (let i = 0; i < name.length; i++) {
+    const neighbors = KEYBOARD_NEIGHBORS[name[i].toLowerCase()] || [];
+    for (const neighbor of neighbors) {
+      variants.add(name.slice(0, i) + neighbor + name.slice(i + 1));
+    }
+  }
+  
+  // Hyphen manipulation
+  if (name.includes('-')) {
+    variants.add(name.replace(/-/g, ''));
+    variants.add(name.replace(/-/g, '_'));
+  }
+  
+  // Common suffixes
+  for (const suffix of ['js', '2', '-js', '-next']) {
+    variants.add(name + suffix);
+  }
+  
+  return Array.from(variants);
 }
