@@ -76,6 +76,7 @@ RepVet helps you identify risky dependencies before they become a problem.
 | cpanfile | CPAN | ❌ | Ranges |
 | Podfile | CocoaPods | ❌ | Ranges |
 | Podfile.lock | CocoaPods | ✅ | ✅ Exact |
+| bun.lock | npm | ✅ | ✅ Exact |
 | environment.yml | Conda + PyPI | ❌ | Partial |
 
 ## Installation

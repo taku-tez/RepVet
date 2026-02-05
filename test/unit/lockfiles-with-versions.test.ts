@@ -834,4 +834,112 @@ COCOAPODS: 1.15.2
     });
   });
 
+  describe('bun.lock (with versions)', () => {
+    function stripTrailingCommas(text: string): string {
+      let result = '';
+      let inString = false;
+      let escape = false;
+      for (let i = 0; i < text.length; i++) {
+        const ch = text[i];
+        if (escape) { result += ch; escape = false; continue; }
+        if (ch === '\\' && inString) { result += ch; escape = true; continue; }
+        if (ch === '"') { inString = !inString; result += ch; continue; }
+        if (inString) { result += ch; continue; }
+        if (ch === ',') {
+          let j = i + 1;
+          while (j < text.length && /\s/.test(text[j])) j++;
+          if (j < text.length && (text[j] === '}' || text[j] === ']')) continue;
+        }
+        result += ch;
+      }
+      return result;
+    }
+
+    function parseBunLock(content: string): PackageDependency[] {
+      const cleanJson = stripTrailingCommas(content);
+      const lock = JSON.parse(cleanJson) as {
+        packages?: Record<string, unknown[]>;
+      };
+      if (!lock.packages) return [];
+
+      const deps: PackageDependency[] = [];
+      const seen = new Set<string>();
+
+      for (const [_key, value] of Object.entries(lock.packages)) {
+        if (!Array.isArray(value) || value.length === 0) continue;
+        const resolved = value[0] as string;
+        if (!resolved || typeof resolved !== 'string') continue;
+        const lastAt = resolved.lastIndexOf('@');
+        if (lastAt <= 0) continue;
+        const name = resolved.substring(0, lastAt);
+        const version = resolved.substring(lastAt + 1);
+        if (!name || seen.has(name)) continue;
+        seen.add(name);
+        deps.push({ name, version });
+      }
+      return deps;
+    }
+
+    it('should parse bun.lock with versions from fixture', () => {
+      const content = fs.readFileSync(path.join(fixturesDir, 'bun.lock'), 'utf-8');
+      const packages = parseBunLock(content);
+
+      const chalk = packages.find(p => p.name === 'chalk');
+      expect(chalk).toBeDefined();
+      expect(chalk?.version).toBe('5.6.2');
+
+      const commander = packages.find(p => p.name === 'commander');
+      expect(commander).toBeDefined();
+      expect(commander?.version).toBe('12.1.0');
+
+      const express = packages.find(p => p.name === 'express');
+      expect(express).toBeDefined();
+      expect(express?.version).toBe('4.22.1');
+    });
+
+    it('should extract scoped package versions', () => {
+      const content = fs.readFileSync(path.join(fixturesDir, 'bun.lock'), 'utf-8');
+      const packages = parseBunLock(content);
+
+      const typesNode = packages.find(p => p.name === '@types/node');
+      expect(typesNode).toBeDefined();
+      expect(typesNode?.version).toBe('22.19.9');
+    });
+
+    it('should extract version from nested path entries', () => {
+      const content = fs.readFileSync(path.join(fixturesDir, 'bun.lock'), 'utf-8');
+      const packages = parseBunLock(content);
+
+      // "send/ms" → resolved as "ms@2.1.3"
+      const ms = packages.find(p => p.name === 'ms');
+      expect(ms).toBeDefined();
+      expect(ms?.version).toBe('2.1.3');
+    });
+
+    it('should handle empty lockfile', () => {
+      const content = `{
+  "lockfileVersion": 1,
+  "packages": {}
+}`;
+      const packages = parseBunLock(content);
+      expect(packages).toHaveLength(0);
+    });
+
+    it('should handle missing packages section', () => {
+      const content = `{
+  "lockfileVersion": 1,
+  "workspaces": {}
+}`;
+      const packages = parseBunLock(content);
+      expect(packages).toHaveLength(0);
+    });
+
+    it('should extract correct package count', () => {
+      const content = fs.readFileSync(path.join(fixturesDir, 'bun.lock'), 'utf-8');
+      const packages = parseBunLock(content);
+      // 9 entries: @types/node, accepts, chalk, commander, express, body-parser, bytes, undici-types, ms
+      expect(packages).toHaveLength(9);
+    });
+  });
+
 });

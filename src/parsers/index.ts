@@ -12,6 +12,7 @@
  * - Elixir: mix.lock
  * - Dart/Flutter: pubspec.lock
  * - CocoaPods: Podfile.lock
+ * - Bun: bun.lock
  */
 
 // npm ecosystem
@@ -43,3 +44,6 @@ export { parsePubspecLock } from './dart.js';
 
 // CocoaPods ecosystem
 export { parsePodfileLock } from './cocoapods.js';
+
+// Bun ecosystem
+export { parseBunLock } from './bun.js';

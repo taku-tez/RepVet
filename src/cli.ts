@@ -29,6 +29,7 @@ import {
   parseMixLock,
   parsePubspecLock,
   parsePodfileLock,
+  parseBunLock,
 } from './parsers/index.js';
 
 const DEFAULT_CONCURRENCY = 5;
@@ -66,6 +67,7 @@ const SUPPORTED_DEP_FILES = [
   'Build.PL',
   'Podfile',
   'Podfile.lock',
+  'bun.lock',
   'Package.swift',
   'environment.yml',
   'environment.yaml',
@@ -660,6 +662,19 @@ function parseDepFile(fileName: string, content: string): Array<{ packages: Pack
   // CocoaPods: Podfile.lock
   if (fileName === 'Podfile.lock' || fileName.endsWith('/Podfile.lock')) {
     return [{ packages: parsePodfileLock(content), ecosystem: 'cocoapods' }];
+  }
+  
+  // Bun: bun.lock (text-based JSONC lockfile)
+  if (fileName === 'bun.lock' || fileName.endsWith('/bun.lock')) {
+    return [{ packages: parseBunLock(content), ecosystem: 'npm' }];
+  }
+  
+  // Bun: bun.lockb (binary lockfile - not parseable)
+  if (fileName === 'bun.lockb' || fileName.endsWith('/bun.lockb')) {
+    throw new Error(
+      'bun.lockb is a binary lockfile and cannot be parsed directly. ' +
+      'Please convert to text format: bun install --save-text-lockfile --frozen-lockfile --lockfile-only'
+    );
   }
   
   throw new Error(`Unsupported file format: ${fileName}`);

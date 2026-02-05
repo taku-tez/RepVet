@@ -669,4 +669,102 @@ COCOAPODS: 1.15.2
     });
   });
 
+  describe('bun.lock', () => {
+    function stripTrailingCommas(text: string): string {
+      let result = '';
+      let inString = false;
+      let escape = false;
+      for (let i = 0; i < text.length; i++) {
+        const ch = text[i];
+        if (escape) { result += ch; escape = false; continue; }
+        if (ch === '\\' && inString) { result += ch; escape = true; continue; }
+        if (ch === '"') { inString = !inString; result += ch; continue; }
+        if (inString) { result += ch; continue; }
+        if (ch === ',') {
+          let j = i + 1;
+          while (j < text.length && /\s/.test(text[j])) j++;
+          if (j < text.length && (text[j] === '}' || text[j] === ']')) continue;
+        }
+        result += ch;
+      }
+      return result;
+    }
+
+    function parseBunLock(content: string): string[] {
+      const cleanJson = stripTrailingCommas(content);
+      const lock = JSON.parse(cleanJson) as {
+        packages?: Record<string, unknown[]>;
+      };
+      if (!lock.packages) return [];
+
+      const deps: string[] = [];
+      const seen = new Set<string>();
+
+      for (const [_key, value] of Object.entries(lock.packages)) {
+        if (!Array.isArray(value) || value.length === 0) continue;
+        const resolved = value[0] as string;
+        if (!resolved || typeof resolved !== 'string') continue;
+        const lastAt = resolved.lastIndexOf('@');
+        if (lastAt <= 0) continue;
+        const name = resolved.substring(0, lastAt);
+        if (!name || seen.has(name)) continue;
+        seen.add(name);
+        deps.push(name);
+      }
+      return deps;
+    }
+
+    it('should parse bun.lock from fixture', () => {
+      const content = fs.readFileSync(path.join(fixturesDir, 'bun.lock'), 'utf-8');
+      const packages = parseBunLock(content);
+      expect(packages).toContain('chalk');
+      expect(packages).toContain('commander');
+      expect(packages).toContain('express');
+      expect(packages).toContain('@types/node');
+      expect(packages).toContain('accepts');
+    });
+
+    it('should handle scoped packages', () => {
+      const content = fs.readFileSync(path.join(fixturesDir, 'bun.lock'), 'utf-8');
+      const packages = parseBunLock(content);
+      expect(packages).toContain('@types/node');
+    });
+
+    it('should handle nested sub-dependency entries', () => {
+      const content = fs.readFileSync(path.join(fixturesDir, 'bun.lock'), 'utf-8');
+      const packages = parseBunLock(content);
+      // "send/ms" resolves to "ms" - should be included as "ms"
+      expect(packages).toContain('ms');
+    });
+
+    it('should handle JSONC trailing commas', () => {
+      const content = `{
+  "lockfileVersion": 1,
+  "packages": {
+    "lodash": ["lodash@4.17.21", "", {}, "sha512-test=="],
+  }
+}`;
+      const packages = parseBunLock(content);
+      expect(packages).toHaveLength(1);
+      expect(packages).toContain('lodash');
+    });
+
+    it('should handle empty packages section', () => {
+      const content = `{
+  "lockfileVersion": 1,
+  "workspaces": { "": { "name": "empty" } },
+  "packages": {}
+}`;
+      const packages = parseBunLock(content);
+      expect(packages).toHaveLength(0);
+    });
+
+    it('should deduplicate packages', () => {
+      const content = fs.readFileSync(path.join(fixturesDir, 'bun.lock'), 'utf-8');
+      const packages = parseBunLock(content);
+      const unique = new Set(packages);
+      expect(packages.length).toBe(unique.size);
+    });
+  });
+
 });
