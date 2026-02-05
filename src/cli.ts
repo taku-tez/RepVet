@@ -14,6 +14,7 @@ import { ReputationResult, Ecosystem, PackageDependency } from './types.js';
 import { parseEnvironmentYaml } from './registry/conda.js';
 import { toSarif } from './sarif.js';
 import { toCsv } from './csv.js';
+import { checkTyposquat, checkTyposquatBatch, formatTyposquatMatch, TyposquatMatch } from './typosquat/index.js';
 import {
   parsePackageLock,
   parseYarnLock,
@@ -785,5 +786,138 @@ function printResult(result: ReputationResult): void {
     }
   }
 }
+
+// ========== Typosquat Command ==========
+
+program
+  .command('typosquat <path>')
+  .description('Detect potential typosquat packages in dependencies')
+  .option('--json', 'Output as JSON')
+  .option('--threshold <score>', 'Minimum similarity threshold (0-1)', '0.8')
+  .option('--fail-on-match', 'Exit with code 1 if typosquats are found')
+  .action(async (inputPath: string, options: { json?: boolean; threshold?: string; failOnMatch?: boolean }) => {
+    try {
+      const fs = await import('fs');
+      const path = await import('path');
+      
+      const resolvedPath = path.resolve(inputPath);
+      const stat = fs.statSync(resolvedPath);
+      
+      const threshold = parseFloat(options.threshold || '0.8');
+      if (!Number.isFinite(threshold) || threshold < 0 || threshold > 1) {
+        const errMsg = 'Invalid threshold value. Must be between 0 and 1.';
+        if (options.json) {
+          console.log(JSON.stringify({ error: errMsg }));
+        } else {
+          console.error(chalk.red(`Error: ${errMsg}`));
+        }
+        process.exit(1);
+      }
+      
+      // Determine files to scan
+      let filesToScan: string[];
+      if (stat.isDirectory()) {
+        filesToScan = findDepFiles(resolvedPath, fs, path);
+        if (filesToScan.length === 0) {
+          if (options.json) {
+            console.log(JSON.stringify({ error: 'No dependency files found' }));
+          } else {
+            console.log(chalk.yellow('No dependency files found in directory'));
+          }
+          process.exit(0);
+        }
+      } else {
+        filesToScan = [resolvedPath];
+      }
+      
+      // Collect all packages
+      const allPackages: string[] = [];
+      
+      for (const filePath of filesToScan) {
+        const content = fs.readFileSync(filePath, 'utf-8');
+        const fileName = path.basename(filePath);
+        
+        try {
+          const parseResults = parseDepFile(fileName, content);
+          for (const { packages, ecosystem } of parseResults) {
+            // Only check npm packages for now
+            if (ecosystem === 'npm') {
+              allPackages.push(...packages.map(p => p.name));
+            }
+          }
+        } catch {
+          // Skip unparseable files
+        }
+      }
+      
+      if (allPackages.length === 0) {
+        if (options.json) {
+          console.log(JSON.stringify({ matches: [], scanned: 0 }));
+        } else {
+          console.log(chalk.yellow('No npm packages found to check'));
+        }
+        process.exit(0);
+      }
+      
+      // Deduplicate
+      const uniquePackages = [...new Set(allPackages)];
+      
+      // Check for typosquats
+      const results = checkTyposquatBatch(uniquePackages, { threshold, ecosystem: 'npm' });
+      
+      // Flatten results
+      const allMatches: TyposquatMatch[] = [];
+      for (const matches of results.values()) {
+        allMatches.push(...matches);
+      }
+      
+      if (options.json) {
+        console.log(JSON.stringify({
+          scanned: uniquePackages.length,
+          matchCount: allMatches.length,
+          matches: allMatches,
+        }, null, 2));
+      } else {
+        console.log(chalk.bold('\n📦 Typosquat Scan Results\n'));
+        
+        if (allMatches.length === 0) {
+          console.log(chalk.green(`✅ No potential typosquats found in ${uniquePackages.length} packages`));
+        } else {
+          // Group by risk level
+          const critical = allMatches.filter(m => m.risk === 'CRITICAL');
+          const high = allMatches.filter(m => m.risk === 'HIGH');
+          const medium = allMatches.filter(m => m.risk === 'MEDIUM');
+          const low = allMatches.filter(m => m.risk === 'LOW');
+          
+          for (const match of [...critical, ...high, ...medium, ...low]) {
+            console.log(formatTyposquatMatch(match));
+            console.log('');
+          }
+          
+          console.log(chalk.dim('─'.repeat(50)));
+          console.log(`Scanned: ${uniquePackages.length} packages`);
+          console.log(`Found: ${allMatches.length} potential typosquat(s)`);
+          if (critical.length > 0) console.log(chalk.red(`  🔴 Critical: ${critical.length}`));
+          if (high.length > 0) console.log(chalk.red(`  🟠 High: ${high.length}`));
+          if (medium.length > 0) console.log(chalk.yellow(`  🟡 Medium: ${medium.length}`));
+          if (low.length > 0) console.log(chalk.dim(`  🟢 Low: ${low.length}`));
+        }
+      }
+      
+      // Exit with error if matches found and --fail-on-match is set
+      if (options.failOnMatch && allMatches.length > 0) {
+        process.exit(1);
+      }
+      
+      process.exit(0);
+    } catch (error) {
+      if (options.json) {
+        console.log(JSON.stringify({ error: String(error) }));
+      } else {
+        console.error(chalk.red(`Error: ${error}`));
+      }
+      process.exit(1);
+    }
+  });
 
 program.parse();
