@@ -1,6 +1,6 @@
 {
   "name": "repvet",
-  "version": "0.10.2",
+  "version": "0.10.3",
   "description": "Maintainer reputation checker for npm packages",
   "type": "module",
   "main": "dist/index.js",

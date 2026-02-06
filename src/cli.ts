@@ -830,8 +830,9 @@ program
         filesToScan = [resolvedPath];
       }
       
-      // Collect all packages
-      const allPackages: string[] = [];
+      // Collect packages by ecosystem
+      const npmPackages: string[] = [];
+      const pypiPackages: string[] = [];
       
       for (const filePath of filesToScan) {
         const content = fs.readFileSync(filePath, 'utf-8');
@@ -840,9 +841,10 @@ program
         try {
           const parseResults = parseDepFile(fileName, content);
           for (const { packages, ecosystem } of parseResults) {
-            // Only check npm packages for now
             if (ecosystem === 'npm') {
-              allPackages.push(...packages.map(p => p.name));
+              npmPackages.push(...packages.map(p => p.name));
+            } else if (ecosystem === 'pypi') {
+              pypiPackages.push(...packages.map(p => p.name));
             }
           }
         } catch {
@@ -850,20 +852,32 @@ program
         }
       }
       
-      if (allPackages.length === 0) {
+      const totalPackages = npmPackages.length + pypiPackages.length;
+      
+      if (totalPackages === 0) {
         if (options.json) {
           console.log(JSON.stringify({ matches: [], scanned: 0 }));
         } else {
-          console.log(chalk.yellow('No npm packages found to check'));
+          console.log(chalk.yellow('No packages found to check'));
         }
         process.exit(0);
       }
       
       // Deduplicate
-      const uniquePackages = [...new Set(allPackages)];
+      const uniqueNpm = [...new Set(npmPackages)];
+      const uniquePypi = [...new Set(pypiPackages)];
       
-      // Check for typosquats
-      const results = checkTyposquatBatch(uniquePackages, { threshold, ecosystem: 'npm' });
+      // Check for typosquats in both ecosystems
+      const npmResults = uniqueNpm.length > 0 
+        ? checkTyposquatBatch(uniqueNpm, { threshold, ecosystem: 'npm' })
+        : new Map<string, TyposquatMatch[]>();
+      const pypiResults = uniquePypi.length > 0
+        ? checkTyposquatBatch(uniquePypi, { threshold, ecosystem: 'pypi' })
+        : new Map<string, TyposquatMatch[]>();
+      
+      // Merge results
+      const results = new Map<string, TyposquatMatch[]>([...npmResults, ...pypiResults]);
+      const uniquePackages = [...uniqueNpm, ...uniquePypi];
       
       // Flatten results
       const allMatches: TyposquatMatch[] = [];

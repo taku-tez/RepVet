@@ -388,13 +388,213 @@ export const NPM_POPULAR_PACKAGES: PopularPackage[] = [
 ];
 
 /**
+ * Top PyPI packages (based on downloads and security importance)
+ * ~200 packages covering major categories
+ */
+export const PYPI_POPULAR_PACKAGES: PopularPackage[] = [
+  // ===== Core/Essential =====
+  { name: 'requests', weeklyDownloads: 50000000, highValue: true },
+  { name: 'urllib3', weeklyDownloads: 60000000 },
+  { name: 'boto3', weeklyDownloads: 40000000, highValue: true },
+  { name: 'botocore', weeklyDownloads: 40000000 },
+  { name: 'setuptools', weeklyDownloads: 80000000 },
+  { name: 'pip', weeklyDownloads: 50000000, highValue: true },
+  { name: 'wheel', weeklyDownloads: 40000000 },
+  { name: 'six', weeklyDownloads: 60000000 },
+  { name: 'python-dateutil', weeklyDownloads: 50000000 },
+  { name: 'certifi', weeklyDownloads: 60000000 },
+  { name: 'charset-normalizer', weeklyDownloads: 50000000 },
+  { name: 'idna', weeklyDownloads: 55000000 },
+  { name: 'packaging', weeklyDownloads: 50000000 },
+  { name: 'typing-extensions', weeklyDownloads: 60000000 },
+  
+  // ===== Web Frameworks =====
+  { name: 'django', weeklyDownloads: 5000000, highValue: true },
+  { name: 'flask', weeklyDownloads: 8000000, highValue: true },
+  { name: 'fastapi', weeklyDownloads: 5000000, highValue: true },
+  { name: 'tornado', weeklyDownloads: 3000000 },
+  { name: 'aiohttp', weeklyDownloads: 10000000 },
+  { name: 'starlette', weeklyDownloads: 5000000 },
+  { name: 'uvicorn', weeklyDownloads: 5000000 },
+  { name: 'gunicorn', weeklyDownloads: 5000000 },
+  { name: 'werkzeug', weeklyDownloads: 10000000 },
+  { name: 'jinja2', weeklyDownloads: 15000000 },
+  { name: 'itsdangerous', weeklyDownloads: 10000000 },
+  { name: 'click', weeklyDownloads: 15000000 },
+  
+  // ===== Data Science / ML =====
+  { name: 'numpy', weeklyDownloads: 30000000, highValue: true },
+  { name: 'pandas', weeklyDownloads: 20000000, highValue: true },
+  { name: 'scipy', weeklyDownloads: 10000000 },
+  { name: 'scikit-learn', weeklyDownloads: 8000000, highValue: true },
+  { name: 'tensorflow', weeklyDownloads: 3000000, highValue: true },
+  { name: 'torch', weeklyDownloads: 5000000, highValue: true },
+  { name: 'pytorch', weeklyDownloads: 1000000 },
+  { name: 'keras', weeklyDownloads: 2000000 },
+  { name: 'matplotlib', weeklyDownloads: 10000000 },
+  { name: 'seaborn', weeklyDownloads: 3000000 },
+  { name: 'plotly', weeklyDownloads: 3000000 },
+  { name: 'pillow', weeklyDownloads: 15000000 },
+  { name: 'opencv-python', weeklyDownloads: 5000000 },
+  { name: 'transformers', weeklyDownloads: 3000000 },
+  { name: 'huggingface-hub', weeklyDownloads: 5000000 },
+  { name: 'tokenizers', weeklyDownloads: 3000000 },
+  { name: 'xgboost', weeklyDownloads: 2000000 },
+  { name: 'lightgbm', weeklyDownloads: 1500000 },
+  { name: 'catboost', weeklyDownloads: 500000 },
+  
+  // ===== Database =====
+  { name: 'sqlalchemy', weeklyDownloads: 10000000, highValue: true },
+  { name: 'psycopg2', weeklyDownloads: 5000000 },
+  { name: 'psycopg2-binary', weeklyDownloads: 5000000 },
+  { name: 'pymysql', weeklyDownloads: 3000000 },
+  { name: 'redis', weeklyDownloads: 5000000 },
+  { name: 'pymongo', weeklyDownloads: 3000000 },
+  { name: 'elasticsearch', weeklyDownloads: 1500000 },
+  { name: 'alembic', weeklyDownloads: 3000000 },
+  { name: 'peewee', weeklyDownloads: 500000 },
+  
+  // ===== AWS =====
+  { name: 'awscli', weeklyDownloads: 10000000, highValue: true },
+  { name: 's3transfer', weeklyDownloads: 30000000 },
+  { name: 'aws-sam-cli', weeklyDownloads: 500000 },
+  { name: 'moto', weeklyDownloads: 2000000 },
+  
+  // ===== Testing =====
+  { name: 'pytest', weeklyDownloads: 20000000, highValue: true },
+  { name: 'pytest-cov', weeklyDownloads: 5000000 },
+  { name: 'pytest-asyncio', weeklyDownloads: 3000000 },
+  { name: 'pytest-mock', weeklyDownloads: 3000000 },
+  { name: 'mock', weeklyDownloads: 10000000 },
+  { name: 'coverage', weeklyDownloads: 15000000 },
+  { name: 'tox', weeklyDownloads: 3000000 },
+  { name: 'nose', weeklyDownloads: 2000000 },
+  { name: 'unittest2', weeklyDownloads: 1000000 },
+  { name: 'hypothesis', weeklyDownloads: 2000000 },
+  { name: 'faker', weeklyDownloads: 5000000 },
+  { name: 'factory-boy', weeklyDownloads: 1500000 },
+  { name: 'responses', weeklyDownloads: 2000000 },
+  { name: 'httpretty', weeklyDownloads: 1000000 },
+  
+  // ===== Linting / Formatting =====
+  { name: 'black', weeklyDownloads: 8000000 },
+  { name: 'flake8', weeklyDownloads: 10000000 },
+  { name: 'pylint', weeklyDownloads: 5000000 },
+  { name: 'mypy', weeklyDownloads: 8000000 },
+  { name: 'isort', weeklyDownloads: 8000000 },
+  { name: 'autopep8', weeklyDownloads: 3000000 },
+  { name: 'yapf', weeklyDownloads: 1000000 },
+  { name: 'ruff', weeklyDownloads: 5000000 },
+  { name: 'bandit', weeklyDownloads: 3000000, highValue: true },
+  { name: 'safety', weeklyDownloads: 1000000 },
+  
+  // ===== CLI =====
+  { name: 'rich', weeklyDownloads: 10000000 },
+  { name: 'typer', weeklyDownloads: 3000000 },
+  { name: 'argparse', weeklyDownloads: 5000000 },
+  { name: 'colorama', weeklyDownloads: 20000000 },
+  { name: 'tqdm', weeklyDownloads: 15000000 },
+  { name: 'tabulate', weeklyDownloads: 8000000 },
+  
+  // ===== HTTP/API =====
+  { name: 'httpx', weeklyDownloads: 5000000 },
+  { name: 'httplib2', weeklyDownloads: 5000000 },
+  { name: 'grpcio', weeklyDownloads: 10000000 },
+  { name: 'protobuf', weeklyDownloads: 20000000 },
+  { name: 'pydantic', weeklyDownloads: 15000000, highValue: true },
+  { name: 'marshmallow', weeklyDownloads: 5000000 },
+  { name: 'jsonschema', weeklyDownloads: 15000000 },
+  
+  // ===== Security =====
+  { name: 'cryptography', weeklyDownloads: 30000000, highValue: true },
+  { name: 'pycryptodome', weeklyDownloads: 8000000, highValue: true },
+  { name: 'pyopenssl', weeklyDownloads: 15000000 },
+  { name: 'paramiko', weeklyDownloads: 8000000, highValue: true },
+  { name: 'pyjwt', weeklyDownloads: 10000000, highValue: true },
+  { name: 'passlib', weeklyDownloads: 2000000 },
+  { name: 'bcrypt', weeklyDownloads: 5000000 },
+  { name: 'python-jose', weeklyDownloads: 2000000 },
+  { name: 'oauthlib', weeklyDownloads: 8000000 },
+  
+  // ===== Async =====
+  { name: 'asyncio', weeklyDownloads: 3000000 },
+  { name: 'gevent', weeklyDownloads: 3000000 },
+  { name: 'eventlet', weeklyDownloads: 2000000 },
+  { name: 'celery', weeklyDownloads: 3000000 },
+  { name: 'kombu', weeklyDownloads: 5000000 },
+  
+  // ===== Configuration =====
+  { name: 'pyyaml', weeklyDownloads: 40000000 },
+  { name: 'toml', weeklyDownloads: 20000000 },
+  { name: 'python-dotenv', weeklyDownloads: 10000000 },
+  { name: 'configparser', weeklyDownloads: 5000000 },
+  { name: 'environs', weeklyDownloads: 1000000 },
+  
+  // ===== Logging =====
+  { name: 'loguru', weeklyDownloads: 5000000 },
+  { name: 'structlog', weeklyDownloads: 2000000 },
+  { name: 'colorlog', weeklyDownloads: 2000000 },
+  
+  // ===== Utils =====
+  { name: 'attrs', weeklyDownloads: 30000000 },
+  { name: 'more-itertools', weeklyDownloads: 20000000 },
+  { name: 'decorator', weeklyDownloads: 20000000 },
+  { name: 'wrapt', weeklyDownloads: 25000000 },
+  { name: 'cachetools', weeklyDownloads: 15000000 },
+  { name: 'tenacity', weeklyDownloads: 10000000 },
+  { name: 'toolz', weeklyDownloads: 5000000 },
+  { name: 'boltons', weeklyDownloads: 1000000 },
+  { name: 'chardet', weeklyDownloads: 30000000 },
+  { name: 'filelock', weeklyDownloads: 20000000 },
+  { name: 'pathlib2', weeklyDownloads: 5000000 },
+  { name: 'pathspec', weeklyDownloads: 15000000 },
+  { name: 'regex', weeklyDownloads: 15000000 },
+  { name: 'python-magic', weeklyDownloads: 2000000 },
+  
+  // ===== Jupyter =====
+  { name: 'jupyter', weeklyDownloads: 2000000 },
+  { name: 'notebook', weeklyDownloads: 5000000 },
+  { name: 'jupyterlab', weeklyDownloads: 3000000 },
+  { name: 'ipython', weeklyDownloads: 10000000 },
+  { name: 'ipykernel', weeklyDownloads: 10000000 },
+  { name: 'nbconvert', weeklyDownloads: 5000000 },
+  { name: 'nbformat', weeklyDownloads: 10000000 },
+  
+  // ===== DevOps =====
+  { name: 'ansible', weeklyDownloads: 1000000, highValue: true },
+  { name: 'docker', weeklyDownloads: 3000000 },
+  { name: 'docker-compose', weeklyDownloads: 1000000 },
+  { name: 'fabric', weeklyDownloads: 500000 },
+  { name: 'invoke', weeklyDownloads: 2000000 },
+  
+  // ===== Scraping =====
+  { name: 'beautifulsoup4', weeklyDownloads: 10000000 },
+  { name: 'lxml', weeklyDownloads: 15000000 },
+  { name: 'scrapy', weeklyDownloads: 1000000 },
+  { name: 'selenium', weeklyDownloads: 5000000 },
+  { name: 'playwright', weeklyDownloads: 2000000 },
+  
+  // ===== Email =====
+  { name: 'sendgrid', weeklyDownloads: 500000 },
+  { name: 'email-validator', weeklyDownloads: 3000000 },
+  
+  // ===== Known attack targets =====
+  { name: 'ctx', weeklyDownloads: 0, highValue: true }, // Malicious
+  { name: 'request', weeklyDownloads: 500000, highValue: true }, // Typosquat of requests
+  { name: 'python3-dateutil', weeklyDownloads: 0, highValue: true }, // Typosquat
+  { name: 'jeIlyfish', weeklyDownloads: 0, highValue: true }, // Typosquat of jellyfish
+];
+
+/**
  * Get all popular package names as a Set for fast lookup
  */
 export function getPopularPackageNames(ecosystem: 'npm' | 'pypi' = 'npm'): Set<string> {
   if (ecosystem === 'npm') {
     return new Set(NPM_POPULAR_PACKAGES.map(p => p.name));
   }
-  // TODO: Add PyPI popular packages
+  if (ecosystem === 'pypi') {
+    return new Set(PYPI_POPULAR_PACKAGES.map(p => p.name));
+  }
   return new Set();
 }
 
@@ -404,6 +604,9 @@ export function getPopularPackageNames(ecosystem: 'npm' | 'pypi' = 'npm'): Set<s
 export function getPopularPackageInfo(name: string, ecosystem: 'npm' | 'pypi' = 'npm'): PopularPackage | null {
   if (ecosystem === 'npm') {
     return NPM_POPULAR_PACKAGES.find(p => p.name === name) || null;
+  }
+  if (ecosystem === 'pypi') {
+    return PYPI_POPULAR_PACKAGES.find(p => p.name === name) || null;
   }
   return null;
 }
@@ -415,6 +618,9 @@ export function getPopularPackages(ecosystem: 'npm' | 'pypi' = 'npm'): PopularPa
   if (ecosystem === 'npm') {
     return NPM_POPULAR_PACKAGES;
   }
+  if (ecosystem === 'pypi') {
+    return PYPI_POPULAR_PACKAGES;
+  }
   return [];
 }
 
@@ -424,6 +630,9 @@ export function getPopularPackages(ecosystem: 'npm' | 'pypi' = 'npm'): PopularPa
 export function getHighValueTargets(ecosystem: 'npm' | 'pypi' = 'npm'): PopularPackage[] {
   if (ecosystem === 'npm') {
     return NPM_POPULAR_PACKAGES.filter(p => p.highValue);
+  }
+  if (ecosystem === 'pypi') {
+    return PYPI_POPULAR_PACKAGES.filter(p => p.highValue);
   }
   return [];
 }
