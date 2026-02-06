@@ -149,18 +149,70 @@ function isSameScope(a: string, b: string): boolean {
  * These are related packages (old/new versions, different maintainers, etc.)
  */
 const LEGITIMATE_PAIRS: Array<[string, string]> = [
+  // Scoped vs unscoped versions
   ['@babel/core', 'babel-core'],
   ['@babel/preset-env', 'babel-preset-env'],
   ['@babel/cli', 'babel-cli'],
   ['@jest/core', 'jest-core'],
+  ['@apollo/client', 'apollo-client'],
+  ['@apollo/server', 'apollo-server'],
   ['@types/node', 'node'],
   ['@types/react', 'react'],
   ['@types/lodash', 'lodash'],
-  ['tmpl', 'tmp'],  // Both are legitimate (template vs temp files)
-  ['chalk', 'charlike'], // Different purposes
+  
+  // Related but different packages
+  ['tmpl', 'tmp'],  // template vs temp files
+  ['chalk', 'charlike'],
   ['got', 'go'],  // Different languages
   ['ora', 'ora-classic'],
   ['inquirer', 'enquirer'], // Both are legitimate CLI prompt libs
+  
+  // Version/variant pairs
+  ['mysql', 'mysql2'],
+  ['psycopg2', 'psycopg2-binary'],
+  
+  // Ecosystem packages
+  ['vue', 'vuex'],
+  ['vue', 'vue-router'],
+  ['react', 'redux'],
+  ['react', 'react-dom'],
+  ['react', 'react-router'],
+  ['vite', 'vitest'],
+  
+  // CLI extensions
+  ['webpack', 'webpack-cli'],
+  ['webpack', 'webpack-dev-server'],
+  ['eslint', 'eslint-plugin-react'],
+  ['eslint', 'eslint-plugin-import'],
+  
+  // Short name collisions
+  ['nest', 'next'],
+  ['nest', 'jest'],
+  ['koa', 'coa'],
+  ['got', 'get'],
+  ['tap', 'tape'],
+  
+  // Lodash family
+  ['lodash', 'lodash.get'],
+  ['lodash', 'lodash.set'],
+  ['lodash', 'lodash.merge'],
+  ['lodash', 'lodash.debounce'],
+  ['lodash', 'lodash.throttle'],
+  ['lodash.get', 'lodash.set'],
+  ['lodash.get', 'lodash.merge'],
+  ['lodash.set', 'lodash.merge'],
+  ['lodash.debounce', 'lodash.throttle'],
+  
+  // Testing libraries
+  ['jest', 'jest-cli'],
+  ['mocha', 'chai'],
+  ['pytest', 'pytest-cov'],
+  ['pytest', 'pytest-mock'],
+  ['pytest', 'pytest-asyncio'],
+  ['pytest-cov', 'pytest-mock'],
+  
+  // Pypi pairs
+  ['request', 'requests'], // Different ecosystems - npm request vs pypi requests
 ];
 
 /**

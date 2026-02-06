@@ -1,0 +1,159 @@
+[
+  {
+    "timestamp": "2026-02-06T00:35:53.221Z",
+    "ecosystem": "npm",
+    "packagesChecked": 93,
+    "falsePositives": [
+      {
+        "package": "@apollo/server",
+        "flaggedAs": "apollo-server",
+        "similarity": 0.870321707278229,
+        "patterns": [],
+        "risk": "MEDIUM"
+      },
+      {
+        "package": "vuex",
+        "flaggedAs": "vue",
+        "similarity": 0.8245833333333333,
+        "patterns": [
+          "character-insertion"
+        ],
+        "risk": "MEDIUM"
+      },
+      {
+        "package": "koa",
+        "flaggedAs": "coa",
+        "similarity": 0.6805555555555555,
+        "patterns": [
+          "bitsquat"
+        ],
+        "risk": "LOW"
+      },
+      {
+        "package": "nest",
+        "flaggedAs": "jest",
+        "similarity": 0.7666666666666667,
+        "patterns": [
+          "common-typo",
+          "bitsquat"
+        ],
+        "risk": "MEDIUM"
+      },
+      {
+        "package": "nest",
+        "flaggedAs": "next",
+        "similarity": 0.7283333333333334,
+        "patterns": [
+          "common-typo"
+        ],
+        "risk": "LOW"
+      },
+      {
+        "package": "vitest",
+        "flaggedAs": "vite",
+        "similarity": 0.7725,
+        "patterns": [],
+        "risk": "LOW"
+      },
+      {
+        "package": "mysql",
+        "flaggedAs": "mysql2",
+        "similarity": 0.8883333333333333,
+        "patterns": [],
+        "risk": "MEDIUM"
+      },
+      {
+        "package": "mysql2",
+        "flaggedAs": "mysql",
+        "similarity": 0.8883333333333333,
+        "patterns": [
+          "character-insertion",
+          "version-suffix"
+        ],
+        "risk": "HIGH"
+      },
+      {
+        "package": "webpack",
+        "flaggedAs": "webpack-cli",
+        "similarity": 0.7552272727272726,
+        "patterns": [],
+        "risk": "LOW"
+      },
+      {
+        "package": "lodash.get",
+        "flaggedAs": "lodash.merge",
+        "similarity": 0.7560555555555555,
+        "patterns": [],
+        "risk": "LOW"
+      },
+      {
+        "package": "lodash.merge",
+        "flaggedAs": "lodash.get",
+        "similarity": 0.7560555555555555,
+        "patterns": [],
+        "risk": "LOW"
+      }
+    ],
+    "fpRate": 11.827956989247312,
+    "newPackagesAdded": 100,
+    "topFPPatterns": {
+      "character-insertion": 2,
+      "bitsquat": 2,
+      "common-typo": 2,
+      "version-suffix": 1
+    }
+  },
+  {
+    "timestamp": "2026-02-06T00:35:53.300Z",
+    "ecosystem": "pypi",
+    "packagesChecked": 64,
+    "falsePositives": [
+      {
+        "package": "requests",
+        "flaggedAs": "request",
+        "similarity": 0.9172115384615385,
+        "patterns": [
+          "character-insertion"
+        ],
+        "risk": "HIGH"
+      },
+      {
+        "package": "pytest-cov",
+        "flaggedAs": "pytest-mock",
+        "similarity": 0.7808681552365763,
+        "patterns": [],
+        "risk": "LOW"
+      },
+      {
+        "package": "pytest-mock",
+        "flaggedAs": "pytest-cov",
+        "similarity": 0.7808681552365763,
+        "patterns": [],
+        "risk": "LOW"
+      }
+    ],
+    "fpRate": 4.6875,
+    "newPackagesAdded": 56,
+    "topFPPatterns": {
+      "character-insertion": 1
+    }
+  },
+  {
+    "timestamp": "2026-02-06T00:36:25.522Z",
+    "ecosystem": "npm",
+    "packagesChecked": 93,
+    "falsePositives": [],
+    "fpRate": 0,
+    "newPackagesAdded": 100,
+    "topFPPatterns": {}
+  },
+  {
+    "timestamp": "2026-02-06T00:36:25.635Z",
+    "ecosystem": "pypi",
+    "packagesChecked": 64,
+    "falsePositives": [],
+    "fpRate": 0,
+    "newPackagesAdded": 56,
+    "topFPPatterns": {}
+  }
+]
