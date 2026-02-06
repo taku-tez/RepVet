@@ -136,6 +136,46 @@ function generateReason(match: TyposquatMatch): string {
 }
 
 /**
+ * Check if two packages are in the same npm scope
+ */
+function isSameScope(a: string, b: string): boolean {
+  const scopeA = a.startsWith('@') ? a.split('/')[0] : null;
+  const scopeB = b.startsWith('@') ? b.split('/')[0] : null;
+  return scopeA !== null && scopeA === scopeB;
+}
+
+/**
+ * Known legitimate package pairs that are NOT typosquats
+ * These are related packages (old/new versions, different maintainers, etc.)
+ */
+const LEGITIMATE_PAIRS: Array<[string, string]> = [
+  ['@babel/core', 'babel-core'],
+  ['@babel/preset-env', 'babel-preset-env'],
+  ['@babel/cli', 'babel-cli'],
+  ['@jest/core', 'jest-core'],
+  ['@types/node', 'node'],
+  ['@types/react', 'react'],
+  ['@types/lodash', 'lodash'],
+  ['tmpl', 'tmp'],  // Both are legitimate (template vs temp files)
+  ['chalk', 'charlike'], // Different purposes
+  ['got', 'go'],  // Different languages
+  ['ora', 'ora-classic'],
+  ['inquirer', 'enquirer'], // Both are legitimate CLI prompt libs
+];
+
+/**
+ * Check if a pair is a known legitimate combination
+ */
+function isLegitimatePair(a: string, b: string): boolean {
+  const aLower = a.toLowerCase();
+  const bLower = b.toLowerCase();
+  return LEGITIMATE_PAIRS.some(([x, y]) => 
+    (aLower === x.toLowerCase() && bLower === y.toLowerCase()) ||
+    (aLower === y.toLowerCase() && bLower === x.toLowerCase())
+  );
+}
+
+/**
  * Check if a package name could be a typosquat of a popular package
  */
 export function checkTyposquat(
@@ -157,14 +197,26 @@ export function checkTyposquat(
   const matches: TyposquatMatch[] = [];
   const nameLower = packageName.toLowerCase();
   
+  // Adjust threshold for short package names (more prone to false positives)
+  const shortNameThreshold = nameLower.replace(/@[^/]+\//, '').length <= 4 
+    ? Math.max(threshold, 0.9) 
+    : threshold;
+  
   for (const target of popularPackages) {
     const targetLower = target.name.toLowerCase();
     
     // Skip if checking against itself
     if (nameLower === targetLower) continue;
     
+    // Skip if same npm scope (e.g., @typescript-eslint/types vs @typescript-eslint/parser)
+    // These are related packages, not typosquats
+    if (isSameScope(packageName, target.name)) continue;
+    
+    // Skip known legitimate package pairs
+    if (isLegitimatePair(packageName, target.name)) continue;
+    
     // Quick filter for performance
-    if (!couldBeSimilar(nameLower, targetLower, threshold * 0.8)) continue;
+    if (!couldBeSimilar(nameLower, targetLower, shortNameThreshold * 0.8)) continue;
     
     // Calculate all similarity scores
     const levSim = levenshteinSimilarity(nameLower, targetLower);
@@ -177,9 +229,13 @@ export function checkTyposquat(
     const patterns = detectPatterns(packageName, target.name);
     
     // Determine if this is a match
-    const effectiveThreshold = (includePatternMatches && patterns.length > 0) 
-      ? Math.min(threshold, PATTERN_MATCH_THRESHOLD)
+    // Use higher threshold for short names to reduce false positives
+    const baseThreshold = nameLower.replace(/@[^/]+\//, '').length <= 4 
+      ? shortNameThreshold 
       : threshold;
+    const effectiveThreshold = (includePatternMatches && patterns.length > 0) 
+      ? Math.min(baseThreshold, PATTERN_MATCH_THRESHOLD)
+      : baseThreshold;
     
     if (combined < effectiveThreshold && patterns.length === 0) continue;
     
