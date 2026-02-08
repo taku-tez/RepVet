@@ -66,6 +66,14 @@ const LEGITIMATE_PACKAGES = [
   'preact',  // Lightweight React alternative (NOT a typosquat of react)
   'scrypt',  // Crypto hash algorithm (NOT a typosquat of bcrypt)
   
+  // Newly verified legitimate packages (2026-02-09 batch)
+  'axio',          // legitimate package (not axios typo)
+  'expressions',   // math expression parser (not express typo)
+  'colours',       // British spelling of colors
+  'yamljs',        // legitimate YAML parser
+  'args',          // legitimate CLI argument parser
+  'babel-plugin-transform-runtime', // old unscoped babel plugin
+  
   // Frameworks that look similar but are distinct
   'fastify', 'hono', 'elysia', 'polka',
   'svelte', 'solid-js', 'qwik', 'astro', 'remix',

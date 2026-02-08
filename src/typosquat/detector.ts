@@ -265,9 +265,41 @@ const LEGITIMATE_PAIRS: Array<[string, string]> = [
   
   // Express ecosystem
   ['express', 'express-ws'],
+  ['express', 'expressions'], // expressions is a math expression parser
   
   // Pypi pairs
   ['request', 'requests'], // Different ecosystems - npm request vs pypi requests
+  
+  // British/American spelling variants
+  ['colors', 'colours'],  // colours is the British spelling variant
+  ['color', 'colour'],
+  ['favorite', 'favourite'],
+  ['center', 'centre'],
+  
+  // Similar but legitimate short packages
+  ['arg', 'args'],        // Both are legitimate CLI argument parsers
+  ['yargs', 'args'],      // args is a separate legitimate package
+  
+  // YAML ecosystem
+  ['yaml', 'yamljs'],     // yamljs is a legitimate YAML parser
+  ['yaml', 'js-yaml'],
+  
+  // Axios-like
+  ['axios', 'axio'],      // axio is a legitimate package (different purpose)
+  
+  // Babel migration pairs (old unscoped → new scoped)
+  ['@babel/plugin-transform-runtime', 'babel-plugin-transform-runtime'],
+  ['@babel/plugin-proposal-class-properties', 'babel-plugin-transform-class-properties'],
+  ['@babel/plugin-proposal-object-rest-spread', 'babel-plugin-transform-object-rest-spread'],
+  ['@babel/register', 'babel-register'],
+  ['@babel/polyfill', 'babel-polyfill'],
+  ['@babel/runtime', 'babel-runtime'],
+  ['@babel/template', 'babel-template'],
+  ['@babel/traverse', 'babel-traverse'],
+  ['@babel/types', 'babel-types'],
+  ['@babel/generator', 'babel-generator'],
+  ['@babel/helpers', 'babel-helpers'],
+  ['@babel/code-frame', 'babel-code-frame'],
 ];
 
 /**
