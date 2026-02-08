@@ -195,6 +195,7 @@ const LEGITIMATE_PAIRS: Array<[string, string]> = [
   ['socks', 'sockjs'],  // socks = SOCKS proxy client, sockjs = WebSocket emulation
   ['preact', 'react'],  // Preact is a legitimate lightweight React alternative
   ['scrypt', 'bcrypt'], // Both are legitimate crypto hashing algorithms
+  ['tslint', 'eslint'], // Both are legitimate linters (tslint deprecated but real)
   
   // Lodash family
   ['lodash', 'lodash.get'],
