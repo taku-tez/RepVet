@@ -982,6 +982,16 @@ export const PYPI_POPULAR_PACKAGES: PopularPackage[] = [
   { name: 'python-binance', weeklyDownloads: 500000, highValue: true }, // Crypto target
   { name: 'numppy', weeklyDownloads: 0, highValue: true }, // Known typosquat
   { name: 'requessts', weeklyDownloads: 0, highValue: true }, // Known typosquat
+
+  // Added 2026-02-08 (FP batch discovery)
+  { name: 'jsonschema-specifications', weeklyDownloads: 63000000 },
+  { name: 'mdurl', weeklyDownloads: 62000000 },
+  { name: 'et-xmlfile', weeklyDownloads: 61000000 },
+  { name: 'openpyxl', weeklyDownloads: 61000000 },
+  { name: 'trove-classifiers', weeklyDownloads: 60000000 },
+  { name: 'aiohappyeyeballs', weeklyDownloads: 59000000 },
+  { name: 'opentelemetry-exporter-otlp', weeklyDownloads: 58000000 },
+  { name: 'grpcio-tools', weeklyDownloads: 57000000 },
 ];
 
 /**

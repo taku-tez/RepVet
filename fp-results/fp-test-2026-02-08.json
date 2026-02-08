@@ -16,5 +16,59 @@
     "fpRate": 0,
     "newPackagesAdded": 28,
     "topFPPatterns": {}
+  },
+  {
+    "timestamp": "2026-02-08T12:38:14.994Z",
+    "ecosystem": "npm",
+    "packagesChecked": 93,
+    "falsePositives": [
+      {
+        "package": "mysql",
+        "flaggedAs": "mssql",
+        "similarity": 0.7829999999999999,
+        "patterns": [],
+        "risk": "LOW"
+      }
+    ],
+    "fpRate": 1.0752688172043012,
+    "newPackagesAdded": 100,
+    "topFPPatterns": {}
+  },
+  {
+    "timestamp": "2026-02-08T12:38:15.188Z",
+    "ecosystem": "pypi",
+    "packagesChecked": 64,
+    "falsePositives": [
+      {
+        "package": "requests",
+        "flaggedAs": "requessts",
+        "similarity": 0.9179166666666666,
+        "patterns": [
+          "character-omission"
+        ],
+        "risk": "HIGH"
+      },
+      {
+        "package": "numpy",
+        "flaggedAs": "numppy",
+        "similarity": 0.8883333333333333,
+        "patterns": [
+          "character-omission"
+        ],
+        "risk": "HIGH"
+      },
+      {
+        "package": "colorama",
+        "flaggedAs": "colourama",
+        "similarity": 0.9066666666666666,
+        "patterns": [],
+        "risk": "HIGH"
+      }
+    ],
+    "fpRate": 4.6875,
+    "newPackagesAdded": 8,
+    "topFPPatterns": {
+      "character-omission": 2
+    }
   }
 ]
