@@ -206,6 +206,11 @@ const LEGITIMATE_PAIRS: Array<[string, string]> = [
   ['@prisma/client', 'prisma'],    // Prisma ORM scoped package
   ['mysql', 'mssql'],              // MySQL vs MS SQL - different databases
   
+  // Lodash ESM variant vs method packages
+  ['lodash-es', 'lodash.get'],
+  ['lodash-es', 'lodash.set'],
+  ['lodash-es', 'lodash.merge'],
+  
   // Lodash family
   ['lodash', 'lodash.get'],
   ['lodash', 'lodash.set'],
@@ -275,6 +280,15 @@ const LEGITIMATE_PAIRS: Array<[string, string]> = [
   
   // Pypi pairs
   ['request', 'requests'], // Different ecosystems - npm request vs pypi requests
+  
+  // UUID variants
+  ['short-uuid', 'shortid'],  // short-uuid = UUID shortener, shortid = ID generator
+  
+  // Python web servers (both are legitimate WSGI/ASGI servers)
+  ['uvicorn', 'gunicorn'],
+  
+  // Python Redis
+  ['redis-py', 'rpds-py'],  // redis-py = Redis client, rpds-py = Rust persistent data structures
   
   // Unrelated packages with coincidental similarity
   ['destr', 'destroy'],     // destr = safe JSON parse, destroy = stream destroy
@@ -366,6 +380,11 @@ export function checkTyposquat(
     
     // Skip if checking against itself
     if (nameLower === targetLower) continue;
+    
+    // Skip if the package being checked is itself a popular/legitimate package
+    // (e.g., numpy should not be flagged as typosquat of numppy)
+    const isPackagePopular = popularPackages.some(p => p.name.toLowerCase() === nameLower);
+    if (isPackagePopular && target.weeklyDownloads !== undefined && target.weeklyDownloads === 0) continue;
     
     // Skip if same npm scope (e.g., @typescript-eslint/types vs @typescript-eslint/parser)
     // These are related packages, not typosquats
