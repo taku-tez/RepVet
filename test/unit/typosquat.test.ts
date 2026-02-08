@@ -127,6 +127,19 @@ describe('Typosquat detection', () => {
     const matches = checkTyposquat('lodash');
     expect(matches).toHaveLength(0);
   });
+
+  it('does not flag legitimate similar packages as typosquats', () => {
+    // These are all real, legitimate packages that should NOT trigger
+    const legitimatePackages = [
+      'react-router', 'react-router-dom', 'eslint-plugin-react',
+      'eslint-plugin-import', 'globby', 'bcryptjs', 'bcrypt',
+      'passport-jwt', 'graphql-tag', 'next', 'nuxt', 'tap',
+    ];
+    for (const pkg of legitimatePackages) {
+      const matches = checkTyposquat(pkg, { threshold: 0.75 });
+      expect(matches).toHaveLength(0);
+    }
+  });
   
   it('respects threshold option', () => {
     const highThreshold = checkTyposquat('lodahs', { threshold: 0.95 });

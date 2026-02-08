@@ -211,6 +211,29 @@ const LEGITIMATE_PAIRS: Array<[string, string]> = [
   ['pytest', 'pytest-asyncio'],
   ['pytest-cov', 'pytest-mock'],
   
+  // React ecosystem
+  ['react-router', 'react-router-dom'],
+  
+  // ESLint plugins (all legitimate)
+  ['eslint-plugin-react', 'eslint-plugin-import'],
+  
+  // Short names that are legitimately similar
+  ['tap', 'tar'],
+  ['next', 'nuxt'],
+  
+  // Glob variants
+  ['glob', 'globby'],
+  
+  // Crypto/auth pairs
+  ['bcrypt', 'bcryptjs'],
+  ['passport', 'passport-jwt'],
+  ['passport', 'passport-local'],
+  
+  // GraphQL ecosystem
+  ['graphql', 'graphql-tag'],
+  ['graphql', 'graphql-tools'],
+  ['graphql-tag', 'graphql-tools'],
+  
   // Pypi pairs
   ['request', 'requests'], // Different ecosystems - npm request vs pypi requests
 ];
