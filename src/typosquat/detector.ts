@@ -239,6 +239,10 @@ const LEGITIMATE_PAIRS: Array<[string, string]> = [
   // Short names that are legitimately similar
   ['tap', 'tar'],
   ['next', 'nuxt'],
+  ['mock', 'nock'],    // mock = general mocking lib, nock = HTTP mocking
+  ['arc', 'arg'],      // Both legitimate short-name packages
+  ['art', 'arg'],      // art = ASCII art, arg = CLI argument parser
+  ['drizzle', 'drizzle-orm'],  // drizzle is the core of drizzle-orm
   
   // Glob variants
   ['glob', 'globby'],
