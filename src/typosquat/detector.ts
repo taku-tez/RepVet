@@ -234,6 +234,22 @@ const LEGITIMATE_PAIRS: Array<[string, string]> = [
   ['graphql', 'graphql-tools'],
   ['graphql-tag', 'graphql-tools'],
   
+  // Commander family
+  ['commander', 'commander-js'],
+  
+  // Jest family
+  ['jest', 'jestjs'],
+  
+  // ESLint plugins (all legitimate ecosystem plugins)
+  ['eslint-plugin-vue', 'eslint-plugin-react'],
+  ['eslint-plugin-jest', 'eslint-plugin-react'],
+  ['eslint-plugin-jest', 'eslint-plugin-import'],
+  ['eslint-plugin-vue', 'eslint-plugin-import'],
+  ['eslint-plugin-jest', 'eslint-plugin-vue'],
+  
+  // Task runner variants
+  ['listr', 'listr2'], // listr2 is the maintained successor of listr
+  
   // Pypi pairs
   ['request', 'requests'], // Different ecosystems - npm request vs pypi requests
 ];
