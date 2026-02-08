@@ -619,6 +619,28 @@ export const PYPI_POPULAR_PACKAGES: PopularPackage[] = [
   { name: 'request', weeklyDownloads: 500000, highValue: true }, // Typosquat of requests
   { name: 'python3-dateutil', weeklyDownloads: 0, highValue: true }, // Typosquat
   { name: 'jeIlyfish', weeklyDownloads: 0, highValue: true }, // Typosquat of jellyfish
+
+  // ===== High-Download Packages (added 2026-02-08) =====
+  { name: 'tzdata', weeklyDownloads: 85000000 },
+  { name: 'httpcore', weeklyDownloads: 84000000 },
+  { name: 'typing-inspection', weeklyDownloads: 82000000 },
+  { name: 'opentelemetry-proto', weeklyDownloads: 80000000 },
+  { name: 'google-api-core', weeklyDownloads: 77000000, highValue: true },
+  { name: 'pyasn1-modules', weeklyDownloads: 75000000 },
+  { name: 'opentelemetry-exporter-otlp-proto-grpc', weeklyDownloads: 71000000 },
+  { name: 'googleapis-common-protos', weeklyDownloads: 71000000 },
+  { name: 'requests-oauthlib', weeklyDownloads: 70000000 },
+  { name: 'opentelemetry-sdk', weeklyDownloads: 69000000 },
+  { name: 'pyarrow', weeklyDownloads: 68000000, highValue: true },
+  { name: 'propcache', weeklyDownloads: 67000000 },
+  { name: 'greenlet', weeklyDownloads: 67000000 },
+  { name: 'rpds-py', weeklyDownloads: 66000000 },
+  { name: 'opentelemetry-exporter-otlp-proto-http', weeklyDownloads: 65000000 },
+  { name: 'referencing', weeklyDownloads: 64000000 },
+  { name: 'markdown-it-py', weeklyDownloads: 64000000 },
+  { name: 'psutil', weeklyDownloads: 63000000 },
+  { name: 'pyparsing', weeklyDownloads: 63000000 },
+  { name: 'yandexcloud', weeklyDownloads: 63000000 },
 ];
 
 /**
