@@ -977,6 +977,78 @@ export const PYPI_POPULAR_PACKAGES: PopularPackage[] = [
   { name: 'aiohappyeyeballs', weeklyDownloads: 59000000 },
   { name: 'opentelemetry-exporter-otlp', weeklyDownloads: 58000000 },
   { name: 'grpcio-tools', weeklyDownloads: 57000000 },
+
+  // ===== AI/ML SDKs (Added 2026-02-09) =====
+  { name: 'openai', weeklyDownloads: 15000000, highValue: true },
+  { name: 'anthropic', weeklyDownloads: 5000000, highValue: true },
+  { name: 'langchain', weeklyDownloads: 8000000, highValue: true },
+  { name: 'langchain-core', weeklyDownloads: 7000000, highValue: true },
+  { name: 'langchain-community', weeklyDownloads: 4000000 },
+  { name: 'langchain-openai', weeklyDownloads: 3000000 },
+  { name: 'langsmith', weeklyDownloads: 5000000 },
+  { name: 'llama-index', weeklyDownloads: 2000000, highValue: true },
+  { name: 'chromadb', weeklyDownloads: 1500000 },
+  { name: 'pinecone-client', weeklyDownloads: 1000000 },
+  { name: 'weaviate-client', weeklyDownloads: 500000 },
+  { name: 'qdrant-client', weeklyDownloads: 500000 },
+  { name: 'cohere', weeklyDownloads: 800000 },
+  { name: 'replicate', weeklyDownloads: 600000 },
+  { name: 'together', weeklyDownloads: 400000 },
+  { name: 'groq', weeklyDownloads: 500000 },
+  { name: 'mistralai', weeklyDownloads: 300000 },
+
+  // ===== ML Ops & Data Apps =====
+  { name: 'mlflow', weeklyDownloads: 3000000 },
+  { name: 'wandb', weeklyDownloads: 2000000 },
+  { name: 'streamlit', weeklyDownloads: 4000000, highValue: true },
+  { name: 'gradio', weeklyDownloads: 3000000 },
+  { name: 'dash', weeklyDownloads: 2500000 },
+  { name: 'ray', weeklyDownloads: 2000000 },
+  { name: 'dask', weeklyDownloads: 3000000 },
+  { name: 'prefect', weeklyDownloads: 1500000 },
+  { name: 'dagster', weeklyDownloads: 1000000 },
+  { name: 'airflow', weeklyDownloads: 500000 },
+  { name: 'apache-airflow', weeklyDownloads: 3000000, highValue: true },
+
+  // ===== Modern Data Tools =====
+  { name: 'polars', weeklyDownloads: 3000000 },
+  { name: 'duckdb', weeklyDownloads: 2500000 },
+  { name: 'pyarrow', weeklyDownloads: 20000000 },
+  { name: 'networkx', weeklyDownloads: 8000000 },
+  { name: 'altair', weeklyDownloads: 2000000 },
+  { name: 'bokeh', weeklyDownloads: 3000000 },
+
+  // ===== Async / Networking =====
+  { name: 'uvloop', weeklyDownloads: 8000000 },
+  { name: 'websockets', weeklyDownloads: 6000000 },
+  { name: 'aiofiles', weeklyDownloads: 5000000 },
+  { name: 'httptools', weeklyDownloads: 7000000 },
+  { name: 'python-multipart', weeklyDownloads: 10000000 },
+  { name: 'twisted', weeklyDownloads: 3000000 },
+  { name: 'pyzmq', weeklyDownloads: 8000000 },
+
+  // ===== Messaging / Streaming =====
+  { name: 'kafka-python', weeklyDownloads: 2000000 },
+  { name: 'confluent-kafka', weeklyDownloads: 2500000 },
+  { name: 'pika', weeklyDownloads: 3000000 },
+  { name: 'fastavro', weeklyDownloads: 2000000 },
+
+  // ===== ORMs & DB Drivers =====
+  { name: 'beanie', weeklyDownloads: 500000 },
+  { name: 'tortoise-orm', weeklyDownloads: 400000 },
+  { name: 'databases', weeklyDownloads: 600000 },
+  { name: 'mysql-connector-python', weeklyDownloads: 3000000 },
+
+  // ===== Web Frameworks =====
+  { name: 'litestar', weeklyDownloads: 300000 },
+  { name: 'pyramid', weeklyDownloads: 500000 },
+  { name: 'cherrypy', weeklyDownloads: 300000 },
+  { name: 'robyn', weeklyDownloads: 100000 },
+
+  // ===== Date/Time =====
+  { name: 'pendulum', weeklyDownloads: 4000000 },
+  { name: 'arrow', weeklyDownloads: 3000000 },
+  { name: 'python-dateutil', weeklyDownloads: 50000000 },
 ];
 
 /**
