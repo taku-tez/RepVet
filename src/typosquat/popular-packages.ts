@@ -385,6 +385,230 @@ export const NPM_POPULAR_PACKAGES: PopularPackage[] = [
   { name: 'rc', weeklyDownloads: 30000000, highValue: true }, // Compromised
   { name: 'ua-parser-js', weeklyDownloads: 8000000, highValue: true }, // Compromised
   { name: 'faker', weeklyDownloads: 3000000, highValue: true }, // Sabotaged
+
+  // ===== Additional popular packages (2026-02-08 batch) =====
+  // Build tools & bundlers
+  { name: 'esbuild', weeklyDownloads: 25000000, highValue: true },
+  { name: 'rollup', weeklyDownloads: 20000000 },
+  { name: 'swc', weeklyDownloads: 5000000 },
+  { name: 'parcel', weeklyDownloads: 3000000 },
+  { name: 'turbo', weeklyDownloads: 4000000 },
+  { name: 'nx', weeklyDownloads: 5000000 },
+  { name: 'lerna', weeklyDownloads: 3000000 },
+  { name: 'tsup', weeklyDownloads: 4000000 },
+  { name: 'unbuild', weeklyDownloads: 2000000 },
+  { name: 'vite-plugin-dts', weeklyDownloads: 2000000 },
+
+  // Testing
+  { name: 'vitest', weeklyDownloads: 10000000 },
+  { name: 'playwright', weeklyDownloads: 6000000, highValue: true },
+  { name: 'cypress', weeklyDownloads: 5000000 },
+  { name: 'puppeteer', weeklyDownloads: 4000000 },
+  { name: 'supertest', weeklyDownloads: 5000000 },
+  { name: 'sinon', weeklyDownloads: 6000000 },
+  { name: 'nock', weeklyDownloads: 4000000 },
+  { name: 'c8', weeklyDownloads: 4000000 },
+  { name: 'nyc', weeklyDownloads: 5000000 },
+  { name: 'ava', weeklyDownloads: 2000000 },
+  { name: 'tap', weeklyDownloads: 1500000 },
+  { name: 'msw', weeklyDownloads: 3000000 },
+
+  // Server frameworks
+  { name: 'fastify', weeklyDownloads: 4000000 },
+  { name: 'koa', weeklyDownloads: 3000000 },
+  { name: 'hapi', weeklyDownloads: 1000000 },
+  { name: 'hono', weeklyDownloads: 3000000 },
+  { name: 'nestjs', weeklyDownloads: 2000000 },
+  { name: 'polka', weeklyDownloads: 2000000 },
+  { name: 'restify', weeklyDownloads: 1000000 },
+  { name: 'connect', weeklyDownloads: 8000000 },
+
+  // Database / ORM
+  { name: 'prisma', weeklyDownloads: 4000000, highValue: true },
+  { name: 'drizzle-orm', weeklyDownloads: 2000000 },
+  { name: 'knex', weeklyDownloads: 3000000 },
+  { name: 'sequelize', weeklyDownloads: 2500000 },
+  { name: 'typeorm', weeklyDownloads: 2000000 },
+  { name: 'mongoose', weeklyDownloads: 3000000 },
+  { name: 'pg', weeklyDownloads: 5000000, highValue: true },
+  { name: 'mysql2', weeklyDownloads: 4000000 },
+  { name: 'better-sqlite3', weeklyDownloads: 3000000 },
+  { name: 'ioredis', weeklyDownloads: 4000000 },
+  { name: 'redis', weeklyDownloads: 3000000 },
+  { name: 'mongodb', weeklyDownloads: 3000000 },
+  { name: 'mssql', weeklyDownloads: 1000000 },
+
+  // Auth / Security
+  { name: 'jsonwebtoken', weeklyDownloads: 12000000, highValue: true },
+  { name: 'bcrypt', weeklyDownloads: 3000000, highValue: true },
+  { name: 'bcryptjs', weeklyDownloads: 3000000, highValue: true },
+  { name: 'passport', weeklyDownloads: 3000000, highValue: true },
+  { name: 'helmet', weeklyDownloads: 3000000, highValue: true },
+  { name: 'cors', weeklyDownloads: 6000000 },
+  { name: 'csurf', weeklyDownloads: 1000000 },
+  { name: 'express-rate-limit', weeklyDownloads: 2000000 },
+  { name: 'jose', weeklyDownloads: 8000000, highValue: true },
+  { name: 'oauth4webapi', weeklyDownloads: 2000000 },
+
+  // Logging / Monitoring
+  { name: 'pino', weeklyDownloads: 6000000 },
+  { name: 'winston', weeklyDownloads: 8000000 },
+  { name: 'bunyan', weeklyDownloads: 2000000 },
+  { name: 'morgan', weeklyDownloads: 5000000 },
+  { name: 'log4js', weeklyDownloads: 3000000 },
+
+  // HTTP / Network
+  { name: 'node-fetch', weeklyDownloads: 30000000 },
+  { name: 'undici', weeklyDownloads: 15000000 },
+  { name: 'got', weeklyDownloads: 10000000 },
+  { name: 'superagent', weeklyDownloads: 5000000 },
+  { name: 'http-proxy', weeklyDownloads: 8000000 },
+  { name: 'proxy-agent', weeklyDownloads: 6000000 },
+  { name: 'http-proxy-middleware', weeklyDownloads: 5000000 },
+  { name: 'ws', weeklyDownloads: 20000000 },
+  { name: 'socket.io', weeklyDownloads: 4000000 },
+  { name: 'socket.io-client', weeklyDownloads: 4000000 },
+
+  // Validation / Schema
+  { name: 'zod', weeklyDownloads: 15000000, highValue: true },
+  { name: 'joi', weeklyDownloads: 6000000 },
+  { name: 'yup', weeklyDownloads: 5000000 },
+  { name: 'ajv', weeklyDownloads: 35000000 },
+  { name: 'superstruct', weeklyDownloads: 2000000 },
+  { name: 'class-validator', weeklyDownloads: 3000000 },
+  { name: 'valibot', weeklyDownloads: 2000000 },
+
+  // File / Stream processing
+  { name: 'sharp', weeklyDownloads: 5000000 },
+  { name: 'multer', weeklyDownloads: 3000000 },
+  { name: 'archiver', weeklyDownloads: 5000000 },
+  { name: 'formidable', weeklyDownloads: 4000000 },
+  { name: 'busboy', weeklyDownloads: 6000000 },
+  { name: 'unzipper', weeklyDownloads: 3000000 },
+  { name: 'adm-zip', weeklyDownloads: 3000000 },
+  { name: 'csv-parser', weeklyDownloads: 2000000 },
+  { name: 'papaparse', weeklyDownloads: 3000000 },
+  { name: 'exceljs', weeklyDownloads: 2000000 },
+  { name: 'xlsx', weeklyDownloads: 3000000 },
+  { name: 'pdf-lib', weeklyDownloads: 2000000 },
+  { name: 'pdfkit', weeklyDownloads: 2000000 },
+
+  // Templating / Rendering
+  { name: 'handlebars', weeklyDownloads: 10000000 },
+  { name: 'ejs', weeklyDownloads: 6000000 },
+  { name: 'pug', weeklyDownloads: 2000000 },
+  { name: 'nunjucks', weeklyDownloads: 2000000 },
+  { name: 'mustache', weeklyDownloads: 3000000 },
+  { name: 'eta', weeklyDownloads: 2000000 },
+
+  // Date / Time
+  { name: 'dayjs', weeklyDownloads: 15000000 },
+  { name: 'date-fns', weeklyDownloads: 12000000 },
+  { name: 'luxon', weeklyDownloads: 5000000 },
+  { name: 'chrono-node', weeklyDownloads: 1000000 },
+
+  // CLI / Terminal
+  { name: 'inquirer', weeklyDownloads: 10000000 },
+  { name: 'ora', weeklyDownloads: 6000000 },
+  { name: 'prompts', weeklyDownloads: 8000000 },
+  { name: 'meow', weeklyDownloads: 6000000 },
+  { name: 'execa', weeklyDownloads: 15000000 },
+  { name: 'shelljs', weeklyDownloads: 5000000 },
+  { name: 'cross-spawn', weeklyDownloads: 25000000 },
+  { name: 'which', weeklyDownloads: 30000000 },
+  { name: 'kleur', weeklyDownloads: 8000000 },
+  { name: 'picocolors', weeklyDownloads: 25000000 },
+  { name: 'wrap-ansi', weeklyDownloads: 20000000 },
+  { name: 'strip-ansi', weeklyDownloads: 30000000 },
+  { name: 'ansi-escapes', weeklyDownloads: 8000000 },
+  { name: 'listr2', weeklyDownloads: 5000000 },
+
+  // Config / Env
+  { name: 'cosmiconfig', weeklyDownloads: 15000000 },
+  { name: 'rc', weeklyDownloads: 15000000 },
+  { name: 'conf', weeklyDownloads: 2000000 },
+  { name: 'convict', weeklyDownloads: 1500000 },
+  { name: 'envalid', weeklyDownloads: 1500000 },
+
+  // Crypto / Encoding
+  { name: 'crypto-js', weeklyDownloads: 6000000, highValue: true },
+  { name: 'tweetnacl', weeklyDownloads: 5000000, highValue: true },
+  { name: 'sjcl', weeklyDownloads: 500000, highValue: true },
+  { name: 'node-forge', weeklyDownloads: 10000000, highValue: true },
+  { name: 'argon2', weeklyDownloads: 1000000, highValue: true },
+
+  // Cloud SDKs
+  { name: '@aws-sdk/client-s3', weeklyDownloads: 8000000, highValue: true },
+  { name: '@aws-sdk/client-dynamodb', weeklyDownloads: 4000000 },
+  { name: '@aws-sdk/client-lambda', weeklyDownloads: 3000000 },
+  { name: '@aws-sdk/client-sqs', weeklyDownloads: 3000000 },
+  { name: '@aws-sdk/client-sns', weeklyDownloads: 2000000 },
+  { name: '@azure/identity', weeklyDownloads: 3000000, highValue: true },
+  { name: '@azure/storage-blob', weeklyDownloads: 3000000 },
+  { name: '@google-cloud/storage', weeklyDownloads: 3000000 },
+  { name: '@google-cloud/pubsub', weeklyDownloads: 2000000 },
+  { name: 'firebase', weeklyDownloads: 3000000 },
+  { name: 'firebase-admin', weeklyDownloads: 2000000, highValue: true },
+
+  // React ecosystem
+  { name: 'zustand', weeklyDownloads: 6000000 },
+  { name: 'jotai', weeklyDownloads: 2000000 },
+  { name: 'recoil', weeklyDownloads: 1500000 },
+  { name: 'immer', weeklyDownloads: 8000000 },
+  { name: 'swr', weeklyDownloads: 4000000 },
+  { name: '@tanstack/react-query', weeklyDownloads: 5000000 },
+  { name: 'react-hook-form', weeklyDownloads: 5000000 },
+  { name: 'formik', weeklyDownloads: 3000000 },
+  { name: 'framer-motion', weeklyDownloads: 4000000 },
+  { name: 'clsx', weeklyDownloads: 10000000 },
+  { name: 'classnames', weeklyDownloads: 12000000 },
+  { name: 'tailwind-merge', weeklyDownloads: 5000000 },
+
+  // Misc utilities
+  { name: 'p-limit', weeklyDownloads: 20000000 },
+  { name: 'p-queue', weeklyDownloads: 5000000 },
+  { name: 'fast-glob', weeklyDownloads: 15000000 },
+  { name: 'globby', weeklyDownloads: 10000000 },
+  { name: 'chokidar', weeklyDownloads: 15000000 },
+  { name: 'micromatch', weeklyDownloads: 20000000 },
+  { name: 'picomatch', weeklyDownloads: 25000000 },
+  { name: 'nanoid', weeklyDownloads: 10000000 },
+  { name: 'cuid', weeklyDownloads: 2000000 },
+  { name: 'ulid', weeklyDownloads: 1500000 },
+  { name: 'ms', weeklyDownloads: 25000000 },
+  { name: 'bytes', weeklyDownloads: 15000000 },
+  { name: 'mime', weeklyDownloads: 15000000 },
+  { name: 'mime-types', weeklyDownloads: 20000000 },
+  { name: 'content-type', weeklyDownloads: 15000000 },
+  { name: 'eventemitter3', weeklyDownloads: 10000000 },
+  { name: 'signal-exit', weeklyDownloads: 25000000 },
+  { name: 'on-finished', weeklyDownloads: 15000000 },
+  { name: 'destroy', weeklyDownloads: 15000000 },
+  { name: 'depd', weeklyDownloads: 15000000 },
+  { name: 'vary', weeklyDownloads: 10000000 },
+  { name: 'etag', weeklyDownloads: 10000000 },
+  { name: 'fresh', weeklyDownloads: 10000000 },
+  { name: 'cookie', weeklyDownloads: 12000000 },
+  { name: 'cookie-parser', weeklyDownloads: 5000000 },
+  { name: 'body-parser', weeklyDownloads: 15000000 },
+  { name: 'compression', weeklyDownloads: 5000000 },
+  { name: 'serve-static', weeklyDownloads: 10000000 },
+  { name: 'finalhandler', weeklyDownloads: 10000000 },
+  { name: 'statuses', weeklyDownloads: 10000000 },
+  { name: 'raw-body', weeklyDownloads: 10000000 },
+  { name: 'iconv-lite', weeklyDownloads: 20000000 },
+  { name: 'type-is', weeklyDownloads: 10000000 },
+  { name: 'accepts', weeklyDownloads: 10000000 },
+  { name: 'negotiator', weeklyDownloads: 10000000 },
+  { name: 'range-parser', weeklyDownloads: 8000000 },
+  { name: 'path-to-regexp', weeklyDownloads: 15000000 },
+  { name: 'methods', weeklyDownloads: 10000000 },
+  { name: 'merge-descriptors', weeklyDownloads: 8000000 },
+  { name: 'encodeurl', weeklyDownloads: 10000000 },
+  { name: 'escape-html', weeklyDownloads: 10000000 },
+  { name: 'parseurl', weeklyDownloads: 10000000 },
+  { name: 'send', weeklyDownloads: 8000000 },
+  { name: 'proxy-addr', weeklyDownloads: 8000000 },
 ];
 
 /**
@@ -641,6 +865,123 @@ export const PYPI_POPULAR_PACKAGES: PopularPackage[] = [
   { name: 'psutil', weeklyDownloads: 63000000 },
   { name: 'pyparsing', weeklyDownloads: 63000000 },
   { name: 'yandexcloud', weeklyDownloads: 63000000 },
+
+  // ===== Additional PyPI packages (2026-02-08 batch) =====
+  // Web frameworks
+  { name: 'fastapi', weeklyDownloads: 15000000, highValue: true },
+  { name: 'uvicorn', weeklyDownloads: 12000000 },
+  { name: 'gunicorn', weeklyDownloads: 10000000 },
+  { name: 'starlette', weeklyDownloads: 12000000 },
+  { name: 'tornado', weeklyDownloads: 8000000 },
+  { name: 'bottle', weeklyDownloads: 2000000 },
+  { name: 'falcon', weeklyDownloads: 1500000 },
+  { name: 'sanic', weeklyDownloads: 1000000 },
+  { name: 'aiohttp', weeklyDownloads: 12000000 },
+  { name: 'httpx', weeklyDownloads: 15000000 },
+
+  // Database / ORM
+  { name: 'sqlalchemy', weeklyDownloads: 15000000, highValue: true },
+  { name: 'psycopg2', weeklyDownloads: 8000000 },
+  { name: 'psycopg2-binary', weeklyDownloads: 10000000 },
+  { name: 'pymongo', weeklyDownloads: 5000000 },
+  { name: 'redis', weeklyDownloads: 8000000 },
+  { name: 'celery', weeklyDownloads: 5000000 },
+  { name: 'kombu', weeklyDownloads: 5000000 },
+  { name: 'alembic', weeklyDownloads: 6000000 },
+  { name: 'peewee', weeklyDownloads: 2000000 },
+  { name: 'motor', weeklyDownloads: 2000000 },
+
+  // Data science / ML
+  { name: 'pandas', weeklyDownloads: 30000000, highValue: true },
+  { name: 'numpy', weeklyDownloads: 50000000, highValue: true },
+  { name: 'scipy', weeklyDownloads: 15000000 },
+  { name: 'scikit-learn', weeklyDownloads: 12000000 },
+  { name: 'matplotlib', weeklyDownloads: 15000000 },
+  { name: 'seaborn', weeklyDownloads: 5000000 },
+  { name: 'plotly', weeklyDownloads: 4000000 },
+  { name: 'tensorflow', weeklyDownloads: 5000000, highValue: true },
+  { name: 'torch', weeklyDownloads: 8000000, highValue: true },
+  { name: 'transformers', weeklyDownloads: 5000000, highValue: true },
+  { name: 'keras', weeklyDownloads: 4000000 },
+  { name: 'xgboost', weeklyDownloads: 3000000 },
+  { name: 'lightgbm', weeklyDownloads: 2000000 },
+  { name: 'catboost', weeklyDownloads: 1000000 },
+  { name: 'opencv-python', weeklyDownloads: 8000000 },
+  { name: 'pillow', weeklyDownloads: 20000000 },
+  { name: 'sympy', weeklyDownloads: 5000000 },
+
+  // DevOps / Cloud
+  { name: 'boto3', weeklyDownloads: 30000000, highValue: true },
+  { name: 'botocore', weeklyDownloads: 30000000 },
+  { name: 'awscli', weeklyDownloads: 10000000, highValue: true },
+  { name: 'google-cloud-storage', weeklyDownloads: 5000000 },
+  { name: 'google-cloud-bigquery', weeklyDownloads: 4000000 },
+  { name: 'azure-storage-blob', weeklyDownloads: 3000000 },
+  { name: 'azure-identity', weeklyDownloads: 3000000, highValue: true },
+  { name: 'kubernetes', weeklyDownloads: 3000000 },
+  { name: 'docker', weeklyDownloads: 3000000 },
+  { name: 'ansible', weeklyDownloads: 2000000 },
+  { name: 'paramiko', weeklyDownloads: 5000000, highValue: true },
+  { name: 'fabric', weeklyDownloads: 2000000 },
+
+  // Security / Crypto
+  { name: 'cryptography', weeklyDownloads: 30000000, highValue: true },
+  { name: 'pycryptodome', weeklyDownloads: 5000000, highValue: true },
+  { name: 'pyjwt', weeklyDownloads: 10000000, highValue: true },
+  { name: 'passlib', weeklyDownloads: 2000000, highValue: true },
+  { name: 'python-jose', weeklyDownloads: 2000000, highValue: true },
+  { name: 'authlib', weeklyDownloads: 1500000 },
+  { name: 'oauthlib', weeklyDownloads: 5000000 },
+
+  // Testing
+  { name: 'pytest', weeklyDownloads: 20000000 },
+  { name: 'pytest-cov', weeklyDownloads: 8000000 },
+  { name: 'pytest-asyncio', weeklyDownloads: 5000000 },
+  { name: 'mock', weeklyDownloads: 5000000 },
+  { name: 'coverage', weeklyDownloads: 10000000 },
+  { name: 'tox', weeklyDownloads: 5000000 },
+  { name: 'hypothesis', weeklyDownloads: 3000000 },
+  { name: 'factory-boy', weeklyDownloads: 2000000 },
+  { name: 'faker', weeklyDownloads: 5000000 },
+  { name: 'responses', weeklyDownloads: 3000000 },
+  { name: 'httpretty', weeklyDownloads: 1000000 },
+
+  // CLI / Utils
+  { name: 'click', weeklyDownloads: 20000000 },
+  { name: 'typer', weeklyDownloads: 5000000 },
+  { name: 'rich', weeklyDownloads: 15000000 },
+  { name: 'tqdm', weeklyDownloads: 15000000 },
+  { name: 'colorama', weeklyDownloads: 15000000 },
+  { name: 'tabulate', weeklyDownloads: 8000000 },
+  { name: 'python-dotenv', weeklyDownloads: 10000000 },
+  { name: 'pydantic', weeklyDownloads: 20000000, highValue: true },
+  { name: 'attrs', weeklyDownloads: 15000000 },
+  { name: 'dataclasses-json', weeklyDownloads: 3000000 },
+  { name: 'marshmallow', weeklyDownloads: 5000000 },
+
+  // Parsing / Serialization
+  { name: 'lxml', weeklyDownloads: 10000000 },
+  { name: 'beautifulsoup4', weeklyDownloads: 10000000 },
+  { name: 'html5lib', weeklyDownloads: 5000000 },
+  { name: 'pyyaml', weeklyDownloads: 30000000 },
+  { name: 'toml', weeklyDownloads: 10000000 },
+  { name: 'orjson', weeklyDownloads: 5000000 },
+  { name: 'ujson', weeklyDownloads: 3000000 },
+  { name: 'msgpack', weeklyDownloads: 5000000 },
+  { name: 'protobuf', weeklyDownloads: 15000000 },
+  { name: 'grpcio', weeklyDownloads: 15000000 },
+
+  // Async / Concurrency
+  { name: 'anyio', weeklyDownloads: 15000000 },
+  { name: 'trio', weeklyDownloads: 2000000 },
+  { name: 'gevent', weeklyDownloads: 3000000 },
+  { name: 'eventlet', weeklyDownloads: 2000000 },
+
+  // Known PyPI attack targets (additional)
+  { name: 'colourama', weeklyDownloads: 0, highValue: true }, // Typosquat of colorama
+  { name: 'python-binance', weeklyDownloads: 500000, highValue: true }, // Crypto target
+  { name: 'numppy', weeklyDownloads: 0, highValue: true }, // Known typosquat
+  { name: 'requessts', weeklyDownloads: 0, highValue: true }, // Known typosquat
 ];
 
 /**

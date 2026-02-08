@@ -241,6 +241,8 @@ const LEGITIMATE_PAIRS: Array<[string, string]> = [
   
   // Jest family
   ['jest', 'jestjs'],
+  ['jose', 'jestjs'], // jose (JWT lib) vs jestjs (jest wrapper) - unrelated
+  ['nestjs', 'jestjs'], // NestJS framework vs Jest wrapper - unrelated
   
   // ESLint plugins (all legitimate ecosystem plugins)
   ['eslint-plugin-vue', 'eslint-plugin-react'],
