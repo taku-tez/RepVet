@@ -270,6 +270,10 @@ const LEGITIMATE_PAIRS: Array<[string, string]> = [
   // Pypi pairs
   ['request', 'requests'], // Different ecosystems - npm request vs pypi requests
   
+  // Unrelated packages with coincidental similarity
+  ['destr', 'destroy'],     // destr = safe JSON parse, destroy = stream destroy
+  ['prismjs', 'prisma'],    // PrismJS = syntax highlighter, Prisma = ORM
+  
   // British/American spelling variants
   ['colors', 'colours'],  // colours is the British spelling variant
   ['color', 'colour'],
@@ -283,9 +287,6 @@ const LEGITIMATE_PAIRS: Array<[string, string]> = [
   // YAML ecosystem
   ['yaml', 'yamljs'],     // yamljs is a legitimate YAML parser
   ['yaml', 'js-yaml'],
-  
-  // Axios-like
-  ['axios', 'axio'],      // axio is a legitimate package (different purpose)
   
   // Babel migration pairs (old unscoped → new scoped)
   ['@babel/plugin-transform-runtime', 'babel-plugin-transform-runtime'],
@@ -368,7 +369,9 @@ export function checkTyposquat(
     if (isLegitimatePair(packageName, target.name)) continue;
     
     // Quick filter for performance
-    if (!couldBeSimilar(nameLower, targetLower, shortNameThreshold * 0.8)) continue;
+    // Bypass for potential scope-confusion (scoped vs unscoped)
+    const isScopeConfusionCandidate = nameLower.startsWith('@') && !targetLower.startsWith('@');
+    if (!isScopeConfusionCandidate && !couldBeSimilar(nameLower, targetLower, shortNameThreshold * 0.8)) continue;
     
     // Calculate all similarity scores
     const levSim = levenshteinSimilarity(nameLower, targetLower);

@@ -67,7 +67,7 @@ const LEGITIMATE_PACKAGES = [
   'scrypt',  // Crypto hash algorithm (NOT a typosquat of bcrypt)
   
   // Newly verified legitimate packages (2026-02-09 batch)
-  'axio',          // legitimate package (not axios typo)
+  // 'axio' removed - it IS a common axios typosquat pattern
   'expressions',   // math expression parser (not express typo)
   'colours',       // British spelling of colors
   'yamljs',        // legitimate YAML parser

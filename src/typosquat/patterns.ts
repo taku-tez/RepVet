@@ -350,6 +350,20 @@ function detectScopeConfusion(a: string, b: string): PatternMatch | null {
     }
   }
   
+  // @scope/anything where scope matches a popular unscoped package
+  // e.g., @lodash/core impersonating lodash
+  const scopeMatchA = a.match(/^@([^/]+)\/(.+)$/);
+  if (scopeMatchA) {
+    const [, scopeA] = scopeMatchA;
+    if (scopeA.toLowerCase() === b.toLowerCase()) {
+      return {
+        pattern: 'scope-confusion',
+        description: 'Scoped package impersonating unscoped package',
+        confidence: 0.9,
+      };
+    }
+  }
+
   // Reverse: scope-pkg vs @scope/pkg
   for (const sep of ['-', '_', '']) {
     const match = a.match(new RegExp(`^([a-z]+)${sep === '' ? '' : '\\' + sep}([a-z].+)$`));
