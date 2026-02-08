@@ -135,7 +135,9 @@ program
   .option('-c, --concurrency <number>', 'Number of concurrent API requests', String(DEFAULT_CONCURRENCY))
   .option('--show-skipped', 'Show details of skipped packages')
   .option('-i, --ignore <patterns...>', 'Ignore packages matching patterns (glob or prefix match)')
-  .action(async (inputPath: string, options: { json?: boolean; sarif?: boolean; csv?: boolean; threshold?: string; failUnder?: string; concurrency?: string; showSkipped?: boolean; ignore?: string[] }) => {
+  .option('-q, --quiet', 'Suppress all output except errors (exit code still reflects --fail-under)')
+  .option('-v, --verbose', 'Show all packages and detailed information')
+  .action(async (inputPath: string, options: { json?: boolean; sarif?: boolean; csv?: boolean; threshold?: string; failUnder?: string; concurrency?: string; showSkipped?: boolean; ignore?: string[]; quiet?: boolean; verbose?: boolean }) => {
     try {
       const fs = await import('fs');
       const path = await import('path');
@@ -181,6 +183,12 @@ program
       // Clamp concurrency to safe range
       const safeConcurrency = Math.max(1, Math.min(20, concurrency));
       
+      // Logging helpers respecting --quiet / --verbose
+      const isQuiet = options.quiet && !options.json && !options.sarif && !options.csv;
+      const isVerbose = options.verbose && !options.json && !options.sarif && !options.csv;
+      const log = (msg: string) => { if (!isQuiet) console.log(msg); };
+      const logVerbose = (msg: string) => { if (isVerbose) console.log(msg); };
+      
       // Determine files to scan
       let filesToScan: string[];
       if (stat.isDirectory()) {
@@ -188,7 +196,7 @@ program
         if (filesToScan.length === 0) {
           if (options.json) {
             console.log(JSON.stringify({ error: 'No dependency files found in directory' }));
-          } else {
+          } else if (!options.quiet) {
             console.log(chalk.yellow('No dependency files found in directory'));
           }
           process.exit(0);
@@ -273,11 +281,11 @@ program
             // Extract package names for display (version info preserved in packages array)
             const packageNames = packages.map(p => p.name);
           
-          if (!options.json && !options.sarif) {
+          if (!options.json && !options.sarif && !options.csv) {
             const ignoredCount = ignoredPackages.length;
             const checkCount = packagesToCheck.length;
             const ignoreNote = ignoredCount > 0 ? `, ${ignoredCount} ignored` : '';
-            console.log(chalk.dim(`Scanning ${relativePath} (${checkCount} ${ecosystem} packages${ignoreNote})...`));
+            log(chalk.dim(`Scanning ${relativePath} (${checkCount} ${ecosystem} packages${ignoreNote})...`));
           }
           
           const checkResults = await Promise.all(
@@ -376,40 +384,50 @@ program
             };
         console.log(JSON.stringify(output, null, 2));
       } else {
-        console.log('');
+        log('');
         
-        if (filteredResults.length === 0) {
-          console.log(chalk.green('✓ All packages above threshold'));
+        if (isVerbose) {
+          // Verbose: show ALL packages, not just below threshold
+          log(chalk.bold(`All packages (${allResults.length}):\n`));
+          for (const result of allResults) {
+            printResult(result);
+            log('');
+          }
+        } else if (filteredResults.length === 0) {
+          log(chalk.green('✓ All packages above threshold'));
         } else {
-          console.log(chalk.bold(`Packages below threshold (${threshold}):\n`));
+          log(chalk.bold(`Packages below threshold (${threshold}):\n`));
           for (const result of filteredResults) {
             printResult(result);
-            console.log('');
+            log('');
           }
         }
         
         const summary = summarizeResults(allResults);
-        console.log(chalk.dim('─'.repeat(50)));
+        log(chalk.dim('─'.repeat(50)));
         
         if (stat.isDirectory()) {
-          console.log(chalk.dim(`Files scanned: ${fileResults.length}`));
+          log(chalk.dim(`Files scanned: ${fileResults.length}`));
         }
         
-        console.log(`Scanned: ${allResults.length}/${totalPackages} | ` + 
+        log(`Scanned: ${allResults.length}/${totalPackages} | ` + 
           chalk.red(`Critical: ${summary.critical}`) + ' | ' +
           chalk.red(`High: ${summary.high}`) + ' | ' +
           chalk.yellow(`Medium: ${summary.medium}`) + ' | ' +
           chalk.green(`Low: ${summary.low}`));
         
         if (allSkipped.length > 0) {
-          console.log(chalk.dim(`Skipped: ${allSkipped.length} (not found or API error)`));
-          if (options.showSkipped) {
-            console.log(chalk.dim('\nSkipped packages:'));
+          log(chalk.dim(`Skipped: ${allSkipped.length} (not found or API error)`));
+          if (options.showSkipped || isVerbose) {
+            log(chalk.dim('\nSkipped packages:'));
             for (const sp of allSkipped) {
-              console.log(chalk.dim(`  • ${sp.name}: ${sp.reason}`));
+              log(chalk.dim(`  • ${sp.name}: ${sp.reason}`));
             }
           }
         }
+        
+        // Verbose: show timing info
+        logVerbose(chalk.dim(`\nCompleted at: ${new Date().toISOString()}`));
       }
       
       process.exit(hasFailure ? 1 : 0);
