@@ -56,6 +56,10 @@ const LEGITIMATE_PACKAGES = [
   
   // Enquirer is legitimate (not typosquat of inquirer)
   'enquirer',
+  
+  // Short names that are distinct packages
+  'color',   // color manipulation (vs colors)
+  'socks',   // SOCKS proxy client (vs sockjs)
 ];
 
 describe('Typosquat false positive regression', () => {

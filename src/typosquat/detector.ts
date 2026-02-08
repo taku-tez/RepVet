@@ -191,6 +191,8 @@ const LEGITIMATE_PAIRS: Array<[string, string]> = [
   ['koa', 'coa'],
   ['got', 'get'],
   ['tap', 'tape'],
+  ['color', 'colors'],  // Both legitimate - color manipulation libs
+  ['socks', 'sockjs'],  // socks = SOCKS proxy client, sockjs = WebSocket emulation
   
   // Lodash family
   ['lodash', 'lodash.get'],
