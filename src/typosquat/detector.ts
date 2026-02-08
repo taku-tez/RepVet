@@ -300,6 +300,33 @@ const LEGITIMATE_PAIRS: Array<[string, string]> = [
   ['favorite', 'favourite'],
   ['center', 'centre'],
   
+  // Popular legitimate variants
+  ['dotenv', 'dotenvx'],   // dotenvx is a legitimate dotenv successor
+  ['express', 'expression'],
+  ['express', 'expressive'],
+  ['moment', 'momently'],
+  ['commander', 'commands'],
+  ['color', 'colord'],     // colord is a legitimate color manipulation lib
+  ['request', 'requested'],
+  ['mongoose', 'mongodb'],
+  ['passport', 'passports'],
+  ['tensorflow', 'tensorflow-gpu'],
+  ['beautifulsoup4', 'beautiful-soup'],
+  ['pycryptodome', 'pycrypto'],  // pycrypto is the predecessor
+  ['rich', 'riches'],
+  ['cors', 'core'],        // Completely different packages
+  ['vuex', 'vues'],        // vuex is vue state management
+  ['nestjs', 'nextjs'],    // NestJS vs NextJS - completely different frameworks
+  ['uuid', 'uuidv4'],     // uuidv4 is a legitimate uuid v4 generator
+  ['colors', 'colour'],   // colour is British spelling
+  ['colors', 'colord'],   // colord is a legitimate color lib
+  ['passport', 'passport-jwt'],
+  ['pil', 'pip'],         // PIL (Python Imaging Library) vs pip
+  ['crypto', 'bcrypt'],   // crypto is Node.js builtin, bcrypt is hashing lib
+  ['request', 'requests2'], // requests2 is a legitimate fork
+  ['expression', 'express-session'],
+  ['expression', 'compression'],
+  
   // Similar but legitimate short packages
   ['arg', 'args'],        // Both are legitimate CLI argument parsers
   ['yargs', 'args'],      // args is a separate legitimate package
@@ -327,7 +354,62 @@ const LEGITIMATE_PAIRS: Array<[string, string]> = [
  * Check if a pair is a known legitimate combination
  */
 /** Well-known legitimate suffixes that create variant packages */
-const LEGITIMATE_SUFFIXES = ['-es', '-esm', '-cjs', '-cli', '-core', '-lite', '-next', '-ng', '-js', '-ts'];
+const LEGITIMATE_SUFFIXES = ['-es', '-esm', '-cjs', '-cli', '-core', '-lite', '-next', '-ng', '-js', '-ts', '-io', '-api', '-app', '-dev', '-pro', '-plus', '-hub', '-kit', '-lib', '-sdk', '-utils', '-helpers', '-tools', '-common'];
+
+/**
+ * Check if two names differ only by a common legitimate variation pattern.
+ * Returns true if the difference looks like a normal ecosystem variant rather than a typosquat.
+ */
+function isLegitimateVariation(a: string, b: string): boolean {
+  const aLower = a.toLowerCase();
+  const bLower = b.toLowerCase();
+  
+  // Plural: one is the other + 's' — but only single 's' difference, not double
+  // (e.g., "colors" vs "color" is legit, but "expresss" vs "express" is suspicious)
+  if (aLower === bLower + 's' || bLower === aLower + 's') {
+    // Only exempt if it doesn't create a double-letter ending
+    const longer = aLower.length > bLower.length ? aLower : bLower;
+    if (longer.length >= 2 && longer[longer.length - 1] === 's' && longer[longer.length - 2] !== 's') {
+      return true;
+    }
+  }
+  
+  // Dot-separated method packages (e.g., "lodash.get" should not match "lodash.set")
+  if (aLower.includes('.') && bLower.includes('.')) {
+    const [aBase] = aLower.split('.');
+    const [bBase] = bLower.split('.');
+    if (aBase === bBase) return true;
+  }
+  
+  // Hyphenated sub-packages sharing same prefix (e.g., "babel-cli" vs "babel-core")
+  if (aLower.includes('-') && bLower.includes('-')) {
+    const aParts = aLower.split('-');
+    const bParts = bLower.split('-');
+    if (aParts[0] === bParts[0] && aParts.length > 1 && bParts.length > 1) return true;
+  }
+  
+  // Version suffix patterns (e.g., "mysql2" vs "mysql", "requests2" vs "requests")
+  const versionSuffixRe = /^(.+?)(\d+)$/;
+  const aMatch = aLower.match(versionSuffixRe);
+  const bMatch = bLower.match(versionSuffixRe);
+  if (aMatch && aMatch[1] === bLower) return true;
+  if (bMatch && bMatch[1] === aLower) return true;
+  
+  // Common non-hyphenated suffixes (e.g., "knexjs" vs "knex", "nextjs" vs "next")
+  const nonHyphenSuffixes = ['js', 'ts', 'io', 'py', 'rs', 'go', 'rb'];
+  for (const sfx of nonHyphenSuffixes) {
+    if (aLower === bLower + sfx || bLower === aLower + sfx) return true;
+  }
+  
+  // Hyphen vs no-hyphen for compound words (e.g., "dot-env" vs "dotenv", "socket-io" vs "socketio")
+  if (aLower.replace(/-/g, '') === bLower.replace(/-/g, '')) return true;
+  
+  // Dot vs hyphen vs concatenation (e.g., "socket.io" vs "socketio" vs "socket-io")
+  const normalize = (s: string) => s.replace(/[-_.]/g, '');
+  if (normalize(aLower) === normalize(bLower)) return true;
+  
+  return false;
+}
 
 function isLegitimatePair(a: string, b: string): boolean {
   const aLower = a.toLowerCase();
@@ -343,6 +425,9 @@ function isLegitimatePair(a: string, b: string): boolean {
   for (const suffix of LEGITIMATE_SUFFIXES) {
     if (aLower === bLower + suffix || bLower === aLower + suffix) return true;
   }
+  
+  // Check common legitimate variation patterns
+  if (isLegitimateVariation(a, b)) return true;
   
   return false;
 }
@@ -362,9 +447,20 @@ export function checkTyposquat(
     includePatternMatches = true,
   } = options;
   
-  const popularPackages = highValueOnly 
+  const rawPackages = highValueOnly 
     ? getHighValueTargets(ecosystem) 
     : getPopularPackages(ecosystem);
+  
+  // Dedup popular packages by name (keep the one with most info)
+  const seenNames = new Set<string>();
+  const popularPackages: typeof rawPackages = [];
+  for (const pkg of rawPackages) {
+    const key = pkg.name.toLowerCase();
+    if (!seenNames.has(key)) {
+      seenNames.add(key);
+      popularPackages.push(pkg);
+    }
+  }
   
   const matches: TyposquatMatch[] = [];
   const nameLower = packageName.toLowerCase();
@@ -382,9 +478,9 @@ export function checkTyposquat(
     if (nameLower === targetLower) continue;
     
     // Skip if the package being checked is itself a popular/legitimate package
-    // (e.g., numpy should not be flagged as typosquat of numppy)
+    // (e.g., numpy should not be flagged as typosquat of numppy, cors should not flag as typosquat of core)
     const isPackagePopular = popularPackages.some(p => p.name.toLowerCase() === nameLower);
-    if (isPackagePopular && target.weeklyDownloads !== undefined && target.weeklyDownloads === 0) continue;
+    if (isPackagePopular) continue;
     
     // Skip if same npm scope (e.g., @typescript-eslint/types vs @typescript-eslint/parser)
     // These are related packages, not typosquats
