@@ -364,17 +364,23 @@ const LEGITIMATE_SUFFIXES = ['-es', '-esm', '-cjs', '-cli', '-core', '-lite', '-
  * Check if two names differ only by a common legitimate variation pattern.
  * Returns true if the difference looks like a normal ecosystem variant rather than a typosquat.
  */
-function isLegitimateVariation(a: string, b: string): boolean {
+function isLegitimateVariation(a: string, b: string, knownNames?: Set<string>): boolean {
   const aLower = a.toLowerCase();
   const bLower = b.toLowerCase();
   
-  // Plural: one is the other + 's' — but only single 's' difference, not double
-  // (e.g., "colors" vs "color" is legit, but "expresss" vs "express" is suspicious)
+  // Plural: one is the other + 's' — but only exempt if the plural form is itself
+  // a known popular package (e.g., "colors" vs "color" is legit because both exist,
+  // but "lodashs" vs "lodash" is suspicious because "lodashs" is not a real package)
   if (aLower === bLower + 's' || bLower === aLower + 's') {
     // Only exempt if it doesn't create a double-letter ending
     const longer = aLower.length > bLower.length ? aLower : bLower;
     if (longer.length >= 2 && longer[longer.length - 1] === 's' && longer[longer.length - 2] !== 's') {
-      return true;
+      // Only exempt if the plural form is a known popular package
+      if (knownNames && knownNames.has(longer)) {
+        return true;
+      }
+      // If no known names provided, skip exemption (conservative)
+      if (!knownNames) return true;
     }
   }
   
@@ -415,7 +421,7 @@ function isLegitimateVariation(a: string, b: string): boolean {
   return false;
 }
 
-function isLegitimatePair(a: string, b: string): boolean {
+function isLegitimatePair(a: string, b: string, knownNames?: Set<string>): boolean {
   const aLower = a.toLowerCase();
   const bLower = b.toLowerCase();
   
@@ -431,7 +437,7 @@ function isLegitimatePair(a: string, b: string): boolean {
   }
   
   // Check common legitimate variation patterns
-  if (isLegitimateVariation(a, b)) return true;
+  if (isLegitimateVariation(a, b, knownNames)) return true;
   
   return false;
 }
@@ -491,7 +497,7 @@ export function checkTyposquat(
     if (isSameScope(packageName, target.name)) continue;
     
     // Skip known legitimate package pairs
-    if (isLegitimatePair(packageName, target.name)) continue;
+    if (isLegitimatePair(packageName, target.name, seenNames)) continue;
     
     // Quick filter for performance
     // Bypass for potential scope-confusion (scoped vs unscoped)

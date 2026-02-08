@@ -183,4 +183,26 @@ describe('Typosquat detection', () => {
       expect(actionable).toHaveLength(0);
     }
   });
+
+  it('detects fake plural typosquats (e.g., lodashs, expresss)', () => {
+    // "lodashs" is not a real package — should be flagged as typosquat of "lodash"
+    const lodashs = checkTyposquat('lodashs');
+    expect(lodashs.length).toBeGreaterThan(0);
+    expect(lodashs[0].target).toBe('lodash');
+    expect(lodashs[0].risk).not.toBe('LOW');
+
+    // "expresss" (triple s) should be flagged
+    const expresss = checkTyposquat('expresss');
+    expect(expresss.length).toBeGreaterThan(0);
+    expect(expresss[0].target).toBe('express');
+  });
+
+  it('does not flag real plural packages (e.g., requests, colors)', () => {
+    // "requests" and "colors" are real popular packages — should not be flagged
+    const requests = checkTyposquat('requests', { ecosystem: 'pypi' });
+    expect(requests).toHaveLength(0);
+
+    const colors = checkTyposquat('colors', { ecosystem: 'npm' });
+    expect(colors).toHaveLength(0);
+  });
 });
