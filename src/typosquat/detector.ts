@@ -199,6 +199,12 @@ const LEGITIMATE_PAIRS: Array<[string, string]> = [
   ['preact', 'react'],  // Preact is a legitimate lightweight React alternative
   ['scrypt', 'bcrypt'], // Both are legitimate crypto hashing algorithms
   ['tslint', 'eslint'], // Both are legitimate linters (tslint deprecated but real)
+  ['@emotion/react', 'emotion'],   // Scoped emotion packages
+  ['@emotion/styled', 'emotion'],  // Scoped emotion packages
+  ['@vue/cli', 'vue'],             // Vue CLI tooling
+  ['@aws-sdk/client-s3', 'aws-sdk'], // AWS SDK v3 scoped packages
+  ['@prisma/client', 'prisma'],    // Prisma ORM scoped package
+  ['mysql', 'mssql'],              // MySQL vs MS SQL - different databases
   
   // Lodash family
   ['lodash', 'lodash.get'],

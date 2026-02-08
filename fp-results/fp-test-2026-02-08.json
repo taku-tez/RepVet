@@ -70,5 +70,124 @@
     "topFPPatterns": {
       "character-omission": 2
     }
+  },
+  {
+    "timestamp": "2026-02-08T18:38:18.822Z",
+    "ecosystem": "npm",
+    "packagesChecked": 93,
+    "falsePositives": [
+      {
+        "package": "@emotion/react",
+        "flaggedAs": "emotion",
+        "similarity": 0.6364035087719299,
+        "patterns": [
+          "scope-confusion"
+        ],
+        "risk": "LOW"
+      },
+      {
+        "package": "@emotion/styled",
+        "flaggedAs": "emotion",
+        "similarity": 0.611111111111111,
+        "patterns": [
+          "scope-confusion"
+        ],
+        "risk": "LOW"
+      },
+      {
+        "package": "@vue/cli",
+        "flaggedAs": "vue",
+        "similarity": 0.53125,
+        "patterns": [
+          "scope-confusion"
+        ],
+        "risk": "LOW"
+      },
+      {
+        "package": "@aws-sdk/client-s3",
+        "flaggedAs": "aws-sdk",
+        "similarity": 0.5549663299663299,
+        "patterns": [
+          "scope-confusion"
+        ],
+        "risk": "LOW"
+      },
+      {
+        "package": "@prisma/client",
+        "flaggedAs": "prisma",
+        "similarity": 0.580952380952381,
+        "patterns": [
+          "scope-confusion"
+        ],
+        "risk": "LOW"
+      },
+      {
+        "package": "@prisma/client",
+        "flaggedAs": "prisma",
+        "similarity": 0.580952380952381,
+        "patterns": [
+          "scope-confusion"
+        ],
+        "risk": "LOW"
+      },
+      {
+        "package": "@prisma/client",
+        "flaggedAs": "prisma",
+        "similarity": 0.580952380952381,
+        "patterns": [
+          "scope-confusion"
+        ],
+        "risk": "LOW"
+      },
+      {
+        "package": "mysql",
+        "flaggedAs": "mssql",
+        "similarity": 0.7829999999999999,
+        "patterns": [],
+        "risk": "LOW"
+      }
+    ],
+    "fpRate": 8.60215053763441,
+    "newPackagesAdded": 100,
+    "topFPPatterns": {
+      "scope-confusion": 7
+    }
+  },
+  {
+    "timestamp": "2026-02-08T18:38:19.041Z",
+    "ecosystem": "pypi",
+    "packagesChecked": 64,
+    "falsePositives": [
+      {
+        "package": "requests",
+        "flaggedAs": "requessts",
+        "similarity": 0.9179166666666666,
+        "patterns": [
+          "character-omission"
+        ],
+        "risk": "HIGH"
+      },
+      {
+        "package": "numpy",
+        "flaggedAs": "numppy",
+        "similarity": 0.8883333333333333,
+        "patterns": [
+          "character-omission"
+        ],
+        "risk": "HIGH"
+      },
+      {
+        "package": "colorama",
+        "flaggedAs": "colourama",
+        "similarity": 0.9066666666666666,
+        "patterns": [],
+        "risk": "HIGH"
+      }
+    ],
+    "fpRate": 4.6875,
+    "newPackagesAdded": 0,
+    "topFPPatterns": {
+      "character-omission": 2
+    }
   }
 ]
