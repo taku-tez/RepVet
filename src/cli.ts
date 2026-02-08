@@ -395,7 +395,7 @@ program
           }
         } else if (filteredResults.length === 0) {
           log(chalk.green('✓ All packages above threshold'));
-        } else {
+        } else if (!isQuiet) {
           log(chalk.bold(`Packages below threshold (${threshold}):\n`));
           for (const result of filteredResults) {
             printResult(result);
