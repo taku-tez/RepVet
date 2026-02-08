@@ -192,6 +192,8 @@ const LEGITIMATE_PAIRS: Array<[string, string]> = [
   ['koa', 'coa'],
   ['got', 'get'],
   ['tap', 'tape'],
+  ['nconf', 'conf'],    // nconf = hierarchical config, conf = simple config store
+  ['clsx', 'xlsx'],     // clsx = classname utility, xlsx = spreadsheet parser
   ['color', 'colors'],  // Both legitimate - color manipulation libs
   ['socks', 'sockjs'],  // socks = SOCKS proxy client, sockjs = WebSocket emulation
   ['preact', 'react'],  // Preact is a legitimate lightweight React alternative

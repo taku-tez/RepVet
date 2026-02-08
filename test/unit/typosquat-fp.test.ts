@@ -2,6 +2,7 @@
  * False positive regression tests for typosquat detection
  * All packages here are LEGITIMATE and should NOT be flagged as MEDIUM+ risk
  */
+import { describe, test, expect } from '@jest/globals';
 import { checkTyposquat, TyposquatMatch } from '../../src/typosquat/detector.js';
 
 const LEGITIMATE_PACKAGES = [
@@ -98,7 +99,7 @@ describe('Typosquat false positive regression', () => {
         const details = actionable.map((m: TyposquatMatch) => 
           `${m.target} (${(m.similarity * 100).toFixed(1)}%, ${m.risk})`
         ).join(', ');
-        fail(`False positive: ${pkg} flagged as similar to ${details}`);
+        expect(`False positive: ${pkg} flagged as similar to ${details}`).toBe('');
       }
     }
   );
