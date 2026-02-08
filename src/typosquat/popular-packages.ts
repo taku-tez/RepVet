@@ -609,6 +609,21 @@ export const NPM_POPULAR_PACKAGES: PopularPackage[] = [
   { name: 'parseurl', weeklyDownloads: 10000000 },
   { name: 'send', weeklyDownloads: 8000000 },
   { name: 'proxy-addr', weeklyDownloads: 8000000 },
+
+  // ===== Added 2026-02-08: Push to 510+ =====
+  // Modern frameworks & runtimes
+  { name: 'hono', weeklyDownloads: 2000000 },
+  { name: 'elysia', weeklyDownloads: 500000 },
+  { name: 'drizzle-orm', weeklyDownloads: 1500000 },
+  { name: 'kysely', weeklyDownloads: 800000 },
+  { name: 'effect', weeklyDownloads: 500000 },
+  { name: 'zx', weeklyDownloads: 1000000 },
+  { name: 'ofetch', weeklyDownloads: 3000000 },
+  { name: 'undici', weeklyDownloads: 15000000 },
+  { name: 'citty', weeklyDownloads: 2000000 },
+  { name: 'consola', weeklyDownloads: 5000000 },
+  { name: 'unenv', weeklyDownloads: 3000000 },
+  { name: 'nitro', weeklyDownloads: 2000000 },
 ];
 
 /**
