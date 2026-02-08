@@ -159,4 +159,28 @@ describe('Typosquat detection', () => {
     expect(matches[0].targetInfo).toBeDefined();
     expect(matches[0].targetInfo?.weeklyDownloads).toBeGreaterThan(0);
   });
+
+  it('detects short-name typosquats of high-value targets', () => {
+    // axos → axios (4 chars, highValue target)
+    const matches = checkTyposquat('axos');
+    const med = matches.filter(m => m.risk !== 'LOW');
+    expect(med.length).toBeGreaterThan(0);
+    expect(med[0].target).toBe('axios');
+  });
+
+  it('detects typosquats of newly-flagged high-value targets', () => {
+    // chawk → chalk (highValue)
+    const matches = checkTyposquat('chawk');
+    const med = matches.filter(m => m.risk !== 'LOW');
+    expect(med.length).toBeGreaterThan(0);
+    expect(med[0].target).toBe('chalk');
+  });
+
+  it('treats -es/-esm/-cli suffixed variants as legitimate (no MEDIUM+ flags)', () => {
+    for (const pkg of ['lodash-es', 'moment-es', 'debug-js', 'commander-js']) {
+      const matches = checkTyposquat(pkg);
+      const actionable = matches.filter(m => m.risk !== 'LOW');
+      expect(actionable).toHaveLength(0);
+    }
+  });
 });

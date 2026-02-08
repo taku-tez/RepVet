@@ -89,6 +89,7 @@ function calculateRisk(
   
   // MEDIUM: Moderate similarity with patterns
   if (similarity >= 0.8 || (similarity >= 0.75 && patternCount > 0)) return 'MEDIUM';
+  if (similarity >= 0.75 && isHighValue) return 'MEDIUM';
   if (similarity >= 0.7 && hasDangerousPattern) return 'MEDIUM';
   
   return 'LOW';
@@ -257,6 +258,12 @@ const LEGITIMATE_PAIRS: Array<[string, string]> = [
   // Task runner variants
   ['listr', 'listr2'], // listr2 is the maintained successor of listr
   
+  // ESM variants
+  ['lodash', 'lodash-es'],
+  
+  // Express ecosystem
+  ['express', 'express-ws'],
+  
   // Pypi pairs
   ['request', 'requests'], // Different ecosystems - npm request vs pypi requests
 ];
@@ -264,13 +271,25 @@ const LEGITIMATE_PAIRS: Array<[string, string]> = [
 /**
  * Check if a pair is a known legitimate combination
  */
+/** Well-known legitimate suffixes that create variant packages */
+const LEGITIMATE_SUFFIXES = ['-es', '-esm', '-cjs', '-cli', '-core', '-lite', '-next', '-ng', '-js', '-ts'];
+
 function isLegitimatePair(a: string, b: string): boolean {
   const aLower = a.toLowerCase();
   const bLower = b.toLowerCase();
-  return LEGITIMATE_PAIRS.some(([x, y]) => 
+  
+  // Check explicit pairs
+  if (LEGITIMATE_PAIRS.some(([x, y]) => 
     (aLower === x.toLowerCase() && bLower === y.toLowerCase()) ||
     (aLower === y.toLowerCase() && bLower === x.toLowerCase())
-  );
+  )) return true;
+  
+  // Check if one is the other + a well-known suffix
+  for (const suffix of LEGITIMATE_SUFFIXES) {
+    if (aLower === bLower + suffix || bLower === aLower + suffix) return true;
+  }
+  
+  return false;
 }
 
 /**
@@ -296,7 +315,8 @@ export function checkTyposquat(
   const nameLower = packageName.toLowerCase();
   
   // Adjust threshold for short package names (more prone to false positives)
-  const shortNameThreshold = nameLower.replace(/@[^/]+\//, '').length <= 4 
+  const bareNameLen = nameLower.replace(/@[^/]+\//, '').length;
+  const shortNameThreshold = bareNameLen <= 4 
     ? Math.max(threshold, 0.9) 
     : threshold;
   
@@ -328,8 +348,10 @@ export function checkTyposquat(
     
     // Determine if this is a match
     // Use higher threshold for short names to reduce false positives
-    const baseThreshold = nameLower.replace(/@[^/]+\//, '').length <= 4 
-      ? shortNameThreshold 
+    // But relax for high-value targets (axios, react, chalk etc.) since typosquatting risk is higher
+    const isHighValue = target.highValue ?? false;
+    const baseThreshold = bareNameLen <= 4 
+      ? (isHighValue ? Math.max(threshold, 0.8) : shortNameThreshold) 
       : threshold;
     const effectiveThreshold = (includePatternMatches && patterns.length > 0) 
       ? Math.min(baseThreshold, PATTERN_MATCH_THRESHOLD)
@@ -341,7 +363,6 @@ export function checkTyposquat(
     if (combined < 0.5) continue;
     
     // Calculate risk
-    const isHighValue = target.highValue ?? false;
     const risk = calculateRisk(combined, patterns, isHighValue);
     
     const match: TyposquatMatch = {
