@@ -60,6 +60,32 @@ const LEGITIMATE_PACKAGES = [
   // Short names that are distinct packages
   'color',   // color manipulation (vs colors)
   'socks',   // SOCKS proxy client (vs sockjs)
+  
+  // Legitimate alternatives/related crypto packages
+  'preact',  // Lightweight React alternative (NOT a typosquat of react)
+  'scrypt',  // Crypto hash algorithm (NOT a typosquat of bcrypt)
+  
+  // Frameworks that look similar but are distinct
+  'fastify', 'hono', 'elysia', 'polka',
+  'svelte', 'solid-js', 'qwik', 'astro', 'remix',
+  'vite', 'vitest', 'tsup',
+  
+  // Runtime/tooling
+  'pnpm', 'bun', 'oxc', 'biome',
+  
+  // DB/ORM
+  'prisma', 'drizzle-orm', 'kysely', 'knex',
+  'mongoose', 'typeorm', 'sequelize',
+  
+  // Crypto/auth
+  'argon2', 'jose', 'paseto',
+  
+  // State management
+  'zustand', 'jotai', 'valtio', 'recoil',
+  
+  // Misc utilities
+  'dayjs', 'luxon', 'cheerio', 'undici', 'ky',
+  'pino', 'winston', 'sharp', 'canvas',
 ];
 
 describe('Typosquat false positive regression', () => {

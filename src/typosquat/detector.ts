@@ -193,6 +193,8 @@ const LEGITIMATE_PAIRS: Array<[string, string]> = [
   ['tap', 'tape'],
   ['color', 'colors'],  // Both legitimate - color manipulation libs
   ['socks', 'sockjs'],  // socks = SOCKS proxy client, sockjs = WebSocket emulation
+  ['preact', 'react'],  // Preact is a legitimate lightweight React alternative
+  ['scrypt', 'bcrypt'], // Both are legitimate crypto hashing algorithms
   
   // Lodash family
   ['lodash', 'lodash.get'],
