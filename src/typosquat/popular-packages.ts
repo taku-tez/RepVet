@@ -1049,6 +1049,145 @@ export const PYPI_POPULAR_PACKAGES: PopularPackage[] = [
   { name: 'pendulum', weeklyDownloads: 4000000 },
   { name: 'arrow', weeklyDownloads: 3000000 },
   { name: 'python-dateutil', weeklyDownloads: 50000000 },
+
+  // ===== Additional PyPI packages (2026-02-09 batch) =====
+  
+  // Infrastructure & DevOps
+  { name: 'ansible', weeklyDownloads: 5000000, highValue: true },
+  { name: 'ansible-core', weeklyDownloads: 4000000 },
+  { name: 'terraform', weeklyDownloads: 1000000 },
+  { name: 'pulumi', weeklyDownloads: 500000 },
+  { name: 'salt', weeklyDownloads: 300000 },
+  
+  // HTTP & Networking
+  { name: 'httpcore', weeklyDownloads: 15000000 },
+  { name: 'h11', weeklyDownloads: 10000000 },
+  { name: 'h2', weeklyDownloads: 5000000 },
+  { name: 'websockets', weeklyDownloads: 8000000 },
+  { name: 'websocket-client', weeklyDownloads: 6000000 },
+  { name: 'pycurl', weeklyDownloads: 2000000 },
+  { name: 'httplib2', weeklyDownloads: 5000000 },
+  { name: 'grpcio', weeklyDownloads: 15000000, highValue: true },
+  { name: 'grpcio-tools', weeklyDownloads: 3000000 },
+  { name: 'protobuf', weeklyDownloads: 20000000, highValue: true },
+  
+  // Serialization & Data Formats
+  { name: 'msgpack', weeklyDownloads: 5000000 },
+  { name: 'orjson', weeklyDownloads: 8000000 },
+  { name: 'ujson', weeklyDownloads: 4000000 },
+  { name: 'simplejson', weeklyDownloads: 5000000 },
+  { name: 'cbor2', weeklyDownloads: 1000000 },
+  { name: 'avro-python3', weeklyDownloads: 1000000 },
+  { name: 'pyarrow', weeklyDownloads: 12000000, highValue: true },
+  { name: 'parquet', weeklyDownloads: 500000 },
+  
+  // Logging & Monitoring
+  { name: 'loguru', weeklyDownloads: 8000000 },
+  { name: 'structlog', weeklyDownloads: 3000000 },
+  { name: 'sentry-sdk', weeklyDownloads: 10000000, highValue: true },
+  { name: 'prometheus-client', weeklyDownloads: 5000000 },
+  { name: 'opentelemetry-api', weeklyDownloads: 5000000 },
+  { name: 'opentelemetry-sdk', weeklyDownloads: 4000000 },
+  { name: 'datadog', weeklyDownloads: 2000000 },
+  
+  // Image & Media
+  { name: 'pillow', weeklyDownloads: 30000000, highValue: true },
+  { name: 'opencv-python', weeklyDownloads: 10000000, highValue: true },
+  { name: 'imageio', weeklyDownloads: 3000000 },
+  { name: 'wand', weeklyDownloads: 1000000 },
+  { name: 'cairosvg', weeklyDownloads: 1000000 },
+  
+  // Task Queues & Background Jobs
+  { name: 'celery', weeklyDownloads: 8000000, highValue: true },
+  { name: 'rq', weeklyDownloads: 2000000 },
+  { name: 'dramatiq', weeklyDownloads: 500000 },
+  { name: 'huey', weeklyDownloads: 300000 },
+  
+  // CLI & Terminal
+  { name: 'typer', weeklyDownloads: 8000000 },
+  { name: 'fire', weeklyDownloads: 3000000 },
+  { name: 'tqdm', weeklyDownloads: 25000000, highValue: true },
+  { name: 'colorama', weeklyDownloads: 30000000 },
+  { name: 'tabulate', weeklyDownloads: 10000000 },
+  { name: 'prettytable', weeklyDownloads: 3000000 },
+  
+  // Auth & Security
+  { name: 'pyjwt', weeklyDownloads: 15000000, highValue: true },
+  { name: 'oauthlib', weeklyDownloads: 10000000 },
+  { name: 'python-jose', weeklyDownloads: 5000000 },
+  { name: 'passlib', weeklyDownloads: 3000000 },
+  { name: 'itsdangerous', weeklyDownloads: 15000000 },
+  { name: 'certifi', weeklyDownloads: 50000000, highValue: true },
+  { name: 'truststore', weeklyDownloads: 1000000 },
+  
+  // Cloud SDKs
+  { name: 'google-cloud-storage', weeklyDownloads: 10000000 },
+  { name: 'google-cloud-bigquery', weeklyDownloads: 8000000 },
+  { name: 'google-auth', weeklyDownloads: 20000000, highValue: true },
+  { name: 'azure-storage-blob', weeklyDownloads: 5000000 },
+  { name: 'azure-identity', weeklyDownloads: 8000000 },
+  { name: 'msal', weeklyDownloads: 5000000 },
+  
+  // Typing & Validation
+  { name: 'typing-extensions', weeklyDownloads: 80000000, highValue: true },
+  { name: 'annotated-types', weeklyDownloads: 15000000 },
+  { name: 'mypy-extensions', weeklyDownloads: 10000000 },
+  { name: 'typeguard', weeklyDownloads: 3000000 },
+  
+  // Async & Concurrency
+  { name: 'anyio', weeklyDownloads: 15000000 },
+  { name: 'trio', weeklyDownloads: 2000000 },
+  { name: 'gevent', weeklyDownloads: 5000000 },
+  { name: 'eventlet', weeklyDownloads: 3000000 },
+  { name: 'greenlet', weeklyDownloads: 15000000 },
+  
+  // Config & Environment
+  { name: 'python-dotenv', weeklyDownloads: 15000000, highValue: true },
+  { name: 'dynaconf', weeklyDownloads: 1000000 },
+  { name: 'hydra-core', weeklyDownloads: 2000000 },
+  { name: 'omegaconf', weeklyDownloads: 3000000 },
+  
+  // PDF & Document
+  { name: 'pypdf', weeklyDownloads: 5000000 },
+  { name: 'reportlab', weeklyDownloads: 3000000 },
+  { name: 'python-docx', weeklyDownloads: 3000000 },
+  { name: 'openpyxl', weeklyDownloads: 10000000 },
+  { name: 'xlsxwriter', weeklyDownloads: 5000000 },
+  
+  // AI/ML Additional
+  { name: 'langchain', weeklyDownloads: 8000000, highValue: true },
+  { name: 'openai', weeklyDownloads: 10000000, highValue: true },
+  { name: 'anthropic', weeklyDownloads: 5000000, highValue: true },
+  { name: 'tiktoken', weeklyDownloads: 8000000 },
+  { name: 'sentence-transformers', weeklyDownloads: 3000000 },
+  { name: 'faiss-cpu', weeklyDownloads: 3000000 },
+  { name: 'chromadb', weeklyDownloads: 2000000 },
+  { name: 'pinecone-client', weeklyDownloads: 1000000 },
+  { name: 'qdrant-client', weeklyDownloads: 500000 },
+  { name: 'mlflow', weeklyDownloads: 5000000 },
+  { name: 'wandb', weeklyDownloads: 5000000 },
+  { name: 'optuna', weeklyDownloads: 2000000 },
+  { name: 'ray', weeklyDownloads: 5000000 },
+  { name: 'dask', weeklyDownloads: 3000000 },
+  { name: 'polars', weeklyDownloads: 3000000 },
+  { name: 'vaex', weeklyDownloads: 500000 },
+  
+  // Graph & Visualization
+  { name: 'plotly', weeklyDownloads: 8000000 },
+  { name: 'seaborn', weeklyDownloads: 8000000 },
+  { name: 'bokeh', weeklyDownloads: 3000000 },
+  { name: 'altair', weeklyDownloads: 3000000 },
+  { name: 'networkx', weeklyDownloads: 8000000 },
+  
+  // Testing Additional
+  { name: 'hypothesis', weeklyDownloads: 3000000 },
+  { name: 'factory-boy', weeklyDownloads: 2000000 },
+  { name: 'faker', weeklyDownloads: 8000000 },
+  { name: 'responses', weeklyDownloads: 3000000 },
+  { name: 'vcrpy', weeklyDownloads: 1000000 },
+  { name: 'coverage', weeklyDownloads: 15000000 },
+  { name: 'tox', weeklyDownloads: 5000000 },
+  { name: 'nox', weeklyDownloads: 3000000 },
 ];
 
 /**

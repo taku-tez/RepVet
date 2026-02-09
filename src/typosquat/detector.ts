@@ -317,6 +317,7 @@ const LEGITIMATE_PAIRS: Array<[string, string]> = [
   ['tensorflow', 'tensorflow-gpu'],
   ['beautifulsoup4', 'beautiful-soup'],
   ['pycryptodome', 'pycrypto'],  // pycrypto is the predecessor
+  ['pycryptodome', 'pycryptodomex'],  // pycryptodomex is the non-PEP-302 version
   ['rich', 'riches'],
   ['cors', 'core'],        // Completely different packages
   ['vuex', 'vues'],        // vuex is vue state management

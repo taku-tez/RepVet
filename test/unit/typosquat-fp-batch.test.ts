@@ -38,3 +38,49 @@ describe('Typosquat False Positive Prevention', () => {
     expect(matches).toHaveLength(0);
   });
 });
+
+describe('PyPI false positive batch', () => {
+  const legitimatePypiPackages = [
+    // Core packages
+    'requests', 'httpx', 'aiohttp', 'urllib3', 'flask', 'django', 'fastapi',
+    'numpy', 'pandas', 'scipy', 'matplotlib', 'pillow', 'opencv-python',
+    // Testing
+    'pytest', 'pytest-cov', 'pytest-mock', 'coverage', 'tox', 'nox', 'faker',
+    // Linting
+    'black', 'ruff', 'flake8', 'mypy', 'pylint',
+    // Auth & Security
+    'pyjwt', 'oauthlib', 'passlib', 'certifi', 'cryptography',
+    'pycryptodome', 'pycryptodomex',
+    // Data
+    'sqlalchemy', 'alembic', 'psycopg2', 'psycopg2-binary', 'pymongo',
+    // Cloud
+    'boto3', 'botocore', 'google-auth', 'azure-identity',
+    // AI/ML
+    'langchain', 'openai', 'anthropic', 'tiktoken', 'transformers',
+    'torch', 'tensorflow', 'scikit-learn',
+    // CLI
+    'click', 'typer', 'rich', 'tqdm', 'colorama', 'tabulate',
+    // Async
+    'anyio', 'trio', 'gevent', 'greenlet',
+    // Serialization
+    'protobuf', 'grpcio', 'orjson', 'msgpack', 'pyarrow',
+    // Logging
+    'loguru', 'structlog', 'sentry-sdk',
+    // Infra
+    'celery', 'redis', 'gunicorn', 'uvicorn',
+    // Typing
+    'typing-extensions', 'pydantic', 'attrs',
+    // Config
+    'python-dotenv', 'pyyaml', 'tomli',
+    // Doc
+    'openpyxl', 'pypdf', 'python-docx',
+    // Viz
+    'plotly', 'seaborn', 'bokeh', 'networkx',
+  ];
+
+  test.each(legitimatePypiPackages)('should NOT flag PyPI "%s" as typosquat', (pkg) => {
+    const matches = checkTyposquat(pkg, { ecosystem: 'pypi', threshold: 0.75, includePatternMatches: true });
+    const mediumPlus = matches.filter(m => m.risk !== 'LOW');
+    expect(mediumPlus).toHaveLength(0);
+  });
+});
