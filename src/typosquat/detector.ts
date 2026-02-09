@@ -193,6 +193,9 @@ const LEGITIMATE_PAIRS: Array<[string, string]> = [
   ['koa', 'coa'],
   ['got', 'get'],
   ['tap', 'tape'],
+  ['ink', 'ini'],     // ink = React for CLI, ini = config parser
+  ['datasets', 'databases'], // datasets = HuggingFace, databases = encode/databases
+  ['asyncpg', 'asyncio'],    // asyncpg = PostgreSQL driver, asyncio = stdlib
   ['nconf', 'conf'],    // nconf = hierarchical config, conf = simple config store
   ['clsx', 'xlsx'],     // clsx = classname utility, xlsx = spreadsheet parser
   ['color', 'colors'],  // Both legitimate - color manipulation libs
