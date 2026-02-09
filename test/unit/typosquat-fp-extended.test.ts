@@ -114,6 +114,23 @@ const PYPI_REAL_PACKAGES = [
   'rich-click', 'textual-dev',
 ];
 
+// Packages that were previously FPs (regression guard)
+const EXTENDED_REAL_PACKAGES_REGRESSION = [
+  'openai', 'effector', 'socket', 'turso', 'typedi',
+  'astro', 'remix', 'nuxt', 'qwik', 'fresh',
+  'drizzle-orm', 'kysely', 'mikro-orm', 'trpc', 'hono', 'elysia',
+  'jose', 'paseto', 'lucia', 'argon2', 'tweetnacl',
+  'anthropic', 'langchain', 'llamaindex', 'transformers',
+  'zustand', 'jotai', 'nanostores', 'xstate', 'legend-state',
+  'pino', 'bunyan', 'consola', 'signale',
+  'defu', 'destr', 'ofetch', 'unenv', 'unstorage',
+  'hookable', 'unimport', 'unplugin', 'mlly', 'jiti',
+  'citty', 'giget', 'nypm', 'pathe',
+  'turso', 'planetscale', 'upstash', 'convex', 'neon',
+  'effect', 'fp-ts', 'ramda', 'sanctuary',
+  'bull', 'bullmq', 'agenda', 'bree',
+];
+
 describe('Extended typosquat false positive testing', () => {
   const failures: string[] = [];
 
@@ -124,6 +141,19 @@ describe('Extended typosquat false positive testing', () => {
       const actionable = matches.filter((m: TyposquatMatch) => m.risk !== 'LOW');
       if (actionable.length > 0) {
         const details = actionable.map((m: TyposquatMatch) =>
+          `${m.target} (${(m.similarity * 100).toFixed(1)}%, ${m.risk})`
+        ).join(', ');
+        expect(`False positive: ${pkg} flagged as similar to ${details}`).toBe('');
+      }
+    }
+  );
+
+  test.each(EXTENDED_REAL_PACKAGES_REGRESSION)(
+    'Regression: %s should not be flagged (any risk)',
+    (pkg) => {
+      const matches = checkTyposquat(pkg, { threshold: 0.75, includePatternMatches: true });
+      if (matches.length > 0) {
+        const details = matches.map((m: TyposquatMatch) =>
           `${m.target} (${(m.similarity * 100).toFixed(1)}%, ${m.risk})`
         ).join(', ');
         expect(`False positive: ${pkg} flagged as similar to ${details}`).toBe('');

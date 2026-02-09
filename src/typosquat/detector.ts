@@ -198,6 +198,11 @@ const LEGITIMATE_PAIRS: Array<[string, string]> = [
   ['color', 'colors'],  // Both legitimate - color manipulation libs
   ['socks', 'sockjs'],  // socks = SOCKS proxy client, sockjs = WebSocket emulation
   ['preact', 'react'],  // Preact is a legitimate lightweight React alternative
+  ['openai', 'open'],   // openai = AI SDK, open = open URLs in browser
+  ['effector', 'effect'], // effector = state manager, effect = Effect-TS
+  ['socket', 'socket.io'], // socket = generic, socket.io = WebSocket lib
+  ['turso', 'turbo'],   // turso = DB, turbo = monorepo tool
+  ['typedi', 'type-is'], // typedi = DI container, type-is = content type checker
   ['scrypt', 'bcrypt'], // Both are legitimate crypto hashing algorithms
   ['tslint', 'eslint'], // Both are legitimate linters (tslint deprecated but real)
   ['@emotion/react', 'emotion'],   // Scoped emotion packages
