@@ -59,6 +59,59 @@ const EXTENDED_REAL_PACKAGES = [
   'got', 'ofetch', 'redaxios',
   // Image
   'jimp', 'pdfkit', 'docx', 'pixelmatch',
+  // Webpack loaders (all legitimate, prevent cross-loader FP)
+  'ts-loader', 'style-loader', 'file-loader', 'url-loader',
+  'babel-loader', 'raw-loader', 'sass-loader', 'less-loader',
+  'postcss-loader', 'html-loader', 'csv-loader', 'json-loader',
+  'source-map-loader', 'esbuild-loader', 'swc-loader',
+  'thread-loader', 'cache-loader', 'vue-loader', 'svg-loader',
+  // Build/bundler ecosystem
+  'vite-plugin-pwa', 'vite-tsconfig-paths',
+  'rollup-plugin-dts', 'rollup-plugin-terser',
+  'esbuild-register', 'terser-webpack-plugin',
+  // Matching/glob variants
+  'minimatch', 'anymatch', 'multimatch',
+  // Small utility packages
+  'defu', 'ohash', 'kleur', 'kolorist', 'ansis',
+  'depd', 'negotiator', 'finalhandler', 'cacache',
+  'undici', 'undici-types', 'tinypool', 'tinybench', 'tinyspy',
+  'formidable', 'busboy', 'multer',
+  'form-data', 'body-parser', 'cookie-parser',
+  'signal-exit', 'exit-hook',
+  'ts-node-dev', 'ts-patch',
+  'node-cron', 'node-schedule',
+  'fast-json-stringify', 'fast-deep-equal', 'fast-diff',
+  'simple-git', 'simple-peer',
+  'http-proxy', 'http-errors', 'http-assert',
+  'string-width', 'string-length', 'string-argv',
+  'wrap-ansi', 'strip-ansi', 'slice-ansi',
+  'crypto-js', 'crypto-random-string',
+  'npm-run-all', 'npm-check-updates',
+  'lint-staged', 'pretty-quick',
+  'quick-lru', 'tiny-lru',
+  'winston-daily-rotate-file',
+];
+
+const PYPI_REAL_PACKAGES = [
+  'requests-oauthlib', 'requests-toolbelt',
+  'django-rest-framework', 'django-cors-headers',
+  'flask-cors', 'flask-login', 'flask-wtf',
+  'numpy-financial', 'pandas-datareader',
+  'pytest-cov', 'pytest-mock', 'pytest-xdist',
+  'black', 'isort', 'ruff', 'mypy', 'pyright',
+  'celery', 'dramatiq', 'huey',
+  'boto3-stubs', 'botocore-stubs',
+  'pydantic-settings', 'pydantic-extra-types',
+  'sqlalchemy-utils', 'alembic',
+  'httpx', 'httptools', 'aiohttp', 'uvicorn', 'gunicorn',
+  'scrapy', 'beautifulsoup4', 'lxml', 'parsel',
+  'pillow', 'opencv-python-headless',
+  'scikit-learn', 'scikit-image',
+  'tensorflow-io', 'tensorflow-hub',
+  'torchvision', 'torchaudio',
+  'fastapi-users', 'fastapi-mail',
+  'typer-cli', 'click-completion',
+  'rich-click', 'textual-dev',
 ];
 
 describe('Extended typosquat false positive testing', () => {
@@ -68,6 +121,20 @@ describe('Extended typosquat false positive testing', () => {
     '%s should not be flagged as MEDIUM+ typosquat risk',
     (pkg) => {
       const matches = checkTyposquat(pkg, { threshold: 0.75 });
+      const actionable = matches.filter((m: TyposquatMatch) => m.risk !== 'LOW');
+      if (actionable.length > 0) {
+        const details = actionable.map((m: TyposquatMatch) =>
+          `${m.target} (${(m.similarity * 100).toFixed(1)}%, ${m.risk})`
+        ).join(', ');
+        expect(`False positive: ${pkg} flagged as similar to ${details}`).toBe('');
+      }
+    }
+  );
+
+  test.each(PYPI_REAL_PACKAGES)(
+    'PyPI: %s should not be flagged as MEDIUM+ typosquat risk',
+    (pkg) => {
+      const matches = checkTyposquat(pkg, { threshold: 0.75, ecosystem: 'pypi' });
       const actionable = matches.filter((m: TyposquatMatch) => m.risk !== 'LOW');
       if (actionable.length > 0) {
         const details = actionable.map((m: TyposquatMatch) =>
