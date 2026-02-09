@@ -2,7 +2,7 @@
  * Tests for repository archived status scoring
  */
 
-import { describe, it, expect, jest, beforeEach, afterEach } from '@jest/globals';
+
 import type { GitHubRepoInfo } from '../../src/registry/github.js';
 import type { GitLabRepoInfo } from '../../src/registry/gitlab.js';
 import type { BitbucketRepoInfo } from '../../src/registry/bitbucket.js';

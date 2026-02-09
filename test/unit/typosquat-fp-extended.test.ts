@@ -2,7 +2,7 @@
  * Extended false positive testing for typosquat detection
  * Tests real npm/PyPI packages that should NOT be flagged
  */
-import { describe, test, expect } from '@jest/globals';
+
 import { checkTyposquat, TyposquatMatch } from '../../src/typosquat/detector.js';
 
 const EXTENDED_REAL_PACKAGES = [

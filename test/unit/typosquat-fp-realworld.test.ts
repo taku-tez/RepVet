@@ -2,7 +2,7 @@
  * Real-world false positive test: packages fetched from npm registry
  * Tests legitimate packages with names that could trigger typosquat detection
  */
-import { describe, test, expect } from '@jest/globals';
+
 import { checkTyposquat } from '../../src/typosquat/detector.js';
 
 /**

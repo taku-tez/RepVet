@@ -2,7 +2,7 @@
  * Tests for repository URL parsing (GitHub, GitLab, Bitbucket)
  */
 
-import { describe, it, expect } from '@jest/globals';
+
 import { parseRepoUrl, parseGitHubUrl } from '../../src/registry/github.js';
 import { parseGitLabUrl } from '../../src/registry/gitlab.js';
 import { parseBitbucketUrl } from '../../src/registry/bitbucket.js';

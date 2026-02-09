@@ -3,7 +3,7 @@
  * Tests that lock parsers correctly extract both name and version
  */
 
-import { describe, it, expect } from '@jest/globals';
+
 import * as fs from 'fs';
 import * as path from 'path';
 import { fileURLToPath } from 'url';

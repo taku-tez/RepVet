@@ -2,7 +2,7 @@
  * CLI --quiet and --verbose option tests
  */
 
-import { describe, it, expect } from '@jest/globals';
+
 import { execSync } from 'child_process';
 import { writeFileSync, mkdirSync, rmSync } from 'fs';
 import { join } from 'path';

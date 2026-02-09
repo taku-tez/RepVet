@@ -2,7 +2,7 @@
  * False positive regression tests for typosquat detection
  * All packages here are LEGITIMATE and should NOT be flagged as MEDIUM+ risk
  */
-import { describe, test, expect } from '@jest/globals';
+
 import { checkTyposquat, TyposquatMatch } from '../../src/typosquat/detector.js';
 
 const LEGITIMATE_PACKAGES = [

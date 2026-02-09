@@ -2,11 +2,11 @@
  * OSV client tests
  */
 
-import { describe, it, expect, jest } from '@jest/globals';
+
 import { queryPackageVulnerabilities, analyzeVulnerabilityHistory } from '../../src/osv/client.js';
 
 // Use longer timeout for API calls
-jest.setTimeout(30000);
+vi.setConfig({ testTimeout: 30000 });
 
 describe('OSV Client', () => {
 

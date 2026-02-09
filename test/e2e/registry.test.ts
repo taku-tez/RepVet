@@ -3,7 +3,7 @@
  * Tests for multi-ecosystem package info fetching
  */
 
-import { describe, it, expect, jest } from '@jest/globals';
+
 import { fetchPackageInfo } from '../../src/registry/npm.js';
 import { fetchPyPIPackageInfo, checkPyPIYanked, checkPyPIOwnershipTransfer } from '../../src/registry/pypi.js';
 import { fetchCratesPackageInfo, checkCratesYanked } from '../../src/registry/crates.js';
@@ -19,7 +19,7 @@ import { fetchMavenPackageInfo, checkMavenRelocation } from '../../src/registry/
 import { fetchCPANPackageInfo, checkCPANDeprecated, checkCPANOwnershipTransfer } from '../../src/registry/cpan.js';
 
 // Use longer timeout for API calls
-jest.setTimeout(30000);
+vi.setConfig({ testTimeout: 30000 });
 
 describe('Registry modules', () => {
 

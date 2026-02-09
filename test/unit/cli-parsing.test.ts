@@ -2,7 +2,7 @@
  * CLI dependency file parsing tests
  */
 
-import { describe, it, expect } from '@jest/globals';
+
 import { createRequire } from 'module';
 const require = createRequire(import.meta.url);
 

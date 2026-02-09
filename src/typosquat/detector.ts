@@ -362,6 +362,20 @@ const LEGITIMATE_PAIRS: Array<[string, string]> = [
   ['@babel/generator', 'babel-generator'],
   ['@babel/helpers', 'babel-helpers'],
   ['@babel/code-frame', 'babel-code-frame'],
+  
+  // Filesystem utilities
+  ['mkdir', 'mkdirp'],   // mkdir = basic, mkdirp = recursive mkdir
+  
+  // Debug/logging
+  ['dbug', 'debug'],     // dbug = debug utility (69K/week), debug = TJ's debug
+  
+  // CLI argument parsing
+  ['yarg', 'arg'],       // yarg = yargs variant, arg = minimalist parser
+  ['yarg', 'yargs'],     // yarg is a real package
+  
+  // Similar names, different purposes
+  ['table', 'tapable'],   // table = CLI tables (17M/week), tapable = webpack hooks
+  ['prism', 'prisma'],    // prism = syntax highlighter, prisma = ORM
 ];
 
 /**
