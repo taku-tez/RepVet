@@ -162,6 +162,7 @@ const LEGITIMATE_PAIRS: Array<[string, string]> = [
   ['@types/lodash', 'lodash'],
   
   // Related but different packages
+  ['glob', 'globs'],  // glob variants (both legitimate)
   ['tmpl', 'tmp'],  // template vs temp files
   ['chalk', 'charlike'],
   ['got', 'go'],  // Different languages
