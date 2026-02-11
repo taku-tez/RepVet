@@ -80,6 +80,12 @@ RepVet helps you identify risky dependencies before they become a problem.
 | uv.lock | PyPI | ✅ | ✅ Exact |
 | environment.yml | Conda + PyPI | ❌ | Partial |
 
+## Quick Start
+
+```bash
+npx repvet --help
+```
+
 ## Installation
 
 ```bash
@@ -313,6 +319,10 @@ RepVet includes a database of 30+ known malicious packages across multiple ecosy
 - [PermitVet](https://github.com/taku-tez/PermitVet) - Cloud IAM scanner
 - [SubVet](https://github.com/taku-tez/SubVet) - Subdomain takeover scanner
 - [ReachVet](https://github.com/taku-tez/ReachVet) - Reachability analyzer
+
+## Part of xxVet Series
+
+xxVet is a collection of 15 focused security CLI tools. See [full catalog](https://www.notion.so/xxVet-CLI-304b1e6bcbc2817abe62d4aecee9914a).
 
 ## License
 
