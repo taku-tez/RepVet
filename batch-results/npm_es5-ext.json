@@ -1,0 +1,28 @@
+{
+  "ecosystem": "npm",
+  "package": "es5-ext",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "medikoo"
+  ],
+  "lastCommitDate": "2025-05-09T10:21:10Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 1,
+    "critical": 0,
+    "high": 0,
+    "recent": 0,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 2210,
+  "diagnosedAt": "2026-02-19T17:07:36.848Z"
+}

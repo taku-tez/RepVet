@@ -1,0 +1,24 @@
+{
+  "ecosystem": "npm",
+  "package": "yargs-parser",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "bcoe",
+    "nexdrew",
+    "oss-bot"
+  ],
+  "lastCommitDate": "2026-02-07T00:59:18Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 1,
+    "critical": 0,
+    "high": 0,
+    "recent": 0,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 2854,
+  "diagnosedAt": "2026-02-19T17:07:50.528Z"
+}

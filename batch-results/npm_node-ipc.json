@@ -1,0 +1,49 @@
+{
+  "ecosystem": "npm",
+  "package": "node-ipc",
+  "score": 30,
+  "riskLevel": "CRITICAL",
+  "deductions": [
+    {
+      "reason": "Past malware incident: Protestware - peacenotwar module targeting Russian/Belarusian IPs (2022)",
+      "points": 50,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 1 year ago (554 days)",
+      "points": 5,
+      "confidence": "high"
+    },
+    {
+      "reason": "1 critical vulnerability(ies) in history",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "alansikora",
+    "rsp",
+    "mostafa-samir",
+    "riaevangelist",
+    "atiertant",
+    "theadd",
+    "robatron",
+    "vvinder",
+    "lstratman",
+    "gloridea",
+    "mayberex",
+    "kevinwilson541"
+  ],
+  "lastCommitDate": "2024-08-13T23:34:24Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": true,
+  "vulnerabilityStats": {
+    "total": 3,
+    "critical": 1,
+    "high": 0,
+    "recent": 0,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 3038,
+  "diagnosedAt": "2026-02-19T17:07:28.359Z"
+}

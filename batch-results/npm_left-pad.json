@@ -1,0 +1,32 @@
+{
+  "ecosystem": "npm",
+  "package": "left-pad",
+  "score": 60,
+  "riskLevel": "MEDIUM",
+  "deductions": [
+    {
+      "reason": "Package deprecated: use String.prototype.padStart()",
+      "points": 10,
+      "confidence": "high"
+    },
+    {
+      "reason": "Repository is archived (no longer maintained)",
+      "points": 15,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 3 years ago (7 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "stevemao",
+    "westlac"
+  ],
+  "lastCommitDate": "2019-04-19T14:16:20Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2454,
+  "diagnosedAt": "2026-02-19T17:07:41.038Z"
+}

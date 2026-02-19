@@ -1,6 +1,6 @@
 {
   "ecosystem": "npm",
-  "package": "rc",
+  "package": "coa",
   "score": 20,
   "riskLevel": "CRITICAL",
   "deductions": [
@@ -10,7 +10,7 @@
       "confidence": "high"
     },
     {
-      "reason": "Last commit over 3 years ago (4 years)",
+      "reason": "Last commit over 3 years ago (7 years)",
       "points": 15,
       "confidence": "high"
     },
@@ -21,17 +21,10 @@
     }
   ],
   "maintainers": [
-    "powersource",
-    "arj03",
-    "staltz",
-    "mixmix",
-    "cel",
-    "christianbundy",
-    "pfrazee",
-    "happy0",
-    "chereseeriepa"
+    "veged",
+    "qfox"
   ],
-  "lastCommitDate": "2022-03-30T18:01:10Z",
+  "lastCommitDate": "2018-12-11T01:33:21Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": true,
   "vulnerabilityStats": {
@@ -41,6 +34,6 @@
     "recent": 0,
     "hasUnfixed": false
   },
-  "executionTimeMs": 1713,
-  "diagnosedAt": "2026-02-19T17:07:34.638Z"
+  "executionTimeMs": 2625,
+  "diagnosedAt": "2026-02-19T17:07:32.925Z"
 }

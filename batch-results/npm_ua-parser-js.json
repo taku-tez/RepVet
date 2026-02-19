@@ -1,0 +1,38 @@
+{
+  "ecosystem": "npm",
+  "package": "ua-parser-js",
+  "score": 37,
+  "riskLevel": "CRITICAL",
+  "deductions": [
+    {
+      "reason": "Past malware incident: Cryptocurrency miner injection via compromised maintainer account (2021)",
+      "points": 50,
+      "confidence": "high"
+    },
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    },
+    {
+      "reason": "5 high severity vulnerability(ies) in history",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "faisalman"
+  ],
+  "lastCommitDate": "2026-02-14T09:00:49Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": true,
+  "vulnerabilityStats": {
+    "total": 5,
+    "critical": 0,
+    "high": 5,
+    "recent": 0,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 1941,
+  "diagnosedAt": "2026-02-19T17:07:30.300Z"
+}

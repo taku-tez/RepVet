@@ -1,0 +1,17 @@
+{
+  "ecosystem": "npm",
+  "package": "eventemitter3",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "v1",
+    "lpinca",
+    "3rdeden"
+  ],
+  "lastCommitDate": "2026-01-19T15:02:50Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1838,
+  "diagnosedAt": "2026-02-19T17:07:42.877Z"
+}

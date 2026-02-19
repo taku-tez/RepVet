@@ -1,0 +1,37 @@
+{
+  "ecosystem": "npm",
+  "package": "faker",
+  "score": 37,
+  "riskLevel": "CRITICAL",
+  "deductions": [
+    {
+      "reason": "Past malware incident: Intentional sabotage by maintainer (2022)",
+      "points": 50,
+      "confidence": "high"
+    },
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    },
+    {
+      "reason": "1 high severity vulnerability(ies) in history",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "marak"
+  ],
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": true,
+  "vulnerabilityStats": {
+    "total": 1,
+    "critical": 0,
+    "high": 1,
+    "recent": 0,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 991,
+  "diagnosedAt": "2026-02-19T17:07:25.321Z"
+}
