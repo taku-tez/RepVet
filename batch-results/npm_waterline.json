@@ -1,0 +1,25 @@
+{
+  "ecosystem": "npm",
+  "package": "waterline",
+  "score": 85,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Last commit over 3 years ago (3 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "particlebanana",
+    "sgress454",
+    "balderdashy",
+    "mikermcneil",
+    "eashaw"
+  ],
+  "lastCommitDate": "2022-12-11T08:47:16Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2084,
+  "diagnosedAt": "2026-02-19T11:48:19.589Z"
+}

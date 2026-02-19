@@ -1,0 +1,27 @@
+{
+  "ecosystem": "npm",
+  "package": "bookshelf",
+  "score": 95,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Last commit over 1 year ago (557 days)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "adamcofer",
+    "devius",
+    "erisds",
+    "kirrg001",
+    "mrhwick",
+    "rhys-vdw",
+    "tgriesser"
+  ],
+  "lastCommitDate": "2024-08-10T14:12:20Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2008,
+  "diagnosedAt": "2026-02-19T11:48:21.597Z"
+}

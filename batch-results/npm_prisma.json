@@ -1,0 +1,16 @@
+{
+  "ecosystem": "npm",
+  "package": "prisma",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "pirix-gh",
+    "prismabot"
+  ],
+  "lastCommitDate": "2026-02-19T10:50:54Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 3524,
+  "diagnosedAt": "2026-02-19T11:48:06.138Z"
+}

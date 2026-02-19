@@ -1,0 +1,27 @@
+{
+  "ecosystem": "npm",
+  "package": "graphql",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "benjie",
+    "leebyron",
+    "yaacovcr",
+    "i1g",
+    "mjmahone",
+    "enisdenjo"
+  ],
+  "lastCommitDate": "2026-02-18T20:14:31Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 1,
+    "critical": 0,
+    "high": 0,
+    "recent": 0,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 1808,
+  "diagnosedAt": "2026-02-19T11:48:25.614Z"
+}
