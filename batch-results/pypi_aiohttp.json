@@ -1,0 +1,28 @@
+{
+  "ecosystem": "pypi",
+  "package": "aiohttp",
+  "score": 92,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Author changed from \"Nikolay Kim\" to \"aiohttp team\"",
+      "points": 8,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "Unknown"
+  ],
+  "lastCommitDate": "2026-02-19T22:37:42Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 31,
+    "critical": 0,
+    "high": 7,
+    "recent": 9,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 3878,
+  "diagnosedAt": "2026-02-19T23:12:10.730Z"
+}

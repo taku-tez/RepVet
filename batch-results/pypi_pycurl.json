@@ -1,0 +1,22 @@
+{
+  "ecosystem": "pypi",
+  "package": "pycurl",
+  "score": 92,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Author changed from \"Kjetil Jacobsen, Markus F.X.J. Oberhumer\" to \"Oleg Pudeyev\"",
+      "points": 8,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "Oleg Pudeyev",
+    "Kjetil Jacobsen",
+    "Markus F.X.J. Oberhumer"
+  ],
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1421,
+  "diagnosedAt": "2026-02-19T23:12:16.020Z"
+}

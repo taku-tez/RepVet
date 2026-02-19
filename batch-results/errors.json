@@ -472,5 +472,11 @@
     "package": "compressed-size-action",
     "error": "Exit code 1: {\"error\":\"Error: Package not found: compressed-size-action (npm)\"}\n",
     "timestamp": "2026-02-19T22:57:42.800Z"
+  },
+  {
+    "ecosystem": "pypi",
+    "package": "prisma-client-py",
+    "error": "Exit code 1: {\"error\":\"Error: Package not found: prisma-client-py (pypi)\"}\n",
+    "timestamp": "2026-02-19T23:12:48.254Z"
   }
 ]

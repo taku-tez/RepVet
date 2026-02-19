@@ -1,0 +1,38 @@
+{
+  "ecosystem": "pypi",
+  "package": "sanic",
+  "score": 79,
+  "riskLevel": "MEDIUM",
+  "deductions": [
+    {
+      "reason": "Author changed from \"Channel Cat\" to \"Sanic Community\"",
+      "points": 8,
+      "confidence": "low"
+    },
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    },
+    {
+      "reason": "3 high severity vulnerability(ies) in history",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "Sanic Community"
+  ],
+  "lastCommitDate": "2026-01-07T11:11:51Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 4,
+    "critical": 0,
+    "high": 3,
+    "recent": 0,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 1674,
+  "diagnosedAt": "2026-02-19T23:12:32.017Z"
+}

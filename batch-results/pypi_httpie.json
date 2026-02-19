@@ -1,0 +1,38 @@
+{
+  "ecosystem": "pypi",
+  "package": "httpie",
+  "score": 82,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    },
+    {
+      "reason": "Last commit over 1 year ago (429 days)",
+      "points": 5,
+      "confidence": "high"
+    },
+    {
+      "reason": "3 high severity vulnerability(ies) in history",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "Jakub Roztocil"
+  ],
+  "lastCommitDate": "2024-12-17T17:30:35Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 8,
+    "critical": 0,
+    "high": 3,
+    "recent": 0,
+    "hasUnfixed": true
+  },
+  "executionTimeMs": 2505,
+  "diagnosedAt": "2026-02-19T23:12:18.526Z"
+}

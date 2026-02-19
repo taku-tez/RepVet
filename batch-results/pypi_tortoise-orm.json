@@ -1,0 +1,28 @@
+{
+  "ecosystem": "pypi",
+  "package": "tortoise-orm",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "Andrey Bondar"
+  ],
+  "lastCommitDate": "2026-02-19T21:00:51Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 2,
+    "critical": 0,
+    "high": 0,
+    "recent": 0,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 1747,
+  "diagnosedAt": "2026-02-19T23:12:46.462Z"
+}

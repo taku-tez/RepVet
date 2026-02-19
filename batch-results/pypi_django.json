@@ -1,0 +1,33 @@
+{
+  "ecosystem": "pypi",
+  "package": "django",
+  "score": 87,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "18 critical vulnerability(ies) in history",
+      "points": 8,
+      "confidence": "low"
+    },
+    {
+      "reason": "19 vulnerabilities in the past year",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "Django Software Foundation"
+  ],
+  "lastCommitDate": "2026-02-19T16:33:48Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 263,
+    "critical": 18,
+    "high": 67,
+    "recent": 19,
+    "hasUnfixed": true
+  },
+  "executionTimeMs": 6281,
+  "diagnosedAt": "2026-02-19T23:12:26.551Z"
+}

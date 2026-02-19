@@ -1,0 +1,28 @@
+{
+  "ecosystem": "pypi",
+  "package": "tornado",
+  "score": 90,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "4 high severity vulnerability(ies) in history",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "Facebook"
+  ],
+  "lastCommitDate": "2026-01-23T01:16:27Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 11,
+    "critical": 0,
+    "high": 4,
+    "recent": 1,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 2073,
+  "diagnosedAt": "2026-02-19T23:12:30.343Z"
+}

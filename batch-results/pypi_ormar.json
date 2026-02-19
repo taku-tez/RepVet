@@ -1,0 +1,21 @@
+{
+  "ecosystem": "pypi",
+  "package": "ormar",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "Radosław Drążkiewicz"
+  ],
+  "lastCommitDate": "2026-02-19T02:27:57Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1301,
+  "diagnosedAt": "2026-02-19T23:12:47.763Z"
+}

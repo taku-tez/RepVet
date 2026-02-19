@@ -1,0 +1,22 @@
+{
+  "ecosystem": "pypi",
+  "package": "pyramid",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "Chris McDonough",
+    "Agendaless Consulting"
+  ],
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 1,
+    "critical": 0,
+    "high": 0,
+    "recent": 0,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 1535,
+  "diagnosedAt": "2026-02-19T23:12:40.109Z"
+}
