@@ -1,21 +1,21 @@
 {
   "ecosystem": "npm",
-  "package": "esgenerate",
-  "score": 95,
+  "package": "oxc-parser",
+  "score": 97,
   "riskLevel": "LOW",
   "deductions": [
     {
       "reason": "Single maintainer (bus factor risk)",
-      "points": 5,
-      "confidence": "high"
+      "points": 3,
+      "confidence": "low"
     }
   ],
   "maintainers": [
-    "alxndrsn"
+    "boshen"
   ],
-  "lastCommitDate": "2025-08-21T07:24:55Z",
+  "lastCommitDate": "2026-02-19T17:01:31Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
-  "executionTimeMs": 2409,
-  "diagnosedAt": "2026-02-19T17:02:25.449Z"
+  "executionTimeMs": 1738,
+  "diagnosedAt": "2026-02-19T17:02:21.319Z"
 }
