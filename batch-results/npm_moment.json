@@ -1,0 +1,37 @@
+{
+  "ecosystem": "npm",
+  "package": "moment",
+  "score": 85,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Last commit over 1 year ago (553 days)",
+      "points": 5,
+      "confidence": "high"
+    },
+    {
+      "reason": "3 high severity vulnerability(ies) in history",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "ichernev",
+    "timrwood",
+    "mj1856",
+    "maggiepint",
+    "marwahaha"
+  ],
+  "lastCommitDate": "2024-08-14T17:12:19Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 4,
+    "critical": 0,
+    "high": 3,
+    "recent": 0,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 3560,
+  "diagnosedAt": "2026-02-19T10:57:08.951Z"
+}

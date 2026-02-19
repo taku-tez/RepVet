@@ -1,0 +1,21 @@
+{
+  "ecosystem": "npm",
+  "package": "dayjs",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "iamkun"
+  ],
+  "lastCommitDate": "2026-02-17T14:05:10Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2155,
+  "diagnosedAt": "2026-02-19T10:57:13.133Z"
+}

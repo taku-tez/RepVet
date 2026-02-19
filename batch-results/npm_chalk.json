@@ -1,0 +1,28 @@
+{
+  "ecosystem": "npm",
+  "package": "chalk",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "sindresorhus"
+  ],
+  "lastCommitDate": "2026-01-27T06:30:36Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 1,
+    "critical": 0,
+    "high": 0,
+    "recent": 1,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 1861,
+  "diagnosedAt": "2026-02-19T10:56:52.617Z"
+}
