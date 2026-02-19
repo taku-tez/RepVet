@@ -1,5 +1,5 @@
 {
-  "currentIndex": 800,
+  "currentIndex": 820,
   "totalPackages": 4957,
   "results": [
     {
@@ -19841,6 +19841,464 @@
       },
       "executionTimeMs": 2229,
       "diagnosedAt": "2026-02-19T16:37:48.657Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "luxon",
+      "score": 90,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "icambron",
+        "diesieben07"
+      ],
+      "lastCommitDate": "2026-02-07T16:55:22Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 1,
+        "critical": 0,
+        "high": 1,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1973,
+      "diagnosedAt": "2026-02-19T16:42:10.784Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "date-fns",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "kossnocorp"
+      ],
+      "lastCommitDate": "2025-09-08T08:25:16Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2235,
+      "diagnosedAt": "2026-02-19T16:42:13.019Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "dayjs",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "iamkun"
+      ],
+      "lastCommitDate": "2026-02-17T14:05:10Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1849,
+      "diagnosedAt": "2026-02-19T16:42:14.868Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "spacetime",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "brianleroux",
+        "spencermountain",
+        "ryanblock"
+      ],
+      "lastCommitDate": "2025-12-10T13:28:34Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1759,
+      "diagnosedAt": "2026-02-19T16:42:16.628Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "timezone-support",
+      "score": 85,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 2 years ago (2 years)",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "prantlf"
+      ],
+      "lastCommitDate": "2023-10-03T16:05:06Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1968,
+      "diagnosedAt": "2026-02-19T16:42:18.597Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "numeral",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "adamwdraper"
+      ],
+      "lastCommitDate": "2026-02-15T15:16:26Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1687,
+      "diagnosedAt": "2026-02-19T16:42:20.284Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "accounting",
+      "score": 90,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 1 year ago (716 days)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "openexchangerates"
+      ],
+      "lastCommitDate": "2024-03-05T09:57:55Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2192,
+      "diagnosedAt": "2026-02-19T16:42:22.476Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "dinero.js",
+      "score": 95,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "sarahdayan"
+      ],
+      "lastCommitDate": "2026-02-11T23:42:54Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2362,
+      "diagnosedAt": "2026-02-19T16:42:24.838Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "currency.js",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "scurker"
+      ],
+      "lastCommitDate": "2026-02-19T01:01:16Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2399,
+      "diagnosedAt": "2026-02-19T16:42:27.238Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "money-math",
+      "score": 95,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "ikr"
+      ],
+      "lastCommitDate": "2025-08-02T07:25:40Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1925,
+      "diagnosedAt": "2026-02-19T16:42:29.163Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "bignumber.js",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "mikemcl"
+      ],
+      "lastCommitDate": "2026-02-09T13:44:43Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1707,
+      "diagnosedAt": "2026-02-19T16:42:30.870Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "decimal.js-light",
+      "score": 92,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "Last commit over 1 year ago (666 days)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "mikemcl"
+      ],
+      "lastCommitDate": "2024-04-24T06:36:44Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1653,
+      "diagnosedAt": "2026-02-19T16:42:32.523Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "mathjs",
+      "score": 72,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "2 critical vulnerability(ies) in history",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "josdejong"
+      ],
+      "lastCommitDate": "2026-02-18T17:43:29Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 3,
+        "critical": 2,
+        "high": 1,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1867,
+      "diagnosedAt": "2026-02-19T16:42:34.390Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "numbers",
+      "score": 80,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 3 years ago (4 years)",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "sjkaliski"
+      ],
+      "lastCommitDate": "2022-02-04T15:09:21Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2456,
+      "diagnosedAt": "2026-02-19T16:42:36.847Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "complex.js",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "infusion"
+      ],
+      "lastCommitDate": "2025-11-14T00:08:43Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1816,
+      "diagnosedAt": "2026-02-19T16:42:38.663Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "fraction.js",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "infusion"
+      ],
+      "lastCommitDate": "2025-09-26T19:34:28Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2209,
+      "diagnosedAt": "2026-02-19T16:42:40.872Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "simple-statistics",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "tmcw"
+      ],
+      "lastCommitDate": "2026-02-01T11:01:44Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1924,
+      "diagnosedAt": "2026-02-19T16:42:42.797Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "ml-matrix",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "stropitek",
+        "targos",
+        "lpatiny",
+        "mljs-bot",
+        "maasencioh",
+        "jeffersonh44",
+        "andcastillo"
+      ],
+      "lastCommitDate": "2025-06-20T12:36:45Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2256,
+      "diagnosedAt": "2026-02-19T16:42:45.053Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "vectorious",
+      "score": 95,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Last commit over 1 year ago (613 days)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "waylonflinn",
+        "mateogianolio"
+      ],
+      "lastCommitDate": "2024-06-16T09:54:25Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2460,
+      "diagnosedAt": "2026-02-19T16:42:47.513Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "natural",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "chrisumbel",
+        "kkoch986",
+        "hugo-ter-doest"
+      ],
+      "lastCommitDate": "2026-02-19T13:34:33Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2339,
+      "diagnosedAt": "2026-02-19T16:42:49.852Z"
     }
   ],
   "errors": [

@@ -1,0 +1,22 @@
+{
+  "ecosystem": "npm",
+  "package": "vectorious",
+  "score": 95,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Last commit over 1 year ago (613 days)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "waylonflinn",
+    "mateogianolio"
+  ],
+  "lastCommitDate": "2024-06-16T09:54:25Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2460,
+  "diagnosedAt": "2026-02-19T16:42:47.513Z"
+}

@@ -1,21 +1,26 @@
 {
   "ecosystem": "npm",
-  "package": "bignumber.js",
-  "score": 97,
+  "package": "decimal.js-light",
+  "score": 92,
   "riskLevel": "LOW",
   "deductions": [
     {
       "reason": "Single maintainer (bus factor risk)",
       "points": 3,
       "confidence": "low"
+    },
+    {
+      "reason": "Last commit over 1 year ago (666 days)",
+      "points": 5,
+      "confidence": "high"
     }
   ],
   "maintainers": [
     "mikemcl"
   ],
-  "lastCommitDate": "2026-02-09T13:44:43Z",
+  "lastCommitDate": "2024-04-24T06:36:44Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
-  "executionTimeMs": 1707,
-  "diagnosedAt": "2026-02-19T16:42:30.870Z"
+  "executionTimeMs": 1653,
+  "diagnosedAt": "2026-02-19T16:42:32.523Z"
 }
