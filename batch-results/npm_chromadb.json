@@ -1,0 +1,16 @@
+{
+  "ecosystem": "npm",
+  "package": "chromadb",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "jeff_chroma",
+    "hammadchroma",
+    "itaichroma"
+  ],
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1470,
+  "diagnosedAt": "2026-02-19T21:07:10.975Z"
+}

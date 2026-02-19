@@ -1,5 +1,5 @@
 {
-  "currentIndex": 1620,
+  "currentIndex": 1640,
   "totalPackages": 4957,
   "results": [
     {
@@ -38847,6 +38847,463 @@
       "hasMalwareHistory": false,
       "executionTimeMs": 2141,
       "diagnosedAt": "2026-02-19T21:02:58.820Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "llamaindex",
+      "score": 89,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Complete maintainer change in 5 days (0.4.8)",
+          "points": 11,
+          "confidence": "medium"
+        }
+      ],
+      "maintainers": [
+        "marcusschiesser",
+        "cheesyfishes"
+      ],
+      "lastCommitDate": "2026-02-18T05:13:58Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2309,
+      "diagnosedAt": "2026-02-19T21:07:07.491Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "vectordb",
+      "score": 79,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Package deprecated: Use @lancedb/lancedb instead.",
+          "points": 10,
+          "confidence": "high"
+        },
+        {
+          "reason": "Complete maintainer change in 0 days (0.0.2)",
+          "points": 11,
+          "confidence": "medium"
+        }
+      ],
+      "maintainers": [
+        "changhiskhan",
+        "eddyxu",
+        "rob_lancedb",
+        "westonpace",
+        "wjones127"
+      ],
+      "lastCommitDate": "2026-02-19T17:20:54Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2013,
+      "diagnosedAt": "2026-02-19T21:07:09.504Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "chromadb",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "jeff_chroma",
+        "hammadchroma",
+        "itaichroma"
+      ],
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1470,
+      "diagnosedAt": "2026-02-19T21:07:10.975Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "pinecone-client",
+      "score": 85,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 2 years ago (2 years)",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "rileytomasek"
+      ],
+      "lastCommitDate": "2023-10-23T16:37:42Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1949,
+      "diagnosedAt": "2026-02-19T21:07:12.925Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "ably",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "owenpearson",
+        "simonw_ably",
+        "ttypic",
+        "andrii.bulat.ably",
+        "andytwf",
+        "splind06",
+        "vlad.velici.ably",
+        "ably-realtime"
+      ],
+      "lastCommitDate": "2026-02-19T20:42:41Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1770,
+      "diagnosedAt": "2026-02-19T21:07:14.695Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "pusher-js",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "jeremy.goldstein",
+        "marcelcorso",
+        "pushercom"
+      ],
+      "lastCommitDate": "2025-12-01T19:00:53Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2372,
+      "diagnosedAt": "2026-02-19T21:07:17.068Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "pubnub",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "pubnub-admin",
+        "stephenlb",
+        "client-engineering-bot",
+        "pjanowski-pn",
+        "pubnub1"
+      ],
+      "lastCommitDate": "2026-02-12T11:49:03Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 1,
+        "critical": 0,
+        "high": 0,
+        "recent": 0,
+        "hasUnfixed": true
+      },
+      "executionTimeMs": 2173,
+      "diagnosedAt": "2026-02-19T21:07:19.241Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "socketcluster-client",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "topcloudsystems"
+      ],
+      "lastCommitDate": "2025-11-18T14:35:57Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1746,
+      "diagnosedAt": "2026-02-19T21:07:20.987Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "deepstream.io-client-js",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "deepstreamio",
+        "hoxton-one-ltd"
+      ],
+      "lastCommitDate": "2025-04-27T01:55:47Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1894,
+      "diagnosedAt": "2026-02-19T21:07:22.881Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "sails.io.js",
+      "score": 95,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Last commit over 1 year ago (613 days)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "rachaelshaw",
+        "balderdashy",
+        "mikermcneil"
+      ],
+      "lastCommitDate": "2024-06-16T12:17:12Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2104,
+      "diagnosedAt": "2026-02-19T21:07:24.985Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "feathers-socketio",
+      "score": 60,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Package deprecated: Feathers v3 is out and this module has moved to @feathersjs/socketio and @feathersjs/socketio-client...",
+          "points": 10,
+          "confidence": "high"
+        },
+        {
+          "reason": "Repository is archived (no longer maintained)",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 3 years ago (7 years)",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "daffl",
+        "ekryski",
+        "marshallswain"
+      ],
+      "lastCommitDate": "2018-08-29T02:23:19Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 4255,
+      "diagnosedAt": "2026-02-19T21:07:29.240Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "three",
+      "score": 90,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "mrdoob",
+        "mugen87"
+      ],
+      "lastCommitDate": "2026-02-19T16:04:29Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 1,
+        "critical": 0,
+        "high": 1,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 2185,
+      "diagnosedAt": "2026-02-19T21:07:31.425Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@react-three/fiber",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "wiledal",
+        "gsimone",
+        "giulioz",
+        "stephencorwin",
+        "dropthebeatbro",
+        "mlperego",
+        "sniok",
+        "iinfin",
+        "codynova",
+        "drcmda",
+        "marcofugaro",
+        "alaric.baraou",
+        "tdfka_rick",
+        "stockhuman",
+        "unframework",
+        "codyjasonbennett",
+        "farazshaikh",
+        "bjornstar",
+        "joergjaeckel",
+        "isaacmason",
+        "nksaraf",
+        "bela-bohlender",
+        "krispyaa"
+      ],
+      "lastCommitDate": "2026-02-09T10:11:47Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2440,
+      "diagnosedAt": "2026-02-19T21:07:33.865Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@react-three/drei",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "gsimone",
+        "giulioz",
+        "stephencorwin",
+        "drcmda",
+        "tdfka_rick",
+        "codyjasonbennett",
+        "krispyaa"
+      ],
+      "lastCommitDate": "2026-02-16T19:56:13Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 4451,
+      "diagnosedAt": "2026-02-19T21:07:38.316Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "babylonjs",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "babylonjs"
+      ],
+      "lastCommitDate": "2026-02-19T17:56:55Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1999,
+      "diagnosedAt": "2026-02-19T21:07:40.315Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@babylonjs/core",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "babylonjs"
+      ],
+      "lastCommitDate": "2026-02-19T17:56:55Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2077,
+      "diagnosedAt": "2026-02-19T21:07:42.392Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@babylonjs/loaders",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "babylonjs"
+      ],
+      "lastCommitDate": "2026-02-19T17:56:55Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 3280,
+      "diagnosedAt": "2026-02-19T21:07:45.673Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "phaser",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "photonstorm"
+      ],
+      "lastCommitDate": "2026-02-18T21:53:57Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1837,
+      "diagnosedAt": "2026-02-19T21:07:47.510Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "pixi.js",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "englercj",
+        "doormat23",
+        "bigtimebuddy",
+        "zyie"
+      ],
+      "lastCommitDate": "2026-02-13T17:34:42Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1913,
+      "diagnosedAt": "2026-02-19T21:07:49.423Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@pixi/core",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "bigtimebuddy",
+        "zyie"
+      ],
+      "lastCommitDate": "2026-02-13T17:34:42Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2359,
+      "diagnosedAt": "2026-02-19T21:07:51.782Z"
     }
   ],
   "errors": [

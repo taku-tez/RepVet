@@ -1,0 +1,26 @@
+{
+  "ecosystem": "npm",
+  "package": "pubnub",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "pubnub-admin",
+    "stephenlb",
+    "client-engineering-bot",
+    "pjanowski-pn",
+    "pubnub1"
+  ],
+  "lastCommitDate": "2026-02-12T11:49:03Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 1,
+    "critical": 0,
+    "high": 0,
+    "recent": 0,
+    "hasUnfixed": true
+  },
+  "executionTimeMs": 2173,
+  "diagnosedAt": "2026-02-19T21:07:19.241Z"
+}

@@ -1,0 +1,21 @@
+{
+  "ecosystem": "npm",
+  "package": "socketcluster-client",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "topcloudsystems"
+  ],
+  "lastCommitDate": "2025-11-18T14:35:57Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1746,
+  "diagnosedAt": "2026-02-19T21:07:20.987Z"
+}

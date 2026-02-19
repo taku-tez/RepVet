@@ -1,0 +1,16 @@
+{
+  "ecosystem": "npm",
+  "package": "@pixi/core",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "bigtimebuddy",
+    "zyie"
+  ],
+  "lastCommitDate": "2026-02-13T17:34:42Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2359,
+  "diagnosedAt": "2026-02-19T21:07:51.782Z"
+}

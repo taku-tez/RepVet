@@ -1,0 +1,33 @@
+{
+  "ecosystem": "npm",
+  "package": "feathers-socketio",
+  "score": 60,
+  "riskLevel": "MEDIUM",
+  "deductions": [
+    {
+      "reason": "Package deprecated: Feathers v3 is out and this module has moved to @feathersjs/socketio and @feathersjs/socketio-client...",
+      "points": 10,
+      "confidence": "high"
+    },
+    {
+      "reason": "Repository is archived (no longer maintained)",
+      "points": 15,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 3 years ago (7 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "daffl",
+    "ekryski",
+    "marshallswain"
+  ],
+  "lastCommitDate": "2018-08-29T02:23:19Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 4255,
+  "diagnosedAt": "2026-02-19T21:07:29.240Z"
+}

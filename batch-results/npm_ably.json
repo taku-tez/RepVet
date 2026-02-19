@@ -1,0 +1,22 @@
+{
+  "ecosystem": "npm",
+  "package": "ably",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "owenpearson",
+    "simonw_ably",
+    "ttypic",
+    "andrii.bulat.ably",
+    "andytwf",
+    "splind06",
+    "vlad.velici.ably",
+    "ably-realtime"
+  ],
+  "lastCommitDate": "2026-02-19T20:42:41Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1770,
+  "diagnosedAt": "2026-02-19T21:07:14.695Z"
+}

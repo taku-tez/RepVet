@@ -1,0 +1,22 @@
+{
+  "ecosystem": "npm",
+  "package": "llamaindex",
+  "score": 89,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Complete maintainer change in 5 days (0.4.8)",
+      "points": 11,
+      "confidence": "medium"
+    }
+  ],
+  "maintainers": [
+    "marcusschiesser",
+    "cheesyfishes"
+  ],
+  "lastCommitDate": "2026-02-18T05:13:58Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2309,
+  "diagnosedAt": "2026-02-19T21:07:07.491Z"
+}

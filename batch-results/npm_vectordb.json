@@ -1,0 +1,30 @@
+{
+  "ecosystem": "npm",
+  "package": "vectordb",
+  "score": 79,
+  "riskLevel": "MEDIUM",
+  "deductions": [
+    {
+      "reason": "Package deprecated: Use @lancedb/lancedb instead.",
+      "points": 10,
+      "confidence": "high"
+    },
+    {
+      "reason": "Complete maintainer change in 0 days (0.0.2)",
+      "points": 11,
+      "confidence": "medium"
+    }
+  ],
+  "maintainers": [
+    "changhiskhan",
+    "eddyxu",
+    "rob_lancedb",
+    "westonpace",
+    "wjones127"
+  ],
+  "lastCommitDate": "2026-02-19T17:20:54Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2013,
+  "diagnosedAt": "2026-02-19T21:07:09.504Z"
+}

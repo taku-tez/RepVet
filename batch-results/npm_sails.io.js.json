@@ -1,0 +1,23 @@
+{
+  "ecosystem": "npm",
+  "package": "sails.io.js",
+  "score": 95,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Last commit over 1 year ago (613 days)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "rachaelshaw",
+    "balderdashy",
+    "mikermcneil"
+  ],
+  "lastCommitDate": "2024-06-16T12:17:12Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2104,
+  "diagnosedAt": "2026-02-19T21:07:24.985Z"
+}

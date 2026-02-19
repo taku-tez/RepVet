@@ -1,0 +1,18 @@
+{
+  "ecosystem": "npm",
+  "package": "pixi.js",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "englercj",
+    "doormat23",
+    "bigtimebuddy",
+    "zyie"
+  ],
+  "lastCommitDate": "2026-02-13T17:34:42Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1913,
+  "diagnosedAt": "2026-02-19T21:07:49.423Z"
+}

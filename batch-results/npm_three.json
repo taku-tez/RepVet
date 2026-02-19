@@ -1,0 +1,29 @@
+{
+  "ecosystem": "npm",
+  "package": "three",
+  "score": 90,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "1 high severity vulnerability(ies) in history",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "mrdoob",
+    "mugen87"
+  ],
+  "lastCommitDate": "2026-02-19T16:04:29Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 1,
+    "critical": 0,
+    "high": 1,
+    "recent": 0,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 2185,
+  "diagnosedAt": "2026-02-19T21:07:31.425Z"
+}

@@ -1,0 +1,21 @@
+{
+  "ecosystem": "npm",
+  "package": "@react-three/drei",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "gsimone",
+    "giulioz",
+    "stephencorwin",
+    "drcmda",
+    "tdfka_rick",
+    "codyjasonbennett",
+    "krispyaa"
+  ],
+  "lastCommitDate": "2026-02-16T19:56:13Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 4451,
+  "diagnosedAt": "2026-02-19T21:07:38.316Z"
+}
