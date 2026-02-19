@@ -1,6 +1,6 @@
 {
   "ecosystem": "npm",
-  "package": "got",
+  "package": "p-timeout",
   "score": 97,
   "riskLevel": "LOW",
   "deductions": [
@@ -13,16 +13,9 @@
   "maintainers": [
     "sindresorhus"
   ],
-  "lastCommitDate": "2026-02-17T12:41:15Z",
+  "lastCommitDate": "2025-10-07T01:46:07Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
-  "vulnerabilityStats": {
-    "total": 1,
-    "critical": 0,
-    "high": 0,
-    "recent": 0,
-    "hasUnfixed": false
-  },
-  "executionTimeMs": 1755,
-  "diagnosedAt": "2026-02-19T20:42:42.241Z"
+  "executionTimeMs": 2057,
+  "diagnosedAt": "2026-02-19T20:42:16.835Z"
 }

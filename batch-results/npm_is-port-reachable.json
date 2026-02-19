@@ -1,28 +1,26 @@
 {
   "ecosystem": "npm",
-  "package": "got",
-  "score": 97,
+  "package": "is-port-reachable",
+  "score": 87,
   "riskLevel": "LOW",
   "deductions": [
     {
       "reason": "Single maintainer (bus factor risk)",
       "points": 3,
       "confidence": "low"
+    },
+    {
+      "reason": "Last commit over 2 years ago (2 years)",
+      "points": 10,
+      "confidence": "high"
     }
   ],
   "maintainers": [
     "sindresorhus"
   ],
-  "lastCommitDate": "2026-02-17T12:41:15Z",
+  "lastCommitDate": "2023-08-31T16:00:33Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
-  "vulnerabilityStats": {
-    "total": 1,
-    "critical": 0,
-    "high": 0,
-    "recent": 0,
-    "hasUnfixed": false
-  },
-  "executionTimeMs": 1755,
-  "diagnosedAt": "2026-02-19T20:42:42.241Z"
+  "executionTimeMs": 1604,
+  "diagnosedAt": "2026-02-19T20:42:31.179Z"
 }

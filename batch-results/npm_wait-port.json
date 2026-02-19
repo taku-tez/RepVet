@@ -1,0 +1,31 @@
+{
+  "ecosystem": "npm",
+  "package": "wait-port",
+  "score": 81,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer replaced at 0.2.8",
+      "points": 11,
+      "confidence": "medium"
+    },
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    },
+    {
+      "reason": "Last commit over 1 year ago (507 days)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "dwmkerr-admin"
+  ],
+  "lastCommitDate": "2024-09-30T08:24:56Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1637,
+  "diagnosedAt": "2026-02-19T20:42:29.574Z"
+}

@@ -1,0 +1,17 @@
+{
+  "ecosystem": "npm",
+  "package": "detect-port",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "fengmk2",
+    "xudafeng",
+    "ziczhu"
+  ],
+  "lastCommitDate": "2025-11-15T18:34:30Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2750,
+  "diagnosedAt": "2026-02-19T20:42:36.639Z"
+}

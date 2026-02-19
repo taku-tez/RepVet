@@ -1,0 +1,26 @@
+{
+  "ecosystem": "npm",
+  "package": "wait-for",
+  "score": 80,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 3 years ago (11 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "korynunn"
+  ],
+  "lastCommitDate": "2014-10-27T06:58:20Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2137,
+  "diagnosedAt": "2026-02-19T20:42:26.280Z"
+}

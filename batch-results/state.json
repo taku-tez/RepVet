@@ -1,5 +1,5 @@
 {
-  "currentIndex": 1540,
+  "currentIndex": 1560,
   "totalPackages": 4957,
   "results": [
     {
@@ -36939,6 +36939,496 @@
       "hasMalwareHistory": false,
       "executionTimeMs": 2005,
       "diagnosedAt": "2026-02-19T20:37:40.134Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "execa",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "sindresorhus",
+        "ehmicky"
+      ],
+      "lastCommitDate": "2026-01-29T03:54:57Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1633,
+      "diagnosedAt": "2026-02-19T20:42:07.630Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "cross-spawn",
+      "score": 82,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "Last commit over 1 year ago (458 days)",
+          "points": 5,
+          "confidence": "high"
+        },
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "satazor"
+      ],
+      "lastCommitDate": "2024-11-18T14:20:54Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 1,
+        "critical": 0,
+        "high": 1,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 2124,
+      "diagnosedAt": "2026-02-19T20:42:09.754Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "spawn-command",
+      "score": 92,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "Last commit over 1 year ago (522 days)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "mmalecki"
+      ],
+      "lastCommitDate": "2024-09-15T16:33:13Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1583,
+      "diagnosedAt": "2026-02-19T20:42:11.337Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "npm-run-path",
+      "score": 92,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "Last commit over 1 year ago (479 days)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "sindresorhus"
+      ],
+      "lastCommitDate": "2024-10-28T05:10:35Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1586,
+      "diagnosedAt": "2026-02-19T20:42:12.923Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "p-retry",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "sindresorhus"
+      ],
+      "lastCommitDate": "2025-12-09T21:15:15Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1854,
+      "diagnosedAt": "2026-02-19T20:42:14.777Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "p-timeout",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "sindresorhus"
+      ],
+      "lastCommitDate": "2025-10-07T01:46:07Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2057,
+      "diagnosedAt": "2026-02-19T20:42:16.835Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "p-queue",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "sindresorhus"
+      ],
+      "lastCommitDate": "2026-01-05T19:39:53Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1604,
+      "diagnosedAt": "2026-02-19T20:42:18.439Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "p-limit",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "sindresorhus"
+      ],
+      "lastCommitDate": "2026-02-03T16:02:24Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1930,
+      "diagnosedAt": "2026-02-19T20:42:20.369Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "p-map",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "sindresorhus"
+      ],
+      "lastCommitDate": "2025-11-11T06:28:55Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1609,
+      "diagnosedAt": "2026-02-19T20:42:21.979Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "delay",
+      "score": 86,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer replaced at 1.0.0",
+          "points": 11,
+          "confidence": "medium"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "sindresorhus"
+      ],
+      "lastCommitDate": "2025-10-31T16:34:15Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2163,
+      "diagnosedAt": "2026-02-19T20:42:24.142Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "wait-for",
+      "score": 80,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 3 years ago (11 years)",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "korynunn"
+      ],
+      "lastCommitDate": "2014-10-27T06:58:20Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2137,
+      "diagnosedAt": "2026-02-19T20:42:26.280Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "wait-on",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "jeffbski"
+      ],
+      "lastCommitDate": "2026-02-12T16:38:20Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1657,
+      "diagnosedAt": "2026-02-19T20:42:27.937Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "wait-port",
+      "score": 81,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer replaced at 0.2.8",
+          "points": 11,
+          "confidence": "medium"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "Last commit over 1 year ago (507 days)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "dwmkerr-admin"
+      ],
+      "lastCommitDate": "2024-09-30T08:24:56Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1637,
+      "diagnosedAt": "2026-02-19T20:42:29.574Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "is-port-reachable",
+      "score": 87,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "Last commit over 2 years ago (2 years)",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "sindresorhus"
+      ],
+      "lastCommitDate": "2023-08-31T16:00:33Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1604,
+      "diagnosedAt": "2026-02-19T20:42:31.179Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "get-port",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "sindresorhus"
+      ],
+      "lastCommitDate": "2025-09-10T10:31:48Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1733,
+      "diagnosedAt": "2026-02-19T20:42:32.912Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "portfinder",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "indexzero",
+        "eriktrom"
+      ],
+      "lastCommitDate": "2025-11-21T21:38:03Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 976,
+      "diagnosedAt": "2026-02-19T20:42:33.888Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "detect-port",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "fengmk2",
+        "xudafeng",
+        "ziczhu"
+      ],
+      "lastCommitDate": "2025-11-15T18:34:30Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2750,
+      "diagnosedAt": "2026-02-19T20:42:36.639Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "node-fetch",
+      "score": 85,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Last commit over 1 year ago (554 days)",
+          "points": 5,
+          "confidence": "high"
+        },
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "endless",
+        "bitinn",
+        "timothygu",
+        "akepinski",
+        "node-fetch-bot"
+      ],
+      "lastCommitDate": "2024-08-13T22:17:04Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 3,
+        "critical": 0,
+        "high": 1,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1809,
+      "diagnosedAt": "2026-02-19T20:42:38.448Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "undici",
+      "score": 90,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "2 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "matteo.collina",
+        "ronag",
+        "ethan_arrowood"
+      ],
+      "lastCommitDate": "2026-02-19T20:12:38Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 16,
+        "critical": 0,
+        "high": 2,
+        "recent": 2,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 2037,
+      "diagnosedAt": "2026-02-19T20:42:40.486Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "got",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "sindresorhus"
+      ],
+      "lastCommitDate": "2026-02-17T12:41:15Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 1,
+        "critical": 0,
+        "high": 0,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1755,
+      "diagnosedAt": "2026-02-19T20:42:42.241Z"
     }
   ],
   "errors": [
