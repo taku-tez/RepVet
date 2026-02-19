@@ -1,0 +1,26 @@
+{
+  "ecosystem": "npm",
+  "package": "typescript",
+  "score": 89,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Complete maintainer change in 1 days (3.9.0-dev.20200221)",
+      "points": 11,
+      "confidence": "medium"
+    }
+  ],
+  "maintainers": [
+    "microsoft1es",
+    "typescript-bot",
+    "weswigham",
+    "andrewbranch",
+    "typescript-deploys",
+    "jakebailey"
+  ],
+  "lastCommitDate": "2026-02-18T23:02:45Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2363,
+  "diagnosedAt": "2026-02-19T10:55:38.234Z"
+}

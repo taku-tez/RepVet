@@ -1,0 +1,31 @@
+{
+  "ecosystem": "npm",
+  "package": "axios",
+  "score": 90,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "6 high severity vulnerability(ies) in history",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "mzabriskie",
+    "nickuraltsev",
+    "emilyemorehouse",
+    "jasonsaayman"
+  ],
+  "lastCommitDate": "2026-02-19T01:32:11Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 8,
+    "critical": 0,
+    "high": 6,
+    "recent": 3,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 1947,
+  "diagnosedAt": "2026-02-19T10:55:32.457Z"
+}

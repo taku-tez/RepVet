@@ -1,0 +1,264 @@
+{
+  "currentIndex": 10,
+  "totalPackages": 3818,
+  "results": [
+    {
+      "ecosystem": "npm",
+      "package": "lodash",
+      "score": 75,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "1 critical vulnerability(ies) in history",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "3 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "mathias",
+        "jdalton",
+        "bnjmnt4n"
+      ],
+      "lastCommitDate": "2026-02-06T14:13:37Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 8,
+        "critical": 1,
+        "high": 3,
+        "recent": 1,
+        "hasUnfixed": true
+      },
+      "executionTimeMs": 1915,
+      "diagnosedAt": "2026-02-19T10:55:28.182Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "express",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "wesleytodd",
+        "jonchurch",
+        "ctcpip",
+        "ulisesgascon",
+        "sheplu"
+      ],
+      "lastCommitDate": "2026-02-14T17:25:36Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 5,
+        "critical": 0,
+        "high": 0,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 2327,
+      "diagnosedAt": "2026-02-19T10:55:30.510Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "axios",
+      "score": 90,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "6 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "mzabriskie",
+        "nickuraltsev",
+        "emilyemorehouse",
+        "jasonsaayman"
+      ],
+      "lastCommitDate": "2026-02-19T01:32:11Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 8,
+        "critical": 0,
+        "high": 6,
+        "recent": 3,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1947,
+      "diagnosedAt": "2026-02-19T10:55:32.457Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "react",
+      "score": 90,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "fb",
+        "react-bot"
+      ],
+      "lastCommitDate": "2026-02-18T18:53:49Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 2,
+        "critical": 0,
+        "high": 1,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1522,
+      "diagnosedAt": "2026-02-19T10:55:33.979Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "vue",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "yyx990803",
+        "posva"
+      ],
+      "lastCommitDate": "2026-02-18T15:36:14Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 1,
+        "critical": 0,
+        "high": 0,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1891,
+      "diagnosedAt": "2026-02-19T10:55:35.871Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "typescript",
+      "score": 89,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Complete maintainer change in 1 days (3.9.0-dev.20200221)",
+          "points": 11,
+          "confidence": "medium"
+        }
+      ],
+      "maintainers": [
+        "microsoft1es",
+        "typescript-bot",
+        "weswigham",
+        "andrewbranch",
+        "typescript-deploys",
+        "jakebailey"
+      ],
+      "lastCommitDate": "2026-02-18T23:02:45Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2363,
+      "diagnosedAt": "2026-02-19T10:55:38.234Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "webpack",
+      "score": 85,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "1 critical vulnerability(ies) in history",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "15000621931",
+        "ev1stensberg",
+        "__hai",
+        "sokra",
+        "evilebottnawi",
+        "jhnns",
+        "thelarkinn"
+      ],
+      "lastCommitDate": "2026-02-19T10:50:12Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 4,
+        "critical": 1,
+        "high": 0,
+        "recent": 2,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 2548,
+      "diagnosedAt": "2026-02-19T10:55:40.783Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "eslint",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "openjsfoundation",
+        "eslintbot"
+      ],
+      "lastCommitDate": "2026-02-19T09:55:14Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1822,
+      "diagnosedAt": "2026-02-19T10:55:42.605Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "jest",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "aaronabramov",
+        "simenb",
+        "rickhanlonii",
+        "openjs-operations",
+        "cpojer"
+      ],
+      "lastCommitDate": "2026-02-05T23:55:43Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2300,
+      "diagnosedAt": "2026-02-19T10:55:44.906Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "mocha",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "voxpelli",
+        "joshuakgoldberg",
+        "mark-wiemer"
+      ],
+      "lastCommitDate": "2026-02-19T02:10:57Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2213,
+      "diagnosedAt": "2026-02-19T10:55:47.119Z"
+    }
+  ],
+  "errors": [],
+  "startTime": "2026-02-19T10:55:26.264Z"
+}

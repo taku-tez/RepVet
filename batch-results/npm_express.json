@@ -1,0 +1,26 @@
+{
+  "ecosystem": "npm",
+  "package": "express",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "wesleytodd",
+    "jonchurch",
+    "ctcpip",
+    "ulisesgascon",
+    "sheplu"
+  ],
+  "lastCommitDate": "2026-02-14T17:25:36Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 5,
+    "critical": 0,
+    "high": 0,
+    "recent": 0,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 2327,
+  "diagnosedAt": "2026-02-19T10:55:30.510Z"
+}

@@ -1,0 +1,23 @@
+{
+  "ecosystem": "npm",
+  "package": "vue",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "yyx990803",
+    "posva"
+  ],
+  "lastCommitDate": "2026-02-18T15:36:14Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 1,
+    "critical": 0,
+    "high": 0,
+    "recent": 0,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 1891,
+  "diagnosedAt": "2026-02-19T10:55:35.871Z"
+}

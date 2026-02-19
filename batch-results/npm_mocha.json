@@ -1,0 +1,17 @@
+{
+  "ecosystem": "npm",
+  "package": "mocha",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "voxpelli",
+    "joshuakgoldberg",
+    "mark-wiemer"
+  ],
+  "lastCommitDate": "2026-02-19T02:10:57Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2213,
+  "diagnosedAt": "2026-02-19T10:55:47.119Z"
+}
