@@ -1,0 +1,33 @@
+{
+  "ecosystem": "npm",
+  "package": "xmlhttprequest-ssl",
+  "score": 82,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    },
+    {
+      "reason": "2 critical vulnerability(ies) in history",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "mjwwit"
+  ],
+  "lastCommitDate": "2026-02-19T08:38:50Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 2,
+    "critical": 2,
+    "high": 0,
+    "recent": 0,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 1128,
+  "diagnosedAt": "2026-02-19T17:12:17.656Z"
+}

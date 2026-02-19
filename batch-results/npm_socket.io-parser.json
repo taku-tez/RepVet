@@ -1,6 +1,6 @@
 {
   "ecosystem": "npm",
-  "package": "lodash-es",
+  "package": "socket.io-parser",
   "score": 75,
   "riskLevel": "MEDIUM",
   "deductions": [
@@ -16,20 +16,19 @@
     }
   ],
   "maintainers": [
-    "mathias",
-    "jdalton",
-    "bnjmnt4n"
+    "rauchg",
+    "darrachequesne"
   ],
-  "lastCommitDate": "2026-02-06T14:13:37Z",
+  "lastCommitDate": "2026-01-23T13:56:17Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
   "vulnerabilityStats": {
-    "total": 6,
+    "total": 3,
     "critical": 1,
     "high": 2,
-    "recent": 1,
-    "hasUnfixed": true
+    "recent": 0,
+    "hasUnfixed": false
   },
-  "executionTimeMs": 1114,
-  "diagnosedAt": "2026-02-19T17:12:24.105Z"
+  "executionTimeMs": 1722,
+  "diagnosedAt": "2026-02-19T17:12:22.991Z"
 }

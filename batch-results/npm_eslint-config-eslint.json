@@ -1,0 +1,29 @@
+{
+  "ecosystem": "npm",
+  "package": "eslint-config-eslint",
+  "score": 85,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "2 critical vulnerability(ies) in history",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "openjsfoundation",
+    "eslintbot"
+  ],
+  "lastCommitDate": "2026-02-19T14:46:42Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 2,
+    "critical": 2,
+    "high": 0,
+    "recent": 0,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 2031,
+  "diagnosedAt": "2026-02-19T17:12:41.824Z"
+}

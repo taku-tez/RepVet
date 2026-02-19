@@ -1,0 +1,43 @@
+{
+  "ecosystem": "npm",
+  "package": "serialize-to-js",
+  "score": 65,
+  "riskLevel": "MEDIUM",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 1 year ago (729 days)",
+      "points": 5,
+      "confidence": "high"
+    },
+    {
+      "reason": "1 critical vulnerability(ies) in history",
+      "points": 15,
+      "confidence": "high"
+    },
+    {
+      "reason": "1 high severity vulnerability(ies) in history",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "commenthol"
+  ],
+  "lastCommitDate": "2024-02-21T02:37:25Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 3,
+    "critical": 1,
+    "high": 1,
+    "recent": 0,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 1898,
+  "diagnosedAt": "2026-02-19T17:12:14.458Z"
+}

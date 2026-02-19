@@ -58,5 +58,11 @@
     "package": "nlp.js",
     "error": "Exit code 1: {\"error\":\"Error: Package not found: nlp.js (npm)\"}\n",
     "timestamp": "2026-02-19T16:52:07.856Z"
+  },
+  {
+    "ecosystem": "npm",
+    "package": "safe-buffer-original",
+    "error": "Exit code 1: {\"error\":\"Error: Package not found: safe-buffer-original (npm)\"}\n",
+    "timestamp": "2026-02-19T17:12:35.547Z"
   }
 ]
