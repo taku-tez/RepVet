@@ -1,0 +1,24 @@
+{
+  "ecosystem": "npm",
+  "package": "looks-same",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "sevinf",
+    "j0tunn",
+    "catwithapple",
+    "dudagod",
+    "sipayrt",
+    "flack",
+    "rostik404",
+    "oldskytree",
+    "kuznetsovroman",
+    "slontus"
+  ],
+  "lastCommitDate": "2025-08-18T23:20:58Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2007,
+  "diagnosedAt": "2026-02-19T21:32:22.142Z"
+}

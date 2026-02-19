@@ -1,21 +1,21 @@
 {
   "ecosystem": "npm",
-  "package": "pureimage",
-  "score": 97,
+  "package": "textract",
+  "score": 95,
   "riskLevel": "LOW",
   "deductions": [
     {
       "reason": "Single maintainer (bus factor risk)",
-      "points": 3,
-      "confidence": "low"
+      "points": 5,
+      "confidence": "high"
     }
   ],
   "maintainers": [
-    "joshmarinacci"
+    "dbashford"
   ],
-  "lastCommitDate": "2025-12-31T15:19:36Z",
+  "lastCommitDate": "2025-12-15T16:37:00Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
-  "executionTimeMs": 1946,
-  "diagnosedAt": "2026-02-19T21:32:07.305Z"
+  "executionTimeMs": 1833,
+  "diagnosedAt": "2026-02-19T21:32:36.326Z"
 }

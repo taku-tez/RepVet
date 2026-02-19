@@ -1,0 +1,43 @@
+{
+  "ecosystem": "npm",
+  "package": "jspdf",
+  "score": 67,
+  "riskLevel": "MEDIUM",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    },
+    {
+      "reason": "1 critical vulnerability(ies) in history",
+      "points": 15,
+      "confidence": "high"
+    },
+    {
+      "reason": "8 high severity vulnerability(ies) in history",
+      "points": 10,
+      "confidence": "high"
+    },
+    {
+      "reason": "10 vulnerabilities in the past year",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "mrjameshall"
+  ],
+  "lastCommitDate": "2026-02-19T10:01:41Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 13,
+    "critical": 1,
+    "high": 8,
+    "recent": 10,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 2534,
+  "diagnosedAt": "2026-02-19T21:32:30.181Z"
+}

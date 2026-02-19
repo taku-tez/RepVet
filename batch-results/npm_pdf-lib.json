@@ -1,0 +1,26 @@
+{
+  "ecosystem": "npm",
+  "package": "pdf-lib",
+  "score": 92,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    },
+    {
+      "reason": "Last commit over 1 year ago (582 days)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "hopding"
+  ],
+  "lastCommitDate": "2024-07-17T12:18:51Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1741,
+  "diagnosedAt": "2026-02-19T21:32:23.883Z"
+}

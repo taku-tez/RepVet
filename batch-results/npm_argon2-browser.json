@@ -1,0 +1,26 @@
+{
+  "ecosystem": "npm",
+  "package": "argon2-browser",
+  "score": 85,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 2 years ago (3 years)",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "antelle"
+  ],
+  "lastCommitDate": "2023-03-24T03:35:15Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2097,
+  "diagnosedAt": "2026-02-19T21:32:48.057Z"
+}

@@ -1,0 +1,25 @@
+{
+  "ecosystem": "npm",
+  "package": "get-pixels",
+  "score": 95,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Last commit over 1 year ago (580 days)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "mikolalysenko",
+    "jaspervdg",
+    "hughsk",
+    "planeshifter",
+    "rreusser"
+  ],
+  "lastCommitDate": "2024-07-19T18:37:51Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2068,
+  "diagnosedAt": "2026-02-19T21:32:16.289Z"
+}

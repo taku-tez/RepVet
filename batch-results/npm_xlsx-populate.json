@@ -1,0 +1,26 @@
+{
+  "ecosystem": "npm",
+  "package": "xlsx-populate",
+  "score": 92,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    },
+    {
+      "reason": "Last commit over 1 year ago (709 days)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "dtjohnson"
+  ],
+  "lastCommitDate": "2024-03-12T10:01:25Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2784,
+  "diagnosedAt": "2026-02-19T21:32:42.212Z"
+}

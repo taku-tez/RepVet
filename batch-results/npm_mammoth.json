@@ -1,18 +1,13 @@
 {
   "ecosystem": "npm",
-  "package": "crypto-js",
-  "score": 77,
-  "riskLevel": "MEDIUM",
+  "package": "mammoth",
+  "score": 82,
+  "riskLevel": "LOW",
   "deductions": [
     {
       "reason": "Single maintainer (bus factor risk)",
       "points": 3,
       "confidence": "low"
-    },
-    {
-      "reason": "Last commit over 1 year ago (559 days)",
-      "points": 5,
-      "confidence": "high"
     },
     {
       "reason": "1 critical vulnerability(ies) in history",
@@ -21,18 +16,18 @@
     }
   ],
   "maintainers": [
-    "evanvosberg"
+    "mwilliamson"
   ],
-  "lastCommitDate": "2024-08-09T08:16:59Z",
+  "lastCommitDate": "2025-11-20T15:16:13Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
   "vulnerabilityStats": {
-    "total": 2,
+    "total": 1,
     "critical": 1,
     "high": 0,
-    "recent": 0,
+    "recent": 1,
     "hasUnfixed": false
   },
-  "executionTimeMs": 1735,
-  "diagnosedAt": "2026-02-19T21:32:43.947Z"
+  "executionTimeMs": 2145,
+  "diagnosedAt": "2026-02-19T21:32:34.493Z"
 }

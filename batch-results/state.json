@@ -1,5 +1,5 @@
 {
-  "currentIndex": 1700,
+  "currentIndex": 1720,
   "totalPackages": 4957,
   "results": [
     {
@@ -40808,6 +40808,547 @@
       "hasMalwareHistory": false,
       "executionTimeMs": 2057,
       "diagnosedAt": "2026-02-19T21:27:48.724Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "pureimage",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "joshmarinacci"
+      ],
+      "lastCommitDate": "2025-12-31T15:19:36Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1946,
+      "diagnosedAt": "2026-02-19T21:32:07.305Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "imagescript",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "matmen",
+        "evan"
+      ],
+      "lastCommitDate": "2025-06-14T19:16:32Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1863,
+      "diagnosedAt": "2026-02-19T21:32:09.169Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "ndarray",
+      "score": 85,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Last commit over 3 years ago (4 years)",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "mikolalysenko",
+        "jaspervdg",
+        "hughsk",
+        "planeshifter",
+        "rreusser"
+      ],
+      "lastCommitDate": "2022-01-29T18:00:01Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2519,
+      "diagnosedAt": "2026-02-19T21:32:11.688Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "ndarray-ops",
+      "score": 85,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Last commit over 3 years ago (5 years)",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "mikolalysenko",
+        "jaspervdg",
+        "hughsk",
+        "planeshifter",
+        "rreusser"
+      ],
+      "lastCommitDate": "2021-08-10T00:37:46Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2532,
+      "diagnosedAt": "2026-02-19T21:32:14.221Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "get-pixels",
+      "score": 95,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Last commit over 1 year ago (580 days)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "mikolalysenko",
+        "jaspervdg",
+        "hughsk",
+        "planeshifter",
+        "rreusser"
+      ],
+      "lastCommitDate": "2024-07-19T18:37:51Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2068,
+      "diagnosedAt": "2026-02-19T21:32:16.289Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "save-pixels",
+      "score": 90,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Last commit over 2 years ago (3 years)",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "mikolalysenko",
+        "jaspervdg",
+        "hughsk",
+        "planeshifter",
+        "rreusser"
+      ],
+      "lastCommitDate": "2023-03-18T08:14:08Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2208,
+      "diagnosedAt": "2026-02-19T21:32:18.497Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "pixelmatch",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "mapbox-npm-01",
+        "mapbox-npm-02",
+        "mapbox-npm-07",
+        "mapbox-npm-03",
+        "mapbox-npm-04",
+        "mapbox-npm-09",
+        "mapbox-npm-05",
+        "mapbox-npm-06",
+        "mapbox-npm-08",
+        "mapbox-npm-advanced-actions",
+        "mapbox-npm-ci",
+        "mapbox-npm",
+        "mapbox-admin",
+        "mapbox-machine-user",
+        "mbx-npm-ci-staging",
+        "mbx-npm-ci-production",
+        "mbx-npm-01-production",
+        "mbx-npm-02-production",
+        "mbx-npm-03-production",
+        "mbx-npm-04-production",
+        "mbx-npm-05-production",
+        "mbx-npm-06-production",
+        "mbx-npm-07-production",
+        "mbx-npm-08-production",
+        "mbx-npm-09-production",
+        "mbx-npm-02-staging",
+        "mbx-npm-advanced-actions-staging",
+        "mbx-npm-advanced-actions-production",
+        "mourner"
+      ],
+      "lastCommitDate": "2025-07-16T08:16:41Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1638,
+      "diagnosedAt": "2026-02-19T21:32:20.135Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "looks-same",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "sevinf",
+        "j0tunn",
+        "catwithapple",
+        "dudagod",
+        "sipayrt",
+        "flack",
+        "rostik404",
+        "oldskytree",
+        "kuznetsovroman",
+        "slontus"
+      ],
+      "lastCommitDate": "2025-08-18T23:20:58Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2007,
+      "diagnosedAt": "2026-02-19T21:32:22.142Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "pdf-lib",
+      "score": 92,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "Last commit over 1 year ago (582 days)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "hopding"
+      ],
+      "lastCommitDate": "2024-07-17T12:18:51Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1741,
+      "diagnosedAt": "2026-02-19T21:32:23.883Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "pdfkit",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "devongovett",
+        "diegomura",
+        "blikblum",
+        "liborm85"
+      ],
+      "lastCommitDate": "2026-02-19T17:27:27Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2020,
+      "diagnosedAt": "2026-02-19T21:32:25.904Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "pdfmake",
+      "score": 90,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "bpampuch",
+        "danawoodman",
+        "miltador",
+        "liborm85"
+      ],
+      "lastCommitDate": "2026-02-15T12:58:49Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 1,
+        "critical": 0,
+        "high": 1,
+        "recent": 1,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1742,
+      "diagnosedAt": "2026-02-19T21:32:27.647Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "jspdf",
+      "score": 67,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "1 critical vulnerability(ies) in history",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "8 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        },
+        {
+          "reason": "10 vulnerabilities in the past year",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "mrjameshall"
+      ],
+      "lastCommitDate": "2026-02-19T10:01:41Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 13,
+        "critical": 1,
+        "high": 8,
+        "recent": 10,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 2534,
+      "diagnosedAt": "2026-02-19T21:32:30.181Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "html2pdf.js",
+      "score": 85,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        },
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "ekoopmans"
+      ],
+      "lastCommitDate": "2026-02-19T12:48:41Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 1,
+        "critical": 0,
+        "high": 1,
+        "recent": 1,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 2165,
+      "diagnosedAt": "2026-02-19T21:32:32.347Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "mammoth",
+      "score": 82,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "1 critical vulnerability(ies) in history",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "mwilliamson"
+      ],
+      "lastCommitDate": "2025-11-20T15:16:13Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 1,
+        "critical": 1,
+        "high": 0,
+        "recent": 1,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 2145,
+      "diagnosedAt": "2026-02-19T21:32:34.493Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "textract",
+      "score": 95,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "dbashford"
+      ],
+      "lastCommitDate": "2025-12-15T16:37:00Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1833,
+      "diagnosedAt": "2026-02-19T21:32:36.326Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "officeparser",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "harshankur"
+      ],
+      "lastCommitDate": "2026-02-15T12:51:57Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 3102,
+      "diagnosedAt": "2026-02-19T21:32:39.428Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "xlsx-populate",
+      "score": 92,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "Last commit over 1 year ago (709 days)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "dtjohnson"
+      ],
+      "lastCommitDate": "2024-03-12T10:01:25Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2784,
+      "diagnosedAt": "2026-02-19T21:32:42.212Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "crypto-js",
+      "score": 77,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "Last commit over 1 year ago (559 days)",
+          "points": 5,
+          "confidence": "high"
+        },
+        {
+          "reason": "1 critical vulnerability(ies) in history",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "evanvosberg"
+      ],
+      "lastCommitDate": "2024-08-09T08:16:59Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 2,
+        "critical": 1,
+        "high": 0,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1735,
+      "diagnosedAt": "2026-02-19T21:32:43.947Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "bcryptjs",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "dcode"
+      ],
+      "lastCommitDate": "2026-01-16T21:17:44Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2013,
+      "diagnosedAt": "2026-02-19T21:32:45.960Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "argon2-browser",
+      "score": 85,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 2 years ago (3 years)",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "antelle"
+      ],
+      "lastCommitDate": "2023-03-24T03:35:15Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2097,
+      "diagnosedAt": "2026-02-19T21:32:48.057Z"
     }
   ],
   "errors": [

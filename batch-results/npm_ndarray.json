@@ -1,0 +1,25 @@
+{
+  "ecosystem": "npm",
+  "package": "ndarray",
+  "score": 85,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Last commit over 3 years ago (4 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "mikolalysenko",
+    "jaspervdg",
+    "hughsk",
+    "planeshifter",
+    "rreusser"
+  ],
+  "lastCommitDate": "2022-01-29T18:00:01Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2519,
+  "diagnosedAt": "2026-02-19T21:32:11.688Z"
+}
