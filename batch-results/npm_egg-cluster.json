@@ -1,0 +1,24 @@
+{
+  "ecosystem": "npm",
+  "package": "egg-cluster",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "gxkl",
+    "eggjs-admin",
+    "fengmk2",
+    "atian25",
+    "hyj1991",
+    "killagu",
+    "coolme200",
+    "akitasummer",
+    "dead_horse",
+    "popomore"
+  ],
+  "lastCommitDate": "2025-12-13T09:24:41Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1708,
+  "diagnosedAt": "2026-02-19T17:37:16.874Z"
+}

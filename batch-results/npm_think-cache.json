@@ -1,0 +1,28 @@
+{
+  "ecosystem": "npm",
+  "package": "think-cache",
+  "score": 85,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Last commit over 3 years ago (5 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "lizheming",
+    "welefen",
+    "sijiecai",
+    "lushijie",
+    "berwin",
+    "bezos",
+    "toxicjohann",
+    "huangxiaolu"
+  ],
+  "lastCommitDate": "2021-07-02T00:05:48Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2195,
+  "diagnosedAt": "2026-02-19T17:37:28.131Z"
+}

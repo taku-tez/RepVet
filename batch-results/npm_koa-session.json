@@ -1,0 +1,28 @@
+{
+  "ecosystem": "npm",
+  "package": "koa-session",
+  "score": 89,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer replaced at 1.2.1",
+      "points": 11,
+      "confidence": "medium"
+    }
+  ],
+  "maintainers": [
+    "coderhaoxin",
+    "aaron",
+    "juliangruber",
+    "eivifj",
+    "dead_horse",
+    "tjholowaychuk",
+    "jongleberry",
+    "fengmk2"
+  ],
+  "lastCommitDate": "2025-04-06T22:00:42Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1780,
+  "diagnosedAt": "2026-02-19T17:37:11.560Z"
+}

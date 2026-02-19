@@ -1,0 +1,25 @@
+{
+  "ecosystem": "npm",
+  "package": "egg",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "gxkl",
+    "eggjs-admin",
+    "fengmk2",
+    "atian25",
+    "hyj1991",
+    "killagu",
+    "coolme200",
+    "akitasummer",
+    "dead_horse",
+    "shaoshuai0102",
+    "popomore"
+  ],
+  "lastCommitDate": "2026-02-19T08:53:39Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1873,
+  "diagnosedAt": "2026-02-19T17:37:13.434Z"
+}

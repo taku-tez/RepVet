@@ -1,21 +1,21 @@
 {
   "ecosystem": "npm",
-  "package": "meow",
-  "score": 97,
+  "package": "del-cli",
+  "score": 95,
   "riskLevel": "LOW",
   "deductions": [
     {
       "reason": "Single maintainer (bus factor risk)",
-      "points": 3,
-      "confidence": "low"
+      "points": 5,
+      "confidence": "high"
     }
   ],
   "maintainers": [
     "sindresorhus"
   ],
-  "lastCommitDate": "2025-09-15T11:23:44Z",
+  "lastCommitDate": "2025-09-18T16:41:04Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
-  "executionTimeMs": 1683,
-  "diagnosedAt": "2026-02-19T17:37:32.887Z"
+  "executionTimeMs": 1918,
+  "diagnosedAt": "2026-02-19T17:37:41.480Z"
 }
