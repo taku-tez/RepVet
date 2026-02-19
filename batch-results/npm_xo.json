@@ -1,0 +1,26 @@
+{
+  "ecosystem": "npm",
+  "package": "xo",
+  "score": 86,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer replaced at 0.4.0",
+      "points": 11,
+      "confidence": "medium"
+    },
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "sindresorhus"
+  ],
+  "lastCommitDate": "2026-02-10T15:37:33Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2490,
+  "diagnosedAt": "2026-02-19T14:42:17.687Z"
+}

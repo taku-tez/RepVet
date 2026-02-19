@@ -1,6 +1,6 @@
 {
   "ecosystem": "npm",
-  "package": "codeceptjs",
+  "package": "vitest",
   "score": 85,
   "riskLevel": "LOW",
   "deductions": [
@@ -11,21 +11,22 @@
     }
   ],
   "maintainers": [
-    "davert",
-    "alex_vorobey",
-    "thanh.nguyen",
-    "egor_bodnar"
+    "antfu",
+    "patak",
+    "oreanno",
+    "yyx990803",
+    "vitestbot"
   ],
-  "lastCommitDate": "2026-02-19T10:01:48Z",
+  "lastCommitDate": "2026-02-19T14:19:08Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
   "vulnerabilityStats": {
     "total": 1,
     "critical": 1,
     "high": 0,
-    "recent": 1,
-    "hasUnfixed": false
+    "recent": 0,
+    "hasUnfixed": true
   },
-  "executionTimeMs": 2587,
-  "diagnosedAt": "2026-02-19T14:42:48.785Z"
+  "executionTimeMs": 2425,
+  "diagnosedAt": "2026-02-19T14:42:35.760Z"
 }

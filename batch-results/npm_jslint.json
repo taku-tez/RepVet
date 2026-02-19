@@ -1,0 +1,23 @@
+{
+  "ecosystem": "npm",
+  "package": "jslint",
+  "score": 85,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Last commit over 3 years ago (4 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "okuryu",
+    "reid",
+    "smikes"
+  ],
+  "lastCommitDate": "2022-07-11T01:59:39Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2006,
+  "diagnosedAt": "2026-02-19T14:42:10.963Z"
+}

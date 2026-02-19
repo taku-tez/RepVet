@@ -1,0 +1,18 @@
+{
+  "ecosystem": "npm",
+  "package": "jasmine",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "slackersoft",
+    "sgravrock",
+    "dwfrank",
+    "amavisca"
+  ],
+  "lastCommitDate": "2026-02-16T23:45:02Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1755,
+  "diagnosedAt": "2026-02-19T14:42:24.110Z"
+}

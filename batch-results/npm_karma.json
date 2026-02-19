@@ -1,0 +1,26 @@
+{
+  "ecosystem": "npm",
+  "package": "karma",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "dignifiedquire",
+    "johnjbarton",
+    "zzo",
+    "vojtajina",
+    "karmarunnerbot"
+  ],
+  "lastCommitDate": "2026-02-13T16:37:30Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 2,
+    "critical": 0,
+    "high": 0,
+    "recent": 0,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 2064,
+  "diagnosedAt": "2026-02-19T14:42:26.174Z"
+}

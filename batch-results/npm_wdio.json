@@ -1,0 +1,27 @@
+{
+  "ecosystem": "npm",
+  "package": "wdio",
+  "score": 75,
+  "riskLevel": "MEDIUM",
+  "deductions": [
+    {
+      "reason": "Package deprecated: This package got deprecated. Please use the 'create-wdio' starter toolkit via: 'npm init wdio ./path...",
+      "points": 10,
+      "confidence": "high"
+    },
+    {
+      "reason": "Repository is archived (no longer maintained)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "christian-bromann",
+    "wdio-user"
+  ],
+  "lastCommitDate": "2025-07-09T16:07:36Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2531,
+  "diagnosedAt": "2026-02-19T14:42:42.343Z"
+}

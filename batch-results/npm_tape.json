@@ -1,0 +1,17 @@
+{
+  "ecosystem": "npm",
+  "package": "tape",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "ljharb",
+    "domenic",
+    "raynos"
+  ],
+  "lastCommitDate": "2025-03-07T16:55:49Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1985,
+  "diagnosedAt": "2026-02-19T14:42:32.439Z"
+}

@@ -1,0 +1,31 @@
+{
+  "ecosystem": "npm",
+  "package": "semistandard",
+  "score": 95,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Last commit over 1 year ago (552 days)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "jhiesey",
+    "bret",
+    "feross",
+    "flet",
+    "linusu",
+    "mafintosh",
+    "jprichardson",
+    "watson",
+    "raynos",
+    "toddbluhm",
+    "voxpelli"
+  ],
+  "lastCommitDate": "2024-08-15T23:03:47Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2413,
+  "diagnosedAt": "2026-02-19T14:42:15.197Z"
+}

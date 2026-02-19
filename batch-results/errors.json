@@ -28,5 +28,11 @@
     "package": "nlp.js",
     "error": "Exit code 1: {\"error\":\"Error: Package not found: nlp.js (npm)\"}\n",
     "timestamp": "2026-02-19T14:12:48.251Z"
+  },
+  {
+    "ecosystem": "npm",
+    "package": "node:test",
+    "error": "Exit code 1: {\"error\":\"Error: Package not found: node:test (npm)\"}\n",
+    "timestamp": "2026-02-19T14:42:33.335Z"
   }
 ]

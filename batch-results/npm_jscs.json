@@ -1,0 +1,36 @@
+{
+  "ecosystem": "npm",
+  "package": "jscs",
+  "score": 70,
+  "riskLevel": "MEDIUM",
+  "deductions": [
+    {
+      "reason": "Package deprecated: JSCS has merged with ESLint! See - https://medium.com/@markelog/jscs-end-of-the-line-bc9bf0b3fdb2",
+      "points": 10,
+      "confidence": "high"
+    },
+    {
+      "reason": "Repository is archived (no longer maintained)",
+      "points": 15,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 1 year ago (697 days)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "hzoo",
+    "markelog",
+    "mdevils",
+    "mikesherov",
+    "mrjoelkemp",
+    "qfox"
+  ],
+  "lastCommitDate": "2024-03-23T17:56:44Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2310,
+  "diagnosedAt": "2026-02-19T14:42:08.957Z"
+}

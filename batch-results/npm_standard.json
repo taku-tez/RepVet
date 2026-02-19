@@ -1,0 +1,30 @@
+{
+  "ecosystem": "npm",
+  "package": "standard",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "jhiesey",
+    "bret",
+    "feross",
+    "flet",
+    "linusu",
+    "mafintosh",
+    "jprichardson",
+    "watson",
+    "raynos",
+    "toddbluhm",
+    "voxpelli",
+    "yoshuawuyts",
+    "timoxley",
+    "maxogden",
+    "dcousens",
+    "jb55"
+  ],
+  "lastCommitDate": "2025-07-11T08:28:23Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1820,
+  "diagnosedAt": "2026-02-19T14:42:12.783Z"
+}
