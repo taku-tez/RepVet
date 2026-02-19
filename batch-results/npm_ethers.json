@@ -1,0 +1,21 @@
+{
+  "ecosystem": "npm",
+  "package": "ethers",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "ricmoo"
+  ],
+  "lastCommitDate": "2026-02-13T23:23:54Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1660,
+  "diagnosedAt": "2026-02-19T20:57:36.456Z"
+}

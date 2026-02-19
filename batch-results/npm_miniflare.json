@@ -1,0 +1,33 @@
+{
+  "ecosystem": "npm",
+  "package": "miniflare",
+  "score": 87,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    },
+    {
+      "reason": "1 high severity vulnerability(ies) in history",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "wrangler-publisher"
+  ],
+  "lastCommitDate": "2026-02-19T20:24:49Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 1,
+    "critical": 0,
+    "high": 1,
+    "recent": 0,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 2836,
+  "diagnosedAt": "2026-02-19T20:57:08.125Z"
+}

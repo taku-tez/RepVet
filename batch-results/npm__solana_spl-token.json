@@ -1,0 +1,26 @@
+{
+  "ecosystem": "npm",
+  "package": "@solana/spl-token",
+  "score": 82,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    },
+    {
+      "reason": "Repository is archived (no longer maintained)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "solana-devs"
+  ],
+  "lastCommitDate": "2025-03-11T10:59:26Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1680,
+  "diagnosedAt": "2026-02-19T20:57:44.429Z"
+}

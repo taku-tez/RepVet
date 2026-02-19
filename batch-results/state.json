@@ -1,5 +1,5 @@
 {
-  "currentIndex": 1580,
+  "currentIndex": 1600,
   "totalPackages": 4957,
   "results": [
     {
@@ -37889,6 +37889,486 @@
       "hasMalwareHistory": false,
       "executionTimeMs": 2324,
       "diagnosedAt": "2026-02-19T20:52:49.891Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "miniflare",
+      "score": 87,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "wrangler-publisher"
+      ],
+      "lastCommitDate": "2026-02-19T20:24:49Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 1,
+        "critical": 0,
+        "high": 1,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 2836,
+      "diagnosedAt": "2026-02-19T20:57:08.125Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "vercel",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "rauchg",
+        "vercel-release-bot",
+        "zeit-bot"
+      ],
+      "lastCommitDate": "2026-02-19T20:50:29Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1951,
+      "diagnosedAt": "2026-02-19T20:57:10.077Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@vercel/node",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "vercel-release-bot",
+        "zeit-bot"
+      ],
+      "lastCommitDate": "2026-02-19T20:50:29Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2259,
+      "diagnosedAt": "2026-02-19T20:57:12.337Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@vercel/next",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "vercel-release-bot",
+        "zeit-bot"
+      ],
+      "lastCommitDate": "2026-02-19T20:50:29Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2335,
+      "diagnosedAt": "2026-02-19T20:57:14.672Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "netlify-cli",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "seanroberts",
+        "biilmann",
+        "eduardoboucas",
+        "netlify-bot",
+        "sarahetter",
+        "mikewen",
+        "kathmbeck",
+        "hrishikeshk",
+        "vitaliyr",
+        "berdav",
+        "youvalv",
+        "serhalp-netlify",
+        "domitriusanthony",
+        "akardet",
+        "tbarn",
+        "tomasb",
+        "seancdavis",
+        "justin.herrick.netlify",
+        "mlgualtieri-gatsby"
+      ],
+      "lastCommitDate": "2026-02-19T17:35:20Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2593,
+      "diagnosedAt": "2026-02-19T20:57:17.715Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@netlify/functions",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "seanroberts",
+        "biilmann",
+        "eduardoboucas",
+        "netlify-bot",
+        "sarahetter",
+        "mikewen",
+        "kathmbeck",
+        "hrishikeshk",
+        "vitaliyr",
+        "berdav",
+        "youvalv",
+        "serhalp-netlify",
+        "domitriusanthony",
+        "akardet",
+        "tbarn",
+        "tomasb",
+        "seancdavis",
+        "justin.herrick.netlify",
+        "mlgualtieri-gatsby"
+      ],
+      "lastCommitDate": "2026-02-17T22:02:20Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2100,
+      "diagnosedAt": "2026-02-19T20:57:19.815Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "netlify-lambda",
+      "score": 80,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Package deprecated: netlify-lambda is deprecated. Checkout https://github.com/netlify/netlify-lambda for more details.",
+          "points": 10,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 2 years ago (2 years)",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "seanroberts",
+        "biilmann",
+        "eduardoboucas",
+        "netlify-bot",
+        "sarahetter",
+        "mikewen",
+        "kathmbeck",
+        "hrishikeshk",
+        "vitaliyr",
+        "berdav",
+        "youvalv",
+        "serhalp-netlify",
+        "domitriusanthony",
+        "akardet",
+        "tbarn",
+        "tomasb",
+        "seancdavis",
+        "justin.herrick.netlify",
+        "mlgualtieri-gatsby"
+      ],
+      "lastCommitDate": "2024-02-06T07:55:43Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2002,
+      "diagnosedAt": "2026-02-19T20:57:21.817Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "wasm-pack",
+      "score": 95,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "drager"
+      ],
+      "lastCommitDate": "2026-02-05T18:54:39Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2256,
+      "diagnosedAt": "2026-02-19T20:57:24.074Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@wasm-tool/wasm-pack-plugin",
+      "score": 95,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Last commit over 1 year ago (698 days)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "xtuc",
+        "sendilkumarn"
+      ],
+      "lastCommitDate": "2024-03-23T08:44:25Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2921,
+      "diagnosedAt": "2026-02-19T20:57:26.995Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "wasm-loader",
+      "score": 65,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        },
+        {
+          "reason": "Repository is archived (no longer maintained)",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 3 years ago (4 years)",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "abuldauskas"
+      ],
+      "lastCommitDate": "2021-10-16T18:04:50Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1897,
+      "diagnosedAt": "2026-02-19T20:57:28.892Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "as-bind",
+      "score": 85,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 2 years ago (2 years)",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "torch2424"
+      ],
+      "lastCommitDate": "2024-01-21T09:47:18Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2328,
+      "diagnosedAt": "2026-02-19T20:57:31.221Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "assemblyscript",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "dcode",
+        "assemblyscript"
+      ],
+      "lastCommitDate": "2025-12-27T02:15:19Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1738,
+      "diagnosedAt": "2026-02-19T20:57:32.959Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "wasm2js",
+      "score": 80,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 3 years ago (6 years)",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "thlorenz"
+      ],
+      "lastCommitDate": "2020-07-02T16:36:30Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1837,
+      "diagnosedAt": "2026-02-19T20:57:34.796Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "ethers",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "ricmoo"
+      ],
+      "lastCommitDate": "2026-02-13T23:23:54Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1660,
+      "diagnosedAt": "2026-02-19T20:57:36.456Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "web3",
+      "score": 85,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Repository is archived (no longer maintained)",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "gregthegreek",
+        "alexey_krasnoperov"
+      ],
+      "lastCommitDate": "2025-03-05T08:48:59Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 1,
+        "critical": 0,
+        "high": 0,
+        "recent": 0,
+        "hasUnfixed": true
+      },
+      "executionTimeMs": 2710,
+      "diagnosedAt": "2026-02-19T20:57:39.167Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@solana/web3.js",
+      "score": 76,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Complete maintainer change in 1 days (2.1.0-canary-20241205053408)",
+          "points": 11,
+          "confidence": "medium"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "2 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "solana-devs"
+      ],
+      "lastCommitDate": "2026-02-11T08:42:19Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 3,
+        "critical": 0,
+        "high": 2,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 3581,
+      "diagnosedAt": "2026-02-19T20:57:42.748Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@solana/spl-token",
+      "score": 82,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "Repository is archived (no longer maintained)",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "solana-devs"
+      ],
+      "lastCommitDate": "2025-03-11T10:59:26Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1680,
+      "diagnosedAt": "2026-02-19T20:57:44.429Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@cosmjs/stargate",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "webmaster128",
+        "kiki-skip"
+      ],
+      "lastCommitDate": "2026-01-08T22:01:54Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2467,
+      "diagnosedAt": "2026-02-19T20:57:46.896Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@cosmjs/cosmwasm",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "webmaster128",
+        "kiki-skip"
+      ],
+      "lastCommitDate": "2026-01-08T22:01:54Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2868,
+      "diagnosedAt": "2026-02-19T20:57:49.764Z"
     }
   ],
   "errors": [
@@ -38293,6 +38773,12 @@
       "package": "@module-federation/webpack",
       "error": "Exit code 1: {\"error\":\"Error: Package not found: @module-federation/webpack (npm)\"}\n",
       "timestamp": "2026-02-19T20:52:24.197Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@vercel/static",
+      "error": "Exit code 1: {\"error\":\"Error: Package not found: @vercel/static (npm)\"}\n",
+      "timestamp": "2026-02-19T20:57:15.122Z"
     }
   ],
   "startTime": "2026-02-19T12:29:21.598Z"

@@ -1,0 +1,16 @@
+{
+  "ecosystem": "npm",
+  "package": "@vercel/next",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "vercel-release-bot",
+    "zeit-bot"
+  ],
+  "lastCommitDate": "2026-02-19T20:50:29Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2335,
+  "diagnosedAt": "2026-02-19T20:57:14.672Z"
+}

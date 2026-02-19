@@ -1,0 +1,21 @@
+{
+  "ecosystem": "npm",
+  "package": "wasm-pack",
+  "score": 95,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "drager"
+  ],
+  "lastCommitDate": "2026-02-05T18:54:39Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2256,
+  "diagnosedAt": "2026-02-19T20:57:24.074Z"
+}

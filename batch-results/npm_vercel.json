@@ -1,0 +1,17 @@
+{
+  "ecosystem": "npm",
+  "package": "vercel",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "rauchg",
+    "vercel-release-bot",
+    "zeit-bot"
+  ],
+  "lastCommitDate": "2026-02-19T20:50:29Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1951,
+  "diagnosedAt": "2026-02-19T20:57:10.077Z"
+}

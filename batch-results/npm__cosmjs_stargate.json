@@ -1,0 +1,16 @@
+{
+  "ecosystem": "npm",
+  "package": "@cosmjs/stargate",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "webmaster128",
+    "kiki-skip"
+  ],
+  "lastCommitDate": "2026-01-08T22:01:54Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2467,
+  "diagnosedAt": "2026-02-19T20:57:46.896Z"
+}

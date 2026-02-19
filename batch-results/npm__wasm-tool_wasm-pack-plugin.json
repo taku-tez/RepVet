@@ -1,0 +1,22 @@
+{
+  "ecosystem": "npm",
+  "package": "@wasm-tool/wasm-pack-plugin",
+  "score": 95,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Last commit over 1 year ago (698 days)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "xtuc",
+    "sendilkumarn"
+  ],
+  "lastCommitDate": "2024-03-23T08:44:25Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2921,
+  "diagnosedAt": "2026-02-19T20:57:26.995Z"
+}

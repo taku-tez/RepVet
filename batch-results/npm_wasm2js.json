@@ -1,0 +1,26 @@
+{
+  "ecosystem": "npm",
+  "package": "wasm2js",
+  "score": 80,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 3 years ago (6 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "thlorenz"
+  ],
+  "lastCommitDate": "2020-07-02T16:36:30Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1837,
+  "diagnosedAt": "2026-02-19T20:57:34.796Z"
+}

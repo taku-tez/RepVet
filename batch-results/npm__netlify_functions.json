@@ -1,0 +1,33 @@
+{
+  "ecosystem": "npm",
+  "package": "@netlify/functions",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "seanroberts",
+    "biilmann",
+    "eduardoboucas",
+    "netlify-bot",
+    "sarahetter",
+    "mikewen",
+    "kathmbeck",
+    "hrishikeshk",
+    "vitaliyr",
+    "berdav",
+    "youvalv",
+    "serhalp-netlify",
+    "domitriusanthony",
+    "akardet",
+    "tbarn",
+    "tomasb",
+    "seancdavis",
+    "justin.herrick.netlify",
+    "mlgualtieri-gatsby"
+  ],
+  "lastCommitDate": "2026-02-17T22:02:20Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2100,
+  "diagnosedAt": "2026-02-19T20:57:19.815Z"
+}

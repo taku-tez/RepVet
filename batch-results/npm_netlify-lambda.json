@@ -1,0 +1,44 @@
+{
+  "ecosystem": "npm",
+  "package": "netlify-lambda",
+  "score": 80,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Package deprecated: netlify-lambda is deprecated. Checkout https://github.com/netlify/netlify-lambda for more details.",
+      "points": 10,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 2 years ago (2 years)",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "seanroberts",
+    "biilmann",
+    "eduardoboucas",
+    "netlify-bot",
+    "sarahetter",
+    "mikewen",
+    "kathmbeck",
+    "hrishikeshk",
+    "vitaliyr",
+    "berdav",
+    "youvalv",
+    "serhalp-netlify",
+    "domitriusanthony",
+    "akardet",
+    "tbarn",
+    "tomasb",
+    "seancdavis",
+    "justin.herrick.netlify",
+    "mlgualtieri-gatsby"
+  ],
+  "lastCommitDate": "2024-02-06T07:55:43Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2002,
+  "diagnosedAt": "2026-02-19T20:57:21.817Z"
+}
