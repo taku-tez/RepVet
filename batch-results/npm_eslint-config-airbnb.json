@@ -1,0 +1,20 @@
+{
+  "ecosystem": "npm",
+  "package": "eslint-config-airbnb",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "christianv",
+    "sharmilajesupaul",
+    "danbeam",
+    "brieb",
+    "airbnbeng",
+    "ljharb"
+  ],
+  "lastCommitDate": "2025-11-06T00:54:14Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1894,
+  "diagnosedAt": "2026-02-19T13:03:49.790Z"
+}

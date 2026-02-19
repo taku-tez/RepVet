@@ -1,0 +1,29 @@
+{
+  "ecosystem": "npm",
+  "package": "bun",
+  "score": 90,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "2 high severity vulnerability(ies) in history",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "jarred",
+    "robobun"
+  ],
+  "lastCommitDate": "2026-02-19T12:14:27Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 2,
+    "critical": 0,
+    "high": 2,
+    "recent": 1,
+    "hasUnfixed": true
+  },
+  "executionTimeMs": 2364,
+  "diagnosedAt": "2026-02-19T13:03:43.054Z"
+}

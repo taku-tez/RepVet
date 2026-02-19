@@ -1,0 +1,25 @@
+{
+  "ecosystem": "npm",
+  "package": "eslint-config-standard",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "jhiesey",
+    "bret",
+    "feross",
+    "flet",
+    "linusu",
+    "mafintosh",
+    "jprichardson",
+    "watson",
+    "raynos",
+    "toddbluhm",
+    "voxpelli"
+  ],
+  "lastCommitDate": "2026-02-17T15:33:11Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1873,
+  "diagnosedAt": "2026-02-19T13:03:51.664Z"
+}

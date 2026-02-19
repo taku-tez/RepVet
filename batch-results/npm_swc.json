@@ -1,6 +1,6 @@
 {
   "ecosystem": "npm",
-  "package": "nodemon",
+  "package": "swc",
   "score": 97,
   "riskLevel": "LOW",
   "deductions": [
@@ -11,11 +11,10 @@
     }
   ],
   "maintainers": [
-    "remy"
+    "kdy1"
   ],
-  "lastCommitDate": "2026-02-09T18:12:56Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
-  "executionTimeMs": 1063,
-  "diagnosedAt": "2026-02-19T13:03:30.858Z"
+  "executionTimeMs": 1954,
+  "diagnosedAt": "2026-02-19T13:03:38.658Z"
 }

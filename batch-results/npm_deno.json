@@ -1,0 +1,17 @@
+{
+  "ecosystem": "npm",
+  "package": "deno",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "ry",
+    "dsherret",
+    "denobot"
+  ],
+  "lastCommitDate": "2026-02-19T08:30:40Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2518,
+  "diagnosedAt": "2026-02-19T13:03:45.573Z"
+}

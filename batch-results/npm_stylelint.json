@@ -1,0 +1,18 @@
+{
+  "ecosystem": "npm",
+  "package": "stylelint",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "jeddy3",
+    "ybiquitous",
+    "romainmenke",
+    "ntwb"
+  ],
+  "lastCommitDate": "2026-02-19T06:49:20Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1046,
+  "diagnosedAt": "2026-02-19T13:03:52.710Z"
+}
