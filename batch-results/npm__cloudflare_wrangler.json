@@ -1,0 +1,36 @@
+{
+  "ecosystem": "npm",
+  "package": "@cloudflare/wrangler",
+  "score": 62,
+  "riskLevel": "MEDIUM",
+  "deductions": [
+    {
+      "reason": "Package deprecated: This package is for Wrangler v1.x and is no longer supported. Please visit https://www.npmjs.com/pac...",
+      "points": 10,
+      "confidence": "high"
+    },
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    },
+    {
+      "reason": "Repository is archived (no longer maintained)",
+      "points": 15,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 2 years ago (3 years)",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "wrangler-publisher"
+  ],
+  "lastCommitDate": "2023-08-03T18:15:03Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2324,
+  "diagnosedAt": "2026-02-19T20:52:49.891Z"
+}

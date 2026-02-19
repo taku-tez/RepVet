@@ -1,0 +1,19 @@
+{
+  "ecosystem": "npm",
+  "package": "garfish",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "shawzhou",
+    "rustle",
+    "caohuilin",
+    "cttrevor",
+    "zengkp"
+  ],
+  "lastCommitDate": "2026-02-02T18:51:45Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2634,
+  "diagnosedAt": "2026-02-19T20:52:45.286Z"
+}

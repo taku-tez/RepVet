@@ -1,0 +1,16 @@
+{
+  "ecosystem": "npm",
+  "package": "socket.io-client",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "rauchg",
+    "darrachequesne"
+  ],
+  "lastCommitDate": "2026-01-23T13:56:17Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1814,
+  "diagnosedAt": "2026-02-19T20:52:18.530Z"
+}

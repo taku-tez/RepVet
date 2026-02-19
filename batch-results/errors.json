@@ -394,5 +394,11 @@
     "package": "@joi/time",
     "error": "Exit code 1: {\"error\":\"Error: Package not found: @joi/time (npm)\"}\n",
     "timestamp": "2026-02-19T20:07:35.212Z"
+  },
+  {
+    "ecosystem": "npm",
+    "package": "@module-federation/webpack",
+    "error": "Exit code 1: {\"error\":\"Error: Package not found: @module-federation/webpack (npm)\"}\n",
+    "timestamp": "2026-02-19T20:52:24.197Z"
   }
 ]

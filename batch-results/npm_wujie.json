@@ -1,0 +1,16 @@
+{
+  "ecosystem": "npm",
+  "package": "wujie",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "sunyuis",
+    "yiludege"
+  ],
+  "lastCommitDate": "2025-10-14T15:34:31Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 3423,
+  "diagnosedAt": "2026-02-19T20:52:42.652Z"
+}

@@ -1,6 +1,6 @@
 {
   "ecosystem": "npm",
-  "package": "websocket",
+  "package": "single-spa",
   "score": 97,
   "riskLevel": "LOW",
   "deductions": [
@@ -11,11 +11,11 @@
     }
   ],
   "maintainers": [
-    "theturtle32"
+    "jolyndenning"
   ],
-  "lastCommitDate": "2025-10-06T22:27:40Z",
+  "lastCommitDate": "2025-09-22T06:24:24Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
-  "executionTimeMs": 1671,
-  "diagnosedAt": "2026-02-19T20:52:16.716Z"
+  "executionTimeMs": 1380,
+  "diagnosedAt": "2026-02-19T20:52:29.912Z"
 }

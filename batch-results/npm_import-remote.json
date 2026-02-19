@@ -1,0 +1,26 @@
+{
+  "ecosystem": "npm",
+  "package": "import-remote",
+  "score": 92,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    },
+    {
+      "reason": "Last commit over 1 year ago (637 days)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "gxlmyacc"
+  ],
+  "lastCommitDate": "2024-05-23T08:34:59Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2794,
+  "diagnosedAt": "2026-02-19T20:52:37.249Z"
+}

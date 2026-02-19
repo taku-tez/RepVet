@@ -1,0 +1,18 @@
+{
+  "ecosystem": "npm",
+  "package": "@module-federation/enhanced",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "zackljackson",
+    "heal",
+    "shawzhou",
+    "gioboa"
+  ],
+  "lastCommitDate": "2026-02-19T20:30:49Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1911,
+  "diagnosedAt": "2026-02-19T20:52:26.108Z"
+}
