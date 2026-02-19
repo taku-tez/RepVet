@@ -1,0 +1,33 @@
+{
+  "ecosystem": "npm",
+  "package": "deep-object-diff",
+  "score": 92,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    },
+    {
+      "reason": "Last commit over 1 year ago (717 days)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "mattphillips"
+  ],
+  "lastCommitDate": "2024-03-04T12:06:22Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 1,
+    "critical": 0,
+    "high": 0,
+    "recent": 0,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 2491,
+  "diagnosedAt": "2026-02-19T14:22:50.877Z"
+}

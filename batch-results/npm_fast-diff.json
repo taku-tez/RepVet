@@ -1,0 +1,22 @@
+{
+  "ecosystem": "npm",
+  "package": "fast-diff",
+  "score": 90,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Last commit over 2 years ago (3 years)",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "luin",
+    "jhchen"
+  ],
+  "lastCommitDate": "2023-05-19T08:25:10Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1702,
+  "diagnosedAt": "2026-02-19T14:22:44.459Z"
+}

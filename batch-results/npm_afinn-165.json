@@ -1,0 +1,22 @@
+{
+  "ecosystem": "npm",
+  "package": "afinn-165",
+  "score": 85,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Last commit over 3 years ago (3 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "wooorm",
+    "zeke"
+  ],
+  "lastCommitDate": "2022-11-07T10:36:52Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2008,
+  "diagnosedAt": "2026-02-19T14:22:19.968Z"
+}

@@ -1,0 +1,22 @@
+{
+  "ecosystem": "npm",
+  "package": "tinyld",
+  "score": 90,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Last commit over 2 years ago (3 years)",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "kefniark",
+    "matt_seeley_komodo"
+  ],
+  "lastCommitDate": "2023-05-17T14:22:21Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2004,
+  "diagnosedAt": "2026-02-19T14:22:13.588Z"
+}

@@ -1,0 +1,21 @@
+{
+  "ecosystem": "npm",
+  "package": "langdetect",
+  "score": 95,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "newmsz"
+  ],
+  "lastCommitDate": "2026-01-24T11:42:32Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2431,
+  "diagnosedAt": "2026-02-19T14:22:16.019Z"
+}

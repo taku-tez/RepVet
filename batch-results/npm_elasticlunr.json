@@ -1,0 +1,26 @@
+{
+  "ecosystem": "npm",
+  "package": "elasticlunr",
+  "score": 80,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 3 years ago (3 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "weixsong"
+  ],
+  "lastCommitDate": "2022-12-10T06:38:17Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1912,
+  "diagnosedAt": "2026-02-19T14:22:36.053Z"
+}

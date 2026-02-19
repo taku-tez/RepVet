@@ -1,0 +1,21 @@
+{
+  "ecosystem": "npm",
+  "package": "flexsearch",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "nextapps"
+  ],
+  "lastCommitDate": "2025-09-26T19:48:55Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1776,
+  "diagnosedAt": "2026-02-19T14:22:29.849Z"
+}
