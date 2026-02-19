@@ -196,5 +196,11 @@
     "package": "@azure/storage",
     "error": "Exit code 1: {\"error\":\"Error: Package not found: @azure/storage (npm)\"}\n",
     "timestamp": "2026-02-19T17:52:29.773Z"
+  },
+  {
+    "ecosystem": "npm",
+    "package": "@graphql-tools",
+    "error": "Exit code 1: {\"error\":\"Error: Failed to fetch npm package info: npm registry error: 405\"}\n",
+    "timestamp": "2026-02-19T17:57:14.396Z"
   }
 ]

@@ -1,0 +1,21 @@
+{
+  "ecosystem": "npm",
+  "package": "@types/express",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "types"
+  ],
+  "lastCommitDate": "2026-02-19T17:32:58Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2843,
+  "diagnosedAt": "2026-02-19T17:57:50.018Z"
+}

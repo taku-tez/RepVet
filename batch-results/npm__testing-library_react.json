@@ -1,0 +1,31 @@
+{
+  "ecosystem": "npm",
+  "package": "@testing-library/react",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "testing-library-bot",
+    "kentcdodds",
+    "timdeschryver",
+    "patrickhulce",
+    "dfcook",
+    "gpx",
+    "mpeyper",
+    "mihar-22",
+    "pago",
+    "cmckinstry",
+    "thymikee",
+    "brrianalexis",
+    "jdecroock",
+    "mdjastrzebski",
+    "eps1lon",
+    "phryneas",
+    "matanbobi"
+  ],
+  "lastCommitDate": "2026-01-19T10:59:05Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 3686,
+  "diagnosedAt": "2026-02-19T17:57:31.327Z"
+}

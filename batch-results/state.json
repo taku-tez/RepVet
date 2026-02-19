@@ -1,5 +1,5 @@
 {
-  "currentIndex": 1040,
+  "currentIndex": 1060,
   "totalPackages": 4957,
   "results": [
     {
@@ -25754,6 +25754,492 @@
       },
       "executionTimeMs": 1963,
       "diagnosedAt": "2026-02-19T17:52:31.736Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@apollo/client",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "phryneas",
+        "jerelmiller",
+        "apollo-bot",
+        "abernix"
+      ],
+      "lastCommitDate": "2026-02-19T17:16:24Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2931,
+      "diagnosedAt": "2026-02-19T17:57:08.832Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@apollo/server",
+      "score": 90,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "abernix",
+        "apollo-bot",
+        "dkuc",
+        "glasser",
+        "jerelmiller",
+        "phryneas"
+      ],
+      "lastCommitDate": "2026-02-16T22:09:37Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 4,
+        "critical": 0,
+        "high": 1,
+        "recent": 1,
+        "hasUnfixed": true
+      },
+      "executionTimeMs": 3783,
+      "diagnosedAt": "2026-02-19T17:57:12.615Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@storybook/core",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "ndelangen",
+        "shilman",
+        "tmeasday",
+        "ghengeveld",
+        "winkervsbecks",
+        "yannbf",
+        "kylegach",
+        "jreinhold",
+        "kasperpeulen",
+        "valentinpalkovic",
+        "domyen",
+        "storybook-bot"
+      ],
+      "lastCommitDate": "2026-02-19T16:54:40Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 4319,
+      "diagnosedAt": "2026-02-19T17:57:18.715Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@storybook/react",
+      "score": 85,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Complete maintainer change in 0 days (0.0.0-pr-28255-sha-b988fb35)",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "ndelangen",
+        "shilman",
+        "tmeasday",
+        "ghengeveld",
+        "winkervsbecks",
+        "yannbf",
+        "kylegach",
+        "jreinhold",
+        "kasperpeulen",
+        "valentinpalkovic",
+        "domyen",
+        "storybook-bot"
+      ],
+      "lastCommitDate": "2026-02-19T16:54:40Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 3946,
+      "diagnosedAt": "2026-02-19T17:57:22.662Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@storybook/vue",
+      "score": 90,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Package deprecated: Vue2 will end-of-life on 2023-12-31, so we plan to remove support in Storybook's next major release....",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "ndelangen",
+        "shilman",
+        "tmeasday",
+        "ghengeveld",
+        "winkervsbecks",
+        "yannbf",
+        "kylegach",
+        "jreinhold",
+        "kasperpeulen",
+        "valentinpalkovic",
+        "domyen",
+        "storybook-bot"
+      ],
+      "lastCommitDate": "2026-02-19T16:54:40Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 4979,
+      "diagnosedAt": "2026-02-19T17:57:27.641Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@testing-library/react",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "testing-library-bot",
+        "kentcdodds",
+        "timdeschryver",
+        "patrickhulce",
+        "dfcook",
+        "gpx",
+        "mpeyper",
+        "mihar-22",
+        "pago",
+        "cmckinstry",
+        "thymikee",
+        "brrianalexis",
+        "jdecroock",
+        "mdjastrzebski",
+        "eps1lon",
+        "phryneas",
+        "matanbobi"
+      ],
+      "lastCommitDate": "2026-01-19T10:59:05Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 3686,
+      "diagnosedAt": "2026-02-19T17:57:31.327Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@testing-library/jest-dom",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "testing-library-bot",
+        "kentcdodds",
+        "timdeschryver",
+        "patrickhulce",
+        "dfcook",
+        "gpx",
+        "mpeyper",
+        "mihar-22",
+        "pago",
+        "cmckinstry",
+        "thymikee",
+        "brrianalexis",
+        "jdecroock",
+        "mdjastrzebski",
+        "eps1lon",
+        "phryneas",
+        "matanbobi"
+      ],
+      "lastCommitDate": "2025-11-21T06:25:21Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 3830,
+      "diagnosedAt": "2026-02-19T17:57:35.157Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@types/node",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "types"
+      ],
+      "lastCommitDate": "2026-02-19T17:32:58Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 8349,
+      "diagnosedAt": "2026-02-19T17:57:43.507Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@types/react",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "types"
+      ],
+      "lastCommitDate": "2026-02-19T17:32:58Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 3666,
+      "diagnosedAt": "2026-02-19T17:57:47.174Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@types/express",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "types"
+      ],
+      "lastCommitDate": "2026-02-19T17:32:58Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2843,
+      "diagnosedAt": "2026-02-19T17:57:50.018Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@types/jest",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "types"
+      ],
+      "lastCommitDate": "2026-02-19T17:32:58Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 4220,
+      "diagnosedAt": "2026-02-19T17:57:54.238Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "bun",
+      "score": 90,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "2 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "jarred",
+        "robobun"
+      ],
+      "lastCommitDate": "2026-02-19T15:17:31Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 2,
+        "critical": 0,
+        "high": 2,
+        "recent": 1,
+        "hasUnfixed": true
+      },
+      "executionTimeMs": 4929,
+      "diagnosedAt": "2026-02-19T17:57:59.167Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "bun-types",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "jarred",
+        "robobun",
+        "colinhacks"
+      ],
+      "lastCommitDate": "2026-02-19T15:17:31Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 4195,
+      "diagnosedAt": "2026-02-19T17:58:03.363Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "elysia",
+      "score": 72,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "1 critical vulnerability(ies) in history",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "aomkirby123"
+      ],
+      "lastCommitDate": "2026-02-12T12:30:52Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 2,
+        "critical": 1,
+        "high": 1,
+        "recent": 2,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 3332,
+      "diagnosedAt": "2026-02-19T17:58:06.695Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "hono",
+      "score": 82,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "4 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        },
+        {
+          "reason": "10 vulnerabilities in the past year",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "yusukebe"
+      ],
+      "lastCommitDate": "2026-02-19T11:45:19Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 14,
+        "critical": 0,
+        "high": 4,
+        "recent": 10,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 2794,
+      "diagnosedAt": "2026-02-19T17:58:09.490Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "nitro",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "pi0"
+      ],
+      "lastCommitDate": "2026-02-19T17:55:58Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 7926,
+      "diagnosedAt": "2026-02-19T17:58:17.417Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "nitropack",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "pi0"
+      ],
+      "lastCommitDate": "2026-02-19T17:55:58Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2447,
+      "diagnosedAt": "2026-02-19T17:58:19.865Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "unjs",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "Unknown"
+      ],
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1751,
+      "diagnosedAt": "2026-02-19T17:58:21.616Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "unstorage",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "pi0"
+      ],
+      "lastCommitDate": "2026-02-19T15:36:28Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 3739,
+      "diagnosedAt": "2026-02-19T17:58:25.355Z"
     }
   ],
   "errors": [
@@ -25954,6 +26440,12 @@
       "package": "@azure/storage",
       "error": "Exit code 1: {\"error\":\"Error: Package not found: @azure/storage (npm)\"}\n",
       "timestamp": "2026-02-19T17:52:29.773Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@graphql-tools",
+      "error": "Exit code 1: {\"error\":\"Error: Failed to fetch npm package info: npm registry error: 405\"}\n",
+      "timestamp": "2026-02-19T17:57:14.396Z"
     }
   ],
   "startTime": "2026-02-19T12:29:21.598Z"
