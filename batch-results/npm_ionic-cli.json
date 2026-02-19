@@ -1,0 +1,25 @@
+{
+  "ecosystem": "npm",
+  "package": "ionic-cli",
+  "score": 85,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Package deprecated: If you're looking for the Ionic CLI, install ionic, not ionic-cli",
+      "points": 10,
+      "confidence": "high"
+    },
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "tlancina"
+  ],
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1782,
+  "diagnosedAt": "2026-02-19T17:32:28.167Z"
+}

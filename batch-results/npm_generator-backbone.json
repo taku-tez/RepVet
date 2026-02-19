@@ -1,0 +1,41 @@
+{
+  "ecosystem": "npm",
+  "package": "generator-backbone",
+  "score": 60,
+  "riskLevel": "MEDIUM",
+  "deductions": [
+    {
+      "reason": "Package deprecated: Deprecated",
+      "points": 10,
+      "confidence": "high"
+    },
+    {
+      "reason": "Repository is archived (no longer maintained)",
+      "points": 15,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 3 years ago (9 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "sboudrias",
+    "mischah",
+    "ulisesgascon",
+    "mshima",
+    "joshuakgoldberg",
+    "paulirish",
+    "ruyadorno",
+    "eddiemonge",
+    "revathskumar",
+    "sindresorhus",
+    "addyosmani"
+  ],
+  "lastCommitDate": "2017-02-13T17:35:09Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2668,
+  "diagnosedAt": "2026-02-19T17:32:19.697Z"
+}

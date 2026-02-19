@@ -1,0 +1,30 @@
+{
+  "ecosystem": "npm",
+  "package": "generator-webapp",
+  "score": 90,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Last commit over 2 years ago (2 years)",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "sboudrias",
+    "mischah",
+    "ulisesgascon",
+    "mshima",
+    "joshuakgoldberg",
+    "paulirish",
+    "eddiemonge",
+    "sindresorhus",
+    "addyosmani",
+    "silvenon"
+  ],
+  "lastCommitDate": "2024-01-30T08:49:40Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2282,
+  "diagnosedAt": "2026-02-19T17:32:15.050Z"
+}

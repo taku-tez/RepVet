@@ -1,5 +1,5 @@
 {
-  "currentIndex": 960,
+  "currentIndex": 980,
   "totalPackages": 4957,
   "results": [
     {
@@ -23996,6 +23996,559 @@
       "hasMalwareHistory": false,
       "executionTimeMs": 1719,
       "diagnosedAt": "2026-02-19T17:27:38.504Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "bower-registry-client",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "desandro",
+        "paulirish",
+        "satazor",
+        "sheerun",
+        "sindresorhus",
+        "svnlto",
+        "wibblymat"
+      ],
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2669,
+      "diagnosedAt": "2026-02-19T17:32:08.351Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "yeoman",
+      "score": 75,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Package deprecated: The Yeoman CLI is deprecated. See http://yeoman.io/migrate.html for more info.",
+          "points": 10,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 3 years ago (3 years)",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "addyosmani",
+        "sindresorhus"
+      ],
+      "lastCommitDate": "2022-10-18T16:07:03Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2447,
+      "diagnosedAt": "2026-02-19T17:32:10.798Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "yo",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "sboudrias",
+        "mischah",
+        "ulisesgascon",
+        "mshima",
+        "joshuakgoldberg",
+        "paulirish",
+        "eddiemonge",
+        "sindresorhus",
+        "addyosmani"
+      ],
+      "lastCommitDate": "2026-02-01T07:42:52Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1969,
+      "diagnosedAt": "2026-02-19T17:32:12.768Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "generator-webapp",
+      "score": 90,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Last commit over 2 years ago (2 years)",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "sboudrias",
+        "mischah",
+        "ulisesgascon",
+        "mshima",
+        "joshuakgoldberg",
+        "paulirish",
+        "eddiemonge",
+        "sindresorhus",
+        "addyosmani",
+        "silvenon"
+      ],
+      "lastCommitDate": "2024-01-30T08:49:40Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2282,
+      "diagnosedAt": "2026-02-19T17:32:15.050Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "generator-angular",
+      "score": 60,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Package deprecated: Deprecated",
+          "points": 10,
+          "confidence": "high"
+        },
+        {
+          "reason": "Repository is archived (no longer maintained)",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 3 years ago (9 years)",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "sboudrias",
+        "mischah",
+        "ulisesgascon",
+        "mshima",
+        "joshuakgoldberg",
+        "paulirish",
+        "eddiemonge",
+        "sindresorhus",
+        "addyosmani"
+      ],
+      "lastCommitDate": "2017-06-08T15:28:19Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1978,
+      "diagnosedAt": "2026-02-19T17:32:17.029Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "generator-backbone",
+      "score": 60,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Package deprecated: Deprecated",
+          "points": 10,
+          "confidence": "high"
+        },
+        {
+          "reason": "Repository is archived (no longer maintained)",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 3 years ago (9 years)",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "sboudrias",
+        "mischah",
+        "ulisesgascon",
+        "mshima",
+        "joshuakgoldberg",
+        "paulirish",
+        "ruyadorno",
+        "eddiemonge",
+        "revathskumar",
+        "sindresorhus",
+        "addyosmani"
+      ],
+      "lastCommitDate": "2017-02-13T17:35:09Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2668,
+      "diagnosedAt": "2026-02-19T17:32:19.697Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "cordova",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "brodybits",
+        "dpogue",
+        "cordovaowner",
+        "stevegill",
+        "purplecabbage",
+        "anis",
+        "filmaj",
+        "bowserj",
+        "shazron",
+        "surajpindoria",
+        "erisu",
+        "niklasmerz",
+        "janpio",
+        "normanbreau",
+        "pvpoyer",
+        "shepheb",
+        "bennmapes",
+        "agrieve",
+        "mmocny",
+        "kamrik",
+        "sgrebnov",
+        "kotikov.vladimir",
+        "cmarcelk",
+        "bhiggins",
+        "brianleroux",
+        "mwbrooks",
+        "apachebuilds",
+        "timbarham"
+      ],
+      "lastCommitDate": "2026-02-19T16:58:14Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2261,
+      "diagnosedAt": "2026-02-19T17:32:21.958Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "phonegap",
+      "score": 60,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Package deprecated: This package is deprecated, see https://blog.phonegap.com/update-for-customers-using-phonegap-and-ph...",
+          "points": 10,
+          "confidence": "high"
+        },
+        {
+          "reason": "Repository is archived (no longer maintained)",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 3 years ago (4 years)",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "filmaj",
+        "surajpindoria",
+        "hermwong",
+        "devgeeks",
+        "purplecabbage",
+        "timkim",
+        "stevegill",
+        "macdonst"
+      ],
+      "lastCommitDate": "2022-04-09T16:44:55Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2269,
+      "diagnosedAt": "2026-02-19T17:32:24.227Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "ionic",
+      "score": 90,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Package deprecated: The Ionic CLI now uses ✨ @ionic/cli ✨ for its package name! 👉 https://twitter.com/ionicframework/st...",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "ionicjs",
+        "jcesarmobile"
+      ],
+      "lastCommitDate": "2026-01-22T11:38:49Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2158,
+      "diagnosedAt": "2026-02-19T17:32:26.385Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "ionic-cli",
+      "score": 85,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Package deprecated: If you're looking for the Ionic CLI, install ionic, not ionic-cli",
+          "points": 10,
+          "confidence": "high"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "tlancina"
+      ],
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1782,
+      "diagnosedAt": "2026-02-19T17:32:28.167Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "ionic-framework",
+      "score": 90,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Package deprecated: Package no longer supported. Please use @ionic/angular for the latest version of Ionic Framework for...",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "jcesarmobile",
+        "ionicjs"
+      ],
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1918,
+      "diagnosedAt": "2026-02-19T17:32:30.085Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "nw",
+      "score": 90,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "rogerwang",
+        "ayushmxn"
+      ],
+      "lastCommitDate": "2026-02-17T08:00:39Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 1,
+        "critical": 0,
+        "high": 1,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 3531,
+      "diagnosedAt": "2026-02-19T17:32:33.616Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "nw-builder",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "adam-lynch",
+        "kessler",
+        "ayushmxn"
+      ],
+      "lastCommitDate": "2026-02-16T20:08:51Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2047,
+      "diagnosedAt": "2026-02-19T17:32:35.663Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "node-webkit",
+      "score": 95,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "johnsonlee"
+      ],
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1819,
+      "diagnosedAt": "2026-02-19T17:32:37.482Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "atom-shell",
+      "score": 70,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Repository is archived (no longer maintained)",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 3 years ago (5 years)",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "maxogden",
+        "mafintosh",
+        "zcbenz"
+      ],
+      "lastCommitDate": "2020-10-01T06:26:57Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 3781,
+      "diagnosedAt": "2026-02-19T17:32:42.148Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "atom-keymap",
+      "score": 70,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Repository is archived (no longer maintained)",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 3 years ago (3 years)",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "izuzak",
+        "probablycorey",
+        "benogle",
+        "nathansobo",
+        "smashwilson",
+        "kevinsawicki",
+        "maxbrunsfeld",
+        "zcbenz",
+        "as-cii",
+        "daviwil",
+        "iolsen",
+        "ben3eee",
+        "atom-team",
+        "jasonrudolph"
+      ],
+      "lastCommitDate": "2022-12-07T17:30:37Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2012,
+      "diagnosedAt": "2026-02-19T17:32:44.160Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "atom-space-pen-views",
+      "score": 70,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Repository is archived (no longer maintained)",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 3 years ago (3 years)",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "atom-team",
+        "lee-dohm",
+        "nathansobo",
+        "benogle",
+        "kevinsawicki",
+        "maxbrunsfeld"
+      ],
+      "lastCommitDate": "2022-09-28T10:52:01Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 3357,
+      "diagnosedAt": "2026-02-19T17:32:47.517Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "koa",
+      "score": 85,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "1 critical vulnerability(ies) in history",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "niftylettuce",
+        "fengmk2",
+        "dead_horse",
+        "jongleberry",
+        "juliangruber",
+        "aaron",
+        "titanism",
+        "3imed-jaberi",
+        "ljharb",
+        "coderhaoxin",
+        "tjholowaychuk"
+      ],
+      "lastCommitDate": "2026-02-14T12:43:23Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 4,
+        "critical": 1,
+        "high": 0,
+        "recent": 3,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1928,
+      "diagnosedAt": "2026-02-19T17:32:49.445Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "koa-router",
+      "score": 90,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Package deprecated: Please use @koa/router instead, starting from v9! ",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "3imed-jaberi",
+        "niftylettuce",
+        "titanism"
+      ],
+      "lastCommitDate": "2026-02-14T12:45:34Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2194,
+      "diagnosedAt": "2026-02-19T17:32:51.639Z"
     }
   ],
   "errors": [
@@ -24130,6 +24683,12 @@
       "package": "discord.js-selfbot-voice.js-selfbot",
       "error": "Exit code 1: {\"error\":\"Error: Package not found: discord.js-selfbot-voice.js-selfbot (npm)\"}\n",
       "timestamp": "2026-02-19T17:22:27.851Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "electron-builder-old",
+      "error": "Exit code 1: {\"error\":\"Error: Package not found: electron-builder-old (npm)\"}\n",
+      "timestamp": "2026-02-19T17:32:38.367Z"
     }
   ],
   "startTime": "2026-02-19T12:29:21.598Z"

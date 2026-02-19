@@ -1,0 +1,28 @@
+{
+  "ecosystem": "npm",
+  "package": "atom-shell",
+  "score": 70,
+  "riskLevel": "MEDIUM",
+  "deductions": [
+    {
+      "reason": "Repository is archived (no longer maintained)",
+      "points": 15,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 3 years ago (5 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "maxogden",
+    "mafintosh",
+    "zcbenz"
+  ],
+  "lastCommitDate": "2020-10-01T06:26:57Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 3781,
+  "diagnosedAt": "2026-02-19T17:32:42.148Z"
+}

@@ -1,0 +1,21 @@
+{
+  "ecosystem": "npm",
+  "package": "ionic-framework",
+  "score": 90,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Package deprecated: Package no longer supported. Please use @ionic/angular for the latest version of Ionic Framework for...",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "jcesarmobile",
+    "ionicjs"
+  ],
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1918,
+  "diagnosedAt": "2026-02-19T17:32:30.085Z"
+}

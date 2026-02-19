@@ -1,0 +1,23 @@
+{
+  "ecosystem": "npm",
+  "package": "koa-router",
+  "score": 90,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Package deprecated: Please use @koa/router instead, starting from v9! ",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "3imed-jaberi",
+    "niftylettuce",
+    "titanism"
+  ],
+  "lastCommitDate": "2026-02-14T12:45:34Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2194,
+  "diagnosedAt": "2026-02-19T17:32:51.639Z"
+}

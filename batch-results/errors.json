@@ -130,5 +130,11 @@
     "package": "discord.js-selfbot-voice.js-selfbot",
     "error": "Exit code 1: {\"error\":\"Error: Package not found: discord.js-selfbot-voice.js-selfbot (npm)\"}\n",
     "timestamp": "2026-02-19T17:22:27.851Z"
+  },
+  {
+    "ecosystem": "npm",
+    "package": "electron-builder-old",
+    "error": "Exit code 1: {\"error\":\"Error: Package not found: electron-builder-old (npm)\"}\n",
+    "timestamp": "2026-02-19T17:32:38.367Z"
   }
 ]

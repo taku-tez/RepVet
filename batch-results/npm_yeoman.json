@@ -1,0 +1,27 @@
+{
+  "ecosystem": "npm",
+  "package": "yeoman",
+  "score": 75,
+  "riskLevel": "MEDIUM",
+  "deductions": [
+    {
+      "reason": "Package deprecated: The Yeoman CLI is deprecated. See http://yeoman.io/migrate.html for more info.",
+      "points": 10,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 3 years ago (3 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "addyosmani",
+    "sindresorhus"
+  ],
+  "lastCommitDate": "2022-10-18T16:07:03Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2447,
+  "diagnosedAt": "2026-02-19T17:32:10.798Z"
+}
