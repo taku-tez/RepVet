@@ -1,0 +1,26 @@
+{
+  "ecosystem": "npm",
+  "package": "just-diff",
+  "score": 87,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    },
+    {
+      "reason": "Last commit over 2 years ago (2 years)",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "angus-c"
+  ],
+  "lastCommitDate": "2024-02-11T12:23:37Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1885,
+  "diagnosedAt": "2026-02-19T14:27:07.566Z"
+}

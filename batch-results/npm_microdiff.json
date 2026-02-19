@@ -1,0 +1,21 @@
+{
+  "ecosystem": "npm",
+  "package": "microdiff",
+  "score": 95,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "asyncbanana"
+  ],
+  "lastCommitDate": "2025-08-14T03:38:15Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2495,
+  "diagnosedAt": "2026-02-19T14:27:10.061Z"
+}

@@ -1,0 +1,21 @@
+{
+  "ecosystem": "npm",
+  "package": "estree-walker",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "rich_harris"
+  ],
+  "lastCommitDate": "2025-09-07T19:57:21Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2211,
+  "diagnosedAt": "2026-02-19T14:27:43.334Z"
+}

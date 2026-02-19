@@ -1,0 +1,26 @@
+{
+  "ecosystem": "npm",
+  "package": "deepmerge",
+  "score": 87,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    },
+    {
+      "reason": "Last commit over 2 years ago (3 years)",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "tehshrike"
+  ],
+  "lastCommitDate": "2023-04-21T05:16:12Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1713,
+  "diagnosedAt": "2026-02-19T14:27:30.863Z"
+}

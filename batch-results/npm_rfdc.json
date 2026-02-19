@@ -1,0 +1,16 @@
+{
+  "ecosystem": "npm",
+  "package": "rfdc",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "matteo.collina",
+    "davidmarkclements"
+  ],
+  "lastCommitDate": "2025-04-22T07:50:55Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2217,
+  "diagnosedAt": "2026-02-19T14:27:16.731Z"
+}

@@ -1,0 +1,29 @@
+{
+  "ecosystem": "npm",
+  "package": "lodash.merge",
+  "score": 90,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "2 high severity vulnerability(ies) in history",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "jdalton",
+    "mathias"
+  ],
+  "lastCommitDate": "2026-02-06T14:13:37Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 2,
+    "critical": 0,
+    "high": 2,
+    "recent": 0,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 2313,
+  "diagnosedAt": "2026-02-19T14:27:33.177Z"
+}

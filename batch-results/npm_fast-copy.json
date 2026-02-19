@@ -1,0 +1,21 @@
+{
+  "ecosystem": "npm",
+  "package": "fast-copy",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "planttheidea"
+  ],
+  "lastCommitDate": "2026-02-03T20:17:45Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2260,
+  "diagnosedAt": "2026-02-19T14:27:18.991Z"
+}

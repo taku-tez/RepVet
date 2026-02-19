@@ -1,0 +1,26 @@
+{
+  "ecosystem": "npm",
+  "package": "traverse",
+  "score": 92,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    },
+    {
+      "reason": "Last commit over 1 year ago (399 days)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "ljharb"
+  ],
+  "lastCommitDate": "2025-01-16T01:14:28Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1855,
+  "diagnosedAt": "2026-02-19T14:27:41.123Z"
+}
