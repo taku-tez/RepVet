@@ -1,6 +1,6 @@
 {
   "ecosystem": "npm",
-  "package": "percy",
+  "package": "storycap",
   "score": 97,
   "riskLevel": "LOW",
   "deductions": [
@@ -11,11 +11,11 @@
     }
   ],
   "maintainers": [
-    "percy-admin"
+    "quramy"
   ],
-  "lastCommitDate": "2026-02-19T10:07:11Z",
+  "lastCommitDate": "2026-02-17T21:08:26Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
-  "executionTimeMs": 1989,
-  "diagnosedAt": "2026-02-19T22:42:25.351Z"
+  "executionTimeMs": 2327,
+  "diagnosedAt": "2026-02-19T22:42:32.348Z"
 }

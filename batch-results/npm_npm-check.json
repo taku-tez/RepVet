@@ -1,0 +1,17 @@
+{
+  "ecosystem": "npm",
+  "package": "npm-check",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "linusu",
+    "dylang",
+    "thelarkinn"
+  ],
+  "lastCommitDate": "2026-02-15T02:11:23Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2305,
+  "diagnosedAt": "2026-02-19T22:42:54.107Z"
+}

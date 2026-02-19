@@ -1,0 +1,33 @@
+{
+  "ecosystem": "npm",
+  "package": "dependency-check",
+  "score": 70,
+  "riskLevel": "MEDIUM",
+  "deductions": [
+    {
+      "reason": "Package deprecated: dependency-check has been deprecated in favor of the knip module",
+      "points": 10,
+      "confidence": "high"
+    },
+    {
+      "reason": "Repository is archived (no longer maintained)",
+      "points": 15,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 1 year ago (708 days)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "blakeembrey",
+    "maxogden",
+    "voxpelli"
+  ],
+  "lastCommitDate": "2024-03-13T20:24:16Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1845,
+  "diagnosedAt": "2026-02-19T22:42:51.802Z"
+}

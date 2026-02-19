@@ -1,0 +1,17 @@
+{
+  "ecosystem": "npm",
+  "package": "accessibility-checker",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "thbrunet",
+    "eatools",
+    "shunguoy"
+  ],
+  "lastCommitDate": "2026-02-19T17:45:08Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2375,
+  "diagnosedAt": "2026-02-19T22:42:21.346Z"
+}

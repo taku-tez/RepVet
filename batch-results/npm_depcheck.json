@@ -1,0 +1,22 @@
+{
+  "ecosystem": "npm",
+  "package": "depcheck",
+  "score": 85,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Repository is archived (no longer maintained)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "rumpl",
+    "lijunle"
+  ],
+  "lastCommitDate": "2025-02-27T08:33:16Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1627,
+  "diagnosedAt": "2026-02-19T22:42:49.956Z"
+}

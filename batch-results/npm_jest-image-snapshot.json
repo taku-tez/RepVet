@@ -1,0 +1,19 @@
+{
+  "ecosystem": "npm",
+  "package": "jest-image-snapshot",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "pixnbits",
+    "anescobar1991",
+    "jsmartfo",
+    "amexopensource",
+    "10xlacroixdrinker"
+  ],
+  "lastCommitDate": "2026-02-17T07:53:50Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1168,
+  "diagnosedAt": "2026-02-19T22:42:33.516Z"
+}

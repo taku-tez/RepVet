@@ -1,0 +1,23 @@
+{
+  "ecosystem": "npm",
+  "package": "cypress-image-snapshot",
+  "score": 95,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Last commit over 1 year ago (680 days)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "jaredpalmer",
+    "jayjaycross",
+    "cypress-image-snapshot"
+  ],
+  "lastCommitDate": "2024-04-10T19:04:58Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1963,
+  "diagnosedAt": "2026-02-19T22:42:35.479Z"
+}

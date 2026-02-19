@@ -1,0 +1,33 @@
+{
+  "ecosystem": "npm",
+  "package": "snyk",
+  "score": 87,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    },
+    {
+      "reason": "3 high severity vulnerability(ies) in history",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "snyk-admin"
+  ],
+  "lastCommitDate": "2026-02-19T19:36:05Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 4,
+    "critical": 0,
+    "high": 3,
+    "recent": 1,
+    "hasUnfixed": true
+  },
+  "executionTimeMs": 3593,
+  "diagnosedAt": "2026-02-19T22:42:39.072Z"
+}

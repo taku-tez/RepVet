@@ -442,5 +442,17 @@
     "package": "node:test",
     "error": "Exit code 1: {\"error\":\"Error: Package not found: node:test (npm)\"}\n",
     "timestamp": "2026-02-19T21:42:41.390Z"
+  },
+  {
+    "ecosystem": "npm",
+    "package": "node-security-project",
+    "error": "Exit code 1: {\"error\":\"Error: Package not found: node-security-project (npm)\"}\n",
+    "timestamp": "2026-02-19T22:42:41.742Z"
+  },
+  {
+    "ecosystem": "npm",
+    "package": "audit-resolve",
+    "error": "Exit code 1: {\"error\":\"Error: Package not found: audit-resolve (npm)\"}\n",
+    "timestamp": "2026-02-19T22:42:48.329Z"
   }
 ]

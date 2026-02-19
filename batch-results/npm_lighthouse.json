@@ -1,0 +1,24 @@
+{
+  "ecosystem": "npm",
+  "package": "lighthouse",
+  "score": 89,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer replaced at 1.0.1",
+      "points": 11,
+      "confidence": "medium"
+    }
+  ],
+  "maintainers": [
+    "paulirish",
+    "brendankenny",
+    "hoten",
+    "adamraine"
+  ],
+  "lastCommitDate": "2026-02-17T20:53:47Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 3763,
+  "diagnosedAt": "2026-02-19T22:42:18.971Z"
+}

@@ -1,6 +1,6 @@
 {
   "ecosystem": "npm",
-  "package": "percy",
+  "package": "better-npm-audit",
   "score": 97,
   "riskLevel": "LOW",
   "deductions": [
@@ -11,11 +11,11 @@
     }
   ],
   "maintainers": [
-    "percy-admin"
+    "jeemok"
   ],
-  "lastCommitDate": "2026-02-19T10:07:11Z",
+  "lastCommitDate": "2026-01-21T21:11:24Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
-  "executionTimeMs": 1989,
-  "diagnosedAt": "2026-02-19T22:42:25.351Z"
+  "executionTimeMs": 1913,
+  "diagnosedAt": "2026-02-19T22:42:43.655Z"
 }
