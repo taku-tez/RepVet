@@ -1,0 +1,18 @@
+{
+  "ecosystem": "npm",
+  "package": "playwright-core",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "pavelfeldman",
+    "yurys",
+    "dgozman-ms",
+    "playwright-bot"
+  ],
+  "lastCommitDate": "2026-02-19T08:44:50Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 3003,
+  "diagnosedAt": "2026-02-19T13:27:13.796Z"
+}

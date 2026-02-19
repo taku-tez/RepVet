@@ -1,0 +1,26 @@
+{
+  "ecosystem": "npm",
+  "package": "faye-websocket",
+  "score": 87,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    },
+    {
+      "reason": "Last commit over 2 years ago (2 years)",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "jcoglan"
+  ],
+  "lastCommitDate": "2023-09-07T18:19:35Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1759,
+  "diagnosedAt": "2026-02-19T13:27:25.745Z"
+}

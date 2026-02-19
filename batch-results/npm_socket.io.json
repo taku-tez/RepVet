@@ -1,0 +1,29 @@
+{
+  "ecosystem": "npm",
+  "package": "socket.io",
+  "score": 90,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "2 high severity vulnerability(ies) in history",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "rauchg",
+    "darrachequesne"
+  ],
+  "lastCommitDate": "2026-01-23T13:56:17Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 3,
+    "critical": 0,
+    "high": 2,
+    "recent": 0,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 1984,
+  "diagnosedAt": "2026-02-19T13:27:20.283Z"
+}

@@ -1,0 +1,27 @@
+{
+  "ecosystem": "npm",
+  "package": "sockjs",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "glasser",
+    "majek",
+    "squaremo",
+    "msackman",
+    "brycekahle",
+    "auvipy"
+  ],
+  "lastCommitDate": "2025-11-16T20:25:03Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 2,
+    "critical": 0,
+    "high": 0,
+    "recent": 0,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 1896,
+  "diagnosedAt": "2026-02-19T13:27:23.986Z"
+}

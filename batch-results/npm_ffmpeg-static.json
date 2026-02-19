@@ -1,0 +1,18 @@
+{
+  "ecosystem": "npm",
+  "package": "ffmpeg-static",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "noblesamurai",
+    "eugeneware",
+    "jacob-samurai",
+    "derhuerst"
+  ],
+  "lastCommitDate": "2025-11-14T21:33:34Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2127,
+  "diagnosedAt": "2026-02-19T13:27:15.923Z"
+}

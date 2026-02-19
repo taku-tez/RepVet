@@ -1,0 +1,31 @@
+{
+  "ecosystem": "npm",
+  "package": "lucia",
+  "score": 76,
+  "riskLevel": "MEDIUM",
+  "deductions": [
+    {
+      "reason": "Package deprecated: This package has been deprecated. Please see https://lucia-auth.com/lucia-v3/migrate.",
+      "points": 10,
+      "confidence": "high"
+    },
+    {
+      "reason": "Single maintainer replaced at 1.0.0",
+      "points": 11,
+      "confidence": "medium"
+    },
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "pilcrowonpaper"
+  ],
+  "lastCommitDate": "2025-07-13T23:55:43Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2295,
+  "diagnosedAt": "2026-02-19T13:27:41.938Z"
+}

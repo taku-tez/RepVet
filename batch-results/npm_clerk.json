@@ -1,0 +1,21 @@
+{
+  "ecosystem": "npm",
+  "package": "clerk",
+  "score": 85,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Last commit over 3 years ago (11 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "colinclerk"
+  ],
+  "lastCommitDate": "2015-06-15T03:44:22Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1923,
+  "diagnosedAt": "2026-02-19T13:27:46.000Z"
+}

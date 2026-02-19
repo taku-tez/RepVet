@@ -1,0 +1,15 @@
+{
+  "ecosystem": "npm",
+  "package": "jimp",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "oliver.moran",
+    "alisowski"
+  ],
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1311,
+  "diagnosedAt": "2026-02-19T13:27:07.127Z"
+}

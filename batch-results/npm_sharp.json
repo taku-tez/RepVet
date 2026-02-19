@@ -1,0 +1,33 @@
+{
+  "ecosystem": "npm",
+  "package": "sharp",
+  "score": 87,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    },
+    {
+      "reason": "1 high severity vulnerability(ies) in history",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "lovell"
+  ],
+  "lastCommitDate": "2026-02-01T21:20:26Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 2,
+    "critical": 0,
+    "high": 1,
+    "recent": 0,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 2526,
+  "diagnosedAt": "2026-02-19T13:27:05.815Z"
+}

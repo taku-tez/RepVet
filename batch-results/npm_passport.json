@@ -1,0 +1,33 @@
+{
+  "ecosystem": "npm",
+  "package": "passport",
+  "score": 92,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    },
+    {
+      "reason": "Last commit over 1 year ago (551 days)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "jaredhanson"
+  ],
+  "lastCommitDate": "2024-08-16T21:56:14Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 1,
+    "critical": 0,
+    "high": 0,
+    "recent": 0,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 2206,
+  "diagnosedAt": "2026-02-19T13:27:34.675Z"
+}

@@ -1,0 +1,30 @@
+{
+  "ecosystem": "npm",
+  "package": "fluent-ffmpeg",
+  "score": 75,
+  "riskLevel": "MEDIUM",
+  "deductions": [
+    {
+      "reason": "Package deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.",
+      "points": 10,
+      "confidence": "high"
+    },
+    {
+      "reason": "Repository is archived (no longer maintained)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "bencevans",
+    "njoyard",
+    "rhodgkins",
+    "schaermu",
+    "spruce"
+  ],
+  "lastCommitDate": "2025-05-22T09:42:00Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2374,
+  "diagnosedAt": "2026-02-19T13:27:18.298Z"
+}

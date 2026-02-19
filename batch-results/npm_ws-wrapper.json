@@ -1,0 +1,21 @@
+{
+  "ecosystem": "npm",
+  "package": "ws-wrapper",
+  "score": 95,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "bminer"
+  ],
+  "lastCommitDate": "2025-05-19T02:12:19Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2466,
+  "diagnosedAt": "2026-02-19T13:27:32.468Z"
+}

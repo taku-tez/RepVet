@@ -1,0 +1,21 @@
+{
+  "ecosystem": "npm",
+  "package": "websocket",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "theturtle32"
+  ],
+  "lastCommitDate": "2025-10-06T22:27:40Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1590,
+  "diagnosedAt": "2026-02-19T13:27:30.001Z"
+}
