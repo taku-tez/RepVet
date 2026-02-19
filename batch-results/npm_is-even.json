@@ -1,0 +1,27 @@
+{
+  "ecosystem": "npm",
+  "package": "is-even",
+  "score": 70,
+  "riskLevel": "MEDIUM",
+  "deductions": [
+    {
+      "reason": "Repository is archived (no longer maintained)",
+      "points": 15,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 3 years ago (8 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "jonschlinkert",
+    "doowb"
+  ],
+  "lastCommitDate": "2018-04-06T00:52:26Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2591,
+  "diagnosedAt": "2026-02-19T18:12:27.758Z"
+}

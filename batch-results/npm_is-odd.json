@@ -1,0 +1,27 @@
+{
+  "ecosystem": "npm",
+  "package": "is-odd",
+  "score": 70,
+  "riskLevel": "MEDIUM",
+  "deductions": [
+    {
+      "reason": "Repository is archived (no longer maintained)",
+      "points": 15,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 3 years ago (7 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "doowb",
+    "jonschlinkert"
+  ],
+  "lastCommitDate": "2019-04-18T23:39:16Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1929,
+  "diagnosedAt": "2026-02-19T18:12:25.166Z"
+}

@@ -1,0 +1,30 @@
+{
+  "ecosystem": "npm",
+  "package": "ender-js",
+  "score": 70,
+  "riskLevel": "MEDIUM",
+  "deductions": [
+    {
+      "reason": "Repository is archived (no longer maintained)",
+      "points": 15,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 3 years ago (9 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "fat",
+    "ded",
+    "rvagg",
+    "amccollum",
+    "luk"
+  ],
+  "lastCommitDate": "2017-04-18T04:38:52Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1949,
+  "diagnosedAt": "2026-02-19T18:12:15.128Z"
+}

@@ -1,5 +1,5 @@
 {
-  "currentIndex": 1100,
+  "currentIndex": 1120,
   "totalPackages": 4957,
   "results": [
     {
@@ -27148,6 +27148,266 @@
       "hasMalwareHistory": false,
       "executionTimeMs": 2307,
       "diagnosedAt": "2026-02-19T18:07:50.649Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "component-installer",
+      "score": 85,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Last commit over 3 years ago (12 years)",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "ianstormtaylor",
+        "tjholowaychuk",
+        "jongleberry",
+        "tootallnate",
+        "juliangruber",
+        "yields",
+        "timoxley",
+        "mattmueller",
+        "jonathanong",
+        "queckezz",
+        "anthonyshort",
+        "nami-doc",
+        "dominicbarnes",
+        "clintwood",
+        "thehydroimpulse",
+        "stephenmathieson",
+        "trevorgerhardt",
+        "timaschew",
+        "jasonkuhrt"
+      ],
+      "lastCommitDate": "2014-04-28T19:44:45Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2235,
+      "diagnosedAt": "2026-02-19T18:12:11.227Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "ender",
+      "score": 70,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Repository is archived (no longer maintained)",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 3 years ago (6 years)",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "ded",
+        "fat",
+        "rvagg",
+        "amccollum",
+        "luk"
+      ],
+      "lastCommitDate": "2020-04-02T11:42:28Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1951,
+      "diagnosedAt": "2026-02-19T18:12:13.178Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "ender-js",
+      "score": 70,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Repository is archived (no longer maintained)",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 3 years ago (9 years)",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "fat",
+        "ded",
+        "rvagg",
+        "amccollum",
+        "luk"
+      ],
+      "lastCommitDate": "2017-04-18T04:38:52Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1949,
+      "diagnosedAt": "2026-02-19T18:12:15.128Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "ender-bootstrap",
+      "score": 95,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "rvagg"
+      ],
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1526,
+      "diagnosedAt": "2026-02-19T18:12:16.655Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "serialize-to-js",
+      "score": 65,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 1 year ago (729 days)",
+          "points": 5,
+          "confidence": "high"
+        },
+        {
+          "reason": "1 critical vulnerability(ies) in history",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "commenthol"
+      ],
+      "lastCommitDate": "2024-02-21T02:37:25Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 3,
+        "critical": 1,
+        "high": 1,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1740,
+      "diagnosedAt": "2026-02-19T18:12:18.396Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "is-odd",
+      "score": 70,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Repository is archived (no longer maintained)",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 3 years ago (7 years)",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "doowb",
+        "jonschlinkert"
+      ],
+      "lastCommitDate": "2019-04-18T23:39:16Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1929,
+      "diagnosedAt": "2026-02-19T18:12:25.166Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "is-even",
+      "score": 70,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Repository is archived (no longer maintained)",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 3 years ago (8 years)",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "jonschlinkert",
+        "doowb"
+      ],
+      "lastCommitDate": "2018-04-06T00:52:26Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2591,
+      "diagnosedAt": "2026-02-19T18:12:27.758Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "is-number",
+      "score": 85,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Last commit over 3 years ago (3 years)",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "doowb",
+        "jonschlinkert",
+        "realityking"
+      ],
+      "lastCommitDate": "2022-09-15T14:46:56Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2050,
+      "diagnosedAt": "2026-02-19T18:12:29.808Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "is-string",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "ljharb"
+      ],
+      "lastCommitDate": "2025-12-30T01:56:34Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2112,
+      "diagnosedAt": "2026-02-19T18:12:31.920Z"
     }
   ],
   "errors": [
@@ -27372,6 +27632,72 @@
       "package": "chai-as-promised-old",
       "error": "Exit code 1: {\"error\":\"Error: Package not found: chai-as-promised-old (npm)\"}\n",
       "timestamp": "2026-02-19T18:07:23.314Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "serialize-javascript-old",
+      "error": "Exit code 1: {\"error\":\"Error: Package not found: serialize-javascript-old (npm)\"}\n",
+      "timestamp": "2026-02-19T18:12:18.803Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "js-yaml-old",
+      "error": "Exit code 1: {\"error\":\"Error: Package not found: js-yaml-old (npm)\"}\n",
+      "timestamp": "2026-02-19T18:12:19.550Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "marked-old",
+      "error": "Exit code 1: {\"error\":\"Error: Package not found: marked-old (npm)\"}\n",
+      "timestamp": "2026-02-19T18:12:19.913Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "sanitize-html-old",
+      "error": "Exit code 1: {\"error\":\"Error: Package not found: sanitize-html-old (npm)\"}\n",
+      "timestamp": "2026-02-19T18:12:20.346Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "dompurify-old",
+      "error": "Exit code 1: {\"error\":\"Error: Package not found: dompurify-old (npm)\"}\n",
+      "timestamp": "2026-02-19T18:12:20.774Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "jquery-old",
+      "error": "Exit code 1: {\"error\":\"Error: Package not found: jquery-old (npm)\"}\n",
+      "timestamp": "2026-02-19T18:12:21.179Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "jquery-ui-old",
+      "error": "Exit code 1: {\"error\":\"Error: Package not found: jquery-ui-old (npm)\"}\n",
+      "timestamp": "2026-02-19T18:12:21.603Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "bootstrap-old",
+      "error": "Exit code 1: {\"error\":\"Error: Package not found: bootstrap-old (npm)\"}\n",
+      "timestamp": "2026-02-19T18:12:22.013Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "lodash-old",
+      "error": "Exit code 1: {\"error\":\"Error: Package not found: lodash-old (npm)\"}\n",
+      "timestamp": "2026-02-19T18:12:22.382Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "underscore-old",
+      "error": "Exit code 1: {\"error\":\"Error: Package not found: underscore-old (npm)\"}\n",
+      "timestamp": "2026-02-19T18:12:22.778Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "backbone-old",
+      "error": "Exit code 1: {\"error\":\"Error: Package not found: backbone-old (npm)\"}\n",
+      "timestamp": "2026-02-19T18:12:23.237Z"
     }
   ],
   "startTime": "2026-02-19T12:29:21.598Z"

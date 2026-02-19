@@ -220,5 +220,71 @@
     "package": "chai-as-promised-old",
     "error": "Exit code 1: {\"error\":\"Error: Package not found: chai-as-promised-old (npm)\"}\n",
     "timestamp": "2026-02-19T18:07:23.314Z"
+  },
+  {
+    "ecosystem": "npm",
+    "package": "serialize-javascript-old",
+    "error": "Exit code 1: {\"error\":\"Error: Package not found: serialize-javascript-old (npm)\"}\n",
+    "timestamp": "2026-02-19T18:12:18.803Z"
+  },
+  {
+    "ecosystem": "npm",
+    "package": "js-yaml-old",
+    "error": "Exit code 1: {\"error\":\"Error: Package not found: js-yaml-old (npm)\"}\n",
+    "timestamp": "2026-02-19T18:12:19.550Z"
+  },
+  {
+    "ecosystem": "npm",
+    "package": "marked-old",
+    "error": "Exit code 1: {\"error\":\"Error: Package not found: marked-old (npm)\"}\n",
+    "timestamp": "2026-02-19T18:12:19.913Z"
+  },
+  {
+    "ecosystem": "npm",
+    "package": "sanitize-html-old",
+    "error": "Exit code 1: {\"error\":\"Error: Package not found: sanitize-html-old (npm)\"}\n",
+    "timestamp": "2026-02-19T18:12:20.346Z"
+  },
+  {
+    "ecosystem": "npm",
+    "package": "dompurify-old",
+    "error": "Exit code 1: {\"error\":\"Error: Package not found: dompurify-old (npm)\"}\n",
+    "timestamp": "2026-02-19T18:12:20.774Z"
+  },
+  {
+    "ecosystem": "npm",
+    "package": "jquery-old",
+    "error": "Exit code 1: {\"error\":\"Error: Package not found: jquery-old (npm)\"}\n",
+    "timestamp": "2026-02-19T18:12:21.179Z"
+  },
+  {
+    "ecosystem": "npm",
+    "package": "jquery-ui-old",
+    "error": "Exit code 1: {\"error\":\"Error: Package not found: jquery-ui-old (npm)\"}\n",
+    "timestamp": "2026-02-19T18:12:21.603Z"
+  },
+  {
+    "ecosystem": "npm",
+    "package": "bootstrap-old",
+    "error": "Exit code 1: {\"error\":\"Error: Package not found: bootstrap-old (npm)\"}\n",
+    "timestamp": "2026-02-19T18:12:22.013Z"
+  },
+  {
+    "ecosystem": "npm",
+    "package": "lodash-old",
+    "error": "Exit code 1: {\"error\":\"Error: Package not found: lodash-old (npm)\"}\n",
+    "timestamp": "2026-02-19T18:12:22.382Z"
+  },
+  {
+    "ecosystem": "npm",
+    "package": "underscore-old",
+    "error": "Exit code 1: {\"error\":\"Error: Package not found: underscore-old (npm)\"}\n",
+    "timestamp": "2026-02-19T18:12:22.778Z"
+  },
+  {
+    "ecosystem": "npm",
+    "package": "backbone-old",
+    "error": "Exit code 1: {\"error\":\"Error: Package not found: backbone-old (npm)\"}\n",
+    "timestamp": "2026-02-19T18:12:23.237Z"
   }
 ]

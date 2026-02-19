@@ -1,0 +1,23 @@
+{
+  "ecosystem": "npm",
+  "package": "is-number",
+  "score": 85,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Last commit over 3 years ago (3 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "doowb",
+    "jonschlinkert",
+    "realityking"
+  ],
+  "lastCommitDate": "2022-09-15T14:46:56Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2050,
+  "diagnosedAt": "2026-02-19T18:12:29.808Z"
+}

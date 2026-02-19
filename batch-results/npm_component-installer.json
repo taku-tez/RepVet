@@ -1,0 +1,39 @@
+{
+  "ecosystem": "npm",
+  "package": "component-installer",
+  "score": 85,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Last commit over 3 years ago (12 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "ianstormtaylor",
+    "tjholowaychuk",
+    "jongleberry",
+    "tootallnate",
+    "juliangruber",
+    "yields",
+    "timoxley",
+    "mattmueller",
+    "jonathanong",
+    "queckezz",
+    "anthonyshort",
+    "nami-doc",
+    "dominicbarnes",
+    "clintwood",
+    "thehydroimpulse",
+    "stephenmathieson",
+    "trevorgerhardt",
+    "timaschew",
+    "jasonkuhrt"
+  ],
+  "lastCommitDate": "2014-04-28T19:44:45Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2235,
+  "diagnosedAt": "2026-02-19T18:12:11.227Z"
+}

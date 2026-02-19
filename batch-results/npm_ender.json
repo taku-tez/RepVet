@@ -1,0 +1,30 @@
+{
+  "ecosystem": "npm",
+  "package": "ender",
+  "score": 70,
+  "riskLevel": "MEDIUM",
+  "deductions": [
+    {
+      "reason": "Repository is archived (no longer maintained)",
+      "points": 15,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 3 years ago (6 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "ded",
+    "fat",
+    "rvagg",
+    "amccollum",
+    "luk"
+  ],
+  "lastCommitDate": "2020-04-02T11:42:28Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1951,
+  "diagnosedAt": "2026-02-19T18:12:13.178Z"
+}
