@@ -5,7 +5,7 @@
   "riskLevel": "LOW",
   "deductions": [
     {
-      "reason": "Last commit over 1 year ago (393 days)",
+      "reason": "Last commit over 1 year ago (394 days)",
       "points": 5,
       "confidence": "high"
     }
@@ -24,6 +24,6 @@
     "recent": 0,
     "hasUnfixed": false
   },
-  "executionTimeMs": 2305,
-  "diagnosedAt": "2026-02-19T13:57:38.042Z"
+  "executionTimeMs": 2319,
+  "diagnosedAt": "2026-02-19T16:27:35.521Z"
 }

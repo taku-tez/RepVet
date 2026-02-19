@@ -40,5 +40,17 @@
     "package": "aws-ses",
     "error": "Exit code 1: {\"error\":\"Error: Package not found: aws-ses (npm)\"}\n",
     "timestamp": "2026-02-19T15:52:25.925Z"
+  },
+  {
+    "ecosystem": "npm",
+    "package": "magic-bytes",
+    "error": "Exit code 1: {\"error\":\"Error: Package not found: magic-bytes (npm)\"}\n",
+    "timestamp": "2026-02-19T16:27:24.682Z"
+  },
+  {
+    "ecosystem": "npm",
+    "package": "playwright-pdf",
+    "error": "Exit code 1: {\"error\":\"Error: Package not found: playwright-pdf (npm)\"}\n",
+    "timestamp": "2026-02-19T16:27:45.438Z"
   }
 ]

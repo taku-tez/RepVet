@@ -1,0 +1,43 @@
+{
+  "ecosystem": "npm",
+  "package": "insane",
+  "score": 72,
+  "riskLevel": "MEDIUM",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 1 year ago (654 days)",
+      "points": 5,
+      "confidence": "high"
+    },
+    {
+      "reason": "1 high severity vulnerability(ies) in history",
+      "points": 10,
+      "confidence": "high"
+    },
+    {
+      "reason": "Has unfixed vulnerabilities",
+      "points": 8,
+      "confidence": "medium"
+    }
+  ],
+  "maintainers": [
+    "bevacqua"
+  ],
+  "lastCommitDate": "2024-05-06T10:46:15Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 1,
+    "critical": 0,
+    "high": 1,
+    "recent": 0,
+    "hasUnfixed": true
+  },
+  "executionTimeMs": 2762,
+  "diagnosedAt": "2026-02-19T16:27:12.636Z"
+}
