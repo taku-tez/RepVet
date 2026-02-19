@@ -1,0 +1,16 @@
+{
+  "ecosystem": "pypi",
+  "package": "coverage",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "Ned Batchelder",
+    "252 others"
+  ],
+  "lastCommitDate": "2026-02-14T12:13:26Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1516,
+  "diagnosedAt": "2026-02-19T23:45:49.098Z"
+}

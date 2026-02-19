@@ -1,0 +1,25 @@
+{
+  "ecosystem": "pypi",
+  "package": "unittest2",
+  "score": 89,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Author changed from \"Michael Foord\" to \"Robert Collins\"",
+      "points": 8,
+      "confidence": "low"
+    },
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "Robert Collins"
+  ],
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1181,
+  "diagnosedAt": "2026-02-19T23:45:40.996Z"
+}

@@ -1,0 +1,21 @@
+{
+  "ecosystem": "pypi",
+  "package": "isort",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "Timothy Crosley"
+  ],
+  "lastCommitDate": "2026-02-19T21:04:38Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1371,
+  "diagnosedAt": "2026-02-19T23:45:53.431Z"
+}

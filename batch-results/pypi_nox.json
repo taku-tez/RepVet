@@ -1,0 +1,21 @@
+{
+  "ecosystem": "pypi",
+  "package": "nox",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "Alethea Katherine Flowers"
+  ],
+  "lastCommitDate": "2026-02-16T15:58:45Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1588,
+  "diagnosedAt": "2026-02-19T23:45:47.582Z"
+}

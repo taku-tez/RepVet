@@ -1,5 +1,5 @@
 {
-  "currentIndex": 1900,
+  "currentIndex": 1920,
   "totalPackages": 4957,
   "results": [
     {
@@ -45576,6 +45576,500 @@
       "hasMalwareHistory": false,
       "executionTimeMs": 2278,
       "diagnosedAt": "2026-02-19T23:27:56.087Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "transformers",
+      "score": 79,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Author changed from \"Vladimir Iakovlev\" to \"The Hugging Face team (past and future) with the help of all our contributors (https://github.com/huggingface/transformers/graphs/contributors)\"",
+          "points": 8,
+          "confidence": "low"
+        },
+        {
+          "reason": "1 critical vulnerability(ies) in history",
+          "points": 8,
+          "confidence": "low"
+        },
+        {
+          "reason": "13 vulnerabilities in the past year",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "The Hugging Face team (past",
+        "future) with the help of all our contributors (https://github.com/huggingface/transformers/graphs/contributors)"
+      ],
+      "lastCommitDate": "2026-02-19T21:04:43Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 26,
+        "critical": 1,
+        "high": 10,
+        "recent": 13,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 3451,
+      "diagnosedAt": "2026-02-19T23:45:21.910Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "diffusers",
+      "score": 92,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Author changed from \"The HuggingFace team\" to \"The Hugging Face team (past and future) with the help of all our contributors (https://github.com/huggingface/diffusers/graphs/contributors)\"",
+          "points": 8,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "The Hugging Face team (past",
+        "future) with the help of all our contributors (https://github.com/huggingface/diffusers/graphs/contributors)"
+      ],
+      "lastCommitDate": "2026-02-19T15:35:40Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1715,
+      "diagnosedAt": "2026-02-19T23:45:23.625Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "accelerate",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "The HuggingFace team"
+      ],
+      "lastCommitDate": "2026-02-18T13:13:02Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1482,
+      "diagnosedAt": "2026-02-19T23:45:25.107Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "pillow",
+      "score": 81,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Author changed from \"Alex Clark (fork author)\" to \"\"Jeffrey A. Clark\"\"",
+          "points": 8,
+          "confidence": "low"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "14 critical vulnerability(ies) in history",
+          "points": 8,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "\"Jeffrey A. Clark\""
+      ],
+      "lastCommitDate": "2026-02-19T12:09:59Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 112,
+        "critical": 14,
+        "high": 36,
+        "recent": 3,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 3901,
+      "diagnosedAt": "2026-02-19T23:45:29.009Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "opencv-python",
+      "score": 92,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Author changed from \"Olli-Pekka Heinisuo\" to \"OpenCV Team\"",
+          "points": 8,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "OpenCV Team"
+      ],
+      "lastCommitDate": "2026-02-03T07:13:13Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 32,
+        "critical": 0,
+        "high": 23,
+        "recent": 0,
+        "hasUnfixed": true
+      },
+      "executionTimeMs": 3160,
+      "diagnosedAt": "2026-02-19T23:45:32.169Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "scikit-image",
+      "score": 92,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Author changed from \"Stefan van der Walt\" to \"scikit-image developers\"",
+          "points": 8,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Unknown"
+      ],
+      "lastCommitDate": "2026-02-18T17:56:41Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1401,
+      "diagnosedAt": "2026-02-19T23:45:33.570Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "imageio",
+      "score": 89,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Author changed from \"imageio contributers\" to \"Sebastian Wallkotter\"",
+          "points": 8,
+          "confidence": "low"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "ImageIO contributors"
+      ],
+      "lastCommitDate": "2025-11-04T14:29:24Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1572,
+      "diagnosedAt": "2026-02-19T23:45:35.142Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "pydicom",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Darcy Mason and contributors"
+      ],
+      "lastCommitDate": "2026-02-17T21:57:41Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1709,
+      "diagnosedAt": "2026-02-19T23:45:36.851Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "simpleitk",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Insight Software Consortium"
+      ],
+      "lastCommitDate": "2026-02-07T07:00:49Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2080,
+      "diagnosedAt": "2026-02-19T23:45:38.931Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "pytest",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "Holger Krekel",
+        "Bruno Oliveira",
+        "Ronny Pfannschmidt",
+        "Floris Bruynooghe",
+        "Brianna Laugher",
+        "Florian Bruhin",
+        "Others (See AUTHORS)"
+      ],
+      "lastCommitDate": "2026-02-18T18:17:31Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 884,
+      "diagnosedAt": "2026-02-19T23:45:39.815Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "unittest2",
+      "score": 89,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Author changed from \"Michael Foord\" to \"Robert Collins\"",
+          "points": 8,
+          "confidence": "low"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Robert Collins"
+      ],
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1181,
+      "diagnosedAt": "2026-02-19T23:45:40.996Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "nose",
+      "score": 95,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "Jason Pellerin"
+      ],
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1403,
+      "diagnosedAt": "2026-02-19T23:45:42.399Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "hypothesis",
+      "score": 89,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Author changed from \"David R. MacIver\" to \"\"David R. MacIver and Zac Hatfield-Dodds\"\"",
+          "points": 8,
+          "confidence": "low"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "\"David R. MacIver and Zac Hatfield-Dodds\""
+      ],
+      "lastCommitDate": "2026-02-16T22:59:19Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1921,
+      "diagnosedAt": "2026-02-19T23:45:44.320Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "tox",
+      "score": 89,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Author changed from \"holger krekel\" to \"Anthony Sottile\"",
+          "points": 8,
+          "confidence": "low"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Bernát Gábor"
+      ],
+      "lastCommitDate": "2026-02-19T22:02:13Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1674,
+      "diagnosedAt": "2026-02-19T23:45:45.994Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "nox",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Alethea Katherine Flowers"
+      ],
+      "lastCommitDate": "2026-02-16T15:58:45Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1588,
+      "diagnosedAt": "2026-02-19T23:45:47.582Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "coverage",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "Ned Batchelder",
+        "252 others"
+      ],
+      "lastCommitDate": "2026-02-14T12:13:26Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1516,
+      "diagnosedAt": "2026-02-19T23:45:49.098Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "codecov",
+      "score": 70,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        },
+        {
+          "reason": "Repository is archived (no longer maintained)",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "Codecov"
+      ],
+      "lastCommitDate": "2025-05-21T18:56:00Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 2,
+        "critical": 0,
+        "high": 1,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 984,
+      "diagnosedAt": "2026-02-19T23:45:50.083Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "black",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Łukasz Langa"
+      ],
+      "lastCommitDate": "2026-02-15T21:08:15Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 2,
+        "critical": 0,
+        "high": 0,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1976,
+      "diagnosedAt": "2026-02-19T23:45:52.060Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "isort",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Timothy Crosley"
+      ],
+      "lastCommitDate": "2026-02-19T21:04:38Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1371,
+      "diagnosedAt": "2026-02-19T23:45:53.431Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "autopep8",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Hideo Hattori"
+      ],
+      "lastCommitDate": "2025-11-24T13:53:51Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1992,
+      "diagnosedAt": "2026-02-19T23:45:55.423Z"
     }
   ],
   "errors": [

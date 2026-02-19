@@ -1,0 +1,39 @@
+{
+  "ecosystem": "pypi",
+  "package": "transformers",
+  "score": 79,
+  "riskLevel": "MEDIUM",
+  "deductions": [
+    {
+      "reason": "Author changed from \"Vladimir Iakovlev\" to \"The Hugging Face team (past and future) with the help of all our contributors (https://github.com/huggingface/transformers/graphs/contributors)\"",
+      "points": 8,
+      "confidence": "low"
+    },
+    {
+      "reason": "1 critical vulnerability(ies) in history",
+      "points": 8,
+      "confidence": "low"
+    },
+    {
+      "reason": "13 vulnerabilities in the past year",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "The Hugging Face team (past",
+    "future) with the help of all our contributors (https://github.com/huggingface/transformers/graphs/contributors)"
+  ],
+  "lastCommitDate": "2026-02-19T21:04:43Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 26,
+    "critical": 1,
+    "high": 10,
+    "recent": 13,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 3451,
+  "diagnosedAt": "2026-02-19T23:45:21.910Z"
+}

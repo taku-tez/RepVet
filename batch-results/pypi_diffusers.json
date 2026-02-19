@@ -1,0 +1,22 @@
+{
+  "ecosystem": "pypi",
+  "package": "diffusers",
+  "score": 92,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Author changed from \"The HuggingFace team\" to \"The Hugging Face team (past and future) with the help of all our contributors (https://github.com/huggingface/diffusers/graphs/contributors)\"",
+      "points": 8,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "The Hugging Face team (past",
+    "future) with the help of all our contributors (https://github.com/huggingface/diffusers/graphs/contributors)"
+  ],
+  "lastCommitDate": "2026-02-19T15:35:40Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1715,
+  "diagnosedAt": "2026-02-19T23:45:23.625Z"
+}

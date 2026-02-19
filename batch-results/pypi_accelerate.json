@@ -1,0 +1,15 @@
+{
+  "ecosystem": "pypi",
+  "package": "accelerate",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "The HuggingFace team"
+  ],
+  "lastCommitDate": "2026-02-18T13:13:02Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1482,
+  "diagnosedAt": "2026-02-19T23:45:25.107Z"
+}

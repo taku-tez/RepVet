@@ -1,0 +1,21 @@
+{
+  "ecosystem": "pypi",
+  "package": "pytest",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "Holger Krekel",
+    "Bruno Oliveira",
+    "Ronny Pfannschmidt",
+    "Floris Bruynooghe",
+    "Brianna Laugher",
+    "Florian Bruhin",
+    "Others (See AUTHORS)"
+  ],
+  "lastCommitDate": "2026-02-18T18:17:31Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 884,
+  "diagnosedAt": "2026-02-19T23:45:39.815Z"
+}

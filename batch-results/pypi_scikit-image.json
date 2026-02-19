@@ -1,0 +1,21 @@
+{
+  "ecosystem": "pypi",
+  "package": "scikit-image",
+  "score": 92,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Author changed from \"Stefan van der Walt\" to \"scikit-image developers\"",
+      "points": 8,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "Unknown"
+  ],
+  "lastCommitDate": "2026-02-18T17:56:41Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1401,
+  "diagnosedAt": "2026-02-19T23:45:33.570Z"
+}

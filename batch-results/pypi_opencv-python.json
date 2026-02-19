@@ -1,0 +1,28 @@
+{
+  "ecosystem": "pypi",
+  "package": "opencv-python",
+  "score": 92,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Author changed from \"Olli-Pekka Heinisuo\" to \"OpenCV Team\"",
+      "points": 8,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "OpenCV Team"
+  ],
+  "lastCommitDate": "2026-02-03T07:13:13Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 32,
+    "critical": 0,
+    "high": 23,
+    "recent": 0,
+    "hasUnfixed": true
+  },
+  "executionTimeMs": 3160,
+  "diagnosedAt": "2026-02-19T23:45:32.169Z"
+}

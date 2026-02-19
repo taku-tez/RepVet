@@ -1,0 +1,26 @@
+{
+  "ecosystem": "pypi",
+  "package": "imageio",
+  "score": 89,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Author changed from \"imageio contributers\" to \"Sebastian Wallkotter\"",
+      "points": 8,
+      "confidence": "low"
+    },
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "ImageIO contributors"
+  ],
+  "lastCommitDate": "2025-11-04T14:29:24Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1572,
+  "diagnosedAt": "2026-02-19T23:45:35.142Z"
+}

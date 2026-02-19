@@ -1,0 +1,21 @@
+{
+  "ecosystem": "pypi",
+  "package": "simpleitk",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "Insight Software Consortium"
+  ],
+  "lastCommitDate": "2026-02-07T07:00:49Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2080,
+  "diagnosedAt": "2026-02-19T23:45:38.931Z"
+}

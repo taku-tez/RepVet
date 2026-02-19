@@ -1,0 +1,21 @@
+{
+  "ecosystem": "pypi",
+  "package": "pydicom",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "Darcy Mason and contributors"
+  ],
+  "lastCommitDate": "2026-02-17T21:57:41Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1709,
+  "diagnosedAt": "2026-02-19T23:45:36.851Z"
+}

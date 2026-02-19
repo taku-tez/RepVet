@@ -1,0 +1,38 @@
+{
+  "ecosystem": "pypi",
+  "package": "pillow",
+  "score": 81,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Author changed from \"Alex Clark (fork author)\" to \"\"Jeffrey A. Clark\"\"",
+      "points": 8,
+      "confidence": "low"
+    },
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    },
+    {
+      "reason": "14 critical vulnerability(ies) in history",
+      "points": 8,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "\"Jeffrey A. Clark\""
+  ],
+  "lastCommitDate": "2026-02-19T12:09:59Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 112,
+    "critical": 14,
+    "high": 36,
+    "recent": 3,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 3901,
+  "diagnosedAt": "2026-02-19T23:45:29.009Z"
+}
