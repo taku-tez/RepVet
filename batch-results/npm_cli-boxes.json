@@ -1,28 +1,26 @@
 {
   "ecosystem": "npm",
-  "package": "chalk",
-  "score": 97,
+  "package": "cli-boxes",
+  "score": 92,
   "riskLevel": "LOW",
   "deductions": [
     {
       "reason": "Single maintainer (bus factor risk)",
       "points": 3,
       "confidence": "low"
+    },
+    {
+      "reason": "Last commit over 1 year ago (563 days)",
+      "points": 5,
+      "confidence": "high"
     }
   ],
   "maintainers": [
     "sindresorhus"
   ],
-  "lastCommitDate": "2026-01-27T06:30:36Z",
+  "lastCommitDate": "2024-08-05T04:54:36Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
-  "vulnerabilityStats": {
-    "total": 1,
-    "critical": 0,
-    "high": 0,
-    "recent": 1,
-    "hasUnfixed": false
-  },
-  "executionTimeMs": 1970,
-  "diagnosedAt": "2026-02-19T15:32:13.219Z"
+  "executionTimeMs": 2146,
+  "diagnosedAt": "2026-02-19T15:32:24.095Z"
 }

@@ -1,6 +1,6 @@
 {
   "ecosystem": "npm",
-  "package": "chalk",
+  "package": "boxen",
   "score": 97,
   "riskLevel": "LOW",
   "deductions": [
@@ -13,16 +13,9 @@
   "maintainers": [
     "sindresorhus"
   ],
-  "lastCommitDate": "2026-01-27T06:30:36Z",
+  "lastCommitDate": "2025-09-19T03:55:38Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
-  "vulnerabilityStats": {
-    "total": 1,
-    "critical": 0,
-    "high": 0,
-    "recent": 1,
-    "hasUnfixed": false
-  },
-  "executionTimeMs": 1970,
-  "diagnosedAt": "2026-02-19T15:32:13.219Z"
+  "executionTimeMs": 1674,
+  "diagnosedAt": "2026-02-19T15:32:21.948Z"
 }

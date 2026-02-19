@@ -1,0 +1,26 @@
+{
+  "ecosystem": "npm",
+  "package": "ansi-align",
+  "score": 82,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    },
+    {
+      "reason": "Last commit over 3 years ago (4 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "nexdrew"
+  ],
+  "lastCommitDate": "2021-09-27T11:53:09Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1696,
+  "diagnosedAt": "2026-02-19T15:32:38.627Z"
+}

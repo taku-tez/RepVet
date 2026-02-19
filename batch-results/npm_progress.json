@@ -1,0 +1,25 @@
+{
+  "ecosystem": "npm",
+  "package": "progress",
+  "score": 85,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Last commit over 3 years ago (3 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "thebigredgeek",
+    "tjholowaychuk",
+    "thejameskyle",
+    "prezjordan",
+    "turbopope"
+  ],
+  "lastCommitDate": "2023-02-13T23:42:44Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1753,
+  "diagnosedAt": "2026-02-19T15:32:42.063Z"
+}

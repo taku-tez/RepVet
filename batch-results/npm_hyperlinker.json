@@ -1,0 +1,26 @@
+{
+  "ecosystem": "npm",
+  "package": "hyperlinker",
+  "score": 82,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    },
+    {
+      "reason": "Last commit over 3 years ago (6 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "jamestalmage"
+  ],
+  "lastCommitDate": "2020-07-21T12:35:50Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2113,
+  "diagnosedAt": "2026-02-19T15:32:27.823Z"
+}

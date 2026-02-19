@@ -1,0 +1,26 @@
+{
+  "ecosystem": "npm",
+  "package": "progress-estimator",
+  "score": 85,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 2 years ago (3 years)",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "brianvaughn"
+  ],
+  "lastCommitDate": "2023-04-17T19:08:07Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 3052,
+  "diagnosedAt": "2026-02-19T15:32:46.932Z"
+}

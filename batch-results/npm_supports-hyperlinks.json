@@ -1,6 +1,6 @@
 {
   "ecosystem": "npm",
-  "package": "chalk",
+  "package": "supports-hyperlinks",
   "score": 97,
   "riskLevel": "LOW",
   "deductions": [
@@ -13,7 +13,7 @@
   "maintainers": [
     "sindresorhus"
   ],
-  "lastCommitDate": "2026-01-27T06:30:36Z",
+  "lastCommitDate": "2026-02-03T12:45:45Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
   "vulnerabilityStats": {
@@ -23,6 +23,6 @@
     "recent": 1,
     "hasUnfixed": false
   },
-  "executionTimeMs": 1970,
-  "diagnosedAt": "2026-02-19T15:32:13.219Z"
+  "executionTimeMs": 1860,
+  "diagnosedAt": "2026-02-19T15:32:29.683Z"
 }

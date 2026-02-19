@@ -1,0 +1,22 @@
+{
+  "ecosystem": "npm",
+  "package": "ansi-colors",
+  "score": 85,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Last commit over 3 years ago (4 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "jonschlinkert",
+    "doowb"
+  ],
+  "lastCommitDate": "2022-07-11T19:47:40Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1698,
+  "diagnosedAt": "2026-02-19T15:32:20.273Z"
+}

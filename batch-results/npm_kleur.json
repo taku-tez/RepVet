@@ -1,0 +1,26 @@
+{
+  "ecosystem": "npm",
+  "package": "kleur",
+  "score": 87,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    },
+    {
+      "reason": "Last commit over 2 years ago (3 years)",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "lukeed"
+  ],
+  "lastCommitDate": "2023-06-07T07:24:18Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1850,
+  "diagnosedAt": "2026-02-19T15:32:15.069Z"
+}

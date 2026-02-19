@@ -1,6 +1,6 @@
 {
   "ecosystem": "npm",
-  "package": "chalk",
+  "package": "colorette",
   "score": 97,
   "riskLevel": "LOW",
   "deductions": [
@@ -11,18 +11,11 @@
     }
   ],
   "maintainers": [
-    "sindresorhus"
+    "jorgebucaran"
   ],
-  "lastCommitDate": "2026-01-27T06:30:36Z",
+  "lastCommitDate": "2025-10-03T11:20:56Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
-  "vulnerabilityStats": {
-    "total": 1,
-    "critical": 0,
-    "high": 0,
-    "recent": 1,
-    "hasUnfixed": false
-  },
-  "executionTimeMs": 1970,
-  "diagnosedAt": "2026-02-19T15:32:13.219Z"
+  "executionTimeMs": 1758,
+  "diagnosedAt": "2026-02-19T15:32:16.828Z"
 }
