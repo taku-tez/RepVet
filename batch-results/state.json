@@ -1,5 +1,5 @@
 {
-  "currentIndex": 1420,
+  "currentIndex": 1440,
   "totalPackages": 4957,
   "results": [
     {
@@ -34143,6 +34143,442 @@
       "hasMalwareHistory": false,
       "executionTimeMs": 2375,
       "diagnosedAt": "2026-02-19T19:57:46.233Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "typescript",
+      "score": 89,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Complete maintainer change in 1 days (3.9.0-dev.20200221)",
+          "points": 11,
+          "confidence": "medium"
+        }
+      ],
+      "maintainers": [
+        "microsoft1es",
+        "typescript-bot",
+        "weswigham",
+        "andrewbranch",
+        "typescript-deploys",
+        "jakebailey"
+      ],
+      "lastCommitDate": "2026-02-18T23:02:45Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2202,
+      "diagnosedAt": "2026-02-19T20:02:05.224Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "tslib",
+      "score": 80,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Complete maintainer change in 7 days (1.11.1)",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 1 year ago (475 days)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "microsoft1es",
+        "typescript-bot",
+        "weswigham",
+        "andrewbranch",
+        "typescript-deploys",
+        "jakebailey"
+      ],
+      "lastCommitDate": "2024-10-31T22:40:56Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1795,
+      "diagnosedAt": "2026-02-19T20:02:07.020Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "ts-node",
+      "score": 95,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Last commit over 1 year ago (581 days)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "blakeembrey",
+        "cspotcode"
+      ],
+      "lastCommitDate": "2024-07-18T18:14:16Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2196,
+      "diagnosedAt": "2026-02-19T20:02:09.216Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "tsx",
+      "score": 86,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer replaced at 2.0.0",
+          "points": 11,
+          "confidence": "medium"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "hirokiosame"
+      ],
+      "lastCommitDate": "2026-02-13T18:07:16Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1561,
+      "diagnosedAt": "2026-02-19T20:02:10.777Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "ts-morph",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "dsherret"
+      ],
+      "lastCommitDate": "2025-10-12T14:54:13Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1652,
+      "diagnosedAt": "2026-02-19T20:02:12.429Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@types/node",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "types"
+      ],
+      "lastCommitDate": "2026-02-19T17:32:58Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2093,
+      "diagnosedAt": "2026-02-19T20:02:14.522Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@types/react",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "types"
+      ],
+      "lastCommitDate": "2026-02-19T17:32:58Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2309,
+      "diagnosedAt": "2026-02-19T20:02:16.831Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@types/react-dom",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "types"
+      ],
+      "lastCommitDate": "2026-02-19T17:32:58Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2178,
+      "diagnosedAt": "2026-02-19T20:02:19.009Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@types/express",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "types"
+      ],
+      "lastCommitDate": "2026-02-19T17:32:58Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1714,
+      "diagnosedAt": "2026-02-19T20:02:20.723Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@types/jest",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "types"
+      ],
+      "lastCommitDate": "2026-02-19T17:32:58Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2196,
+      "diagnosedAt": "2026-02-19T20:02:22.919Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@types/mocha",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "types"
+      ],
+      "lastCommitDate": "2026-02-19T17:32:58Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1714,
+      "diagnosedAt": "2026-02-19T20:02:24.633Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@types/lodash",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "types"
+      ],
+      "lastCommitDate": "2026-02-19T17:32:58Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1651,
+      "diagnosedAt": "2026-02-19T20:02:26.284Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@types/underscore",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "types"
+      ],
+      "lastCommitDate": "2026-02-19T17:32:58Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1935,
+      "diagnosedAt": "2026-02-19T20:02:28.219Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@types/backbone",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "types"
+      ],
+      "lastCommitDate": "2026-02-19T17:32:58Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1674,
+      "diagnosedAt": "2026-02-19T20:02:29.894Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@types/jquery",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "types"
+      ],
+      "lastCommitDate": "2026-02-19T17:32:58Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1710,
+      "diagnosedAt": "2026-02-19T20:02:31.605Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@types/angular",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "types"
+      ],
+      "lastCommitDate": "2026-02-19T17:32:58Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2667,
+      "diagnosedAt": "2026-02-19T20:02:34.272Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@types/vue",
+      "score": 85,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Package deprecated: This is a stub types definition for vuejs (https://github.com/vuejs/vue). vuejs provides its own typ...",
+          "points": 10,
+          "confidence": "high"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "types"
+      ],
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2122,
+      "diagnosedAt": "2026-02-19T20:02:36.394Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "zod",
+      "score": 86,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Complete maintainer change in 4 days (1.0.4)",
+          "points": 11,
+          "confidence": "medium"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "colinhacks"
+      ],
+      "lastCommitDate": "2026-02-15T14:20:41Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 1,
+        "critical": 0,
+        "high": 0,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 2378,
+      "diagnosedAt": "2026-02-19T20:02:38.773Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "zod-to-json-schema",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "stefan-terdell"
+      ],
+      "lastCommitDate": "2025-12-27T10:45:49Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2055,
+      "diagnosedAt": "2026-02-19T20:02:40.829Z"
     }
   ],
   "errors": [
@@ -34529,6 +34965,12 @@
       "package": "@biomejs/cli",
       "error": "Exit code 1: {\"error\":\"Error: Package not found: @biomejs/cli (npm)\"}\n",
       "timestamp": "2026-02-19T19:57:41.620Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "deno_lint",
+      "error": "Exit code 1: {\"error\":\"Error: Package not found: deno_lint (npm)\"}\n",
+      "timestamp": "2026-02-19T20:02:03.022Z"
     }
   ],
   "startTime": "2026-02-19T12:29:21.598Z"

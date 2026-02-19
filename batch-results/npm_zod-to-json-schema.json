@@ -1,6 +1,6 @@
 {
   "ecosystem": "npm",
-  "package": "@types/node",
+  "package": "zod-to-json-schema",
   "score": 97,
   "riskLevel": "LOW",
   "deductions": [
@@ -11,11 +11,11 @@
     }
   ],
   "maintainers": [
-    "types"
+    "stefan-terdell"
   ],
-  "lastCommitDate": "2026-02-19T17:32:58Z",
+  "lastCommitDate": "2025-12-27T10:45:49Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
-  "executionTimeMs": 2093,
-  "diagnosedAt": "2026-02-19T20:02:14.522Z"
+  "executionTimeMs": 2055,
+  "diagnosedAt": "2026-02-19T20:02:40.829Z"
 }

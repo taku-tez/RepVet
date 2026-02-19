@@ -382,5 +382,11 @@
     "package": "@biomejs/cli",
     "error": "Exit code 1: {\"error\":\"Error: Package not found: @biomejs/cli (npm)\"}\n",
     "timestamp": "2026-02-19T19:57:41.620Z"
+  },
+  {
+    "ecosystem": "npm",
+    "package": "deno_lint",
+    "error": "Exit code 1: {\"error\":\"Error: Package not found: deno_lint (npm)\"}\n",
+    "timestamp": "2026-02-19T20:02:03.022Z"
   }
 ]

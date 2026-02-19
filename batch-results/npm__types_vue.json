@@ -1,0 +1,25 @@
+{
+  "ecosystem": "npm",
+  "package": "@types/vue",
+  "score": 85,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Package deprecated: This is a stub types definition for vuejs (https://github.com/vuejs/vue). vuejs provides its own typ...",
+      "points": 10,
+      "confidence": "high"
+    },
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "types"
+  ],
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2122,
+  "diagnosedAt": "2026-02-19T20:02:36.394Z"
+}

@@ -5,7 +5,7 @@
   "riskLevel": "LOW",
   "deductions": [
     {
-      "reason": "Last commit over 1 year ago (580 days)",
+      "reason": "Last commit over 1 year ago (581 days)",
       "points": 5,
       "confidence": "high"
     }
@@ -17,6 +17,6 @@
   "lastCommitDate": "2024-07-18T18:14:16Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
-  "executionTimeMs": 1807,
-  "diagnosedAt": "2026-02-19T13:03:32.666Z"
+  "executionTimeMs": 2196,
+  "diagnosedAt": "2026-02-19T20:02:09.216Z"
 }

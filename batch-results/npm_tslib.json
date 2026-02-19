@@ -1,0 +1,31 @@
+{
+  "ecosystem": "npm",
+  "package": "tslib",
+  "score": 80,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Complete maintainer change in 7 days (1.11.1)",
+      "points": 15,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 1 year ago (475 days)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "microsoft1es",
+    "typescript-bot",
+    "weswigham",
+    "andrewbranch",
+    "typescript-deploys",
+    "jakebailey"
+  ],
+  "lastCommitDate": "2024-10-31T22:40:56Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1795,
+  "diagnosedAt": "2026-02-19T20:02:07.020Z"
+}
