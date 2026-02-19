@@ -1,0 +1,26 @@
+{
+  "ecosystem": "npm",
+  "package": "audiocontext",
+  "score": 80,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 3 years ago (12 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "gre"
+  ],
+  "lastCommitDate": "2013-10-11T15:23:32Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2072,
+  "diagnosedAt": "2026-02-19T21:27:11.346Z"
+}

@@ -1,0 +1,17 @@
+{
+  "ecosystem": "npm",
+  "package": "shaka-player",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "joeyparrish",
+    "shaka-bot",
+    "theodab"
+  ],
+  "lastCommitDate": "2026-02-19T10:45:54Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1871,
+  "diagnosedAt": "2026-02-19T21:27:30.378Z"
+}

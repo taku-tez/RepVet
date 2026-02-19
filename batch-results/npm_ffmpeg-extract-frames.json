@@ -1,0 +1,26 @@
+{
+  "ecosystem": "npm",
+  "package": "ffmpeg-extract-frames",
+  "score": 80,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 3 years ago (5 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "fisch0920"
+  ],
+  "lastCommitDate": "2020-12-11T13:36:40Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2278,
+  "diagnosedAt": "2026-02-19T21:27:41.004Z"
+}

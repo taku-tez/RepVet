@@ -1,0 +1,29 @@
+{
+  "ecosystem": "npm",
+  "package": "dash.js",
+  "score": 85,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Complete maintainer change in 12 days (4.0.0)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "hanzo-io",
+    "zeekay",
+    "artemis-prime",
+    "zooqueen",
+    "jason_stu",
+    "wbeanpro",
+    "musordmt",
+    "aputy",
+    "venuswhispers"
+  ],
+  "lastCommitDate": "2026-01-25T22:18:51Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2168,
+  "diagnosedAt": "2026-02-19T21:27:28.507Z"
+}

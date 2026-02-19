@@ -1,0 +1,25 @@
+{
+  "ecosystem": "npm",
+  "package": "mediaelement",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "johndyer",
+    "rafa8626",
+    "funkazim31",
+    "dpxgit"
+  ],
+  "lastCommitDate": "2025-11-12T10:26:32Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 1,
+    "critical": 0,
+    "high": 0,
+    "recent": 0,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 2012,
+  "diagnosedAt": "2026-02-19T21:27:34.502Z"
+}

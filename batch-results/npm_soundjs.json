@@ -1,0 +1,27 @@
+{
+  "ecosystem": "npm",
+  "package": "soundjs",
+  "score": 74,
+  "riskLevel": "MEDIUM",
+  "deductions": [
+    {
+      "reason": "Single maintainer replaced at 0.0.0",
+      "points": 11,
+      "confidence": "medium"
+    },
+    {
+      "reason": "Last commit over 3 years ago (5 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "wdamien",
+    "lannymcnie"
+  ],
+  "lastCommitDate": "2021-03-27T15:13:45Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1846,
+  "diagnosedAt": "2026-02-19T21:27:15.029Z"
+}

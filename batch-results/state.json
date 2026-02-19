@@ -1,5 +1,5 @@
 {
-  "currentIndex": 1680,
+  "currentIndex": 1700,
   "totalPackages": 4957,
   "results": [
     {
@@ -40195,6 +40195,619 @@
       "hasMalwareHistory": false,
       "executionTimeMs": 1973,
       "diagnosedAt": "2026-02-19T21:22:49.356Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "audiocontext",
+      "score": 80,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 3 years ago (12 years)",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "gre"
+      ],
+      "lastCommitDate": "2013-10-11T15:23:32Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2072,
+      "diagnosedAt": "2026-02-19T21:27:11.346Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "web-audio-engine",
+      "score": 65,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        },
+        {
+          "reason": "Repository is archived (no longer maintained)",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 3 years ago (8 years)",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "mohayonao"
+      ],
+      "lastCommitDate": "2018-01-09T22:23:42Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1837,
+      "diagnosedAt": "2026-02-19T21:27:13.183Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "soundjs",
+      "score": 74,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Single maintainer replaced at 0.0.0",
+          "points": 11,
+          "confidence": "medium"
+        },
+        {
+          "reason": "Last commit over 3 years ago (5 years)",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "wdamien",
+        "lannymcnie"
+      ],
+      "lastCommitDate": "2021-03-27T15:13:45Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1846,
+      "diagnosedAt": "2026-02-19T21:27:15.029Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "buzz",
+      "score": 84,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer replaced at 0.2.2",
+          "points": 11,
+          "confidence": "medium"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "jaysalvat"
+      ],
+      "lastCommitDate": "2026-02-18T14:00:51Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1893,
+      "diagnosedAt": "2026-02-19T21:27:16.923Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "audio5js",
+      "score": 95,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "kikpin"
+      ],
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1594,
+      "diagnosedAt": "2026-02-19T21:27:18.518Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "video.js",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "ronaldqualabs",
+        "cpillsburymux",
+        "abarstow",
+        "awaldron",
+        "brandonocasey",
+        "essk",
+        "gesinger",
+        "gkatsev",
+        "heff",
+        "hswaminathan",
+        "imbcmdth",
+        "lday",
+        "misteroneill",
+        "mmcclure",
+        "usmanonazim",
+        "videojs-user",
+        "ddashkevich",
+        "phale",
+        "mmcc"
+      ],
+      "lastCommitDate": "2026-02-11T17:40:25Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 1,
+        "critical": 0,
+        "high": 0,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 2023,
+      "diagnosedAt": "2026-02-19T21:27:20.541Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@videojs/http-streaming",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "brightcove-admin",
+        "bc-alive",
+        "lasanchezc",
+        "brightcove-user",
+        "myerramalla",
+        "mros-bsp",
+        "wswanbeck",
+        "syseng",
+        "bcmauleon",
+        "paco_oblea_bc",
+        "barroyo",
+        "bmartinez",
+        "ackbabe",
+        "omartinez",
+        "mgonzalez_bc",
+        "muthukumar.bc",
+        "bvilvanathan",
+        "agarciabcov",
+        "palvarezbc",
+        "ericramos",
+        "carlosabajo",
+        "luis.garcia.brightcove",
+        "stuartmh",
+        "mshiwal",
+        "tnwanna",
+        "sbarrettbc",
+        "bc-srimron-soutter",
+        "bgs-devops",
+        "carredondo",
+        "dsalnikov",
+        "actis92",
+        "dawnpacko",
+        "xgarcia_npm",
+        "fmahmoud-bgs",
+        "miklospocsaji_bc",
+        "imorones",
+        "melinda.darvasi",
+        "daniel_campos",
+        "adambertalanbc",
+        "gabor.kiacz.brightcove",
+        "bc-juanm",
+        "rwinger",
+        "sravan.pbr",
+        "cognatusbgs",
+        "apenigalapati",
+        "ijunaidf",
+        "lmaultsby",
+        "bcc-bfranklin",
+        "sachin-brightcove",
+        "bc-jcuevas",
+        "mpao-bsp",
+        "plun-bsp",
+        "pfbcove",
+        "mszw-bc",
+        "luantafarelsilva",
+        "ld-bsp",
+        "sapa-bsp",
+        "alik-brightcove",
+        "kreynolds",
+        "bcdjones",
+        "awahabbc",
+        "alet-bsp",
+        "dc-bsp",
+        "jasd-bsp",
+        "dstabsp",
+        "fabioluccioletti",
+        "lucr-bsp",
+        "eld-bsp",
+        "etri-bsp",
+        "rbalajee",
+        "dvidaurri",
+        "gcastanheiro-bc",
+        "ronaldqualabs",
+        "cpillsburymux",
+        "abarstow",
+        "awaldron",
+        "brandonocasey",
+        "essk",
+        "gesinger",
+        "gkatsev",
+        "heff",
+        "hswaminathan",
+        "imbcmdth",
+        "lday",
+        "misteroneill",
+        "mmcclure",
+        "usmanonazim",
+        "videojs-user",
+        "ddashkevich",
+        "phale"
+      ],
+      "lastCommitDate": "2026-02-05T10:51:04Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1856,
+      "diagnosedAt": "2026-02-19T21:27:22.397Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "videojs-contrib-hls",
+      "score": 70,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Repository is archived (no longer maintained)",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 3 years ago (7 years)",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "ronaldqualabs",
+        "cpillsburymux",
+        "abarstow",
+        "awaldron",
+        "brandonocasey",
+        "essk",
+        "gesinger",
+        "gkatsev",
+        "heff",
+        "hswaminathan",
+        "imbcmdth",
+        "lday",
+        "misteroneill",
+        "mmcclure",
+        "usmanonazim",
+        "videojs-user",
+        "ddashkevich",
+        "phale",
+        "dmlap",
+        "forbesjo",
+        "mjneil"
+      ],
+      "lastCommitDate": "2018-11-14T22:49:48Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1646,
+      "diagnosedAt": "2026-02-19T21:27:24.043Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "hls.js",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "robwalch",
+        "tjenkinson",
+        "mangui",
+        "hlsjs-ci"
+      ],
+      "lastCommitDate": "2026-02-19T19:34:32Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2296,
+      "diagnosedAt": "2026-02-19T21:27:26.339Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "dash.js",
+      "score": 85,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Complete maintainer change in 12 days (4.0.0)",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "hanzo-io",
+        "zeekay",
+        "artemis-prime",
+        "zooqueen",
+        "jason_stu",
+        "wbeanpro",
+        "musordmt",
+        "aputy",
+        "venuswhispers"
+      ],
+      "lastCommitDate": "2026-01-25T22:18:51Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2168,
+      "diagnosedAt": "2026-02-19T21:27:28.507Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "shaka-player",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "joeyparrish",
+        "shaka-bot",
+        "theodab"
+      ],
+      "lastCommitDate": "2026-02-19T10:45:54Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1871,
+      "diagnosedAt": "2026-02-19T21:27:30.378Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "plyr",
+      "score": 86,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer replaced at 3.6.3",
+          "points": 11,
+          "confidence": "medium"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "sam_potts"
+      ],
+      "lastCommitDate": "2026-01-03T16:10:02Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2112,
+      "diagnosedAt": "2026-02-19T21:27:32.490Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "mediaelement",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "johndyer",
+        "rafa8626",
+        "funkazim31",
+        "dpxgit"
+      ],
+      "lastCommitDate": "2025-11-12T10:26:32Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 1,
+        "critical": 0,
+        "high": 0,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 2012,
+      "diagnosedAt": "2026-02-19T21:27:34.502Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "fluent-ffmpeg",
+      "score": 75,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Package deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.",
+          "points": 10,
+          "confidence": "high"
+        },
+        {
+          "reason": "Repository is archived (no longer maintained)",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "bencevans",
+        "njoyard",
+        "rhodgkins",
+        "schaermu",
+        "spruce"
+      ],
+      "lastCommitDate": "2025-05-22T09:42:00Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2100,
+      "diagnosedAt": "2026-02-19T21:27:36.602Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "ffmpeg-static",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "noblesamurai",
+        "eugeneware",
+        "jacob-samurai",
+        "derhuerst"
+      ],
+      "lastCommitDate": "2025-11-14T21:33:34Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2124,
+      "diagnosedAt": "2026-02-19T21:27:38.726Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "ffmpeg-extract-frames",
+      "score": 80,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 3 years ago (5 years)",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "fisch0920"
+      ],
+      "lastCommitDate": "2020-12-11T13:36:40Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2278,
+      "diagnosedAt": "2026-02-19T21:27:41.004Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "jimp",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "oliver.moran",
+        "alisowski"
+      ],
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1239,
+      "diagnosedAt": "2026-02-19T21:27:42.243Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "sharp",
+      "score": 87,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "lovell"
+      ],
+      "lastCommitDate": "2026-02-01T21:20:26Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 2,
+        "critical": 0,
+        "high": 1,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 2180,
+      "diagnosedAt": "2026-02-19T21:27:44.423Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "canvas",
+      "score": 90,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "kangax",
+        "rauchg",
+        "linusu",
+        "tootallnate",
+        "domenic",
+        "tjholowaychuk",
+        "zbjornson",
+        "calebhearon"
+      ],
+      "lastCommitDate": "2026-02-16T22:01:17Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 2,
+        "critical": 0,
+        "high": 1,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 2243,
+      "diagnosedAt": "2026-02-19T21:27:46.667Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "skia-canvas",
+      "score": 95,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "samizdatco"
+      ],
+      "lastCommitDate": "2025-09-26T15:05:32Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2057,
+      "diagnosedAt": "2026-02-19T21:27:48.724Z"
     }
   ],
   "errors": [

@@ -1,0 +1,31 @@
+{
+  "ecosystem": "npm",
+  "package": "web-audio-engine",
+  "score": 65,
+  "riskLevel": "MEDIUM",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    },
+    {
+      "reason": "Repository is archived (no longer maintained)",
+      "points": 15,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 3 years ago (8 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "mohayonao"
+  ],
+  "lastCommitDate": "2018-01-09T22:23:42Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1837,
+  "diagnosedAt": "2026-02-19T21:27:13.183Z"
+}

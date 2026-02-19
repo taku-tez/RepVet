@@ -1,0 +1,40 @@
+{
+  "ecosystem": "npm",
+  "package": "video.js",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "ronaldqualabs",
+    "cpillsburymux",
+    "abarstow",
+    "awaldron",
+    "brandonocasey",
+    "essk",
+    "gesinger",
+    "gkatsev",
+    "heff",
+    "hswaminathan",
+    "imbcmdth",
+    "lday",
+    "misteroneill",
+    "mmcclure",
+    "usmanonazim",
+    "videojs-user",
+    "ddashkevich",
+    "phale",
+    "mmcc"
+  ],
+  "lastCommitDate": "2026-02-11T17:40:25Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 1,
+    "critical": 0,
+    "high": 0,
+    "recent": 0,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 2023,
+  "diagnosedAt": "2026-02-19T21:27:20.541Z"
+}

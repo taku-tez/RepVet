@@ -1,0 +1,18 @@
+{
+  "ecosystem": "npm",
+  "package": "hls.js",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "robwalch",
+    "tjenkinson",
+    "mangui",
+    "hlsjs-ci"
+  ],
+  "lastCommitDate": "2026-02-19T19:34:32Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2296,
+  "diagnosedAt": "2026-02-19T21:27:26.339Z"
+}
