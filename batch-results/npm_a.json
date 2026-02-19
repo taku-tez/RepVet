@@ -1,0 +1,16 @@
+{
+  "ecosystem": "npm",
+  "package": "a",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "adlanelm",
+    "lroal"
+  ],
+  "lastCommitDate": "2026-02-10T13:09:11Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2403,
+  "diagnosedAt": "2026-02-19T18:37:28.397Z"
+}

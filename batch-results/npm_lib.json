@@ -1,0 +1,22 @@
+{
+  "ecosystem": "npm",
+  "package": "lib",
+  "score": 90,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Last commit over 2 years ago (2 years)",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "keithwhor",
+    "jacoblee93"
+  ],
+  "lastCommitDate": "2023-09-20T23:10:05Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 3227,
+  "diagnosedAt": "2026-02-19T18:37:53.311Z"
+}

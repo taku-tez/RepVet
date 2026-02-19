@@ -1,0 +1,36 @@
+{
+  "ecosystem": "npm",
+  "package": "j",
+  "score": 57,
+  "riskLevel": "HIGH",
+  "deductions": [
+    {
+      "reason": "Package deprecated: The underlying libraries have been unified.  See < https://cdn.sheetjs.com/j/ >.",
+      "points": 10,
+      "confidence": "high"
+    },
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    },
+    {
+      "reason": "Repository is archived (no longer maintained)",
+      "points": 15,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 3 years ago (8 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "s5s"
+  ],
+  "lastCommitDate": "2017-12-05T07:24:11Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1865,
+  "diagnosedAt": "2026-02-19T18:37:48.608Z"
+}

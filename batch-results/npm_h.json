@@ -1,0 +1,26 @@
+{
+  "ecosystem": "npm",
+  "package": "h",
+  "score": 80,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 3 years ago (4 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "dominictarr"
+  ],
+  "lastCommitDate": "2022-05-07T14:29:52Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 3333,
+  "diagnosedAt": "2026-02-19T18:37:45.718Z"
+}

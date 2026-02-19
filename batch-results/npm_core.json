@@ -1,0 +1,19 @@
+{
+  "ecosystem": "npm",
+  "package": "core",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "dreamlab-bot",
+    "kuebk",
+    "wareczek",
+    "albert-lacki",
+    "mkwinta2",
+    "psulowicz"
+  ],
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1476,
+  "diagnosedAt": "2026-02-19T18:37:50.084Z"
+}

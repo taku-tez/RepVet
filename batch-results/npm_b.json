@@ -1,0 +1,22 @@
+{
+  "ecosystem": "npm",
+  "package": "b",
+  "score": 85,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Last commit over 3 years ago (10 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "vesln",
+    "jkroso"
+  ],
+  "lastCommitDate": "2016-06-11T10:12:09Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1884,
+  "diagnosedAt": "2026-02-19T18:37:30.281Z"
+}

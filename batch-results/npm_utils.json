@@ -1,0 +1,26 @@
+{
+  "ecosystem": "npm",
+  "package": "utils",
+  "score": 85,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 2 years ago (3 years)",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "jonschlinkert"
+  ],
+  "lastCommitDate": "2023-04-16T18:15:29Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2474,
+  "diagnosedAt": "2026-02-19T18:37:55.785Z"
+}

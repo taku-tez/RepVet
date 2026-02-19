@@ -1,0 +1,14 @@
+{
+  "ecosystem": "npm",
+  "package": "g",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "sleeplessinc"
+  ],
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2494,
+  "diagnosedAt": "2026-02-19T18:37:42.384Z"
+}

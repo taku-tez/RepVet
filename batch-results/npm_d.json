@@ -1,0 +1,26 @@
+{
+  "ecosystem": "npm",
+  "package": "d",
+  "score": 92,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    },
+    {
+      "reason": "Last commit over 1 year ago (720 days)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "medikoo"
+  ],
+  "lastCommitDate": "2024-03-01T13:07:48Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2123,
+  "diagnosedAt": "2026-02-19T18:37:34.297Z"
+}
