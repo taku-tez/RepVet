@@ -1,0 +1,23 @@
+{
+  "ecosystem": "npm",
+  "package": "gits",
+  "score": 85,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Last commit over 3 years ago (14 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "eladb",
+    "yosefd",
+    "gilado"
+  ],
+  "lastCommitDate": "2012-02-29T19:02:17Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2989,
+  "diagnosedAt": "2026-02-19T15:37:51.536Z"
+}

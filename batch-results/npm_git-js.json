@@ -1,0 +1,26 @@
+{
+  "ecosystem": "npm",
+  "package": "git-js",
+  "score": 80,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 3 years ago (9 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "restlessdesign"
+  ],
+  "lastCommitDate": "2016-08-26T15:56:10Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2458,
+  "diagnosedAt": "2026-02-19T15:37:53.995Z"
+}

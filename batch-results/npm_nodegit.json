@@ -1,0 +1,21 @@
+{
+  "ecosystem": "npm",
+  "package": "nodegit",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "tbranyen",
+    "johnhaley81",
+    "maxkorp",
+    "faceleg",
+    "implausibility",
+    "ianhattendorf",
+    "zawata"
+  ],
+  "lastCommitDate": "2025-12-02T15:52:12Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2020,
+  "diagnosedAt": "2026-02-19T15:37:46.158Z"
+}

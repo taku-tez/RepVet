@@ -1,0 +1,39 @@
+{
+  "ecosystem": "npm",
+  "package": "git-utils",
+  "score": 70,
+  "riskLevel": "MEDIUM",
+  "deductions": [
+    {
+      "reason": "Repository is archived (no longer maintained)",
+      "points": 15,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 3 years ago (3 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "izuzak",
+    "probablycorey",
+    "benogle",
+    "nathansobo",
+    "kevinsawicki",
+    "maxbrunsfeld",
+    "zcbenz",
+    "lee-dohm",
+    "rafeca",
+    "as-cii",
+    "joshaber",
+    "daviwil",
+    "wliu",
+    "atom-team"
+  ],
+  "lastCommitDate": "2022-10-12T01:37:28Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2388,
+  "diagnosedAt": "2026-02-19T15:37:48.546Z"
+}

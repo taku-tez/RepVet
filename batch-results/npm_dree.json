@@ -1,0 +1,31 @@
+{
+  "ecosystem": "npm",
+  "package": "dree",
+  "score": 81,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer replaced at 4.6.1",
+      "points": 11,
+      "confidence": "medium"
+    },
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    },
+    {
+      "reason": "Last commit over 1 year ago (369 days)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "eubereveloper"
+  ],
+  "lastCommitDate": "2025-02-14T20:10:55Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2090,
+  "diagnosedAt": "2026-02-19T15:37:35.757Z"
+}

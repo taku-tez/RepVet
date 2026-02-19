@@ -1,0 +1,16 @@
+{
+  "ecosystem": "npm",
+  "package": "tree-node-cli",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "yangshun",
+    "slorber"
+  ],
+  "lastCommitDate": "2025-07-30T23:57:35Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1687,
+  "diagnosedAt": "2026-02-19T15:37:30.524Z"
+}

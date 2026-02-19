@@ -1,0 +1,21 @@
+{
+  "ecosystem": "npm",
+  "package": "directory-tree",
+  "score": 95,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "mihneadb"
+  ],
+  "lastCommitDate": "2026-01-24T11:09:48Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1908,
+  "diagnosedAt": "2026-02-19T15:37:37.665Z"
+}

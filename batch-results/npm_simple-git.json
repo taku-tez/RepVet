@@ -1,0 +1,34 @@
+{
+  "ecosystem": "npm",
+  "package": "simple-git",
+  "score": 75,
+  "riskLevel": "MEDIUM",
+  "deductions": [
+    {
+      "reason": "1 critical vulnerability(ies) in history",
+      "points": 15,
+      "confidence": "high"
+    },
+    {
+      "reason": "3 high severity vulnerability(ies) in history",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "steveukx",
+    "simple-git"
+  ],
+  "lastCommitDate": "2026-02-14T13:55:25Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 4,
+    "critical": 1,
+    "high": 3,
+    "recent": 0,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 2449,
+  "diagnosedAt": "2026-02-19T15:37:44.136Z"
+}

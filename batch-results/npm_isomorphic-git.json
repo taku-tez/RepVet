@@ -1,0 +1,24 @@
+{
+  "ecosystem": "npm",
+  "package": "isomorphic-git",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "wmhilton",
+    "mojavelinux",
+    "jcubic"
+  ],
+  "lastCommitDate": "2026-02-12T21:59:10Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 1,
+    "critical": 0,
+    "high": 0,
+    "recent": 0,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 2279,
+  "diagnosedAt": "2026-02-19T15:37:41.687Z"
+}

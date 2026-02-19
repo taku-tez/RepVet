@@ -1,0 +1,24 @@
+{
+  "ecosystem": "npm",
+  "package": "cli-table",
+  "score": 95,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Last commit over 1 year ago (556 days)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "rauchg",
+    "mjangda",
+    "a8c",
+    "saroshaga"
+  ],
+  "lastCommitDate": "2024-08-12T09:29:09Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1763,
+  "diagnosedAt": "2026-02-19T15:37:23.023Z"
+}

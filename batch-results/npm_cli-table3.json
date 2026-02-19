@@ -1,0 +1,22 @@
+{
+  "ecosystem": "npm",
+  "package": "cli-table3",
+  "score": 95,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Last commit over 1 year ago (455 days)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "turbo87",
+    "speedytwenty"
+  ],
+  "lastCommitDate": "2024-11-21T06:44:43Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1767,
+  "diagnosedAt": "2026-02-19T15:37:21.260Z"
+}

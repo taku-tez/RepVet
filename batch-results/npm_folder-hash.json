@@ -1,0 +1,21 @@
+{
+  "ecosystem": "npm",
+  "package": "folder-hash",
+  "score": 95,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "marcw136"
+  ],
+  "lastCommitDate": "2026-02-09T06:34:36Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1743,
+  "diagnosedAt": "2026-02-19T15:37:39.408Z"
+}

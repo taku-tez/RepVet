@@ -1,0 +1,21 @@
+{
+  "ecosystem": "npm",
+  "package": "tty-table",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "tecfu"
+  ],
+  "lastCommitDate": "2025-11-02T03:41:45Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1758,
+  "diagnosedAt": "2026-02-19T15:37:24.782Z"
+}
