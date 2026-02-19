@@ -1,0 +1,21 @@
+{
+  "ecosystem": "npm",
+  "package": "zipkin-javascript-opentracing",
+  "score": 95,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "dschmidt"
+  ],
+  "lastCommitDate": "2026-02-17T22:42:30Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2363,
+  "diagnosedAt": "2026-02-19T21:42:22.324Z"
+}

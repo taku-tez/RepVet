@@ -436,5 +436,11 @@
     "package": "node-red-contrib",
     "error": "Exit code 1: {\"error\":\"Error: Package not found: node-red-contrib (npm)\"}\n",
     "timestamp": "2026-02-19T21:12:38.633Z"
+  },
+  {
+    "ecosystem": "npm",
+    "package": "node:test",
+    "error": "Exit code 1: {\"error\":\"Error: Package not found: node:test (npm)\"}\n",
+    "timestamp": "2026-02-19T21:42:41.390Z"
   }
 ]

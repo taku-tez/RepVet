@@ -1,0 +1,16 @@
+{
+  "ecosystem": "npm",
+  "package": "@opentelemetry/auto-instrumentations-node",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "dyladan",
+    "pichlermarc"
+  ],
+  "lastCommitDate": "2026-02-19T20:43:43Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2032,
+  "diagnosedAt": "2026-02-19T21:42:15.818Z"
+}

@@ -1,0 +1,17 @@
+{
+  "ecosystem": "npm",
+  "package": "prom-client",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "siimon",
+    "simenb",
+    "zbjornson"
+  ],
+  "lastCommitDate": "2025-12-21T23:21:03Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2167,
+  "diagnosedAt": "2026-02-19T21:42:24.491Z"
+}
