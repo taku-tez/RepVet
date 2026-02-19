@@ -1,0 +1,23 @@
+{
+  "ecosystem": "npm",
+  "package": "miragejs",
+  "score": 89,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Complete maintainer change in 0 days (0.0.1)",
+      "points": 11,
+      "confidence": "medium"
+    }
+  ],
+  "maintainers": [
+    "ryanto",
+    "samselikoff",
+    "ianvs"
+  ],
+  "lastCommitDate": "2025-08-11T14:21:25Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2424,
+  "diagnosedAt": "2026-02-19T22:12:22.312Z"
+}

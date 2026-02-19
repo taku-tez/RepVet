@@ -1,0 +1,21 @@
+{
+  "ecosystem": "npm",
+  "package": "msw",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "kettanaito"
+  ],
+  "lastCommitDate": "2026-02-16T18:15:32Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1688,
+  "diagnosedAt": "2026-02-19T22:12:18.003Z"
+}

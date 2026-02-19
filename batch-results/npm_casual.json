@@ -1,0 +1,26 @@
+{
+  "ecosystem": "npm",
+  "package": "casual",
+  "score": 85,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 2 years ago (3 years)",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "boo1ean"
+  ],
+  "lastCommitDate": "2023-06-25T20:46:30Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1895,
+  "diagnosedAt": "2026-02-19T22:12:33.223Z"
+}

@@ -1,0 +1,17 @@
+{
+  "ecosystem": "npm",
+  "package": "msw-storybook-addon",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "itaditya",
+    "kettanaito",
+    "yannbf"
+  ],
+  "lastCommitDate": "2025-10-10T15:01:53Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1885,
+  "diagnosedAt": "2026-02-19T22:12:19.888Z"
+}

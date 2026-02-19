@@ -1,0 +1,25 @@
+{
+  "ecosystem": "npm",
+  "package": "testdouble",
+  "score": 95,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Last commit over 1 year ago (700 days)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "dustin.tinney",
+    "mike.testdouble",
+    "searls",
+    "giltayar",
+    "jasonkarns"
+  ],
+  "lastCommitDate": "2024-03-21T19:42:55Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2316,
+  "diagnosedAt": "2026-02-19T22:12:10.428Z"
+}

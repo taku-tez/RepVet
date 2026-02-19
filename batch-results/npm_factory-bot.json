@@ -1,0 +1,26 @@
+{
+  "ecosystem": "npm",
+  "package": "factory-bot",
+  "score": 80,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 3 years ago (4 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "ratson"
+  ],
+  "lastCommitDate": "2021-09-28T16:50:29Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2441,
+  "diagnosedAt": "2026-02-19T22:12:35.664Z"
+}

@@ -1,5 +1,5 @@
 {
-  "currentIndex": 1780,
+  "currentIndex": 1800,
   "totalPackages": 4957,
   "results": [
     {
@@ -42772,6 +42772,466 @@
       "hasMalwareHistory": false,
       "executionTimeMs": 1472,
       "diagnosedAt": "2026-02-19T21:57:43.539Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "sinon",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "fatso83",
+        "cjohansen",
+        "mantoni",
+        "mrgnrdrck"
+      ],
+      "lastCommitDate": "2026-02-12T16:19:11Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1881,
+      "diagnosedAt": "2026-02-19T22:12:08.111Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "testdouble",
+      "score": 95,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Last commit over 1 year ago (700 days)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "dustin.tinney",
+        "mike.testdouble",
+        "searls",
+        "giltayar",
+        "jasonkarns"
+      ],
+      "lastCommitDate": "2024-03-21T19:42:55Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2316,
+      "diagnosedAt": "2026-02-19T22:12:10.428Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "proxyquire",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "bendrucker",
+        "thlorenz"
+      ],
+      "lastCommitDate": "2025-08-13T00:46:53Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2061,
+      "diagnosedAt": "2026-02-19T22:12:12.489Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "mockery",
+      "score": 47,
+      "riskLevel": "HIGH",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        },
+        {
+          "reason": "Repository is archived (no longer maintained)",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 2 years ago (3 years)",
+          "points": 10,
+          "confidence": "high"
+        },
+        {
+          "reason": "1 critical vulnerability(ies) in history",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "Has unfixed vulnerabilities",
+          "points": 8,
+          "confidence": "medium"
+        }
+      ],
+      "maintainers": [
+        "npm"
+      ],
+      "lastCommitDate": "2023-08-16T20:23:55Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 1,
+        "critical": 1,
+        "high": 0,
+        "recent": 0,
+        "hasUnfixed": true
+      },
+      "executionTimeMs": 2201,
+      "diagnosedAt": "2026-02-19T22:12:14.691Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "rewire",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "jhnns",
+        "peeri"
+      ],
+      "lastCommitDate": "2025-12-11T21:43:31Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1623,
+      "diagnosedAt": "2026-02-19T22:12:16.315Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "msw",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "kettanaito"
+      ],
+      "lastCommitDate": "2026-02-16T18:15:32Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1688,
+      "diagnosedAt": "2026-02-19T22:12:18.003Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "msw-storybook-addon",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "itaditya",
+        "kettanaito",
+        "yannbf"
+      ],
+      "lastCommitDate": "2025-10-10T15:01:53Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1885,
+      "diagnosedAt": "2026-02-19T22:12:19.888Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "miragejs",
+      "score": 89,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Complete maintainer change in 0 days (0.0.1)",
+          "points": 11,
+          "confidence": "medium"
+        }
+      ],
+      "maintainers": [
+        "ryanto",
+        "samselikoff",
+        "ianvs"
+      ],
+      "lastCommitDate": "2025-08-11T14:21:25Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2424,
+      "diagnosedAt": "2026-02-19T22:12:22.312Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "json-server",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "typicode"
+      ],
+      "lastCommitDate": "2026-02-19T12:37:45Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1623,
+      "diagnosedAt": "2026-02-19T22:12:23.935Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "faker",
+      "score": 37,
+      "riskLevel": "CRITICAL",
+      "deductions": [
+        {
+          "reason": "Past malware incident: Intentional sabotage by maintainer (2022)",
+          "points": 50,
+          "confidence": "high"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "marak"
+      ],
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": true,
+      "vulnerabilityStats": {
+        "total": 1,
+        "critical": 0,
+        "high": 1,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1606,
+      "diagnosedAt": "2026-02-19T22:12:25.541Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@faker-js/faker",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "shinigami92",
+        "division-by-zero",
+        "faker-bot"
+      ],
+      "lastCommitDate": "2026-02-17T21:14:07Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2115,
+      "diagnosedAt": "2026-02-19T22:12:27.656Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "chance",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "victorquinn"
+      ],
+      "lastCommitDate": "2025-05-18T21:03:04Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1647,
+      "diagnosedAt": "2026-02-19T22:12:29.304Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "randexp",
+      "score": 86,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer replaced at 0.3.2",
+          "points": 11,
+          "confidence": "medium"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "fent"
+      ],
+      "lastCommitDate": "2025-11-23T05:49:16Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2024,
+      "diagnosedAt": "2026-02-19T22:12:31.328Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "casual",
+      "score": 85,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 2 years ago (3 years)",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "boo1ean"
+      ],
+      "lastCommitDate": "2023-06-25T20:46:30Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1895,
+      "diagnosedAt": "2026-02-19T22:12:33.223Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "factory-bot",
+      "score": 80,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 3 years ago (4 years)",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "ratson"
+      ],
+      "lastCommitDate": "2021-09-28T16:50:29Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2441,
+      "diagnosedAt": "2026-02-19T22:12:35.664Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "rosie",
+      "score": 95,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Last commit over 1 year ago (696 days)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "bkeepers",
+        "eventualbuddha"
+      ],
+      "lastCommitDate": "2024-03-25T21:12:54Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1658,
+      "diagnosedAt": "2026-02-19T22:12:37.322Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "fishery",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "ralphbot",
+        "daveiverson-thoughtbot"
+      ],
+      "lastCommitDate": "2025-12-08T21:17:16Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1850,
+      "diagnosedAt": "2026-02-19T22:12:39.172Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@faker-js/faker",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "shinigami92",
+        "division-by-zero",
+        "faker-bot"
+      ],
+      "lastCommitDate": "2026-02-17T21:14:07Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 954,
+      "diagnosedAt": "2026-02-19T22:12:40.126Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "cypress",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "cypress-npm-publisher",
+        "brian-mann"
+      ],
+      "lastCommitDate": "2026-02-19T21:49:08Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2316,
+      "diagnosedAt": "2026-02-19T22:12:42.442Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "playwright",
+      "score": 90,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "pavelfeldman",
+        "yurys",
+        "dgozman-ms",
+        "playwright-bot"
+      ],
+      "lastCommitDate": "2026-02-19T19:57:38Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 1,
+        "critical": 0,
+        "high": 1,
+        "recent": 1,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 2502,
+      "diagnosedAt": "2026-02-19T22:12:44.944Z"
     }
   ],
   "errors": [

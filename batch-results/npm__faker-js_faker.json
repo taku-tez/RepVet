@@ -1,0 +1,17 @@
+{
+  "ecosystem": "npm",
+  "package": "@faker-js/faker",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "shinigami92",
+    "division-by-zero",
+    "faker-bot"
+  ],
+  "lastCommitDate": "2026-02-17T21:14:07Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 954,
+  "diagnosedAt": "2026-02-19T22:12:40.126Z"
+}

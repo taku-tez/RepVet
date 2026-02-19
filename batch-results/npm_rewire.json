@@ -1,0 +1,16 @@
+{
+  "ecosystem": "npm",
+  "package": "rewire",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "jhnns",
+    "peeri"
+  ],
+  "lastCommitDate": "2025-12-11T21:43:31Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1623,
+  "diagnosedAt": "2026-02-19T22:12:16.315Z"
+}

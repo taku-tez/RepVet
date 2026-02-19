@@ -1,0 +1,22 @@
+{
+  "ecosystem": "npm",
+  "package": "rosie",
+  "score": 95,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Last commit over 1 year ago (696 days)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "bkeepers",
+    "eventualbuddha"
+  ],
+  "lastCommitDate": "2024-03-25T21:12:54Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1658,
+  "diagnosedAt": "2026-02-19T22:12:37.322Z"
+}
