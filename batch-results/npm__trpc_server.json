@@ -1,0 +1,30 @@
+{
+  "ecosystem": "npm",
+  "package": "@trpc/server",
+  "score": 90,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "2 high severity vulnerability(ies) in history",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "sachinraja",
+    "katt",
+    "juliusmarminge"
+  ],
+  "lastCommitDate": "2026-02-18T23:12:42Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 2,
+    "critical": 0,
+    "high": 2,
+    "recent": 2,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 3108,
+  "diagnosedAt": "2026-02-19T19:07:35.884Z"
+}

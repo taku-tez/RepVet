@@ -1,0 +1,21 @@
+{
+  "ecosystem": "npm",
+  "package": "@mantine/hooks",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "rtivital"
+  ],
+  "lastCommitDate": "2026-02-19T16:30:58Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2772,
+  "diagnosedAt": "2026-02-19T19:07:18.193Z"
+}

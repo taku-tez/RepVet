@@ -1,0 +1,17 @@
+{
+  "ecosystem": "npm",
+  "package": "@trpc/client",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "sachinraja",
+    "katt",
+    "juliusmarminge"
+  ],
+  "lastCommitDate": "2026-02-18T23:12:42Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2786,
+  "diagnosedAt": "2026-02-19T19:07:32.776Z"
+}

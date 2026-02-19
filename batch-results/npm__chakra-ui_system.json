@@ -1,0 +1,16 @@
+{
+  "ecosystem": "npm",
+  "package": "@chakra-ui/system",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "segunadebayo",
+    "schroetier"
+  ],
+  "lastCommitDate": "2026-02-19T18:42:39Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2047,
+  "diagnosedAt": "2026-02-19T19:07:11.156Z"
+}

@@ -1,5 +1,5 @@
 {
-  "currentIndex": 1240,
+  "currentIndex": 1260,
   "totalPackages": 4957,
   "results": [
     {
@@ -30026,6 +30026,425 @@
       "hasMalwareHistory": false,
       "executionTimeMs": 1727,
       "diagnosedAt": "2026-02-19T19:02:45.653Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@mui/lab",
+      "score": 89,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Complete maintainer change in 3 days (6.0.0-alpha.13)",
+          "points": 11,
+          "confidence": "medium"
+        }
+      ],
+      "maintainers": [
+        "diegoandai",
+        "brijeshb42",
+        "michaldudak",
+        "mnajdova",
+        "siriwatknp",
+        "mj12albert",
+        "aarongarciah",
+        "atomiks",
+        "oliviertassinari",
+        "silviuaavram",
+        "janpotoms"
+      ],
+      "lastCommitDate": "2026-02-19T16:08:20Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1856,
+      "diagnosedAt": "2026-02-19T19:07:07.233Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@chakra-ui/react",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "segunadebayo",
+        "schroetier"
+      ],
+      "lastCommitDate": "2026-02-19T18:42:39Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1876,
+      "diagnosedAt": "2026-02-19T19:07:09.109Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@chakra-ui/system",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "segunadebayo",
+        "schroetier"
+      ],
+      "lastCommitDate": "2026-02-19T18:42:39Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2047,
+      "diagnosedAt": "2026-02-19T19:07:11.156Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@chakra-ui/icons",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "segunadebayo",
+        "schroetier"
+      ],
+      "lastCommitDate": "2026-02-19T18:42:39Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2487,
+      "diagnosedAt": "2026-02-19T19:07:13.644Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@mantine/core",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "rtivital"
+      ],
+      "lastCommitDate": "2026-02-19T16:30:58Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1777,
+      "diagnosedAt": "2026-02-19T19:07:15.421Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@mantine/hooks",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "rtivital"
+      ],
+      "lastCommitDate": "2026-02-19T16:30:58Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2772,
+      "diagnosedAt": "2026-02-19T19:07:18.193Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@mantine/form",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "rtivital"
+      ],
+      "lastCommitDate": "2026-02-19T16:30:58Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2801,
+      "diagnosedAt": "2026-02-19T19:07:20.994Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@mantine/dates",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "rtivital"
+      ],
+      "lastCommitDate": "2026-02-19T16:30:58Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2369,
+      "diagnosedAt": "2026-02-19T19:07:23.363Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@tanstack/react-query",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "tannerlinsley",
+        "kevinvandy",
+        "tkdodo",
+        "schiller-manuel",
+        "lachlancollins",
+        "kylemathews"
+      ],
+      "lastCommitDate": "2026-02-18T15:08:20Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2201,
+      "diagnosedAt": "2026-02-19T19:07:25.564Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@tanstack/query-core",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "tannerlinsley",
+        "kevinvandy",
+        "tkdodo",
+        "schiller-manuel",
+        "lachlancollins",
+        "kylemathews"
+      ],
+      "lastCommitDate": "2026-02-18T15:08:20Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2097,
+      "diagnosedAt": "2026-02-19T19:07:27.661Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@tanstack/vue-query",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "tannerlinsley",
+        "kevinvandy",
+        "tkdodo",
+        "schiller-manuel",
+        "lachlancollins",
+        "kylemathews"
+      ],
+      "lastCommitDate": "2026-02-18T15:08:20Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2328,
+      "diagnosedAt": "2026-02-19T19:07:29.989Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@trpc/client",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "sachinraja",
+        "katt",
+        "juliusmarminge"
+      ],
+      "lastCommitDate": "2026-02-18T23:12:42Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2786,
+      "diagnosedAt": "2026-02-19T19:07:32.776Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@trpc/server",
+      "score": 90,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "2 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "sachinraja",
+        "katt",
+        "juliusmarminge"
+      ],
+      "lastCommitDate": "2026-02-18T23:12:42Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 2,
+        "critical": 0,
+        "high": 2,
+        "recent": 2,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 3108,
+      "diagnosedAt": "2026-02-19T19:07:35.884Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@trpc/react-query",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "sachinraja",
+        "katt",
+        "juliusmarminge"
+      ],
+      "lastCommitDate": "2026-02-18T23:12:42Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2741,
+      "diagnosedAt": "2026-02-19T19:07:38.625Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@prisma/client",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "prismabot",
+        "aqrln"
+      ],
+      "lastCommitDate": "2026-02-19T17:56:11Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 3847,
+      "diagnosedAt": "2026-02-19T19:07:42.472Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@prisma/generator-helper",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "prismabot",
+        "aqrln"
+      ],
+      "lastCommitDate": "2026-02-19T17:56:11Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 3333,
+      "diagnosedAt": "2026-02-19T19:07:45.805Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@prisma/migrate",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "prismabot",
+        "aqrln"
+      ],
+      "lastCommitDate": "2026-02-19T17:56:11Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 3326,
+      "diagnosedAt": "2026-02-19T19:07:49.132Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@supabase/supabase-js",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "etienne_supa",
+        "kiwicopple",
+        "ange1ico",
+        "awalias",
+        "gregnr",
+        "phamhieu1998",
+        "inian",
+        "stdim",
+        "ziinc_supabase",
+        "mandarini",
+        "chase.cresgy",
+        "ceeteelam",
+        "kevin-supabase",
+        "mattrossman"
+      ],
+      "lastCommitDate": "2026-02-19T16:14:26Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1872,
+      "diagnosedAt": "2026-02-19T19:07:51.004Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@supabase/gotrue-js",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "etienne_supa",
+        "kiwicopple",
+        "ange1ico",
+        "awalias",
+        "gregnr",
+        "phamhieu1998",
+        "inian",
+        "stdim",
+        "ziinc_supabase",
+        "mandarini",
+        "chase.cresgy",
+        "ceeteelam",
+        "kevin-supabase",
+        "mattrossman"
+      ],
+      "lastCommitDate": "2026-02-19T16:14:26Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 6322,
+      "diagnosedAt": "2026-02-19T19:07:57.326Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@supabase/realtime-js",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "etienne_supa",
+        "kiwicopple",
+        "ange1ico",
+        "awalias",
+        "gregnr",
+        "phamhieu1998",
+        "inian",
+        "stdim",
+        "ziinc_supabase",
+        "mandarini",
+        "chase.cresgy",
+        "ceeteelam",
+        "kevin-supabase",
+        "mattrossman"
+      ],
+      "lastCommitDate": "2026-02-19T16:14:26Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1825,
+      "diagnosedAt": "2026-02-19T19:07:59.152Z"
     }
   ],
   "errors": [

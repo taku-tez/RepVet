@@ -1,0 +1,20 @@
+{
+  "ecosystem": "npm",
+  "package": "@tanstack/query-core",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "tannerlinsley",
+    "kevinvandy",
+    "tkdodo",
+    "schiller-manuel",
+    "lachlancollins",
+    "kylemathews"
+  ],
+  "lastCommitDate": "2026-02-18T15:08:20Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2097,
+  "diagnosedAt": "2026-02-19T19:07:27.661Z"
+}

@@ -1,0 +1,28 @@
+{
+  "ecosystem": "npm",
+  "package": "@supabase/realtime-js",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "etienne_supa",
+    "kiwicopple",
+    "ange1ico",
+    "awalias",
+    "gregnr",
+    "phamhieu1998",
+    "inian",
+    "stdim",
+    "ziinc_supabase",
+    "mandarini",
+    "chase.cresgy",
+    "ceeteelam",
+    "kevin-supabase",
+    "mattrossman"
+  ],
+  "lastCommitDate": "2026-02-19T16:14:26Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1825,
+  "diagnosedAt": "2026-02-19T19:07:59.152Z"
+}
