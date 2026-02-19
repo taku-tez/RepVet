@@ -1,5 +1,5 @@
 {
-  "currentIndex": 940,
+  "currentIndex": 960,
   "totalPackages": 4957,
   "results": [
     {
@@ -23433,6 +23433,569 @@
       "hasMalwareHistory": false,
       "executionTimeMs": 2631,
       "diagnosedAt": "2026-02-19T17:22:41.444Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "ember-cli",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "real_ate",
+        "katiegengler"
+      ],
+      "lastCommitDate": "2026-02-17T21:54:11Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1861,
+      "diagnosedAt": "2026-02-19T17:27:04.471Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "jquery",
+      "score": 90,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "gibson042",
+        "dmethvin",
+        "timmywil",
+        "mgol",
+        "openjsfoundation"
+      ],
+      "lastCommitDate": "2026-02-14T22:05:11Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 8,
+        "critical": 0,
+        "high": 1,
+        "recent": 0,
+        "hasUnfixed": true
+      },
+      "executionTimeMs": 2270,
+      "diagnosedAt": "2026-02-19T17:27:06.741Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "jquery-ui",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "scott.gonzalez",
+        "jzaefferer",
+        "timmywil",
+        "mgol",
+        "openjsfoundation"
+      ],
+      "lastCommitDate": "2026-02-09T18:03:15Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 7,
+        "critical": 0,
+        "high": 0,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 2243,
+      "diagnosedAt": "2026-02-19T17:27:08.985Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "jquery-mobile",
+      "score": 52,
+      "riskLevel": "HIGH",
+      "deductions": [
+        {
+          "reason": "Repository is archived (no longer maintained)",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 3 years ago (4 years)",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        },
+        {
+          "reason": "Has unfixed vulnerabilities",
+          "points": 8,
+          "confidence": "medium"
+        }
+      ],
+      "maintainers": [
+        "gbraad-admin",
+        "apsdehal",
+        "arschmitz"
+      ],
+      "lastCommitDate": "2021-10-07T17:23:39Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 1,
+        "critical": 0,
+        "high": 1,
+        "recent": 0,
+        "hasUnfixed": true
+      },
+      "executionTimeMs": 2479,
+      "diagnosedAt": "2026-02-19T17:27:11.464Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "underscore",
+      "score": 85,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "1 critical vulnerability(ies) in history",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "jashkenas",
+        "jgonggrijp"
+      ],
+      "lastCommitDate": "2026-02-19T11:43:23Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 1,
+        "critical": 1,
+        "high": 0,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1158,
+      "diagnosedAt": "2026-02-19T17:27:12.622Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "lodash-fp",
+      "score": 60,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Package deprecated: This package is discontinued. See https://github.com/lodash/lodash/wiki/FP-Guide.",
+          "points": 10,
+          "confidence": "high"
+        },
+        {
+          "reason": "Repository is archived (no longer maintained)",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 3 years ago (10 years)",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "jdalton",
+        "mathias"
+      ],
+      "lastCommitDate": "2016-03-06T01:30:38Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2299,
+      "diagnosedAt": "2026-02-19T17:27:14.921Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "moment",
+      "score": 85,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Last commit over 1 year ago (554 days)",
+          "points": 5,
+          "confidence": "high"
+        },
+        {
+          "reason": "3 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "ichernev",
+        "timrwood",
+        "mj1856",
+        "maggiepint",
+        "marwahaha"
+      ],
+      "lastCommitDate": "2024-08-14T17:12:19Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 4,
+        "critical": 0,
+        "high": 3,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1161,
+      "diagnosedAt": "2026-02-19T17:27:16.083Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "moment-timezone",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "ichernev",
+        "gilmoreorless",
+        "timrwood",
+        "mj1856",
+        "maggiepint",
+        "marwahaha",
+        "ellenaua"
+      ],
+      "lastCommitDate": "2026-02-14T04:53:47Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 2,
+        "critical": 0,
+        "high": 0,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1179,
+      "diagnosedAt": "2026-02-19T17:27:17.263Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "datejs",
+      "score": 80,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 3 years ago (3 years)",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "abritinthebay"
+      ],
+      "lastCommitDate": "2023-01-09T05:21:50Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2265,
+      "diagnosedAt": "2026-02-19T17:27:19.528Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "date-fns-old",
+      "score": 95,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "dmtr.kovalenko"
+      ],
+      "lastCommitDate": "2025-03-07T15:30:49Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1950,
+      "diagnosedAt": "2026-02-19T17:27:21.478Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "sugar-date",
+      "score": 79,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Single maintainer replaced at 2.0.0",
+          "points": 11,
+          "confidence": "medium"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 1 year ago (616 days)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "l_andrew_l"
+      ],
+      "lastCommitDate": "2024-06-13T16:23:08Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1997,
+      "diagnosedAt": "2026-02-19T17:27:23.476Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "grunt",
+      "score": 90,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "2 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "cowboy",
+        "tkellen",
+        "vladikoff",
+        "shama"
+      ],
+      "lastCommitDate": "2025-11-05T16:22:58Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 3,
+        "critical": 0,
+        "high": 2,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1112,
+      "diagnosedAt": "2026-02-19T17:27:24.588Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "grunt-cli",
+      "score": 84,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Complete maintainer change in 2 days (0.1.13)",
+          "points": 11,
+          "confidence": "medium"
+        },
+        {
+          "reason": "Last commit over 1 year ago (578 days)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "cowboy",
+        "tkellen",
+        "vladikoff",
+        "shama"
+      ],
+      "lastCommitDate": "2024-07-20T19:31:39Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1648,
+      "diagnosedAt": "2026-02-19T17:27:26.236Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "grunt-contrib",
+      "score": 60,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Package deprecated: DEPRECATED. See readme: https://github.com/gruntjs/grunt-contrib",
+          "points": 10,
+          "confidence": "high"
+        },
+        {
+          "reason": "Repository is archived (no longer maintained)",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 3 years ago (10 years)",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "tkellen",
+        "cowboy",
+        "shama",
+        "vladikoff",
+        "sindresorhus",
+        "jmeas"
+      ],
+      "lastCommitDate": "2016-01-05T01:11:04Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1963,
+      "diagnosedAt": "2026-02-19T17:27:28.199Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "gulp",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "phated",
+        "yocontra"
+      ],
+      "lastCommitDate": "2026-02-09T06:30:13Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1703,
+      "diagnosedAt": "2026-02-19T17:27:29.902Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "gulp-cli",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "phated",
+        "yocontra"
+      ],
+      "lastCommitDate": "2025-06-01T20:53:24Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1663,
+      "diagnosedAt": "2026-02-19T17:27:31.565Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "gulp-util",
+      "score": 60,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Package deprecated: gulp-util is deprecated - replace it, following the guidelines at https://medium.com/gulpjs/gulp-uti...",
+          "points": 10,
+          "confidence": "high"
+        },
+        {
+          "reason": "Repository is archived (no longer maintained)",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 3 years ago (5 years)",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "yocontra",
+        "phated"
+      ],
+      "lastCommitDate": "2020-10-31T11:18:21Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2476,
+      "diagnosedAt": "2026-02-19T17:27:34.041Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "bower",
+      "score": 90,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "sheerun",
+        "satazor"
+      ],
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 1,
+        "critical": 0,
+        "high": 1,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 754,
+      "diagnosedAt": "2026-02-19T17:27:34.796Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "bower-json",
+      "score": 95,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Last commit over 1 year ago (494 days)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "desandro",
+        "paulirish",
+        "satazor",
+        "sheerun",
+        "sindresorhus",
+        "wibblymat"
+      ],
+      "lastCommitDate": "2024-10-13T10:45:05Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1988,
+      "diagnosedAt": "2026-02-19T17:27:36.784Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "bower-config",
+      "score": 95,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Last commit over 1 year ago (494 days)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "desandro",
+        "paulirish",
+        "satazor",
+        "sheerun",
+        "sindresorhus",
+        "wibblymat"
+      ],
+      "lastCommitDate": "2024-10-13T10:45:05Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1719,
+      "diagnosedAt": "2026-02-19T17:27:38.504Z"
     }
   ],
   "errors": [

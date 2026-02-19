@@ -1,11 +1,11 @@
 {
   "ecosystem": "npm",
-  "package": "lodash-fp",
+  "package": "gulp-util",
   "score": 60,
   "riskLevel": "MEDIUM",
   "deductions": [
     {
-      "reason": "Package deprecated: This package is discontinued. See https://github.com/lodash/lodash/wiki/FP-Guide.",
+      "reason": "Package deprecated: gulp-util is deprecated - replace it, following the guidelines at https://medium.com/gulpjs/gulp-uti...",
       "points": 10,
       "confidence": "high"
     },
@@ -15,18 +15,18 @@
       "confidence": "high"
     },
     {
-      "reason": "Last commit over 3 years ago (10 years)",
+      "reason": "Last commit over 3 years ago (5 years)",
       "points": 15,
       "confidence": "high"
     }
   ],
   "maintainers": [
-    "jdalton",
-    "mathias"
+    "yocontra",
+    "phated"
   ],
-  "lastCommitDate": "2016-03-06T01:30:38Z",
+  "lastCommitDate": "2020-10-31T11:18:21Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
-  "executionTimeMs": 2299,
-  "diagnosedAt": "2026-02-19T17:27:14.921Z"
+  "executionTimeMs": 2476,
+  "diagnosedAt": "2026-02-19T17:27:34.041Z"
 }

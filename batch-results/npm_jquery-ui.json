@@ -1,0 +1,26 @@
+{
+  "ecosystem": "npm",
+  "package": "jquery-ui",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "scott.gonzalez",
+    "jzaefferer",
+    "timmywil",
+    "mgol",
+    "openjsfoundation"
+  ],
+  "lastCommitDate": "2026-02-09T18:03:15Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 7,
+    "critical": 0,
+    "high": 0,
+    "recent": 0,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 2243,
+  "diagnosedAt": "2026-02-19T17:27:08.985Z"
+}

@@ -1,0 +1,31 @@
+{
+  "ecosystem": "npm",
+  "package": "sugar-date",
+  "score": 79,
+  "riskLevel": "MEDIUM",
+  "deductions": [
+    {
+      "reason": "Single maintainer replaced at 2.0.0",
+      "points": 11,
+      "confidence": "medium"
+    },
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 1 year ago (616 days)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "l_andrew_l"
+  ],
+  "lastCommitDate": "2024-06-13T16:23:08Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1997,
+  "diagnosedAt": "2026-02-19T17:27:23.476Z"
+}

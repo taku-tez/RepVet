@@ -1,0 +1,21 @@
+{
+  "ecosystem": "npm",
+  "package": "date-fns-old",
+  "score": 95,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "dmtr.kovalenko"
+  ],
+  "lastCommitDate": "2025-03-07T15:30:49Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1950,
+  "diagnosedAt": "2026-02-19T17:27:21.478Z"
+}

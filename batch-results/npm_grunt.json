@@ -1,0 +1,31 @@
+{
+  "ecosystem": "npm",
+  "package": "grunt",
+  "score": 90,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "2 high severity vulnerability(ies) in history",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "cowboy",
+    "tkellen",
+    "vladikoff",
+    "shama"
+  ],
+  "lastCommitDate": "2025-11-05T16:22:58Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 3,
+    "critical": 0,
+    "high": 2,
+    "recent": 0,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 1112,
+  "diagnosedAt": "2026-02-19T17:27:24.588Z"
+}

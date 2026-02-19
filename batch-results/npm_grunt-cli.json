@@ -1,0 +1,29 @@
+{
+  "ecosystem": "npm",
+  "package": "grunt-cli",
+  "score": 84,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Complete maintainer change in 2 days (0.1.13)",
+      "points": 11,
+      "confidence": "medium"
+    },
+    {
+      "reason": "Last commit over 1 year ago (578 days)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "cowboy",
+    "tkellen",
+    "vladikoff",
+    "shama"
+  ],
+  "lastCommitDate": "2024-07-20T19:31:39Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1648,
+  "diagnosedAt": "2026-02-19T17:27:26.236Z"
+}
