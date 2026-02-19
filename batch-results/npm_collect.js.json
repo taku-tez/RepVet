@@ -1,0 +1,26 @@
+{
+  "ecosystem": "npm",
+  "package": "collect.js",
+  "score": 92,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    },
+    {
+      "reason": "Last commit over 1 year ago (484 days)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "ecrmnn"
+  ],
+  "lastCommitDate": "2024-10-22T18:24:04Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2801,
+  "diagnosedAt": "2026-02-19T14:07:36.168Z"
+}

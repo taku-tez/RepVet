@@ -1,0 +1,35 @@
+{
+  "ecosystem": "npm",
+  "package": "lodash-es",
+  "score": 75,
+  "riskLevel": "MEDIUM",
+  "deductions": [
+    {
+      "reason": "1 critical vulnerability(ies) in history",
+      "points": 15,
+      "confidence": "high"
+    },
+    {
+      "reason": "2 high severity vulnerability(ies) in history",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "mathias",
+    "jdalton",
+    "bnjmnt4n"
+  ],
+  "lastCommitDate": "2026-02-06T14:13:37Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 6,
+    "critical": 1,
+    "high": 2,
+    "recent": 1,
+    "hasUnfixed": true
+  },
+  "executionTimeMs": 1168,
+  "diagnosedAt": "2026-02-19T14:07:28.590Z"
+}

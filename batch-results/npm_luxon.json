@@ -1,0 +1,29 @@
+{
+  "ecosystem": "npm",
+  "package": "luxon",
+  "score": 90,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "1 high severity vulnerability(ies) in history",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "icambron",
+    "diesieben07"
+  ],
+  "lastCommitDate": "2026-02-07T16:55:22Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 1,
+    "critical": 0,
+    "high": 1,
+    "recent": 0,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 3458,
+  "diagnosedAt": "2026-02-19T14:07:43.509Z"
+}

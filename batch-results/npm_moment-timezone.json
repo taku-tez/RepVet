@@ -1,0 +1,28 @@
+{
+  "ecosystem": "npm",
+  "package": "moment-timezone",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "ichernev",
+    "gilmoreorless",
+    "timrwood",
+    "mj1856",
+    "maggiepint",
+    "marwahaha",
+    "ellenaua"
+  ],
+  "lastCommitDate": "2026-02-14T04:53:47Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 2,
+    "critical": 0,
+    "high": 0,
+    "recent": 0,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 1892,
+  "diagnosedAt": "2026-02-19T14:07:40.051Z"
+}

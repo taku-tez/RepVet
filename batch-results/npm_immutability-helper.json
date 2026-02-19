@@ -1,0 +1,22 @@
+{
+  "ecosystem": "npm",
+  "package": "immutability-helper",
+  "score": 85,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Last commit over 3 years ago (5 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "andreiglingeanu",
+    "kolodny"
+  ],
+  "lastCommitDate": "2020-10-15T13:51:46Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1879,
+  "diagnosedAt": "2026-02-19T14:07:20.743Z"
+}

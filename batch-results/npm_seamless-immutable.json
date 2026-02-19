@@ -1,0 +1,27 @@
+{
+  "ecosystem": "npm",
+  "package": "seamless-immutable",
+  "score": 70,
+  "riskLevel": "MEDIUM",
+  "deductions": [
+    {
+      "reason": "Repository is archived (no longer maintained)",
+      "points": 15,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 3 years ago (5 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "crudh",
+    "rtfeldman"
+  ],
+  "lastCommitDate": "2021-06-25T16:12:52Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2080,
+  "diagnosedAt": "2026-02-19T14:07:18.864Z"
+}

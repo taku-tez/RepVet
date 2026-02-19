@@ -1,0 +1,26 @@
+{
+  "ecosystem": "npm",
+  "package": "date-fns-tz",
+  "score": 92,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    },
+    {
+      "reason": "Last commit over 1 year ago (414 days)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "marnusw"
+  ],
+  "lastCommitDate": "2024-12-31T22:43:48Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1731,
+  "diagnosedAt": "2026-02-19T14:07:45.241Z"
+}

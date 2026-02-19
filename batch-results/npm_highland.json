@@ -1,0 +1,23 @@
+{
+  "ecosystem": "npm",
+  "package": "highland",
+  "score": 85,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Last commit over 3 years ago (6 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "caolan",
+    "jeromew",
+    "vqvu"
+  ],
+  "lastCommitDate": "2020-06-18T07:57:58Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2213,
+  "diagnosedAt": "2026-02-19T14:07:12.956Z"
+}

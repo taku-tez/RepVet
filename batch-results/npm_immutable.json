@@ -1,0 +1,22 @@
+{
+  "ecosystem": "npm",
+  "package": "immutable",
+  "score": 89,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer replaced at 2.0.0",
+      "points": 11,
+      "confidence": "medium"
+    }
+  ],
+  "maintainers": [
+    "jdeniau",
+    "leebyron"
+  ],
+  "lastCommitDate": "2026-01-28T19:11:11Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1764,
+  "diagnosedAt": "2026-02-19T14:07:14.720Z"
+}

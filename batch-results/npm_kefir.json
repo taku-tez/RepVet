@@ -1,0 +1,23 @@
+{
+  "ecosystem": "npm",
+  "package": "kefir",
+  "score": 95,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Last commit over 1 year ago (609 days)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "pozadi",
+    "jamesdigioia",
+    "macil"
+  ],
+  "lastCommitDate": "2024-06-20T00:40:05Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2423,
+  "diagnosedAt": "2026-02-19T14:07:10.743Z"
+}
