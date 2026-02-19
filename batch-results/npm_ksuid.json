@@ -1,0 +1,26 @@
+{
+  "ecosystem": "npm",
+  "package": "ksuid",
+  "score": 80,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 3 years ago (4 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "novemberborn"
+  ],
+  "lastCommitDate": "2021-10-30T15:31:30Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1366,
+  "diagnosedAt": "2026-02-19T20:22:13.110Z"
+}

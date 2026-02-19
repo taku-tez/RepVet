@@ -1,16 +1,16 @@
 {
   "ecosystem": "npm",
-  "package": "uuid",
+  "package": "ulid",
   "score": 100,
   "riskLevel": "LOW",
   "deductions": [],
   "maintainers": [
-    "broofa",
-    "ctavan"
+    "perrymitchell",
+    "alizain"
   ],
-  "lastCommitDate": "2025-10-27T17:21:18Z",
+  "lastCommitDate": "2026-01-21T23:22:10Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
   "executionTimeMs": 1486,
-  "diagnosedAt": "2026-02-19T20:22:07.428Z"
+  "diagnosedAt": "2026-02-19T20:22:11.744Z"
 }

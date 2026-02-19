@@ -1,6 +1,6 @@
 {
   "ecosystem": "npm",
-  "package": "chalk",
+  "package": "nanoid",
   "score": 97,
   "riskLevel": "LOW",
   "deductions": [
@@ -11,18 +11,18 @@
     }
   ],
   "maintainers": [
-    "sindresorhus"
+    "ai"
   ],
-  "lastCommitDate": "2026-01-27T06:30:36Z",
+  "lastCommitDate": "2026-02-13T16:57:50Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
   "vulnerabilityStats": {
-    "total": 1,
+    "total": 2,
     "critical": 0,
     "high": 0,
-    "recent": 1,
+    "recent": 0,
     "hasUnfixed": false
   },
-  "executionTimeMs": 1798,
-  "diagnosedAt": "2026-02-19T20:22:17.058Z"
+  "executionTimeMs": 1087,
+  "diagnosedAt": "2026-02-19T20:22:08.515Z"
 }

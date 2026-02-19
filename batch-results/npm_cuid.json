@@ -1,0 +1,31 @@
+{
+  "ecosystem": "npm",
+  "package": "cuid",
+  "score": 74,
+  "riskLevel": "MEDIUM",
+  "deductions": [
+    {
+      "reason": "Package deprecated: Cuid and other k-sortable and non-cryptographic ids (Ulid, ObjectId, KSUID, all UUIDs) are all insec...",
+      "points": 10,
+      "confidence": "high"
+    },
+    {
+      "reason": "Single maintainer replaced at 1.2.5",
+      "points": 11,
+      "confidence": "medium"
+    },
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "ericelliott"
+  ],
+  "lastCommitDate": "2026-02-17T19:14:11Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1741,
+  "diagnosedAt": "2026-02-19T20:22:10.257Z"
+}
