@@ -1,0 +1,22 @@
+{
+  "ecosystem": "npm",
+  "package": "ink",
+  "score": 89,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer replaced at 0.1.0",
+      "points": 11,
+      "confidence": "medium"
+    }
+  ],
+  "maintainers": [
+    "vdemedes",
+    "sindresorhus"
+  ],
+  "lastCommitDate": "2026-02-19T07:01:52Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1644,
+  "diagnosedAt": "2026-02-19T13:37:07.505Z"
+}

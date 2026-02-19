@@ -1,0 +1,19 @@
+{
+  "ecosystem": "npm",
+  "package": "@clack/prompts",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "natemoo-re",
+    "dreyfus92",
+    "43081j",
+    "amirsa12",
+    "aslemammad"
+  ],
+  "lastCommitDate": "2026-02-16T23:01:33Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 3117,
+  "diagnosedAt": "2026-02-19T13:37:16.065Z"
+}

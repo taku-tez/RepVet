@@ -1,0 +1,32 @@
+{
+  "ecosystem": "npm",
+  "package": "phin",
+  "score": 87,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Package deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.",
+      "points": 10,
+      "confidence": "high"
+    },
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "ethan_"
+  ],
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 1,
+    "critical": 0,
+    "high": 0,
+    "recent": 0,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 2294,
+  "diagnosedAt": "2026-02-19T13:37:39.245Z"
+}

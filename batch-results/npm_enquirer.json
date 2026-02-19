@@ -1,0 +1,22 @@
+{
+  "ecosystem": "npm",
+  "package": "enquirer",
+  "score": 95,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Last commit over 1 year ago (617 days)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "jonschlinkert",
+    "doowb"
+  ],
+  "lastCommitDate": "2024-06-11T15:05:05Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1871,
+  "diagnosedAt": "2026-02-19T13:37:11.304Z"
+}

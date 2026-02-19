@@ -1,0 +1,36 @@
+{
+  "ecosystem": "npm",
+  "package": "request",
+  "score": 85,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Package deprecated: request has been deprecated, see https://github.com/request/request/issues/3142",
+      "points": 10,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 1 year ago (554 days)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "fredkschott",
+    "mikeal",
+    "nylen",
+    "simov"
+  ],
+  "lastCommitDate": "2024-08-14T00:09:41Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 2,
+    "critical": 0,
+    "high": 0,
+    "recent": 0,
+    "hasUnfixed": true
+  },
+  "executionTimeMs": 1795,
+  "diagnosedAt": "2026-02-19T13:37:35.196Z"
+}

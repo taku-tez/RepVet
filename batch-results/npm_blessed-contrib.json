@@ -1,0 +1,22 @@
+{
+  "ecosystem": "npm",
+  "package": "blessed-contrib",
+  "score": 90,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Last commit over 2 years ago (2 years)",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "yaron",
+    "lirantal"
+  ],
+  "lastCommitDate": "2024-01-09T09:13:26Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2446,
+  "diagnosedAt": "2026-02-19T13:37:22.739Z"
+}

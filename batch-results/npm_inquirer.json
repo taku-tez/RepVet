@@ -1,0 +1,17 @@
+{
+  "ecosystem": "npm",
+  "package": "inquirer",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "sboudrias",
+    "mischah",
+    "ruyadorno"
+  ],
+  "lastCommitDate": "2026-02-19T01:00:54Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1927,
+  "diagnosedAt": "2026-02-19T13:37:09.433Z"
+}

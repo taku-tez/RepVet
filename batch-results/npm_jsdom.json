@@ -1,0 +1,20 @@
+{
+  "ecosystem": "npm",
+  "package": "jsdom",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "timothygu",
+    "domenic",
+    "sebmaster",
+    "zirro",
+    "tmpvar",
+    "joris-van-der-wel"
+  ],
+  "lastCommitDate": "2026-02-17T06:36:56Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1853,
+  "diagnosedAt": "2026-02-19T13:37:45.048Z"
+}

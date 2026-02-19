@@ -1,0 +1,16 @@
+{
+  "ecosystem": "npm",
+  "package": "cheerio",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "jugglinmike",
+    "feedic"
+  ],
+  "lastCommitDate": "2026-02-19T03:16:15Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1689,
+  "diagnosedAt": "2026-02-19T13:37:43.195Z"
+}

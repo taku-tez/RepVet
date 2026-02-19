@@ -1,0 +1,30 @@
+{
+  "ecosystem": "npm",
+  "package": "undici",
+  "score": 90,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "2 high severity vulnerability(ies) in history",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "matteo.collina",
+    "ronag",
+    "ethan_arrowood"
+  ],
+  "lastCommitDate": "2026-02-19T11:07:34Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 16,
+    "critical": 0,
+    "high": 2,
+    "recent": 2,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 2524,
+  "diagnosedAt": "2026-02-19T13:37:27.169Z"
+}

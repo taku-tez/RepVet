@@ -1,13 +1,19 @@
 {
   "ecosystem": "npm",
-  "package": "puppeteer",
+  "package": "superagent",
   "score": 100,
   "riskLevel": "LOW",
   "deductions": [],
   "maintainers": [
-    "mathias",
-    "google-wombot"
+    "niftylettuce",
+    "superjoe",
+    "rauchg",
+    "travisjeffery",
+    "tjholowaychuk",
+    "kornel",
+    "titanism"
   ],
+  "lastCommitDate": "2026-01-06T07:45:06Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
   "vulnerabilityStats": {
@@ -17,6 +23,6 @@
     "recent": 0,
     "hasUnfixed": false
   },
-  "executionTimeMs": 1942,
-  "diagnosedAt": "2026-02-19T13:37:46.990Z"
+  "executionTimeMs": 2248,
+  "diagnosedAt": "2026-02-19T13:37:33.401Z"
 }
