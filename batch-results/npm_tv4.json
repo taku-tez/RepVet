@@ -1,0 +1,22 @@
+{
+  "ecosystem": "npm",
+  "package": "tv4",
+  "score": 95,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Last commit over 1 year ago (616 days)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "geraintluff",
+    "bartvds"
+  ],
+  "lastCommitDate": "2024-06-12T20:22:58Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1527,
+  "diagnosedAt": "2026-02-19T20:12:18.009Z"
+}

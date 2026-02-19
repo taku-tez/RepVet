@@ -1,0 +1,28 @@
+{
+  "ecosystem": "npm",
+  "package": "class-sanitizer",
+  "score": 70,
+  "riskLevel": "MEDIUM",
+  "deductions": [
+    {
+      "reason": "Repository is archived (no longer maintained)",
+      "points": 15,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 3 years ago (6 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "pleerock",
+    "nonameprovided",
+    "typestack-release-bot"
+  ],
+  "lastCommitDate": "2020-07-31T20:23:49Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2216,
+  "diagnosedAt": "2026-02-19T20:12:09.979Z"
+}

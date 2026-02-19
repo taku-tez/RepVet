@@ -1,0 +1,18 @@
+{
+  "ecosystem": "npm",
+  "package": "express-validator",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "ctavan",
+    "gustavohenke",
+    "rustybailey",
+    "fedeci"
+  ],
+  "lastCommitDate": "2025-11-19T11:00:27Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1756,
+  "diagnosedAt": "2026-02-19T20:12:14.880Z"
+}
