@@ -1,0 +1,26 @@
+{
+  "ecosystem": "npm",
+  "package": "ffi-napi",
+  "score": 90,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 1 year ago (552 days)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "addaleax"
+  ],
+  "lastCommitDate": "2024-08-16T13:44:45Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2020,
+  "diagnosedAt": "2026-02-19T19:22:41.508Z"
+}

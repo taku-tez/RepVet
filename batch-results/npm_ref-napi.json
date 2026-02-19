@@ -1,0 +1,26 @@
+{
+  "ecosystem": "npm",
+  "package": "ref-napi",
+  "score": 90,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 1 year ago (656 days)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "addaleax"
+  ],
+  "lastCommitDate": "2024-05-04T17:13:36Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2401,
+  "diagnosedAt": "2026-02-19T19:22:43.909Z"
+}

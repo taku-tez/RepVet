@@ -1,0 +1,33 @@
+{
+  "ecosystem": "npm",
+  "package": "leveldown",
+  "score": 70,
+  "riskLevel": "MEDIUM",
+  "deductions": [
+    {
+      "reason": "Package deprecated: Superseded by classic-level (https://github.com/Level/community#faq)",
+      "points": 10,
+      "confidence": "high"
+    },
+    {
+      "reason": "Repository is archived (no longer maintained)",
+      "points": 15,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 1 year ago (444 days)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "ralphtheninja",
+    "rvagg",
+    "vweevers"
+  ],
+  "lastCommitDate": "2024-12-01T21:46:12Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2148,
+  "diagnosedAt": "2026-02-19T19:22:29.857Z"
+}

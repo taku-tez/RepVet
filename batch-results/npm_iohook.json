@@ -1,0 +1,17 @@
+{
+  "ecosystem": "npm",
+  "package": "iohook",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "wilix-lead",
+    "djiit",
+    "ash0x0"
+  ],
+  "lastCommitDate": "2025-02-21T04:04:41Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1707,
+  "diagnosedAt": "2026-02-19T19:22:52.349Z"
+}

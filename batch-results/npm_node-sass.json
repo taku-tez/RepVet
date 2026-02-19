@@ -1,0 +1,39 @@
+{
+  "ecosystem": "npm",
+  "package": "node-sass",
+  "score": 70,
+  "riskLevel": "MEDIUM",
+  "deductions": [
+    {
+      "reason": "Package deprecated: Node Sass is no longer supported. Please use `sass` or `sass-embedded` instead.",
+      "points": 10,
+      "confidence": "high"
+    },
+    {
+      "reason": "Repository is archived (no longer maintained)",
+      "points": 15,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 1 year ago (574 days)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "nex3",
+    "xzyfer"
+  ],
+  "lastCommitDate": "2024-07-24T21:59:31Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 2,
+    "critical": 0,
+    "high": 0,
+    "recent": 0,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 2157,
+  "diagnosedAt": "2026-02-19T19:22:14.073Z"
+}

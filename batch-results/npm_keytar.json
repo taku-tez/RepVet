@@ -1,0 +1,28 @@
+{
+  "ecosystem": "npm",
+  "package": "keytar",
+  "score": 70,
+  "riskLevel": "MEDIUM",
+  "deductions": [
+    {
+      "reason": "Repository is archived (no longer maintained)",
+      "points": 15,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 3 years ago (3 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "shiftkey",
+    "sergiou87",
+    "tidy-dev"
+  ],
+  "lastCommitDate": "2022-12-12T11:01:01Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1697,
+  "diagnosedAt": "2026-02-19T19:22:36.174Z"
+}

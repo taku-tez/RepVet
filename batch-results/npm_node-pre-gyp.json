@@ -1,0 +1,28 @@
+{
+  "ecosystem": "npm",
+  "package": "node-pre-gyp",
+  "score": 90,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Package deprecated: Please upgrade to @mapbox/node-pre-gyp: the non-scoped node-pre-gyp package is deprecated and only t...",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "bergwerkgis",
+    "flippmoke",
+    "gretacb",
+    "kkaefer",
+    "mapsam",
+    "nicolasnoble",
+    "springmeyer",
+    "yhahn"
+  ],
+  "lastCommitDate": "2026-02-09T21:48:37Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2069,
+  "diagnosedAt": "2026-02-19T19:22:18.430Z"
+}

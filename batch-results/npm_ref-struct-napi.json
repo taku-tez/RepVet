@@ -1,0 +1,26 @@
+{
+  "ecosystem": "npm",
+  "package": "ref-struct-napi",
+  "score": 80,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 3 years ago (6 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "janealter"
+  ],
+  "lastCommitDate": "2020-05-01T15:34:31Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2370,
+  "diagnosedAt": "2026-02-19T19:22:48.772Z"
+}

@@ -1,0 +1,26 @@
+{
+  "ecosystem": "npm",
+  "package": "robotjs",
+  "score": 90,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 1 year ago (607 days)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "octalmage"
+  ],
+  "lastCommitDate": "2024-06-21T20:00:52Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1870,
+  "diagnosedAt": "2026-02-19T19:22:50.642Z"
+}

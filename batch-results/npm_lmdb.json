@@ -1,0 +1,17 @@
+{
+  "ecosystem": "npm",
+  "package": "lmdb",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "chjj",
+    "kriszyp",
+    "rvagg"
+  ],
+  "lastCommitDate": "2026-01-27T13:04:58Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2114,
+  "diagnosedAt": "2026-02-19T19:22:34.477Z"
+}
