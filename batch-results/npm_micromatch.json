@@ -1,0 +1,30 @@
+{
+  "ecosystem": "npm",
+  "package": "micromatch",
+  "score": 95,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Last commit over 1 year ago (541 days)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "jonschlinkert",
+    "doowb",
+    "danez"
+  ],
+  "lastCommitDate": "2024-08-26T23:15:58Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 1,
+    "critical": 0,
+    "high": 0,
+    "recent": 0,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 2255,
+  "diagnosedAt": "2026-02-19T20:37:24.874Z"
+}

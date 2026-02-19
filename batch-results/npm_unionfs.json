@@ -1,21 +1,21 @@
 {
   "ecosystem": "npm",
-  "package": "fast-glob",
-  "score": 97,
+  "package": "unionfs",
+  "score": 95,
   "riskLevel": "LOW",
   "deductions": [
     {
       "reason": "Single maintainer (bus factor risk)",
-      "points": 3,
-      "confidence": "low"
+      "points": 5,
+      "confidence": "high"
     }
   ],
   "maintainers": [
-    "mrmlnc"
+    "streamich"
   ],
-  "lastCommitDate": "2025-09-01T08:00:01Z",
+  "lastCommitDate": "2025-09-17T02:43:50Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
-  "executionTimeMs": 2031,
-  "diagnosedAt": "2026-02-19T20:37:20.640Z"
+  "executionTimeMs": 2359,
+  "diagnosedAt": "2026-02-19T20:37:13.856Z"
 }

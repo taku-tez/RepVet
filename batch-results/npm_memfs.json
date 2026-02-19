@@ -1,6 +1,6 @@
 {
   "ecosystem": "npm",
-  "package": "fast-glob",
+  "package": "memfs",
   "score": 97,
   "riskLevel": "LOW",
   "deductions": [
@@ -11,11 +11,11 @@
     }
   ],
   "maintainers": [
-    "mrmlnc"
+    "streamich"
   ],
-  "lastCommitDate": "2025-09-01T08:00:01Z",
+  "lastCommitDate": "2026-01-23T11:14:57Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
-  "executionTimeMs": 2031,
-  "diagnosedAt": "2026-02-19T20:37:20.640Z"
+  "executionTimeMs": 1748,
+  "diagnosedAt": "2026-02-19T20:37:11.497Z"
 }
