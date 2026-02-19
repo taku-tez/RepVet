@@ -1,5 +1,5 @@
 {
-  "currentIndex": 70,
+  "currentIndex": 80,
   "totalPackages": 3818,
   "results": [
     {
@@ -1988,6 +1988,314 @@
       "hasMalwareHistory": false,
       "executionTimeMs": 1896,
       "diagnosedAt": "2026-02-19T12:03:24.069Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "nw",
+      "score": 90,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "rogerwang",
+        "ayushmxn"
+      ],
+      "lastCommitDate": "2026-02-17T08:00:39Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 1,
+        "critical": 0,
+        "high": 1,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 2196,
+      "diagnosedAt": "2026-02-19T12:07:38.712Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "ionic",
+      "score": 90,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Package deprecated: The Ionic CLI now uses ✨ @ionic/cli ✨ for its package name! 👉 https://twitter.com/ionicframework/st...",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "ionicjs",
+        "jcesarmobile"
+      ],
+      "lastCommitDate": "2026-01-22T11:38:49Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2165,
+      "diagnosedAt": "2026-02-19T12:07:40.878Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "cordova",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "brodybits",
+        "dpogue",
+        "cordovaowner",
+        "stevegill",
+        "purplecabbage",
+        "anis",
+        "filmaj",
+        "bowserj",
+        "shazron",
+        "surajpindoria",
+        "erisu",
+        "niklasmerz",
+        "janpio",
+        "normanbreau",
+        "pvpoyer",
+        "shepheb",
+        "bennmapes",
+        "agrieve",
+        "mmocny",
+        "kamrik",
+        "sgrebnov",
+        "kotikov.vladimir",
+        "cmarcelk",
+        "bhiggins",
+        "brianleroux",
+        "mwbrooks",
+        "apachebuilds",
+        "timbarham"
+      ],
+      "lastCommitDate": "2026-02-03T19:52:03Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2931,
+      "diagnosedAt": "2026-02-19T12:07:43.810Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "phonegap",
+      "score": 60,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Package deprecated: This package is deprecated, see https://blog.phonegap.com/update-for-customers-using-phonegap-and-ph...",
+          "points": 10,
+          "confidence": "high"
+        },
+        {
+          "reason": "Repository is archived (no longer maintained)",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 3 years ago (4 years)",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "filmaj",
+        "surajpindoria",
+        "hermwong",
+        "devgeeks",
+        "purplecabbage",
+        "timkim",
+        "stevegill",
+        "macdonst"
+      ],
+      "lastCommitDate": "2022-04-09T16:44:55Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1913,
+      "diagnosedAt": "2026-02-19T12:07:45.724Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "capacitor",
+      "score": 85,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 2 years ago (2 years)",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "miklschmidt"
+      ],
+      "lastCommitDate": "2023-08-29T14:14:46Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2213,
+      "diagnosedAt": "2026-02-19T12:07:47.938Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "expo",
+      "score": 70,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Complete maintainer change in 0 days (51.0.17)",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "1 critical vulnerability(ies) in history",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "ide",
+        "brentvatne",
+        "evanbacon",
+        "expoadmin",
+        "exponent",
+        "bycedric",
+        "kudochien",
+        "alanhughes",
+        "expo-bot",
+        "wschurman"
+      ],
+      "lastCommitDate": "2026-02-19T12:05:48Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 2,
+        "critical": 1,
+        "high": 0,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 2519,
+      "diagnosedAt": "2026-02-19T12:07:50.457Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "react-native",
+      "score": 90,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "react-native-bot",
+        "fb",
+        "lunaleaps",
+        "eliwhite",
+        "yungsters",
+        "cortinico",
+        "fkgozali"
+      ],
+      "lastCommitDate": "2026-02-19T10:24:01Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 1,
+        "critical": 0,
+        "high": 1,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 2331,
+      "diagnosedAt": "2026-02-19T12:07:52.789Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "flutter",
+      "score": 85,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Last commit over 3 years ago (8 years)",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "simontabor",
+        "jt"
+      ],
+      "lastCommitDate": "2017-12-10T00:52:14Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1936,
+      "diagnosedAt": "2026-02-19T12:07:54.725Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "playwright",
+      "score": 90,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "pavelfeldman",
+        "yurys",
+        "dgozman-ms",
+        "playwright-bot"
+      ],
+      "lastCommitDate": "2026-02-19T08:44:50Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 1,
+        "critical": 0,
+        "high": 1,
+        "recent": 1,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 2796,
+      "diagnosedAt": "2026-02-19T12:07:57.522Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "puppeteer",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "mathias",
+        "google-wombot"
+      ],
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 1,
+        "critical": 0,
+        "high": 0,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1898,
+      "diagnosedAt": "2026-02-19T12:07:59.421Z"
     }
   ],
   "errors": [],

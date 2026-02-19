@@ -1,0 +1,34 @@
+{
+  "ecosystem": "npm",
+  "package": "react-native",
+  "score": 90,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "1 high severity vulnerability(ies) in history",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "react-native-bot",
+    "fb",
+    "lunaleaps",
+    "eliwhite",
+    "yungsters",
+    "cortinico",
+    "fkgozali"
+  ],
+  "lastCommitDate": "2026-02-19T10:24:01Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 1,
+    "critical": 0,
+    "high": 1,
+    "recent": 0,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 2331,
+  "diagnosedAt": "2026-02-19T12:07:52.789Z"
+}

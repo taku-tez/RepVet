@@ -1,0 +1,26 @@
+{
+  "ecosystem": "npm",
+  "package": "capacitor",
+  "score": 85,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 2 years ago (2 years)",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "miklschmidt"
+  ],
+  "lastCommitDate": "2023-08-29T14:14:46Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2213,
+  "diagnosedAt": "2026-02-19T12:07:47.938Z"
+}

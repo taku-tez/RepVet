@@ -1,0 +1,22 @@
+{
+  "ecosystem": "npm",
+  "package": "puppeteer",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "mathias",
+    "google-wombot"
+  ],
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 1,
+    "critical": 0,
+    "high": 0,
+    "recent": 0,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 1898,
+  "diagnosedAt": "2026-02-19T12:07:59.421Z"
+}

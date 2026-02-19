@@ -1,0 +1,22 @@
+{
+  "ecosystem": "npm",
+  "package": "ionic",
+  "score": 90,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Package deprecated: The Ionic CLI now uses ✨ @ionic/cli ✨ for its package name! 👉 https://twitter.com/ionicframework/st...",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "ionicjs",
+    "jcesarmobile"
+  ],
+  "lastCommitDate": "2026-01-22T11:38:49Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2165,
+  "diagnosedAt": "2026-02-19T12:07:40.878Z"
+}

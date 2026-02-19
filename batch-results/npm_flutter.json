@@ -1,0 +1,22 @@
+{
+  "ecosystem": "npm",
+  "package": "flutter",
+  "score": 85,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Last commit over 3 years ago (8 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "simontabor",
+    "jt"
+  ],
+  "lastCommitDate": "2017-12-10T00:52:14Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1936,
+  "diagnosedAt": "2026-02-19T12:07:54.725Z"
+}

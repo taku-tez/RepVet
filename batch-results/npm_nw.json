@@ -1,0 +1,29 @@
+{
+  "ecosystem": "npm",
+  "package": "nw",
+  "score": 90,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "1 high severity vulnerability(ies) in history",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "rogerwang",
+    "ayushmxn"
+  ],
+  "lastCommitDate": "2026-02-17T08:00:39Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 1,
+    "critical": 0,
+    "high": 1,
+    "recent": 0,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 2196,
+  "diagnosedAt": "2026-02-19T12:07:38.712Z"
+}
