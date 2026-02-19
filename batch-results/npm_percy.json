@@ -1,0 +1,21 @@
+{
+  "ecosystem": "npm",
+  "package": "percy",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "percy-admin"
+  ],
+  "lastCommitDate": "2026-02-19T10:07:11Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2530,
+  "diagnosedAt": "2026-02-19T13:07:37.808Z"
+}

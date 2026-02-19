@@ -1,0 +1,25 @@
+{
+  "ecosystem": "npm",
+  "package": "pa11y",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "rowanmanning",
+    "hollsk",
+    "glynnphillips",
+    "joseluisbolos",
+    "dotcode",
+    "joey.ciechanowicz",
+    "danyalaytekin",
+    "aarongoldenthal",
+    "jpw",
+    "pa11y-bot",
+    "andrewmee"
+  ],
+  "lastCommitDate": "2026-02-16T16:35:43Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2171,
+  "diagnosedAt": "2026-02-19T13:07:42.150Z"
+}

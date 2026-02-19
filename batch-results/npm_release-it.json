@@ -1,0 +1,21 @@
+{
+  "ecosystem": "npm",
+  "package": "release-it",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "webpro"
+  ],
+  "lastCommitDate": "2026-01-20T18:40:03Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2387,
+  "diagnosedAt": "2026-02-19T13:07:22.339Z"
+}

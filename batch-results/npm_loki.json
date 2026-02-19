@@ -1,0 +1,31 @@
+{
+  "ecosystem": "npm",
+  "package": "loki",
+  "score": 81,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer replaced at 0.1.0",
+      "points": 11,
+      "confidence": "medium"
+    },
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    },
+    {
+      "reason": "Last commit over 1 year ago (495 days)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "oblador"
+  ],
+  "lastCommitDate": "2024-10-12T05:41:37Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1985,
+  "diagnosedAt": "2026-02-19T13:07:35.278Z"
+}

@@ -1,0 +1,21 @@
+{
+  "ecosystem": "npm",
+  "package": "husky",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "typicode"
+  ],
+  "lastCommitDate": "2026-02-07T10:36:42Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1721,
+  "diagnosedAt": "2026-02-19T13:07:11.196Z"
+}

@@ -1,0 +1,18 @@
+{
+  "ecosystem": "npm",
+  "package": "axe-core",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "dylanb",
+    "wilcofiers",
+    "dqlabs",
+    "npmdeque"
+  ],
+  "lastCommitDate": "2026-02-18T21:03:52Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2059,
+  "diagnosedAt": "2026-02-19T13:07:44.210Z"
+}

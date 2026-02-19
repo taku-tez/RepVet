@@ -1,0 +1,18 @@
+{
+  "ecosystem": "npm",
+  "package": "commitlint",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "marionebl",
+    "martinhelmut",
+    "escapedcat",
+    "bycedric"
+  ],
+  "lastCommitDate": "2026-02-19T10:27:59Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2199,
+  "diagnosedAt": "2026-02-19T13:07:09.474Z"
+}

@@ -1,0 +1,32 @@
+{
+  "ecosystem": "npm",
+  "package": "@storybook/react",
+  "score": 85,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Complete maintainer change in 0 days (0.0.0-pr-28255-sha-b988fb35)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "ndelangen",
+    "shilman",
+    "tmeasday",
+    "ghengeveld",
+    "winkervsbecks",
+    "yannbf",
+    "kylegach",
+    "jreinhold",
+    "kasperpeulen",
+    "valentinpalkovic",
+    "domyen",
+    "storybook-bot"
+  ],
+  "lastCommitDate": "2026-02-19T13:05:17Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 3109,
+  "diagnosedAt": "2026-02-19T13:07:30.654Z"
+}

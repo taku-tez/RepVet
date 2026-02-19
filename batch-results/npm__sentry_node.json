@@ -1,0 +1,28 @@
+{
+  "ecosystem": "npm",
+  "package": "@sentry/node",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "sentry-bot"
+  ],
+  "lastCommitDate": "2026-02-19T13:06:25Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 2,
+    "critical": 0,
+    "high": 0,
+    "recent": 1,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 2070,
+  "diagnosedAt": "2026-02-19T13:07:47.744Z"
+}
