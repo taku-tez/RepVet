@@ -1,26 +1,26 @@
 {
   "ecosystem": "npm",
-  "package": "lazy.js",
-  "score": 80,
+  "package": "immutable-assign",
+  "score": 82,
   "riskLevel": "LOW",
   "deductions": [
     {
       "reason": "Single maintainer (bus factor risk)",
-      "points": 5,
-      "confidence": "high"
+      "points": 3,
+      "confidence": "low"
     },
     {
-      "reason": "Last commit over 3 years ago (6 years)",
+      "reason": "Last commit over 3 years ago (3 years)",
       "points": 15,
       "confidence": "high"
     }
   ],
   "maintainers": [
-    "dtao"
+    "engineforce"
   ],
-  "lastCommitDate": "2020-07-15T20:12:33Z",
+  "lastCommitDate": "2022-12-06T14:59:24Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
-  "executionTimeMs": 1648,
-  "diagnosedAt": "2026-02-19T16:37:36.932Z"
+  "executionTimeMs": 2661,
+  "diagnosedAt": "2026-02-19T16:37:44.601Z"
 }

@@ -1,6 +1,6 @@
 {
   "ecosystem": "npm",
-  "package": "updeep",
+  "package": "callbag",
   "score": 90,
   "riskLevel": "LOW",
   "deductions": [
@@ -11,13 +11,12 @@
     }
   ],
   "maintainers": [
-    "astephenb",
-    "aaronjensen",
-    "substantial-accounts"
+    "zimme",
+    "staltz"
   ],
-  "lastCommitDate": "2023-02-21T15:41:55Z",
+  "lastCommitDate": "2023-02-27T19:29:12Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
-  "executionTimeMs": 2374,
-  "diagnosedAt": "2026-02-19T16:37:27.688Z"
+  "executionTimeMs": 2499,
+  "diagnosedAt": "2026-02-19T16:37:17.350Z"
 }
