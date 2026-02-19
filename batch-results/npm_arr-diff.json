@@ -1,0 +1,23 @@
+{
+  "ecosystem": "npm",
+  "package": "arr-diff",
+  "score": 85,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Last commit over 3 years ago (4 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "paulmillr",
+    "doowb",
+    "jonschlinkert"
+  ],
+  "lastCommitDate": "2022-01-04T11:06:12Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2015,
+  "diagnosedAt": "2026-02-19T18:27:35.137Z"
+}

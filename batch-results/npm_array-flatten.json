@@ -1,0 +1,21 @@
+{
+  "ecosystem": "npm",
+  "package": "array-flatten",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "blakeembrey"
+  ],
+  "lastCommitDate": "2025-06-24T05:32:34Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2101,
+  "diagnosedAt": "2026-02-19T18:27:38.884Z"
+}

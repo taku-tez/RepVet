@@ -1,0 +1,26 @@
+{
+  "ecosystem": "npm",
+  "package": "is-type",
+  "score": 80,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 3 years ago (9 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "juliangruber"
+  ],
+  "lastCommitDate": "2017-03-01T06:11:12Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1660,
+  "diagnosedAt": "2026-02-19T18:27:26.818Z"
+}

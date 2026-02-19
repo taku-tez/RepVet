@@ -1,0 +1,21 @@
+{
+  "ecosystem": "npm",
+  "package": "object-keys",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "ljharb"
+  ],
+  "lastCommitDate": "2025-12-30T01:57:25Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1582,
+  "diagnosedAt": "2026-02-19T18:27:45.876Z"
+}

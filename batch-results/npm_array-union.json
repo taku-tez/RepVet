@@ -1,7 +1,7 @@
 {
   "ecosystem": "npm",
-  "package": "is-stream",
-  "score": 92,
+  "package": "array-union",
+  "score": 82,
   "riskLevel": "LOW",
   "deductions": [
     {
@@ -10,17 +10,17 @@
       "confidence": "low"
     },
     {
-      "reason": "Last commit over 1 year ago (479 days)",
-      "points": 5,
+      "reason": "Last commit over 3 years ago (5 years)",
+      "points": 15,
       "confidence": "high"
     }
   ],
   "maintainers": [
     "sindresorhus"
   ],
-  "lastCommitDate": "2024-10-28T05:10:46Z",
+  "lastCommitDate": "2021-03-01T18:43:16Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
-  "executionTimeMs": 940,
-  "diagnosedAt": "2026-02-19T18:27:18.555Z"
+  "executionTimeMs": 1615,
+  "diagnosedAt": "2026-02-19T18:27:40.499Z"
 }

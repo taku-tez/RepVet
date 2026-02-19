@@ -1,0 +1,23 @@
+{
+  "ecosystem": "npm",
+  "package": "object-assign",
+  "score": 90,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Last commit over 2 years ago (2 years)",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "sophiebits",
+    "gaearon",
+    "sindresorhus"
+  ],
+  "lastCommitDate": "2023-11-05T18:16:06Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2097,
+  "diagnosedAt": "2026-02-19T18:27:44.294Z"
+}

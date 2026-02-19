@@ -1,0 +1,16 @@
+{
+  "ecosystem": "npm",
+  "package": "is-object",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "ljharb",
+    "raynos"
+  ],
+  "lastCommitDate": "2025-12-30T01:56:27Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1741,
+  "diagnosedAt": "2026-02-19T18:27:13.884Z"
+}
