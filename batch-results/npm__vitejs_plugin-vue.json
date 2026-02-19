@@ -1,0 +1,19 @@
+{
+  "ecosystem": "npm",
+  "package": "@vitejs/plugin-vue",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "yyx990803",
+    "patak",
+    "antfu",
+    "vitebot",
+    "sxzz"
+  ],
+  "lastCommitDate": "2026-02-19T09:10:16Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1699,
+  "diagnosedAt": "2026-02-19T19:37:11.683Z"
+}

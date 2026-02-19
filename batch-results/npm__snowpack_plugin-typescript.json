@@ -1,6 +1,6 @@
 {
   "ecosystem": "npm",
-  "package": "snowpack",
+  "package": "@snowpack/plugin-typescript",
   "score": 90,
   "riskLevel": "LOW",
   "deductions": [
@@ -12,12 +12,11 @@
   ],
   "maintainers": [
     "fredkschott",
-    "matthewp",
     "drewpowers"
   ],
   "lastCommitDate": "2023-03-05T16:10:07Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
-  "executionTimeMs": 2706,
-  "diagnosedAt": "2026-02-19T19:37:31.290Z"
+  "executionTimeMs": 3233,
+  "diagnosedAt": "2026-02-19T19:37:34.938Z"
 }

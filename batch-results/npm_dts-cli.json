@@ -1,21 +1,21 @@
 {
   "ecosystem": "npm",
-  "package": "parcel",
-  "score": 97,
+  "package": "dts-cli",
+  "score": 95,
   "riskLevel": "LOW",
   "deductions": [
     {
       "reason": "Single maintainer (bus factor risk)",
-      "points": 3,
-      "confidence": "low"
+      "points": 5,
+      "confidence": "high"
     }
   ],
   "maintainers": [
-    "devongovett"
+    "weiran.zsd"
   ],
-  "lastCommitDate": "2026-02-17T16:45:09Z",
+  "lastCommitDate": "2026-02-19T12:54:15Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
-  "executionTimeMs": 2763,
-  "diagnosedAt": "2026-02-19T19:37:23.857Z"
+  "executionTimeMs": 2477,
+  "diagnosedAt": "2026-02-19T19:37:44.084Z"
 }

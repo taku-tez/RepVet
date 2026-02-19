@@ -1,0 +1,18 @@
+{
+  "ecosystem": "npm",
+  "package": "microbundle",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "smoljsteam",
+    "developit",
+    "andarist",
+    "harmony"
+  ],
+  "lastCommitDate": "2026-02-01T19:24:38Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2042,
+  "diagnosedAt": "2026-02-19T19:37:39.567Z"
+}

@@ -1,0 +1,18 @@
+{
+  "ecosystem": "npm",
+  "package": "@vitejs/plugin-react",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "yyx990803",
+    "patak",
+    "antfu",
+    "vitebot"
+  ],
+  "lastCommitDate": "2026-02-17T21:05:03Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1692,
+  "diagnosedAt": "2026-02-19T19:37:09.983Z"
+}

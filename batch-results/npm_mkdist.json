@@ -1,0 +1,16 @@
+{
+  "ecosystem": "npm",
+  "package": "mkdist",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "pi0",
+    "danielroe"
+  ],
+  "lastCommitDate": "2026-02-17T18:28:58Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1892,
+  "diagnosedAt": "2026-02-19T19:37:18.989Z"
+}

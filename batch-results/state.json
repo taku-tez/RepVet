@@ -1,5 +1,5 @@
 {
-  "currentIndex": 1340,
+  "currentIndex": 1360,
   "totalPackages": 4957,
   "results": [
     {
@@ -32598,6 +32598,409 @@
       },
       "executionTimeMs": 3933,
       "diagnosedAt": "2026-02-19T19:32:51.489Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "vitest",
+      "score": 85,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "1 critical vulnerability(ies) in history",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "antfu",
+        "patak",
+        "oreanno",
+        "yyx990803",
+        "vitestbot"
+      ],
+      "lastCommitDate": "2026-02-19T17:16:40Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 1,
+        "critical": 1,
+        "high": 0,
+        "recent": 0,
+        "hasUnfixed": true
+      },
+      "executionTimeMs": 2320,
+      "diagnosedAt": "2026-02-19T19:37:08.291Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@vitejs/plugin-react",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "yyx990803",
+        "patak",
+        "antfu",
+        "vitebot"
+      ],
+      "lastCommitDate": "2026-02-17T21:05:03Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1692,
+      "diagnosedAt": "2026-02-19T19:37:09.983Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@vitejs/plugin-vue",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "yyx990803",
+        "patak",
+        "antfu",
+        "vitebot",
+        "sxzz"
+      ],
+      "lastCommitDate": "2026-02-19T09:10:16Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1699,
+      "diagnosedAt": "2026-02-19T19:37:11.683Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "esbuild",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "esbuild"
+      ],
+      "lastCommitDate": "2026-02-05T22:03:53Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 1,
+        "critical": 0,
+        "high": 0,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1723,
+      "diagnosedAt": "2026-02-19T19:37:13.407Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "tsup",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "egoist",
+        "sxzz"
+      ],
+      "lastCommitDate": "2025-12-01T01:10:23Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 1,
+        "critical": 0,
+        "high": 0,
+        "recent": 1,
+        "hasUnfixed": true
+      },
+      "executionTimeMs": 1743,
+      "diagnosedAt": "2026-02-19T19:37:15.151Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "unbuild",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "pi0",
+        "danielroe"
+      ],
+      "lastCommitDate": "2026-02-12T12:36:54Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1946,
+      "diagnosedAt": "2026-02-19T19:37:17.097Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "mkdist",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "pi0",
+        "danielroe"
+      ],
+      "lastCommitDate": "2026-02-17T18:28:58Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1892,
+      "diagnosedAt": "2026-02-19T19:37:18.989Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "nitropack",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "pi0"
+      ],
+      "lastCommitDate": "2026-02-19T18:05:33Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2104,
+      "diagnosedAt": "2026-02-19T19:37:21.093Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "parcel",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "devongovett"
+      ],
+      "lastCommitDate": "2026-02-17T16:45:09Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2763,
+      "diagnosedAt": "2026-02-19T19:37:23.857Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@parcel/core",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "devongovett"
+      ],
+      "lastCommitDate": "2026-02-17T16:45:09Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2360,
+      "diagnosedAt": "2026-02-19T19:37:26.217Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@parcel/config-default",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "devongovett"
+      ],
+      "lastCommitDate": "2026-02-17T16:45:09Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2366,
+      "diagnosedAt": "2026-02-19T19:37:28.584Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "snowpack",
+      "score": 90,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Last commit over 2 years ago (3 years)",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "fredkschott",
+        "matthewp",
+        "drewpowers"
+      ],
+      "lastCommitDate": "2023-03-05T16:10:07Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2706,
+      "diagnosedAt": "2026-02-19T19:37:31.290Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@snowpack/plugin-typescript",
+      "score": 90,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Last commit over 2 years ago (3 years)",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "fredkschott",
+        "drewpowers"
+      ],
+      "lastCommitDate": "2023-03-05T16:10:07Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 3233,
+      "diagnosedAt": "2026-02-19T19:37:34.938Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "wmr",
+      "score": 95,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Last commit over 1 year ago (702 days)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "rschristian",
+        "marvinhagemeister",
+        "jdecroock",
+        "developit"
+      ],
+      "lastCommitDate": "2024-03-19T07:13:38Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2586,
+      "diagnosedAt": "2026-02-19T19:37:37.524Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "microbundle",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "smoljsteam",
+        "developit",
+        "andarist",
+        "harmony"
+      ],
+      "lastCommitDate": "2026-02-01T19:24:38Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2042,
+      "diagnosedAt": "2026-02-19T19:37:39.567Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "tsdx",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "jaredpalmer"
+      ],
+      "lastCommitDate": "2026-02-09T21:57:35Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2039,
+      "diagnosedAt": "2026-02-19T19:37:41.607Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "dts-cli",
+      "score": 95,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "weiran.zsd"
+      ],
+      "lastCommitDate": "2026-02-19T12:54:15Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2477,
+      "diagnosedAt": "2026-02-19T19:37:44.084Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "jest",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "aaronabramov",
+        "simenb",
+        "rickhanlonii",
+        "openjs-operations",
+        "cpojer"
+      ],
+      "lastCommitDate": "2026-02-19T18:39:33Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1656,
+      "diagnosedAt": "2026-02-19T19:37:45.741Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "jest-cli",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "aaronabramov",
+        "simenb",
+        "rickhanlonii",
+        "openjs-operations",
+        "cpojer"
+      ],
+      "lastCommitDate": "2026-02-19T18:39:33Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1727,
+      "diagnosedAt": "2026-02-19T19:37:47.468Z"
     }
   ],
   "errors": [
@@ -32948,6 +33351,12 @@
       "package": "phonegap-cli",
       "error": "Exit code 1: {\"error\":\"Error: Package not found: phonegap-cli (npm)\"}\n",
       "timestamp": "2026-02-19T19:32:33.438Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@snowpack/plugin-react",
+      "error": "Exit code 1: {\"error\":\"Error: Package not found: @snowpack/plugin-react (npm)\"}\n",
+      "timestamp": "2026-02-19T19:37:31.705Z"
     }
   ],
   "startTime": "2026-02-19T12:29:21.598Z"

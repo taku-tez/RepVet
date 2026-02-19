@@ -1,0 +1,23 @@
+{
+  "ecosystem": "npm",
+  "package": "tsup",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "egoist",
+    "sxzz"
+  ],
+  "lastCommitDate": "2025-12-01T01:10:23Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 1,
+    "critical": 0,
+    "high": 0,
+    "recent": 1,
+    "hasUnfixed": true
+  },
+  "executionTimeMs": 1743,
+  "diagnosedAt": "2026-02-19T19:37:15.151Z"
+}

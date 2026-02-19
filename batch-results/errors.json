@@ -346,5 +346,11 @@
     "package": "phonegap-cli",
     "error": "Exit code 1: {\"error\":\"Error: Package not found: phonegap-cli (npm)\"}\n",
     "timestamp": "2026-02-19T19:32:33.438Z"
+  },
+  {
+    "ecosystem": "npm",
+    "package": "@snowpack/plugin-react",
+    "error": "Exit code 1: {\"error\":\"Error: Package not found: @snowpack/plugin-react (npm)\"}\n",
+    "timestamp": "2026-02-19T19:37:31.705Z"
   }
 ]

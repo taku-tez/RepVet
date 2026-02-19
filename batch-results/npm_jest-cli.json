@@ -1,6 +1,6 @@
 {
   "ecosystem": "npm",
-  "package": "jest",
+  "package": "jest-cli",
   "score": 100,
   "riskLevel": "LOW",
   "deductions": [],
@@ -14,6 +14,6 @@
   "lastCommitDate": "2026-02-19T18:39:33Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
-  "executionTimeMs": 1656,
-  "diagnosedAt": "2026-02-19T19:37:45.741Z"
+  "executionTimeMs": 1727,
+  "diagnosedAt": "2026-02-19T19:37:47.468Z"
 }

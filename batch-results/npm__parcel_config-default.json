@@ -1,6 +1,6 @@
 {
   "ecosystem": "npm",
-  "package": "parcel",
+  "package": "@parcel/config-default",
   "score": 97,
   "riskLevel": "LOW",
   "deductions": [
@@ -16,6 +16,6 @@
   "lastCommitDate": "2026-02-17T16:45:09Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
-  "executionTimeMs": 2763,
-  "diagnosedAt": "2026-02-19T19:37:23.857Z"
+  "executionTimeMs": 2366,
+  "diagnosedAt": "2026-02-19T19:37:28.584Z"
 }
