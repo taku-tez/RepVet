@@ -1,0 +1,18 @@
+{
+  "ecosystem": "npm",
+  "package": "@babel/core",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "hzoo",
+    "existentialism",
+    "nicolo-ribaudo",
+    "jlhwung"
+  ],
+  "lastCommitDate": "2026-02-17T12:59:34Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2282,
+  "diagnosedAt": "2026-02-19T11:20:17.908Z"
+}

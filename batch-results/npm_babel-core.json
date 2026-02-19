@@ -1,0 +1,17 @@
+{
+  "ecosystem": "npm",
+  "package": "babel-core",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "hzoo",
+    "loganfsmyth",
+    "existentialism"
+  ],
+  "lastCommitDate": "2026-02-17T12:59:34Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1778,
+  "diagnosedAt": "2026-02-19T11:20:15.626Z"
+}

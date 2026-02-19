@@ -1,0 +1,28 @@
+{
+  "ecosystem": "npm",
+  "package": "esbuild",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "esbuild"
+  ],
+  "lastCommitDate": "2026-02-05T22:03:53Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 1,
+    "critical": 0,
+    "high": 0,
+    "recent": 0,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 2297,
+  "diagnosedAt": "2026-02-19T11:20:20.206Z"
+}

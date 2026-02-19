@@ -1,0 +1,19 @@
+{
+  "ecosystem": "npm",
+  "package": "less",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "matthew-dean",
+    "cloudhead",
+    "meri",
+    "seven-phases-max",
+    "lukeapage"
+  ],
+  "lastCommitDate": "2026-01-11T21:34:27Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1456,
+  "diagnosedAt": "2026-02-19T11:20:12.171Z"
+}

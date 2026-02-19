@@ -1,0 +1,19 @@
+{
+  "ecosystem": "npm",
+  "package": "stylus",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "panya",
+    "kizu",
+    "xdan",
+    "tjholowaychuk",
+    "ichenlei"
+  ],
+  "lastCommitDate": "2025-04-24T08:55:36Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1676,
+  "diagnosedAt": "2026-02-19T11:20:13.848Z"
+}

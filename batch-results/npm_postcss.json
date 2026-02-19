@@ -1,0 +1,28 @@
+{
+  "ecosystem": "npm",
+  "package": "postcss",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "ai"
+  ],
+  "lastCommitDate": "2026-02-18T15:05:25Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 3,
+    "critical": 0,
+    "high": 0,
+    "recent": 0,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 1763,
+  "diagnosedAt": "2026-02-19T11:20:08.920Z"
+}

@@ -1,0 +1,17 @@
+{
+  "ecosystem": "npm",
+  "package": "tailwindcss",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "malfaitrobin",
+    "adamwathan",
+    "reinink"
+  ],
+  "lastCommitDate": "2026-02-18T14:45:45Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2089,
+  "diagnosedAt": "2026-02-19T11:20:07.157Z"
+}
