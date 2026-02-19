@@ -15,7 +15,7 @@
       "confidence": "high"
     },
     {
-      "reason": "Last commit over 1 year ago (437 days)",
+      "reason": "Last commit over 1 year ago (438 days)",
       "points": 5,
       "confidence": "high"
     }
@@ -28,6 +28,6 @@
   "lastCommitDate": "2024-12-08T15:50:22Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
-  "executionTimeMs": 2081,
-  "diagnosedAt": "2026-02-19T14:52:17.006Z"
+  "executionTimeMs": 1425,
+  "diagnosedAt": "2026-02-19T21:57:36.493Z"
 }
