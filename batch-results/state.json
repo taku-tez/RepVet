@@ -1,5 +1,5 @@
 {
-  "currentIndex": 60,
+  "currentIndex": 80,
   "totalPackages": 4957,
   "results": [
     {
@@ -1640,6 +1640,662 @@
       },
       "executionTimeMs": 2534,
       "diagnosedAt": "2026-02-19T13:01:03.970Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "apollo-server",
+      "score": 77,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Package deprecated: The `apollo-server` package is part of Apollo Server v2 and v3, which are now end-of-life (as of Oct...",
+          "points": 10,
+          "confidence": "high"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "2 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "apollo-bot"
+      ],
+      "lastCommitDate": "2026-02-16T22:09:37Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 4,
+        "critical": 0,
+        "high": 2,
+        "recent": 1,
+        "hasUnfixed": true
+      },
+      "executionTimeMs": 1392,
+      "diagnosedAt": "2026-02-19T13:02:27.786Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "urql",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "sarmeyer",
+        "mariano-formidable",
+        "ryan.roemer",
+        "formidable-owner",
+        "formidablelabs",
+        "sarahformidable",
+        "ceceppa",
+        "keithluchtel",
+        "philpl",
+        "andyrichardson",
+        "jdecroock",
+        "parkerziegler",
+        "npm-urql",
+        "thekenwheeler"
+      ],
+      "lastCommitDate": "2026-02-03T03:53:33Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1743,
+      "diagnosedAt": "2026-02-19T13:02:29.529Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "relay",
+      "score": 80,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 3 years ago (12 years)",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "fb"
+      ],
+      "lastCommitDate": "2014-02-14T12:51:32Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1193,
+      "diagnosedAt": "2026-02-19T13:02:30.723Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "strapi",
+      "score": 50,
+      "riskLevel": "HIGH",
+      "deductions": [
+        {
+          "reason": "Package deprecated: Strapi V3 is no longer maintained",
+          "points": 10,
+          "confidence": "high"
+        },
+        {
+          "reason": "Complete maintainer change in 15 days (3.0.0-alpha.13)",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "3 critical vulnerability(ies) in history",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "6 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "pierreburgy",
+        "aurelsicoko",
+        "alexandrebodin",
+        "convly",
+        "nico-strapi",
+        "strapi.adzouz",
+        "baronvoninternet",
+        "marc-roig-strapi",
+        "jhoward1994",
+        "bassel17",
+        "cache-your-dreams"
+      ],
+      "lastCommitDate": "2026-02-19T10:46:32Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 12,
+        "critical": 3,
+        "high": 6,
+        "recent": 0,
+        "hasUnfixed": true
+      },
+      "executionTimeMs": 1637,
+      "diagnosedAt": "2026-02-19T13:02:32.360Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "directus",
+      "score": 87,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "2 critical vulnerability(ies) in history",
+          "points": 8,
+          "confidence": "low"
+        },
+        {
+          "reason": "17 vulnerabilities in the past year",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "benhaynes",
+        "rijk"
+      ],
+      "lastCommitDate": "2026-02-19T12:06:22Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 45,
+        "critical": 2,
+        "high": 11,
+        "recent": 17,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 4336,
+      "diagnosedAt": "2026-02-19T13:02:36.696Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "payload",
+      "score": 75,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "1 critical vulnerability(ies) in history",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "jmikrut",
+        "payloadjs",
+        "elliotpayload"
+      ],
+      "lastCommitDate": "2026-02-19T07:30:15Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 5,
+        "critical": 1,
+        "high": 1,
+        "recent": 3,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 2433,
+      "diagnosedAt": "2026-02-19T13:02:39.129Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "keystone",
+      "score": 90,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "3 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "dominikwilkowski",
+        "jedwatson",
+        "mxstbr",
+        "noviny"
+      ],
+      "lastCommitDate": "2026-02-17T17:22:38Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 5,
+        "critical": 0,
+        "high": 3,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1554,
+      "diagnosedAt": "2026-02-19T13:02:40.683Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "ghost",
+      "score": 92,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "3 critical vulnerability(ies) in history",
+          "points": 8,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "zimoatghost",
+        "allouis",
+        "kernalghost",
+        "chrisraible",
+        "erisds",
+        "johnonolan",
+        "kevinansfield",
+        "cobbspur",
+        "aileencgn",
+        "jloh",
+        "minimaluminium",
+        "sam-lord",
+        "pauladamdavis",
+        "bobvaneck",
+        "joeegrigg",
+        "hadret",
+        "jonhickman",
+        "erik-ghost",
+        "sagzy",
+        "vershwal",
+        "mike182uk",
+        "lsinger",
+        "rblstr-ghost",
+        "evanhahn-ghost",
+        "weylandswart",
+        "ghost-slimer",
+        "tmciesco",
+        "jonatan-ghost",
+        "9larsons",
+        "kirrg001"
+      ],
+      "lastCommitDate": "2026-02-19T13:01:24Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 22,
+        "critical": 3,
+        "high": 7,
+        "recent": 7,
+        "hasUnfixed": true
+      },
+      "executionTimeMs": 3343,
+      "diagnosedAt": "2026-02-19T13:02:44.026Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "electron",
+      "score": 92,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "2 critical vulnerability(ies) in history",
+          "points": 8,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "electronhq",
+        "electron-nightly"
+      ],
+      "lastCommitDate": "2026-02-19T13:01:00Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 30,
+        "critical": 2,
+        "high": 13,
+        "recent": 3,
+        "hasUnfixed": true
+      },
+      "executionTimeMs": 3354,
+      "diagnosedAt": "2026-02-19T13:02:47.380Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "tauri",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "nothingismagick",
+        "lucasfernog",
+        "tauri-apps-ci-user"
+      ],
+      "lastCommitDate": "2026-02-18T20:58:54Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1467,
+      "diagnosedAt": "2026-02-19T13:02:48.847Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "nw",
+      "score": 90,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "rogerwang",
+        "ayushmxn"
+      ],
+      "lastCommitDate": "2026-02-17T08:00:39Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 1,
+        "critical": 0,
+        "high": 1,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1784,
+      "diagnosedAt": "2026-02-19T13:02:50.631Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "ionic",
+      "score": 90,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Package deprecated: The Ionic CLI now uses ✨ @ionic/cli ✨ for its package name! 👉 https://twitter.com/ionicframework/st...",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "ionicjs",
+        "jcesarmobile"
+      ],
+      "lastCommitDate": "2026-01-22T11:38:49Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1552,
+      "diagnosedAt": "2026-02-19T13:02:52.183Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "cordova",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "brodybits",
+        "dpogue",
+        "cordovaowner",
+        "stevegill",
+        "purplecabbage",
+        "anis",
+        "filmaj",
+        "bowserj",
+        "shazron",
+        "surajpindoria",
+        "erisu",
+        "niklasmerz",
+        "janpio",
+        "normanbreau",
+        "pvpoyer",
+        "shepheb",
+        "bennmapes",
+        "agrieve",
+        "mmocny",
+        "kamrik",
+        "sgrebnov",
+        "kotikov.vladimir",
+        "cmarcelk",
+        "bhiggins",
+        "brianleroux",
+        "mwbrooks",
+        "apachebuilds",
+        "timbarham"
+      ],
+      "lastCommitDate": "2026-02-03T19:52:03Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2028,
+      "diagnosedAt": "2026-02-19T13:02:54.211Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "phonegap",
+      "score": 60,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Package deprecated: This package is deprecated, see https://blog.phonegap.com/update-for-customers-using-phonegap-and-ph...",
+          "points": 10,
+          "confidence": "high"
+        },
+        {
+          "reason": "Repository is archived (no longer maintained)",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 3 years ago (4 years)",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "filmaj",
+        "surajpindoria",
+        "hermwong",
+        "devgeeks",
+        "purplecabbage",
+        "timkim",
+        "stevegill",
+        "macdonst"
+      ],
+      "lastCommitDate": "2022-04-09T16:44:55Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1369,
+      "diagnosedAt": "2026-02-19T13:02:55.580Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "capacitor",
+      "score": 85,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 2 years ago (2 years)",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "miklschmidt"
+      ],
+      "lastCommitDate": "2023-08-29T14:14:46Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1840,
+      "diagnosedAt": "2026-02-19T13:02:57.420Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "expo",
+      "score": 70,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Complete maintainer change in 0 days (51.0.17)",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "1 critical vulnerability(ies) in history",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "ide",
+        "brentvatne",
+        "evanbacon",
+        "expoadmin",
+        "exponent",
+        "bycedric",
+        "kudochien",
+        "alanhughes",
+        "expo-bot",
+        "wschurman"
+      ],
+      "lastCommitDate": "2026-02-19T13:00:52Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 2,
+        "critical": 1,
+        "high": 0,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1229,
+      "diagnosedAt": "2026-02-19T13:02:58.650Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "react-native",
+      "score": 90,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "react-native-bot",
+        "fb",
+        "lunaleaps",
+        "eliwhite",
+        "yungsters",
+        "cortinico",
+        "fkgozali"
+      ],
+      "lastCommitDate": "2026-02-19T13:00:05Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 1,
+        "critical": 0,
+        "high": 1,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 2795,
+      "diagnosedAt": "2026-02-19T13:03:01.445Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "flutter",
+      "score": 85,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Last commit over 3 years ago (8 years)",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "simontabor",
+        "jt"
+      ],
+      "lastCommitDate": "2017-12-10T00:52:14Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1947,
+      "diagnosedAt": "2026-02-19T13:03:03.392Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "playwright",
+      "score": 90,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "pavelfeldman",
+        "yurys",
+        "dgozman-ms",
+        "playwright-bot"
+      ],
+      "lastCommitDate": "2026-02-19T08:44:50Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 1,
+        "critical": 0,
+        "high": 1,
+        "recent": 1,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 3628,
+      "diagnosedAt": "2026-02-19T13:03:07.020Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "puppeteer",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "mathias",
+        "google-wombot"
+      ],
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 1,
+        "critical": 0,
+        "high": 0,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1179,
+      "diagnosedAt": "2026-02-19T13:03:08.200Z"
     }
   ],
   "errors": [],
