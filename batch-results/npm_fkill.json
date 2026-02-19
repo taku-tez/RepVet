@@ -1,0 +1,21 @@
+{
+  "ecosystem": "npm",
+  "package": "fkill",
+  "score": 95,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "sindresorhus"
+  ],
+  "lastCommitDate": "2026-01-14T16:02:46Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1904,
+  "diagnosedAt": "2026-02-19T15:27:17.932Z"
+}

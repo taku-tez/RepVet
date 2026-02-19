@@ -1,0 +1,21 @@
+{
+  "ecosystem": "npm",
+  "package": "os-name",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "sindresorhus"
+  ],
+  "lastCommitDate": "2026-02-02T15:03:15Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2243,
+  "diagnosedAt": "2026-02-19T15:27:25.745Z"
+}

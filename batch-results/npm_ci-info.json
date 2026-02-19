@@ -1,0 +1,16 @@
+{
+  "ecosystem": "npm",
+  "package": "ci-info",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "watson",
+    "sibiraj-s"
+  ],
+  "lastCommitDate": "2026-01-29T16:22:52Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1757,
+  "diagnosedAt": "2026-02-19T15:27:38.357Z"
+}

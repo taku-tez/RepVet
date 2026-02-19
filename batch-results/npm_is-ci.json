@@ -1,0 +1,22 @@
+{
+  "ecosystem": "npm",
+  "package": "is-ci",
+  "score": 95,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Last commit over 1 year ago (438 days)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "watson",
+    "sibiraj-s"
+  ],
+  "lastCommitDate": "2024-12-08T08:22:17Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1745,
+  "diagnosedAt": "2026-02-19T15:27:36.599Z"
+}

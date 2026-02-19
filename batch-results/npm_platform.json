@@ -1,0 +1,28 @@
+{
+  "ecosystem": "npm",
+  "package": "platform",
+  "score": 75,
+  "riskLevel": "MEDIUM",
+  "deductions": [
+    {
+      "reason": "Repository is archived (no longer maintained)",
+      "points": 15,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 2 years ago (2 years)",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "mathias",
+    "jdalton",
+    "bnjmnt4n"
+  ],
+  "lastCommitDate": "2023-09-29T05:09:38Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2098,
+  "diagnosedAt": "2026-02-19T15:27:29.700Z"
+}

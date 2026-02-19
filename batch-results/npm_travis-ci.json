@@ -1,0 +1,22 @@
+{
+  "ecosystem": "npm",
+  "package": "travis-ci",
+  "score": 85,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Last commit over 3 years ago (6 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "ljharb",
+    "pwmckenna"
+  ],
+  "lastCommitDate": "2020-07-15T19:53:07Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2713,
+  "diagnosedAt": "2026-02-19T15:27:47.147Z"
+}

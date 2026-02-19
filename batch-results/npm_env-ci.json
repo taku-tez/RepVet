@@ -1,0 +1,24 @@
+{
+  "ecosystem": "npm",
+  "package": "env-ci",
+  "score": 89,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Complete maintainer change in 11 days (1.7.0)",
+      "points": 11,
+      "confidence": "medium"
+    }
+  ],
+  "maintainers": [
+    "pvdlg",
+    "semantic-release-bot",
+    "gr2m",
+    "travi"
+  ],
+  "lastCommitDate": "2026-02-16T04:29:30Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1756,
+  "diagnosedAt": "2026-02-19T15:27:40.113Z"
+}
