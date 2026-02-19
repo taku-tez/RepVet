@@ -1,0 +1,32 @@
+{
+  "ecosystem": "npm",
+  "package": "redis",
+  "score": 90,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "1 high severity vulnerability(ies) in history",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "bobymicroby",
+    "dmaier-redislabs",
+    "htemelski-redis",
+    "elena-redis",
+    "nkaradzhov"
+  ],
+  "lastCommitDate": "2026-02-16T14:35:46Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 1,
+    "critical": 0,
+    "high": 1,
+    "recent": 0,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 1836,
+  "diagnosedAt": "2026-02-19T13:12:41.570Z"
+}

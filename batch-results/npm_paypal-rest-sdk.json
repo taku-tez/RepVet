@@ -1,0 +1,47 @@
+{
+  "ecosystem": "npm",
+  "package": "paypal-rest-sdk",
+  "score": 90,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Package deprecated: Package no longer supported. The author suggests using the @paypal/paypal-server-sdk package instead...",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "sdk-integrations-npm",
+    "sioked",
+    "paypal-sdks",
+    "braintree",
+    "seavenly",
+    "jfurman",
+    "ravishekhar00",
+    "gregjopa",
+    "mnicpt",
+    "elizabethmv",
+    "nbierdeman",
+    "remotevision",
+    "rygilbert_paypal",
+    "rosman21",
+    "wsbrunson",
+    "yanisimov_paypal",
+    "avathalurin",
+    "gseguin",
+    "dustijones",
+    "sunnypatel",
+    "bywood",
+    "ppeeleniz",
+    "supremar",
+    "imbrian-paypal",
+    "cnallam",
+    "gabrielg-paypal",
+    "augreer8",
+    "bluepnume"
+  ],
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1859,
+  "diagnosedAt": "2026-02-19T13:12:19.796Z"
+}

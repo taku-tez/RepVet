@@ -1,0 +1,24 @@
+{
+  "ecosystem": "npm",
+  "package": "firebase-admin",
+  "score": 89,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer replaced at 4.0.0",
+      "points": 11,
+      "confidence": "medium"
+    }
+  ],
+  "maintainers": [
+    "firebase-ops",
+    "feiyang.chen",
+    "google-wombot",
+    "chholland"
+  ],
+  "lastCommitDate": "2026-02-19T05:15:30Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1747,
+  "diagnosedAt": "2026-02-19T13:12:37.765Z"
+}

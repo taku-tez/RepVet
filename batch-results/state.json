@@ -1,5 +1,5 @@
 {
-  "currentIndex": 120,
+  "currentIndex": 140,
   "totalPackages": 4957,
   "results": [
     {
@@ -3227,6 +3227,544 @@
       "hasMalwareHistory": false,
       "executionTimeMs": 1628,
       "diagnosedAt": "2026-02-19T13:07:50.825Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "newrelic",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "newrelic"
+      ],
+      "lastCommitDate": "2026-02-19T13:10:26Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2224,
+      "diagnosedAt": "2026-02-19T13:12:08.509Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "appdynamics",
+      "score": 67,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "Repository is archived (no longer maintained)",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 3 years ago (6 years)",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "appdynamics"
+      ],
+      "lastCommitDate": "2020-08-07T14:31:21Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2553,
+      "diagnosedAt": "2026-02-19T13:12:11.062Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "dynatrace",
+      "score": 65,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Package deprecated: Package no longer supported. Contact support@npmjs.com for more info.",
+          "points": 10,
+          "confidence": "high"
+        },
+        {
+          "reason": "Single maintainer replaced at 1.0.0",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 1 year ago (716 days)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "npm"
+      ],
+      "lastCommitDate": "2024-03-04T15:30:44Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2055,
+      "diagnosedAt": "2026-02-19T13:12:13.118Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "stripe",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "stripe-bindings"
+      ],
+      "lastCommitDate": "2026-02-18T23:06:30Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1909,
+      "diagnosedAt": "2026-02-19T13:12:15.028Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@stripe/stripe-js",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "rado-stripe",
+        "bmathews-stripe",
+        "cbala-stripe",
+        "dodgez-stripe",
+        "bdaily-stripe",
+        "rvolyar-stripe",
+        "tjliu-stripe",
+        "alic-stripe"
+      ],
+      "lastCommitDate": "2026-02-18T21:14:37Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2909,
+      "diagnosedAt": "2026-02-19T13:12:17.937Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "paypal-rest-sdk",
+      "score": 90,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Package deprecated: Package no longer supported. The author suggests using the @paypal/paypal-server-sdk package instead...",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "sdk-integrations-npm",
+        "sioked",
+        "paypal-sdks",
+        "braintree",
+        "seavenly",
+        "jfurman",
+        "ravishekhar00",
+        "gregjopa",
+        "mnicpt",
+        "elizabethmv",
+        "nbierdeman",
+        "remotevision",
+        "rygilbert_paypal",
+        "rosman21",
+        "wsbrunson",
+        "yanisimov_paypal",
+        "avathalurin",
+        "gseguin",
+        "dustijones",
+        "sunnypatel",
+        "bywood",
+        "ppeeleniz",
+        "supremar",
+        "imbrian-paypal",
+        "cnallam",
+        "gabrielg-paypal",
+        "augreer8",
+        "bluepnume"
+      ],
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1859,
+      "diagnosedAt": "2026-02-19T13:12:19.796Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "braintree",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "braintree"
+      ],
+      "lastCommitDate": "2026-02-02T20:36:54Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2589,
+      "diagnosedAt": "2026-02-19T13:12:22.386Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "square",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "jguze-sq",
+        "joanc",
+        "square-owner",
+        "adrw",
+        "square-developers",
+        "matahwoosh",
+        "hirokiosame",
+        "dpapastrat",
+        "plinio-square",
+        "linnea",
+        "pretzelhammer",
+        "alexandersmanning",
+        "amoghk",
+        "akolyte01",
+        "devonsquare",
+        "artemchubaryan",
+        "mikekono",
+        "block-oss-releases",
+        "jessiedlcs",
+        "lindy0820",
+        "xsquared",
+        "jffsquare"
+      ],
+      "lastCommitDate": "2026-02-11T00:19:36Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2113,
+      "diagnosedAt": "2026-02-19T13:12:24.499Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "adyen",
+      "score": 75,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Package deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.",
+          "points": 10,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 3 years ago (5 years)",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "hekike",
+        "seb0zz"
+      ],
+      "lastCommitDate": "2020-09-22T15:01:41Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1961,
+      "diagnosedAt": "2026-02-19T13:12:26.460Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "checkout-sdk-node",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "integration-cko"
+      ],
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1526,
+      "diagnosedAt": "2026-02-19T13:12:27.986Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "aws-sdk",
+      "score": 79,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Complete maintainer change in 2 days (2.103.0)",
+          "points": 11,
+          "confidence": "medium"
+        },
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "amzn-oss",
+        "aws-sdk-bot"
+      ],
+      "lastCommitDate": "2025-12-09T19:22:54Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 2,
+        "critical": 0,
+        "high": 1,
+        "recent": 1,
+        "hasUnfixed": true
+      },
+      "executionTimeMs": 2110,
+      "diagnosedAt": "2026-02-19T13:12:30.096Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@aws-sdk/client-s3",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "amzn-oss",
+        "aws-sdk-bot"
+      ],
+      "lastCommitDate": "2026-02-19T05:17:33Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1959,
+      "diagnosedAt": "2026-02-19T13:12:32.055Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "azure-storage",
+      "score": 80,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Package deprecated: Please note: newer packages @azure/storage-blob, @azure/storage-queue and @azure/storage-file are av...",
+          "points": 10,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 2 years ago (3 years)",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "azure-sdk",
+        "windowsazure"
+      ],
+      "lastCommitDate": "2023-07-18T23:08:32Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1967,
+      "diagnosedAt": "2026-02-19T13:12:34.022Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@google-cloud/storage",
+      "score": 86,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Complete maintainer change in 29 days (1.1.1)",
+          "points": 11,
+          "confidence": "medium"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "google-wombot"
+      ],
+      "lastCommitDate": "2026-02-19T07:55:32Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1996,
+      "diagnosedAt": "2026-02-19T13:12:36.018Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "firebase-admin",
+      "score": 89,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer replaced at 4.0.0",
+          "points": 11,
+          "confidence": "medium"
+        }
+      ],
+      "maintainers": [
+        "firebase-ops",
+        "feiyang.chen",
+        "google-wombot",
+        "chholland"
+      ],
+      "lastCommitDate": "2026-02-19T05:15:30Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1747,
+      "diagnosedAt": "2026-02-19T13:12:37.765Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "supabase",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "kiwicopple",
+        "etienne_supa"
+      ],
+      "lastCommitDate": "2026-02-19T12:37:34Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1968,
+      "diagnosedAt": "2026-02-19T13:12:39.733Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "redis",
+      "score": 90,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "bobymicroby",
+        "dmaier-redislabs",
+        "htemelski-redis",
+        "elena-redis",
+        "nkaradzhov"
+      ],
+      "lastCommitDate": "2026-02-16T14:35:46Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 1,
+        "critical": 0,
+        "high": 1,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1836,
+      "diagnosedAt": "2026-02-19T13:12:41.570Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "ioredis",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "ioredis-robot",
+        "dmaier-redislabs"
+      ],
+      "lastCommitDate": "2026-02-12T14:42:35Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2808,
+      "diagnosedAt": "2026-02-19T13:12:44.379Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "mongodb",
+      "score": 90,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "dariakp",
+        "dbx-node"
+      ],
+      "lastCommitDate": "2026-02-19T12:25:30Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 2,
+        "critical": 0,
+        "high": 1,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1969,
+      "diagnosedAt": "2026-02-19T13:12:46.348Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "mongoose",
+      "score": 75,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "5 critical vulnerability(ies) in history",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "aaron",
+        "rauchg",
+        "tjholowaychuk",
+        "vkarpov15"
+      ],
+      "lastCommitDate": "2026-02-19T01:01:34Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 7,
+        "critical": 5,
+        "high": 1,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1570,
+      "diagnosedAt": "2026-02-19T13:12:47.919Z"
     }
   ],
   "errors": [],

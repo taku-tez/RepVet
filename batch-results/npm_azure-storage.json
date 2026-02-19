@@ -1,0 +1,27 @@
+{
+  "ecosystem": "npm",
+  "package": "azure-storage",
+  "score": 80,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Package deprecated: Please note: newer packages @azure/storage-blob, @azure/storage-queue and @azure/storage-file are av...",
+      "points": 10,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 2 years ago (3 years)",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "azure-sdk",
+    "windowsazure"
+  ],
+  "lastCommitDate": "2023-07-18T23:08:32Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1967,
+  "diagnosedAt": "2026-02-19T13:12:34.022Z"
+}

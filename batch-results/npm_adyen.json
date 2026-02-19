@@ -1,0 +1,27 @@
+{
+  "ecosystem": "npm",
+  "package": "adyen",
+  "score": 75,
+  "riskLevel": "MEDIUM",
+  "deductions": [
+    {
+      "reason": "Package deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.",
+      "points": 10,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 3 years ago (5 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "hekike",
+    "seb0zz"
+  ],
+  "lastCommitDate": "2020-09-22T15:01:41Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1961,
+  "diagnosedAt": "2026-02-19T13:12:26.460Z"
+}

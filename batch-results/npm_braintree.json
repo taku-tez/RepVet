@@ -1,0 +1,21 @@
+{
+  "ecosystem": "npm",
+  "package": "braintree",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "braintree"
+  ],
+  "lastCommitDate": "2026-02-02T20:36:54Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2589,
+  "diagnosedAt": "2026-02-19T13:12:22.386Z"
+}

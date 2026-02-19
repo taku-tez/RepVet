@@ -1,0 +1,26 @@
+{
+  "ecosystem": "npm",
+  "package": "@google-cloud/storage",
+  "score": 86,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Complete maintainer change in 29 days (1.1.1)",
+      "points": 11,
+      "confidence": "medium"
+    },
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "google-wombot"
+  ],
+  "lastCommitDate": "2026-02-19T07:55:32Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1996,
+  "diagnosedAt": "2026-02-19T13:12:36.018Z"
+}

@@ -1,0 +1,21 @@
+{
+  "ecosystem": "npm",
+  "package": "stripe",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "stripe-bindings"
+  ],
+  "lastCommitDate": "2026-02-18T23:06:30Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1909,
+  "diagnosedAt": "2026-02-19T13:12:15.028Z"
+}

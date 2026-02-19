@@ -1,0 +1,29 @@
+{
+  "ecosystem": "npm",
+  "package": "mongodb",
+  "score": 90,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "1 high severity vulnerability(ies) in history",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "dariakp",
+    "dbx-node"
+  ],
+  "lastCommitDate": "2026-02-19T12:25:30Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 2,
+    "critical": 0,
+    "high": 1,
+    "recent": 0,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 1969,
+  "diagnosedAt": "2026-02-19T13:12:46.348Z"
+}

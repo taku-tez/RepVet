@@ -1,0 +1,22 @@
+{
+  "ecosystem": "npm",
+  "package": "@stripe/stripe-js",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "rado-stripe",
+    "bmathews-stripe",
+    "cbala-stripe",
+    "dodgez-stripe",
+    "bdaily-stripe",
+    "rvolyar-stripe",
+    "tjliu-stripe",
+    "alic-stripe"
+  ],
+  "lastCommitDate": "2026-02-18T21:14:37Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2909,
+  "diagnosedAt": "2026-02-19T13:12:17.937Z"
+}
