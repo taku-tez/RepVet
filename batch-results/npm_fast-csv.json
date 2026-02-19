@@ -1,0 +1,24 @@
+{
+  "ecosystem": "npm",
+  "package": "fast-csv",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "dustinsmith1024",
+    "damartin",
+    "juan-c2fo"
+  ],
+  "lastCommitDate": "2026-02-19T13:56:16Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 1,
+    "critical": 0,
+    "high": 0,
+    "recent": 0,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 1919,
+  "diagnosedAt": "2026-02-19T13:57:31.364Z"
+}

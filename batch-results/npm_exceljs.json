@@ -1,0 +1,29 @@
+{
+  "ecosystem": "npm",
+  "package": "exceljs",
+  "score": 95,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Last commit over 1 year ago (393 days)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "guyonroche",
+    "siemienik"
+  ],
+  "lastCommitDate": "2025-01-21T16:00:46Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 1,
+    "critical": 0,
+    "high": 0,
+    "recent": 0,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 2305,
+  "diagnosedAt": "2026-02-19T13:57:38.042Z"
+}

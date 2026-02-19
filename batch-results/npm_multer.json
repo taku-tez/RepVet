@@ -1,0 +1,32 @@
+{
+  "ecosystem": "npm",
+  "package": "multer",
+  "score": 90,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "4 high severity vulnerability(ies) in history",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "ctcpip",
+    "ulisesgascon",
+    "linusu",
+    "hacksparrow",
+    "jpfluger"
+  ],
+  "lastCommitDate": "2026-02-16T09:02:31Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 4,
+    "critical": 0,
+    "high": 4,
+    "recent": 4,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 1925,
+  "diagnosedAt": "2026-02-19T13:57:13.520Z"
+}

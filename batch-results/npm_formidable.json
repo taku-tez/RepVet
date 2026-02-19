@@ -1,0 +1,25 @@
+{
+  "ecosystem": "npm",
+  "package": "formidable",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "felixge",
+    "kornel",
+    "grossacasacs",
+    "tunnckocore",
+    "quantumsheep"
+  ],
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 1,
+    "critical": 0,
+    "high": 0,
+    "recent": 1,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 1709,
+  "diagnosedAt": "2026-02-19T13:57:15.230Z"
+}

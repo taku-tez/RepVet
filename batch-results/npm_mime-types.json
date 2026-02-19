@@ -1,0 +1,19 @@
+{
+  "ecosystem": "npm",
+  "package": "mime-types",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "blakeembrey",
+    "wesleytodd",
+    "dougwilson",
+    "ulisesgascon",
+    "jongleberry"
+  ],
+  "lastCommitDate": "2026-02-01T13:27:55Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2535,
+  "diagnosedAt": "2026-02-19T13:57:25.323Z"
+}

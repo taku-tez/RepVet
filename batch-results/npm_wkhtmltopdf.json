@@ -1,0 +1,22 @@
+{
+  "ecosystem": "npm",
+  "package": "wkhtmltopdf",
+  "score": 90,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Last commit over 2 years ago (3 years)",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "devongovett",
+    "zxlin"
+  ],
+  "lastCommitDate": "2023-03-09T09:29:31Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2288,
+  "diagnosedAt": "2026-02-19T13:57:47.414Z"
+}

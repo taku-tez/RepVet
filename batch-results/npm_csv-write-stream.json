@@ -1,0 +1,24 @@
+{
+  "ecosystem": "npm",
+  "package": "csv-write-stream",
+  "score": 85,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Last commit over 3 years ago (5 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "finnpauls",
+    "mafintosh",
+    "maxogden",
+    "slang"
+  ],
+  "lastCommitDate": "2020-09-02T09:01:29Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2468,
+  "diagnosedAt": "2026-02-19T13:57:29.445Z"
+}

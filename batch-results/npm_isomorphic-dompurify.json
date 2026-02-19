@@ -1,0 +1,21 @@
+{
+  "ecosystem": "npm",
+  "package": "isomorphic-dompurify",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "kkomelin"
+  ],
+  "lastCommitDate": "2026-02-17T10:00:15Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2088,
+  "diagnosedAt": "2026-02-19T13:57:09.279Z"
+}

@@ -16,5 +16,11 @@
     "package": "nlcst",
     "error": "Exit code 1: {\"error\":\"Error: Package not found: nlcst (npm)\"}\n",
     "timestamp": "2026-02-19T13:42:36.498Z"
+  },
+  {
+    "ecosystem": "npm",
+    "package": "playwright-pdf",
+    "error": "Exit code 1: {\"error\":\"Error: Package not found: playwright-pdf (npm)\"}\n",
+    "timestamp": "2026-02-19T13:57:45.126Z"
   }
 ]

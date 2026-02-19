@@ -1,0 +1,29 @@
+{
+  "ecosystem": "npm",
+  "package": "papaparse",
+  "score": 90,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "1 high severity vulnerability(ies) in history",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "mholt",
+    "pokoli"
+  ],
+  "lastCommitDate": "2025-08-20T06:47:43Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 1,
+    "critical": 0,
+    "high": 1,
+    "recent": 0,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 1886,
+  "diagnosedAt": "2026-02-19T13:57:33.250Z"
+}

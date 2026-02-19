@@ -1,0 +1,20 @@
+{
+  "ecosystem": "npm",
+  "package": "puppeteer-pdf",
+  "score": 95,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "madisvain"
+  ],
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1744,
+  "diagnosedAt": "2026-02-19T13:57:44.669Z"
+}

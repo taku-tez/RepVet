@@ -1,0 +1,34 @@
+{
+  "ecosystem": "npm",
+  "package": "express-fileupload",
+  "score": 75,
+  "riskLevel": "MEDIUM",
+  "deductions": [
+    {
+      "reason": "1 critical vulnerability(ies) in history",
+      "points": 15,
+      "confidence": "high"
+    },
+    {
+      "reason": "1 high severity vulnerability(ies) in history",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "richardgirges",
+    "romon2002"
+  ],
+  "lastCommitDate": "2025-07-05T13:33:32Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 3,
+    "critical": 1,
+    "high": 1,
+    "recent": 0,
+    "hasUnfixed": true
+  },
+  "executionTimeMs": 2137,
+  "diagnosedAt": "2026-02-19T13:57:19.150Z"
+}

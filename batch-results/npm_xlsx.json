@@ -1,0 +1,38 @@
+{
+  "ecosystem": "npm",
+  "package": "xlsx",
+  "score": 82,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    },
+    {
+      "reason": "Last commit over 1 year ago (672 days)",
+      "points": 5,
+      "confidence": "high"
+    },
+    {
+      "reason": "2 high severity vulnerability(ies) in history",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "s5s"
+  ],
+  "lastCommitDate": "2024-04-18T08:06:46Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 5,
+    "critical": 0,
+    "high": 2,
+    "recent": 0,
+    "hasUnfixed": true
+  },
+  "executionTimeMs": 2486,
+  "diagnosedAt": "2026-02-19T13:57:35.737Z"
+}
