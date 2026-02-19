@@ -1,6 +1,6 @@
 {
   "ecosystem": "npm",
-  "package": "ava",
+  "package": "@ava/typescript",
   "score": 100,
   "riskLevel": "LOW",
   "deductions": [],
@@ -8,9 +8,9 @@
     "sindresorhus",
     "novemberborn"
   ],
-  "lastCommitDate": "2025-11-05T15:56:47Z",
+  "lastCommitDate": "2025-06-17T19:43:33Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
-  "executionTimeMs": 1895,
-  "diagnosedAt": "2026-02-19T19:52:14.987Z"
+  "executionTimeMs": 1887,
+  "diagnosedAt": "2026-02-19T19:52:19.165Z"
 }

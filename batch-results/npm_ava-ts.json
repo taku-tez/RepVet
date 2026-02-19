@@ -1,0 +1,31 @@
+{
+  "ecosystem": "npm",
+  "package": "ava-ts",
+  "score": 65,
+  "riskLevel": "MEDIUM",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    },
+    {
+      "reason": "Repository is archived (no longer maintained)",
+      "points": 15,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 3 years ago (6 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "andywer"
+  ],
+  "lastCommitDate": "2020-07-21T12:35:19Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2290,
+  "diagnosedAt": "2026-02-19T19:52:17.277Z"
+}

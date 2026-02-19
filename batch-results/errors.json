@@ -352,5 +352,29 @@
     "package": "@snowpack/plugin-react",
     "error": "Exit code 1: {\"error\":\"Error: Package not found: @snowpack/plugin-react (npm)\"}\n",
     "timestamp": "2026-02-19T19:37:31.705Z"
+  },
+  {
+    "ecosystem": "npm",
+    "package": "uvu-sinon",
+    "error": "Exit code 1: {\"error\":\"Error: Package not found: uvu-sinon (npm)\"}\n",
+    "timestamp": "2026-02-19T19:52:32.735Z"
+  },
+  {
+    "ecosystem": "npm",
+    "package": "node:test",
+    "error": "Exit code 1: {\"error\":\"Error: Package not found: node:test (npm)\"}\n",
+    "timestamp": "2026-02-19T19:52:33.108Z"
+  },
+  {
+    "ecosystem": "npm",
+    "package": "node:assert",
+    "error": "Exit code 1: {\"error\":\"Error: Package not found: node:assert (npm)\"}\n",
+    "timestamp": "2026-02-19T19:52:33.510Z"
+  },
+  {
+    "ecosystem": "npm",
+    "package": "node:mock",
+    "error": "Exit code 1: {\"error\":\"Error: Package not found: node:mock (npm)\"}\n",
+    "timestamp": "2026-02-19T19:52:34.319Z"
   }
 ]

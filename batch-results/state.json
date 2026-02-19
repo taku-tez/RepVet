@@ -1,5 +1,5 @@
 {
-  "currentIndex": 1380,
+  "currentIndex": 1400,
   "totalPackages": 4957,
   "results": [
     {
@@ -33405,6 +33405,347 @@
       "hasMalwareHistory": false,
       "executionTimeMs": 2536,
       "diagnosedAt": "2026-02-19T19:42:45.323Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "selenium-webdriver",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "sriharsha",
+        "automatedtester",
+        "diemol",
+        "titusfortner",
+        "pujagani",
+        "jmleyba"
+      ],
+      "lastCommitDate": "2026-02-19T18:56:54Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1820,
+      "diagnosedAt": "2026-02-19T19:52:06.961Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "webdriverio",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "christian-bromann",
+        "wdio-user",
+        "wswebcreation-nl"
+      ],
+      "lastCommitDate": "2026-02-19T18:35:24Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2295,
+      "diagnosedAt": "2026-02-19T19:52:09.257Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@wdio/cli",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "christian-bromann",
+        "wdio-user",
+        "wswebcreation-nl"
+      ],
+      "lastCommitDate": "2026-02-19T18:35:24Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1900,
+      "diagnosedAt": "2026-02-19T19:52:11.157Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@wdio/mocha-framework",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "christian-bromann",
+        "wdio-user",
+        "wswebcreation-nl"
+      ],
+      "lastCommitDate": "2026-02-19T18:35:24Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1934,
+      "diagnosedAt": "2026-02-19T19:52:13.092Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "ava",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "sindresorhus",
+        "novemberborn"
+      ],
+      "lastCommitDate": "2025-11-05T15:56:47Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1895,
+      "diagnosedAt": "2026-02-19T19:52:14.987Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "ava-ts",
+      "score": 65,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        },
+        {
+          "reason": "Repository is archived (no longer maintained)",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 3 years ago (6 years)",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "andywer"
+      ],
+      "lastCommitDate": "2020-07-21T12:35:19Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2290,
+      "diagnosedAt": "2026-02-19T19:52:17.277Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@ava/typescript",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "sindresorhus",
+        "novemberborn"
+      ],
+      "lastCommitDate": "2025-06-17T19:43:33Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1887,
+      "diagnosedAt": "2026-02-19T19:52:19.165Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "tap",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "isaacs"
+      ],
+      "lastCommitDate": "2026-02-18T22:08:34Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1720,
+      "diagnosedAt": "2026-02-19T19:52:20.886Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "tape",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "ljharb",
+        "domenic",
+        "raynos"
+      ],
+      "lastCommitDate": "2025-03-07T16:55:49Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1988,
+      "diagnosedAt": "2026-02-19T19:52:22.874Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "blue-tape",
+      "score": 80,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 3 years ago (5 years)",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "spion"
+      ],
+      "lastCommitDate": "2020-09-03T10:41:32Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2657,
+      "diagnosedAt": "2026-02-19T19:52:25.531Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "faucet",
+      "score": 74,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Single maintainer replaced at 0.0.2",
+          "points": 11,
+          "confidence": "medium"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 2 years ago (2 years)",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "ljharb"
+      ],
+      "lastCommitDate": "2024-02-16T08:33:39Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2450,
+      "diagnosedAt": "2026-02-19T19:52:27.981Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "uvu",
+      "score": 92,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "Last commit over 1 year ago (538 days)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "lukeed"
+      ],
+      "lastCommitDate": "2024-08-30T16:52:27Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1703,
+      "diagnosedAt": "2026-02-19T19:52:29.685Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "uvu-expect",
+      "score": 95,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "pberganza"
+      ],
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2186,
+      "diagnosedAt": "2026-02-19T19:52:31.871Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "eslint",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "openjsfoundation",
+        "eslintbot"
+      ],
+      "lastCommitDate": "2026-02-19T14:46:42Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2233,
+      "diagnosedAt": "2026-02-19T19:52:36.553Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "eslint-config-airbnb",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "christianv",
+        "sharmilajesupaul",
+        "danbeam",
+        "brieb",
+        "airbnbeng",
+        "ljharb"
+      ],
+      "lastCommitDate": "2025-11-06T00:54:14Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 3281,
+      "diagnosedAt": "2026-02-19T19:52:39.834Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "eslint-config-prettier",
+      "score": 90,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "jounqin",
+        "lydell",
+        "thorn0"
+      ],
+      "lastCommitDate": "2026-02-14T10:07:31Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 2,
+        "critical": 0,
+        "high": 1,
+        "recent": 2,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1780,
+      "diagnosedAt": "2026-02-19T19:52:41.614Z"
     }
   ],
   "errors": [
@@ -33761,6 +34102,30 @@
       "package": "@snowpack/plugin-react",
       "error": "Exit code 1: {\"error\":\"Error: Package not found: @snowpack/plugin-react (npm)\"}\n",
       "timestamp": "2026-02-19T19:37:31.705Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "uvu-sinon",
+      "error": "Exit code 1: {\"error\":\"Error: Package not found: uvu-sinon (npm)\"}\n",
+      "timestamp": "2026-02-19T19:52:32.735Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "node:test",
+      "error": "Exit code 1: {\"error\":\"Error: Package not found: node:test (npm)\"}\n",
+      "timestamp": "2026-02-19T19:52:33.108Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "node:assert",
+      "error": "Exit code 1: {\"error\":\"Error: Package not found: node:assert (npm)\"}\n",
+      "timestamp": "2026-02-19T19:52:33.510Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "node:mock",
+      "error": "Exit code 1: {\"error\":\"Error: Package not found: node:mock (npm)\"}\n",
+      "timestamp": "2026-02-19T19:52:34.319Z"
     }
   ],
   "startTime": "2026-02-19T12:29:21.598Z"

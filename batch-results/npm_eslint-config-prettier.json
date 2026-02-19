@@ -1,0 +1,30 @@
+{
+  "ecosystem": "npm",
+  "package": "eslint-config-prettier",
+  "score": 90,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "1 high severity vulnerability(ies) in history",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "jounqin",
+    "lydell",
+    "thorn0"
+  ],
+  "lastCommitDate": "2026-02-14T10:07:31Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 2,
+    "critical": 0,
+    "high": 1,
+    "recent": 2,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 1780,
+  "diagnosedAt": "2026-02-19T19:52:41.614Z"
+}

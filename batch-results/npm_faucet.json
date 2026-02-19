@@ -1,0 +1,31 @@
+{
+  "ecosystem": "npm",
+  "package": "faucet",
+  "score": 74,
+  "riskLevel": "MEDIUM",
+  "deductions": [
+    {
+      "reason": "Single maintainer replaced at 0.0.2",
+      "points": 11,
+      "confidence": "medium"
+    },
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 2 years ago (2 years)",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "ljharb"
+  ],
+  "lastCommitDate": "2024-02-16T08:33:39Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2450,
+  "diagnosedAt": "2026-02-19T19:52:27.981Z"
+}

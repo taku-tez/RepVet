@@ -1,6 +1,6 @@
 {
   "ecosystem": "npm",
-  "package": "webdriverio",
+  "package": "@wdio/cli",
   "score": 100,
   "riskLevel": "LOW",
   "deductions": [],
@@ -12,6 +12,6 @@
   "lastCommitDate": "2026-02-19T18:35:24Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
-  "executionTimeMs": 2295,
-  "diagnosedAt": "2026-02-19T19:52:09.257Z"
+  "executionTimeMs": 1900,
+  "diagnosedAt": "2026-02-19T19:52:11.157Z"
 }
