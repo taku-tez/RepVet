@@ -1,0 +1,20 @@
+{
+  "ecosystem": "npm",
+  "package": "helper",
+  "score": 95,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "sipware"
+  ],
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1916,
+  "diagnosedAt": "2026-02-19T18:42:11.358Z"
+}

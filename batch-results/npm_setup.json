@@ -1,0 +1,26 @@
+{
+  "ecosystem": "npm",
+  "package": "setup",
+  "score": 80,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 3 years ago (8 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "hugorodrigues"
+  ],
+  "lastCommitDate": "2018-03-06T18:32:46Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2369,
+  "diagnosedAt": "2026-02-19T18:42:24.589Z"
+}

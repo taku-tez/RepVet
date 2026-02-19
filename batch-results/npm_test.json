@@ -1,0 +1,21 @@
+{
+  "ecosystem": "npm",
+  "package": "test",
+  "score": 95,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Last commit over 1 year ago (425 days)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "nodejs-foundation"
+  ],
+  "lastCommitDate": "2024-12-21T10:06:39Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2012,
+  "diagnosedAt": "2026-02-19T18:42:26.602Z"
+}

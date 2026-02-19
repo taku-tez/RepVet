@@ -1,0 +1,20 @@
+{
+  "ecosystem": "npm",
+  "package": "example",
+  "score": 95,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "lnn"
+  ],
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1461,
+  "diagnosedAt": "2026-02-19T18:42:33.761Z"
+}

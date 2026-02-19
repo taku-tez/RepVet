@@ -1,0 +1,36 @@
+{
+  "ecosystem": "npm",
+  "package": "start",
+  "score": 55,
+  "riskLevel": "HIGH",
+  "deductions": [
+    {
+      "reason": "Package deprecated: Deprecated in favor of https://github.com/deepsweet/start",
+      "points": 10,
+      "confidence": "high"
+    },
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    },
+    {
+      "reason": "Repository is archived (no longer maintained)",
+      "points": 15,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 3 years ago (6 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "nwienert"
+  ],
+  "lastCommitDate": "2020-03-27T06:24:10Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 3615,
+  "diagnosedAt": "2026-02-19T18:42:19.715Z"
+}

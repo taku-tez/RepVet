@@ -1,0 +1,20 @@
+{
+  "ecosystem": "npm",
+  "package": "demos",
+  "score": 95,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "yogesh14"
+  ],
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1414,
+  "diagnosedAt": "2026-02-19T18:42:38.684Z"
+}
