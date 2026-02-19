@@ -376,5 +376,11 @@
     "package": "node:mock",
     "error": "Exit code 1: {\"error\":\"Error: Package not found: node:mock (npm)\"}\n",
     "timestamp": "2026-02-19T19:52:34.319Z"
+  },
+  {
+    "ecosystem": "npm",
+    "package": "@biomejs/cli",
+    "error": "Exit code 1: {\"error\":\"Error: Package not found: @biomejs/cli (npm)\"}\n",
+    "timestamp": "2026-02-19T19:57:41.620Z"
   }
 ]

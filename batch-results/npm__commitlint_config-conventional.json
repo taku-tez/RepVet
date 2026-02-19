@@ -1,6 +1,6 @@
 {
   "ecosystem": "npm",
-  "package": "commitlint",
+  "package": "@commitlint/config-conventional",
   "score": 100,
   "riskLevel": "LOW",
   "deductions": [],
@@ -13,6 +13,6 @@
   "lastCommitDate": "2026-02-19T18:41:16Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
-  "executionTimeMs": 1829,
-  "diagnosedAt": "2026-02-19T19:57:27.466Z"
+  "executionTimeMs": 1837,
+  "diagnosedAt": "2026-02-19T19:57:30.994Z"
 }

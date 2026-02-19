@@ -1,0 +1,28 @@
+{
+  "ecosystem": "npm",
+  "package": "@prettier/plugin-php",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "suchipi",
+    "mgrip",
+    "czosel",
+    "patrick91",
+    "zimme",
+    "azz",
+    "vjeux",
+    "evilebottnawi",
+    "kddeisz",
+    "shinigami92",
+    "j-f",
+    "lydell",
+    "fisker",
+    "sosukesuzuki"
+  ],
+  "lastCommitDate": "2026-02-19T06:28:31Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2759,
+  "diagnosedAt": "2026-02-19T19:57:17.408Z"
+}

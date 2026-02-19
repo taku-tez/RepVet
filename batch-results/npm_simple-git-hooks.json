@@ -1,6 +1,6 @@
 {
   "ecosystem": "npm",
-  "package": "biome",
+  "package": "simple-git-hooks",
   "score": 95,
   "riskLevel": "LOW",
   "deductions": [
@@ -11,10 +11,11 @@
     }
   ],
   "maintainers": [
-    "1egoman"
+    "toplenboren"
   ],
+  "lastCommitDate": "2025-10-28T14:01:37Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
-  "executionTimeMs": 1268,
-  "diagnosedAt": "2026-02-19T19:57:39.512Z"
+  "executionTimeMs": 1896,
+  "diagnosedAt": "2026-02-19T19:57:36.220Z"
 }

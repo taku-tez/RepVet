@@ -1,0 +1,26 @@
+{
+  "ecosystem": "npm",
+  "package": "lefthook",
+  "score": 86,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer replaced at 0.0.2",
+      "points": 11,
+      "confidence": "medium"
+    },
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "mrexox"
+  ],
+  "lastCommitDate": "2026-02-16T06:47:51Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2024,
+  "diagnosedAt": "2026-02-19T19:57:38.244Z"
+}

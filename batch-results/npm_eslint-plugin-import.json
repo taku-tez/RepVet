@@ -1,0 +1,17 @@
+{
+  "ecosystem": "npm",
+  "package": "eslint-plugin-import",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "benmosher",
+    "ljharb",
+    "jfmengels"
+  ],
+  "lastCommitDate": "2025-12-30T01:55:37Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2185,
+  "diagnosedAt": "2026-02-19T19:57:11.984Z"
+}

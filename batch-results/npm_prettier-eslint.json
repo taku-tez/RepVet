@@ -1,0 +1,20 @@
+{
+  "ecosystem": "npm",
+  "package": "prettier-eslint",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "kentcdodds",
+    "zimme",
+    "fisker",
+    "jounqin",
+    "idahogurl99",
+    "kylemh"
+  ],
+  "lastCommitDate": "2026-02-17T06:00:51Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1650,
+  "diagnosedAt": "2026-02-19T19:57:14.648Z"
+}

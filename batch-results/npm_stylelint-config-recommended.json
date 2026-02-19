@@ -1,6 +1,6 @@
 {
   "ecosystem": "npm",
-  "package": "stylelint",
+  "package": "stylelint-config-recommended",
   "score": 100,
   "riskLevel": "LOW",
   "deductions": [],
@@ -10,9 +10,9 @@
     "romainmenke",
     "ntwb"
   ],
-  "lastCommitDate": "2026-02-19T19:46:18Z",
+  "lastCommitDate": "2026-02-01T18:08:46Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
-  "executionTimeMs": 1830,
-  "diagnosedAt": "2026-02-19T19:57:21.810Z"
+  "executionTimeMs": 2130,
+  "diagnosedAt": "2026-02-19T19:57:25.637Z"
 }

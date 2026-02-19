@@ -1,0 +1,28 @@
+{
+  "ecosystem": "npm",
+  "package": "@prettier/plugin-ruby",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "sosukesuzuki",
+    "fisker",
+    "suchipi",
+    "mgrip",
+    "czosel",
+    "patrick91",
+    "zimme",
+    "azz",
+    "vjeux",
+    "evilebottnawi",
+    "kddeisz",
+    "shinigami92",
+    "j-f",
+    "lydell"
+  ],
+  "lastCommitDate": "2025-03-06T18:34:35Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2572,
+  "diagnosedAt": "2026-02-19T19:57:19.980Z"
+}

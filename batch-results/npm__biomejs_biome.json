@@ -1,0 +1,19 @@
+{
+  "ecosystem": "npm",
+  "package": "@biomejs/biome",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "nhedger",
+    "dominionl",
+    "conaclos",
+    "ematipico",
+    "siketyan"
+  ],
+  "lastCommitDate": "2026-02-19T19:55:37Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1692,
+  "diagnosedAt": "2026-02-19T19:57:41.204Z"
+}
