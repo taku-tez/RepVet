@@ -1,5 +1,5 @@
 {
-  "currentIndex": 1020,
+  "currentIndex": 1040,
   "totalPackages": 4957,
   "results": [
     {
@@ -25524,6 +25524,236 @@
       "hasMalwareHistory": false,
       "executionTimeMs": 1854,
       "diagnosedAt": "2026-02-19T17:42:43.889Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "is-valid-email",
+      "score": 65,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        },
+        {
+          "reason": "Repository is archived (no longer maintained)",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 3 years ago (7 years)",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "miguelmota"
+      ],
+      "lastCommitDate": "2019-06-03T00:18:48Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1852,
+      "diagnosedAt": "2026-02-19T17:52:07.782Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "is-valid-username",
+      "score": 65,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        },
+        {
+          "reason": "Repository is archived (no longer maintained)",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 3 years ago (11 years)",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "miguelmota"
+      ],
+      "lastCommitDate": "2014-12-02T08:23:01Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1949,
+      "diagnosedAt": "2026-02-19T17:52:09.731Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@angular/core",
+      "score": 90,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "angular",
+        "google-wombot"
+      ],
+      "lastCommitDate": "2026-02-19T17:11:31Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 2,
+        "critical": 0,
+        "high": 1,
+        "recent": 1,
+        "hasUnfixed": true
+      },
+      "executionTimeMs": 2684,
+      "diagnosedAt": "2026-02-19T17:52:12.416Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@angular/cli",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "angular",
+        "google-wombot"
+      ],
+      "lastCommitDate": "2026-02-18T22:07:50Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2385,
+      "diagnosedAt": "2026-02-19T17:52:14.802Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@angular/material",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "angular",
+        "google-wombot"
+      ],
+      "lastCommitDate": "2026-02-19T16:41:12Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2696,
+      "diagnosedAt": "2026-02-19T17:52:17.499Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@angular/cdk",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "angular",
+        "google-wombot"
+      ],
+      "lastCommitDate": "2026-02-19T16:41:12Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2335,
+      "diagnosedAt": "2026-02-19T17:52:19.835Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@microsoft/api-extractor",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "microsoft1es",
+        "microsoft-oss-releases",
+        "odspnpm"
+      ],
+      "lastCommitDate": "2026-02-19T16:15:41Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1708,
+      "diagnosedAt": "2026-02-19T17:52:22.665Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "google-auth-library",
+      "score": 71,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Complete maintainer change in 7 days (3.1.2)",
+          "points": 11,
+          "confidence": "medium"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "Repository is archived (no longer maintained)",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "google-wombot"
+      ],
+      "lastCommitDate": "2025-11-20T21:08:50Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1732,
+      "diagnosedAt": "2026-02-19T17:52:25.058Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "aws-amplify",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "amzn-oss",
+        "aws-amplify-ops",
+        "amplify-studio-uibuilder",
+        "amplify-codegen",
+        "amplify-data-dev-npm",
+        "aws-amplify-data-runtime"
+      ],
+      "lastCommitDate": "2026-02-19T15:16:49Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2359,
+      "diagnosedAt": "2026-02-19T17:52:28.500Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@azure/identity",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "azure-sdk",
+        "microsoft1es"
+      ],
+      "lastCommitDate": "2026-02-19T17:03:22Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 1,
+        "critical": 0,
+        "high": 0,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1963,
+      "diagnosedAt": "2026-02-19T17:52:31.736Z"
     }
   ],
   "errors": [
@@ -25664,6 +25894,66 @@
       "package": "electron-builder-old",
       "error": "Exit code 1: {\"error\":\"Error: Package not found: electron-builder-old (npm)\"}\n",
       "timestamp": "2026-02-19T17:32:38.367Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@react-native-community",
+      "error": "Exit code 1: {\"error\":\"Error: Failed to fetch npm package info: npm registry error: 405\"}\n",
+      "timestamp": "2026-02-19T17:52:20.179Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@react-native-async-storage",
+      "error": "Exit code 1: {\"error\":\"Error: Failed to fetch npm package info: npm registry error: 405\"}\n",
+      "timestamp": "2026-02-19T17:52:20.523Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@microsoft/typescript",
+      "error": "Exit code 1: {\"error\":\"Error: Package not found: @microsoft/typescript (npm)\"}\n",
+      "timestamp": "2026-02-19T17:52:20.957Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@google-cloud",
+      "error": "Exit code 1: {\"error\":\"Error: Failed to fetch npm package info: npm registry error: 405\"}\n",
+      "timestamp": "2026-02-19T17:52:22.985Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@googleapis",
+      "error": "Exit code 1: {\"error\":\"Error: Failed to fetch npm package info: npm registry error: 405\"}\n",
+      "timestamp": "2026-02-19T17:52:23.326Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@aws-sdk",
+      "error": "Exit code 1: {\"error\":\"Error: Failed to fetch npm package info: npm registry error: 405\"}\n",
+      "timestamp": "2026-02-19T17:52:25.413Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@aws-cdk",
+      "error": "Exit code 1: {\"error\":\"Error: Failed to fetch npm package info: npm registry error: 405\"}\n",
+      "timestamp": "2026-02-19T17:52:25.776Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@aws-amplify",
+      "error": "Exit code 1: {\"error\":\"Error: Failed to fetch npm package info: npm registry error: 405\"}\n",
+      "timestamp": "2026-02-19T17:52:26.141Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@azure/core",
+      "error": "Exit code 1: {\"error\":\"Error: Package not found: @azure/core (npm)\"}\n",
+      "timestamp": "2026-02-19T17:52:28.927Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@azure/storage",
+      "error": "Exit code 1: {\"error\":\"Error: Package not found: @azure/storage (npm)\"}\n",
+      "timestamp": "2026-02-19T17:52:29.773Z"
     }
   ],
   "startTime": "2026-02-19T12:29:21.598Z"

@@ -1,0 +1,31 @@
+{
+  "ecosystem": "npm",
+  "package": "google-auth-library",
+  "score": 71,
+  "riskLevel": "MEDIUM",
+  "deductions": [
+    {
+      "reason": "Complete maintainer change in 7 days (3.1.2)",
+      "points": 11,
+      "confidence": "medium"
+    },
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    },
+    {
+      "reason": "Repository is archived (no longer maintained)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "google-wombot"
+  ],
+  "lastCommitDate": "2025-11-20T21:08:50Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1732,
+  "diagnosedAt": "2026-02-19T17:52:25.058Z"
+}

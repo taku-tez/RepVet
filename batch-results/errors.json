@@ -136,5 +136,65 @@
     "package": "electron-builder-old",
     "error": "Exit code 1: {\"error\":\"Error: Package not found: electron-builder-old (npm)\"}\n",
     "timestamp": "2026-02-19T17:32:38.367Z"
+  },
+  {
+    "ecosystem": "npm",
+    "package": "@react-native-community",
+    "error": "Exit code 1: {\"error\":\"Error: Failed to fetch npm package info: npm registry error: 405\"}\n",
+    "timestamp": "2026-02-19T17:52:20.179Z"
+  },
+  {
+    "ecosystem": "npm",
+    "package": "@react-native-async-storage",
+    "error": "Exit code 1: {\"error\":\"Error: Failed to fetch npm package info: npm registry error: 405\"}\n",
+    "timestamp": "2026-02-19T17:52:20.523Z"
+  },
+  {
+    "ecosystem": "npm",
+    "package": "@microsoft/typescript",
+    "error": "Exit code 1: {\"error\":\"Error: Package not found: @microsoft/typescript (npm)\"}\n",
+    "timestamp": "2026-02-19T17:52:20.957Z"
+  },
+  {
+    "ecosystem": "npm",
+    "package": "@google-cloud",
+    "error": "Exit code 1: {\"error\":\"Error: Failed to fetch npm package info: npm registry error: 405\"}\n",
+    "timestamp": "2026-02-19T17:52:22.985Z"
+  },
+  {
+    "ecosystem": "npm",
+    "package": "@googleapis",
+    "error": "Exit code 1: {\"error\":\"Error: Failed to fetch npm package info: npm registry error: 405\"}\n",
+    "timestamp": "2026-02-19T17:52:23.326Z"
+  },
+  {
+    "ecosystem": "npm",
+    "package": "@aws-sdk",
+    "error": "Exit code 1: {\"error\":\"Error: Failed to fetch npm package info: npm registry error: 405\"}\n",
+    "timestamp": "2026-02-19T17:52:25.413Z"
+  },
+  {
+    "ecosystem": "npm",
+    "package": "@aws-cdk",
+    "error": "Exit code 1: {\"error\":\"Error: Failed to fetch npm package info: npm registry error: 405\"}\n",
+    "timestamp": "2026-02-19T17:52:25.776Z"
+  },
+  {
+    "ecosystem": "npm",
+    "package": "@aws-amplify",
+    "error": "Exit code 1: {\"error\":\"Error: Failed to fetch npm package info: npm registry error: 405\"}\n",
+    "timestamp": "2026-02-19T17:52:26.141Z"
+  },
+  {
+    "ecosystem": "npm",
+    "package": "@azure/core",
+    "error": "Exit code 1: {\"error\":\"Error: Package not found: @azure/core (npm)\"}\n",
+    "timestamp": "2026-02-19T17:52:28.927Z"
+  },
+  {
+    "ecosystem": "npm",
+    "package": "@azure/storage",
+    "error": "Exit code 1: {\"error\":\"Error: Package not found: @azure/storage (npm)\"}\n",
+    "timestamp": "2026-02-19T17:52:29.773Z"
   }
 ]
