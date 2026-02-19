@@ -1,0 +1,25 @@
+{
+  "ecosystem": "npm",
+  "package": "cannon-es",
+  "score": 90,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Last commit over 2 years ago (2 years)",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "drcmda",
+    "marcofugaro",
+    "codynova",
+    "heyo_sean",
+    "stockhuman"
+  ],
+  "lastCommitDate": "2024-01-06T04:10:33Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1826,
+  "diagnosedAt": "2026-02-19T21:12:14.481Z"
+}

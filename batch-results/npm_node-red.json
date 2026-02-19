@@ -1,0 +1,29 @@
+{
+  "ecosystem": "npm",
+  "package": "node-red",
+  "score": 90,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "1 high severity vulnerability(ies) in history",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "knolleary",
+    "dceejay"
+  ],
+  "lastCommitDate": "2026-02-11T11:09:33Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 2,
+    "critical": 0,
+    "high": 1,
+    "recent": 0,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 2518,
+  "diagnosedAt": "2026-02-19T21:12:38.219Z"
+}

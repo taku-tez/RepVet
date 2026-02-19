@@ -1,0 +1,26 @@
+{
+  "ecosystem": "npm",
+  "package": "ammo.js",
+  "score": 85,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 2 years ago (2 years)",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "caseywebdev"
+  ],
+  "lastCommitDate": "2024-01-16T16:57:49Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1908,
+  "diagnosedAt": "2026-02-19T21:12:16.389Z"
+}

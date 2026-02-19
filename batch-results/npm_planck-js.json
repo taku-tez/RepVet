@@ -1,0 +1,22 @@
+{
+  "ecosystem": "npm",
+  "package": "planck-js",
+  "score": 90,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Package deprecated: Please use 'planck' package instead of 'planck-js'",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "shakiba",
+    "zoadt"
+  ],
+  "lastCommitDate": "2026-02-10T12:02:41Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2354,
+  "diagnosedAt": "2026-02-19T21:12:21.057Z"
+}

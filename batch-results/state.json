@@ -1,5 +1,5 @@
 {
-  "currentIndex": 1640,
+  "currentIndex": 1660,
   "totalPackages": 4957,
   "results": [
     {
@@ -39304,6 +39304,403 @@
       "hasMalwareHistory": false,
       "executionTimeMs": 2359,
       "diagnosedAt": "2026-02-19T21:07:51.782Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@pixi/app",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "bigtimebuddy",
+        "zyie"
+      ],
+      "lastCommitDate": "2026-02-13T17:34:42Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2570,
+      "diagnosedAt": "2026-02-19T21:12:08.397Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "playcanvas",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "playcanvas"
+      ],
+      "lastCommitDate": "2026-02-16T19:57:13Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1898,
+      "diagnosedAt": "2026-02-19T21:12:10.295Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "aframe",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "cvan",
+        "dmarcos",
+        "ngokevin",
+        "mozvr",
+        "caseyyee"
+      ],
+      "lastCommitDate": "2025-12-23T10:46:12Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1942,
+      "diagnosedAt": "2026-02-19T21:12:12.238Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "cannon-es",
+      "score": 90,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Last commit over 2 years ago (2 years)",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "drcmda",
+        "marcofugaro",
+        "codynova",
+        "heyo_sean",
+        "stockhuman"
+      ],
+      "lastCommitDate": "2024-01-06T04:10:33Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1826,
+      "diagnosedAt": "2026-02-19T21:12:14.481Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "ammo.js",
+      "score": 85,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 2 years ago (2 years)",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "caseywebdev"
+      ],
+      "lastCommitDate": "2024-01-16T16:57:49Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1908,
+      "diagnosedAt": "2026-02-19T21:12:16.389Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "matter-js",
+      "score": 90,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 1 year ago (551 days)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "liabru"
+      ],
+      "lastCommitDate": "2024-08-17T14:14:36Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2314,
+      "diagnosedAt": "2026-02-19T21:12:18.703Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "planck-js",
+      "score": 90,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Package deprecated: Please use 'planck' package instead of 'planck-js'",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "shakiba",
+        "zoadt"
+      ],
+      "lastCommitDate": "2026-02-10T12:02:41Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2354,
+      "diagnosedAt": "2026-02-19T21:12:21.057Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "ar.js",
+      "score": 80,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 3 years ago (3 years)",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "jetienne"
+      ],
+      "lastCommitDate": "2022-12-07T23:32:13Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2140,
+      "diagnosedAt": "2026-02-19T21:12:23.493Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "mind-ar",
+      "score": 90,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 1 year ago (618 days)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "hiukim"
+      ],
+      "lastCommitDate": "2024-06-11T13:03:11Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1920,
+      "diagnosedAt": "2026-02-19T21:12:25.414Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "aframe-ar",
+      "score": 65,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        },
+        {
+          "reason": "Repository is archived (no longer maintained)",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 3 years ago (6 years)",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "machenmusik"
+      ],
+      "lastCommitDate": "2020-06-24T13:16:51Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1837,
+      "diagnosedAt": "2026-02-19T21:12:27.251Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@zappar/zappar",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "cgauld",
+        "deim",
+        "simon_zappar",
+        "jordan-zappar",
+        "george.martin",
+        "squeral",
+        "francesca.may",
+        "justin_zappar"
+      ],
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2522,
+      "diagnosedAt": "2026-02-19T21:12:30.189Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@zappar/zappar-react-three-fiber",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "cgauld",
+        "deim",
+        "simon_zappar",
+        "jordan-zappar",
+        "george.martin",
+        "squeral",
+        "francesca.may",
+        "justin_zappar"
+      ],
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 3567,
+      "diagnosedAt": "2026-02-19T21:12:33.756Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "johnny-five",
+      "score": 87,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "Last commit over 2 years ago (2 years)",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "rwaldron"
+      ],
+      "lastCommitDate": "2023-10-24T22:18:06Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1945,
+      "diagnosedAt": "2026-02-19T21:12:35.701Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "node-red",
+      "score": 90,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "knolleary",
+        "dceejay"
+      ],
+      "lastCommitDate": "2026-02-11T11:09:33Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 2,
+        "critical": 0,
+        "high": 1,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 2518,
+      "diagnosedAt": "2026-02-19T21:12:38.219Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "mqtt",
+      "score": 90,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "matteo.collina",
+        "adamvr",
+        "roberts_lando",
+        "avishekpant-msft"
+      ],
+      "lastCommitDate": "2026-02-03T13:30:21Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 2,
+        "critical": 0,
+        "high": 1,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 2048,
+      "diagnosedAt": "2026-02-19T21:12:40.681Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "aedes",
+      "score": 90,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "matteo.collina",
+        "roberts_lando",
+        "gnought",
+        "getlarge"
+      ],
+      "lastCommitDate": "2026-02-11T10:33:30Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 2,
+        "critical": 0,
+        "high": 1,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 2509,
+      "diagnosedAt": "2026-02-19T21:12:43.191Z"
     }
   ],
   "errors": [
@@ -39720,6 +40117,30 @@
       "package": "@tensorflow-models",
       "error": "Exit code 1: {\"error\":\"Error: Failed to fetch npm package info: npm registry error: 405\"}\n",
       "timestamp": "2026-02-19T21:02:38.337Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@aframe/core",
+      "error": "Exit code 1: {\"error\":\"Error: Package not found: @aframe/core (npm)\"}\n",
+      "timestamp": "2026-02-19T21:12:12.655Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@react-native-ar-kit",
+      "error": "Exit code 1: {\"error\":\"Error: Failed to fetch npm package info: npm registry error: 405\"}\n",
+      "timestamp": "2026-02-19T21:12:21.353Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@8thwall/web",
+      "error": "Exit code 1: {\"error\":\"Error: Package not found: @8thwall/web (npm)\"}\n",
+      "timestamp": "2026-02-19T21:12:27.667Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "node-red-contrib",
+      "error": "Exit code 1: {\"error\":\"Error: Package not found: node-red-contrib (npm)\"}\n",
+      "timestamp": "2026-02-19T21:12:38.633Z"
     }
   ],
   "startTime": "2026-02-19T12:29:21.598Z"

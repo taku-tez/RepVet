@@ -1,0 +1,21 @@
+{
+  "ecosystem": "npm",
+  "package": "@zappar/zappar-react-three-fiber",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "cgauld",
+    "deim",
+    "simon_zappar",
+    "jordan-zappar",
+    "george.martin",
+    "squeral",
+    "francesca.may",
+    "justin_zappar"
+  ],
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 3567,
+  "diagnosedAt": "2026-02-19T21:12:33.756Z"
+}

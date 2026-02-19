@@ -1,0 +1,26 @@
+{
+  "ecosystem": "npm",
+  "package": "mind-ar",
+  "score": 90,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 1 year ago (618 days)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "hiukim"
+  ],
+  "lastCommitDate": "2024-06-11T13:03:11Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1920,
+  "diagnosedAt": "2026-02-19T21:12:25.414Z"
+}

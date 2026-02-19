@@ -1,0 +1,31 @@
+{
+  "ecosystem": "npm",
+  "package": "mqtt",
+  "score": 90,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "1 high severity vulnerability(ies) in history",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "matteo.collina",
+    "adamvr",
+    "roberts_lando",
+    "avishekpant-msft"
+  ],
+  "lastCommitDate": "2026-02-03T13:30:21Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 2,
+    "critical": 0,
+    "high": 1,
+    "recent": 0,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 2048,
+  "diagnosedAt": "2026-02-19T21:12:40.681Z"
+}

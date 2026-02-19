@@ -1,0 +1,21 @@
+{
+  "ecosystem": "npm",
+  "package": "playcanvas",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "playcanvas"
+  ],
+  "lastCommitDate": "2026-02-16T19:57:13Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1898,
+  "diagnosedAt": "2026-02-19T21:12:10.295Z"
+}

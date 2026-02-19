@@ -1,0 +1,19 @@
+{
+  "ecosystem": "npm",
+  "package": "aframe",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "cvan",
+    "dmarcos",
+    "ngokevin",
+    "mozvr",
+    "caseyyee"
+  ],
+  "lastCommitDate": "2025-12-23T10:46:12Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1942,
+  "diagnosedAt": "2026-02-19T21:12:12.238Z"
+}

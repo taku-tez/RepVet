@@ -1,0 +1,21 @@
+{
+  "ecosystem": "npm",
+  "package": "@zappar/zappar",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "cgauld",
+    "deim",
+    "simon_zappar",
+    "jordan-zappar",
+    "george.martin",
+    "squeral",
+    "francesca.may",
+    "justin_zappar"
+  ],
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2522,
+  "diagnosedAt": "2026-02-19T21:12:30.189Z"
+}

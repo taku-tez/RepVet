@@ -1,0 +1,26 @@
+{
+  "ecosystem": "npm",
+  "package": "matter-js",
+  "score": 90,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 1 year ago (551 days)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "liabru"
+  ],
+  "lastCommitDate": "2024-08-17T14:14:36Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2314,
+  "diagnosedAt": "2026-02-19T21:12:18.703Z"
+}

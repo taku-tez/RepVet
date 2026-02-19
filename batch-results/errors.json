@@ -412,5 +412,29 @@
     "package": "@tensorflow-models",
     "error": "Exit code 1: {\"error\":\"Error: Failed to fetch npm package info: npm registry error: 405\"}\n",
     "timestamp": "2026-02-19T21:02:38.337Z"
+  },
+  {
+    "ecosystem": "npm",
+    "package": "@aframe/core",
+    "error": "Exit code 1: {\"error\":\"Error: Package not found: @aframe/core (npm)\"}\n",
+    "timestamp": "2026-02-19T21:12:12.655Z"
+  },
+  {
+    "ecosystem": "npm",
+    "package": "@react-native-ar-kit",
+    "error": "Exit code 1: {\"error\":\"Error: Failed to fetch npm package info: npm registry error: 405\"}\n",
+    "timestamp": "2026-02-19T21:12:21.353Z"
+  },
+  {
+    "ecosystem": "npm",
+    "package": "@8thwall/web",
+    "error": "Exit code 1: {\"error\":\"Error: Package not found: @8thwall/web (npm)\"}\n",
+    "timestamp": "2026-02-19T21:12:27.667Z"
+  },
+  {
+    "ecosystem": "npm",
+    "package": "node-red-contrib",
+    "error": "Exit code 1: {\"error\":\"Error: Package not found: node-red-contrib (npm)\"}\n",
+    "timestamp": "2026-02-19T21:12:38.633Z"
   }
 ]
