@@ -1,6 +1,6 @@
 {
   "ecosystem": "npm",
-  "package": "@types/node",
+  "package": "@types/lodash",
   "score": 97,
   "riskLevel": "LOW",
   "deductions": [
@@ -16,6 +16,6 @@
   "lastCommitDate": "2026-02-19T17:32:58Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
-  "executionTimeMs": 1404,
-  "diagnosedAt": "2026-02-19T18:52:14.811Z"
+  "executionTimeMs": 1706,
+  "diagnosedAt": "2026-02-19T18:52:12.407Z"
 }

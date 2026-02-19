@@ -1,6 +1,6 @@
 {
   "ecosystem": "npm",
-  "package": "@babel/core",
+  "package": "@babel/runtime",
   "score": 100,
   "riskLevel": "LOW",
   "deductions": [],
@@ -13,6 +13,13 @@
   "lastCommitDate": "2026-02-19T16:57:39Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
-  "executionTimeMs": 1722,
-  "diagnosedAt": "2026-02-19T18:52:23.938Z"
+  "vulnerabilityStats": {
+    "total": 1,
+    "critical": 0,
+    "high": 0,
+    "recent": 1,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 2033,
+  "diagnosedAt": "2026-02-19T18:52:29.434Z"
 }

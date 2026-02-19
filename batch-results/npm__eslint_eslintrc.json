@@ -1,0 +1,16 @@
+{
+  "ecosystem": "npm",
+  "package": "@eslint/eslintrc",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "openjsfoundation",
+    "eslintbot"
+  ],
+  "lastCommitDate": "2026-02-07T08:09:42Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1951,
+  "diagnosedAt": "2026-02-19T18:52:36.602Z"
+}

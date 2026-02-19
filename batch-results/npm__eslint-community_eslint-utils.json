@@ -1,0 +1,16 @@
+{
+  "ecosystem": "npm",
+  "package": "@eslint-community/eslint-utils",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "eslint-community-bot",
+    "michaeldeboey"
+  ],
+  "lastCommitDate": "2026-01-14T23:35:32Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1721,
+  "diagnosedAt": "2026-02-19T18:52:38.323Z"
+}

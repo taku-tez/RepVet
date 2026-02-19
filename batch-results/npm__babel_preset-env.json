@@ -1,6 +1,6 @@
 {
   "ecosystem": "npm",
-  "package": "@babel/core",
+  "package": "@babel/preset-env",
   "score": 100,
   "riskLevel": "LOW",
   "deductions": [],
@@ -13,6 +13,6 @@
   "lastCommitDate": "2026-02-19T16:57:39Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
-  "executionTimeMs": 1722,
-  "diagnosedAt": "2026-02-19T18:52:23.938Z"
+  "executionTimeMs": 1745,
+  "diagnosedAt": "2026-02-19T18:52:25.683Z"
 }

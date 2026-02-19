@@ -1,0 +1,16 @@
+{
+  "ecosystem": "npm",
+  "package": "@typescript-eslint/eslint-plugin",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "jameshenry",
+    "bradzacher"
+  ],
+  "lastCommitDate": "2026-02-18T12:31:31Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2208,
+  "diagnosedAt": "2026-02-19T18:52:42.958Z"
+}

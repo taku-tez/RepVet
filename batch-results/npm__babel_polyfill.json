@@ -1,0 +1,24 @@
+{
+  "ecosystem": "npm",
+  "package": "@babel/polyfill",
+  "score": 90,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Package deprecated: 🚨 This package has been deprecated in favor of separate inclusion of a polyfill and regenerator-run...",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "hzoo",
+    "existentialism",
+    "nicolo-ribaudo",
+    "jlhwung"
+  ],
+  "lastCommitDate": "2026-02-19T16:57:39Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1858,
+  "diagnosedAt": "2026-02-19T18:52:31.292Z"
+}
