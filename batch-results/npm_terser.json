@@ -1,28 +1,33 @@
 {
   "ecosystem": "npm",
-  "package": "esbuild",
-  "score": 97,
+  "package": "terser",
+  "score": 87,
   "riskLevel": "LOW",
   "deductions": [
     {
       "reason": "Single maintainer (bus factor risk)",
       "points": 3,
       "confidence": "low"
+    },
+    {
+      "reason": "1 high severity vulnerability(ies) in history",
+      "points": 10,
+      "confidence": "high"
     }
   ],
   "maintainers": [
-    "esbuild"
+    "fabiosantoscode"
   ],
-  "lastCommitDate": "2026-02-05T22:03:53Z",
+  "lastCommitDate": "2026-02-02T19:43:23Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
   "vulnerabilityStats": {
     "total": 1,
     "critical": 0,
-    "high": 0,
+    "high": 1,
     "recent": 0,
     "hasUnfixed": false
   },
-  "executionTimeMs": 1882,
-  "diagnosedAt": "2026-02-19T14:32:35.905Z"
+  "executionTimeMs": 3029,
+  "diagnosedAt": "2026-02-19T14:32:34.023Z"
 }

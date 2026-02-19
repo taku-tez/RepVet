@@ -1,21 +1,21 @@
 {
   "ecosystem": "npm",
-  "package": "@swc/core",
-  "score": 97,
+  "package": "esgenerate",
+  "score": 95,
   "riskLevel": "LOW",
   "deductions": [
     {
       "reason": "Single maintainer (bus factor risk)",
-      "points": 3,
-      "confidence": "low"
+      "points": 5,
+      "confidence": "high"
     }
   ],
   "maintainers": [
-    "kdy1"
+    "alxndrsn"
   ],
-  "lastCommitDate": "2026-02-19T05:07:07Z",
+  "lastCommitDate": "2025-08-21T07:24:55Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
-  "executionTimeMs": 2541,
-  "diagnosedAt": "2026-02-19T14:32:40.301Z"
+  "executionTimeMs": 1921,
+  "diagnosedAt": "2026-02-19T14:32:21.001Z"
 }

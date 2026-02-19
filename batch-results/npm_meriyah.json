@@ -1,0 +1,18 @@
+{
+  "ecosystem": "npm",
+  "package": "meriyah",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "fisker",
+    "huochunpeng",
+    "weiran.zsd",
+    "meriyah"
+  ],
+  "lastCommitDate": "2026-02-13T00:40:58Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2333,
+  "diagnosedAt": "2026-02-19T14:32:16.998Z"
+}

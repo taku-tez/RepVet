@@ -1,0 +1,41 @@
+{
+  "ecosystem": "npm",
+  "package": "tslint",
+  "score": 46,
+  "riskLevel": "HIGH",
+  "deductions": [
+    {
+      "reason": "Package deprecated: TSLint has been deprecated in favor of ESLint. Please see https://github.com/palantir/tslint/issues/...",
+      "points": 10,
+      "confidence": "high"
+    },
+    {
+      "reason": "Complete maintainer change in 5 days (0.1.2)",
+      "points": 11,
+      "confidence": "medium"
+    },
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    },
+    {
+      "reason": "Repository is archived (no longer maintained)",
+      "points": 15,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 3 years ago (5 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "palantir"
+  ],
+  "lastCommitDate": "2021-03-25T15:41:38Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1690,
+  "diagnosedAt": "2026-02-19T14:32:49.556Z"
+}

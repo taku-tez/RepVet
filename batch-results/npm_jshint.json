@@ -1,0 +1,23 @@
+{
+  "ecosystem": "npm",
+  "package": "jshint",
+  "score": 95,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Last commit over 1 year ago (370 days)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "jugglinmike",
+    "antonkovalyov",
+    "rwaldron"
+  ],
+  "lastCommitDate": "2025-02-13T17:18:03Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2166,
+  "diagnosedAt": "2026-02-19T14:32:51.722Z"
+}

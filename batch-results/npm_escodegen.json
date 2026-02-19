@@ -1,0 +1,22 @@
+{
+  "ecosystem": "npm",
+  "package": "escodegen",
+  "score": 95,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Last commit over 1 year ago (582 days)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "michaelficarra",
+    "constellation"
+  ],
+  "lastCommitDate": "2024-07-17T02:01:51Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2081,
+  "diagnosedAt": "2026-02-19T14:32:19.080Z"
+}

@@ -1,6 +1,6 @@
 {
   "ecosystem": "npm",
-  "package": "eslint",
+  "package": "espree",
   "score": 100,
   "riskLevel": "LOW",
   "deductions": [],
@@ -8,9 +8,9 @@
     "openjsfoundation",
     "eslintbot"
   ],
-  "lastCommitDate": "2026-02-19T13:50:04Z",
+  "lastCommitDate": "2026-02-19T11:46:37Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
-  "executionTimeMs": 2288,
-  "diagnosedAt": "2026-02-19T14:32:47.866Z"
+  "executionTimeMs": 2206,
+  "diagnosedAt": "2026-02-19T14:32:12.612Z"
 }

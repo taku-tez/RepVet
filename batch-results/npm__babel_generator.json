@@ -1,17 +1,18 @@
 {
   "ecosystem": "npm",
-  "package": "babel-core",
+  "package": "@babel/generator",
   "score": 100,
   "riskLevel": "LOW",
   "deductions": [],
   "maintainers": [
     "hzoo",
-    "loganfsmyth",
-    "existentialism"
+    "existentialism",
+    "nicolo-ribaudo",
+    "jlhwung"
   ],
   "lastCommitDate": "2026-02-17T12:59:34Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
-  "executionTimeMs": 1593,
-  "diagnosedAt": "2026-02-19T14:32:41.895Z"
+  "executionTimeMs": 1796,
+  "diagnosedAt": "2026-02-19T14:32:45.577Z"
 }
