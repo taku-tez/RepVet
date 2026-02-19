@@ -1,16 +1,16 @@
 {
   "ecosystem": "npm",
-  "package": "prisma",
+  "package": "orm",
   "score": 100,
   "riskLevel": "LOW",
   "deductions": [],
   "maintainers": [
-    "pirix-gh",
-    "prismabot"
+    "dxg",
+    "dresende"
   ],
-  "lastCommitDate": "2026-02-19T13:23:25Z",
+  "lastCommitDate": "2025-03-13T13:37:02Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
-  "executionTimeMs": 3010,
-  "diagnosedAt": "2026-02-19T15:57:20.401Z"
+  "executionTimeMs": 2186,
+  "diagnosedAt": "2026-02-19T15:57:57.390Z"
 }

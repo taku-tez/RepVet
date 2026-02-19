@@ -1,6 +1,6 @@
 {
   "ecosystem": "npm",
-  "package": "bull",
+  "package": "better-sqlite3",
   "score": 97,
   "riskLevel": "LOW",
   "deductions": [
@@ -11,11 +11,11 @@
     }
   ],
   "maintainers": [
-    "manast"
+    "joshuawise"
   ],
-  "lastCommitDate": "2026-01-21T23:05:42Z",
+  "lastCommitDate": "2026-01-19T10:43:09Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
-  "executionTimeMs": 1839,
-  "diagnosedAt": "2026-02-19T15:57:59.229Z"
+  "executionTimeMs": 1935,
+  "diagnosedAt": "2026-02-19T15:57:29.889Z"
 }

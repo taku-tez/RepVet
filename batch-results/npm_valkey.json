@@ -1,0 +1,22 @@
+{
+  "ecosystem": "npm",
+  "package": "valkey",
+  "score": 95,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Last commit over 1 year ago (628 days)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "marcbachmann",
+    "firass"
+  ],
+  "lastCommitDate": "2024-05-31T18:23:49Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2026,
+  "diagnosedAt": "2026-02-19T15:57:13.083Z"
+}

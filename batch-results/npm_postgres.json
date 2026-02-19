@@ -1,6 +1,6 @@
 {
   "ecosystem": "npm",
-  "package": "bull",
+  "package": "postgres",
   "score": 97,
   "riskLevel": "LOW",
   "deductions": [
@@ -11,11 +11,11 @@
     }
   ],
   "maintainers": [
-    "manast"
+    "porsager"
   ],
-  "lastCommitDate": "2026-01-21T23:05:42Z",
+  "lastCommitDate": "2026-01-06T14:40:46Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
-  "executionTimeMs": 1839,
-  "diagnosedAt": "2026-02-19T15:57:59.229Z"
+  "executionTimeMs": 1737,
+  "diagnosedAt": "2026-02-19T15:57:26.182Z"
 }
