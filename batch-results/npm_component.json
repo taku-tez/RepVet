@@ -1,0 +1,31 @@
+{
+  "ecosystem": "npm",
+  "package": "component",
+  "score": 70,
+  "riskLevel": "MEDIUM",
+  "deductions": [
+    {
+      "reason": "Repository is archived (no longer maintained)",
+      "points": 15,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 3 years ago (8 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "trevorgerhardt",
+    "jongleberry",
+    "timoxley",
+    "nami-doc",
+    "clintwood",
+    "timaschew"
+  ],
+  "lastCommitDate": "2017-12-16T14:10:16Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1982,
+  "diagnosedAt": "2026-02-19T18:07:48.341Z"
+}

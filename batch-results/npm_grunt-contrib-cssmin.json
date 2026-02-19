@@ -1,0 +1,21 @@
+{
+  "ecosystem": "npm",
+  "package": "grunt-contrib-cssmin",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "cowboy",
+    "jzaefferer",
+    "jmeas",
+    "tkellen",
+    "vladikoff",
+    "shama",
+    "xhmikosr"
+  ],
+  "lastCommitDate": "2026-01-21T23:04:24Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1895,
+  "diagnosedAt": "2026-02-19T18:07:28.656Z"
+}

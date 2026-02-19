@@ -1,0 +1,26 @@
+{
+  "ecosystem": "npm",
+  "package": "expect.js",
+  "score": 80,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 3 years ago (3 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "rauchg"
+  ],
+  "lastCommitDate": "2023-01-14T22:56:32Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 3984,
+  "diagnosedAt": "2026-02-19T18:07:20.105Z"
+}

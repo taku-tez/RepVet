@@ -1,0 +1,20 @@
+{
+  "ecosystem": "npm",
+  "package": "vows",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "cloudhead",
+    "evanp",
+    "indexzero",
+    "jerrysievert",
+    "mmalecki",
+    "strugee"
+  ],
+  "lastCommitDate": "2026-02-19T06:41:07Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 3291,
+  "diagnosedAt": "2026-02-19T18:07:09.432Z"
+}

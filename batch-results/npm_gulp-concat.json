@@ -1,0 +1,22 @@
+{
+  "ecosystem": "npm",
+  "package": "gulp-concat",
+  "score": 85,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Last commit over 3 years ago (6 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "fractal",
+    "yocontra"
+  ],
+  "lastCommitDate": "2020-06-18T22:39:54Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2440,
+  "diagnosedAt": "2026-02-19T18:07:37.373Z"
+}

@@ -1,0 +1,22 @@
+{
+  "ecosystem": "npm",
+  "package": "deamdify",
+  "score": 85,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Last commit over 3 years ago (5 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "jaredhanson",
+    "tbranyen"
+  ],
+  "lastCommitDate": "2021-03-30T17:13:18Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2388,
+  "diagnosedAt": "2026-02-19T18:07:46.359Z"
+}

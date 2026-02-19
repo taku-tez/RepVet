@@ -1,0 +1,20 @@
+{
+  "ecosystem": "npm",
+  "package": "grunt-contrib-jshint",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "cowboy",
+    "jmeas",
+    "tkellen",
+    "vladikoff",
+    "shama",
+    "sindresorhus"
+  ],
+  "lastCommitDate": "2026-01-21T23:05:01Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1772,
+  "diagnosedAt": "2026-02-19T18:07:25.086Z"
+}

@@ -1,0 +1,22 @@
+{
+  "ecosystem": "npm",
+  "package": "expresso",
+  "score": 85,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Last commit over 3 years ago (10 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "tjholowaychuk",
+    "kkaefer"
+  ],
+  "lastCommitDate": "2016-01-26T18:10:55Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2500,
+  "diagnosedAt": "2026-02-19T18:07:14.193Z"
+}

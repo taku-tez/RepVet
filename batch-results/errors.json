@@ -214,5 +214,11 @@
     "package": "heroui",
     "error": "Exit code 1: {\"error\":\"Error: Package not found: heroui (npm)\"}\n",
     "timestamp": "2026-02-19T18:02:37.428Z"
+  },
+  {
+    "ecosystem": "npm",
+    "package": "chai-as-promised-old",
+    "error": "Exit code 1: {\"error\":\"Error: Package not found: chai-as-promised-old (npm)\"}\n",
+    "timestamp": "2026-02-19T18:07:23.314Z"
   }
 ]

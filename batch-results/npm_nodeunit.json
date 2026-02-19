@@ -1,0 +1,32 @@
+{
+  "ecosystem": "npm",
+  "package": "nodeunit",
+  "score": 64,
+  "riskLevel": "MEDIUM",
+  "deductions": [
+    {
+      "reason": "Package deprecated: you are strongly encouraged to use other testing options",
+      "points": 10,
+      "confidence": "high"
+    },
+    {
+      "reason": "Single maintainer replaced at 0.5.4",
+      "points": 11,
+      "confidence": "medium"
+    },
+    {
+      "reason": "Last commit over 3 years ago (3 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "caolan",
+    "mreinstein"
+  ],
+  "lastCommitDate": "2022-10-21T19:20:51Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2261,
+  "diagnosedAt": "2026-02-19T18:07:11.693Z"
+}

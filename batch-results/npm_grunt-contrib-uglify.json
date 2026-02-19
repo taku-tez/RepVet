@@ -1,0 +1,22 @@
+{
+  "ecosystem": "npm",
+  "package": "grunt-contrib-uglify",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "cowboy",
+    "alexlamsl",
+    "jmeas",
+    "tkellen",
+    "vladikoff",
+    "shama",
+    "jsoverson",
+    "xhmikosr"
+  ],
+  "lastCommitDate": "2026-01-21T23:05:53Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1675,
+  "diagnosedAt": "2026-02-19T18:07:26.761Z"
+}

@@ -1,0 +1,36 @@
+{
+  "ecosystem": "npm",
+  "package": "mocha-as-promised",
+  "score": 59,
+  "riskLevel": "HIGH",
+  "deductions": [
+    {
+      "reason": "Package deprecated: Mocha 1.18.0 and up now supports promises natively; use that instead!",
+      "points": 10,
+      "confidence": "high"
+    },
+    {
+      "reason": "Single maintainer replaced at 1.2.0",
+      "points": 11,
+      "confidence": "medium"
+    },
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 3 years ago (12 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "domenic"
+  ],
+  "lastCommitDate": "2014-03-15T17:50:18Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2365,
+  "diagnosedAt": "2026-02-19T18:07:22.470Z"
+}

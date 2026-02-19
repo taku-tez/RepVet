@@ -1,0 +1,25 @@
+{
+  "ecosystem": "npm",
+  "package": "component-builder",
+  "score": 85,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Last commit over 3 years ago (11 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "jongleberry",
+    "timoxley",
+    "clintwood",
+    "trevorgerhardt",
+    "timaschew"
+  ],
+  "lastCommitDate": "2015-05-26T18:41:06Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2307,
+  "diagnosedAt": "2026-02-19T18:07:50.649Z"
+}

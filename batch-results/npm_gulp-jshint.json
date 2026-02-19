@@ -1,0 +1,23 @@
+{
+  "ecosystem": "npm",
+  "package": "gulp-jshint",
+  "score": 85,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Last commit over 3 years ago (7 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "fractal",
+    "spalger",
+    "yocontra"
+  ],
+  "lastCommitDate": "2018-10-31T22:44:27Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2374,
+  "diagnosedAt": "2026-02-19T18:07:31.030Z"
+}

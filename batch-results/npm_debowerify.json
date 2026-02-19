@@ -1,0 +1,23 @@
+{
+  "ecosystem": "npm",
+  "package": "debowerify",
+  "score": 85,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Last commit over 3 years ago (5 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "aendrew",
+    "eugeneware",
+    "nharbour"
+  ],
+  "lastCommitDate": "2021-08-03T19:31:09Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2297,
+  "diagnosedAt": "2026-02-19T18:07:43.970Z"
+}
