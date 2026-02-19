@@ -1,7 +1,7 @@
 {
   "ecosystem": "npm",
-  "package": "zen-observable",
-  "score": 82,
+  "package": "promise-polyfill",
+  "score": 92,
   "riskLevel": "LOW",
   "deductions": [
     {
@@ -10,17 +10,17 @@
       "confidence": "low"
     },
     {
-      "reason": "Last commit over 3 years ago (3 years)",
-      "points": 15,
+      "reason": "Last commit over 1 year ago (640 days)",
+      "points": 5,
       "confidence": "high"
     }
   ],
   "maintainers": [
-    "zenparsing"
+    "taylorhakes"
   ],
-  "lastCommitDate": "2023-01-04T21:36:34Z",
+  "lastCommitDate": "2024-05-20T08:56:22Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
-  "executionTimeMs": 1674,
-  "diagnosedAt": "2026-02-19T16:32:18.661Z"
+  "executionTimeMs": 1682,
+  "diagnosedAt": "2026-02-19T16:32:15.210Z"
 }

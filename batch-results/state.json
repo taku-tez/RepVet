@@ -1,5 +1,5 @@
 {
-  "currentIndex": 760,
+  "currentIndex": 780,
   "totalPackages": 4957,
   "results": [
     {
@@ -18844,6 +18844,490 @@
       "hasMalwareHistory": false,
       "executionTimeMs": 1785,
       "diagnosedAt": "2026-02-19T16:27:44.972Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "wkhtmltopdf",
+      "score": 90,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Last commit over 2 years ago (3 years)",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "devongovett",
+        "zxlin"
+      ],
+      "lastCommitDate": "2023-03-09T09:29:31Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2404,
+      "diagnosedAt": "2026-02-19T16:31:45.581Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "weasyprint",
+      "score": 80,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 3 years ago (4 years)",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "bob6664569"
+      ],
+      "lastCommitDate": "2022-06-22T15:23:37Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1584,
+      "diagnosedAt": "2026-02-19T16:31:47.166Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "pagedjs",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "fchasen"
+      ],
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1794,
+      "diagnosedAt": "2026-02-19T16:31:48.961Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "qrcode",
+      "score": 95,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Last commit over 1 year ago (545 days)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "soldair",
+        "vigreco"
+      ],
+      "lastCommitDate": "2024-08-23T14:37:17Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1646,
+      "diagnosedAt": "2026-02-19T16:31:50.608Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "node-qrcode",
+      "score": 80,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 3 years ago (10 years)",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "sobear"
+      ],
+      "lastCommitDate": "2015-12-07T08:01:56Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2191,
+      "diagnosedAt": "2026-02-19T16:31:52.799Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "qr-image",
+      "score": 90,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 1 year ago (727 days)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "alexeyten"
+      ],
+      "lastCommitDate": "2024-02-23T07:19:13Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2014,
+      "diagnosedAt": "2026-02-19T16:31:54.813Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "bwip-js",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "metafloor",
+        "bwip-js"
+      ],
+      "lastCommitDate": "2025-11-11T23:25:04Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2155,
+      "diagnosedAt": "2026-02-19T16:31:56.969Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "jsbarcode",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "lindell"
+      ],
+      "lastCommitDate": "2026-01-07T19:49:51Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2110,
+      "diagnosedAt": "2026-02-19T16:31:59.079Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "barcode",
+      "score": 80,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 3 years ago (5 years)",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "samt"
+      ],
+      "lastCommitDate": "2020-09-01T15:20:09Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2522,
+      "diagnosedAt": "2026-02-19T16:32:01.601Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "bwip-js",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "metafloor",
+        "bwip-js"
+      ],
+      "lastCommitDate": "2025-11-11T23:25:04Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1083,
+      "diagnosedAt": "2026-02-19T16:32:02.684Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "q",
+      "score": 65,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Package deprecated: You or someone you depend on is using Q, the JavaScript Promise library that gave JavaScript develop...",
+          "points": 10,
+          "confidence": "high"
+        },
+        {
+          "reason": "Repository is archived (no longer maintained)",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 2 years ago (2 years)",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "domenic",
+        "kriskowal"
+      ],
+      "lastCommitDate": "2023-11-08T10:50:34Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1811,
+      "diagnosedAt": "2026-02-19T16:32:04.495Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "bluebird",
+      "score": 92,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "Last commit over 1 year ago (468 days)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "esailija"
+      ],
+      "lastCommitDate": "2024-11-07T20:26:46Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1630,
+      "diagnosedAt": "2026-02-19T16:32:06.125Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "when",
+      "score": 82,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "Last commit over 3 years ago (4 years)",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "cujojs"
+      ],
+      "lastCommitDate": "2022-04-10T19:35:16Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2284,
+      "diagnosedAt": "2026-02-19T16:32:08.409Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "rsvp",
+      "score": 90,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Last commit over 2 years ago (2 years)",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "fivetanley",
+        "mixonic",
+        "rwjblue",
+        "ryanflorence",
+        "stefanpenner",
+        "wycats"
+      ],
+      "lastCommitDate": "2023-10-27T00:21:03Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1719,
+      "diagnosedAt": "2026-02-19T16:32:10.129Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "es6-promise",
+      "score": 85,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Last commit over 3 years ago (3 years)",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "jaffathecake",
+        "stefanpenner"
+      ],
+      "lastCommitDate": "2022-11-14T21:47:12Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1779,
+      "diagnosedAt": "2026-02-19T16:32:11.908Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "native-promise-only",
+      "score": 67,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "Repository is archived (no longer maintained)",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 3 years ago (6 years)",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "getify"
+      ],
+      "lastCommitDate": "2019-10-27T02:11:57Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1620,
+      "diagnosedAt": "2026-02-19T16:32:13.528Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "promise-polyfill",
+      "score": 92,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "Last commit over 1 year ago (640 days)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "taylorhakes"
+      ],
+      "lastCommitDate": "2024-05-20T08:56:22Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1682,
+      "diagnosedAt": "2026-02-19T16:32:15.210Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "rxjs",
+      "score": 89,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Complete maintainer change in 12 days (5.0.0-alpha.11)",
+          "points": 11,
+          "confidence": "medium"
+        }
+      ],
+      "maintainers": [
+        "cartant",
+        "blesh",
+        "kwonoj"
+      ],
+      "lastCommitDate": "2025-02-23T20:54:32Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1776,
+      "diagnosedAt": "2026-02-19T16:32:16.986Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "zen-observable",
+      "score": 82,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "Last commit over 3 years ago (3 years)",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "zenparsing"
+      ],
+      "lastCommitDate": "2023-01-04T21:36:34Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1674,
+      "diagnosedAt": "2026-02-19T16:32:18.661Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "most",
+      "score": 85,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Last commit over 3 years ago (3 years)",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "tylors",
+        "briancavalier",
+        "cujojs",
+        "davidchase",
+        "most"
+      ],
+      "lastCommitDate": "2022-12-06T17:07:17Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2060,
+      "diagnosedAt": "2026-02-19T16:32:20.721Z"
     }
   ],
   "errors": [
