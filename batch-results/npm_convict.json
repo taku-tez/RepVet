@@ -1,0 +1,37 @@
+{
+  "ecosystem": "npm",
+  "package": "convict",
+  "score": 75,
+  "riskLevel": "MEDIUM",
+  "deductions": [
+    {
+      "reason": "1 critical vulnerability(ies) in history",
+      "points": 15,
+      "confidence": "high"
+    },
+    {
+      "reason": "2 high severity vulnerability(ies) in history",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "6a68",
+    "dannycoates",
+    "madarche",
+    "rfkelly",
+    "vbudhram",
+    "clouserw"
+  ],
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 3,
+    "critical": 1,
+    "high": 2,
+    "recent": 0,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 1685,
+  "diagnosedAt": "2026-02-19T15:07:25.903Z"
+}

@@ -1,0 +1,26 @@
+{
+  "ecosystem": "npm",
+  "package": "cross-env",
+  "score": 82,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    },
+    {
+      "reason": "Repository is archived (no longer maintained)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "kentcdodds"
+  ],
+  "lastCommitDate": "2025-11-16T14:11:37Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1706,
+  "diagnosedAt": "2026-02-19T15:07:22.412Z"
+}

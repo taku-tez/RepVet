@@ -1,0 +1,17 @@
+{
+  "ecosystem": "npm",
+  "package": "mini-css-extract-plugin",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "evilebottnawi",
+    "sokra",
+    "jhnns"
+  ],
+  "lastCommitDate": "2026-02-14T12:44:17Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1830,
+  "diagnosedAt": "2026-02-19T15:07:10.453Z"
+}

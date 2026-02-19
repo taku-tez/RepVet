@@ -1,0 +1,23 @@
+{
+  "ecosystem": "npm",
+  "package": "cac",
+  "score": 95,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Last commit over 1 year ago (590 days)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "kchan",
+    "egoist",
+    "rem"
+  ],
+  "lastCommitDate": "2024-07-09T09:45:18Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2536,
+  "diagnosedAt": "2026-02-19T15:07:40.702Z"
+}

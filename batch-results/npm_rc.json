@@ -1,0 +1,46 @@
+{
+  "ecosystem": "npm",
+  "package": "rc",
+  "score": 20,
+  "riskLevel": "CRITICAL",
+  "deductions": [
+    {
+      "reason": "Past malware incident: Compromised via maintainer account phishing (2021)",
+      "points": 50,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 3 years ago (4 years)",
+      "points": 15,
+      "confidence": "high"
+    },
+    {
+      "reason": "1 critical vulnerability(ies) in history",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "powersource",
+    "arj03",
+    "staltz",
+    "mixmix",
+    "cel",
+    "christianbundy",
+    "pfrazee",
+    "happy0",
+    "chereseeriepa"
+  ],
+  "lastCommitDate": "2022-03-30T18:01:10Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": true,
+  "vulnerabilityStats": {
+    "total": 1,
+    "critical": 1,
+    "high": 0,
+    "recent": 0,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 1865,
+  "diagnosedAt": "2026-02-19T15:07:30.286Z"
+}

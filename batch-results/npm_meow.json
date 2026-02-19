@@ -1,0 +1,21 @@
+{
+  "ecosystem": "npm",
+  "package": "meow",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "sindresorhus"
+  ],
+  "lastCommitDate": "2025-09-15T11:23:44Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1693,
+  "diagnosedAt": "2026-02-19T15:07:38.166Z"
+}

@@ -1,0 +1,17 @@
+{
+  "ecosystem": "npm",
+  "package": "config",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "markstos",
+    "lorenwest",
+    "jdmarshall"
+  ],
+  "lastCommitDate": "2026-02-19T07:01:21Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1806,
+  "diagnosedAt": "2026-02-19T15:07:24.218Z"
+}

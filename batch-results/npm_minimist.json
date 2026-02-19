@@ -1,0 +1,30 @@
+{
+  "ecosystem": "npm",
+  "package": "minimist",
+  "score": 85,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "1 critical vulnerability(ies) in history",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "shadowspawn",
+    "ljharb",
+    "emilbayes"
+  ],
+  "lastCommitDate": "2025-12-30T01:57:54Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 2,
+    "critical": 1,
+    "high": 0,
+    "recent": 0,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 1508,
+  "diagnosedAt": "2026-02-19T15:07:34.080Z"
+}

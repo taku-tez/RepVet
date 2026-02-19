@@ -1,0 +1,18 @@
+{
+  "ecosystem": "npm",
+  "package": "dotenv",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "~jcblw",
+    "scottmotte",
+    "motdotla",
+    "motdotenv"
+  ],
+  "lastCommitDate": "2026-02-18T08:21:48Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1793,
+  "diagnosedAt": "2026-02-19T15:07:16.762Z"
+}

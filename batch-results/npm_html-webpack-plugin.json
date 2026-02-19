@@ -1,0 +1,19 @@
+{
+  "ecosystem": "npm",
+  "package": "html-webpack-plugin",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "jantimon",
+    "ampedandwired",
+    "mastilver",
+    "thelarkinn",
+    "evilebottnawi"
+  ],
+  "lastCommitDate": "2026-01-16T17:41:21Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1723,
+  "diagnosedAt": "2026-02-19T15:07:08.622Z"
+}

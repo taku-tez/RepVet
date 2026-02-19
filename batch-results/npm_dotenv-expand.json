@@ -1,0 +1,21 @@
+{
+  "ecosystem": "npm",
+  "package": "dotenv-expand",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "motdotla"
+  ],
+  "lastCommitDate": "2026-01-21T23:20:40Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1719,
+  "diagnosedAt": "2026-02-19T15:07:18.481Z"
+}

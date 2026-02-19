@@ -1,0 +1,25 @@
+{
+  "ecosystem": "npm",
+  "package": "arg",
+  "score": 95,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Last commit over 1 year ago (581 days)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "matheuss",
+    "nick.tracey",
+    "vercel-release-bot",
+    "zeit-bot",
+    "matt.straka"
+  ],
+  "lastCommitDate": "2024-07-18T14:08:05Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2393,
+  "diagnosedAt": "2026-02-19T15:07:36.473Z"
+}

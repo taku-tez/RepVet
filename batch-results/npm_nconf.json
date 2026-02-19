@@ -1,0 +1,30 @@
+{
+  "ecosystem": "npm",
+  "package": "nconf",
+  "score": 90,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "1 high severity vulnerability(ies) in history",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "jcrugzz",
+    "indexzero",
+    "mhamann"
+  ],
+  "lastCommitDate": "2026-02-07T01:43:46Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 1,
+    "critical": 0,
+    "high": 1,
+    "recent": 0,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 2518,
+  "diagnosedAt": "2026-02-19T15:07:28.421Z"
+}

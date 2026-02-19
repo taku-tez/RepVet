@@ -1,0 +1,20 @@
+{
+  "ecosystem": "npm",
+  "package": "terser-webpack-plugin",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "evilebottnawi",
+    "sokra",
+    "jhnns",
+    "15000621931",
+    "ev1stensberg",
+    "__hai"
+  ],
+  "lastCommitDate": "2026-02-07T16:24:29Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1877,
+  "diagnosedAt": "2026-02-19T15:07:12.331Z"
+}

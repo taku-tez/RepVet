@@ -1,0 +1,20 @@
+{
+  "ecosystem": "npm",
+  "package": "copy-webpack-plugin",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "evilebottnawi",
+    "sokra",
+    "jhnns",
+    "15000621931",
+    "ev1stensberg",
+    "__hai"
+  ],
+  "lastCommitDate": "2026-01-27T11:18:11Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2637,
+  "diagnosedAt": "2026-02-19T15:07:14.968Z"
+}

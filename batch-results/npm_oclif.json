@@ -1,0 +1,19 @@
+{
+  "ecosystem": "npm",
+  "package": "oclif",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "dickeyxxx",
+    "rasphilco",
+    "amphro",
+    "salesforce-releases",
+    "mdonnalley"
+  ],
+  "lastCommitDate": "2026-02-15T08:28:05Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1383,
+  "diagnosedAt": "2026-02-19T15:07:44.938Z"
+}
