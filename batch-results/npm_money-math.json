@@ -1,0 +1,21 @@
+{
+  "ecosystem": "npm",
+  "package": "money-math",
+  "score": 95,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "ikr"
+  ],
+  "lastCommitDate": "2025-08-02T07:25:40Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2129,
+  "diagnosedAt": "2026-02-19T14:12:22.898Z"
+}

@@ -1,0 +1,26 @@
+{
+  "ecosystem": "npm",
+  "package": "timezone-support",
+  "score": 85,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 2 years ago (2 years)",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "prantlf"
+  ],
+  "lastCommitDate": "2023-10-03T16:05:06Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2290,
+  "diagnosedAt": "2026-02-19T14:12:12.708Z"
+}

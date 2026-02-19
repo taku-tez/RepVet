@@ -1,0 +1,20 @@
+{
+  "ecosystem": "npm",
+  "package": "franc",
+  "score": 95,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "wooorm"
+  ],
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2691,
+  "diagnosedAt": "2026-02-19T14:12:52.613Z"
+}

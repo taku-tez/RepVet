@@ -1,0 +1,21 @@
+{
+  "ecosystem": "npm",
+  "package": "numeral",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "adamwdraper"
+  ],
+  "lastCommitDate": "2026-02-15T15:16:26Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1791,
+  "diagnosedAt": "2026-02-19T14:12:14.500Z"
+}

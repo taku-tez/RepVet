@@ -1,0 +1,20 @@
+{
+  "ecosystem": "npm",
+  "package": "retext",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "wooorm"
+  ],
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1671,
+  "diagnosedAt": "2026-02-19T14:12:49.922Z"
+}

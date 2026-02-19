@@ -1,0 +1,21 @@
+{
+  "ecosystem": "npm",
+  "package": "decimal.js",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "mikemcl"
+  ],
+  "lastCommitDate": "2025-07-06T22:50:07Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1668,
+  "diagnosedAt": "2026-02-19T14:12:27.418Z"
+}

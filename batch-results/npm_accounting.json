@@ -1,0 +1,26 @@
+{
+  "ecosystem": "npm",
+  "package": "accounting",
+  "score": 90,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 1 year ago (716 days)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "openexchangerates"
+  ],
+  "lastCommitDate": "2024-03-05T09:57:55Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1951,
+  "diagnosedAt": "2026-02-19T14:12:16.452Z"
+}

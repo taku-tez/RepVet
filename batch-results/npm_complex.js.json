@@ -1,0 +1,21 @@
+{
+  "ecosystem": "npm",
+  "package": "complex.js",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "infusion"
+  ],
+  "lastCommitDate": "2025-11-14T00:08:43Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1789,
+  "diagnosedAt": "2026-02-19T14:12:34.295Z"
+}

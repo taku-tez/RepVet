@@ -1,0 +1,21 @@
+{
+  "ecosystem": "npm",
+  "package": "ml-matrix",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "stropitek",
+    "targos",
+    "lpatiny",
+    "mljs-bot",
+    "maasencioh",
+    "jeffersonh44",
+    "andcastillo"
+  ],
+  "lastCommitDate": "2025-06-20T12:36:45Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2008,
+  "diagnosedAt": "2026-02-19T14:12:42.398Z"
+}
