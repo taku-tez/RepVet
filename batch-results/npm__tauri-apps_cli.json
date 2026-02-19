@@ -1,6 +1,6 @@
 {
   "ecosystem": "npm",
-  "package": "react-native",
+  "package": "@tauri-apps/cli",
   "score": 90,
   "riskLevel": "LOW",
   "deductions": [
@@ -11,15 +11,15 @@
     }
   ],
   "maintainers": [
-    "react-native-bot",
-    "fb",
-    "lunaleaps",
-    "eliwhite",
-    "yungsters",
-    "cortinico",
-    "fkgozali"
+    "nothingismagick",
+    "lucasfernog",
+    "tauri-apps-ci-user",
+    "jbolda",
+    "fabianlars",
+    "amrbashir",
+    "beanow"
   ],
-  "lastCommitDate": "2026-02-19T18:26:31Z",
+  "lastCommitDate": "2026-02-18T20:58:54Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
   "vulnerabilityStats": {
@@ -29,6 +29,6 @@
     "recent": 0,
     "hasUnfixed": false
   },
-  "executionTimeMs": 2322,
-  "diagnosedAt": "2026-02-19T19:27:18.944Z"
+  "executionTimeMs": 2264,
+  "diagnosedAt": "2026-02-19T19:27:36.393Z"
 }

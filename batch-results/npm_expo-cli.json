@@ -1,0 +1,64 @@
+{
+  "ecosystem": "npm",
+  "package": "expo-cli",
+  "score": 65,
+  "riskLevel": "MEDIUM",
+  "deductions": [
+    {
+      "reason": "Package deprecated: The global Expo CLI has been superseded by 'npx expo' and eas-cli –– Learn more: https://blog.expo.d...",
+      "points": 10,
+      "confidence": "high"
+    },
+    {
+      "reason": "Repository is archived (no longer maintained)",
+      "points": 15,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 2 years ago (2 years)",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "ide",
+    "brentvatne",
+    "evanbacon",
+    "expoadmin",
+    "exponent",
+    "wschurman",
+    "bycedric",
+    "kudochien",
+    "alanhughes",
+    "expo-bot",
+    "simek",
+    "fson",
+    "ccheever",
+    "marklawlor",
+    "tsapeta",
+    "jesseruder",
+    "terribleben",
+    "nikki93",
+    "kadikraman",
+    "sjchmiela",
+    "fiber-god",
+    "jonsamp",
+    "esamelson",
+    "quinlanj",
+    "wkozyra",
+    "aleqsio",
+    "gabrieldonadel",
+    "lukmccall",
+    "princefleaswallow",
+    "christopherwalter",
+    "szdziedzic",
+    "keith-kurak",
+    "radoslawkrzemien",
+    "pkham"
+  ],
+  "lastCommitDate": "2023-12-30T13:33:59Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2196,
+  "diagnosedAt": "2026-02-19T19:27:28.083Z"
+}

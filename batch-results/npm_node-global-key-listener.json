@@ -1,0 +1,31 @@
+{
+  "ecosystem": "npm",
+  "package": "node-global-key-listener",
+  "score": 75,
+  "riskLevel": "MEDIUM",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    },
+    {
+      "reason": "Repository is archived (no longer maintained)",
+      "points": 15,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 1 year ago (580 days)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "launchmenu"
+  ],
+  "lastCommitDate": "2024-07-19T09:16:50Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1993,
+  "diagnosedAt": "2026-02-19T19:27:07.431Z"
+}

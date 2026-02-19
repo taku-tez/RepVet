@@ -1,0 +1,36 @@
+{
+  "ecosystem": "npm",
+  "package": "@react-native-community/cli",
+  "score": 74,
+  "riskLevel": "MEDIUM",
+  "deductions": [
+    {
+      "reason": "Complete maintainer change in 1 days (14.0.0-alpha.10)",
+      "points": 11,
+      "confidence": "medium"
+    },
+    {
+      "reason": "1 critical vulnerability(ies) in history",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "thymikee",
+    "react-native-community-bot",
+    "cortinico",
+    "szymonrybczak"
+  ],
+  "lastCommitDate": "2026-02-18T09:36:40Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 1,
+    "critical": 1,
+    "high": 0,
+    "recent": 1,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 1842,
+  "diagnosedAt": "2026-02-19T19:27:23.551Z"
+}

@@ -1,17 +1,21 @@
 {
   "ecosystem": "npm",
-  "package": "tauri",
+  "package": "@tauri-apps/api",
   "score": 100,
   "riskLevel": "LOW",
   "deductions": [],
   "maintainers": [
     "nothingismagick",
     "lucasfernog",
-    "tauri-apps-ci-user"
+    "tauri-apps-ci-user",
+    "jbolda",
+    "fabianlars",
+    "amrbashir",
+    "beanow"
   ],
   "lastCommitDate": "2026-02-18T20:58:54Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
-  "executionTimeMs": 2090,
-  "diagnosedAt": "2026-02-19T19:27:34.129Z"
+  "executionTimeMs": 2463,
+  "diagnosedAt": "2026-02-19T19:27:38.856Z"
 }

@@ -1,0 +1,17 @@
+{
+  "ecosystem": "npm",
+  "package": "react-native-cli",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "vjeux",
+    "fb",
+    "sophiebits"
+  ],
+  "lastCommitDate": "2026-02-19T18:26:31Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2763,
+  "diagnosedAt": "2026-02-19T19:27:21.708Z"
+}

@@ -1,0 +1,30 @@
+{
+  "ecosystem": "npm",
+  "package": "@expo/config",
+  "score": 89,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Complete maintainer change in 2 days (9.0.3-canary-20240627-1402f4b)",
+      "points": 11,
+      "confidence": "medium"
+    }
+  ],
+  "maintainers": [
+    "ide",
+    "brentvatne",
+    "evanbacon",
+    "expoadmin",
+    "exponent",
+    "bycedric",
+    "kudochien",
+    "alanhughes",
+    "expo-bot",
+    "wschurman"
+  ],
+  "lastCommitDate": "2026-02-19T19:26:14Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1713,
+  "diagnosedAt": "2026-02-19T19:27:29.796Z"
+}

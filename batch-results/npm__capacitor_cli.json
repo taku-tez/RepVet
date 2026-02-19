@@ -1,0 +1,32 @@
+{
+  "ecosystem": "npm",
+  "package": "@capacitor/cli",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "itschaced",
+    "ionicjs",
+    "jcesarmobile",
+    "vmfo",
+    "jpender",
+    "dtarnawsky",
+    "mark-ionic",
+    "alexgerardojacinto",
+    "os-pedrobilro",
+    "harvdoggy",
+    "jpender-os",
+    "ndr",
+    "kepatoto",
+    "rui.mendes",
+    "markemer",
+    "capacitor-plugin-bot",
+    "eric-ionic",
+    "os-ruialves"
+  ],
+  "lastCommitDate": "2026-02-19T15:42:28Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2070,
+  "diagnosedAt": "2026-02-19T19:27:45.728Z"
+}

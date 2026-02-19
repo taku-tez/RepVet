@@ -1,0 +1,26 @@
+{
+  "ecosystem": "npm",
+  "package": "electron-store",
+  "score": 84,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer replaced at 1.1.0",
+      "points": 11,
+      "confidence": "medium"
+    },
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "sindresorhus"
+  ],
+  "lastCommitDate": "2026-02-04T04:44:24Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1598,
+  "diagnosedAt": "2026-02-19T19:27:16.621Z"
+}
