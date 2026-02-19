@@ -52,5 +52,11 @@
     "package": "playwright-pdf",
     "error": "Exit code 1: {\"error\":\"Error: Package not found: playwright-pdf (npm)\"}\n",
     "timestamp": "2026-02-19T16:27:45.438Z"
+  },
+  {
+    "ecosystem": "npm",
+    "package": "nlp.js",
+    "error": "Exit code 1: {\"error\":\"Error: Package not found: nlp.js (npm)\"}\n",
+    "timestamp": "2026-02-19T16:52:07.856Z"
   }
 ]

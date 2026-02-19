@@ -1,7 +1,7 @@
 {
   "ecosystem": "npm",
-  "package": "elasticlunr",
-  "score": 80,
+  "package": "fasttext",
+  "score": 90,
   "riskLevel": "LOW",
   "deductions": [
     {
@@ -10,17 +10,17 @@
       "confidence": "high"
     },
     {
-      "reason": "Last commit over 3 years ago (3 years)",
-      "points": 15,
+      "reason": "Last commit over 1 year ago (724 days)",
+      "points": 5,
       "confidence": "high"
     }
   ],
   "maintainers": [
-    "weixsong"
+    "vunb"
   ],
-  "lastCommitDate": "2022-12-10T06:38:17Z",
+  "lastCommitDate": "2024-02-26T07:59:39Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
-  "executionTimeMs": 1808,
-  "diagnosedAt": "2026-02-19T16:52:31.161Z"
+  "executionTimeMs": 1900,
+  "diagnosedAt": "2026-02-19T16:52:20.897Z"
 }
