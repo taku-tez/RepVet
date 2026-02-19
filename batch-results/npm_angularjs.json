@@ -1,0 +1,26 @@
+{
+  "ecosystem": "npm",
+  "package": "angularjs",
+  "score": 80,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 3 years ago (12 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "eugeneware"
+  ],
+  "lastCommitDate": "2013-08-29T05:56:06Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2234,
+  "diagnosedAt": "2026-02-19T17:22:31.787Z"
+}

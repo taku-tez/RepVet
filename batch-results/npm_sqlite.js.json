@@ -1,0 +1,48 @@
+{
+  "ecosystem": "npm",
+  "package": "sqlite.js",
+  "score": 21,
+  "riskLevel": "CRITICAL",
+  "deductions": [
+    {
+      "reason": "Security holding package - npm removed malicious versions",
+      "points": 50,
+      "confidence": "high"
+    },
+    {
+      "reason": "Complete maintainer change in 1 days (0.0.2-security)",
+      "points": 11,
+      "confidence": "medium"
+    },
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 1 year ago (685 days)",
+      "points": 5,
+      "confidence": "high"
+    },
+    {
+      "reason": "Has unfixed vulnerabilities",
+      "points": 8,
+      "confidence": "medium"
+    }
+  ],
+  "maintainers": [
+    "npm"
+  ],
+  "lastCommitDate": "2024-04-05T06:31:06Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 1,
+    "critical": 0,
+    "high": 0,
+    "recent": 0,
+    "hasUnfixed": true
+  },
+  "executionTimeMs": 2771,
+  "diagnosedAt": "2026-02-19T17:22:15.460Z"
+}

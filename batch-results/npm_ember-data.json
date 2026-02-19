@@ -1,0 +1,26 @@
+{
+  "ecosystem": "npm",
+  "package": "ember-data",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "ember-data-admin",
+    "runspired",
+    "richgt",
+    "hm_krystan",
+    "katiegengler",
+    "hjdivad",
+    "bmac",
+    "rwjblue",
+    "fivetanley",
+    "heroiceric",
+    "stefanpenner",
+    "igort"
+  ],
+  "lastCommitDate": "2026-02-19T17:13:58Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2631,
+  "diagnosedAt": "2026-02-19T17:22:41.444Z"
+}

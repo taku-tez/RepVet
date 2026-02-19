@@ -1,5 +1,5 @@
 {
-  "currentIndex": 920,
+  "currentIndex": 940,
   "totalPackages": 4957,
   "results": [
     {
@@ -23144,6 +23144,295 @@
       },
       "executionTimeMs": 2957,
       "diagnosedAt": "2026-02-19T17:12:44.781Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "node-sqlite",
+      "score": 29,
+      "riskLevel": "CRITICAL",
+      "deductions": [
+        {
+          "reason": "Security holding package - npm removed malicious versions",
+          "points": 50,
+          "confidence": "high"
+        },
+        {
+          "reason": "Complete maintainer change in 1 days (0.0.2-security)",
+          "points": 11,
+          "confidence": "medium"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 1 year ago (685 days)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "npm"
+      ],
+      "lastCommitDate": "2024-04-05T06:31:06Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 4573,
+      "diagnosedAt": "2026-02-19T17:22:12.689Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "sqlite.js",
+      "score": 21,
+      "riskLevel": "CRITICAL",
+      "deductions": [
+        {
+          "reason": "Security holding package - npm removed malicious versions",
+          "points": 50,
+          "confidence": "high"
+        },
+        {
+          "reason": "Complete maintainer change in 1 days (0.0.2-security)",
+          "points": 11,
+          "confidence": "medium"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 1 year ago (685 days)",
+          "points": 5,
+          "confidence": "high"
+        },
+        {
+          "reason": "Has unfixed vulnerabilities",
+          "points": 8,
+          "confidence": "medium"
+        }
+      ],
+      "maintainers": [
+        "npm"
+      ],
+      "lastCommitDate": "2024-04-05T06:31:06Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 1,
+        "critical": 0,
+        "high": 0,
+        "recent": 0,
+        "hasUnfixed": true
+      },
+      "executionTimeMs": 2771,
+      "diagnosedAt": "2026-02-19T17:22:15.460Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "discord-selfbot",
+      "score": 95,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "doctordarkmagic"
+      ],
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2663,
+      "diagnosedAt": "2026-02-19T17:22:18.123Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "discord.js-selfbot",
+      "score": 85,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Package deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.",
+          "points": 10,
+          "confidence": "high"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "zziger"
+      ],
+      "lastCommitDate": "2026-02-16T16:59:59Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 4626,
+      "diagnosedAt": "2026-02-19T17:22:22.750Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "angular",
+      "score": 46,
+      "riskLevel": "HIGH",
+      "deductions": [
+        {
+          "reason": "Package deprecated: For the actively supported Angular, see https://www.npmjs.com/package/@angular/core. AngularJS suppo...",
+          "points": 10,
+          "confidence": "high"
+        },
+        {
+          "reason": "Single maintainer replaced at 1.0.0",
+          "points": 11,
+          "confidence": "medium"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "Repository is archived (no longer maintained)",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 1 year ago (677 days)",
+          "points": 5,
+          "confidence": "high"
+        },
+        {
+          "reason": "2 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "angular"
+      ],
+      "lastCommitDate": "2024-04-12T17:43:16Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 14,
+        "critical": 0,
+        "high": 2,
+        "recent": 1,
+        "hasUnfixed": true
+      },
+      "executionTimeMs": 1702,
+      "diagnosedAt": "2026-02-19T17:22:29.553Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "angularjs",
+      "score": 80,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 3 years ago (12 years)",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "eugeneware"
+      ],
+      "lastCommitDate": "2013-08-29T05:56:06Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2234,
+      "diagnosedAt": "2026-02-19T17:22:31.787Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "backbone",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "jashkenas",
+        "braddunbar",
+        "jridgewell",
+        "jgonggrijp"
+      ],
+      "lastCommitDate": "2025-04-01T11:14:31Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 1,
+        "critical": 0,
+        "high": 0,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 2493,
+      "diagnosedAt": "2026-02-19T17:22:34.280Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "ember",
+      "score": 95,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Last commit over 1 year ago (384 days)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "wycats",
+        "charlesjolley",
+        "ef4",
+        "emberjs",
+        "rwjblue",
+        "fivetanley",
+        "stefanpenner",
+        "igort",
+        "nullvoxpopuli"
+      ],
+      "lastCommitDate": "2025-01-30T21:51:44Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 4533,
+      "diagnosedAt": "2026-02-19T17:22:38.813Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "ember-data",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "ember-data-admin",
+        "runspired",
+        "richgt",
+        "hm_krystan",
+        "katiegengler",
+        "hjdivad",
+        "bmac",
+        "rwjblue",
+        "fivetanley",
+        "heroiceric",
+        "stefanpenner",
+        "igort"
+      ],
+      "lastCommitDate": "2026-02-19T17:13:58Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2631,
+      "diagnosedAt": "2026-02-19T17:22:41.444Z"
     }
   ],
   "errors": [
@@ -23212,6 +23501,72 @@
       "package": "safe-buffer-original",
       "error": "Exit code 1: {\"error\":\"Error: Package not found: safe-buffer-original (npm)\"}\n",
       "timestamp": "2026-02-19T17:12:35.547Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "ssh-decorator",
+      "error": "Exit code 1: {\"error\":\"Error: Package not found: ssh-decorator (npm)\"}\n",
+      "timestamp": "2026-02-19T17:22:07.248Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "ssh2-decorator",
+      "error": "Exit code 1: {\"error\":\"Error: Package not found: ssh2-decorator (npm)\"}\n",
+      "timestamp": "2026-02-19T17:22:07.666Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "db-migrate-extended",
+      "error": "Exit code 1: {\"error\":\"Error: Package not found: db-migrate-extended (npm)\"}\n",
+      "timestamp": "2026-02-19T17:22:08.116Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "discord-voice-selfbot",
+      "error": "Exit code 1: {\"error\":\"Error: Package not found: discord-voice-selfbot (npm)\"}\n",
+      "timestamp": "2026-02-19T17:22:23.150Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "discord-voice.js",
+      "error": "Exit code 1: {\"error\":\"Error: Package not found: discord-voice.js (npm)\"}\n",
+      "timestamp": "2026-02-19T17:22:23.757Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "discord-voice.js-selfbot",
+      "error": "Exit code 1: {\"error\":\"Error: Package not found: discord-voice.js-selfbot (npm)\"}\n",
+      "timestamp": "2026-02-19T17:22:24.802Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "discord.js-voice",
+      "error": "Exit code 1: {\"error\":\"Error: Package not found: discord.js-voice (npm)\"}\n",
+      "timestamp": "2026-02-19T17:22:25.232Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "discord.js-voice-selfbot",
+      "error": "Exit code 1: {\"error\":\"Error: Package not found: discord.js-voice-selfbot (npm)\"}\n",
+      "timestamp": "2026-02-19T17:22:26.320Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "discord.js-selfbot-voice",
+      "error": "Exit code 1: {\"error\":\"Error: Package not found: discord.js-selfbot-voice (npm)\"}\n",
+      "timestamp": "2026-02-19T17:22:26.746Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "discord.js-selfbot-voice.js",
+      "error": "Exit code 1: {\"error\":\"Error: Package not found: discord.js-selfbot-voice.js (npm)\"}\n",
+      "timestamp": "2026-02-19T17:22:27.427Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "discord.js-selfbot-voice.js-selfbot",
+      "error": "Exit code 1: {\"error\":\"Error: Package not found: discord.js-selfbot-voice.js-selfbot (npm)\"}\n",
+      "timestamp": "2026-02-19T17:22:27.851Z"
     }
   ],
   "startTime": "2026-02-19T12:29:21.598Z"

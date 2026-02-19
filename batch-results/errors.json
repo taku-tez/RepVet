@@ -64,5 +64,71 @@
     "package": "safe-buffer-original",
     "error": "Exit code 1: {\"error\":\"Error: Package not found: safe-buffer-original (npm)\"}\n",
     "timestamp": "2026-02-19T17:12:35.547Z"
+  },
+  {
+    "ecosystem": "npm",
+    "package": "ssh-decorator",
+    "error": "Exit code 1: {\"error\":\"Error: Package not found: ssh-decorator (npm)\"}\n",
+    "timestamp": "2026-02-19T17:22:07.248Z"
+  },
+  {
+    "ecosystem": "npm",
+    "package": "ssh2-decorator",
+    "error": "Exit code 1: {\"error\":\"Error: Package not found: ssh2-decorator (npm)\"}\n",
+    "timestamp": "2026-02-19T17:22:07.666Z"
+  },
+  {
+    "ecosystem": "npm",
+    "package": "db-migrate-extended",
+    "error": "Exit code 1: {\"error\":\"Error: Package not found: db-migrate-extended (npm)\"}\n",
+    "timestamp": "2026-02-19T17:22:08.116Z"
+  },
+  {
+    "ecosystem": "npm",
+    "package": "discord-voice-selfbot",
+    "error": "Exit code 1: {\"error\":\"Error: Package not found: discord-voice-selfbot (npm)\"}\n",
+    "timestamp": "2026-02-19T17:22:23.150Z"
+  },
+  {
+    "ecosystem": "npm",
+    "package": "discord-voice.js",
+    "error": "Exit code 1: {\"error\":\"Error: Package not found: discord-voice.js (npm)\"}\n",
+    "timestamp": "2026-02-19T17:22:23.757Z"
+  },
+  {
+    "ecosystem": "npm",
+    "package": "discord-voice.js-selfbot",
+    "error": "Exit code 1: {\"error\":\"Error: Package not found: discord-voice.js-selfbot (npm)\"}\n",
+    "timestamp": "2026-02-19T17:22:24.802Z"
+  },
+  {
+    "ecosystem": "npm",
+    "package": "discord.js-voice",
+    "error": "Exit code 1: {\"error\":\"Error: Package not found: discord.js-voice (npm)\"}\n",
+    "timestamp": "2026-02-19T17:22:25.232Z"
+  },
+  {
+    "ecosystem": "npm",
+    "package": "discord.js-voice-selfbot",
+    "error": "Exit code 1: {\"error\":\"Error: Package not found: discord.js-voice-selfbot (npm)\"}\n",
+    "timestamp": "2026-02-19T17:22:26.320Z"
+  },
+  {
+    "ecosystem": "npm",
+    "package": "discord.js-selfbot-voice",
+    "error": "Exit code 1: {\"error\":\"Error: Package not found: discord.js-selfbot-voice (npm)\"}\n",
+    "timestamp": "2026-02-19T17:22:26.746Z"
+  },
+  {
+    "ecosystem": "npm",
+    "package": "discord.js-selfbot-voice.js",
+    "error": "Exit code 1: {\"error\":\"Error: Package not found: discord.js-selfbot-voice.js (npm)\"}\n",
+    "timestamp": "2026-02-19T17:22:27.427Z"
+  },
+  {
+    "ecosystem": "npm",
+    "package": "discord.js-selfbot-voice.js-selfbot",
+    "error": "Exit code 1: {\"error\":\"Error: Package not found: discord.js-selfbot-voice.js-selfbot (npm)\"}\n",
+    "timestamp": "2026-02-19T17:22:27.851Z"
   }
 ]

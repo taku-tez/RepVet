@@ -1,0 +1,29 @@
+{
+  "ecosystem": "npm",
+  "package": "ember",
+  "score": 95,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Last commit over 1 year ago (384 days)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "wycats",
+    "charlesjolley",
+    "ef4",
+    "emberjs",
+    "rwjblue",
+    "fivetanley",
+    "stefanpenner",
+    "igort",
+    "nullvoxpopuli"
+  ],
+  "lastCommitDate": "2025-01-30T21:51:44Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 4533,
+  "diagnosedAt": "2026-02-19T17:22:38.813Z"
+}
