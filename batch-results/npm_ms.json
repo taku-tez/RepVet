@@ -1,0 +1,33 @@
+{
+  "ecosystem": "npm",
+  "package": "ms",
+  "score": 90,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "1 high severity vulnerability(ies) in history",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "matheuss",
+    "rauchg",
+    "nick.tracey",
+    "vercel-release-bot",
+    "zeit-bot",
+    "matt.straka"
+  ],
+  "lastCommitDate": "2026-01-16T16:27:00Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 2,
+    "critical": 0,
+    "high": 1,
+    "recent": 0,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 1789,
+  "diagnosedAt": "2026-02-19T20:32:33.863Z"
+}

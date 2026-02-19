@@ -1,7 +1,7 @@
 {
   "ecosystem": "npm",
-  "package": "cli-progress",
-  "score": 87,
+  "package": "parse-ms",
+  "score": 92,
   "riskLevel": "LOW",
   "deductions": [
     {
@@ -10,17 +10,17 @@
       "confidence": "low"
     },
     {
-      "reason": "Last commit over 2 years ago (2 years)",
-      "points": 10,
+      "reason": "Last commit over 1 year ago (656 days)",
+      "points": 5,
       "confidence": "high"
     }
   ],
   "maintainers": [
-    "andidittrich"
+    "sindresorhus"
   ],
-  "lastCommitDate": "2023-10-23T16:58:31Z",
+  "lastCommitDate": "2024-05-04T18:52:06Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
-  "executionTimeMs": 1850,
-  "diagnosedAt": "2026-02-19T20:32:17.501Z"
+  "executionTimeMs": 1615,
+  "diagnosedAt": "2026-02-19T20:32:38.647Z"
 }

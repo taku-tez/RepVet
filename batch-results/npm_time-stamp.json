@@ -1,0 +1,22 @@
+{
+  "ecosystem": "npm",
+  "package": "time-stamp",
+  "score": 85,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Last commit over 3 years ago (5 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "doowb",
+    "jonschlinkert"
+  ],
+  "lastCommitDate": "2020-11-24T06:02:18Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1610,
+  "diagnosedAt": "2026-02-19T20:32:35.473Z"
+}

@@ -1,6 +1,6 @@
 {
   "ecosystem": "npm",
-  "package": "ora",
+  "package": "pretty-ms",
   "score": 97,
   "riskLevel": "LOW",
   "deductions": [
@@ -13,9 +13,9 @@
   "maintainers": [
     "sindresorhus"
   ],
-  "lastCommitDate": "2026-02-05T04:33:37Z",
+  "lastCommitDate": "2025-11-02T05:48:43Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
-  "executionTimeMs": 2062,
-  "diagnosedAt": "2026-02-19T20:32:13.862Z"
+  "executionTimeMs": 1558,
+  "diagnosedAt": "2026-02-19T20:32:37.031Z"
 }
