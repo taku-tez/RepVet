@@ -1,0 +1,16 @@
+{
+  "ecosystem": "npm",
+  "package": "@ionic/vue",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "gm-os",
+    "ionicjs"
+  ],
+  "lastCommitDate": "2026-02-19T19:21:22Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 3472,
+  "diagnosedAt": "2026-02-19T19:32:16.204Z"
+}

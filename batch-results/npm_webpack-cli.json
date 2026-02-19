@@ -1,0 +1,20 @@
+{
+  "ecosystem": "npm",
+  "package": "webpack-cli",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "ev1stensberg",
+    "ematipico",
+    "evilebottnawi",
+    "15000621931",
+    "__hai",
+    "sokra"
+  ],
+  "lastCommitDate": "2026-02-17T04:06:18Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1674,
+  "diagnosedAt": "2026-02-19T19:32:37.080Z"
+}

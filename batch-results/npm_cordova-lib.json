@@ -1,6 +1,6 @@
 {
   "ecosystem": "npm",
-  "package": "cordova",
+  "package": "cordova-lib",
   "score": 100,
   "riskLevel": "LOW",
   "deductions": [],
@@ -20,23 +20,19 @@
     "janpio",
     "normanbreau",
     "pvpoyer",
-    "shepheb",
-    "bennmapes",
     "agrieve",
     "mmocny",
     "kamrik",
     "sgrebnov",
     "kotikov.vladimir",
     "cmarcelk",
-    "bhiggins",
     "brianleroux",
-    "mwbrooks",
     "apachebuilds",
     "timbarham"
   ],
-  "lastCommitDate": "2026-02-19T19:06:50Z",
+  "lastCommitDate": "2026-02-19T19:07:28Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
-  "executionTimeMs": 2372,
-  "diagnosedAt": "2026-02-19T19:32:21.926Z"
+  "executionTimeMs": 2846,
+  "diagnosedAt": "2026-02-19T19:32:26.317Z"
 }

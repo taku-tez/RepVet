@@ -340,5 +340,11 @@
     "package": "@datadog/node-appsec",
     "error": "Exit code 1: {\"error\":\"Error: Package not found: @datadog/node-appsec (npm)\"}\n",
     "timestamp": "2026-02-19T19:12:45.417Z"
+  },
+  {
+    "ecosystem": "npm",
+    "package": "phonegap-cli",
+    "error": "Exit code 1: {\"error\":\"Error: Package not found: phonegap-cli (npm)\"}\n",
+    "timestamp": "2026-02-19T19:32:33.438Z"
   }
 ]

@@ -1,0 +1,20 @@
+{
+  "ecosystem": "npm",
+  "package": "cordova-cli",
+  "score": 95,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "masakura"
+  ],
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1544,
+  "diagnosedAt": "2026-02-19T19:32:23.471Z"
+}

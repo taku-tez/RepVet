@@ -1,0 +1,21 @@
+{
+  "ecosystem": "npm",
+  "package": "rollup-plugin-typescript2",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "ezolenko"
+  ],
+  "lastCommitDate": "2025-05-07T16:38:19Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2218,
+  "diagnosedAt": "2026-02-19T19:32:45.833Z"
+}

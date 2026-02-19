@@ -1,5 +1,5 @@
 {
-  "currentIndex": 1320,
+  "currentIndex": 1340,
   "totalPackages": 4957,
   "results": [
     {
@@ -32085,6 +32085,519 @@
       "hasMalwareHistory": false,
       "executionTimeMs": 3026,
       "diagnosedAt": "2026-02-19T19:27:51.400Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "ionic",
+      "score": 90,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Package deprecated: The Ionic CLI now uses ✨ @ionic/cli ✨ for its package name! 👉 https://twitter.com/ionicframework/st...",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "ionicjs",
+        "jcesarmobile"
+      ],
+      "lastCommitDate": "2026-01-22T11:38:49Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2405,
+      "diagnosedAt": "2026-02-19T19:32:07.594Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@ionic/core",
+      "score": 90,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "gm-os",
+        "ionicjs"
+      ],
+      "lastCommitDate": "2026-02-19T19:21:22Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 1,
+        "critical": 0,
+        "high": 1,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 2914,
+      "diagnosedAt": "2026-02-19T19:32:10.508Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@ionic/react",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "gm-os",
+        "ionicjs"
+      ],
+      "lastCommitDate": "2026-02-19T19:21:22Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2223,
+      "diagnosedAt": "2026-02-19T19:32:12.732Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@ionic/vue",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "gm-os",
+        "ionicjs"
+      ],
+      "lastCommitDate": "2026-02-19T19:21:22Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 3472,
+      "diagnosedAt": "2026-02-19T19:32:16.204Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@ionic/angular",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "gm-os",
+        "ionicjs"
+      ],
+      "lastCommitDate": "2026-02-19T19:21:22Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 3348,
+      "diagnosedAt": "2026-02-19T19:32:19.553Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "cordova",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "brodybits",
+        "dpogue",
+        "cordovaowner",
+        "stevegill",
+        "purplecabbage",
+        "anis",
+        "filmaj",
+        "bowserj",
+        "shazron",
+        "surajpindoria",
+        "erisu",
+        "niklasmerz",
+        "janpio",
+        "normanbreau",
+        "pvpoyer",
+        "shepheb",
+        "bennmapes",
+        "agrieve",
+        "mmocny",
+        "kamrik",
+        "sgrebnov",
+        "kotikov.vladimir",
+        "cmarcelk",
+        "bhiggins",
+        "brianleroux",
+        "mwbrooks",
+        "apachebuilds",
+        "timbarham"
+      ],
+      "lastCommitDate": "2026-02-19T19:06:50Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2372,
+      "diagnosedAt": "2026-02-19T19:32:21.926Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "cordova-cli",
+      "score": 95,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "masakura"
+      ],
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1544,
+      "diagnosedAt": "2026-02-19T19:32:23.471Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "cordova-lib",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "brodybits",
+        "dpogue",
+        "cordovaowner",
+        "stevegill",
+        "purplecabbage",
+        "anis",
+        "filmaj",
+        "bowserj",
+        "shazron",
+        "surajpindoria",
+        "erisu",
+        "niklasmerz",
+        "janpio",
+        "normanbreau",
+        "pvpoyer",
+        "agrieve",
+        "mmocny",
+        "kamrik",
+        "sgrebnov",
+        "kotikov.vladimir",
+        "cmarcelk",
+        "brianleroux",
+        "apachebuilds",
+        "timbarham"
+      ],
+      "lastCommitDate": "2026-02-19T19:07:28Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2846,
+      "diagnosedAt": "2026-02-19T19:32:26.317Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "cordova-common",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "brodybits",
+        "dpogue",
+        "cordovaowner",
+        "stevegill",
+        "purplecabbage",
+        "anis",
+        "filmaj",
+        "bowserj",
+        "shazron",
+        "surajpindoria",
+        "erisu",
+        "niklasmerz",
+        "janpio",
+        "normanbreau",
+        "pvpoyer",
+        "kotikov.vladimir",
+        "apachebuilds",
+        "timbarham",
+        "audreyso"
+      ],
+      "lastCommitDate": "2026-01-21T23:35:20Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2746,
+      "diagnosedAt": "2026-02-19T19:32:29.063Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "phonegap",
+      "score": 60,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Package deprecated: This package is deprecated, see https://blog.phonegap.com/update-for-customers-using-phonegap-and-ph...",
+          "points": 10,
+          "confidence": "high"
+        },
+        {
+          "reason": "Repository is archived (no longer maintained)",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 3 years ago (4 years)",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "filmaj",
+        "surajpindoria",
+        "hermwong",
+        "devgeeks",
+        "purplecabbage",
+        "timkim",
+        "stevegill",
+        "macdonst"
+      ],
+      "lastCommitDate": "2022-04-09T16:44:55Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2060,
+      "diagnosedAt": "2026-02-19T19:32:31.123Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "phonegap-build",
+      "score": 75,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Package deprecated: This package is deprecated, see https://blog.phonegap.com/update-for-customers-using-phonegap-and-ph...",
+          "points": 10,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 3 years ago (7 years)",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "mwbrooks",
+        "purplecabbage"
+      ],
+      "lastCommitDate": "2018-11-06T09:10:17Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1943,
+      "diagnosedAt": "2026-02-19T19:32:33.066Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "webpack",
+      "score": 85,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "1 critical vulnerability(ies) in history",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "15000621931",
+        "ev1stensberg",
+        "__hai",
+        "sokra",
+        "evilebottnawi",
+        "jhnns",
+        "thelarkinn"
+      ],
+      "lastCommitDate": "2026-02-19T19:13:16Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 4,
+        "critical": 1,
+        "high": 0,
+        "recent": 2,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1968,
+      "diagnosedAt": "2026-02-19T19:32:35.406Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "webpack-cli",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "ev1stensberg",
+        "ematipico",
+        "evilebottnawi",
+        "15000621931",
+        "__hai",
+        "sokra"
+      ],
+      "lastCommitDate": "2026-02-17T04:06:18Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1674,
+      "diagnosedAt": "2026-02-19T19:32:37.080Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "webpack-dev-server",
+      "score": 90,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "15000621931",
+        "ev1stensberg",
+        "__hai",
+        "evilebottnawi",
+        "sokra",
+        "jhnns",
+        "hiroppy"
+      ],
+      "lastCommitDate": "2026-02-19T03:07:23Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 3,
+        "critical": 0,
+        "high": 1,
+        "recent": 2,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1764,
+      "diagnosedAt": "2026-02-19T19:32:38.845Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "webpack-merge",
+      "score": 92,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "Last commit over 1 year ago (587 days)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "bebraw"
+      ],
+      "lastCommitDate": "2024-07-12T06:35:58Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2308,
+      "diagnosedAt": "2026-02-19T19:32:41.153Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "rollup",
+      "score": 90,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "eventualbuddha",
+        "trysound",
+        "rich_harris",
+        "victorystick",
+        "lukastaegert"
+      ],
+      "lastCommitDate": "2026-02-19T11:27:39Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 1,
+        "critical": 0,
+        "high": 1,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 2461,
+      "diagnosedAt": "2026-02-19T19:32:43.615Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "rollup-plugin-typescript2",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "ezolenko"
+      ],
+      "lastCommitDate": "2025-05-07T16:38:19Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2218,
+      "diagnosedAt": "2026-02-19T19:32:45.833Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@rollup/plugin-node-resolve",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "shellscape",
+        "rich_harris",
+        "guybedford",
+        "lukastaegert"
+      ],
+      "lastCommitDate": "2026-02-16T04:11:46Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1723,
+      "diagnosedAt": "2026-02-19T19:32:47.556Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "vite",
+      "score": 90,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "3 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "yyx990803",
+        "patak",
+        "antfu",
+        "vitebot"
+      ],
+      "lastCommitDate": "2026-02-19T07:23:17Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 16,
+        "critical": 0,
+        "high": 3,
+        "recent": 8,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 3933,
+      "diagnosedAt": "2026-02-19T19:32:51.489Z"
     }
   ],
   "errors": [
@@ -32429,6 +32942,12 @@
       "package": "@datadog/node-appsec",
       "error": "Exit code 1: {\"error\":\"Error: Package not found: @datadog/node-appsec (npm)\"}\n",
       "timestamp": "2026-02-19T19:12:45.417Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "phonegap-cli",
+      "error": "Exit code 1: {\"error\":\"Error: Package not found: phonegap-cli (npm)\"}\n",
+      "timestamp": "2026-02-19T19:32:33.438Z"
     }
   ],
   "startTime": "2026-02-19T12:29:21.598Z"

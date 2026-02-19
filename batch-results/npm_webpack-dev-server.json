@@ -1,12 +1,12 @@
 {
   "ecosystem": "npm",
-  "package": "webpack",
-  "score": 85,
+  "package": "webpack-dev-server",
+  "score": 90,
   "riskLevel": "LOW",
   "deductions": [
     {
-      "reason": "1 critical vulnerability(ies) in history",
-      "points": 15,
+      "reason": "1 high severity vulnerability(ies) in history",
+      "points": 10,
       "confidence": "high"
     }
   ],
@@ -14,21 +14,21 @@
     "15000621931",
     "ev1stensberg",
     "__hai",
-    "sokra",
     "evilebottnawi",
+    "sokra",
     "jhnns",
-    "thelarkinn"
+    "hiroppy"
   ],
-  "lastCommitDate": "2026-02-19T19:13:16Z",
+  "lastCommitDate": "2026-02-19T03:07:23Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
   "vulnerabilityStats": {
-    "total": 4,
-    "critical": 1,
-    "high": 0,
+    "total": 3,
+    "critical": 0,
+    "high": 1,
     "recent": 2,
     "hasUnfixed": false
   },
-  "executionTimeMs": 1968,
-  "diagnosedAt": "2026-02-19T19:32:35.406Z"
+  "executionTimeMs": 1764,
+  "diagnosedAt": "2026-02-19T19:32:38.845Z"
 }

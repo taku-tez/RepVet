@@ -1,6 +1,6 @@
 {
   "ecosystem": "npm",
-  "package": "rollup",
+  "package": "@ionic/core",
   "score": 90,
   "riskLevel": "LOW",
   "deductions": [
@@ -11,13 +11,10 @@
     }
   ],
   "maintainers": [
-    "eventualbuddha",
-    "trysound",
-    "rich_harris",
-    "victorystick",
-    "lukastaegert"
+    "gm-os",
+    "ionicjs"
   ],
-  "lastCommitDate": "2026-02-19T11:27:39Z",
+  "lastCommitDate": "2026-02-19T19:21:22Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
   "vulnerabilityStats": {
@@ -27,6 +24,6 @@
     "recent": 0,
     "hasUnfixed": false
   },
-  "executionTimeMs": 2461,
-  "diagnosedAt": "2026-02-19T19:32:43.615Z"
+  "executionTimeMs": 2914,
+  "diagnosedAt": "2026-02-19T19:32:10.508Z"
 }

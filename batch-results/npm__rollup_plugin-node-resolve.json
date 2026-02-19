@@ -1,0 +1,18 @@
+{
+  "ecosystem": "npm",
+  "package": "@rollup/plugin-node-resolve",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "shellscape",
+    "rich_harris",
+    "guybedford",
+    "lukastaegert"
+  ],
+  "lastCommitDate": "2026-02-16T04:11:46Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1723,
+  "diagnosedAt": "2026-02-19T19:32:47.556Z"
+}

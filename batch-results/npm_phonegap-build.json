@@ -1,0 +1,27 @@
+{
+  "ecosystem": "npm",
+  "package": "phonegap-build",
+  "score": 75,
+  "riskLevel": "MEDIUM",
+  "deductions": [
+    {
+      "reason": "Package deprecated: This package is deprecated, see https://blog.phonegap.com/update-for-customers-using-phonegap-and-ph...",
+      "points": 10,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 3 years ago (7 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "mwbrooks",
+    "purplecabbage"
+  ],
+  "lastCommitDate": "2018-11-06T09:10:17Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1943,
+  "diagnosedAt": "2026-02-19T19:32:33.066Z"
+}
