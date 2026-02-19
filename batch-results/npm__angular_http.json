@@ -1,0 +1,22 @@
+{
+  "ecosystem": "npm",
+  "package": "@angular/http",
+  "score": 90,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Package deprecated: Package no longer supported. Use @angular/common instead, see https://angular.io/guide/deprecations#...",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "angular",
+    "google-wombot"
+  ],
+  "lastCommitDate": "2026-02-19T17:11:31Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2518,
+  "diagnosedAt": "2026-02-19T19:02:19.668Z"
+}

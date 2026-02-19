@@ -1,0 +1,16 @@
+{
+  "ecosystem": "npm",
+  "package": "@redux-saga/core",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "redux-saga-release-bot",
+    "andarist",
+    "yelouafi"
+  ],
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1731,
+  "diagnosedAt": "2026-02-19T19:02:31.891Z"
+}

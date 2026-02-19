@@ -1,0 +1,17 @@
+{
+  "ecosystem": "npm",
+  "package": "@emotion/css",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "emmatown",
+    "tkh44",
+    "emotion-release-bot",
+    "andarist"
+  ],
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1589,
+  "diagnosedAt": "2026-02-19T19:02:36.695Z"
+}

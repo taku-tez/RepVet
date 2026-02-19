@@ -1,0 +1,16 @@
+{
+  "ecosystem": "npm",
+  "package": "@nestjs/platform-express",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "nestjscore",
+    "kamilmysliwiec"
+  ],
+  "lastCommitDate": "2026-02-19T17:46:18Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2241,
+  "diagnosedAt": "2026-02-19T19:02:26.150Z"
+}

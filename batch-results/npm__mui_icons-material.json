@@ -1,0 +1,31 @@
+{
+  "ecosystem": "npm",
+  "package": "@mui/icons-material",
+  "score": 85,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Complete maintainer change in 1 days (5.15.21)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "diegoandai",
+    "brijeshb42",
+    "michaldudak",
+    "mnajdova",
+    "siriwatknp",
+    "mj12albert",
+    "aarongarciah",
+    "atomiks",
+    "oliviertassinari",
+    "silviuaavram",
+    "janpotoms"
+  ],
+  "lastCommitDate": "2026-02-19T16:08:20Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1727,
+  "diagnosedAt": "2026-02-19T19:02:45.653Z"
+}

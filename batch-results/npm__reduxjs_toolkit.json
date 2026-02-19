@@ -1,0 +1,20 @@
+{
+  "ecosystem": "npm",
+  "package": "@reduxjs/toolkit",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "acemarke",
+    "timdorr",
+    "gaearon",
+    "phryneas",
+    "crutchcorn",
+    "eskimojo"
+  ],
+  "lastCommitDate": "2026-02-12T02:48:14Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1767,
+  "diagnosedAt": "2026-02-19T19:02:27.918Z"
+}

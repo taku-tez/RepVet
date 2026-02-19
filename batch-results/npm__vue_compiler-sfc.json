@@ -1,0 +1,21 @@
+{
+  "ecosystem": "npm",
+  "package": "@vue/compiler-sfc",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "yyx990803"
+  ],
+  "lastCommitDate": "2026-02-19T18:39:26Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1760,
+  "diagnosedAt": "2026-02-19T19:02:07.025Z"
+}
