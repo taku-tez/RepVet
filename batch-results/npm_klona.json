@@ -1,7 +1,7 @@
 {
   "ecosystem": "npm",
-  "package": "deep-object-diff",
-  "score": 92,
+  "package": "klona",
+  "score": 82,
   "riskLevel": "LOW",
   "deductions": [
     {
@@ -10,24 +10,24 @@
       "confidence": "low"
     },
     {
-      "reason": "Last commit over 1 year ago (717 days)",
-      "points": 5,
+      "reason": "1 critical vulnerability(ies) in history",
+      "points": 15,
       "confidence": "high"
     }
   ],
   "maintainers": [
-    "mattphillips"
+    "lukeed"
   ],
-  "lastCommitDate": "2024-03-04T12:06:22Z",
+  "lastCommitDate": "2026-01-24T12:37:35Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
   "vulnerabilityStats": {
     "total": 1,
-    "critical": 0,
+    "critical": 1,
     "high": 0,
     "recent": 0,
     "hasUnfixed": false
   },
-  "executionTimeMs": 2242,
-  "diagnosedAt": "2026-02-19T16:57:07.905Z"
+  "executionTimeMs": 1839,
+  "diagnosedAt": "2026-02-19T16:57:30.861Z"
 }

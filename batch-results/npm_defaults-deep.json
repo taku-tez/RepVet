@@ -1,12 +1,12 @@
 {
   "ecosystem": "npm",
-  "package": "mixin-deep",
-  "score": 65,
-  "riskLevel": "MEDIUM",
+  "package": "defaults-deep",
+  "score": 52,
+  "riskLevel": "HIGH",
   "deductions": [
     {
-      "reason": "Last commit over 2 years ago (2 years)",
-      "points": 10,
+      "reason": "Last commit over 3 years ago (6 years)",
+      "points": 15,
       "confidence": "high"
     },
     {
@@ -18,13 +18,18 @@
       "reason": "1 high severity vulnerability(ies) in history",
       "points": 10,
       "confidence": "high"
+    },
+    {
+      "reason": "Has unfixed vulnerabilities",
+      "points": 8,
+      "confidence": "medium"
     }
   ],
   "maintainers": [
     "doowb",
     "jonschlinkert"
   ],
-  "lastCommitDate": "2023-08-23T03:30:34Z",
+  "lastCommitDate": "2019-08-25T08:08:54Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
   "vulnerabilityStats": {
@@ -32,8 +37,8 @@
     "critical": 1,
     "high": 1,
     "recent": 0,
-    "hasUnfixed": false
+    "hasUnfixed": true
   },
-  "executionTimeMs": 7412,
-  "diagnosedAt": "2026-02-19T16:57:47.680Z"
+  "executionTimeMs": 2010,
+  "diagnosedAt": "2026-02-19T16:57:49.690Z"
 }

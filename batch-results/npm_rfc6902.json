@@ -1,33 +1,33 @@
 {
   "ecosystem": "npm",
-  "package": "deep-object-diff",
-  "score": 92,
+  "package": "rfc6902",
+  "score": 80,
   "riskLevel": "LOW",
   "deductions": [
     {
       "reason": "Single maintainer (bus factor risk)",
-      "points": 3,
-      "confidence": "low"
+      "points": 5,
+      "confidence": "high"
     },
     {
-      "reason": "Last commit over 1 year ago (717 days)",
-      "points": 5,
+      "reason": "1 critical vulnerability(ies) in history",
+      "points": 15,
       "confidence": "high"
     }
   ],
   "maintainers": [
-    "mattphillips"
+    "chbrown"
   ],
-  "lastCommitDate": "2024-03-04T12:06:22Z",
+  "lastCommitDate": "2025-11-16T20:17:36Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
   "vulnerabilityStats": {
     "total": 1,
-    "critical": 0,
+    "critical": 1,
     "high": 0,
     "recent": 0,
     "hasUnfixed": false
   },
-  "executionTimeMs": 2242,
-  "diagnosedAt": "2026-02-19T16:57:07.905Z"
+  "executionTimeMs": 2108,
+  "diagnosedAt": "2026-02-19T16:57:13.499Z"
 }
