@@ -1,0 +1,36 @@
+{
+  "ecosystem": "npm",
+  "package": "@newrelic/aws-sdk",
+  "score": 65,
+  "riskLevel": "MEDIUM",
+  "deductions": [
+    {
+      "reason": "Package deprecated: This instrumentation has been merged into the newrelic package as of 11.16.0 and is no longer mainta...",
+      "points": 10,
+      "confidence": "high"
+    },
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    },
+    {
+      "reason": "Repository is archived (no longer maintained)",
+      "points": 15,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 1 year ago (624 days)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "newrelic"
+  ],
+  "lastCommitDate": "2024-06-05T17:36:26Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2500,
+  "diagnosedAt": "2026-02-19T19:12:52.970Z"
+}

@@ -1,0 +1,21 @@
+{
+  "ecosystem": "npm",
+  "package": "@clerk/types",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "colinclerk",
+    "bradenclerk",
+    "nikosdouvlis",
+    "chanioxaris",
+    "jescalan",
+    "dominic-clerk",
+    "mwickett"
+  ],
+  "lastCommitDate": "2026-02-19T19:10:20Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 3253,
+  "diagnosedAt": "2026-02-19T19:12:19.962Z"
+}

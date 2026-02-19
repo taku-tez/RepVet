@@ -1,0 +1,27 @@
+{
+  "ecosystem": "npm",
+  "package": "@clerk/clerk-sdk-node",
+  "score": 90,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Package deprecated: January 10 2025 marks the end of support for @clerk/clerk-sdk-node as previously announced in our Oc...",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "colinclerk",
+    "bradenclerk",
+    "nikosdouvlis",
+    "chanioxaris",
+    "jescalan",
+    "dominic-clerk",
+    "mwickett"
+  ],
+  "lastCommitDate": "2026-02-19T19:10:20Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 3919,
+  "diagnosedAt": "2026-02-19T19:12:16.708Z"
+}

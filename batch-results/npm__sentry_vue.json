@@ -1,6 +1,6 @@
 {
   "ecosystem": "npm",
-  "package": "@sentry/node",
+  "package": "@sentry/vue",
   "score": 97,
   "riskLevel": "LOW",
   "deductions": [
@@ -16,13 +16,6 @@
   "lastCommitDate": "2026-02-19T19:05:03Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
-  "vulnerabilityStats": {
-    "total": 2,
-    "critical": 0,
-    "high": 0,
-    "recent": 1,
-    "hasUnfixed": false
-  },
-  "executionTimeMs": 1996,
-  "diagnosedAt": "2026-02-19T19:12:36.755Z"
+  "executionTimeMs": 2447,
+  "diagnosedAt": "2026-02-19T19:12:41.001Z"
 }

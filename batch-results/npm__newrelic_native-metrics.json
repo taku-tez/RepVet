@@ -1,6 +1,6 @@
 {
   "ecosystem": "npm",
-  "package": "@sentry/node",
+  "package": "@newrelic/native-metrics",
   "score": 97,
   "riskLevel": "LOW",
   "deductions": [
@@ -11,18 +11,11 @@
     }
   ],
   "maintainers": [
-    "sentry-bot"
+    "newrelic"
   ],
-  "lastCommitDate": "2026-02-19T19:05:03Z",
+  "lastCommitDate": "2025-10-22T18:26:28Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
-  "vulnerabilityStats": {
-    "total": 2,
-    "critical": 0,
-    "high": 0,
-    "recent": 1,
-    "hasUnfixed": false
-  },
-  "executionTimeMs": 1996,
-  "diagnosedAt": "2026-02-19T19:12:36.755Z"
+  "executionTimeMs": 2431,
+  "diagnosedAt": "2026-02-19T19:12:47.848Z"
 }

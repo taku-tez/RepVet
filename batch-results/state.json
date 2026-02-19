@@ -1,5 +1,5 @@
 {
-  "currentIndex": 1260,
+  "currentIndex": 1280,
   "totalPackages": 4957,
   "results": [
     {
@@ -30445,6 +30445,509 @@
       "hasMalwareHistory": false,
       "executionTimeMs": 1825,
       "diagnosedAt": "2026-02-19T19:07:59.152Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@clerk/clerk-react",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "colinclerk",
+        "bradenclerk",
+        "nikosdouvlis",
+        "chanioxaris",
+        "jescalan",
+        "dominic-clerk",
+        "mwickett"
+      ],
+      "lastCommitDate": "2026-02-19T19:10:20Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2798,
+      "diagnosedAt": "2026-02-19T19:12:12.789Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@clerk/clerk-sdk-node",
+      "score": 90,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Package deprecated: January 10 2025 marks the end of support for @clerk/clerk-sdk-node as previously announced in our Oc...",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "colinclerk",
+        "bradenclerk",
+        "nikosdouvlis",
+        "chanioxaris",
+        "jescalan",
+        "dominic-clerk",
+        "mwickett"
+      ],
+      "lastCommitDate": "2026-02-19T19:10:20Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 3919,
+      "diagnosedAt": "2026-02-19T19:12:16.708Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@clerk/types",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "colinclerk",
+        "bradenclerk",
+        "nikosdouvlis",
+        "chanioxaris",
+        "jescalan",
+        "dominic-clerk",
+        "mwickett"
+      ],
+      "lastCommitDate": "2026-02-19T19:10:20Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 3253,
+      "diagnosedAt": "2026-02-19T19:12:19.962Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@auth/core",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "himself_65",
+        "bekacru"
+      ],
+      "lastCommitDate": "2026-02-07T21:40:57Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1777,
+      "diagnosedAt": "2026-02-19T19:12:21.739Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@auth/prisma-adapter",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "himself_65",
+        "bekacru"
+      ],
+      "lastCommitDate": "2026-02-07T21:40:57Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2328,
+      "diagnosedAt": "2026-02-19T19:12:24.067Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@auth/supabase-adapter",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "himself_65",
+        "bekacru"
+      ],
+      "lastCommitDate": "2026-02-07T21:40:57Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2314,
+      "diagnosedAt": "2026-02-19T19:12:26.382Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@stripe/stripe-js",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "rado-stripe",
+        "bmathews-stripe",
+        "cbala-stripe",
+        "dodgez-stripe",
+        "bdaily-stripe",
+        "rvolyar-stripe",
+        "tjliu-stripe",
+        "alic-stripe"
+      ],
+      "lastCommitDate": "2026-02-18T21:14:37Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1951,
+      "diagnosedAt": "2026-02-19T19:12:28.333Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@stripe/react-stripe-js",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "rado-stripe",
+        "bmathews-stripe",
+        "cbala-stripe",
+        "dodgez-stripe",
+        "bdaily-stripe",
+        "rvolyar-stripe",
+        "tjliu-stripe",
+        "alic-stripe"
+      ],
+      "lastCommitDate": "2026-02-05T18:42:53Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1729,
+      "diagnosedAt": "2026-02-19T19:12:30.062Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@stripe/stripe-react-native",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "nazli-stripe",
+        "stripejs",
+        "jordand-stripe",
+        "arashn-stripe",
+        "maxliu-stripe",
+        "hideokamoto-stripe",
+        "jackieosborn-stripe",
+        "billfinn-stripe",
+        "lins-stripe",
+        "stripe-bindings",
+        "jil-stripe",
+        "tomas-stripe",
+        "graceg-stripe",
+        "bibek-stripe",
+        "rado-stripe",
+        "yuluomeng",
+        "cyuen-stripe",
+        "fkuo-stripe",
+        "tomasf-stripe",
+        "chaves-stripe",
+        "porter-stripe",
+        "lemuel-stripe",
+        "ngrubb-stripe",
+        "cchalstrom-stripe",
+        "charliecruzan-stripe",
+        "mattpatt-stripe",
+        "ericfrank-stripe",
+        "tomer-stripe",
+        "mindy-stripe",
+        "tennhard-stripe",
+        "jackokerman-stripe",
+        "ianjabour-stripe",
+        "stegs-stripe",
+        "jeremyg-stripe",
+        "ebarrenechea-stripe",
+        "stevekaliski-stripe",
+        "matebek-stripe",
+        "henryx-stripe",
+        "kovalev-stripe",
+        "aaronhernandez-stripe",
+        "aywang-stripe",
+        "timbennett-stripe",
+        "davidme-stripe",
+        "kentwilliams-stripe",
+        "svenugopal-stripe",
+        "alexander-stripe",
+        "toluo-stripe",
+        "tillh-stripe",
+        "wooj-stripe",
+        "carlosmuvi",
+        "joyceqin-stripe",
+        "jaynewstrom-stripe",
+        "gbirch-stripe",
+        "cttsai",
+        "luisv-stripe",
+        "lamflam-stripe",
+        "tjclawson-stripe",
+        "matv-stripe",
+        "tianzhao-stripe",
+        "lng-stripe",
+        "mats-stripe",
+        "samer-stripe"
+      ],
+      "lastCommitDate": "2026-02-19T09:35:33Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2378,
+      "diagnosedAt": "2026-02-19T19:12:32.441Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@sentry/browser",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "sentry-bot"
+      ],
+      "lastCommitDate": "2026-02-19T19:05:03Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 1,
+        "critical": 0,
+        "high": 0,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 2318,
+      "diagnosedAt": "2026-02-19T19:12:34.759Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@sentry/node",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "sentry-bot"
+      ],
+      "lastCommitDate": "2026-02-19T19:05:03Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 2,
+        "critical": 0,
+        "high": 0,
+        "recent": 1,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1996,
+      "diagnosedAt": "2026-02-19T19:12:36.755Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@sentry/react",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "sentry-bot"
+      ],
+      "lastCommitDate": "2026-02-19T19:05:03Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1799,
+      "diagnosedAt": "2026-02-19T19:12:38.554Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@sentry/vue",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "sentry-bot"
+      ],
+      "lastCommitDate": "2026-02-19T19:05:03Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2447,
+      "diagnosedAt": "2026-02-19T19:12:41.001Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@datadog/browser-rum",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "datadog"
+      ],
+      "lastCommitDate": "2026-02-19T16:43:19Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2170,
+      "diagnosedAt": "2026-02-19T19:12:43.171Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@datadog/browser-logs",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "datadog"
+      ],
+      "lastCommitDate": "2026-02-19T16:43:19Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1821,
+      "diagnosedAt": "2026-02-19T19:12:44.992Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@newrelic/native-metrics",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "newrelic"
+      ],
+      "lastCommitDate": "2025-10-22T18:26:28Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2431,
+      "diagnosedAt": "2026-02-19T19:12:47.848Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@newrelic/superagent",
+      "score": 65,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Package deprecated: This instrumentation has been merged into the newrelic package as of 11.16.0 and is no longer mainta...",
+          "points": 10,
+          "confidence": "high"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        },
+        {
+          "reason": "Repository is archived (no longer maintained)",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 1 year ago (666 days)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "newrelic"
+      ],
+      "lastCommitDate": "2024-04-24T13:26:44Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2620,
+      "diagnosedAt": "2026-02-19T19:12:50.469Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@newrelic/aws-sdk",
+      "score": 65,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Package deprecated: This instrumentation has been merged into the newrelic package as of 11.16.0 and is no longer mainta...",
+          "points": 10,
+          "confidence": "high"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        },
+        {
+          "reason": "Repository is archived (no longer maintained)",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 1 year ago (624 days)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "newrelic"
+      ],
+      "lastCommitDate": "2024-06-05T17:36:26Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2500,
+      "diagnosedAt": "2026-02-19T19:12:52.970Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "sharp",
+      "score": 87,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "lovell"
+      ],
+      "lastCommitDate": "2026-02-01T21:20:26Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 2,
+        "critical": 0,
+        "high": 1,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1922,
+      "diagnosedAt": "2026-02-19T19:12:54.892Z"
     }
   ],
   "errors": [
@@ -30783,6 +31286,12 @@
       "package": "___",
       "error": "Exit code 1: {\"error\":\"Error: Package not found: ___ (npm)\"}\n",
       "timestamp": "2026-02-19T18:32:29.219Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@datadog/node-appsec",
+      "error": "Exit code 1: {\"error\":\"Error: Package not found: @datadog/node-appsec (npm)\"}\n",
+      "timestamp": "2026-02-19T19:12:45.417Z"
     }
   ],
   "startTime": "2026-02-19T12:29:21.598Z"

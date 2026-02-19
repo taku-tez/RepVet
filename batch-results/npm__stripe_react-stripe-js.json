@@ -1,6 +1,6 @@
 {
   "ecosystem": "npm",
-  "package": "@stripe/stripe-js",
+  "package": "@stripe/react-stripe-js",
   "score": 100,
   "riskLevel": "LOW",
   "deductions": [],
@@ -14,9 +14,9 @@
     "tjliu-stripe",
     "alic-stripe"
   ],
-  "lastCommitDate": "2026-02-18T21:14:37Z",
+  "lastCommitDate": "2026-02-05T18:42:53Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
-  "executionTimeMs": 1951,
-  "diagnosedAt": "2026-02-19T19:12:28.333Z"
+  "executionTimeMs": 1729,
+  "diagnosedAt": "2026-02-19T19:12:30.062Z"
 }

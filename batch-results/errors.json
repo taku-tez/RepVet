@@ -334,5 +334,11 @@
     "package": "___",
     "error": "Exit code 1: {\"error\":\"Error: Package not found: ___ (npm)\"}\n",
     "timestamp": "2026-02-19T18:32:29.219Z"
+  },
+  {
+    "ecosystem": "npm",
+    "package": "@datadog/node-appsec",
+    "error": "Exit code 1: {\"error\":\"Error: Package not found: @datadog/node-appsec (npm)\"}\n",
+    "timestamp": "2026-02-19T19:12:45.417Z"
   }
 ]
