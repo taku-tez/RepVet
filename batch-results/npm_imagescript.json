@@ -1,16 +1,16 @@
 {
   "ecosystem": "npm",
-  "package": "rehype",
+  "package": "imagescript",
   "score": 100,
   "riskLevel": "LOW",
   "deductions": [],
   "maintainers": [
-    "remcohaszing",
-    "wooorm",
-    "kmck"
+    "matmen",
+    "evan"
   ],
+  "lastCommitDate": "2025-06-14T19:16:32Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
-  "executionTimeMs": 2032,
-  "diagnosedAt": "2026-02-19T16:12:29.729Z"
+  "executionTimeMs": 2285,
+  "diagnosedAt": "2026-02-19T16:12:10.720Z"
 }
