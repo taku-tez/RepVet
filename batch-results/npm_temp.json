@@ -1,0 +1,22 @@
+{
+  "ecosystem": "npm",
+  "package": "temp",
+  "score": 85,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Last commit over 3 years ago (3 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "bruce",
+    "miguelsolano"
+  ],
+  "lastCommitDate": "2022-12-30T18:58:25Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1699,
+  "diagnosedAt": "2026-02-19T15:22:22.977Z"
+}

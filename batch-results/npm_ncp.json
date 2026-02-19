@@ -1,0 +1,22 @@
+{
+  "ecosystem": "npm",
+  "package": "ncp",
+  "score": 85,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Last commit over 3 years ago (6 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "avianflu",
+    "mmalecki"
+  ],
+  "lastCommitDate": "2020-08-08T08:01:58Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1930,
+  "diagnosedAt": "2026-02-19T15:22:12.341Z"
+}

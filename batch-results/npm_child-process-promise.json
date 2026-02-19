@@ -1,0 +1,25 @@
+{
+  "ecosystem": "npm",
+  "package": "child-process-promise",
+  "score": 85,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Last commit over 3 years ago (6 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "austinkelleher",
+    "dylanpiercey",
+    "mlrawlings",
+    "psteeleidem",
+    "pnidem"
+  ],
+  "lastCommitDate": "2019-11-02T16:35:13Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1970,
+  "diagnosedAt": "2026-02-19T15:22:44.222Z"
+}

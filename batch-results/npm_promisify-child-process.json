@@ -1,0 +1,21 @@
+{
+  "ecosystem": "npm",
+  "package": "promisify-child-process",
+  "score": 95,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "jedwards1211"
+  ],
+  "lastCommitDate": "2026-02-04T15:46:39Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2078,
+  "diagnosedAt": "2026-02-19T15:22:46.300Z"
+}

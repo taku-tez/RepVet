@@ -1,0 +1,28 @@
+{
+  "ecosystem": "npm",
+  "package": "tmp",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "raszi"
+  ],
+  "lastCommitDate": "2026-01-21T23:03:12Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 1,
+    "critical": 0,
+    "high": 0,
+    "recent": 1,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 2373,
+  "diagnosedAt": "2026-02-19T15:22:25.350Z"
+}

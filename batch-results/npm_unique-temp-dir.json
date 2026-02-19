@@ -1,0 +1,27 @@
+{
+  "ecosystem": "npm",
+  "package": "unique-temp-dir",
+  "score": 70,
+  "riskLevel": "MEDIUM",
+  "deductions": [
+    {
+      "reason": "Repository is archived (no longer maintained)",
+      "points": 15,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 3 years ago (6 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "jamestalmage",
+    "sindresorhus"
+  ],
+  "lastCommitDate": "2020-01-06T09:54:01Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2064,
+  "diagnosedAt": "2026-02-19T15:22:32.730Z"
+}

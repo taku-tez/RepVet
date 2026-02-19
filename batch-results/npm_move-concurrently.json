@@ -1,0 +1,36 @@
+{
+  "ecosystem": "npm",
+  "package": "move-concurrently",
+  "score": 60,
+  "riskLevel": "MEDIUM",
+  "deductions": [
+    {
+      "reason": "Package deprecated: This package is no longer supported.",
+      "points": 10,
+      "confidence": "high"
+    },
+    {
+      "reason": "Repository is archived (no longer maintained)",
+      "points": 15,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 3 years ago (6 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "gar",
+    "saquibkhan",
+    "npm-cli-ops",
+    "reggi",
+    "hashtagchris",
+    "owlstronaut"
+  ],
+  "lastCommitDate": "2020-05-08T23:15:28Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1847,
+  "diagnosedAt": "2026-02-19T15:22:21.278Z"
+}

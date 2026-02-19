@@ -1,0 +1,20 @@
+{
+  "ecosystem": "npm",
+  "package": "which",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "gar",
+    "saquibkhan",
+    "npm-cli-ops",
+    "reggi",
+    "hashtagchris",
+    "owlstronaut"
+  ],
+  "lastCommitDate": "2026-02-10T15:40:47Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2254,
+  "diagnosedAt": "2026-02-19T15:22:36.862Z"
+}
