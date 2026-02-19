@@ -1,0 +1,31 @@
+{
+  "ecosystem": "npm",
+  "package": "raspi-pwm",
+  "score": 70,
+  "riskLevel": "MEDIUM",
+  "deductions": [
+    {
+      "reason": "Package deprecated: This package has been deprecated. Please use raspi-soft-pwm instead",
+      "points": 10,
+      "confidence": "high"
+    },
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 3 years ago (4 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "nebrius"
+  ],
+  "lastCommitDate": "2021-10-11T15:59:30Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2412,
+  "diagnosedAt": "2026-02-19T21:22:18.328Z"
+}

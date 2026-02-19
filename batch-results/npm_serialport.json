@@ -1,0 +1,16 @@
+{
+  "ecosystem": "npm",
+  "package": "serialport",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "reconbot",
+    "hipsterbrown"
+  ],
+  "lastCommitDate": "2026-01-17T04:34:43Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1915,
+  "diagnosedAt": "2026-02-19T21:22:22.267Z"
+}

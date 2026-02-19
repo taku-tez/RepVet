@@ -1,0 +1,18 @@
+{
+  "ecosystem": "npm",
+  "package": "node-hid",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "natevw",
+    "todbot",
+    "hans",
+    "julusian"
+  ],
+  "lastCommitDate": "2026-02-02T18:21:08Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2087,
+  "diagnosedAt": "2026-02-19T21:22:30.533Z"
+}

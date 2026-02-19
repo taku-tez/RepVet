@@ -1,0 +1,26 @@
+{
+  "ecosystem": "npm",
+  "package": "pigpio",
+  "score": 82,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    },
+    {
+      "reason": "Last commit over 3 years ago (3 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "fivdi"
+  ],
+  "lastCommitDate": "2023-01-23T21:44:55Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2657,
+  "diagnosedAt": "2026-02-19T21:22:40.916Z"
+}

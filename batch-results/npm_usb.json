@@ -1,0 +1,23 @@
+{
+  "ecosystem": "npm",
+  "package": "usb",
+  "score": 89,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Complete maintainer change in 4 days (0.3.1)",
+      "points": 11,
+      "confidence": "medium"
+    }
+  ],
+  "maintainers": [
+    "kevinmehall",
+    "tcr",
+    "thegecko"
+  ],
+  "lastCommitDate": "2026-02-16T12:43:40Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1686,
+  "diagnosedAt": "2026-02-19T21:22:28.445Z"
+}

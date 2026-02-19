@@ -1,5 +1,5 @@
 {
-  "currentIndex": 1660,
+  "currentIndex": 1680,
   "totalPackages": 4957,
   "results": [
     {
@@ -39701,6 +39701,500 @@
       },
       "executionTimeMs": 2509,
       "diagnosedAt": "2026-02-19T21:12:43.191Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "mosca",
+      "score": 57,
+      "riskLevel": "HIGH",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "Repository is archived (no longer maintained)",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 3 years ago (6 years)",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "matteo.collina"
+      ],
+      "lastCommitDate": "2020-01-31T18:27:49Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 1,
+        "critical": 0,
+        "high": 1,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 2794,
+      "diagnosedAt": "2026-02-19T21:22:08.866Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "ascoltatori",
+      "score": 67,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "Repository is archived (no longer maintained)",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 3 years ago (6 years)",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "matteo.collina"
+      ],
+      "lastCommitDate": "2019-11-13T13:09:50Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2702,
+      "diagnosedAt": "2026-02-19T21:22:11.568Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "onoff",
+      "score": 92,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "Last commit over 1 year ago (602 days)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "fivdi"
+      ],
+      "lastCommitDate": "2024-06-27T02:45:26Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1874,
+      "diagnosedAt": "2026-02-19T21:22:13.442Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "raspi-io",
+      "score": 92,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "Last commit over 1 year ago (532 days)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "nebrius"
+      ],
+      "lastCommitDate": "2024-09-04T22:56:44Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2473,
+      "diagnosedAt": "2026-02-19T21:22:15.916Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "raspi-pwm",
+      "score": 70,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Package deprecated: This package has been deprecated. Please use raspi-soft-pwm instead",
+          "points": 10,
+          "confidence": "high"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 3 years ago (4 years)",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "nebrius"
+      ],
+      "lastCommitDate": "2021-10-11T15:59:30Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2412,
+      "diagnosedAt": "2026-02-19T21:22:18.328Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "raspi-i2c",
+      "score": 90,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 1 year ago (532 days)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "nebrius"
+      ],
+      "lastCommitDate": "2024-09-04T22:56:26Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2023,
+      "diagnosedAt": "2026-02-19T21:22:20.352Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "serialport",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "reconbot",
+        "hipsterbrown"
+      ],
+      "lastCommitDate": "2026-01-17T04:34:43Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1915,
+      "diagnosedAt": "2026-02-19T21:22:22.267Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@serialport/bindings",
+      "score": 90,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Package deprecated: This package has been renamed to @serialport/bindings-cpp.",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "hipsterbrown",
+        "reconbot",
+        "serialport-release-bot"
+      ],
+      "lastCommitDate": "2026-01-17T04:34:43Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2646,
+      "diagnosedAt": "2026-02-19T21:22:24.914Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@serialport/parser-readline",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "reconbot",
+        "hipsterbrown",
+        "serialport-release-bot"
+      ],
+      "lastCommitDate": "2026-01-17T04:34:43Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1845,
+      "diagnosedAt": "2026-02-19T21:22:26.759Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "usb",
+      "score": 89,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Complete maintainer change in 4 days (0.3.1)",
+          "points": 11,
+          "confidence": "medium"
+        }
+      ],
+      "maintainers": [
+        "kevinmehall",
+        "tcr",
+        "thegecko"
+      ],
+      "lastCommitDate": "2026-02-16T12:43:40Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1686,
+      "diagnosedAt": "2026-02-19T21:22:28.445Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "node-hid",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "natevw",
+        "todbot",
+        "hans",
+        "julusian"
+      ],
+      "lastCommitDate": "2026-02-02T18:21:08Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2087,
+      "diagnosedAt": "2026-02-19T21:22:30.533Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "node-usb",
+      "score": 95,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "schakko"
+      ],
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1726,
+      "diagnosedAt": "2026-02-19T21:22:32.259Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "usb-detection",
+      "score": 75,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Repository is archived (no longer maintained)",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 2 years ago (3 years)",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "adrai",
+        "mlm"
+      ],
+      "lastCommitDate": "2023-03-07T00:47:02Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1752,
+      "diagnosedAt": "2026-02-19T21:22:34.012Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "i2c-bus",
+      "score": 92,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "Last commit over 1 year ago (700 days)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "fivdi"
+      ],
+      "lastCommitDate": "2024-03-21T11:46:23Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1922,
+      "diagnosedAt": "2026-02-19T21:22:35.934Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "spi-device",
+      "score": 80,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 3 years ago (4 years)",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "fivdi"
+      ],
+      "lastCommitDate": "2021-09-26T07:43:13Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2325,
+      "diagnosedAt": "2026-02-19T21:22:38.259Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "pigpio",
+      "score": 82,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "Last commit over 3 years ago (3 years)",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "fivdi"
+      ],
+      "lastCommitDate": "2023-01-23T21:44:55Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2657,
+      "diagnosedAt": "2026-02-19T21:22:40.916Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "rpio",
+      "score": 92,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "Last commit over 1 year ago (640 days)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "jperkin"
+      ],
+      "lastCommitDate": "2024-05-20T10:50:37Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2384,
+      "diagnosedAt": "2026-02-19T21:22:43.301Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "wavesurfer.js",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "katspaugh"
+      ],
+      "lastCommitDate": "2026-02-03T16:23:29Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1645,
+      "diagnosedAt": "2026-02-19T21:22:44.946Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "howler",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "goldfire"
+      ],
+      "lastCommitDate": "2025-11-23T23:49:01Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2436,
+      "diagnosedAt": "2026-02-19T21:22:47.383Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "tone",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "yotam"
+      ],
+      "lastCommitDate": "2026-02-19T04:28:46Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1973,
+      "diagnosedAt": "2026-02-19T21:22:49.356Z"
     }
   ],
   "errors": [

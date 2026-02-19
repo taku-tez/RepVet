@@ -1,0 +1,26 @@
+{
+  "ecosystem": "npm",
+  "package": "onoff",
+  "score": 92,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    },
+    {
+      "reason": "Last commit over 1 year ago (602 days)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "fivdi"
+  ],
+  "lastCommitDate": "2024-06-27T02:45:26Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1874,
+  "diagnosedAt": "2026-02-19T21:22:13.442Z"
+}

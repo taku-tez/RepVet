@@ -1,0 +1,31 @@
+{
+  "ecosystem": "npm",
+  "package": "ascoltatori",
+  "score": 67,
+  "riskLevel": "MEDIUM",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    },
+    {
+      "reason": "Repository is archived (no longer maintained)",
+      "points": 15,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 3 years ago (6 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "matteo.collina"
+  ],
+  "lastCommitDate": "2019-11-13T13:09:50Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2702,
+  "diagnosedAt": "2026-02-19T21:22:11.568Z"
+}

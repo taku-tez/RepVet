@@ -1,0 +1,26 @@
+{
+  "ecosystem": "npm",
+  "package": "rpio",
+  "score": 92,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    },
+    {
+      "reason": "Last commit over 1 year ago (640 days)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "jperkin"
+  ],
+  "lastCommitDate": "2024-05-20T10:50:37Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2384,
+  "diagnosedAt": "2026-02-19T21:22:43.301Z"
+}

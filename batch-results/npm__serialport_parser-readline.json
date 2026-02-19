@@ -1,0 +1,17 @@
+{
+  "ecosystem": "npm",
+  "package": "@serialport/parser-readline",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "reconbot",
+    "hipsterbrown",
+    "serialport-release-bot"
+  ],
+  "lastCommitDate": "2026-01-17T04:34:43Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1845,
+  "diagnosedAt": "2026-02-19T21:22:26.759Z"
+}

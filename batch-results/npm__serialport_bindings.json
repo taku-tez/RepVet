@@ -1,0 +1,23 @@
+{
+  "ecosystem": "npm",
+  "package": "@serialport/bindings",
+  "score": 90,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Package deprecated: This package has been renamed to @serialport/bindings-cpp.",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "hipsterbrown",
+    "reconbot",
+    "serialport-release-bot"
+  ],
+  "lastCommitDate": "2026-01-17T04:34:43Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2646,
+  "diagnosedAt": "2026-02-19T21:22:24.914Z"
+}

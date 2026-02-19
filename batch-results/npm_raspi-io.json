@@ -1,0 +1,26 @@
+{
+  "ecosystem": "npm",
+  "package": "raspi-io",
+  "score": 92,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    },
+    {
+      "reason": "Last commit over 1 year ago (532 days)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "nebrius"
+  ],
+  "lastCommitDate": "2024-09-04T22:56:44Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2473,
+  "diagnosedAt": "2026-02-19T21:22:15.916Z"
+}

@@ -1,0 +1,26 @@
+{
+  "ecosystem": "npm",
+  "package": "i2c-bus",
+  "score": 92,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    },
+    {
+      "reason": "Last commit over 1 year ago (700 days)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "fivdi"
+  ],
+  "lastCommitDate": "2024-03-21T11:46:23Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1922,
+  "diagnosedAt": "2026-02-19T21:22:35.934Z"
+}
