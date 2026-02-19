@@ -1,0 +1,19 @@
+{
+  "ecosystem": "npm",
+  "package": "node-schedule",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "mattpat",
+    "sgimeno",
+    "tejasmanohar",
+    "jonhester",
+    "kibertoad"
+  ],
+  "lastCommitDate": "2025-06-19T14:45:58Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1851,
+  "diagnosedAt": "2026-02-19T13:22:40.720Z"
+}

@@ -1,0 +1,31 @@
+{
+  "ecosystem": "npm",
+  "package": "mailgun-js",
+  "score": 80,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Package deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.",
+      "points": 10,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 2 years ago (2 years)",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "jtetlermg",
+    "ai-wintermute",
+    "jvb182",
+    "pw_dev",
+    "zeefarmer",
+    "oleksandr-mazepa"
+  ],
+  "lastCommitDate": "2023-10-02T18:14:40Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2626,
+  "diagnosedAt": "2026-02-19T13:22:53.164Z"
+}

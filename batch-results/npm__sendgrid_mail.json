@@ -1,0 +1,21 @@
+{
+  "ecosystem": "npm",
+  "package": "@sendgrid/mail",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "twilio-dx"
+  ],
+  "lastCommitDate": "2026-02-14T03:52:14Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2165,
+  "diagnosedAt": "2026-02-19T13:22:50.538Z"
+}

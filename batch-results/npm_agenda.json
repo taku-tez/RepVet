@@ -1,0 +1,24 @@
+{
+  "ecosystem": "npm",
+  "package": "agenda",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "rschmukler",
+    "niftylettuce",
+    "vkarpov15",
+    "koresar",
+    "simison",
+    "santypk4",
+    "omgimalexis",
+    "joeframbach",
+    "simllll",
+    "titanism"
+  ],
+  "lastCommitDate": "2026-02-16T08:40:34Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2184,
+  "diagnosedAt": "2026-02-19T13:22:36.600Z"
+}

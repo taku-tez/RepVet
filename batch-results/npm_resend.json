@@ -1,0 +1,24 @@
+{
+  "ecosystem": "npm",
+  "package": "resend",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "bukinoshita",
+    "zenorocha",
+    "jopcmelo",
+    "cisneiros",
+    "gabrielmfern",
+    "carolmoreschi",
+    "lucasfcosta",
+    "vcapretz",
+    "isabellaaquino",
+    "carolina-josephik"
+  ],
+  "lastCommitDate": "2026-02-17T18:04:55Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1715,
+  "diagnosedAt": "2026-02-19T13:22:58.350Z"
+}

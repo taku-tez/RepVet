@@ -1,5 +1,5 @@
 {
-  "currentIndex": 140,
+  "currentIndex": 160,
   "totalPackages": 4957,
   "results": [
     {
@@ -3765,8 +3765,483 @@
       },
       "executionTimeMs": 1570,
       "diagnosedAt": "2026-02-19T13:12:47.919Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "mysql2",
+      "score": 72,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "2 critical vulnerability(ies) in history",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "sidorares"
+      ],
+      "lastCommitDate": "2026-02-19T13:18:58Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 5,
+        "critical": 2,
+        "high": 1,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 2524,
+      "diagnosedAt": "2026-02-19T13:22:06.015Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "pg",
+      "score": 82,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "1 critical vulnerability(ies) in history",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "brianc"
+      ],
+      "lastCommitDate": "2026-02-13T21:03:07Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 1,
+        "critical": 1,
+        "high": 0,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1894,
+      "diagnosedAt": "2026-02-19T13:22:07.910Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "sqlite3",
+      "score": 90,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "2 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "springmeyer",
+        "kkaefer",
+        "tmcw",
+        "erisds",
+        "yhahn",
+        "mapsam",
+        "zmully",
+        "kewde_",
+        "daniellockyer"
+      ],
+      "lastCommitDate": "2026-02-18T16:26:34Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 2,
+        "critical": 0,
+        "high": 2,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 2010,
+      "diagnosedAt": "2026-02-19T13:22:09.921Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@libsql/client",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "penberg",
+        "luciofranco",
+        "notrab"
+      ],
+      "lastCommitDate": "2026-02-07T15:50:13Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1877,
+      "diagnosedAt": "2026-02-19T13:22:11.799Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "drizzle-orm",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "dankochetov",
+        "sheriman",
+        "alexblokh",
+        "kyrylo_usichenko"
+      ],
+      "lastCommitDate": "2026-02-18T23:46:53Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 15123,
+      "diagnosedAt": "2026-02-19T13:22:26.923Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "bull",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "manast"
+      ],
+      "lastCommitDate": "2026-01-21T23:05:42Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2524,
+      "diagnosedAt": "2026-02-19T13:22:29.448Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "bullmq",
+      "score": 86,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer replaced at 4.0.0-beta.0",
+          "points": 11,
+          "confidence": "medium"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "manast"
+      ],
+      "lastCommitDate": "2026-02-19T13:06:17Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2519,
+      "diagnosedAt": "2026-02-19T13:22:31.968Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "bee-queue",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "skeggse",
+        "lewisjellis",
+        "beequeueci"
+      ],
+      "lastCommitDate": "2026-02-17T00:22:32Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2447,
+      "diagnosedAt": "2026-02-19T13:22:34.416Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "agenda",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "rschmukler",
+        "niftylettuce",
+        "vkarpov15",
+        "koresar",
+        "simison",
+        "santypk4",
+        "omgimalexis",
+        "joeframbach",
+        "simllll",
+        "titanism"
+      ],
+      "lastCommitDate": "2026-02-16T08:40:34Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2184,
+      "diagnosedAt": "2026-02-19T13:22:36.600Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "node-cron",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "merencia"
+      ],
+      "lastCommitDate": "2026-02-14T10:06:44Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2268,
+      "diagnosedAt": "2026-02-19T13:22:38.869Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "node-schedule",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "mattpat",
+        "sgimeno",
+        "tejasmanohar",
+        "jonhester",
+        "kibertoad"
+      ],
+      "lastCommitDate": "2025-06-19T14:45:58Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1851,
+      "diagnosedAt": "2026-02-19T13:22:40.720Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "bree",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "niftylettuce",
+        "shadowgate15",
+        "titanism"
+      ],
+      "lastCommitDate": "2026-02-17T22:09:07Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2345,
+      "diagnosedAt": "2026-02-19T13:22:43.065Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "toad-scheduler",
+      "score": 95,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "kibertoad"
+      ],
+      "lastCommitDate": "2025-05-05T09:34:19Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1519,
+      "diagnosedAt": "2026-02-19T13:22:44.584Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "nodemailer",
+      "score": 72,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "1 critical vulnerability(ies) in history",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "andris"
+      ],
+      "lastCommitDate": "2026-02-07T08:58:05Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 5,
+        "critical": 1,
+        "high": 1,
+        "recent": 2,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1834,
+      "diagnosedAt": "2026-02-19T13:22:46.418Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "sendgrid",
+      "score": 90,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Package deprecated: Please see v6.X+ at https://www.npmjs.com/org/sendgrid",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "siyegen",
+        "motdotla",
+        "eddiezane",
+        "elbuo8",
+        "partkyle",
+        "theycallmeswift",
+        "scottmotte",
+        "nquinlan",
+        "mkbernier",
+        "thinkingserious"
+      ],
+      "lastCommitDate": "2026-02-14T03:52:14Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1955,
+      "diagnosedAt": "2026-02-19T13:22:48.373Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@sendgrid/mail",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "twilio-dx"
+      ],
+      "lastCommitDate": "2026-02-14T03:52:14Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2165,
+      "diagnosedAt": "2026-02-19T13:22:50.538Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "mailgun-js",
+      "score": 80,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Package deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.",
+          "points": 10,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 2 years ago (2 years)",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "jtetlermg",
+        "ai-wintermute",
+        "jvb182",
+        "pw_dev",
+        "zeefarmer",
+        "oleksandr-mazepa"
+      ],
+      "lastCommitDate": "2023-10-02T18:14:40Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2626,
+      "diagnosedAt": "2026-02-19T13:22:53.164Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "postmark",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "dandigangi_ac",
+        "coaldon_ac"
+      ],
+      "lastCommitDate": "2026-02-18T21:11:56Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 3471,
+      "diagnosedAt": "2026-02-19T13:22:56.635Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "resend",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "bukinoshita",
+        "zenorocha",
+        "jopcmelo",
+        "cisneiros",
+        "gabrielmfern",
+        "carolmoreschi",
+        "lucasfcosta",
+        "vcapretz",
+        "isabellaaquino",
+        "carolina-josephik"
+      ],
+      "lastCommitDate": "2026-02-17T18:04:55Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1715,
+      "diagnosedAt": "2026-02-19T13:22:58.350Z"
     }
   ],
-  "errors": [],
+  "errors": [
+    {
+      "ecosystem": "npm",
+      "package": "aws-ses",
+      "error": "Exit code 1: {\"error\":\"Error: Package not found: aws-ses (npm)\"}\n",
+      "timestamp": "2026-02-19T13:22:58.783Z"
+    }
+  ],
   "startTime": "2026-02-19T12:29:21.598Z"
 }

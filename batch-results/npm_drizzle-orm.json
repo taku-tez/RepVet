@@ -1,0 +1,18 @@
+{
+  "ecosystem": "npm",
+  "package": "drizzle-orm",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "dankochetov",
+    "sheriman",
+    "alexblokh",
+    "kyrylo_usichenko"
+  ],
+  "lastCommitDate": "2026-02-18T23:46:53Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 15123,
+  "diagnosedAt": "2026-02-19T13:22:26.923Z"
+}

@@ -1,0 +1,21 @@
+{
+  "ecosystem": "npm",
+  "package": "toad-scheduler",
+  "score": 95,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "kibertoad"
+  ],
+  "lastCommitDate": "2025-05-05T09:34:19Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1519,
+  "diagnosedAt": "2026-02-19T13:22:44.584Z"
+}

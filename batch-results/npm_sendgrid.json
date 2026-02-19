@@ -1,0 +1,30 @@
+{
+  "ecosystem": "npm",
+  "package": "sendgrid",
+  "score": 90,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Package deprecated: Please see v6.X+ at https://www.npmjs.com/org/sendgrid",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "siyegen",
+    "motdotla",
+    "eddiezane",
+    "elbuo8",
+    "partkyle",
+    "theycallmeswift",
+    "scottmotte",
+    "nquinlan",
+    "mkbernier",
+    "thinkingserious"
+  ],
+  "lastCommitDate": "2026-02-14T03:52:14Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1955,
+  "diagnosedAt": "2026-02-19T13:22:48.373Z"
+}

@@ -1,0 +1,17 @@
+{
+  "ecosystem": "npm",
+  "package": "@libsql/client",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "penberg",
+    "luciofranco",
+    "notrab"
+  ],
+  "lastCommitDate": "2026-02-07T15:50:13Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1877,
+  "diagnosedAt": "2026-02-19T13:22:11.799Z"
+}

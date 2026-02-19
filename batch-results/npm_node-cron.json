@@ -1,0 +1,21 @@
+{
+  "ecosystem": "npm",
+  "package": "node-cron",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "merencia"
+  ],
+  "lastCommitDate": "2026-02-14T10:06:44Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2268,
+  "diagnosedAt": "2026-02-19T13:22:38.869Z"
+}
