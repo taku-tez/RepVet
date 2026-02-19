@@ -1,0 +1,38 @@
+{
+  "ecosystem": "pypi",
+  "package": "scikit-learn",
+  "score": 67,
+  "riskLevel": "MEDIUM",
+  "deductions": [
+    {
+      "reason": "Author changed from \"Fabian Pedregosa\" to \"scikit-learn developers\"",
+      "points": 8,
+      "confidence": "low"
+    },
+    {
+      "reason": "1 critical vulnerability(ies) in history",
+      "points": 15,
+      "confidence": "high"
+    },
+    {
+      "reason": "1 high severity vulnerability(ies) in history",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "Unknown"
+  ],
+  "lastCommitDate": "2026-02-19T16:19:59Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 6,
+    "critical": 1,
+    "high": 1,
+    "recent": 0,
+    "hasUnfixed": true
+  },
+  "executionTimeMs": 1242,
+  "diagnosedAt": "2026-02-19T23:27:25.935Z"
+}

@@ -1,0 +1,14 @@
+{
+  "ecosystem": "pypi",
+  "package": "tensorflow",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "Google Inc."
+  ],
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 17429,
+  "diagnosedAt": "2026-02-19T23:27:49.127Z"
+}

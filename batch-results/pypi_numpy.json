@@ -1,0 +1,38 @@
+{
+  "ecosystem": "pypi",
+  "package": "numpy",
+  "score": 72,
+  "riskLevel": "MEDIUM",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    },
+    {
+      "reason": "1 critical vulnerability(ies) in history",
+      "points": 15,
+      "confidence": "high"
+    },
+    {
+      "reason": "4 high severity vulnerability(ies) in history",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "Travis E. Oliphant et al."
+  ],
+  "lastCommitDate": "2026-02-19T13:39:10Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 16,
+    "critical": 1,
+    "high": 4,
+    "recent": 0,
+    "hasUnfixed": true
+  },
+  "executionTimeMs": 1524,
+  "diagnosedAt": "2026-02-19T23:27:21.814Z"
+}

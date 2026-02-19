@@ -1,0 +1,37 @@
+{
+  "ecosystem": "pypi",
+  "package": "pymysql",
+  "score": 74,
+  "riskLevel": "MEDIUM",
+  "deductions": [
+    {
+      "reason": "Author changed from \"David Story\" to \"Inada Naoki\"",
+      "points": 8,
+      "confidence": "low"
+    },
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    },
+    {
+      "reason": "1 critical vulnerability(ies) in history",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "Inada Naoki"
+  ],
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 1,
+    "critical": 1,
+    "high": 0,
+    "recent": 0,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 1083,
+  "diagnosedAt": "2026-02-19T23:27:16.456Z"
+}

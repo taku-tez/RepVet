@@ -1,0 +1,28 @@
+{
+  "ecosystem": "pypi",
+  "package": "bokeh",
+  "score": 92,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Author changed from \"Continuum Analytics\" to \"Bokeh Team\"",
+      "points": 8,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "Bokeh Team"
+  ],
+  "lastCommitDate": "2026-02-19T22:24:38Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 1,
+    "critical": 0,
+    "high": 0,
+    "recent": 1,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 1697,
+  "diagnosedAt": "2026-02-19T23:27:31.698Z"
+}

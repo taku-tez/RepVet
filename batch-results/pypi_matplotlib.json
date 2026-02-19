@@ -1,0 +1,16 @@
+{
+  "ecosystem": "pypi",
+  "package": "matplotlib",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "John D. Hunter",
+    "Michael Droettboom"
+  ],
+  "lastCommitDate": "2026-02-18T08:43:13Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 950,
+  "diagnosedAt": "2026-02-19T23:27:26.885Z"
+}

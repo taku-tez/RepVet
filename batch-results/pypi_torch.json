@@ -1,0 +1,33 @@
+{
+  "ecosystem": "pypi",
+  "package": "torch",
+  "score": 75,
+  "riskLevel": "MEDIUM",
+  "deductions": [
+    {
+      "reason": "4 critical vulnerability(ies) in history",
+      "points": 15,
+      "confidence": "high"
+    },
+    {
+      "reason": "2 high severity vulnerability(ies) in history",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "PyTorch Team"
+  ],
+  "lastCommitDate": "2026-02-19T23:27:35Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 12,
+    "critical": 4,
+    "high": 2,
+    "recent": 4,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 2329,
+  "diagnosedAt": "2026-02-19T23:27:51.456Z"
+}

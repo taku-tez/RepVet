@@ -478,5 +478,11 @@
     "package": "prisma-client-py",
     "error": "Exit code 1: {\"error\":\"Error: Package not found: prisma-client-py (pypi)\"}\n",
     "timestamp": "2026-02-19T23:12:48.254Z"
+  },
+  {
+    "ecosystem": "pypi",
+    "package": "sqlite3",
+    "error": "Exit code 1: {\"error\":\"Error: Package not found: sqlite3 (pypi)\"}\n",
+    "timestamp": "2026-02-19T23:27:16.930Z"
   }
 ]

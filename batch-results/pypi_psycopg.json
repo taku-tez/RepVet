@@ -1,0 +1,21 @@
+{
+  "ecosystem": "pypi",
+  "package": "psycopg",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "Daniele Varrazzo"
+  ],
+  "lastCommitDate": "2026-02-18T18:07:32Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1531,
+  "diagnosedAt": "2026-02-19T23:27:11.382Z"
+}

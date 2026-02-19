@@ -1,0 +1,15 @@
+{
+  "ecosystem": "pypi",
+  "package": "jax",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "JAX team"
+  ],
+  "lastCommitDate": "2026-02-19T23:09:31Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2278,
+  "diagnosedAt": "2026-02-19T23:27:56.087Z"
+}

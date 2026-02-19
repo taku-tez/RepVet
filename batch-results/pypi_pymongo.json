@@ -1,0 +1,28 @@
+{
+  "ecosystem": "pypi",
+  "package": "pymongo",
+  "score": 92,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Author changed from \"10gen\" to \"The MongoDB Python Team\"",
+      "points": 8,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "The MongoDB Python Team"
+  ],
+  "lastCommitDate": "2026-02-18T21:28:02Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 3,
+    "critical": 0,
+    "high": 0,
+    "recent": 0,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 2260,
+  "diagnosedAt": "2026-02-19T23:27:13.643Z"
+}

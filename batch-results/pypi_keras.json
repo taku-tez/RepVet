@@ -1,0 +1,38 @@
+{
+  "ecosystem": "pypi",
+  "package": "keras",
+  "score": 67,
+  "riskLevel": "MEDIUM",
+  "deductions": [
+    {
+      "reason": "Author changed from \"Francois Chollet\" to \"Keras team\"",
+      "points": 8,
+      "confidence": "low"
+    },
+    {
+      "reason": "3 critical vulnerability(ies) in history",
+      "points": 15,
+      "confidence": "high"
+    },
+    {
+      "reason": "5 high severity vulnerability(ies) in history",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "Keras team"
+  ],
+  "lastCommitDate": "2026-02-19T21:53:55Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 10,
+    "critical": 3,
+    "high": 5,
+    "recent": 8,
+    "hasUnfixed": true
+  },
+  "executionTimeMs": 2353,
+  "diagnosedAt": "2026-02-19T23:27:53.809Z"
+}

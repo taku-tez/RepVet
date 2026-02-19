@@ -1,0 +1,28 @@
+{
+  "ecosystem": "pypi",
+  "package": "pandas",
+  "score": 92,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Author changed from \"AQR Capital Management, LLC\" to \"The Pandas Development Team\"",
+      "points": 8,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "The Pandas Development Team"
+  ],
+  "lastCommitDate": "2026-02-19T23:04:58Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 1,
+    "critical": 0,
+    "high": 0,
+    "recent": 0,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 1573,
+  "diagnosedAt": "2026-02-19T23:27:23.387Z"
+}
