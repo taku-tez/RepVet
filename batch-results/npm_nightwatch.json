@@ -1,0 +1,18 @@
+{
+  "ecosystem": "npm",
+  "package": "nightwatch",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "garg3133",
+    "gravityvi",
+    "beatfactor",
+    "automatedtester"
+  ],
+  "lastCommitDate": "2026-02-13T13:24:34Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2000,
+  "diagnosedAt": "2026-02-19T12:18:09.180Z"
+}

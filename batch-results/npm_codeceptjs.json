@@ -1,0 +1,31 @@
+{
+  "ecosystem": "npm",
+  "package": "codeceptjs",
+  "score": 85,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "1 critical vulnerability(ies) in history",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "davert",
+    "alex_vorobey",
+    "thanh.nguyen",
+    "egor_bodnar"
+  ],
+  "lastCommitDate": "2026-02-19T10:01:48Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 1,
+    "critical": 1,
+    "high": 0,
+    "recent": 1,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 3149,
+  "diagnosedAt": "2026-02-19T12:18:12.329Z"
+}

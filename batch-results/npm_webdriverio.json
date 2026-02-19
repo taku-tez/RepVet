@@ -1,0 +1,17 @@
+{
+  "ecosystem": "npm",
+  "package": "webdriverio",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "christian-bromann",
+    "wdio-user",
+    "wswebcreation-nl"
+  ],
+  "lastCommitDate": "2026-02-18T04:10:34Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2489,
+  "diagnosedAt": "2026-02-19T12:18:04.668Z"
+}

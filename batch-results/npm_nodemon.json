@@ -1,0 +1,21 @@
+{
+  "ecosystem": "npm",
+  "package": "nodemon",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "remy"
+  ],
+  "lastCommitDate": "2026-02-09T18:12:56Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1581,
+  "diagnosedAt": "2026-02-19T12:18:18.060Z"
+}

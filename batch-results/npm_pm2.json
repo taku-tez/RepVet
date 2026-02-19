@@ -1,0 +1,28 @@
+{
+  "ecosystem": "npm",
+  "package": "pm2",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "tknew"
+  ],
+  "lastCommitDate": "2026-02-08T16:20:40Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 1,
+    "critical": 0,
+    "high": 0,
+    "recent": 1,
+    "hasUnfixed": true
+  },
+  "executionTimeMs": 1896,
+  "diagnosedAt": "2026-02-19T12:18:14.225Z"
+}

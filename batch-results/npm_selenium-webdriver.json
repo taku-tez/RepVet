@@ -1,0 +1,20 @@
+{
+  "ecosystem": "npm",
+  "package": "selenium-webdriver",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "sriharsha",
+    "automatedtester",
+    "diemol",
+    "titusfortner",
+    "pujagani",
+    "jmleyba"
+  ],
+  "lastCommitDate": "2026-02-19T00:52:23Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1830,
+  "diagnosedAt": "2026-02-19T12:18:00.224Z"
+}

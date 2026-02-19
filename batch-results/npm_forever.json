@@ -1,0 +1,25 @@
+{
+  "ecosystem": "npm",
+  "package": "forever",
+  "score": 90,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Last commit over 2 years ago (3 years)",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "jcrugzz",
+    "jeffsu",
+    "indexzero",
+    "bradleymeck",
+    "kibertoad"
+  ],
+  "lastCommitDate": "2023-05-21T21:49:29Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2252,
+  "diagnosedAt": "2026-02-19T12:18:16.478Z"
+}
