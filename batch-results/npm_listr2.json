@@ -1,0 +1,21 @@
+{
+  "ecosystem": "npm",
+  "package": "listr2",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "cenk1cenk2"
+  ],
+  "lastCommitDate": "2026-02-14T01:09:04Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1822,
+  "diagnosedAt": "2026-02-19T13:32:44.407Z"
+}

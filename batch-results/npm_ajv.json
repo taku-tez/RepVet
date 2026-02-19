@@ -1,0 +1,23 @@
+{
+  "ecosystem": "npm",
+  "package": "ajv",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "blakeembrey",
+    "esp"
+  ],
+  "lastCommitDate": "2026-02-18T19:57:38Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 2,
+    "critical": 0,
+    "high": 0,
+    "recent": 1,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 1334,
+  "diagnosedAt": "2026-02-19T13:32:15.978Z"
+}

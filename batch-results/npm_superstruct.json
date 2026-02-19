@@ -1,0 +1,22 @@
+{
+  "ecosystem": "npm",
+  "package": "superstruct",
+  "score": 95,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Last commit over 1 year ago (506 days)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "ianstormtaylor",
+    "artmllr"
+  ],
+  "lastCommitDate": "2024-10-01T02:42:53Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2202,
+  "diagnosedAt": "2026-02-19T13:32:24.273Z"
+}

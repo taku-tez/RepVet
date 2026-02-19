@@ -4,5 +4,11 @@
     "package": "aws-ses",
     "error": "Exit code 1: {\"error\":\"Error: Package not found: aws-ses (npm)\"}\n",
     "timestamp": "2026-02-19T13:22:58.783Z"
+  },
+  {
+    "ecosystem": "npm",
+    "package": "aws-cognito",
+    "error": "Exit code 1: {\"error\":\"Error: Package not found: aws-cognito (npm)\"}\n",
+    "timestamp": "2026-02-19T13:32:08.932Z"
   }
 ]

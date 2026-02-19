@@ -1,0 +1,18 @@
+{
+  "ecosystem": "npm",
+  "package": "pino",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "matteo.collina",
+    "jsumners",
+    "watson",
+    "davidmarkclements"
+  ],
+  "lastCommitDate": "2026-02-09T17:40:26Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1882,
+  "diagnosedAt": "2026-02-19T13:32:29.978Z"
+}

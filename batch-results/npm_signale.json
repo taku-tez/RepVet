@@ -1,0 +1,21 @@
+{
+  "ecosystem": "npm",
+  "package": "signale",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "klaudiosinani"
+  ],
+  "lastCommitDate": "2026-01-17T12:59:06Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2989,
+  "diagnosedAt": "2026-02-19T13:32:39.206Z"
+}

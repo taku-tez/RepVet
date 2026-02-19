@@ -1,0 +1,26 @@
+{
+  "ecosystem": "npm",
+  "package": "bunyan",
+  "score": 87,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    },
+    {
+      "reason": "Last commit over 2 years ago (2 years)",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "trentm"
+  ],
+  "lastCommitDate": "2023-09-18T16:20:50Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1798,
+  "diagnosedAt": "2026-02-19T13:32:31.776Z"
+}

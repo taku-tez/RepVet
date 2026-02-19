@@ -1,0 +1,16 @@
+{
+  "ecosystem": "npm",
+  "package": "consola",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "atinux",
+    "pi0"
+  ],
+  "lastCommitDate": "2026-02-18T19:52:06Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2210,
+  "diagnosedAt": "2026-02-19T13:32:36.217Z"
+}

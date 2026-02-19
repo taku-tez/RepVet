@@ -1,0 +1,33 @@
+{
+  "ecosystem": "npm",
+  "package": "zod",
+  "score": 86,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Complete maintainer change in 4 days (1.0.4)",
+      "points": 11,
+      "confidence": "medium"
+    },
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "colinhacks"
+  ],
+  "lastCommitDate": "2026-02-15T14:20:41Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 1,
+    "critical": 0,
+    "high": 0,
+    "recent": 0,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 2154,
+  "diagnosedAt": "2026-02-19T13:32:11.086Z"
+}

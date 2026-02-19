@@ -1,0 +1,20 @@
+{
+  "ecosystem": "npm",
+  "package": "joi",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "marsup",
+    "nlf",
+    "nargonath",
+    "devinivy",
+    "wyatt",
+    "hueniverse"
+  ],
+  "lastCommitDate": "2025-11-19T15:48:42Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1798,
+  "diagnosedAt": "2026-02-19T13:32:14.643Z"
+}

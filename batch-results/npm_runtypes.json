@@ -1,0 +1,16 @@
+{
+  "ecosystem": "npm",
+  "package": "runtypes",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "pelotom",
+    "yuhr"
+  ],
+  "lastCommitDate": "2026-01-21T23:22:55Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2251,
+  "diagnosedAt": "2026-02-19T13:32:22.071Z"
+}

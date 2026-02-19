@@ -1,0 +1,26 @@
+{
+  "ecosystem": "npm",
+  "package": "firebase-auth",
+  "score": 80,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 3 years ago (10 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "hisabimbola"
+  ],
+  "lastCommitDate": "2016-03-19T23:10:28Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2032,
+  "diagnosedAt": "2026-02-19T13:32:08.518Z"
+}

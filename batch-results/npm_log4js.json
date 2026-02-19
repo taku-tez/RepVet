@@ -1,0 +1,23 @@
+{
+  "ecosystem": "npm",
+  "package": "log4js",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "lamweili",
+    "csausdev"
+  ],
+  "lastCommitDate": "2026-01-21T23:02:49Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 1,
+    "critical": 0,
+    "high": 0,
+    "recent": 0,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 2231,
+  "diagnosedAt": "2026-02-19T13:32:34.007Z"
+}
