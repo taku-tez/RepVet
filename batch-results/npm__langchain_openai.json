@@ -1,0 +1,26 @@
+{
+  "ecosystem": "npm",
+  "package": "@langchain/openai",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "hwchase17",
+    "jacoblee93",
+    "basproul",
+    "eric_langchain",
+    "andrewnguonly",
+    "davidduong",
+    "maddyadams",
+    "sam_noyes",
+    "andy-langchain",
+    "rcasup",
+    "hntrl",
+    "christian-bromann"
+  ],
+  "lastCommitDate": "2026-02-19T20:40:04Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2141,
+  "diagnosedAt": "2026-02-19T21:02:58.820Z"
+}

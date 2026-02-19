@@ -1,0 +1,18 @@
+{
+  "ecosystem": "npm",
+  "package": "bip32",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "fanatid",
+    "jprichardson",
+    "junderw",
+    "jl.landabaso"
+  ],
+  "lastCommitDate": "2026-02-19T13:18:21Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2302,
+  "diagnosedAt": "2026-02-19T21:02:27.751Z"
+}

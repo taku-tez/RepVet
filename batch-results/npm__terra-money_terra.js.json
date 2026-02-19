@@ -1,0 +1,25 @@
+{
+  "ecosystem": "npm",
+  "package": "@terra-money/terra.js",
+  "score": 90,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Last commit over 2 years ago (2 years)",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "terra-engineering",
+    "simke9445",
+    "alecande",
+    "mwmerz",
+    "terra-devops"
+  ],
+  "lastCommitDate": "2023-08-29T15:12:41Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 3828,
+  "diagnosedAt": "2026-02-19T21:02:13.831Z"
+}

@@ -1,5 +1,5 @@
 {
-  "currentIndex": 1600,
+  "currentIndex": 1620,
   "totalPackages": 4957,
   "results": [
     {
@@ -38369,6 +38369,484 @@
       "hasMalwareHistory": false,
       "executionTimeMs": 2868,
       "diagnosedAt": "2026-02-19T20:57:49.764Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@terra-money/terra.js",
+      "score": 90,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Last commit over 2 years ago (2 years)",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "terra-engineering",
+        "simke9445",
+        "alecande",
+        "mwmerz",
+        "terra-devops"
+      ],
+      "lastCommitDate": "2023-08-29T15:12:41Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 3828,
+      "diagnosedAt": "2026-02-19T21:02:13.831Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@polkadot/api",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "jacogr",
+        "polkadotjs",
+        "paritytech-ci"
+      ],
+      "lastCommitDate": "2025-12-18T05:39:09Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 3127,
+      "diagnosedAt": "2026-02-19T21:02:16.958Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@polkadot/keyring",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "jacogr",
+        "polkadotjs",
+        "paritytech-ci"
+      ],
+      "lastCommitDate": "2025-12-09T08:36:31Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 3447,
+      "diagnosedAt": "2026-02-19T21:02:20.405Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@substrate/txwrapper",
+      "score": 60,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Package deprecated: txwrapper is deprecated in favour of txwrapper-core",
+          "points": 10,
+          "confidence": "high"
+        },
+        {
+          "reason": "Repository is archived (no longer maintained)",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 3 years ago (4 years)",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "andreieres",
+        "jacogr",
+        "kianenigma",
+        "joepetrowski",
+        "wirednkod",
+        "jsdw",
+        "paritytech-ci",
+        "imod7",
+        "jimmychu0807",
+        "alexandru.vasile",
+        "tarikgul",
+        "paritytech",
+        "ryan-parity"
+      ],
+      "lastCommitDate": "2021-09-29T09:06:04Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2982,
+      "diagnosedAt": "2026-02-19T21:02:23.387Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "bitcoinjs-lib",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "fanatid",
+        "jprichardson",
+        "junderw",
+        "jl.landabaso"
+      ],
+      "lastCommitDate": "2026-02-17T01:08:49Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2061,
+      "diagnosedAt": "2026-02-19T21:02:25.448Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "bip32",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "fanatid",
+        "jprichardson",
+        "junderw",
+        "jl.landabaso"
+      ],
+      "lastCommitDate": "2026-02-19T13:18:21Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2302,
+      "diagnosedAt": "2026-02-19T21:02:27.751Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "bip39",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "weilu",
+        "junderw",
+        "jl.landabaso"
+      ],
+      "lastCommitDate": "2026-01-21T23:08:32Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2096,
+      "diagnosedAt": "2026-02-19T21:02:29.847Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "tiny-secp256k1",
+      "score": 90,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "2 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "jprichardson",
+        "junderw"
+      ],
+      "lastCommitDate": "2025-09-11T01:33:20Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 2,
+        "critical": 0,
+        "high": 2,
+        "recent": 2,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 2507,
+      "diagnosedAt": "2026-02-19T21:02:32.354Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@tensorflow/tfjs",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "pyu10055",
+        "caisq",
+        "annxingyuan",
+        "linazhao128",
+        "mattsoulanille",
+        "jinjingforever",
+        "laxma4675",
+        "delhibabu",
+        "linchan",
+        "fengwuyao"
+      ],
+      "lastCommitDate": "2026-02-06T19:50:46Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2911,
+      "diagnosedAt": "2026-02-19T21:02:35.265Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@tensorflow/tfjs-node",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "pyu10055",
+        "caisq",
+        "annxingyuan",
+        "linazhao128",
+        "mattsoulanille",
+        "jinjingforever",
+        "laxma4675",
+        "delhibabu",
+        "linchan",
+        "fengwuyao"
+      ],
+      "lastCommitDate": "2026-02-06T19:50:46Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2771,
+      "diagnosedAt": "2026-02-19T21:02:38.037Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "onnxruntime-node",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "onnxruntime",
+        "erscor_msft",
+        "eire"
+      ],
+      "lastCommitDate": "2026-02-19T20:58:20Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1919,
+      "diagnosedAt": "2026-02-19T21:02:40.256Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "onnxruntime-web",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "onnxruntime",
+        "erscor_msft",
+        "eire",
+        "zuzhao"
+      ],
+      "lastCommitDate": "2026-02-19T20:58:20Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2423,
+      "diagnosedAt": "2026-02-19T21:02:42.679Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@huggingface/transformers",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "julien-c",
+        "pierric",
+        "coyotte508",
+        "xenova",
+        "gary149"
+      ],
+      "lastCommitDate": "2026-02-19T17:41:12Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2365,
+      "diagnosedAt": "2026-02-19T21:02:45.044Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "openai",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "dylan-hurd-openai",
+        "tylersmith-openai",
+        "atty-openai",
+        "tibo-openai",
+        "dkundel-openai",
+        "mbolin-openai",
+        "fouad-openai",
+        "easong-openai",
+        "aibrahim-openai",
+        "apcha-oai",
+        "seratch-openai",
+        "gabor-openai",
+        "dschnurr",
+        "jeevnayak",
+        "knight-oai",
+        "dschnurr-openai",
+        "kwhinnery-openai"
+      ],
+      "lastCommitDate": "2026-02-19T16:38:35Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1173,
+      "diagnosedAt": "2026-02-19T21:02:46.218Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@anthropic-ai/sdk",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "zak-anthropic",
+        "dylanc-anthropic",
+        "benjmann",
+        "nikhil-anthropic",
+        "ejlangev-ant",
+        "jv-anthropic",
+        "ollie-ant-2025",
+        "packy-anthropic",
+        "noahz-anthropic",
+        "sbidasaria",
+        "wolffiex",
+        "igorkofman",
+        "felixrieseberg-anthropic",
+        "joan-anthropic"
+      ],
+      "lastCommitDate": "2026-02-19T20:04:54Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2309,
+      "diagnosedAt": "2026-02-19T21:02:48.528Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@google/generative-ai",
+      "score": 85,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Repository is archived (no longer maintained)",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "google-wombot",
+        "ofrobots",
+        "mrdoob"
+      ],
+      "lastCommitDate": "2025-12-02T17:12:14Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 3016,
+      "diagnosedAt": "2026-02-19T21:02:51.544Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "langchain",
+      "score": 79,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Complete maintainer change in 2 days (0.2.8)",
+          "points": 11,
+          "confidence": "medium"
+        },
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "christian-bromann",
+        "nfcampos",
+        "jacoblee93",
+        "andrewnguonly",
+        "davidduong",
+        "hntrl",
+        "hwchase17",
+        "basproul"
+      ],
+      "lastCommitDate": "2026-02-19T20:40:04Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 2,
+        "critical": 0,
+        "high": 1,
+        "recent": 1,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 2805,
+      "diagnosedAt": "2026-02-19T21:02:54.349Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@langchain/core",
+      "score": 75,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Complete maintainer change in 3 days (0.2.12)",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "hwchase17",
+        "jacoblee93",
+        "basproul",
+        "eric_langchain",
+        "andrewnguonly",
+        "davidduong",
+        "maddyadams",
+        "sam_noyes",
+        "andy-langchain",
+        "rcasup",
+        "hntrl",
+        "christian-bromann"
+      ],
+      "lastCommitDate": "2026-02-19T20:40:04Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 1,
+        "critical": 0,
+        "high": 1,
+        "recent": 1,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 2330,
+      "diagnosedAt": "2026-02-19T21:02:56.679Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@langchain/openai",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "hwchase17",
+        "jacoblee93",
+        "basproul",
+        "eric_langchain",
+        "andrewnguonly",
+        "davidduong",
+        "maddyadams",
+        "sam_noyes",
+        "andy-langchain",
+        "rcasup",
+        "hntrl",
+        "christian-bromann"
+      ],
+      "lastCommitDate": "2026-02-19T20:40:04Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2141,
+      "diagnosedAt": "2026-02-19T21:02:58.820Z"
     }
   ],
   "errors": [
@@ -38779,6 +39257,12 @@
       "package": "@vercel/static",
       "error": "Exit code 1: {\"error\":\"Error: Package not found: @vercel/static (npm)\"}\n",
       "timestamp": "2026-02-19T20:57:15.122Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@tensorflow-models",
+      "error": "Exit code 1: {\"error\":\"Error: Failed to fetch npm package info: npm registry error: 405\"}\n",
+      "timestamp": "2026-02-19T21:02:38.337Z"
     }
   ],
   "startTime": "2026-02-19T12:29:21.598Z"

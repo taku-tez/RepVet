@@ -1,0 +1,17 @@
+{
+  "ecosystem": "npm",
+  "package": "onnxruntime-node",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "onnxruntime",
+    "erscor_msft",
+    "eire"
+  ],
+  "lastCommitDate": "2026-02-19T20:58:20Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1919,
+  "diagnosedAt": "2026-02-19T21:02:40.256Z"
+}

@@ -406,5 +406,11 @@
     "package": "@vercel/static",
     "error": "Exit code 1: {\"error\":\"Error: Package not found: @vercel/static (npm)\"}\n",
     "timestamp": "2026-02-19T20:57:15.122Z"
+  },
+  {
+    "ecosystem": "npm",
+    "package": "@tensorflow-models",
+    "error": "Exit code 1: {\"error\":\"Error: Failed to fetch npm package info: npm registry error: 405\"}\n",
+    "timestamp": "2026-02-19T21:02:38.337Z"
   }
 ]

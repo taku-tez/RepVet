@@ -1,0 +1,29 @@
+{
+  "ecosystem": "npm",
+  "package": "tiny-secp256k1",
+  "score": 90,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "2 high severity vulnerability(ies) in history",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "jprichardson",
+    "junderw"
+  ],
+  "lastCommitDate": "2025-09-11T01:33:20Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 2,
+    "critical": 0,
+    "high": 2,
+    "recent": 2,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 2507,
+  "diagnosedAt": "2026-02-19T21:02:32.354Z"
+}

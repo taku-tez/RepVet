@@ -1,0 +1,23 @@
+{
+  "ecosystem": "npm",
+  "package": "@google/generative-ai",
+  "score": 85,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Repository is archived (no longer maintained)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "google-wombot",
+    "ofrobots",
+    "mrdoob"
+  ],
+  "lastCommitDate": "2025-12-02T17:12:14Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 3016,
+  "diagnosedAt": "2026-02-19T21:02:51.544Z"
+}

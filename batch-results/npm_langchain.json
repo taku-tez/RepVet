@@ -1,0 +1,40 @@
+{
+  "ecosystem": "npm",
+  "package": "langchain",
+  "score": 79,
+  "riskLevel": "MEDIUM",
+  "deductions": [
+    {
+      "reason": "Complete maintainer change in 2 days (0.2.8)",
+      "points": 11,
+      "confidence": "medium"
+    },
+    {
+      "reason": "1 high severity vulnerability(ies) in history",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "christian-bromann",
+    "nfcampos",
+    "jacoblee93",
+    "andrewnguonly",
+    "davidduong",
+    "hntrl",
+    "hwchase17",
+    "basproul"
+  ],
+  "lastCommitDate": "2026-02-19T20:40:04Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 2,
+    "critical": 0,
+    "high": 1,
+    "recent": 1,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 2805,
+  "diagnosedAt": "2026-02-19T21:02:54.349Z"
+}

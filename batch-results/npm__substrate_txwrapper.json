@@ -1,0 +1,43 @@
+{
+  "ecosystem": "npm",
+  "package": "@substrate/txwrapper",
+  "score": 60,
+  "riskLevel": "MEDIUM",
+  "deductions": [
+    {
+      "reason": "Package deprecated: txwrapper is deprecated in favour of txwrapper-core",
+      "points": 10,
+      "confidence": "high"
+    },
+    {
+      "reason": "Repository is archived (no longer maintained)",
+      "points": 15,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 3 years ago (4 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "andreieres",
+    "jacogr",
+    "kianenigma",
+    "joepetrowski",
+    "wirednkod",
+    "jsdw",
+    "paritytech-ci",
+    "imod7",
+    "jimmychu0807",
+    "alexandru.vasile",
+    "tarikgul",
+    "paritytech",
+    "ryan-parity"
+  ],
+  "lastCommitDate": "2021-09-29T09:06:04Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2982,
+  "diagnosedAt": "2026-02-19T21:02:23.387Z"
+}

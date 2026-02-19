@@ -1,0 +1,18 @@
+{
+  "ecosystem": "npm",
+  "package": "bitcoinjs-lib",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "fanatid",
+    "jprichardson",
+    "junderw",
+    "jl.landabaso"
+  ],
+  "lastCommitDate": "2026-02-17T01:08:49Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2061,
+  "diagnosedAt": "2026-02-19T21:02:25.448Z"
+}

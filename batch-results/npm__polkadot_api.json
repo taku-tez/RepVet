@@ -1,0 +1,17 @@
+{
+  "ecosystem": "npm",
+  "package": "@polkadot/api",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "jacogr",
+    "polkadotjs",
+    "paritytech-ci"
+  ],
+  "lastCommitDate": "2025-12-18T05:39:09Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 3127,
+  "diagnosedAt": "2026-02-19T21:02:16.958Z"
+}

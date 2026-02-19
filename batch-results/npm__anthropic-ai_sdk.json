@@ -1,0 +1,28 @@
+{
+  "ecosystem": "npm",
+  "package": "@anthropic-ai/sdk",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "zak-anthropic",
+    "dylanc-anthropic",
+    "benjmann",
+    "nikhil-anthropic",
+    "ejlangev-ant",
+    "jv-anthropic",
+    "ollie-ant-2025",
+    "packy-anthropic",
+    "noahz-anthropic",
+    "sbidasaria",
+    "wolffiex",
+    "igorkofman",
+    "felixrieseberg-anthropic",
+    "joan-anthropic"
+  ],
+  "lastCommitDate": "2026-02-19T20:04:54Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2309,
+  "diagnosedAt": "2026-02-19T21:02:48.528Z"
+}

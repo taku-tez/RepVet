@@ -1,0 +1,17 @@
+{
+  "ecosystem": "npm",
+  "package": "@polkadot/keyring",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "jacogr",
+    "polkadotjs",
+    "paritytech-ci"
+  ],
+  "lastCommitDate": "2025-12-09T08:36:31Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 3447,
+  "diagnosedAt": "2026-02-19T21:02:20.405Z"
+}

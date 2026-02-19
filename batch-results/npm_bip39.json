@@ -1,0 +1,17 @@
+{
+  "ecosystem": "npm",
+  "package": "bip39",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "weilu",
+    "junderw",
+    "jl.landabaso"
+  ],
+  "lastCommitDate": "2026-01-21T23:08:32Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2096,
+  "diagnosedAt": "2026-02-19T21:02:29.847Z"
+}

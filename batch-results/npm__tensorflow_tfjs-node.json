@@ -1,0 +1,24 @@
+{
+  "ecosystem": "npm",
+  "package": "@tensorflow/tfjs-node",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "pyu10055",
+    "caisq",
+    "annxingyuan",
+    "linazhao128",
+    "mattsoulanille",
+    "jinjingforever",
+    "laxma4675",
+    "delhibabu",
+    "linchan",
+    "fengwuyao"
+  ],
+  "lastCommitDate": "2026-02-06T19:50:46Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2771,
+  "diagnosedAt": "2026-02-19T21:02:38.037Z"
+}
