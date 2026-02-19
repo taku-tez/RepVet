@@ -1,0 +1,21 @@
+{
+  "ecosystem": "npm",
+  "package": "xss",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "leizongmin"
+  ],
+  "lastCommitDate": "2026-01-14T17:22:30Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1746,
+  "diagnosedAt": "2026-02-19T13:52:44.288Z"
+}

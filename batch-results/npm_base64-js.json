@@ -1,0 +1,27 @@
+{
+  "ecosystem": "npm",
+  "package": "base64-js",
+  "score": 84,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer replaced at 0.0.5",
+      "points": 11,
+      "confidence": "medium"
+    },
+    {
+      "reason": "Last commit over 1 year ago (574 days)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "beatgammit",
+    "feross"
+  ],
+  "lastCommitDate": "2024-07-25T09:39:14Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2731,
+  "diagnosedAt": "2026-02-19T13:52:23.438Z"
+}

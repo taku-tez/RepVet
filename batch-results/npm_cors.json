@@ -1,0 +1,17 @@
+{
+  "ecosystem": "npm",
+  "package": "cors",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "dougwilson",
+    "ulisesgascon",
+    "troygoode"
+  ],
+  "lastCommitDate": "2026-02-01T14:47:33Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1730,
+  "diagnosedAt": "2026-02-19T13:52:31.004Z"
+}

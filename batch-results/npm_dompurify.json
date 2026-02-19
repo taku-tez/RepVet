@@ -1,0 +1,38 @@
+{
+  "ecosystem": "npm",
+  "package": "dompurify",
+  "score": 72,
+  "riskLevel": "MEDIUM",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    },
+    {
+      "reason": "3 critical vulnerability(ies) in history",
+      "points": 15,
+      "confidence": "high"
+    },
+    {
+      "reason": "1 high severity vulnerability(ies) in history",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "cure53"
+  ],
+  "lastCommitDate": "2026-02-13T09:48:31Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 8,
+    "critical": 3,
+    "high": 1,
+    "recent": 0,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 2479,
+  "diagnosedAt": "2026-02-19T13:52:46.768Z"
+}

@@ -1,0 +1,26 @@
+{
+  "ecosystem": "npm",
+  "package": "sanitizer",
+  "score": 80,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 3 years ago (5 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "thesmaw"
+  ],
+  "lastCommitDate": "2020-10-02T05:26:30Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2161,
+  "diagnosedAt": "2026-02-19T13:52:42.542Z"
+}

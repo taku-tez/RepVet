@@ -1,0 +1,26 @@
+{
+  "ecosystem": "npm",
+  "package": "paseto",
+  "score": 80,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    },
+    {
+      "reason": "Repository is archived (no longer maintained)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "panva"
+  ],
+  "lastCommitDate": "2025-03-29T16:00:25Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2485,
+  "diagnosedAt": "2026-02-19T13:52:15.877Z"
+}

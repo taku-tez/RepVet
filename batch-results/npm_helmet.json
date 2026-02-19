@@ -1,0 +1,16 @@
+{
+  "ecosystem": "npm",
+  "package": "helmet",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "adam_baldwin",
+    "evanhahn"
+  ],
+  "lastCommitDate": "2026-02-16T19:24:20Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1928,
+  "diagnosedAt": "2026-02-19T13:52:29.273Z"
+}

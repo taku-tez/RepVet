@@ -1,0 +1,16 @@
+{
+  "ecosystem": "npm",
+  "package": "express-rate-limit",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "nfriedly",
+    "gamemaker1"
+  ],
+  "lastCommitDate": "2026-02-16T23:56:47Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1813,
+  "diagnosedAt": "2026-02-19T13:52:38.520Z"
+}

@@ -1,0 +1,17 @@
+{
+  "ecosystem": "npm",
+  "package": "compression",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "dougwilson",
+    "ulisesgascon",
+    "wesleytodd"
+  ],
+  "lastCommitDate": "2026-01-03T17:40:16Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1765,
+  "diagnosedAt": "2026-02-19T13:52:27.345Z"
+}

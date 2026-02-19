@@ -1,0 +1,30 @@
+{
+  "ecosystem": "npm",
+  "package": "validator",
+  "score": 90,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "2 high severity vulnerability(ies) in history",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "cohara87",
+    "profnandaa",
+    "wikirik"
+  ],
+  "lastCommitDate": "2026-02-06T20:38:12Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 10,
+    "critical": 0,
+    "high": 2,
+    "recent": 2,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 1861,
+  "diagnosedAt": "2026-02-19T13:52:40.381Z"
+}
