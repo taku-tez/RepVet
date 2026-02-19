@@ -1,0 +1,38 @@
+{
+  "ecosystem": "npm",
+  "package": "apollo-server",
+  "score": 77,
+  "riskLevel": "MEDIUM",
+  "deductions": [
+    {
+      "reason": "Package deprecated: The `apollo-server` package is part of Apollo Server v2 and v3, which are now end-of-life (as of Oct...",
+      "points": 10,
+      "confidence": "high"
+    },
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    },
+    {
+      "reason": "2 high severity vulnerability(ies) in history",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "apollo-bot"
+  ],
+  "lastCommitDate": "2026-02-16T22:09:37Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 4,
+    "critical": 0,
+    "high": 2,
+    "recent": 1,
+    "hasUnfixed": true
+  },
+  "executionTimeMs": 2126,
+  "diagnosedAt": "2026-02-19T12:03:01.051Z"
+}

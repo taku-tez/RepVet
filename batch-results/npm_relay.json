@@ -1,0 +1,26 @@
+{
+  "ecosystem": "npm",
+  "package": "relay",
+  "score": 80,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 3 years ago (12 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "fb"
+  ],
+  "lastCommitDate": "2014-02-14T12:51:32Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1966,
+  "diagnosedAt": "2026-02-19T12:03:04.906Z"
+}

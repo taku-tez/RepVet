@@ -1,0 +1,31 @@
+{
+  "ecosystem": "npm",
+  "package": "keystone",
+  "score": 90,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "3 high severity vulnerability(ies) in history",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "dominikwilkowski",
+    "jedwatson",
+    "mxstbr",
+    "noviny"
+  ],
+  "lastCommitDate": "2026-02-17T17:22:38Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 5,
+    "critical": 0,
+    "high": 3,
+    "recent": 0,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 3089,
+  "diagnosedAt": "2026-02-19T12:03:16.274Z"
+}

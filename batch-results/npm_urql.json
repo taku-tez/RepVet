@@ -1,0 +1,28 @@
+{
+  "ecosystem": "npm",
+  "package": "urql",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "sarmeyer",
+    "mariano-formidable",
+    "ryan.roemer",
+    "formidable-owner",
+    "formidablelabs",
+    "sarahformidable",
+    "ceceppa",
+    "keithluchtel",
+    "philpl",
+    "andyrichardson",
+    "jdecroock",
+    "parkerziegler",
+    "npm-urql",
+    "thekenwheeler"
+  ],
+  "lastCommitDate": "2026-02-03T03:53:33Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1887,
+  "diagnosedAt": "2026-02-19T12:03:02.939Z"
+}

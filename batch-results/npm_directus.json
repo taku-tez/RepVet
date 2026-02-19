@@ -1,0 +1,34 @@
+{
+  "ecosystem": "npm",
+  "package": "directus",
+  "score": 87,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "2 critical vulnerability(ies) in history",
+      "points": 8,
+      "confidence": "low"
+    },
+    {
+      "reason": "17 vulnerabilities in the past year",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "benhaynes",
+    "rijk"
+  ],
+  "lastCommitDate": "2026-02-19T11:14:49Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 45,
+    "critical": 2,
+    "high": 11,
+    "recent": 17,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 3647,
+  "diagnosedAt": "2026-02-19T12:03:10.854Z"
+}

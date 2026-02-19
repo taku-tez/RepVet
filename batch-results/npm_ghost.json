@@ -1,0 +1,57 @@
+{
+  "ecosystem": "npm",
+  "package": "ghost",
+  "score": 92,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "3 critical vulnerability(ies) in history",
+      "points": 8,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "zimoatghost",
+    "allouis",
+    "kernalghost",
+    "chrisraible",
+    "erisds",
+    "johnonolan",
+    "kevinansfield",
+    "cobbspur",
+    "aileencgn",
+    "jloh",
+    "minimaluminium",
+    "sam-lord",
+    "pauladamdavis",
+    "bobvaneck",
+    "joeegrigg",
+    "hadret",
+    "jonhickman",
+    "erik-ghost",
+    "sagzy",
+    "vershwal",
+    "mike182uk",
+    "lsinger",
+    "rblstr-ghost",
+    "evanhahn-ghost",
+    "weylandswart",
+    "ghost-slimer",
+    "tmciesco",
+    "jonatan-ghost",
+    "9larsons",
+    "kirrg001"
+  ],
+  "lastCommitDate": "2026-02-19T11:56:29Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 22,
+    "critical": 3,
+    "high": 7,
+    "recent": 7,
+    "hasUnfixed": true
+  },
+  "executionTimeMs": 3220,
+  "diagnosedAt": "2026-02-19T12:03:19.494Z"
+}

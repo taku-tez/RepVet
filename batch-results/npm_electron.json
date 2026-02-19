@@ -1,0 +1,29 @@
+{
+  "ecosystem": "npm",
+  "package": "electron",
+  "score": 92,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "2 critical vulnerability(ies) in history",
+      "points": 8,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "electronhq",
+    "electron-nightly"
+  ],
+  "lastCommitDate": "2026-02-19T11:47:19Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 30,
+    "critical": 2,
+    "high": 13,
+    "recent": 3,
+    "hasUnfixed": true
+  },
+  "executionTimeMs": 2678,
+  "diagnosedAt": "2026-02-19T12:03:22.172Z"
+}

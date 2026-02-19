@@ -1,0 +1,35 @@
+{
+  "ecosystem": "npm",
+  "package": "payload",
+  "score": 75,
+  "riskLevel": "MEDIUM",
+  "deductions": [
+    {
+      "reason": "1 critical vulnerability(ies) in history",
+      "points": 15,
+      "confidence": "high"
+    },
+    {
+      "reason": "1 high severity vulnerability(ies) in history",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "jmikrut",
+    "payloadjs",
+    "elliotpayload"
+  ],
+  "lastCommitDate": "2026-02-19T07:30:15Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 5,
+    "critical": 1,
+    "high": 1,
+    "recent": 3,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 2331,
+  "diagnosedAt": "2026-02-19T12:03:13.185Z"
+}

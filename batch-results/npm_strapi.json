@@ -1,0 +1,53 @@
+{
+  "ecosystem": "npm",
+  "package": "strapi",
+  "score": 50,
+  "riskLevel": "HIGH",
+  "deductions": [
+    {
+      "reason": "Package deprecated: Strapi V3 is no longer maintained",
+      "points": 10,
+      "confidence": "high"
+    },
+    {
+      "reason": "Complete maintainer change in 15 days (3.0.0-alpha.13)",
+      "points": 15,
+      "confidence": "high"
+    },
+    {
+      "reason": "3 critical vulnerability(ies) in history",
+      "points": 15,
+      "confidence": "high"
+    },
+    {
+      "reason": "6 high severity vulnerability(ies) in history",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "pierreburgy",
+    "aurelsicoko",
+    "alexandrebodin",
+    "convly",
+    "nico-strapi",
+    "strapi.adzouz",
+    "baronvoninternet",
+    "marc-roig-strapi",
+    "jhoward1994",
+    "bassel17",
+    "cache-your-dreams"
+  ],
+  "lastCommitDate": "2026-02-19T10:46:32Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 12,
+    "critical": 3,
+    "high": 6,
+    "recent": 0,
+    "hasUnfixed": true
+  },
+  "executionTimeMs": 2300,
+  "diagnosedAt": "2026-02-19T12:03:07.207Z"
+}
