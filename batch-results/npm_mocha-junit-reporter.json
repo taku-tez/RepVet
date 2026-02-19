@@ -1,0 +1,22 @@
+{
+  "ecosystem": "npm",
+  "package": "mocha-junit-reporter",
+  "score": 95,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Last commit over 1 year ago (638 days)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "mrmichael",
+    "clayreimann"
+  ],
+  "lastCommitDate": "2024-05-22T10:39:21Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2073,
+  "diagnosedAt": "2026-02-19T19:42:19.214Z"
+}

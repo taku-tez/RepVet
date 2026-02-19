@@ -1,5 +1,5 @@
 {
-  "currentIndex": 1360,
+  "currentIndex": 1380,
   "totalPackages": 4957,
   "results": [
     {
@@ -33001,6 +33001,410 @@
       "hasMalwareHistory": false,
       "executionTimeMs": 1727,
       "diagnosedAt": "2026-02-19T19:37:47.468Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "jest-environment-jsdom",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "aaronabramov",
+        "simenb",
+        "rickhanlonii",
+        "openjs-operations",
+        "cpojer"
+      ],
+      "lastCommitDate": "2026-02-19T18:39:33Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1650,
+      "diagnosedAt": "2026-02-19T19:42:07.476Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "jest-environment-node",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "aaronabramov",
+        "simenb",
+        "rickhanlonii",
+        "openjs-operations",
+        "cpojer"
+      ],
+      "lastCommitDate": "2026-02-19T18:39:33Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1713,
+      "diagnosedAt": "2026-02-19T19:42:09.189Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "vitest",
+      "score": 85,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "1 critical vulnerability(ies) in history",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "antfu",
+        "patak",
+        "oreanno",
+        "yyx990803",
+        "vitestbot"
+      ],
+      "lastCommitDate": "2026-02-19T17:16:40Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 1,
+        "critical": 1,
+        "high": 0,
+        "recent": 0,
+        "hasUnfixed": true
+      },
+      "executionTimeMs": 1633,
+      "diagnosedAt": "2026-02-19T19:42:10.823Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@vitest/ui",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "antfu",
+        "patak",
+        "oreanno",
+        "yyx990803",
+        "vitestbot"
+      ],
+      "lastCommitDate": "2026-02-19T17:16:40Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1695,
+      "diagnosedAt": "2026-02-19T19:42:12.519Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@vitest/coverage-v8",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "antfu",
+        "patak",
+        "oreanno",
+        "yyx990803",
+        "vitestbot"
+      ],
+      "lastCommitDate": "2026-02-19T17:16:40Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2639,
+      "diagnosedAt": "2026-02-19T19:42:15.158Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "mocha",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "voxpelli",
+        "joshuakgoldberg",
+        "mark-wiemer"
+      ],
+      "lastCommitDate": "2026-02-19T02:10:57Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1983,
+      "diagnosedAt": "2026-02-19T19:42:17.141Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "mocha-junit-reporter",
+      "score": 95,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Last commit over 1 year ago (638 days)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "mrmichael",
+        "clayreimann"
+      ],
+      "lastCommitDate": "2024-05-22T10:39:21Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2073,
+      "diagnosedAt": "2026-02-19T19:42:19.214Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "mocha-multi-reporters",
+      "score": 90,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Last commit over 2 years ago (2 years)",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "stanleyhlng",
+        "francisu4"
+      ],
+      "lastCommitDate": "2024-01-03T19:31:08Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1969,
+      "diagnosedAt": "2026-02-19T19:42:21.184Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "jasmine",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "slackersoft",
+        "sgravrock",
+        "dwfrank",
+        "amavisca"
+      ],
+      "lastCommitDate": "2026-02-16T23:45:02Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1702,
+      "diagnosedAt": "2026-02-19T19:42:22.886Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "jasmine-core",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "slackersoft",
+        "sgravrock",
+        "dwfrank"
+      ],
+      "lastCommitDate": "2026-02-17T04:31:01Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1699,
+      "diagnosedAt": "2026-02-19T19:42:24.585Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "jasmine-reporters",
+      "score": 95,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Last commit over 1 year ago (517 days)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "larrymyers",
+        "bloveridge"
+      ],
+      "lastCommitDate": "2024-09-20T15:31:37Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1917,
+      "diagnosedAt": "2026-02-19T19:42:26.502Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "cypress",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "cypress-npm-publisher",
+        "brian-mann"
+      ],
+      "lastCommitDate": "2026-02-19T18:43:49Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1798,
+      "diagnosedAt": "2026-02-19T19:42:28.300Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@cypress/webpack-preprocessor",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "cypress-npm-publisher"
+      ],
+      "lastCommitDate": "2026-02-19T18:43:49Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1777,
+      "diagnosedAt": "2026-02-19T19:42:30.077Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@cypress/code-coverage",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "cypress-npm-publisher"
+      ],
+      "lastCommitDate": "2026-02-14T05:55:37Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1968,
+      "diagnosedAt": "2026-02-19T19:42:32.045Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "playwright",
+      "score": 90,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "pavelfeldman",
+        "yurys",
+        "dgozman-ms",
+        "playwright-bot"
+      ],
+      "lastCommitDate": "2026-02-19T08:44:50Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 1,
+        "critical": 0,
+        "high": 1,
+        "recent": 1,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 2860,
+      "diagnosedAt": "2026-02-19T19:42:34.905Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@playwright/test",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "pavelfeldman",
+        "yurys",
+        "dgozman-ms",
+        "playwright-bot"
+      ],
+      "lastCommitDate": "2026-02-19T08:44:50Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2025,
+      "diagnosedAt": "2026-02-19T19:42:36.930Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "playwright-core",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "pavelfeldman",
+        "yurys",
+        "dgozman-ms",
+        "playwright-bot"
+      ],
+      "lastCommitDate": "2026-02-19T08:44:50Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2389,
+      "diagnosedAt": "2026-02-19T19:42:39.319Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "puppeteer",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "mathias",
+        "google-wombot"
+      ],
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 1,
+        "critical": 0,
+        "high": 0,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1799,
+      "diagnosedAt": "2026-02-19T19:42:41.118Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "puppeteer-core",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "mathias",
+        "google-wombot"
+      ],
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1669,
+      "diagnosedAt": "2026-02-19T19:42:42.787Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@puppeteer/replay",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "mathias",
+        "google-wombot"
+      ],
+      "lastCommitDate": "2026-02-19T08:11:12Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2536,
+      "diagnosedAt": "2026-02-19T19:42:45.323Z"
     }
   ],
   "errors": [

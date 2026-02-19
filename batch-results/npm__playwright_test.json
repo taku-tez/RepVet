@@ -1,6 +1,6 @@
 {
   "ecosystem": "npm",
-  "package": "playwright-core",
+  "package": "@playwright/test",
   "score": 100,
   "riskLevel": "LOW",
   "deductions": [],
@@ -13,6 +13,6 @@
   "lastCommitDate": "2026-02-19T08:44:50Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
-  "executionTimeMs": 2389,
-  "diagnosedAt": "2026-02-19T19:42:39.319Z"
+  "executionTimeMs": 2025,
+  "diagnosedAt": "2026-02-19T19:42:36.930Z"
 }

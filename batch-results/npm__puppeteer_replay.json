@@ -1,6 +1,6 @@
 {
   "ecosystem": "npm",
-  "package": "puppeteer-core",
+  "package": "@puppeteer/replay",
   "score": 100,
   "riskLevel": "LOW",
   "deductions": [],
@@ -8,8 +8,9 @@
     "mathias",
     "google-wombot"
   ],
+  "lastCommitDate": "2026-02-19T08:11:12Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
-  "executionTimeMs": 1669,
-  "diagnosedAt": "2026-02-19T19:42:42.787Z"
+  "executionTimeMs": 2536,
+  "diagnosedAt": "2026-02-19T19:42:45.323Z"
 }

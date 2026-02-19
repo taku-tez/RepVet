@@ -1,0 +1,22 @@
+{
+  "ecosystem": "npm",
+  "package": "jasmine-reporters",
+  "score": 95,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Last commit over 1 year ago (517 days)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "larrymyers",
+    "bloveridge"
+  ],
+  "lastCommitDate": "2024-09-20T15:31:37Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1917,
+  "diagnosedAt": "2026-02-19T19:42:26.502Z"
+}

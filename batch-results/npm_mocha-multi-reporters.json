@@ -1,0 +1,22 @@
+{
+  "ecosystem": "npm",
+  "package": "mocha-multi-reporters",
+  "score": 90,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Last commit over 2 years ago (2 years)",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "stanleyhlng",
+    "francisu4"
+  ],
+  "lastCommitDate": "2024-01-03T19:31:08Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1969,
+  "diagnosedAt": "2026-02-19T19:42:21.184Z"
+}

@@ -1,0 +1,19 @@
+{
+  "ecosystem": "npm",
+  "package": "jest-environment-jsdom",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "aaronabramov",
+    "simenb",
+    "rickhanlonii",
+    "openjs-operations",
+    "cpojer"
+  ],
+  "lastCommitDate": "2026-02-19T18:39:33Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1650,
+  "diagnosedAt": "2026-02-19T19:42:07.476Z"
+}

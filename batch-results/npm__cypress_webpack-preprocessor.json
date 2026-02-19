@@ -1,0 +1,21 @@
+{
+  "ecosystem": "npm",
+  "package": "@cypress/webpack-preprocessor",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "cypress-npm-publisher"
+  ],
+  "lastCommitDate": "2026-02-19T18:43:49Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1777,
+  "diagnosedAt": "2026-02-19T19:42:30.077Z"
+}
