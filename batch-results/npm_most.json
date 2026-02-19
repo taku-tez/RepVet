@@ -1,0 +1,25 @@
+{
+  "ecosystem": "npm",
+  "package": "most",
+  "score": 85,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Last commit over 3 years ago (3 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "tylors",
+    "briancavalier",
+    "cujojs",
+    "davidchase",
+    "most"
+  ],
+  "lastCommitDate": "2022-12-06T17:07:17Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 3071,
+  "diagnosedAt": "2026-02-19T14:02:45.773Z"
+}

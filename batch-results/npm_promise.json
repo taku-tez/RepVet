@@ -1,0 +1,27 @@
+{
+  "ecosystem": "npm",
+  "package": "promise",
+  "score": 79,
+  "riskLevel": "MEDIUM",
+  "deductions": [
+    {
+      "reason": "Complete maintainer change in 0 days (1.2.2)",
+      "points": 11,
+      "confidence": "medium"
+    },
+    {
+      "reason": "Last commit over 2 years ago (2 years)",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "forbeslindesay",
+    "then-promise-bot"
+  ],
+  "lastCommitDate": "2023-10-21T03:35:42Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2285,
+  "diagnosedAt": "2026-02-19T14:02:35.621Z"
+}

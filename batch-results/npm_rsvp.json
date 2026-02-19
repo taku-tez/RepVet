@@ -1,0 +1,26 @@
+{
+  "ecosystem": "npm",
+  "package": "rsvp",
+  "score": 90,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Last commit over 2 years ago (2 years)",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "fivetanley",
+    "mixonic",
+    "rwjblue",
+    "ryanflorence",
+    "stefanpenner",
+    "wycats"
+  ],
+  "lastCommitDate": "2023-10-27T00:21:03Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2109,
+  "diagnosedAt": "2026-02-19T14:02:31.408Z"
+}

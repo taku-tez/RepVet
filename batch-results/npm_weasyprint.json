@@ -1,0 +1,26 @@
+{
+  "ecosystem": "npm",
+  "package": "weasyprint",
+  "score": 80,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 3 years ago (4 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "bob6664569"
+  ],
+  "lastCommitDate": "2022-06-22T15:23:37Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2166,
+  "diagnosedAt": "2026-02-19T14:02:10.099Z"
+}

@@ -1,0 +1,26 @@
+{
+  "ecosystem": "npm",
+  "package": "zen-observable",
+  "score": 82,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    },
+    {
+      "reason": "Last commit over 3 years ago (3 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "zenparsing"
+  ],
+  "lastCommitDate": "2023-01-04T21:36:34Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1666,
+  "diagnosedAt": "2026-02-19T14:02:42.701Z"
+}

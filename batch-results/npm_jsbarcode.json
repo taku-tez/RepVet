@@ -1,0 +1,21 @@
+{
+  "ecosystem": "npm",
+  "package": "jsbarcode",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "lindell"
+  ],
+  "lastCommitDate": "2026-01-07T19:49:51Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1645,
+  "diagnosedAt": "2026-02-19T14:02:22.889Z"
+}

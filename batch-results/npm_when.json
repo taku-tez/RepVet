@@ -1,0 +1,26 @@
+{
+  "ecosystem": "npm",
+  "package": "when",
+  "score": 82,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    },
+    {
+      "reason": "Last commit over 3 years ago (4 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "cujojs"
+  ],
+  "lastCommitDate": "2022-04-10T19:35:16Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1916,
+  "diagnosedAt": "2026-02-19T14:02:29.299Z"
+}

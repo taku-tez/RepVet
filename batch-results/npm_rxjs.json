@@ -1,0 +1,23 @@
+{
+  "ecosystem": "npm",
+  "package": "rxjs",
+  "score": 89,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Complete maintainer change in 12 days (5.0.0-alpha.11)",
+      "points": 11,
+      "confidence": "medium"
+    }
+  ],
+  "maintainers": [
+    "cartant",
+    "blesh",
+    "kwonoj"
+  ],
+  "lastCommitDate": "2025-02-23T20:54:32Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1183,
+  "diagnosedAt": "2026-02-19T14:02:41.035Z"
+}

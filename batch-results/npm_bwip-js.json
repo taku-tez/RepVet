@@ -1,0 +1,16 @@
+{
+  "ecosystem": "npm",
+  "package": "bwip-js",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "metafloor",
+    "bwip-js"
+  ],
+  "lastCommitDate": "2025-11-11T23:25:04Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2629,
+  "diagnosedAt": "2026-02-19T14:02:21.244Z"
+}

@@ -1,0 +1,22 @@
+{
+  "ecosystem": "npm",
+  "package": "es6-promise",
+  "score": 85,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Last commit over 3 years ago (3 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "jaffathecake",
+    "stefanpenner"
+  ],
+  "lastCommitDate": "2022-11-14T21:47:12Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2001,
+  "diagnosedAt": "2026-02-19T14:02:37.623Z"
+}

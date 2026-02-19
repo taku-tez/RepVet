@@ -1,0 +1,32 @@
+{
+  "ecosystem": "npm",
+  "package": "q",
+  "score": 65,
+  "riskLevel": "MEDIUM",
+  "deductions": [
+    {
+      "reason": "Package deprecated: You or someone you depend on is using Q, the JavaScript Promise library that gave JavaScript develop...",
+      "points": 10,
+      "confidence": "high"
+    },
+    {
+      "reason": "Repository is archived (no longer maintained)",
+      "points": 15,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 2 years ago (2 years)",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "domenic",
+    "kriskowal"
+  ],
+  "lastCommitDate": "2023-11-08T10:50:34Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 947,
+  "diagnosedAt": "2026-02-19T14:02:25.730Z"
+}

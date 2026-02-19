@@ -1,0 +1,31 @@
+{
+  "ecosystem": "npm",
+  "package": "native-promise-only",
+  "score": 67,
+  "riskLevel": "MEDIUM",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    },
+    {
+      "reason": "Repository is archived (no longer maintained)",
+      "points": 15,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 3 years ago (6 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "getify"
+  ],
+  "lastCommitDate": "2019-10-27T02:11:57Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2228,
+  "diagnosedAt": "2026-02-19T14:02:39.852Z"
+}

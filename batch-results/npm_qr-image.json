@@ -1,0 +1,26 @@
+{
+  "ecosystem": "npm",
+  "package": "qr-image",
+  "score": 90,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 1 year ago (727 days)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "alexeyten"
+  ],
+  "lastCommitDate": "2024-02-23T07:19:13Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2385,
+  "diagnosedAt": "2026-02-19T14:02:18.615Z"
+}

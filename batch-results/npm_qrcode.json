@@ -1,0 +1,22 @@
+{
+  "ecosystem": "npm",
+  "package": "qrcode",
+  "score": 95,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Last commit over 1 year ago (544 days)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "soldair",
+    "vigreco"
+  ],
+  "lastCommitDate": "2024-08-23T14:37:17Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2114,
+  "diagnosedAt": "2026-02-19T14:02:14.182Z"
+}

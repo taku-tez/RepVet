@@ -1,0 +1,26 @@
+{
+  "ecosystem": "npm",
+  "package": "gotenberg-js-client",
+  "score": 85,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 2 years ago (2 years)",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "yumauri"
+  ],
+  "lastCommitDate": "2023-12-19T16:33:43Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1969,
+  "diagnosedAt": "2026-02-19T14:02:12.068Z"
+}

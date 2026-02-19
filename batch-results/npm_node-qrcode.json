@@ -1,0 +1,26 @@
+{
+  "ecosystem": "npm",
+  "package": "node-qrcode",
+  "score": 80,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 3 years ago (10 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "sobear"
+  ],
+  "lastCommitDate": "2015-12-07T08:01:56Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2046,
+  "diagnosedAt": "2026-02-19T14:02:16.229Z"
+}
