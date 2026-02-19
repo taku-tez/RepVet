@@ -10,5 +10,11 @@
     "package": "aws-cognito",
     "error": "Exit code 1: {\"error\":\"Error: Package not found: aws-cognito (npm)\"}\n",
     "timestamp": "2026-02-19T13:32:08.932Z"
+  },
+  {
+    "ecosystem": "npm",
+    "package": "nlcst",
+    "error": "Exit code 1: {\"error\":\"Error: Package not found: nlcst (npm)\"}\n",
+    "timestamp": "2026-02-19T13:42:36.498Z"
   }
 ]

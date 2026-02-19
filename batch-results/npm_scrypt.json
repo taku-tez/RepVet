@@ -1,0 +1,26 @@
+{
+  "ecosystem": "npm",
+  "package": "scrypt",
+  "score": 80,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 3 years ago (4 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "barrysteyn"
+  ],
+  "lastCommitDate": "2022-06-08T14:02:41Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2006,
+  "diagnosedAt": "2026-02-19T13:42:42.156Z"
+}

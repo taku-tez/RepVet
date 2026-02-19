@@ -1,0 +1,21 @@
+{
+  "ecosystem": "npm",
+  "package": "argon2",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "ranisalt"
+  ],
+  "lastCommitDate": "2026-02-16T17:50:40Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1816,
+  "diagnosedAt": "2026-02-19T13:42:40.150Z"
+}

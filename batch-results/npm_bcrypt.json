@@ -1,0 +1,26 @@
+{
+  "ecosystem": "npm",
+  "package": "bcrypt",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "jfirebaugh",
+    "tootallnate",
+    "ncb000gt",
+    "defunctzombie",
+    "amitosh"
+  ],
+  "lastCommitDate": "2026-01-06T09:05:59Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 1,
+    "critical": 0,
+    "high": 0,
+    "recent": 0,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 1836,
+  "diagnosedAt": "2026-02-19T13:42:38.334Z"
+}

@@ -1,0 +1,19 @@
+{
+  "ecosystem": "npm",
+  "package": "parse5",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "43081j",
+    "rreverser",
+    "wooorm",
+    "feedic",
+    "inikulin"
+  ],
+  "lastCommitDate": "2026-02-17T09:00:37Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2196,
+  "diagnosedAt": "2026-02-19T13:42:15.744Z"
+}

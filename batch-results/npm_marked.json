@@ -1,31 +1,31 @@
 {
   "ecosystem": "npm",
-  "package": "playwright",
+  "package": "marked",
   "score": 90,
   "riskLevel": "LOW",
   "deductions": [
     {
-      "reason": "1 high severity vulnerability(ies) in history",
+      "reason": "4 high severity vulnerability(ies) in history",
       "points": 10,
       "confidence": "high"
     }
   ],
   "maintainers": [
-    "pavelfeldman",
-    "yurys",
-    "dgozman-ms",
-    "playwright-bot"
+    "chjj",
+    "styfle",
+    "amidknight",
+    "tonybrix"
   ],
-  "lastCommitDate": "2026-02-19T08:44:50Z",
+  "lastCommitDate": "2026-02-18T16:12:09Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
   "vulnerabilityStats": {
-    "total": 1,
+    "total": 12,
     "critical": 0,
-    "high": 1,
+    "high": 4,
     "recent": 1,
     "hasUnfixed": false
   },
-  "executionTimeMs": 3363,
-  "diagnosedAt": "2026-02-19T13:42:09.395Z"
+  "executionTimeMs": 3035,
+  "diagnosedAt": "2026-02-19T13:42:21.035Z"
 }

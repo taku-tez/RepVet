@@ -1,0 +1,21 @@
+{
+  "ecosystem": "npm",
+  "package": "xast",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "3axap4ehko"
+  ],
+  "lastCommitDate": "2026-02-17T00:16:07Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 3027,
+  "diagnosedAt": "2026-02-19T13:42:35.699Z"
+}

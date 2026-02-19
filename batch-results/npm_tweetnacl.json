@@ -1,0 +1,21 @@
+{
+  "ecosystem": "npm",
+  "package": "tweetnacl",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "dchest"
+  ],
+  "lastCommitDate": "2025-08-15T11:43:43Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1671,
+  "diagnosedAt": "2026-02-19T13:42:47.592Z"
+}
