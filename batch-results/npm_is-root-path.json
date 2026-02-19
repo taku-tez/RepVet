@@ -1,0 +1,26 @@
+{
+  "ecosystem": "npm",
+  "package": "is-root-path",
+  "score": 80,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 3 years ago (5 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "sindresorhus"
+  ],
+  "lastCommitDate": "2021-08-10T10:12:40Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1851,
+  "diagnosedAt": "2026-02-19T17:42:39.978Z"
+}

@@ -1,0 +1,26 @@
+{
+  "ecosystem": "npm",
+  "package": "uppercase-keys",
+  "score": 80,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 3 years ago (10 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "arthurvr"
+  ],
+  "lastCommitDate": "2015-10-09T16:32:08Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2868,
+  "diagnosedAt": "2026-02-19T17:42:17.305Z"
+}

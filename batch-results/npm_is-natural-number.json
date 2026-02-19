@@ -1,0 +1,26 @@
+{
+  "ecosystem": "npm",
+  "package": "is-natural-number",
+  "score": 82,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    },
+    {
+      "reason": "Last commit over 3 years ago (9 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "shinnn"
+  ],
+  "lastCommitDate": "2017-01-30T10:27:09Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1658,
+  "diagnosedAt": "2026-02-19T17:42:34.875Z"
+}

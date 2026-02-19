@@ -1,0 +1,21 @@
+{
+  "ecosystem": "npm",
+  "package": "prepend-http",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "sindresorhus"
+  ],
+  "lastCommitDate": "2025-09-09T13:17:41Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2055,
+  "diagnosedAt": "2026-02-19T17:42:12.077Z"
+}

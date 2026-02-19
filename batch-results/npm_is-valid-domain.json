@@ -1,0 +1,31 @@
+{
+  "ecosystem": "npm",
+  "package": "is-valid-domain",
+  "score": 65,
+  "riskLevel": "MEDIUM",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    },
+    {
+      "reason": "Repository is archived (no longer maintained)",
+      "points": 15,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 3 years ago (4 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "miguelmota"
+  ],
+  "lastCommitDate": "2022-02-23T03:47:02Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1854,
+  "diagnosedAt": "2026-02-19T17:42:43.889Z"
+}
