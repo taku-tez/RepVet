@@ -1,5 +1,5 @@
 {
-  "currentIndex": 620,
+  "currentIndex": 640,
   "totalPackages": 4957,
   "results": [
     {
@@ -15324,6 +15324,493 @@
       "hasMalwareHistory": false,
       "executionTimeMs": 2145,
       "diagnosedAt": "2026-02-19T15:43:06.943Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "paypal-rest-sdk",
+      "score": 90,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Package deprecated: Package no longer supported. The author suggests using the @paypal/paypal-server-sdk package instead...",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "sdk-integrations-npm",
+        "sioked",
+        "paypal-sdks",
+        "braintree",
+        "seavenly",
+        "jfurman",
+        "ravishekhar00",
+        "gregjopa",
+        "mnicpt",
+        "elizabethmv",
+        "nbierdeman",
+        "remotevision",
+        "rygilbert_paypal",
+        "rosman21",
+        "wsbrunson",
+        "yanisimov_paypal",
+        "avathalurin",
+        "gseguin",
+        "dustijones",
+        "sunnypatel",
+        "bywood",
+        "ppeeleniz",
+        "supremar",
+        "imbrian-paypal",
+        "cnallam",
+        "gabrielg-paypal",
+        "augreer8",
+        "bluepnume"
+      ],
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1910,
+      "diagnosedAt": "2026-02-19T15:52:08.315Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "braintree",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "braintree"
+      ],
+      "lastCommitDate": "2026-02-02T20:36:54Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1994,
+      "diagnosedAt": "2026-02-19T15:52:10.310Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "square",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "jguze-sq",
+        "joanc",
+        "square-owner",
+        "adrw",
+        "square-developers",
+        "matahwoosh",
+        "hirokiosame",
+        "dpapastrat",
+        "plinio-square",
+        "linnea",
+        "pretzelhammer",
+        "alexandersmanning",
+        "amoghk",
+        "akolyte01",
+        "devonsquare",
+        "artemchubaryan",
+        "mikekono",
+        "block-oss-releases",
+        "jessiedlcs",
+        "lindy0820",
+        "xsquared",
+        "jffsquare"
+      ],
+      "lastCommitDate": "2026-02-11T00:19:36Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2047,
+      "diagnosedAt": "2026-02-19T15:52:12.357Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "adyen",
+      "score": 75,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Package deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.",
+          "points": 10,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 3 years ago (5 years)",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "hekike",
+        "seb0zz"
+      ],
+      "lastCommitDate": "2020-09-22T15:01:41Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2071,
+      "diagnosedAt": "2026-02-19T15:52:14.429Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "twilio",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "twilio-dx"
+      ],
+      "lastCommitDate": "2026-02-19T08:48:12Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1890,
+      "diagnosedAt": "2026-02-19T15:52:16.319Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@sendgrid/mail",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "twilio-dx"
+      ],
+      "lastCommitDate": "2026-02-14T03:52:14Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2020,
+      "diagnosedAt": "2026-02-19T15:52:18.340Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "mailgun-js",
+      "score": 80,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Package deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.",
+          "points": 10,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 2 years ago (2 years)",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "jtetlermg",
+        "ai-wintermute",
+        "jvb182",
+        "pw_dev",
+        "zeefarmer",
+        "oleksandr-mazepa"
+      ],
+      "lastCommitDate": "2023-10-02T18:14:40Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2352,
+      "diagnosedAt": "2026-02-19T15:52:20.693Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "postmark",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "dandigangi_ac",
+        "coaldon_ac"
+      ],
+      "lastCommitDate": "2026-02-18T21:11:56Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2364,
+      "diagnosedAt": "2026-02-19T15:52:23.058Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "resend",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "bukinoshita",
+        "zenorocha",
+        "jopcmelo",
+        "cisneiros",
+        "gabrielmfern",
+        "carolmoreschi",
+        "lucasfcosta",
+        "vcapretz",
+        "isabellaaquino",
+        "carolina-josephik"
+      ],
+      "lastCommitDate": "2026-02-17T18:04:55Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2343,
+      "diagnosedAt": "2026-02-19T15:52:25.401Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "nodemailer",
+      "score": 72,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "1 critical vulnerability(ies) in history",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "andris"
+      ],
+      "lastCommitDate": "2026-02-07T08:58:05Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 5,
+        "critical": 1,
+        "high": 1,
+        "recent": 2,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1885,
+      "diagnosedAt": "2026-02-19T15:52:27.810Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "algoliasearch",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "haroenv",
+        "shortcuts",
+        "fluf",
+        "iam4x",
+        "vvo",
+        "speedblue",
+        "bobylito",
+        "redox",
+        "pixelastic",
+        "proudlygeek"
+      ],
+      "lastCommitDate": "2026-02-19T15:11:32Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1868,
+      "diagnosedAt": "2026-02-19T15:52:29.678Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "meilisearch",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "curquiza",
+        "qdequele",
+        "meili-bot"
+      ],
+      "lastCommitDate": "2026-02-19T13:33:41Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2267,
+      "diagnosedAt": "2026-02-19T15:52:31.945Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "typesense",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "jasonbosco",
+        "kishorenc"
+      ],
+      "lastCommitDate": "2026-02-06T04:29:25Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2222,
+      "diagnosedAt": "2026-02-19T15:52:34.167Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "elasticsearch",
+      "score": 60,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Package deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.",
+          "points": 10,
+          "confidence": "high"
+        },
+        {
+          "reason": "Repository is archived (no longer maintained)",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 3 years ago (4 years)",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "tylersmalley",
+        "lukasolson",
+        "jbudz",
+        "delvedor",
+        "mistic"
+      ],
+      "lastCommitDate": "2022-02-17T09:10:06Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2165,
+      "diagnosedAt": "2026-02-19T15:52:36.332Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@elastic/elasticsearch",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "gtback",
+        "ikakavas"
+      ],
+      "lastCommitDate": "2026-02-16T15:46:10Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1946,
+      "diagnosedAt": "2026-02-19T15:52:38.279Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "redis",
+      "score": 90,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "bobymicroby",
+        "dmaier-redislabs",
+        "htemelski-redis",
+        "elena-redis",
+        "nkaradzhov"
+      ],
+      "lastCommitDate": "2026-02-16T14:35:46Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 1,
+        "critical": 0,
+        "high": 1,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 3040,
+      "diagnosedAt": "2026-02-19T15:52:41.319Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "ioredis",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "ioredis-robot",
+        "dmaier-redislabs"
+      ],
+      "lastCommitDate": "2026-02-12T14:42:35Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2660,
+      "diagnosedAt": "2026-02-19T15:52:43.979Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "keydb",
+      "score": 85,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Last commit over 3 years ago (12 years)",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "darrencruse",
+        "millarm001",
+        "jdeal"
+      ],
+      "lastCommitDate": "2014-05-20T18:32:32Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2585,
+      "diagnosedAt": "2026-02-19T15:52:46.564Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "dragonfly",
+      "score": 80,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 3 years ago (10 years)",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "jakeluer"
+      ],
+      "lastCommitDate": "2016-01-22T00:05:56Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2865,
+      "diagnosedAt": "2026-02-19T15:52:49.430Z"
     }
   ],
   "errors": [
@@ -15362,6 +15849,12 @@
       "package": "node:test",
       "error": "Exit code 1: {\"error\":\"Error: Package not found: node:test (npm)\"}\n",
       "timestamp": "2026-02-19T14:42:33.335Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "aws-ses",
+      "error": "Exit code 1: {\"error\":\"Error: Package not found: aws-ses (npm)\"}\n",
+      "timestamp": "2026-02-19T15:52:25.925Z"
     }
   ],
   "startTime": "2026-02-19T12:29:21.598Z"

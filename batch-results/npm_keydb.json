@@ -1,0 +1,23 @@
+{
+  "ecosystem": "npm",
+  "package": "keydb",
+  "score": 85,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Last commit over 3 years ago (12 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "darrencruse",
+    "millarm001",
+    "jdeal"
+  ],
+  "lastCommitDate": "2014-05-20T18:32:32Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2585,
+  "diagnosedAt": "2026-02-19T15:52:46.564Z"
+}

@@ -1,0 +1,26 @@
+{
+  "ecosystem": "npm",
+  "package": "dragonfly",
+  "score": 80,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 3 years ago (10 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "jakeluer"
+  ],
+  "lastCommitDate": "2016-01-22T00:05:56Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2865,
+  "diagnosedAt": "2026-02-19T15:52:49.430Z"
+}

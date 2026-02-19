@@ -1,0 +1,35 @@
+{
+  "ecosystem": "npm",
+  "package": "elasticsearch",
+  "score": 60,
+  "riskLevel": "MEDIUM",
+  "deductions": [
+    {
+      "reason": "Package deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.",
+      "points": 10,
+      "confidence": "high"
+    },
+    {
+      "reason": "Repository is archived (no longer maintained)",
+      "points": 15,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 3 years ago (4 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "tylersmalley",
+    "lukasolson",
+    "jbudz",
+    "delvedor",
+    "mistic"
+  ],
+  "lastCommitDate": "2022-02-17T09:10:06Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2165,
+  "diagnosedAt": "2026-02-19T15:52:36.332Z"
+}

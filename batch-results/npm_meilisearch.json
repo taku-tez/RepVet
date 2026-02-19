@@ -1,0 +1,17 @@
+{
+  "ecosystem": "npm",
+  "package": "meilisearch",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "curquiza",
+    "qdequele",
+    "meili-bot"
+  ],
+  "lastCommitDate": "2026-02-19T13:33:41Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2267,
+  "diagnosedAt": "2026-02-19T15:52:31.945Z"
+}

@@ -1,0 +1,16 @@
+{
+  "ecosystem": "npm",
+  "package": "@elastic/elasticsearch",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "gtback",
+    "ikakavas"
+  ],
+  "lastCommitDate": "2026-02-16T15:46:10Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1946,
+  "diagnosedAt": "2026-02-19T15:52:38.279Z"
+}

@@ -1,6 +1,6 @@
 {
   "ecosystem": "npm",
-  "package": "@sendgrid/mail",
+  "package": "twilio",
   "score": 97,
   "riskLevel": "LOW",
   "deductions": [
@@ -13,9 +13,9 @@
   "maintainers": [
     "twilio-dx"
   ],
-  "lastCommitDate": "2026-02-14T03:52:14Z",
+  "lastCommitDate": "2026-02-19T08:48:12Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
-  "executionTimeMs": 2020,
-  "diagnosedAt": "2026-02-19T15:52:18.340Z"
+  "executionTimeMs": 1890,
+  "diagnosedAt": "2026-02-19T15:52:16.319Z"
 }

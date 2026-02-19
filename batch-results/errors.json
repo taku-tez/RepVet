@@ -34,5 +34,11 @@
     "package": "node:test",
     "error": "Exit code 1: {\"error\":\"Error: Package not found: node:test (npm)\"}\n",
     "timestamp": "2026-02-19T14:42:33.335Z"
+  },
+  {
+    "ecosystem": "npm",
+    "package": "aws-ses",
+    "error": "Exit code 1: {\"error\":\"Error: Package not found: aws-ses (npm)\"}\n",
+    "timestamp": "2026-02-19T15:52:25.925Z"
   }
 ]

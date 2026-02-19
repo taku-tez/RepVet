@@ -1,0 +1,24 @@
+{
+  "ecosystem": "npm",
+  "package": "algoliasearch",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "haroenv",
+    "shortcuts",
+    "fluf",
+    "iam4x",
+    "vvo",
+    "speedblue",
+    "bobylito",
+    "redox",
+    "pixelastic",
+    "proudlygeek"
+  ],
+  "lastCommitDate": "2026-02-19T15:11:32Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1868,
+  "diagnosedAt": "2026-02-19T15:52:29.678Z"
+}
