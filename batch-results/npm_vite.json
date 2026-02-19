@@ -1,0 +1,31 @@
+{
+  "ecosystem": "npm",
+  "package": "vite",
+  "score": 90,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "3 high severity vulnerability(ies) in history",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "yyx990803",
+    "patak",
+    "antfu",
+    "vitebot"
+  ],
+  "lastCommitDate": "2026-02-19T07:23:17Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 16,
+    "critical": 0,
+    "high": 3,
+    "recent": 8,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 3991,
+  "diagnosedAt": "2026-02-19T11:33:05.315Z"
+}

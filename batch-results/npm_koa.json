@@ -1,0 +1,38 @@
+{
+  "ecosystem": "npm",
+  "package": "koa",
+  "score": 85,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "1 critical vulnerability(ies) in history",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "niftylettuce",
+    "fengmk2",
+    "dead_horse",
+    "jongleberry",
+    "juliangruber",
+    "aaron",
+    "titanism",
+    "3imed-jaberi",
+    "ljharb",
+    "coderhaoxin",
+    "tjholowaychuk"
+  ],
+  "lastCommitDate": "2026-02-14T12:43:23Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 4,
+    "critical": 1,
+    "high": 0,
+    "recent": 3,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 2265,
+  "diagnosedAt": "2026-02-19T11:33:22.210Z"
+}

@@ -1,0 +1,36 @@
+{
+  "ecosystem": "npm",
+  "package": "hapi",
+  "score": 80,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Package deprecated: This version contains severe security issues and defects and should not be used! Please upgrade to t...",
+      "points": 10,
+      "confidence": "high"
+    },
+    {
+      "reason": "4 high severity vulnerability(ies) in history",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "devinivy",
+    "marsup",
+    "nargonath",
+    "nlf"
+  ],
+  "lastCommitDate": "2026-02-18T08:37:10Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 7,
+    "critical": 0,
+    "high": 4,
+    "recent": 0,
+    "hasUnfixed": true
+  },
+  "executionTimeMs": 1772,
+  "diagnosedAt": "2026-02-19T11:33:19.945Z"
+}

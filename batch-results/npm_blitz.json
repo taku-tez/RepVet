@@ -1,0 +1,34 @@
+{
+  "ecosystem": "npm",
+  "package": "blitz",
+  "score": 74,
+  "riskLevel": "MEDIUM",
+  "deductions": [
+    {
+      "reason": "Single maintainer replaced at 0.5.0",
+      "points": 11,
+      "confidence": "medium"
+    },
+    {
+      "reason": "1 critical vulnerability(ies) in history",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "flybayer",
+    "siddhsuresh"
+  ],
+  "lastCommitDate": "2025-11-21T13:13:37Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 1,
+    "critical": 1,
+    "high": 0,
+    "recent": 0,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 3408,
+  "diagnosedAt": "2026-02-19T11:33:13.774Z"
+}

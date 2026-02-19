@@ -1,0 +1,26 @@
+{
+  "ecosystem": "npm",
+  "package": "feathers",
+  "score": 87,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Package deprecated: Feathers v3 is out and has moved to @feathersjs/feathers. See https://docs.feathersjs.com/migrating....",
+      "points": 10,
+      "confidence": "high"
+    },
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "daffl"
+  ],
+  "lastCommitDate": "2026-02-19T03:57:09Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2832,
+  "diagnosedAt": "2026-02-19T11:33:18.173Z"
+}

@@ -1,0 +1,37 @@
+{
+  "ecosystem": "npm",
+  "package": "fastify",
+  "score": 75,
+  "riskLevel": "MEDIUM",
+  "deductions": [
+    {
+      "reason": "Complete maintainer change in 1 days (4.28.1)",
+      "points": 15,
+      "confidence": "high"
+    },
+    {
+      "reason": "4 high severity vulnerability(ies) in history",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "jsumners",
+    "delvedor",
+    "matteo.collina",
+    "eomm",
+    "climba03003"
+  ],
+  "lastCommitDate": "2026-02-19T06:49:54Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 7,
+    "critical": 0,
+    "high": 4,
+    "recent": 3,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 1850,
+  "diagnosedAt": "2026-02-19T11:33:24.060Z"
+}
