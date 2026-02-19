@@ -1,0 +1,16 @@
+{
+  "ecosystem": "npm",
+  "package": "components",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "doowb",
+    "kael",
+    "jonschlinkert"
+  ],
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1489,
+  "diagnosedAt": "2026-02-19T18:02:29.821Z"
+}

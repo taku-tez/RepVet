@@ -1,0 +1,30 @@
+{
+  "ecosystem": "npm",
+  "package": "expo-router",
+  "score": 85,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Complete maintainer change in 1 days (3.6.0-canary-20240628-1ba8152)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "ide",
+    "brentvatne",
+    "evanbacon",
+    "expoadmin",
+    "exponent",
+    "bycedric",
+    "kudochien",
+    "alanhughes",
+    "expo-bot",
+    "wschurman"
+  ],
+  "lastCommitDate": "2026-02-19T17:59:36Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2196,
+  "diagnosedAt": "2026-02-19T18:02:48.657Z"
+}

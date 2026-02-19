@@ -1,0 +1,21 @@
+{
+  "ecosystem": "npm",
+  "package": "undio",
+  "score": 95,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "pi0"
+  ],
+  "lastCommitDate": "2026-02-17T18:29:25Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2370,
+  "diagnosedAt": "2026-02-19T18:02:09.255Z"
+}

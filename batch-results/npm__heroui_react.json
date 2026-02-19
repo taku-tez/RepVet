@@ -1,0 +1,21 @@
+{
+  "ecosystem": "npm",
+  "package": "@heroui/react",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "juniorgarciadev"
+  ],
+  "lastCommitDate": "2026-02-19T14:29:22Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2369,
+  "diagnosedAt": "2026-02-19T18:02:39.797Z"
+}

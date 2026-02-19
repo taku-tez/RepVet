@@ -202,5 +202,17 @@
     "package": "@graphql-tools",
     "error": "Exit code 1: {\"error\":\"Error: Failed to fetch npm package info: npm registry error: 405\"}\n",
     "timestamp": "2026-02-19T17:57:14.396Z"
+  },
+  {
+    "ecosystem": "npm",
+    "package": "nextui",
+    "error": "Exit code 1: {\"error\":\"Error: Package not found: nextui (npm)\"}\n",
+    "timestamp": "2026-02-19T18:02:32.549Z"
+  },
+  {
+    "ecosystem": "npm",
+    "package": "heroui",
+    "error": "Exit code 1: {\"error\":\"Error: Package not found: heroui (npm)\"}\n",
+    "timestamp": "2026-02-19T18:02:37.428Z"
   }
 ]

@@ -1,0 +1,16 @@
+{
+  "ecosystem": "npm",
+  "package": "shadcn-ui",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "shadcn",
+    "npm_bot_shadcn"
+  ],
+  "lastCommitDate": "2026-02-19T08:45:59Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2514,
+  "diagnosedAt": "2026-02-19T18:02:24.672Z"
+}

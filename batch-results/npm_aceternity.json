@@ -1,0 +1,26 @@
+{
+  "ecosystem": "npm",
+  "package": "aceternity",
+  "score": 90,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 1 year ago (634 days)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "puskar_roy"
+  ],
+  "lastCommitDate": "2024-05-25T18:42:36Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2322,
+  "diagnosedAt": "2026-02-19T18:02:32.143Z"
+}

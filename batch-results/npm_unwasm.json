@@ -1,0 +1,21 @@
+{
+  "ecosystem": "npm",
+  "package": "unwasm",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "pi0"
+  ],
+  "lastCommitDate": "2026-02-19T15:02:49Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1693,
+  "diagnosedAt": "2026-02-19T18:02:15.467Z"
+}

@@ -1,0 +1,18 @@
+{
+  "ecosystem": "npm",
+  "package": "@radix-ui/react-primitive",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "hadihallak",
+    "chancestrickland",
+    "mark-workos",
+    "npm-workos"
+  ],
+  "lastCommitDate": "2026-02-13T17:32:48Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1865,
+  "diagnosedAt": "2026-02-19T18:02:19.597Z"
+}

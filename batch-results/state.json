@@ -1,5 +1,5 @@
 {
-  "currentIndex": 1060,
+  "currentIndex": 1080,
   "totalPackages": 4957,
   "results": [
     {
@@ -26240,6 +26240,376 @@
       "hasMalwareHistory": false,
       "executionTimeMs": 3739,
       "diagnosedAt": "2026-02-19T17:58:25.355Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "undio",
+      "score": 95,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "pi0"
+      ],
+      "lastCommitDate": "2026-02-17T18:29:25Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2370,
+      "diagnosedAt": "2026-02-19T18:02:09.255Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "uncrypto",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "pi0"
+      ],
+      "lastCommitDate": "2026-02-17T18:13:03Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2832,
+      "diagnosedAt": "2026-02-19T18:02:12.087Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "unenv",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "pi0"
+      ],
+      "lastCommitDate": "2026-02-17T18:33:33Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1685,
+      "diagnosedAt": "2026-02-19T18:02:13.773Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "unwasm",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "pi0"
+      ],
+      "lastCommitDate": "2026-02-19T15:02:49Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1693,
+      "diagnosedAt": "2026-02-19T18:02:15.467Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "radix-ui",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "chancestrickland",
+        "mark-workos"
+      ],
+      "lastCommitDate": "2026-02-13T17:32:48Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2263,
+      "diagnosedAt": "2026-02-19T18:02:17.731Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@radix-ui/react-primitive",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "hadihallak",
+        "chancestrickland",
+        "mark-workos",
+        "npm-workos"
+      ],
+      "lastCommitDate": "2026-02-13T17:32:48Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1865,
+      "diagnosedAt": "2026-02-19T18:02:19.597Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@radix-ui/themes",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "hadihallak",
+        "chancestrickland",
+        "mark-workos",
+        "npm-workos"
+      ],
+      "lastCommitDate": "2026-02-12T21:46:04Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2561,
+      "diagnosedAt": "2026-02-19T18:02:22.158Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "shadcn-ui",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "shadcn",
+        "npm_bot_shadcn"
+      ],
+      "lastCommitDate": "2026-02-19T08:45:59Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2514,
+      "diagnosedAt": "2026-02-19T18:02:24.672Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "shadcn",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "shadcn",
+        "npm_bot_shadcn"
+      ],
+      "lastCommitDate": "2026-02-19T08:45:59Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1794,
+      "diagnosedAt": "2026-02-19T18:02:26.467Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "ui",
+      "score": 80,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 3 years ago (14 years)",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "marcuswestin"
+      ],
+      "lastCommitDate": "2011-09-24T23:52:33Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1865,
+      "diagnosedAt": "2026-02-19T18:02:28.332Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "components",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "doowb",
+        "kael",
+        "jonschlinkert"
+      ],
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1489,
+      "diagnosedAt": "2026-02-19T18:02:29.821Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "aceternity",
+      "score": 90,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 1 year ago (634 days)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "puskar_roy"
+      ],
+      "lastCommitDate": "2024-05-25T18:42:36Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2322,
+      "diagnosedAt": "2026-02-19T18:02:32.143Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@nextui-org/react",
+      "score": 87,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Package deprecated: This package has been deprecated. Please use @heroui/react instead.",
+          "points": 10,
+          "confidence": "high"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "juniorgarciadev"
+      ],
+      "lastCommitDate": "2026-02-19T14:29:22Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 4441,
+      "diagnosedAt": "2026-02-19T18:02:36.990Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@heroui/react",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "juniorgarciadev"
+      ],
+      "lastCommitDate": "2026-02-19T14:29:22Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2369,
+      "diagnosedAt": "2026-02-19T18:02:39.797Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "tamagui",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "nwienert",
+        "alitnk"
+      ],
+      "lastCommitDate": "2026-02-19T13:07:38Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2270,
+      "diagnosedAt": "2026-02-19T18:02:42.067Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@tamagui/core",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "nwienert"
+      ],
+      "lastCommitDate": "2026-02-19T13:07:38Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 3164,
+      "diagnosedAt": "2026-02-19T18:02:45.231Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "solito",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "fernandorojo"
+      ],
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1230,
+      "diagnosedAt": "2026-02-19T18:02:46.461Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "expo-router",
+      "score": 85,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Complete maintainer change in 1 days (3.6.0-canary-20240628-1ba8152)",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "ide",
+        "brentvatne",
+        "evanbacon",
+        "expoadmin",
+        "exponent",
+        "bycedric",
+        "kudochien",
+        "alanhughes",
+        "expo-bot",
+        "wschurman"
+      ],
+      "lastCommitDate": "2026-02-19T17:59:36Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2196,
+      "diagnosedAt": "2026-02-19T18:02:48.657Z"
     }
   ],
   "errors": [
@@ -26446,6 +26816,18 @@
       "package": "@graphql-tools",
       "error": "Exit code 1: {\"error\":\"Error: Failed to fetch npm package info: npm registry error: 405\"}\n",
       "timestamp": "2026-02-19T17:57:14.396Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "nextui",
+      "error": "Exit code 1: {\"error\":\"Error: Package not found: nextui (npm)\"}\n",
+      "timestamp": "2026-02-19T18:02:32.549Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "heroui",
+      "error": "Exit code 1: {\"error\":\"Error: Package not found: heroui (npm)\"}\n",
+      "timestamp": "2026-02-19T18:02:37.428Z"
     }
   ],
   "startTime": "2026-02-19T12:29:21.598Z"

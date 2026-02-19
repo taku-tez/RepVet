@@ -1,0 +1,26 @@
+{
+  "ecosystem": "npm",
+  "package": "@nextui-org/react",
+  "score": 87,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Package deprecated: This package has been deprecated. Please use @heroui/react instead.",
+      "points": 10,
+      "confidence": "high"
+    },
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "juniorgarciadev"
+  ],
+  "lastCommitDate": "2026-02-19T14:29:22Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 4441,
+  "diagnosedAt": "2026-02-19T18:02:36.990Z"
+}

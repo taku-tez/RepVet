@@ -1,0 +1,18 @@
+{
+  "ecosystem": "npm",
+  "package": "@radix-ui/themes",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "hadihallak",
+    "chancestrickland",
+    "mark-workos",
+    "npm-workos"
+  ],
+  "lastCommitDate": "2026-02-12T21:46:04Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2561,
+  "diagnosedAt": "2026-02-19T18:02:22.158Z"
+}
