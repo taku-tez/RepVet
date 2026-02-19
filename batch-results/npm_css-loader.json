@@ -1,0 +1,17 @@
+{
+  "ecosystem": "npm",
+  "package": "css-loader",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "evilebottnawi",
+    "sokra",
+    "jhnns"
+  ],
+  "lastCommitDate": "2026-02-16T13:28:23Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2358,
+  "diagnosedAt": "2026-02-19T15:02:52.128Z"
+}

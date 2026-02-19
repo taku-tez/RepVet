@@ -1,0 +1,20 @@
+{
+  "ecosystem": "npm",
+  "package": "sass-loader",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "evilebottnawi",
+    "sokra",
+    "jhnns",
+    "15000621931",
+    "ev1stensberg",
+    "__hai"
+  ],
+  "lastCommitDate": "2026-02-14T16:15:37Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1763,
+  "diagnosedAt": "2026-02-19T15:02:49.770Z"
+}

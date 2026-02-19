@@ -1,0 +1,17 @@
+{
+  "ecosystem": "npm",
+  "package": "docusaurus",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "slorber",
+    "fb",
+    "docusaurus-bot"
+  ],
+  "lastCommitDate": "2026-02-19T14:14:07Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2176,
+  "diagnosedAt": "2026-02-19T15:02:11.613Z"
+}

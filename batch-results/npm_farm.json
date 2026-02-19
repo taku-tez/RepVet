@@ -1,21 +1,20 @@
 {
   "ecosystem": "npm",
-  "package": "parcel",
-  "score": 97,
+  "package": "farm",
+  "score": 95,
   "riskLevel": "LOW",
   "deductions": [
     {
       "reason": "Single maintainer (bus factor risk)",
-      "points": 3,
-      "confidence": "low"
+      "points": 5,
+      "confidence": "high"
     }
   ],
   "maintainers": [
-    "devongovett"
+    "wre232114"
   ],
-  "lastCommitDate": "2026-02-17T16:45:09Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
-  "executionTimeMs": 2598,
-  "diagnosedAt": "2026-02-19T15:02:24.887Z"
+  "executionTimeMs": 1771,
+  "diagnosedAt": "2026-02-19T15:02:35.382Z"
 }

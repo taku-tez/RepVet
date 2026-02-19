@@ -1,0 +1,23 @@
+{
+  "ecosystem": "npm",
+  "package": "vuepress",
+  "score": 95,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Last commit over 1 year ago (561 days)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "ulivz",
+    "meteorlxy",
+    "yyx990803"
+  ],
+  "lastCommitDate": "2024-08-07T10:06:47Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2222,
+  "diagnosedAt": "2026-02-19T15:02:13.835Z"
+}

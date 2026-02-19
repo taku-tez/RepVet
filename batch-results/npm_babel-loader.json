@@ -1,0 +1,18 @@
+{
+  "ecosystem": "npm",
+  "package": "babel-loader",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "loganfsmyth",
+    "hzoo",
+    "existentialism",
+    "nicolo-ribaudo"
+  ],
+  "lastCommitDate": "2026-02-15T20:45:14Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1793,
+  "diagnosedAt": "2026-02-19T15:02:41.858Z"
+}

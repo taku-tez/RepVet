@@ -1,0 +1,20 @@
+{
+  "ecosystem": "npm",
+  "package": "style-loader",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "evilebottnawi",
+    "sokra",
+    "jhnns",
+    "15000621931",
+    "ev1stensberg",
+    "__hai"
+  ],
+  "lastCommitDate": "2025-11-07T12:18:26Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2161,
+  "diagnosedAt": "2026-02-19T15:02:54.289Z"
+}

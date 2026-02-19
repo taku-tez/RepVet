@@ -1,0 +1,27 @@
+{
+  "ecosystem": "npm",
+  "package": "docsify",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "trusktr",
+    "qingwei.li",
+    "jhildenbiddle",
+    "anixsaha",
+    "sy-records",
+    "koooooo-7"
+  ],
+  "lastCommitDate": "2026-02-18T11:27:21Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 3,
+    "critical": 0,
+    "high": 0,
+    "recent": 0,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 1881,
+  "diagnosedAt": "2026-02-19T15:02:15.716Z"
+}
