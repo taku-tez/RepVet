@@ -18864,8 +18864,8 @@
       "lastCommitDate": "2023-03-09T09:29:31Z",
       "hasOwnershipTransfer": false,
       "hasMalwareHistory": false,
-      "executionTimeMs": 2404,
-      "diagnosedAt": "2026-02-19T16:31:45.581Z"
+      "executionTimeMs": 1124,
+      "diagnosedAt": "2026-02-19T16:32:11.166Z"
     },
     {
       "ecosystem": "npm",
@@ -18890,8 +18890,8 @@
       "lastCommitDate": "2022-06-22T15:23:37Z",
       "hasOwnershipTransfer": false,
       "hasMalwareHistory": false,
-      "executionTimeMs": 1584,
-      "diagnosedAt": "2026-02-19T16:31:47.166Z"
+      "executionTimeMs": 1077,
+      "diagnosedAt": "2026-02-19T16:32:12.243Z"
     },
     {
       "ecosystem": "npm",
@@ -18910,8 +18910,8 @@
       ],
       "hasOwnershipTransfer": false,
       "hasMalwareHistory": false,
-      "executionTimeMs": 1794,
-      "diagnosedAt": "2026-02-19T16:31:48.961Z"
+      "executionTimeMs": 693,
+      "diagnosedAt": "2026-02-19T16:32:12.936Z"
     },
     {
       "ecosystem": "npm",
@@ -18932,8 +18932,8 @@
       "lastCommitDate": "2024-08-23T14:37:17Z",
       "hasOwnershipTransfer": false,
       "hasMalwareHistory": false,
-      "executionTimeMs": 1646,
-      "diagnosedAt": "2026-02-19T16:31:50.608Z"
+      "executionTimeMs": 1397,
+      "diagnosedAt": "2026-02-19T16:32:14.334Z"
     },
     {
       "ecosystem": "npm",
@@ -18958,8 +18958,8 @@
       "lastCommitDate": "2015-12-07T08:01:56Z",
       "hasOwnershipTransfer": false,
       "hasMalwareHistory": false,
-      "executionTimeMs": 2191,
-      "diagnosedAt": "2026-02-19T16:31:52.799Z"
+      "executionTimeMs": 1070,
+      "diagnosedAt": "2026-02-19T16:32:15.404Z"
     },
     {
       "ecosystem": "npm",
@@ -18984,8 +18984,8 @@
       "lastCommitDate": "2024-02-23T07:19:13Z",
       "hasOwnershipTransfer": false,
       "hasMalwareHistory": false,
-      "executionTimeMs": 2014,
-      "diagnosedAt": "2026-02-19T16:31:54.813Z"
+      "executionTimeMs": 984,
+      "diagnosedAt": "2026-02-19T16:32:16.388Z"
     },
     {
       "ecosystem": "npm",
@@ -19000,8 +19000,8 @@
       "lastCommitDate": "2025-11-11T23:25:04Z",
       "hasOwnershipTransfer": false,
       "hasMalwareHistory": false,
-      "executionTimeMs": 2155,
-      "diagnosedAt": "2026-02-19T16:31:56.969Z"
+      "executionTimeMs": 1183,
+      "diagnosedAt": "2026-02-19T16:32:17.571Z"
     },
     {
       "ecosystem": "npm",
@@ -19021,8 +19021,8 @@
       "lastCommitDate": "2026-01-07T19:49:51Z",
       "hasOwnershipTransfer": false,
       "hasMalwareHistory": false,
-      "executionTimeMs": 2110,
-      "diagnosedAt": "2026-02-19T16:31:59.079Z"
+      "executionTimeMs": 1001,
+      "diagnosedAt": "2026-02-19T16:32:18.572Z"
     },
     {
       "ecosystem": "npm",
@@ -19047,8 +19047,8 @@
       "lastCommitDate": "2020-09-01T15:20:09Z",
       "hasOwnershipTransfer": false,
       "hasMalwareHistory": false,
-      "executionTimeMs": 2522,
-      "diagnosedAt": "2026-02-19T16:32:01.601Z"
+      "executionTimeMs": 1181,
+      "diagnosedAt": "2026-02-19T16:32:19.753Z"
     },
     {
       "ecosystem": "npm",
@@ -19063,8 +19063,8 @@
       "lastCommitDate": "2025-11-11T23:25:04Z",
       "hasOwnershipTransfer": false,
       "hasMalwareHistory": false,
-      "executionTimeMs": 1083,
-      "diagnosedAt": "2026-02-19T16:32:02.684Z"
+      "executionTimeMs": 1094,
+      "diagnosedAt": "2026-02-19T16:32:20.847Z"
     },
     {
       "ecosystem": "npm",
@@ -19095,8 +19095,8 @@
       "lastCommitDate": "2023-11-08T10:50:34Z",
       "hasOwnershipTransfer": false,
       "hasMalwareHistory": false,
-      "executionTimeMs": 1811,
-      "diagnosedAt": "2026-02-19T16:32:04.495Z"
+      "executionTimeMs": 1224,
+      "diagnosedAt": "2026-02-19T16:32:22.071Z"
     },
     {
       "ecosystem": "npm",
@@ -19121,8 +19121,8 @@
       "lastCommitDate": "2024-11-07T20:26:46Z",
       "hasOwnershipTransfer": false,
       "hasMalwareHistory": false,
-      "executionTimeMs": 1630,
-      "diagnosedAt": "2026-02-19T16:32:06.125Z"
+      "executionTimeMs": 1020,
+      "diagnosedAt": "2026-02-19T16:32:23.092Z"
     },
     {
       "ecosystem": "npm",
@@ -19147,8 +19147,8 @@
       "lastCommitDate": "2022-04-10T19:35:16Z",
       "hasOwnershipTransfer": false,
       "hasMalwareHistory": false,
-      "executionTimeMs": 2284,
-      "diagnosedAt": "2026-02-19T16:32:08.409Z"
+      "executionTimeMs": 1402,
+      "diagnosedAt": "2026-02-19T16:32:24.494Z"
     },
     {
       "ecosystem": "npm",
@@ -19173,8 +19173,8 @@
       "lastCommitDate": "2023-10-27T00:21:03Z",
       "hasOwnershipTransfer": false,
       "hasMalwareHistory": false,
-      "executionTimeMs": 1719,
-      "diagnosedAt": "2026-02-19T16:32:10.129Z"
+      "executionTimeMs": 1482,
+      "diagnosedAt": "2026-02-19T16:32:25.976Z"
     },
     {
       "ecosystem": "npm",
@@ -19195,8 +19195,8 @@
       "lastCommitDate": "2022-11-14T21:47:12Z",
       "hasOwnershipTransfer": false,
       "hasMalwareHistory": false,
-      "executionTimeMs": 1779,
-      "diagnosedAt": "2026-02-19T16:32:11.908Z"
+      "executionTimeMs": 1561,
+      "diagnosedAt": "2026-02-19T16:32:27.537Z"
     },
     {
       "ecosystem": "npm",
@@ -19226,8 +19226,8 @@
       "lastCommitDate": "2019-10-27T02:11:57Z",
       "hasOwnershipTransfer": false,
       "hasMalwareHistory": false,
-      "executionTimeMs": 1620,
-      "diagnosedAt": "2026-02-19T16:32:13.528Z"
+      "executionTimeMs": 956,
+      "diagnosedAt": "2026-02-19T16:32:28.493Z"
     },
     {
       "ecosystem": "npm",
@@ -19252,8 +19252,8 @@
       "lastCommitDate": "2024-05-20T08:56:22Z",
       "hasOwnershipTransfer": false,
       "hasMalwareHistory": false,
-      "executionTimeMs": 1682,
-      "diagnosedAt": "2026-02-19T16:32:15.210Z"
+      "executionTimeMs": 948,
+      "diagnosedAt": "2026-02-19T16:32:29.442Z"
     },
     {
       "ecosystem": "npm",
@@ -19275,8 +19275,8 @@
       "lastCommitDate": "2025-02-23T20:54:32Z",
       "hasOwnershipTransfer": true,
       "hasMalwareHistory": false,
-      "executionTimeMs": 1776,
-      "diagnosedAt": "2026-02-19T16:32:16.986Z"
+      "executionTimeMs": 1697,
+      "diagnosedAt": "2026-02-19T16:32:31.139Z"
     },
     {
       "ecosystem": "npm",
@@ -19301,8 +19301,8 @@
       "lastCommitDate": "2023-01-04T21:36:34Z",
       "hasOwnershipTransfer": false,
       "hasMalwareHistory": false,
-      "executionTimeMs": 1674,
-      "diagnosedAt": "2026-02-19T16:32:18.661Z"
+      "executionTimeMs": 1614,
+      "diagnosedAt": "2026-02-19T16:32:32.753Z"
     },
     {
       "ecosystem": "npm",
@@ -19326,8 +19326,8 @@
       "lastCommitDate": "2022-12-06T17:07:17Z",
       "hasOwnershipTransfer": false,
       "hasMalwareHistory": false,
-      "executionTimeMs": 2060,
-      "diagnosedAt": "2026-02-19T16:32:20.721Z"
+      "executionTimeMs": 1259,
+      "diagnosedAt": "2026-02-19T16:32:34.012Z"
     }
   ],
   "errors": [
