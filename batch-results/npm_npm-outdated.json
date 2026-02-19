@@ -1,0 +1,20 @@
+{
+  "ecosystem": "npm",
+  "package": "npm-outdated",
+  "score": 95,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "kwiniarski"
+  ],
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1425,
+  "diagnosedAt": "2026-02-19T22:57:16.111Z"
+}

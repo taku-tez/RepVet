@@ -1,0 +1,26 @@
+{
+  "ecosystem": "npm",
+  "package": "vite-bundle-visualizer",
+  "score": 90,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 1 year ago (480 days)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "kuss"
+  ],
+  "lastCommitDate": "2024-10-27T15:32:18Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2659,
+  "diagnosedAt": "2026-02-19T22:57:32.149Z"
+}

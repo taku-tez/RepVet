@@ -1,0 +1,26 @@
+{
+  "ecosystem": "npm",
+  "package": "bundlesize",
+  "score": 92,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    },
+    {
+      "reason": "Last commit over 1 year ago (400 days)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "siddharthkp"
+  ],
+  "lastCommitDate": "2025-01-15T06:41:27Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2675,
+  "diagnosedAt": "2026-02-19T22:57:40.467Z"
+}

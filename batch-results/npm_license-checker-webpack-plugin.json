@@ -1,0 +1,17 @@
+{
+  "ecosystem": "npm",
+  "package": "license-checker-webpack-plugin",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "microsoft1es",
+    "microsoft-oss-releases",
+    "unindented"
+  ],
+  "lastCommitDate": "2025-06-09T19:05:03Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2442,
+  "diagnosedAt": "2026-02-19T22:57:24.361Z"
+}

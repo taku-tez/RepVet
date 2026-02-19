@@ -1,0 +1,30 @@
+{
+  "ecosystem": "npm",
+  "package": "webpack-bundle-analyzer",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "15000621931",
+    "ev1stensberg",
+    "__hai",
+    "sokra",
+    "evilebottnawi",
+    "bebraw",
+    "valscion",
+    "th0r",
+    "d3viant0ne"
+  ],
+  "lastCommitDate": "2026-02-19T14:03:37Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 1,
+    "critical": 0,
+    "high": 0,
+    "recent": 0,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 1770,
+  "diagnosedAt": "2026-02-19T22:57:27.397Z"
+}

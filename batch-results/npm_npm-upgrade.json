@@ -1,0 +1,21 @@
+{
+  "ecosystem": "npm",
+  "package": "npm-upgrade",
+  "score": 95,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "th0r"
+  ],
+  "lastCommitDate": "2025-05-14T16:47:24Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1849,
+  "diagnosedAt": "2026-02-19T22:57:17.960Z"
+}

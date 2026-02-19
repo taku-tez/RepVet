@@ -454,5 +454,23 @@
     "package": "audit-resolve",
     "error": "Exit code 1: {\"error\":\"Error: Package not found: audit-resolve (npm)\"}\n",
     "timestamp": "2026-02-19T22:42:48.329Z"
+  },
+  {
+    "ecosystem": "npm",
+    "package": "fossa-cli",
+    "error": "Exit code 1: {\"error\":\"Error: Package not found: fossa-cli (npm)\"}\n",
+    "timestamp": "2026-02-19T22:57:25.211Z"
+  },
+  {
+    "ecosystem": "npm",
+    "package": "snyk-license",
+    "error": "Exit code 1: {\"error\":\"Error: Package not found: snyk-license (npm)\"}\n",
+    "timestamp": "2026-02-19T22:57:25.627Z"
+  },
+  {
+    "ecosystem": "npm",
+    "package": "compressed-size-action",
+    "error": "Exit code 1: {\"error\":\"Error: Package not found: compressed-size-action (npm)\"}\n",
+    "timestamp": "2026-02-19T22:57:42.800Z"
   }
 ]

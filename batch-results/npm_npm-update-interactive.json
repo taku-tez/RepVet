@@ -1,0 +1,21 @@
+{
+  "ecosystem": "npm",
+  "package": "npm-update-interactive",
+  "score": 95,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "apexskier"
+  ],
+  "lastCommitDate": "2025-11-16T05:00:58Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1872,
+  "diagnosedAt": "2026-02-19T22:57:19.832Z"
+}
