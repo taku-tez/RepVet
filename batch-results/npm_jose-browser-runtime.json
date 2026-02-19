@@ -1,0 +1,28 @@
+{
+  "ecosystem": "npm",
+  "package": "jose-browser-runtime",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "panva"
+  ],
+  "lastCommitDate": "2026-02-19T19:26:18Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 2,
+    "critical": 0,
+    "high": 0,
+    "recent": 0,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 2855,
+  "diagnosedAt": "2026-02-19T21:37:23.568Z"
+}

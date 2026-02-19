@@ -1,0 +1,32 @@
+{
+  "ecosystem": "npm",
+  "package": "openpgp",
+  "score": 90,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "4 high severity vulnerability(ies) in history",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "toberndo",
+    "tanx",
+    "twiss",
+    "bartbutler",
+    "larabr"
+  ],
+  "lastCommitDate": "2026-02-18T04:18:23Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 6,
+    "critical": 0,
+    "high": 4,
+    "recent": 1,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 1838,
+  "diagnosedAt": "2026-02-19T21:37:11.364Z"
+}

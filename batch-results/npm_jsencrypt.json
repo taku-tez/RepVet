@@ -1,21 +1,21 @@
 {
   "ecosystem": "npm",
-  "package": "tweetnacl",
-  "score": 97,
+  "package": "jsencrypt",
+  "score": 95,
   "riskLevel": "LOW",
   "deductions": [
     {
       "reason": "Single maintainer (bus factor risk)",
-      "points": 3,
-      "confidence": "low"
+      "points": 5,
+      "confidence": "high"
     }
   ],
   "maintainers": [
-    "dchest"
+    "travist"
   ],
-  "lastCommitDate": "2025-08-15T11:43:43Z",
+  "lastCommitDate": "2026-02-06T05:41:59Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
-  "executionTimeMs": 1650,
-  "diagnosedAt": "2026-02-19T21:37:07.413Z"
+  "executionTimeMs": 1904,
+  "diagnosedAt": "2026-02-19T21:37:15.549Z"
 }

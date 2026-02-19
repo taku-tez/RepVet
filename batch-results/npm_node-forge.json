@@ -1,6 +1,6 @@
 {
   "ecosystem": "npm",
-  "package": "next-auth",
+  "package": "node-forge",
   "score": 75,
   "riskLevel": "MEDIUM",
   "deductions": [
@@ -10,26 +10,26 @@
       "confidence": "high"
     },
     {
-      "reason": "3 high severity vulnerability(ies) in history",
+      "reason": "4 high severity vulnerability(ies) in history",
       "points": 10,
       "confidence": "high"
     }
   ],
   "maintainers": [
-    "balazsorban",
-    "himself_65",
-    "bekacru"
+    "davidlehn",
+    "msporny",
+    "dlongley"
   ],
-  "lastCommitDate": "2026-02-07T21:40:57Z",
+  "lastCommitDate": "2025-12-06T05:13:44Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
   "vulnerabilityStats": {
-    "total": 10,
+    "total": 11,
     "critical": 1,
-    "high": 3,
-    "recent": 1,
+    "high": 4,
+    "recent": 3,
     "hasUnfixed": false
   },
-  "executionTimeMs": 1994,
-  "diagnosedAt": "2026-02-19T21:37:47.359Z"
+  "executionTimeMs": 2279,
+  "diagnosedAt": "2026-02-19T21:37:13.644Z"
 }

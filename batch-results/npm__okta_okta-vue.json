@@ -1,0 +1,21 @@
+{
+  "ecosystem": "npm",
+  "package": "@okta/okta-vue",
+  "score": 95,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "oktauploader"
+  ],
+  "lastCommitDate": "2025-11-25T17:05:14Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2385,
+  "diagnosedAt": "2026-02-19T21:37:38.655Z"
+}

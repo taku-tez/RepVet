@@ -1,0 +1,17 @@
+{
+  "ecosystem": "npm",
+  "package": "@azure/msal-react",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "azuread",
+    "neagrawa",
+    "manrath"
+  ],
+  "lastCommitDate": "2026-02-19T20:59:51Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2262,
+  "diagnosedAt": "2026-02-19T21:37:42.982Z"
+}

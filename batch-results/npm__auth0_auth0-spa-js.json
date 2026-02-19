@@ -1,0 +1,27 @@
+{
+  "ecosystem": "npm",
+  "package": "@auth0/auth0-spa-js",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "auth0-oss",
+    "auth0npm",
+    "auth0brokkr",
+    "jessele",
+    "oktajeffoktajeff",
+    "bsmith-auth0",
+    "sanjay.manikandhan",
+    "josecarlos-chavez_atko",
+    "sgarcia-atko",
+    "roger.chan",
+    "maaantone",
+    "lewisbyrne-okta",
+    "tarunpreet.kaur"
+  ],
+  "lastCommitDate": "2026-02-19T14:11:59Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2184,
+  "diagnosedAt": "2026-02-19T21:37:25.752Z"
+}

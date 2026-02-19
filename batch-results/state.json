@@ -1,5 +1,5 @@
 {
-  "currentIndex": 1720,
+  "currentIndex": 1740,
   "totalPackages": 4957,
   "results": [
     {
@@ -41349,6 +41349,514 @@
       "hasMalwareHistory": false,
       "executionTimeMs": 2097,
       "diagnosedAt": "2026-02-19T21:32:48.057Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "tweetnacl",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "dchest"
+      ],
+      "lastCommitDate": "2025-08-15T11:43:43Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1650,
+      "diagnosedAt": "2026-02-19T21:37:07.413Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "libsodium-wrappers",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "jedisct1"
+      ],
+      "lastCommitDate": "2026-02-11T11:16:52Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2113,
+      "diagnosedAt": "2026-02-19T21:37:09.526Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "openpgp",
+      "score": 90,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "4 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "toberndo",
+        "tanx",
+        "twiss",
+        "bartbutler",
+        "larabr"
+      ],
+      "lastCommitDate": "2026-02-18T04:18:23Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 6,
+        "critical": 0,
+        "high": 4,
+        "recent": 1,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1838,
+      "diagnosedAt": "2026-02-19T21:37:11.364Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "node-forge",
+      "score": 75,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "1 critical vulnerability(ies) in history",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "4 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "davidlehn",
+        "msporny",
+        "dlongley"
+      ],
+      "lastCommitDate": "2025-12-06T05:13:44Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 11,
+        "critical": 1,
+        "high": 4,
+        "recent": 3,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 2279,
+      "diagnosedAt": "2026-02-19T21:37:13.644Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "jsencrypt",
+      "score": 95,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "travist"
+      ],
+      "lastCommitDate": "2026-02-06T05:41:59Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1904,
+      "diagnosedAt": "2026-02-19T21:37:15.549Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "keypair",
+      "score": 70,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 3 years ago (3 years)",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "juliangruber"
+      ],
+      "lastCommitDate": "2022-10-14T14:50:32Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 1,
+        "critical": 0,
+        "high": 1,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 2512,
+      "diagnosedAt": "2026-02-19T21:37:18.062Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "pem-jwk",
+      "score": 80,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 3 years ago (4 years)",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "dannycoates"
+      ],
+      "lastCommitDate": "2021-11-18T16:09:05Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2650,
+      "diagnosedAt": "2026-02-19T21:37:20.712Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "jose-browser-runtime",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "panva"
+      ],
+      "lastCommitDate": "2026-02-19T19:26:18Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 2,
+        "critical": 0,
+        "high": 0,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 2855,
+      "diagnosedAt": "2026-02-19T21:37:23.568Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@auth0/auth0-spa-js",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "auth0-oss",
+        "auth0npm",
+        "auth0brokkr",
+        "jessele",
+        "oktajeffoktajeff",
+        "bsmith-auth0",
+        "sanjay.manikandhan",
+        "josecarlos-chavez_atko",
+        "sgarcia-atko",
+        "roger.chan",
+        "maaantone",
+        "lewisbyrne-okta",
+        "tarunpreet.kaur"
+      ],
+      "lastCommitDate": "2026-02-19T14:11:59Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2184,
+      "diagnosedAt": "2026-02-19T21:37:25.752Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@auth0/auth0-react",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "auth0-oss",
+        "auth0npm",
+        "auth0brokkr",
+        "jessele",
+        "oktajeffoktajeff",
+        "bsmith-auth0",
+        "sanjay.manikandhan",
+        "josecarlos-chavez_atko",
+        "sgarcia-atko",
+        "roger.chan",
+        "maaantone",
+        "lewisbyrne-okta",
+        "tarunpreet.kaur"
+      ],
+      "lastCommitDate": "2026-02-17T12:25:00Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2164,
+      "diagnosedAt": "2026-02-19T21:37:27.916Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@auth0/nextjs-auth0",
+      "score": 90,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "2 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "auth0-oss",
+        "auth0npm",
+        "auth0brokkr",
+        "jessele",
+        "oktajeffoktajeff",
+        "bsmith-auth0",
+        "sanjay.manikandhan",
+        "josecarlos-chavez_atko",
+        "sgarcia-atko",
+        "roger.chan",
+        "maaantone",
+        "lewisbyrne-okta",
+        "tarunpreet.kaur"
+      ],
+      "lastCommitDate": "2026-02-19T18:22:11Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 6,
+        "critical": 0,
+        "high": 2,
+        "recent": 4,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 2874,
+      "diagnosedAt": "2026-02-19T21:37:30.791Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@okta/okta-auth-js",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "oktauploader"
+      ],
+      "lastCommitDate": "2026-02-18T18:54:49Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2591,
+      "diagnosedAt": "2026-02-19T21:37:33.383Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@okta/okta-react",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "oktauploader"
+      ],
+      "lastCommitDate": "2025-11-25T17:05:57Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2887,
+      "diagnosedAt": "2026-02-19T21:37:36.270Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@okta/okta-vue",
+      "score": 95,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "oktauploader"
+      ],
+      "lastCommitDate": "2025-11-25T17:05:14Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2385,
+      "diagnosedAt": "2026-02-19T21:37:38.655Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@azure/msal-browser",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "azuread",
+        "neagrawa",
+        "manrath"
+      ],
+      "lastCommitDate": "2026-02-19T20:59:51Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2065,
+      "diagnosedAt": "2026-02-19T21:37:40.720Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@azure/msal-react",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "azuread",
+        "neagrawa",
+        "manrath"
+      ],
+      "lastCommitDate": "2026-02-19T20:59:51Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2262,
+      "diagnosedAt": "2026-02-19T21:37:42.982Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@azure/msal-node",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "azuread",
+        "neagrawa",
+        "manrath"
+      ],
+      "lastCommitDate": "2026-02-19T20:59:51Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 1,
+        "critical": 0,
+        "high": 0,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 2383,
+      "diagnosedAt": "2026-02-19T21:37:45.365Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "next-auth",
+      "score": 75,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "1 critical vulnerability(ies) in history",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "3 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "balazsorban",
+        "himself_65",
+        "bekacru"
+      ],
+      "lastCommitDate": "2026-02-07T21:40:57Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 10,
+        "critical": 1,
+        "high": 3,
+        "recent": 1,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1994,
+      "diagnosedAt": "2026-02-19T21:37:47.359Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "auth.js",
+      "score": 95,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "mattmcsparran"
+      ],
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1783,
+      "diagnosedAt": "2026-02-19T21:37:49.142Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@auth/core",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "himself_65",
+        "bekacru"
+      ],
+      "lastCommitDate": "2026-02-07T21:40:57Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2285,
+      "diagnosedAt": "2026-02-19T21:37:51.428Z"
     }
   ],
   "errors": [

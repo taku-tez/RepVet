@@ -1,0 +1,27 @@
+{
+  "ecosystem": "npm",
+  "package": "@auth0/auth0-react",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "auth0-oss",
+    "auth0npm",
+    "auth0brokkr",
+    "jessele",
+    "oktajeffoktajeff",
+    "bsmith-auth0",
+    "sanjay.manikandhan",
+    "josecarlos-chavez_atko",
+    "sgarcia-atko",
+    "roger.chan",
+    "maaantone",
+    "lewisbyrne-okta",
+    "tarunpreet.kaur"
+  ],
+  "lastCommitDate": "2026-02-17T12:25:00Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2164,
+  "diagnosedAt": "2026-02-19T21:37:27.916Z"
+}

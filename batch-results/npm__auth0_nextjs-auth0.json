@@ -1,0 +1,40 @@
+{
+  "ecosystem": "npm",
+  "package": "@auth0/nextjs-auth0",
+  "score": 90,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "2 high severity vulnerability(ies) in history",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "auth0-oss",
+    "auth0npm",
+    "auth0brokkr",
+    "jessele",
+    "oktajeffoktajeff",
+    "bsmith-auth0",
+    "sanjay.manikandhan",
+    "josecarlos-chavez_atko",
+    "sgarcia-atko",
+    "roger.chan",
+    "maaantone",
+    "lewisbyrne-okta",
+    "tarunpreet.kaur"
+  ],
+  "lastCommitDate": "2026-02-19T18:22:11Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 6,
+    "critical": 0,
+    "high": 2,
+    "recent": 4,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 2874,
+  "diagnosedAt": "2026-02-19T21:37:30.791Z"
+}
