@@ -1,6 +1,6 @@
 {
   "ecosystem": "npm",
-  "package": "stripe",
+  "package": "@octokit/rest",
   "score": 97,
   "riskLevel": "LOW",
   "deductions": [
@@ -11,11 +11,11 @@
     }
   ],
   "maintainers": [
-    "stripe-bindings"
+    "octokitbot"
   ],
-  "lastCommitDate": "2026-02-18T23:06:30Z",
+  "lastCommitDate": "2026-02-14T03:57:27Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
-  "executionTimeMs": 17493,
-  "diagnosedAt": "2026-02-19T15:43:04.798Z"
+  "executionTimeMs": 2085,
+  "diagnosedAt": "2026-02-19T15:42:12.899Z"
 }

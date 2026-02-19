@@ -1,0 +1,43 @@
+{
+  "ecosystem": "npm",
+  "package": "git-promise",
+  "score": 62,
+  "riskLevel": "MEDIUM",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 3 years ago (4 years)",
+      "points": 15,
+      "confidence": "high"
+    },
+    {
+      "reason": "1 high severity vulnerability(ies) in history",
+      "points": 10,
+      "confidence": "high"
+    },
+    {
+      "reason": "Has unfixed vulnerabilities",
+      "points": 8,
+      "confidence": "medium"
+    }
+  ],
+  "maintainers": [
+    "piuccio"
+  ],
+  "lastCommitDate": "2022-05-26T08:14:26Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 1,
+    "critical": 0,
+    "high": 1,
+    "recent": 0,
+    "hasUnfixed": true
+  },
+  "executionTimeMs": 2579,
+  "diagnosedAt": "2026-02-19T15:42:09.099Z"
+}

@@ -1,0 +1,26 @@
+{
+  "ecosystem": "npm",
+  "package": "@gitbeaker/node",
+  "score": 87,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Package deprecated: Please use its successor @gitbeaker/rest",
+      "points": 10,
+      "confidence": "high"
+    },
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "jdalrymple"
+  ],
+  "lastCommitDate": "2026-01-30T23:46:33Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2612,
+  "diagnosedAt": "2026-02-19T15:42:24.960Z"
+}

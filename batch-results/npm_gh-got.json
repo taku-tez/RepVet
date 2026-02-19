@@ -1,21 +1,21 @@
 {
   "ecosystem": "npm",
-  "package": "stripe",
-  "score": 97,
+  "package": "gh-got",
+  "score": 95,
   "riskLevel": "LOW",
   "deductions": [
     {
       "reason": "Single maintainer (bus factor risk)",
-      "points": 3,
-      "confidence": "low"
+      "points": 5,
+      "confidence": "high"
     }
   ],
   "maintainers": [
-    "stripe-bindings"
+    "sindresorhus"
   ],
-  "lastCommitDate": "2026-02-18T23:06:30Z",
+  "lastCommitDate": "2025-11-02T05:12:19Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
-  "executionTimeMs": 17493,
-  "diagnosedAt": "2026-02-19T15:43:04.798Z"
+  "executionTimeMs": 1925,
+  "diagnosedAt": "2026-02-19T15:42:19.443Z"
 }

@@ -1,5 +1,5 @@
 {
-  "currentIndex": 600,
+  "currentIndex": 620,
   "totalPackages": 4957,
   "results": [
     {
@@ -14858,6 +14858,472 @@
       "hasMalwareHistory": false,
       "executionTimeMs": 2458,
       "diagnosedAt": "2026-02-19T15:37:53.995Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "git-promise",
+      "score": 62,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 3 years ago (4 years)",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        },
+        {
+          "reason": "Has unfixed vulnerabilities",
+          "points": 8,
+          "confidence": "medium"
+        }
+      ],
+      "maintainers": [
+        "piuccio"
+      ],
+      "lastCommitDate": "2022-05-26T08:14:26Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 1,
+        "critical": 0,
+        "high": 1,
+        "recent": 0,
+        "hasUnfixed": true
+      },
+      "executionTimeMs": 2579,
+      "diagnosedAt": "2026-02-19T15:42:09.099Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "github-api",
+      "score": 85,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Last commit over 3 years ago (3 years)",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "aendrew",
+        "michael",
+        "ingalls",
+        "clayreimann",
+        "aurelioderosa"
+      ],
+      "lastCommitDate": "2022-09-04T15:10:53Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1715,
+      "diagnosedAt": "2026-02-19T15:42:10.814Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@octokit/rest",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "octokitbot"
+      ],
+      "lastCommitDate": "2026-02-14T03:57:27Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2085,
+      "diagnosedAt": "2026-02-19T15:42:12.899Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@octokit/graphql",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "octokitbot"
+      ],
+      "lastCommitDate": "2026-02-12T10:55:03Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2573,
+      "diagnosedAt": "2026-02-19T15:42:15.473Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@octokit/auth-token",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "octokitbot"
+      ],
+      "lastCommitDate": "2026-02-12T11:49:28Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2044,
+      "diagnosedAt": "2026-02-19T15:42:17.518Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "gh-got",
+      "score": 95,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "sindresorhus"
+      ],
+      "lastCommitDate": "2025-11-02T05:12:19Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1925,
+      "diagnosedAt": "2026-02-19T15:42:19.443Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "gitlab",
+      "score": 90,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Package deprecated: This package has found a new home in the @gitbeaker organization. For the latest GitLab API library ...",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "dave-irvine",
+        "jdalrymple",
+        "m42am"
+      ],
+      "lastCommitDate": "2026-01-30T23:46:33Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2905,
+      "diagnosedAt": "2026-02-19T15:42:22.348Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@gitbeaker/node",
+      "score": 87,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Package deprecated: Please use its successor @gitbeaker/rest",
+          "points": 10,
+          "confidence": "high"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "jdalrymple"
+      ],
+      "lastCommitDate": "2026-01-30T23:46:33Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2612,
+      "diagnosedAt": "2026-02-19T15:42:24.960Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "bitbucket",
+      "score": 81,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer replaced at 1.0.0",
+          "points": 11,
+          "confidence": "medium"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "Last commit over 1 year ago (642 days)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "muniftanjim"
+      ],
+      "lastCommitDate": "2024-05-18T09:30:18Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2025,
+      "diagnosedAt": "2026-02-19T15:42:26.986Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "azure-devops-node-api",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "wgasior",
+        "vsonline",
+        "martinmrazik",
+        "bsmid",
+        "edergachev",
+        "tkasparek_ms",
+        "tramsing"
+      ],
+      "lastCommitDate": "2025-12-29T05:36:06Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2947,
+      "diagnosedAt": "2026-02-19T15:42:29.933Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "aws-sdk",
+      "score": 79,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Complete maintainer change in 2 days (2.103.0)",
+          "points": 11,
+          "confidence": "medium"
+        },
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "amzn-oss",
+        "aws-sdk-bot"
+      ],
+      "lastCommitDate": "2025-12-09T19:22:54Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 2,
+        "critical": 0,
+        "high": 1,
+        "recent": 1,
+        "hasUnfixed": true
+      },
+      "executionTimeMs": 2424,
+      "diagnosedAt": "2026-02-19T15:42:32.359Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@aws-sdk/client-s3",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "amzn-oss",
+        "aws-sdk-bot"
+      ],
+      "lastCommitDate": "2026-02-19T05:17:33Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2155,
+      "diagnosedAt": "2026-02-19T15:42:34.514Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@aws-sdk/client-lambda",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "amzn-oss",
+        "aws-sdk-bot"
+      ],
+      "lastCommitDate": "2026-02-19T05:17:33Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1871,
+      "diagnosedAt": "2026-02-19T15:42:36.385Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@aws-sdk/client-ec2",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "amzn-oss",
+        "aws-sdk-bot"
+      ],
+      "lastCommitDate": "2026-02-19T05:17:33Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2213,
+      "diagnosedAt": "2026-02-19T15:42:38.598Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@azure/storage-blob",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "xiaonli",
+        "vinjiang",
+        "jiachenfan",
+        "azure-sdk",
+        "microsoft1es"
+      ],
+      "lastCommitDate": "2026-02-19T15:17:15Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2164,
+      "diagnosedAt": "2026-02-19T15:42:40.762Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@azure/arm-resources",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "amarzavery",
+        "vladbarosan",
+        "veronicagg",
+        "azure-sdk",
+        "microsoft1es"
+      ],
+      "lastCommitDate": "2026-02-19T15:17:15Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2569,
+      "diagnosedAt": "2026-02-19T15:42:43.332Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@google-cloud/storage",
+      "score": 86,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Complete maintainer change in 29 days (1.1.1)",
+          "points": 11,
+          "confidence": "medium"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "google-wombot"
+      ],
+      "lastCommitDate": "2026-02-19T07:55:32Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1790,
+      "diagnosedAt": "2026-02-19T15:42:45.122Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "firebase-admin",
+      "score": 89,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer replaced at 4.0.0",
+          "points": 11,
+          "confidence": "medium"
+        }
+      ],
+      "maintainers": [
+        "firebase-ops",
+        "feiyang.chen",
+        "google-wombot",
+        "chholland"
+      ],
+      "lastCommitDate": "2026-02-19T05:15:30Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2183,
+      "diagnosedAt": "2026-02-19T15:42:47.305Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "stripe",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "stripe-bindings"
+      ],
+      "lastCommitDate": "2026-02-18T23:06:30Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 17493,
+      "diagnosedAt": "2026-02-19T15:43:04.798Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@stripe/stripe-js",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "rado-stripe",
+        "bmathews-stripe",
+        "cbala-stripe",
+        "dodgez-stripe",
+        "bdaily-stripe",
+        "rvolyar-stripe",
+        "tjliu-stripe",
+        "alic-stripe"
+      ],
+      "lastCommitDate": "2026-02-18T21:14:37Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2145,
+      "diagnosedAt": "2026-02-19T15:43:06.943Z"
     }
   ],
   "errors": [

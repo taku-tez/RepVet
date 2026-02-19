@@ -1,0 +1,21 @@
+{
+  "ecosystem": "npm",
+  "package": "azure-devops-node-api",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "wgasior",
+    "vsonline",
+    "martinmrazik",
+    "bsmid",
+    "edergachev",
+    "tkasparek_ms",
+    "tramsing"
+  ],
+  "lastCommitDate": "2025-12-29T05:36:06Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2947,
+  "diagnosedAt": "2026-02-19T15:42:29.933Z"
+}

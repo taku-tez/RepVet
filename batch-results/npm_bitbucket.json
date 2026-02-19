@@ -1,0 +1,31 @@
+{
+  "ecosystem": "npm",
+  "package": "bitbucket",
+  "score": 81,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer replaced at 1.0.0",
+      "points": 11,
+      "confidence": "medium"
+    },
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    },
+    {
+      "reason": "Last commit over 1 year ago (642 days)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "muniftanjim"
+  ],
+  "lastCommitDate": "2024-05-18T09:30:18Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2025,
+  "diagnosedAt": "2026-02-19T15:42:26.986Z"
+}

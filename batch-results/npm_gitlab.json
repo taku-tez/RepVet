@@ -1,0 +1,23 @@
+{
+  "ecosystem": "npm",
+  "package": "gitlab",
+  "score": 90,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Package deprecated: This package has found a new home in the @gitbeaker organization. For the latest GitLab API library ...",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "dave-irvine",
+    "jdalrymple",
+    "m42am"
+  ],
+  "lastCommitDate": "2026-01-30T23:46:33Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2905,
+  "diagnosedAt": "2026-02-19T15:42:22.348Z"
+}

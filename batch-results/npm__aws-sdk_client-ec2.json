@@ -1,6 +1,6 @@
 {
   "ecosystem": "npm",
-  "package": "@aws-sdk/client-s3",
+  "package": "@aws-sdk/client-ec2",
   "score": 100,
   "riskLevel": "LOW",
   "deductions": [],
@@ -11,6 +11,6 @@
   "lastCommitDate": "2026-02-19T05:17:33Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
-  "executionTimeMs": 2155,
-  "diagnosedAt": "2026-02-19T15:42:34.514Z"
+  "executionTimeMs": 2213,
+  "diagnosedAt": "2026-02-19T15:42:38.598Z"
 }
