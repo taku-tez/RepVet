@@ -1,18 +1,18 @@
 {
   "ecosystem": "npm",
-  "package": "axe-core",
+  "package": "@axe-core/webdriverjs",
   "score": 100,
   "riskLevel": "LOW",
   "deductions": [],
   "maintainers": [
-    "dylanb",
-    "wilcofiers",
     "dqlabs",
+    "wilcofiers",
+    "dylanb",
     "npmdeque"
   ],
-  "lastCommitDate": "2026-02-19T18:12:25Z",
+  "lastCommitDate": "2026-02-17T00:01:46Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
-  "executionTimeMs": 2465,
-  "diagnosedAt": "2026-02-19T22:27:38.494Z"
+  "executionTimeMs": 1735,
+  "diagnosedAt": "2026-02-19T22:27:42.652Z"
 }

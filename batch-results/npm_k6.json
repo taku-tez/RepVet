@@ -1,0 +1,21 @@
+{
+  "ecosystem": "npm",
+  "package": "k6",
+  "score": 95,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "liclac"
+  ],
+  "lastCommitDate": "2026-02-19T21:03:32Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2087,
+  "diagnosedAt": "2026-02-19T22:27:22.481Z"
+}

@@ -1,0 +1,16 @@
+{
+  "ecosystem": "npm",
+  "package": "artillery",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "hhvhhv",
+    "shoreditch-ops"
+  ],
+  "lastCommitDate": "2026-02-16T15:19:09Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1733,
+  "diagnosedAt": "2026-02-19T22:27:24.215Z"
+}

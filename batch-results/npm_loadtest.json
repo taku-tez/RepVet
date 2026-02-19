@@ -1,0 +1,21 @@
+{
+  "ecosystem": "npm",
+  "package": "loadtest",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "alexfernandez"
+  ],
+  "lastCommitDate": "2026-01-13T23:29:47Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1579,
+  "diagnosedAt": "2026-02-19T22:27:28.367Z"
+}

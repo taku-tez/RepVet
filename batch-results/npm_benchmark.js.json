@@ -1,0 +1,36 @@
+{
+  "ecosystem": "npm",
+  "package": "benchmark.js",
+  "score": 69,
+  "riskLevel": "MEDIUM",
+  "deductions": [
+    {
+      "reason": "Package deprecated: Package no longer supported. Contact support@npmjs.com for more info.",
+      "points": 10,
+      "confidence": "high"
+    },
+    {
+      "reason": "Complete maintainer change in 1 days (2.0.0)",
+      "points": 11,
+      "confidence": "medium"
+    },
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 1 year ago (717 days)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "npm"
+  ],
+  "lastCommitDate": "2024-03-04T15:30:44Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1951,
+  "diagnosedAt": "2026-02-19T22:27:34.379Z"
+}
