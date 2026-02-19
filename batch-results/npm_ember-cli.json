@@ -1,0 +1,16 @@
+{
+  "ecosystem": "npm",
+  "package": "ember-cli",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "real_ate",
+    "katiegengler"
+  ],
+  "lastCommitDate": "2026-02-17T21:54:11Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1849,
+  "diagnosedAt": "2026-02-19T11:10:47.817Z"
+}

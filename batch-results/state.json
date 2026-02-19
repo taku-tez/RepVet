@@ -1,5 +1,5 @@
 {
-  "currentIndex": 20,
+  "currentIndex": 30,
   "totalPackages": 3818,
   "results": [
     {
@@ -512,6 +512,321 @@
       "hasMalwareHistory": false,
       "executionTimeMs": 2155,
       "diagnosedAt": "2026-02-19T10:57:13.133Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "next",
+      "score": 87,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "2 critical vulnerability(ies) in history",
+          "points": 8,
+          "confidence": "low"
+        },
+        {
+          "reason": "16 vulnerabilities in the past year",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "vercel-release-bot",
+        "zeit-bot"
+      ],
+      "lastCommitDate": "2026-02-19T11:07:46Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 36,
+        "critical": 2,
+        "high": 14,
+        "recent": 16,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 2996,
+      "diagnosedAt": "2026-02-19T11:10:36.662Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "nuxt",
+      "score": 72,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "2 critical vulnerability(ies) in history",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "nuxtbot"
+      ],
+      "lastCommitDate": "2026-02-18T19:42:55Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 5,
+        "critical": 2,
+        "high": 1,
+        "recent": 2,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1932,
+      "diagnosedAt": "2026-02-19T11:10:38.594Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "gatsby",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "pieh",
+        "kathmbeck",
+        "serhalp-netlify",
+        "mlgualtieri-gatsby",
+        "fk",
+        "tylerbarnes",
+        "daniellewgatsby"
+      ],
+      "lastCommitDate": "2026-02-18T22:25:44Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 1,
+        "critical": 0,
+        "high": 0,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 3075,
+      "diagnosedAt": "2026-02-19T11:10:41.670Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "svelte",
+      "score": 90,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "rich_harris",
+        "conduitry",
+        "svelte-admin"
+      ],
+      "lastCommitDate": "2026-02-19T09:06:24Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 4,
+        "critical": 0,
+        "high": 1,
+        "recent": 2,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 2161,
+      "diagnosedAt": "2026-02-19T11:10:43.831Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "angular",
+      "score": 46,
+      "riskLevel": "HIGH",
+      "deductions": [
+        {
+          "reason": "Package deprecated: For the actively supported Angular, see https://www.npmjs.com/package/@angular/core. AngularJS suppo...",
+          "points": 10,
+          "confidence": "high"
+        },
+        {
+          "reason": "Single maintainer replaced at 1.0.0",
+          "points": 11,
+          "confidence": "medium"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "Repository is archived (no longer maintained)",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 1 year ago (677 days)",
+          "points": 5,
+          "confidence": "high"
+        },
+        {
+          "reason": "2 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "angular"
+      ],
+      "lastCommitDate": "2024-04-12T17:43:16Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 14,
+        "critical": 0,
+        "high": 2,
+        "recent": 1,
+        "hasUnfixed": true
+      },
+      "executionTimeMs": 2137,
+      "diagnosedAt": "2026-02-19T11:10:45.968Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "ember-cli",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "real_ate",
+        "katiegengler"
+      ],
+      "lastCommitDate": "2026-02-17T21:54:11Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1849,
+      "diagnosedAt": "2026-02-19T11:10:47.817Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "backbone",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "jashkenas",
+        "braddunbar",
+        "jridgewell",
+        "jgonggrijp"
+      ],
+      "lastCommitDate": "2025-04-01T11:14:31Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 1,
+        "critical": 0,
+        "high": 0,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1771,
+      "diagnosedAt": "2026-02-19T11:10:49.588Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "underscore",
+      "score": 85,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "1 critical vulnerability(ies) in history",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "jashkenas",
+        "jgonggrijp"
+      ],
+      "lastCommitDate": "2026-01-28T22:43:42Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 1,
+        "critical": 1,
+        "high": 0,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 2173,
+      "diagnosedAt": "2026-02-19T11:10:51.761Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "jquery",
+      "score": 90,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "gibson042",
+        "dmethvin",
+        "timmywil",
+        "mgol",
+        "openjsfoundation"
+      ],
+      "lastCommitDate": "2026-02-14T22:05:11Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 8,
+        "critical": 0,
+        "high": 1,
+        "recent": 0,
+        "hasUnfixed": true
+      },
+      "executionTimeMs": 1805,
+      "diagnosedAt": "2026-02-19T11:10:53.566Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "bootstrap",
+      "score": 89,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer replaced at 3.1.1",
+          "points": 11,
+          "confidence": "medium"
+        }
+      ],
+      "maintainers": [
+        "bootstrap-admin",
+        "mdo",
+        "xhmikosr"
+      ],
+      "lastCommitDate": "2026-02-17T10:06:54Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 9,
+        "critical": 0,
+        "high": 0,
+        "recent": 1,
+        "hasUnfixed": true
+      },
+      "executionTimeMs": 2014,
+      "diagnosedAt": "2026-02-19T11:10:55.581Z"
     }
   ],
   "errors": [],

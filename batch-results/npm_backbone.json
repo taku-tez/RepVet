@@ -1,0 +1,25 @@
+{
+  "ecosystem": "npm",
+  "package": "backbone",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "jashkenas",
+    "braddunbar",
+    "jridgewell",
+    "jgonggrijp"
+  ],
+  "lastCommitDate": "2025-04-01T11:14:31Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 1,
+    "critical": 0,
+    "high": 0,
+    "recent": 0,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 1771,
+  "diagnosedAt": "2026-02-19T11:10:49.588Z"
+}

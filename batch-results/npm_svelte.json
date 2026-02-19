@@ -1,0 +1,30 @@
+{
+  "ecosystem": "npm",
+  "package": "svelte",
+  "score": 90,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "1 high severity vulnerability(ies) in history",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "rich_harris",
+    "conduitry",
+    "svelte-admin"
+  ],
+  "lastCommitDate": "2026-02-19T09:06:24Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 4,
+    "critical": 0,
+    "high": 1,
+    "recent": 2,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 2161,
+  "diagnosedAt": "2026-02-19T11:10:43.831Z"
+}

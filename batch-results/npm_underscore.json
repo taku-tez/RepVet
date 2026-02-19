@@ -1,0 +1,29 @@
+{
+  "ecosystem": "npm",
+  "package": "underscore",
+  "score": 85,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "1 critical vulnerability(ies) in history",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "jashkenas",
+    "jgonggrijp"
+  ],
+  "lastCommitDate": "2026-01-28T22:43:42Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 1,
+    "critical": 1,
+    "high": 0,
+    "recent": 0,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 2173,
+  "diagnosedAt": "2026-02-19T11:10:51.761Z"
+}

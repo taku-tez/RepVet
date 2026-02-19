@@ -1,0 +1,32 @@
+{
+  "ecosystem": "npm",
+  "package": "jquery",
+  "score": 90,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "1 high severity vulnerability(ies) in history",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "gibson042",
+    "dmethvin",
+    "timmywil",
+    "mgol",
+    "openjsfoundation"
+  ],
+  "lastCommitDate": "2026-02-14T22:05:11Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 8,
+    "critical": 0,
+    "high": 1,
+    "recent": 0,
+    "hasUnfixed": true
+  },
+  "executionTimeMs": 1805,
+  "diagnosedAt": "2026-02-19T11:10:53.566Z"
+}

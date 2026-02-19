@@ -1,0 +1,53 @@
+{
+  "ecosystem": "npm",
+  "package": "angular",
+  "score": 46,
+  "riskLevel": "HIGH",
+  "deductions": [
+    {
+      "reason": "Package deprecated: For the actively supported Angular, see https://www.npmjs.com/package/@angular/core. AngularJS suppo...",
+      "points": 10,
+      "confidence": "high"
+    },
+    {
+      "reason": "Single maintainer replaced at 1.0.0",
+      "points": 11,
+      "confidence": "medium"
+    },
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    },
+    {
+      "reason": "Repository is archived (no longer maintained)",
+      "points": 15,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 1 year ago (677 days)",
+      "points": 5,
+      "confidence": "high"
+    },
+    {
+      "reason": "2 high severity vulnerability(ies) in history",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "angular"
+  ],
+  "lastCommitDate": "2024-04-12T17:43:16Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 14,
+    "critical": 0,
+    "high": 2,
+    "recent": 1,
+    "hasUnfixed": true
+  },
+  "executionTimeMs": 2137,
+  "diagnosedAt": "2026-02-19T11:10:45.968Z"
+}

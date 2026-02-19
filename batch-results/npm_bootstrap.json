@@ -1,0 +1,30 @@
+{
+  "ecosystem": "npm",
+  "package": "bootstrap",
+  "score": 89,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer replaced at 3.1.1",
+      "points": 11,
+      "confidence": "medium"
+    }
+  ],
+  "maintainers": [
+    "bootstrap-admin",
+    "mdo",
+    "xhmikosr"
+  ],
+  "lastCommitDate": "2026-02-17T10:06:54Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 9,
+    "critical": 0,
+    "high": 0,
+    "recent": 1,
+    "hasUnfixed": true
+  },
+  "executionTimeMs": 2014,
+  "diagnosedAt": "2026-02-19T11:10:55.581Z"
+}

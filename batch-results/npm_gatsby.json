@@ -1,0 +1,28 @@
+{
+  "ecosystem": "npm",
+  "package": "gatsby",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "pieh",
+    "kathmbeck",
+    "serhalp-netlify",
+    "mlgualtieri-gatsby",
+    "fk",
+    "tylerbarnes",
+    "daniellewgatsby"
+  ],
+  "lastCommitDate": "2026-02-18T22:25:44Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 1,
+    "critical": 0,
+    "high": 0,
+    "recent": 0,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 3075,
+  "diagnosedAt": "2026-02-19T11:10:41.670Z"
+}
