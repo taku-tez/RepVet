@@ -1,21 +1,21 @@
 {
   "ecosystem": "npm",
-  "package": "rimraf",
-  "score": 97,
+  "package": "trash",
+  "score": 95,
   "riskLevel": "LOW",
   "deductions": [
     {
       "reason": "Single maintainer (bus factor risk)",
-      "points": 3,
-      "confidence": "low"
+      "points": 5,
+      "confidence": "high"
     }
   ],
   "maintainers": [
-    "isaacs"
+    "sindresorhus"
   ],
-  "lastCommitDate": "2026-02-16T01:01:56Z",
+  "lastCommitDate": "2026-01-25T17:01:28Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
-  "executionTimeMs": 1785,
-  "diagnosedAt": "2026-02-19T15:12:39.504Z"
+  "executionTimeMs": 1891,
+  "diagnosedAt": "2026-02-19T15:12:43.077Z"
 }

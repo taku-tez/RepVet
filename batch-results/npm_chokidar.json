@@ -1,6 +1,6 @@
 {
   "ecosystem": "npm",
-  "package": "rimraf",
+  "package": "chokidar",
   "score": 97,
   "riskLevel": "LOW",
   "deductions": [
@@ -11,11 +11,11 @@
     }
   ],
   "maintainers": [
-    "isaacs"
+    "paulmillr"
   ],
-  "lastCommitDate": "2026-02-16T01:01:56Z",
+  "lastCommitDate": "2025-12-11T19:26:25Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
-  "executionTimeMs": 1785,
-  "diagnosedAt": "2026-02-19T15:12:39.504Z"
+  "executionTimeMs": 2368,
+  "diagnosedAt": "2026-02-19T15:12:12.225Z"
 }

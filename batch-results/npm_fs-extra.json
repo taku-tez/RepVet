@@ -1,0 +1,23 @@
+{
+  "ecosystem": "npm",
+  "package": "fs-extra",
+  "score": 89,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Complete maintainer change in 7 days (0.16.0)",
+      "points": 11,
+      "confidence": "medium"
+    }
+  ],
+  "maintainers": [
+    "jprichardson",
+    "ryanzim",
+    "manidlou"
+  ],
+  "lastCommitDate": "2025-12-18T20:21:02Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1648,
+  "diagnosedAt": "2026-02-19T15:12:48.973Z"
+}

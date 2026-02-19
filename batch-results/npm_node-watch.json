@@ -1,0 +1,16 @@
+{
+  "ecosystem": "npm",
+  "package": "node-watch",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "yuanchuan",
+    "intervalia"
+  ],
+  "lastCommitDate": "2026-01-14T06:16:51Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1781,
+  "diagnosedAt": "2026-02-19T15:12:17.748Z"
+}

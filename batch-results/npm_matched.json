@@ -1,0 +1,23 @@
+{
+  "ecosystem": "npm",
+  "package": "matched",
+  "score": 85,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Last commit over 3 years ago (5 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "trysound",
+    "jonschlinkert",
+    "doowb"
+  ],
+  "lastCommitDate": "2020-11-02T15:15:11Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2191,
+  "diagnosedAt": "2026-02-19T15:12:35.558Z"
+}

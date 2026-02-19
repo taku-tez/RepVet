@@ -1,0 +1,19 @@
+{
+  "ecosystem": "npm",
+  "package": "watchpack",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "15000621931",
+    "ev1stensberg",
+    "__hai",
+    "evilebottnawi",
+    "sokra"
+  ],
+  "lastCommitDate": "2026-01-23T14:32:49Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1925,
+  "diagnosedAt": "2026-02-19T15:12:14.150Z"
+}

@@ -1,0 +1,23 @@
+{
+  "ecosystem": "npm",
+  "package": "watch",
+  "score": 85,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Last commit over 3 years ago (3 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "levithomason",
+    "finnpauls",
+    "mikeal"
+  ],
+  "lastCommitDate": "2023-01-22T07:55:38Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1706,
+  "diagnosedAt": "2026-02-19T15:12:24.553Z"
+}

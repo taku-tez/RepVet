@@ -1,6 +1,6 @@
 {
   "ecosystem": "npm",
-  "package": "rimraf",
+  "package": "del",
   "score": 97,
   "riskLevel": "LOW",
   "deductions": [
@@ -11,11 +11,11 @@
     }
   ],
   "maintainers": [
-    "isaacs"
+    "sindresorhus"
   ],
-  "lastCommitDate": "2026-02-16T01:01:56Z",
+  "lastCommitDate": "2025-09-18T14:47:10Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
-  "executionTimeMs": 1785,
-  "diagnosedAt": "2026-02-19T15:12:39.504Z"
+  "executionTimeMs": 1682,
+  "diagnosedAt": "2026-02-19T15:12:41.186Z"
 }

@@ -1,6 +1,6 @@
 {
   "ecosystem": "npm",
-  "package": "glob",
+  "package": "multimatch",
   "score": 87,
   "riskLevel": "LOW",
   "deductions": [
@@ -10,24 +10,17 @@
       "confidence": "low"
     },
     {
-      "reason": "1 high severity vulnerability(ies) in history",
+      "reason": "Last commit over 2 years ago (2 years)",
       "points": 10,
       "confidence": "high"
     }
   ],
   "maintainers": [
-    "isaacs"
+    "sindresorhus"
   ],
-  "lastCommitDate": "2026-02-18T22:12:33Z",
+  "lastCommitDate": "2023-10-27T17:17:25Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
-  "vulnerabilityStats": {
-    "total": 1,
-    "critical": 0,
-    "high": 1,
-    "recent": 1,
-    "hasUnfixed": false
-  },
-  "executionTimeMs": 1797,
-  "diagnosedAt": "2026-02-19T15:12:26.350Z"
+  "executionTimeMs": 2160,
+  "diagnosedAt": "2026-02-19T15:12:37.718Z"
 }

@@ -1,0 +1,23 @@
+{
+  "ecosystem": "npm",
+  "package": "gaze",
+  "score": 85,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Last commit over 3 years ago (7 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "alexgorbatchev",
+    "joshperry",
+    "shama"
+  ],
+  "lastCommitDate": "2019-07-11T12:46:29Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2157,
+  "diagnosedAt": "2026-02-19T15:12:19.905Z"
+}
