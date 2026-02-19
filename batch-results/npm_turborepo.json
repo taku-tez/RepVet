@@ -1,0 +1,17 @@
+{
+  "ecosystem": "npm",
+  "package": "turborepo",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "jaredpalmer",
+    "matt.straka",
+    "anthonyshew",
+    "turbobot"
+  ],
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1564,
+  "diagnosedAt": "2026-02-19T14:57:22.326Z"
+}

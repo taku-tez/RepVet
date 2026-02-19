@@ -1,0 +1,17 @@
+{
+  "ecosystem": "npm",
+  "package": "@changesets/cli",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "noviny",
+    "changesets-release-bot",
+    "emmatown",
+    "andarist"
+  ],
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1668,
+  "diagnosedAt": "2026-02-19T14:57:33.210Z"
+}

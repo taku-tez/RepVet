@@ -1,0 +1,16 @@
+{
+  "ecosystem": "npm",
+  "package": "multi-semantic-release",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "dhoulb",
+    "antongolub"
+  ],
+  "lastCommitDate": "2026-02-03T19:47:37Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2096,
+  "diagnosedAt": "2026-02-19T14:57:39.447Z"
+}

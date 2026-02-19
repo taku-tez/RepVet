@@ -1,0 +1,20 @@
+{
+  "ecosystem": "npm",
+  "package": "pnpm-workspace",
+  "score": 95,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "liupengfei886"
+  ],
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1643,
+  "diagnosedAt": "2026-02-19T14:57:27.630Z"
+}

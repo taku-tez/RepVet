@@ -1,0 +1,23 @@
+{
+  "ecosystem": "npm",
+  "package": "yeoman-generator",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "sboudrias",
+    "mischah",
+    "ulisesgascon",
+    "mshima",
+    "joshuakgoldberg",
+    "paulirish",
+    "eddiemonge",
+    "sindresorhus",
+    "addyosmani"
+  ],
+  "lastCommitDate": "2026-02-16T07:29:57Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 3245,
+  "diagnosedAt": "2026-02-19T14:57:09.393Z"
+}

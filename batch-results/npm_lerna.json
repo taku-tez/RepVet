@@ -1,0 +1,16 @@
+{
+  "ecosystem": "npm",
+  "package": "lerna",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "nrwlowner",
+    "jameshenry"
+  ],
+  "lastCommitDate": "2026-02-10T20:35:00Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1719,
+  "diagnosedAt": "2026-02-19T14:57:24.045Z"
+}

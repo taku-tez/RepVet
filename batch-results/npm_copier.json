@@ -1,0 +1,36 @@
+{
+  "ecosystem": "npm",
+  "package": "copier",
+  "score": 55,
+  "riskLevel": "HIGH",
+  "deductions": [
+    {
+      "reason": "Package deprecated: Use `object-assign` instead.",
+      "points": 10,
+      "confidence": "high"
+    },
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    },
+    {
+      "reason": "Repository is archived (no longer maintained)",
+      "points": 15,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 3 years ago (12 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "shannonmoeller"
+  ],
+  "lastCommitDate": "2013-12-05T15:45:27Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2430,
+  "diagnosedAt": "2026-02-19T14:57:16.741Z"
+}

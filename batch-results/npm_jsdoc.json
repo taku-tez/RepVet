@@ -1,0 +1,21 @@
+{
+  "ecosystem": "npm",
+  "package": "jsdoc",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "hegemonic"
+  ],
+  "lastCommitDate": "2026-02-19T02:28:20Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2160,
+  "diagnosedAt": "2026-02-19T14:57:43.435Z"
+}

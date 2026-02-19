@@ -1,7 +1,7 @@
 {
   "ecosystem": "npm",
-  "package": "changesets",
-  "score": 80,
+  "package": "esdoc",
+  "score": 90,
   "riskLevel": "LOW",
   "deductions": [
     {
@@ -10,17 +10,17 @@
       "confidence": "high"
     },
     {
-      "reason": "Last commit over 3 years ago (10 years)",
-      "points": 15,
+      "reason": "Last commit over 1 year ago (554 days)",
+      "points": 5,
       "confidence": "high"
     }
   ],
   "maintainers": [
-    "marcelklehr"
+    "h13i32maru"
   ],
-  "lastCommitDate": "2016-05-29T23:18:18Z",
+  "lastCommitDate": "2024-08-14T11:10:32Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
-  "executionTimeMs": 2361,
-  "diagnosedAt": "2026-02-19T14:57:31.542Z"
+  "executionTimeMs": 2650,
+  "diagnosedAt": "2026-02-19T14:57:48.013Z"
 }

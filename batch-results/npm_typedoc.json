@@ -1,0 +1,19 @@
+{
+  "ecosystem": "npm",
+  "package": "typedoc",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "blakeembrey",
+    "sebastian-lenz",
+    "aciccarello",
+    "gerrit0",
+    "typedoc-bot"
+  ],
+  "lastCommitDate": "2026-02-13T18:12:45Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1828,
+  "diagnosedAt": "2026-02-19T14:57:41.275Z"
+}

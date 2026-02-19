@@ -1,7 +1,7 @@
 {
   "ecosystem": "npm",
-  "package": "changesets",
-  "score": 80,
+  "package": "cookiecutter",
+  "score": 90,
   "riskLevel": "LOW",
   "deductions": [
     {
@@ -10,17 +10,17 @@
       "confidence": "high"
     },
     {
-      "reason": "Last commit over 3 years ago (10 years)",
-      "points": 15,
+      "reason": "Last commit over 1 year ago (617 days)",
+      "points": 5,
       "confidence": "high"
     }
   ],
   "maintainers": [
-    "marcelklehr"
+    "mattvagni"
   ],
-  "lastCommitDate": "2016-05-29T23:18:18Z",
+  "lastCommitDate": "2024-06-11T19:26:39Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
-  "executionTimeMs": 2361,
-  "diagnosedAt": "2026-02-19T14:57:31.542Z"
+  "executionTimeMs": 1983,
+  "diagnosedAt": "2026-02-19T14:57:14.310Z"
 }

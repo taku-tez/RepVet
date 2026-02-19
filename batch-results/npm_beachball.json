@@ -1,0 +1,19 @@
+{
+  "ecosystem": "npm",
+  "package": "beachball",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "microsoft1es",
+    "microsoft-oss-releases",
+    "kenotron",
+    "kenotron_msft",
+    "ecraig12345_msft"
+  ],
+  "lastCommitDate": "2026-02-18T10:15:43Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2560,
+  "diagnosedAt": "2026-02-19T14:57:35.770Z"
+}

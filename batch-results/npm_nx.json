@@ -1,0 +1,35 @@
+{
+  "ecosystem": "npm",
+  "package": "nx",
+  "score": 85,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "1 critical vulnerability(ies) in history",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "jack-nrwl",
+    "meeroslav",
+    "nrwlowner",
+    "nrwl-jason",
+    "juristr",
+    "altan-nrwl",
+    "jameshenry",
+    "vsavkin"
+  ],
+  "lastCommitDate": "2026-02-19T14:52:58Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 2,
+    "critical": 1,
+    "high": 0,
+    "recent": 2,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 2154,
+  "diagnosedAt": "2026-02-19T14:57:18.895Z"
+}

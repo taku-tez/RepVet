@@ -1,7 +1,7 @@
 {
   "ecosystem": "npm",
-  "package": "changesets",
-  "score": 80,
+  "package": "rush",
+  "score": 90,
   "riskLevel": "LOW",
   "deductions": [
     {
@@ -10,17 +10,17 @@
       "confidence": "high"
     },
     {
-      "reason": "Last commit over 3 years ago (10 years)",
-      "points": 15,
+      "reason": "Last commit over 1 year ago (724 days)",
+      "points": 5,
       "confidence": "high"
     }
   ],
   "maintainers": [
-    "marcelklehr"
+    "scaryzet"
   ],
-  "lastCommitDate": "2016-05-29T23:18:18Z",
+  "lastCommitDate": "2024-02-26T05:48:25Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
-  "executionTimeMs": 2361,
-  "diagnosedAt": "2026-02-19T14:57:31.542Z"
+  "executionTimeMs": 1941,
+  "diagnosedAt": "2026-02-19T14:57:25.986Z"
 }

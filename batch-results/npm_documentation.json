@@ -1,0 +1,19 @@
+{
+  "ecosystem": "npm",
+  "package": "documentation",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "mourner",
+    "jfirebaugh",
+    "tmcw",
+    "anandthakker",
+    "birkskyum"
+  ],
+  "lastCommitDate": "2025-04-15T18:50:26Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1928,
+  "diagnosedAt": "2026-02-19T14:57:45.363Z"
+}

@@ -1,0 +1,22 @@
+{
+  "ecosystem": "npm",
+  "package": "scaffold",
+  "score": 85,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Last commit over 3 years ago (10 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "doowb",
+    "jonschlinkert"
+  ],
+  "lastCommitDate": "2016-06-30T22:10:29Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2933,
+  "diagnosedAt": "2026-02-19T14:57:12.326Z"
+}

@@ -1,0 +1,27 @@
+{
+  "ecosystem": "npm",
+  "package": "@nrwl/cli",
+  "score": 89,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Complete maintainer change in 0 days (13.4.0-beta.1)",
+      "points": 11,
+      "confidence": "medium"
+    }
+  ],
+  "maintainers": [
+    "jack-nrwl",
+    "meeroslav",
+    "nrwlowner",
+    "nrwl-jason",
+    "juristr",
+    "altan-nrwl",
+    "jameshenry"
+  ],
+  "lastCommitDate": "2026-02-19T14:52:58Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1866,
+  "diagnosedAt": "2026-02-19T14:57:20.762Z"
+}
