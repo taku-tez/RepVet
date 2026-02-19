@@ -388,5 +388,11 @@
     "package": "deno_lint",
     "error": "Exit code 1: {\"error\":\"Error: Package not found: deno_lint (npm)\"}\n",
     "timestamp": "2026-02-19T20:02:03.022Z"
+  },
+  {
+    "ecosystem": "npm",
+    "package": "@joi/time",
+    "error": "Exit code 1: {\"error\":\"Error: Package not found: @joi/time (npm)\"}\n",
+    "timestamp": "2026-02-19T20:07:35.212Z"
   }
 ]

@@ -1,26 +1,21 @@
 {
   "ecosystem": "npm",
-  "package": "io-ts",
-  "score": 92,
+  "package": "fp-ts",
+  "score": 97,
   "riskLevel": "LOW",
   "deductions": [
     {
       "reason": "Single maintainer (bus factor risk)",
       "points": 3,
       "confidence": "low"
-    },
-    {
-      "reason": "Last commit over 1 year ago (436 days)",
-      "points": 5,
-      "confidence": "high"
     }
   ],
   "maintainers": [
     "gcanti"
   ],
-  "lastCommitDate": "2024-12-10T11:53:31Z",
+  "lastCommitDate": "2025-08-18T13:54:44Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
-  "executionTimeMs": 1644,
-  "diagnosedAt": "2026-02-19T20:07:16.560Z"
+  "executionTimeMs": 1646,
+  "diagnosedAt": "2026-02-19T20:07:18.207Z"
 }

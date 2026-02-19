@@ -1,5 +1,5 @@
 {
-  "currentIndex": 1440,
+  "currentIndex": 1460,
   "totalPackages": 4957,
   "results": [
     {
@@ -34579,6 +34579,459 @@
       "hasMalwareHistory": false,
       "executionTimeMs": 2055,
       "diagnosedAt": "2026-02-19T20:02:40.829Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "zod-to-ts",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "sachinraja"
+      ],
+      "lastCommitDate": "2025-10-25T00:49:47Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2438,
+      "diagnosedAt": "2026-02-19T20:07:08.600Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "yup",
+      "score": 86,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer replaced at 0.5.0",
+          "points": 11,
+          "confidence": "medium"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "monastic.panic"
+      ],
+      "lastCommitDate": "2026-02-17T20:56:43Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1713,
+      "diagnosedAt": "2026-02-19T20:07:10.313Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@hookform/resolvers",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "bluebill1049",
+        "kotarella1110",
+        "jorisre"
+      ],
+      "lastCommitDate": "2026-02-07T16:40:23Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2378,
+      "diagnosedAt": "2026-02-19T20:07:12.692Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "valibot",
+      "score": 87,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "fabian-hiller"
+      ],
+      "lastCommitDate": "2026-02-19T14:07:43Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 1,
+        "critical": 0,
+        "high": 1,
+        "recent": 1,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 2223,
+      "diagnosedAt": "2026-02-19T20:07:14.916Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "io-ts",
+      "score": 92,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "Last commit over 1 year ago (436 days)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "gcanti"
+      ],
+      "lastCommitDate": "2024-12-10T11:53:31Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1644,
+      "diagnosedAt": "2026-02-19T20:07:16.560Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "fp-ts",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "gcanti"
+      ],
+      "lastCommitDate": "2025-08-18T13:54:44Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1646,
+      "diagnosedAt": "2026-02-19T20:07:18.207Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "monocle-ts",
+      "score": 82,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "Last commit over 3 years ago (3 years)",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "gcanti"
+      ],
+      "lastCommitDate": "2022-12-09T10:12:08Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2204,
+      "diagnosedAt": "2026-02-19T20:07:20.411Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "newtype-ts",
+      "score": 80,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 3 years ago (4 years)",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "gcanti"
+      ],
+      "lastCommitDate": "2022-07-15T10:17:37Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2249,
+      "diagnosedAt": "2026-02-19T20:07:22.660Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "runtypes",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "pelotom",
+        "yuhr"
+      ],
+      "lastCommitDate": "2026-01-21T23:22:55Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1960,
+      "diagnosedAt": "2026-02-19T20:07:24.621Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "simple-runtypes",
+      "score": 85,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 2 years ago (2 years)",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "hoeck"
+      ],
+      "lastCommitDate": "2023-12-19T14:54:50Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2199,
+      "diagnosedAt": "2026-02-19T20:07:26.821Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "arktype",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "ssalbdivad"
+      ],
+      "lastCommitDate": "2026-02-02T20:59:37Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1940,
+      "diagnosedAt": "2026-02-19T20:07:28.761Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "superstruct",
+      "score": 95,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Last commit over 1 year ago (506 days)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "ianstormtaylor",
+        "artmllr"
+      ],
+      "lastCommitDate": "2024-10-01T02:42:53Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1718,
+      "diagnosedAt": "2026-02-19T20:07:30.479Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "joi",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "marsup",
+        "nlf",
+        "nargonath",
+        "devinivy",
+        "wyatt",
+        "hueniverse"
+      ],
+      "lastCommitDate": "2025-11-19T15:48:42Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1659,
+      "diagnosedAt": "2026-02-19T20:07:32.138Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@joi/date",
+      "score": 95,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Last commit over 1 year ago (668 days)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "wyatt",
+        "devinivy",
+        "nargonath",
+        "nlf",
+        "marsup"
+      ],
+      "lastCommitDate": "2024-04-22T09:05:34Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2667,
+      "diagnosedAt": "2026-02-19T20:07:34.805Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "ajv",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "blakeembrey",
+        "esp"
+      ],
+      "lastCommitDate": "2026-02-18T19:57:38Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 2,
+        "critical": 0,
+        "high": 0,
+        "recent": 1,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1148,
+      "diagnosedAt": "2026-02-19T20:07:36.360Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "ajv-formats",
+      "score": 95,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Last commit over 1 year ago (550 days)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "esp",
+        "jason-green",
+        "additiveamateur"
+      ],
+      "lastCommitDate": "2024-08-18T19:30:51Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1588,
+      "diagnosedAt": "2026-02-19T20:07:37.948Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "ajv-errors",
+      "score": 87,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "Last commit over 2 years ago (2 years)",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "esp"
+      ],
+      "lastCommitDate": "2023-10-10T11:47:59Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2507,
+      "diagnosedAt": "2026-02-19T20:07:40.455Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "ajv-keywords",
+      "score": 87,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "Last commit over 2 years ago (3 years)",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "esp"
+      ],
+      "lastCommitDate": "2023-04-17T03:40:20Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2381,
+      "diagnosedAt": "2026-02-19T20:07:42.836Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "class-validator",
+      "score": 85,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "1 critical vulnerability(ies) in history",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "nonameprovided",
+        "typestack-release-bot"
+      ],
+      "lastCommitDate": "2025-12-02T21:18:40Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 1,
+        "critical": 1,
+        "high": 0,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1781,
+      "diagnosedAt": "2026-02-19T20:07:44.617Z"
     }
   ],
   "errors": [
@@ -34971,6 +35424,12 @@
       "package": "deno_lint",
       "error": "Exit code 1: {\"error\":\"Error: Package not found: deno_lint (npm)\"}\n",
       "timestamp": "2026-02-19T20:02:03.022Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "@joi/time",
+      "error": "Exit code 1: {\"error\":\"Error: Package not found: @joi/time (npm)\"}\n",
+      "timestamp": "2026-02-19T20:07:35.212Z"
     }
   ],
   "startTime": "2026-02-19T12:29:21.598Z"

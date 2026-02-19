@@ -1,0 +1,17 @@
+{
+  "ecosystem": "npm",
+  "package": "@hookform/resolvers",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "bluebill1049",
+    "kotarella1110",
+    "jorisre"
+  ],
+  "lastCommitDate": "2026-02-07T16:40:23Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2378,
+  "diagnosedAt": "2026-02-19T20:07:12.692Z"
+}

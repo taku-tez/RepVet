@@ -1,7 +1,7 @@
 {
   "ecosystem": "npm",
-  "package": "io-ts",
-  "score": 92,
+  "package": "monocle-ts",
+  "score": 82,
   "riskLevel": "LOW",
   "deductions": [
     {
@@ -10,17 +10,17 @@
       "confidence": "low"
     },
     {
-      "reason": "Last commit over 1 year ago (436 days)",
-      "points": 5,
+      "reason": "Last commit over 3 years ago (3 years)",
+      "points": 15,
       "confidence": "high"
     }
   ],
   "maintainers": [
     "gcanti"
   ],
-  "lastCommitDate": "2024-12-10T11:53:31Z",
+  "lastCommitDate": "2022-12-09T10:12:08Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
-  "executionTimeMs": 1644,
-  "diagnosedAt": "2026-02-19T20:07:16.560Z"
+  "executionTimeMs": 2204,
+  "diagnosedAt": "2026-02-19T20:07:20.411Z"
 }

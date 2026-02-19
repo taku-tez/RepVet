@@ -1,0 +1,23 @@
+{
+  "ecosystem": "npm",
+  "package": "ajv-formats",
+  "score": 95,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Last commit over 1 year ago (550 days)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "esp",
+    "jason-green",
+    "additiveamateur"
+  ],
+  "lastCommitDate": "2024-08-18T19:30:51Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1588,
+  "diagnosedAt": "2026-02-19T20:07:37.948Z"
+}

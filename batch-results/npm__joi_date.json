@@ -1,0 +1,25 @@
+{
+  "ecosystem": "npm",
+  "package": "@joi/date",
+  "score": 95,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Last commit over 1 year ago (668 days)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "wyatt",
+    "devinivy",
+    "nargonath",
+    "nlf",
+    "marsup"
+  ],
+  "lastCommitDate": "2024-04-22T09:05:34Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2667,
+  "diagnosedAt": "2026-02-19T20:07:34.805Z"
+}

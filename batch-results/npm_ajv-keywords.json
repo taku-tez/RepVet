@@ -1,7 +1,7 @@
 {
   "ecosystem": "npm",
-  "package": "io-ts",
-  "score": 92,
+  "package": "ajv-keywords",
+  "score": 87,
   "riskLevel": "LOW",
   "deductions": [
     {
@@ -10,17 +10,17 @@
       "confidence": "low"
     },
     {
-      "reason": "Last commit over 1 year ago (436 days)",
-      "points": 5,
+      "reason": "Last commit over 2 years ago (3 years)",
+      "points": 10,
       "confidence": "high"
     }
   ],
   "maintainers": [
-    "gcanti"
+    "esp"
   ],
-  "lastCommitDate": "2024-12-10T11:53:31Z",
+  "lastCommitDate": "2023-04-17T03:40:20Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
-  "executionTimeMs": 1644,
-  "diagnosedAt": "2026-02-19T20:07:16.560Z"
+  "executionTimeMs": 2381,
+  "diagnosedAt": "2026-02-19T20:07:42.836Z"
 }

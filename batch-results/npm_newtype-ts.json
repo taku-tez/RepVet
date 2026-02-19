@@ -1,0 +1,26 @@
+{
+  "ecosystem": "npm",
+  "package": "newtype-ts",
+  "score": 80,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 3 years ago (4 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "gcanti"
+  ],
+  "lastCommitDate": "2022-07-15T10:17:37Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2249,
+  "diagnosedAt": "2026-02-19T20:07:22.660Z"
+}

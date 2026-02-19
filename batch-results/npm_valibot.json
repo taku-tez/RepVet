@@ -18,7 +18,7 @@
   "maintainers": [
     "fabian-hiller"
   ],
-  "lastCommitDate": "2026-02-05T05:17:13Z",
+  "lastCommitDate": "2026-02-19T14:07:43Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
   "vulnerabilityStats": {
@@ -28,6 +28,6 @@
     "recent": 1,
     "hasUnfixed": false
   },
-  "executionTimeMs": 1763,
-  "diagnosedAt": "2026-02-19T13:32:26.036Z"
+  "executionTimeMs": 2223,
+  "diagnosedAt": "2026-02-19T20:07:14.916Z"
 }

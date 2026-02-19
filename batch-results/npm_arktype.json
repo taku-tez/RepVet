@@ -1,0 +1,21 @@
+{
+  "ecosystem": "npm",
+  "package": "arktype",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "ssalbdivad"
+  ],
+  "lastCommitDate": "2026-02-02T20:59:37Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1940,
+  "diagnosedAt": "2026-02-19T20:07:28.761Z"
+}

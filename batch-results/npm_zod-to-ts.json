@@ -1,0 +1,21 @@
+{
+  "ecosystem": "npm",
+  "package": "zod-to-ts",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "sachinraja"
+  ],
+  "lastCommitDate": "2025-10-25T00:49:47Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2438,
+  "diagnosedAt": "2026-02-19T20:07:08.600Z"
+}
