@@ -1,0 +1,19 @@
+{
+  "ecosystem": "npm",
+  "package": "commitizen",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "linusu",
+    "kentcdodds",
+    "jimthedev",
+    "commitizen-bot",
+    "pgoodjohn"
+  ],
+  "lastCommitDate": "2026-02-12T15:35:59Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1942,
+  "diagnosedAt": "2026-02-19T14:52:30.700Z"
+}

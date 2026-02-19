@@ -1,5 +1,5 @@
 {
-  "currentIndex": 420,
+  "currentIndex": 440,
   "totalPackages": 4957,
   "results": [
     {
@@ -10537,6 +10537,491 @@
       },
       "executionTimeMs": 2587,
       "diagnosedAt": "2026-02-19T14:42:48.785Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "detox",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "d4vidi",
+        "wix.mobile",
+        "yaroslavs",
+        "asafkorem"
+      ],
+      "lastCommitDate": "2026-02-05T14:26:24Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1895,
+      "diagnosedAt": "2026-02-19T14:52:07.816Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "appium",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "jlipps",
+        "nick.mokhnach",
+        "kazucocoa",
+        "npm",
+        "imurchie",
+        "dangraham",
+        "umut.uzgur"
+      ],
+      "lastCommitDate": "2026-02-19T12:41:19Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2607,
+      "diagnosedAt": "2026-02-19T14:52:10.423Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "nyc",
+      "score": 95,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Last commit over 1 year ago (440 days)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "isaacs",
+        "bcoe",
+        "coreyfarrell"
+      ],
+      "lastCommitDate": "2024-12-06T05:42:03Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2287,
+      "diagnosedAt": "2026-02-19T14:52:12.710Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "c8",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "bcoe",
+        "oss-bot"
+      ],
+      "lastCommitDate": "2026-02-06T18:32:48Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2214,
+      "diagnosedAt": "2026-02-19T14:52:14.925Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "istanbul",
+      "score": 70,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Package deprecated: This module is no longer maintained, try this instead:\n  npm i nyc\nVisit https://istanbul.js.org/int...",
+          "points": 10,
+          "confidence": "high"
+        },
+        {
+          "reason": "Repository is archived (no longer maintained)",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 1 year ago (437 days)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "bcoe",
+        "davglass",
+        "gotwarlost"
+      ],
+      "lastCommitDate": "2024-12-08T15:50:22Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2081,
+      "diagnosedAt": "2026-02-19T14:52:17.006Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "codecov",
+      "score": 35,
+      "riskLevel": "CRITICAL",
+      "deductions": [
+        {
+          "reason": "Package deprecated: https://about.codecov.io/blog/codecov-uploader-deprecation-plan/",
+          "points": 10,
+          "confidence": "high"
+        },
+        {
+          "reason": "Repository is archived (no longer maintained)",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 3 years ago (3 years)",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "1 critical vulnerability(ies) in history",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "2 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "drazisil",
+        "eddiemoore",
+        "gambreu",
+        "hootener",
+        "thomasrockhu"
+      ],
+      "lastCommitDate": "2023-01-06T06:01:14Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 3,
+        "critical": 1,
+        "high": 2,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 2446,
+      "diagnosedAt": "2026-02-19T14:52:19.452Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "coveralls",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "cainus",
+        "nickmerwin"
+      ],
+      "lastCommitDate": "2026-01-05T23:13:06Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1631,
+      "diagnosedAt": "2026-02-19T14:52:21.083Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "sonarqube-scanner",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "saberduck",
+        "gabssnake",
+        "elena-vilchik",
+        "andrea-guarino-sonarsource",
+        "gregaubert",
+        "sonar-jay",
+        "philippe-perrin-sonarsource",
+        "xay.tanovan",
+        "wouter-admiraal-sonarsource",
+        "mathieu-sonar",
+        "antonio.garcia.sonarsource",
+        "tomverin",
+        "jcarsique-sonar",
+        "yassin-kammoun-sonarsource",
+        "sonartech",
+        "lucio.merotta.sonarsource",
+        "lpaulger_sonarsource"
+      ],
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1469,
+      "diagnosedAt": "2026-02-19T14:52:22.552Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "codeclimate-test-reporter",
+      "score": 60,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Package deprecated: codeclimate-test-reporter has been deprecated in favor of our new unified test-reporter. Please visi...",
+          "points": 10,
+          "confidence": "high"
+        },
+        {
+          "reason": "Repository is archived (no longer maintained)",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 3 years ago (4 years)",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "davehenton",
+        "jmcgill"
+      ],
+      "lastCommitDate": "2021-09-16T16:37:59Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2253,
+      "diagnosedAt": "2026-02-19T14:52:24.805Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "husky",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "typicode"
+      ],
+      "lastCommitDate": "2026-02-07T10:36:42Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1961,
+      "diagnosedAt": "2026-02-19T14:52:26.766Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "lint-staged",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "okonet",
+        "iiroj"
+      ],
+      "lastCommitDate": "2026-02-07T09:01:53Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1992,
+      "diagnosedAt": "2026-02-19T14:52:28.758Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "commitizen",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "linusu",
+        "kentcdodds",
+        "jimthedev",
+        "commitizen-bot",
+        "pgoodjohn"
+      ],
+      "lastCommitDate": "2026-02-12T15:35:59Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1942,
+      "diagnosedAt": "2026-02-19T14:52:30.700Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "commitlint",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "marionebl",
+        "martinhelmut",
+        "escapedcat",
+        "bycedric"
+      ],
+      "lastCommitDate": "2026-02-19T10:27:59Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1706,
+      "diagnosedAt": "2026-02-19T14:52:32.406Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "standard-version",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "stevemao",
+        "bcoe",
+        "tapppi",
+        "tommywo",
+        "nexdrew",
+        "oss-bot"
+      ],
+      "lastCommitDate": "2026-02-07T01:05:01Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 1,
+        "critical": 0,
+        "high": 0,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 2041,
+      "diagnosedAt": "2026-02-19T14:52:34.447Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "semantic-release",
+      "score": 90,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "pvdlg",
+        "semantic-release-bot",
+        "gr2m",
+        "travi"
+      ],
+      "lastCommitDate": "2026-02-16T05:26:08Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 2,
+        "critical": 0,
+        "high": 1,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 2431,
+      "diagnosedAt": "2026-02-19T14:52:36.878Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "conventional-changelog",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "bcoe",
+        "oss-bot",
+        "dangreen",
+        "andytjoslin",
+        "stevemao",
+        "marionebl",
+        "tapppi"
+      ],
+      "lastCommitDate": "2026-02-17T17:40:14Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1832,
+      "diagnosedAt": "2026-02-19T14:52:38.710Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "conventional-commits-parser",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "bcoe",
+        "oss-bot",
+        "dangreen",
+        "stevemao"
+      ],
+      "lastCommitDate": "2026-02-17T17:40:14Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1682,
+      "diagnosedAt": "2026-02-19T14:52:40.392Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "parse-commit-message",
+      "score": 81,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer replaced at 2.0.0",
+          "points": 11,
+          "confidence": "medium"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "Last commit over 1 year ago (479 days)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "tunnckocore"
+      ],
+      "lastCommitDate": "2024-10-28T06:13:51Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 3036,
+      "diagnosedAt": "2026-02-19T14:52:43.428Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "plop",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "amwmedia",
+        "crutchcorn"
+      ],
+      "lastCommitDate": "2026-02-18T18:42:24Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1708,
+      "diagnosedAt": "2026-02-19T14:52:45.136Z"
+    },
+    {
+      "ecosystem": "npm",
+      "package": "hygen",
+      "score": 92,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "Last commit over 1 year ago (590 days)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "jondot"
+      ],
+      "lastCommitDate": "2024-07-09T11:40:47Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2202,
+      "diagnosedAt": "2026-02-19T14:52:47.338Z"
     }
   ],
   "errors": [

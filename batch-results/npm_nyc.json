@@ -1,0 +1,23 @@
+{
+  "ecosystem": "npm",
+  "package": "nyc",
+  "score": 95,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Last commit over 1 year ago (440 days)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "isaacs",
+    "bcoe",
+    "coreyfarrell"
+  ],
+  "lastCommitDate": "2024-12-06T05:42:03Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2287,
+  "diagnosedAt": "2026-02-19T14:52:12.710Z"
+}

@@ -1,0 +1,21 @@
+{
+  "ecosystem": "npm",
+  "package": "appium",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "jlipps",
+    "nick.mokhnach",
+    "kazucocoa",
+    "npm",
+    "imurchie",
+    "dangraham",
+    "umut.uzgur"
+  ],
+  "lastCommitDate": "2026-02-19T12:41:19Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2607,
+  "diagnosedAt": "2026-02-19T14:52:10.423Z"
+}

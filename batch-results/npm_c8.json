@@ -1,16 +1,16 @@
 {
   "ecosystem": "npm",
-  "package": "lint-staged",
+  "package": "c8",
   "score": 100,
   "riskLevel": "LOW",
   "deductions": [],
   "maintainers": [
-    "okonet",
-    "iiroj"
+    "bcoe",
+    "oss-bot"
   ],
-  "lastCommitDate": "2026-02-07T09:01:53Z",
+  "lastCommitDate": "2026-02-06T18:32:48Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
-  "executionTimeMs": 1992,
-  "diagnosedAt": "2026-02-19T14:52:28.758Z"
+  "executionTimeMs": 2214,
+  "diagnosedAt": "2026-02-19T14:52:14.925Z"
 }

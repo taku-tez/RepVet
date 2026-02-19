@@ -1,0 +1,18 @@
+{
+  "ecosystem": "npm",
+  "package": "detox",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "d4vidi",
+    "wix.mobile",
+    "yaroslavs",
+    "asafkorem"
+  ],
+  "lastCommitDate": "2026-02-05T14:26:24Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1895,
+  "diagnosedAt": "2026-02-19T14:52:07.816Z"
+}

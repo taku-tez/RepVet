@@ -1,0 +1,26 @@
+{
+  "ecosystem": "npm",
+  "package": "hygen",
+  "score": 92,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    },
+    {
+      "reason": "Last commit over 1 year ago (590 days)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "jondot"
+  ],
+  "lastCommitDate": "2024-07-09T11:40:47Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2202,
+  "diagnosedAt": "2026-02-19T14:52:47.338Z"
+}

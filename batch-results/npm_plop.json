@@ -1,16 +1,16 @@
 {
   "ecosystem": "npm",
-  "package": "lint-staged",
+  "package": "plop",
   "score": 100,
   "riskLevel": "LOW",
   "deductions": [],
   "maintainers": [
-    "okonet",
-    "iiroj"
+    "amwmedia",
+    "crutchcorn"
   ],
-  "lastCommitDate": "2026-02-07T09:01:53Z",
+  "lastCommitDate": "2026-02-18T18:42:24Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
-  "executionTimeMs": 1992,
-  "diagnosedAt": "2026-02-19T14:52:28.758Z"
+  "executionTimeMs": 1708,
+  "diagnosedAt": "2026-02-19T14:52:45.136Z"
 }

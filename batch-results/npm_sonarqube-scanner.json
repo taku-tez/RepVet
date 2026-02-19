@@ -1,0 +1,30 @@
+{
+  "ecosystem": "npm",
+  "package": "sonarqube-scanner",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "saberduck",
+    "gabssnake",
+    "elena-vilchik",
+    "andrea-guarino-sonarsource",
+    "gregaubert",
+    "sonar-jay",
+    "philippe-perrin-sonarsource",
+    "xay.tanovan",
+    "wouter-admiraal-sonarsource",
+    "mathieu-sonar",
+    "antonio.garcia.sonarsource",
+    "tomverin",
+    "jcarsique-sonar",
+    "yassin-kammoun-sonarsource",
+    "sonartech",
+    "lucio.merotta.sonarsource",
+    "lpaulger_sonarsource"
+  ],
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1469,
+  "diagnosedAt": "2026-02-19T14:52:22.552Z"
+}

@@ -1,0 +1,32 @@
+{
+  "ecosystem": "npm",
+  "package": "codeclimate-test-reporter",
+  "score": 60,
+  "riskLevel": "MEDIUM",
+  "deductions": [
+    {
+      "reason": "Package deprecated: codeclimate-test-reporter has been deprecated in favor of our new unified test-reporter. Please visi...",
+      "points": 10,
+      "confidence": "high"
+    },
+    {
+      "reason": "Repository is archived (no longer maintained)",
+      "points": 15,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 3 years ago (4 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "davehenton",
+    "jmcgill"
+  ],
+  "lastCommitDate": "2021-09-16T16:37:59Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2253,
+  "diagnosedAt": "2026-02-19T14:52:24.805Z"
+}

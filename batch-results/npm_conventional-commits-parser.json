@@ -1,6 +1,6 @@
 {
   "ecosystem": "npm",
-  "package": "conventional-changelog",
+  "package": "conventional-commits-parser",
   "score": 100,
   "riskLevel": "LOW",
   "deductions": [],
@@ -8,14 +8,11 @@
     "bcoe",
     "oss-bot",
     "dangreen",
-    "andytjoslin",
-    "stevemao",
-    "marionebl",
-    "tapppi"
+    "stevemao"
   ],
   "lastCommitDate": "2026-02-17T17:40:14Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
-  "executionTimeMs": 1832,
-  "diagnosedAt": "2026-02-19T14:52:38.710Z"
+  "executionTimeMs": 1682,
+  "diagnosedAt": "2026-02-19T14:52:40.392Z"
 }

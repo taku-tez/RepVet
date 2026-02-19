@@ -1,0 +1,31 @@
+{
+  "ecosystem": "npm",
+  "package": "parse-commit-message",
+  "score": 81,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer replaced at 2.0.0",
+      "points": 11,
+      "confidence": "medium"
+    },
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    },
+    {
+      "reason": "Last commit over 1 year ago (479 days)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "tunnckocore"
+  ],
+  "lastCommitDate": "2024-10-28T06:13:51Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 3036,
+  "diagnosedAt": "2026-02-19T14:52:43.428Z"
+}
