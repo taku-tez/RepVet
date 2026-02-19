@@ -1,0 +1,21 @@
+{
+  "ecosystem": "npm",
+  "package": "deep-clone",
+  "score": 95,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "thebearingedge"
+  ],
+  "lastCommitDate": "2026-02-15T00:51:20Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2689,
+  "diagnosedAt": "2026-02-19T18:32:17.529Z"
+}

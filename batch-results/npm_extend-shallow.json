@@ -1,0 +1,22 @@
+{
+  "ecosystem": "npm",
+  "package": "extend-shallow",
+  "score": 85,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Last commit over 3 years ago (5 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "phated",
+    "jonschlinkert"
+  ],
+  "lastCommitDate": "2021-08-07T21:20:05Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2040,
+  "diagnosedAt": "2026-02-19T18:32:23.863Z"
+}

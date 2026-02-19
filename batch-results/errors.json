@@ -286,5 +286,53 @@
     "package": "backbone-old",
     "error": "Exit code 1: {\"error\":\"Error: Package not found: backbone-old (npm)\"}\n",
     "timestamp": "2026-02-19T18:12:23.237Z"
+  },
+  {
+    "ecosystem": "npm",
+    "package": "@",
+    "error": "Exit code 1: {\"error\":\"Error: Failed to fetch npm package info: npm registry error: 405\"}\n",
+    "timestamp": "2026-02-19T18:32:26.651Z"
+  },
+  {
+    "ecosystem": "npm",
+    "package": "@@",
+    "error": "Exit code 1: {\"error\":\"Error: Failed to fetch npm package info: npm registry error: 405\"}\n",
+    "timestamp": "2026-02-19T18:32:26.949Z"
+  },
+  {
+    "ecosystem": "npm",
+    "package": "@@@",
+    "error": "Exit code 1: {\"error\":\"Error: Failed to fetch npm package info: npm registry error: 405\"}\n",
+    "timestamp": "2026-02-19T18:32:27.337Z"
+  },
+  {
+    "ecosystem": "npm",
+    "package": "!!!",
+    "error": "Exit code 1: {\"error\":\"Error: Package not found: !!! (npm)\"}\n",
+    "timestamp": "2026-02-19T18:32:27.819Z"
+  },
+  {
+    "ecosystem": "npm",
+    "package": "???",
+    "error": "Exit code 1: {\"error\":\"Error: Package not found: ??? (npm)\"}\n",
+    "timestamp": "2026-02-19T18:32:28.210Z"
+  },
+  {
+    "ecosystem": "npm",
+    "package": "...",
+    "error": "Exit code 1: {\"error\":\"Error: Package not found: ... (npm)\"}\n",
+    "timestamp": "2026-02-19T18:32:28.338Z"
+  },
+  {
+    "ecosystem": "npm",
+    "package": "---",
+    "error": "Exit code 1: error: unknown option '---'\n",
+    "timestamp": "2026-02-19T18:32:28.397Z"
+  },
+  {
+    "ecosystem": "npm",
+    "package": "___",
+    "error": "Exit code 1: {\"error\":\"Error: Package not found: ___ (npm)\"}\n",
+    "timestamp": "2026-02-19T18:32:29.219Z"
   }
 ]

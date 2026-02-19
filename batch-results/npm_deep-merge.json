@@ -1,0 +1,26 @@
+{
+  "ecosystem": "npm",
+  "package": "deep-merge",
+  "score": 80,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 3 years ago (11 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "raynos"
+  ],
+  "lastCommitDate": "2014-11-22T01:31:11Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2603,
+  "diagnosedAt": "2026-02-19T18:32:14.839Z"
+}

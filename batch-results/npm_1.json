@@ -1,0 +1,22 @@
+{
+  "ecosystem": "npm",
+  "package": "1",
+  "score": 85,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Last commit over 3 years ago (8 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "marcooliveira",
+    "indigounited"
+  ],
+  "lastCommitDate": "2018-03-30T13:24:53Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2281,
+  "diagnosedAt": "2026-02-19T18:32:33.022Z"
+}

@@ -1,0 +1,21 @@
+{
+  "ecosystem": "npm",
+  "package": "deep-equal",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "ljharb"
+  ],
+  "lastCommitDate": "2025-12-30T01:56:40Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1790,
+  "diagnosedAt": "2026-02-19T18:32:10.528Z"
+}

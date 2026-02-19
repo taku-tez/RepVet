@@ -1,0 +1,26 @@
+{
+  "ecosystem": "npm",
+  "package": "object-entries",
+  "score": 80,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 3 years ago (12 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "totherik"
+  ],
+  "lastCommitDate": "2014-06-20T02:16:23Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2429,
+  "diagnosedAt": "2026-02-19T18:32:08.738Z"
+}
