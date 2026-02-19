@@ -1,0 +1,36 @@
+{
+  "ecosystem": "npm",
+  "package": "npmlog",
+  "score": 70,
+  "riskLevel": "MEDIUM",
+  "deductions": [
+    {
+      "reason": "Package deprecated: This package is no longer supported.",
+      "points": 10,
+      "confidence": "high"
+    },
+    {
+      "reason": "Repository is archived (no longer maintained)",
+      "points": 15,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 1 year ago (656 days)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "gar",
+    "saquibkhan",
+    "npm-cli-ops",
+    "reggi",
+    "hashtagchris",
+    "owlstronaut"
+  ],
+  "lastCommitDate": "2024-05-03T20:54:15Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1775,
+  "diagnosedAt": "2026-02-19T16:07:34.894Z"
+}

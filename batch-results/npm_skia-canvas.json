@@ -1,21 +1,21 @@
 {
   "ecosystem": "npm",
-  "package": "signale",
-  "score": 97,
+  "package": "skia-canvas",
+  "score": 95,
   "riskLevel": "LOW",
   "deductions": [
     {
       "reason": "Single maintainer (bus factor risk)",
-      "points": 3,
-      "confidence": "low"
+      "points": 5,
+      "confidence": "high"
     }
   ],
   "maintainers": [
-    "klaudiosinani"
+    "samizdatco"
   ],
-  "lastCommitDate": "2026-01-17T12:59:06Z",
+  "lastCommitDate": "2025-09-26T15:05:32Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
-  "executionTimeMs": 2437,
-  "diagnosedAt": "2026-02-19T16:07:31.150Z"
+  "executionTimeMs": 2173,
+  "diagnosedAt": "2026-02-19T16:07:42.537Z"
 }
