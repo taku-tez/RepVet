@@ -1,0 +1,15 @@
+{
+  "ecosystem": "pypi",
+  "package": "zeus",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "Zeus Team"
+  ],
+  "lastCommitDate": "2026-02-20T02:57:22Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1320,
+  "diagnosedAt": "2026-02-20T03:00:21.680Z"
+}

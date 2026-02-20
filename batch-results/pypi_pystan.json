@@ -1,0 +1,31 @@
+{
+  "ecosystem": "pypi",
+  "package": "pystan",
+  "score": 84,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Author changed from \"Allen B. Riddell\" to \"Allen Riddell\"",
+      "points": 8,
+      "confidence": "low"
+    },
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    },
+    {
+      "reason": "Last commit over 1 year ago (596 days)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "Allen Riddell"
+  ],
+  "lastCommitDate": "2024-07-03T17:03:56Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1586,
+  "diagnosedAt": "2026-02-20T03:00:08.993Z"
+}

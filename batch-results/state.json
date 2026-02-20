@@ -1,5 +1,5 @@
 {
-  "currentIndex": 2140,
+  "currentIndex": 2160,
   "totalPackages": 4957,
   "results": [
     {
@@ -51423,6 +51423,469 @@
       "hasMalwareHistory": false,
       "executionTimeMs": 1963,
       "diagnosedAt": "2026-02-20T02:45:40.833Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "node2vec",
+      "score": 87,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Author changed from \"Elior Cohen\" to \"elior\"",
+          "points": 8,
+          "confidence": "low"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "elior"
+      ],
+      "lastCommitDate": "2025-10-06T17:29:00Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1789,
+      "diagnosedAt": "2026-02-20T03:00:05.786Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "pymc",
+      "score": 89,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Author changed from \"Christopher Fonnesbeck, Anand Patil and David Huard\" to \"PyMC Developers\"",
+          "points": 8,
+          "confidence": "low"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "PyMC Developers"
+      ],
+      "lastCommitDate": "2026-02-16T17:19:33Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1620,
+      "diagnosedAt": "2026-02-20T03:00:07.406Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "pystan",
+      "score": 84,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Author changed from \"Allen B. Riddell\" to \"Allen Riddell\"",
+          "points": 8,
+          "confidence": "low"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "Last commit over 1 year ago (596 days)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "Allen Riddell"
+      ],
+      "lastCommitDate": "2024-07-03T17:03:56Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1586,
+      "diagnosedAt": "2026-02-20T03:00:08.993Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "emcee",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Daniel Foreman-Mackey"
+      ],
+      "lastCommitDate": "2026-01-19T20:48:31Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1974,
+      "diagnosedAt": "2026-02-20T03:00:10.968Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "arviz",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "ArviZ Developers"
+      ],
+      "lastCommitDate": "2026-02-11T16:34:49Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2030,
+      "diagnosedAt": "2026-02-20T03:00:12.999Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "corner",
+      "score": 87,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Author changed from \"Daniel Foreman-Mackey\" to \"Dan Foreman-Mackey\"",
+          "points": 8,
+          "confidence": "low"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "Dan Foreman-Mackey"
+      ],
+      "lastCommitDate": "2026-01-19T20:48:10Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 3244,
+      "diagnosedAt": "2026-02-20T03:00:16.243Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "bilby",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "Greg Ashton",
+        "Sylvia Biscoveanu",
+        "Colm Talbot",
+        "Aditya Vijaykumar",
+        "Michael J. Williams",
+        "Bilby Developers"
+      ],
+      "lastCommitDate": "2026-02-19T18:09:19Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2210,
+      "diagnosedAt": "2026-02-20T03:00:18.454Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "dynesty",
+      "score": 89,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Author changed from \"Joshua S Speagle\" to \"Sergey E Koposov\"",
+          "points": 8,
+          "confidence": "low"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Sergey E Koposov"
+      ],
+      "lastCommitDate": "2025-11-29T15:50:49Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1905,
+      "diagnosedAt": "2026-02-20T03:00:20.359Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "zeus",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "Zeus Team"
+      ],
+      "lastCommitDate": "2026-02-20T02:57:22Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1320,
+      "diagnosedAt": "2026-02-20T03:00:21.680Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "astropy",
+      "score": 87,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "The Astropy Developers"
+      ],
+      "lastCommitDate": "2026-02-16T18:45:57Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 1,
+        "critical": 0,
+        "high": 1,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 2438,
+      "diagnosedAt": "2026-02-20T03:00:24.118Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "sunpy",
+      "score": 89,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Author changed from \"SunPy Developers\" to \"The SunPy Community\"",
+          "points": 8,
+          "confidence": "low"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "The SunPy Community"
+      ],
+      "lastCommitDate": "2026-02-19T09:42:40Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2119,
+      "diagnosedAt": "2026-02-20T03:00:26.237Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "spacepy",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "Steve Morley",
+        "Dan Welling",
+        "Brian Larsen",
+        "Jon Niehof",
+        "SpacePy team"
+      ],
+      "lastCommitDate": "2025-10-23T20:18:36Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2093,
+      "diagnosedAt": "2026-02-20T03:00:28.331Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "poliastro",
+      "score": 64,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Author changed from \"Juan Luis Cano\" to \"Juan Luis Cano Rodríguez\"",
+          "points": 8,
+          "confidence": "low"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "Repository is archived (no longer maintained)",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 2 years ago (2 years)",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "Juan Luis Cano Rodríguez"
+      ],
+      "lastCommitDate": "2023-10-14T15:30:47Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2514,
+      "diagnosedAt": "2026-02-20T03:00:30.845Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "skyfield",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Brandon Rhodes"
+      ],
+      "lastCommitDate": "2026-02-11T03:27:01Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 3252,
+      "diagnosedAt": "2026-02-20T03:00:34.607Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "jplephem",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Brandon Rhodes"
+      ],
+      "lastCommitDate": "2026-02-01T16:50:44Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2051,
+      "diagnosedAt": "2026-02-20T03:00:36.659Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "biopython",
+      "score": 89,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Author changed from \"The Biopython Consortium\" to \"The Biopython Contributors\"",
+          "points": 8,
+          "confidence": "low"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "The Biopython Contributors"
+      ],
+      "lastCommitDate": "2026-02-19T10:22:00Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 1,
+        "critical": 0,
+        "high": 0,
+        "recent": 1,
+        "hasUnfixed": true
+      },
+      "executionTimeMs": 2418,
+      "diagnosedAt": "2026-02-20T03:00:39.077Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "scikit-bio",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "scikit-bio development team"
+      ],
+      "lastCommitDate": "2026-02-16T16:58:45Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1864,
+      "diagnosedAt": "2026-02-20T03:00:40.941Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "pysam",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Andreas Heger"
+      ],
+      "lastCommitDate": "2026-02-02T06:17:03Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2311,
+      "diagnosedAt": "2026-02-20T03:00:43.252Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "pydna",
+      "score": 89,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Author changed from \"Björn Johansson\" to \"Björn F. Johansson\"",
+          "points": 8,
+          "confidence": "low"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Björn F. Johansson"
+      ],
+      "lastCommitDate": "2026-02-18T13:03:46Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2842,
+      "diagnosedAt": "2026-02-20T03:00:46.094Z"
     }
   ],
   "errors": [
@@ -51971,6 +52434,12 @@
       "package": "pygraphistry",
       "error": "Exit code 1: {\"error\":\"Error: Package not found: pygraphistry (pypi)\"}\n",
       "timestamp": "2026-02-20T02:45:38.420Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "orekit",
+      "error": "Exit code 1: {\"error\":\"Error: Package not found: orekit (pypi)\"}\n",
+      "timestamp": "2026-02-20T03:00:31.355Z"
     }
   ],
   "startTime": "2026-02-19T12:29:21.598Z"

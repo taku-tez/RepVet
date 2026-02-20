@@ -1,0 +1,20 @@
+{
+  "ecosystem": "pypi",
+  "package": "bilby",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "Greg Ashton",
+    "Sylvia Biscoveanu",
+    "Colm Talbot",
+    "Aditya Vijaykumar",
+    "Michael J. Williams",
+    "Bilby Developers"
+  ],
+  "lastCommitDate": "2026-02-19T18:09:19Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2210,
+  "diagnosedAt": "2026-02-20T03:00:18.454Z"
+}

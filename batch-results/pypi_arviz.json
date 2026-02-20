@@ -1,0 +1,21 @@
+{
+  "ecosystem": "pypi",
+  "package": "arviz",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "ArviZ Developers"
+  ],
+  "lastCommitDate": "2026-02-11T16:34:49Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2030,
+  "diagnosedAt": "2026-02-20T03:00:12.999Z"
+}

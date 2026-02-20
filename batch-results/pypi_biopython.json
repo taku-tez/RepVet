@@ -1,0 +1,33 @@
+{
+  "ecosystem": "pypi",
+  "package": "biopython",
+  "score": 89,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Author changed from \"The Biopython Consortium\" to \"The Biopython Contributors\"",
+      "points": 8,
+      "confidence": "low"
+    },
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "The Biopython Contributors"
+  ],
+  "lastCommitDate": "2026-02-19T10:22:00Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 1,
+    "critical": 0,
+    "high": 0,
+    "recent": 1,
+    "hasUnfixed": true
+  },
+  "executionTimeMs": 2418,
+  "diagnosedAt": "2026-02-20T03:00:39.077Z"
+}

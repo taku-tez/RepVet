@@ -1,0 +1,21 @@
+{
+  "ecosystem": "pypi",
+  "package": "pysam",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "Andreas Heger"
+  ],
+  "lastCommitDate": "2026-02-02T06:17:03Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2311,
+  "diagnosedAt": "2026-02-20T03:00:43.252Z"
+}

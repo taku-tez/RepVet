@@ -1,0 +1,26 @@
+{
+  "ecosystem": "pypi",
+  "package": "node2vec",
+  "score": 87,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Author changed from \"Elior Cohen\" to \"elior\"",
+      "points": 8,
+      "confidence": "low"
+    },
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "elior"
+  ],
+  "lastCommitDate": "2025-10-06T17:29:00Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1789,
+  "diagnosedAt": "2026-02-20T03:00:05.786Z"
+}

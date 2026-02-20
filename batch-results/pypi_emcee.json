@@ -1,0 +1,21 @@
+{
+  "ecosystem": "pypi",
+  "package": "emcee",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "Daniel Foreman-Mackey"
+  ],
+  "lastCommitDate": "2026-01-19T20:48:31Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1974,
+  "diagnosedAt": "2026-02-20T03:00:10.968Z"
+}

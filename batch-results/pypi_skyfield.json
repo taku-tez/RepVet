@@ -1,0 +1,21 @@
+{
+  "ecosystem": "pypi",
+  "package": "skyfield",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "Brandon Rhodes"
+  ],
+  "lastCommitDate": "2026-02-11T03:27:01Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 3252,
+  "diagnosedAt": "2026-02-20T03:00:34.607Z"
+}

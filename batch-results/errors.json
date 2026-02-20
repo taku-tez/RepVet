@@ -544,5 +544,11 @@
     "package": "pygraphistry",
     "error": "Exit code 1: {\"error\":\"Error: Package not found: pygraphistry (pypi)\"}\n",
     "timestamp": "2026-02-20T02:45:38.420Z"
+  },
+  {
+    "ecosystem": "pypi",
+    "package": "orekit",
+    "error": "Exit code 1: {\"error\":\"Error: Package not found: orekit (pypi)\"}\n",
+    "timestamp": "2026-02-20T03:00:31.355Z"
   }
 ]

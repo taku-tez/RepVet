@@ -1,0 +1,15 @@
+{
+  "ecosystem": "pypi",
+  "package": "scikit-bio",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "scikit-bio development team"
+  ],
+  "lastCommitDate": "2026-02-16T16:58:45Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1864,
+  "diagnosedAt": "2026-02-20T03:00:40.941Z"
+}

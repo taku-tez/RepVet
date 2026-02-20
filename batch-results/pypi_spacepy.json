@@ -1,0 +1,19 @@
+{
+  "ecosystem": "pypi",
+  "package": "spacepy",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "Steve Morley",
+    "Dan Welling",
+    "Brian Larsen",
+    "Jon Niehof",
+    "SpacePy team"
+  ],
+  "lastCommitDate": "2025-10-23T20:18:36Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2093,
+  "diagnosedAt": "2026-02-20T03:00:28.331Z"
+}

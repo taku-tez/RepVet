@@ -1,0 +1,26 @@
+{
+  "ecosystem": "pypi",
+  "package": "dynesty",
+  "score": 89,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Author changed from \"Joshua S Speagle\" to \"Sergey E Koposov\"",
+      "points": 8,
+      "confidence": "low"
+    },
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "Sergey E Koposov"
+  ],
+  "lastCommitDate": "2025-11-29T15:50:49Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1905,
+  "diagnosedAt": "2026-02-20T03:00:20.359Z"
+}

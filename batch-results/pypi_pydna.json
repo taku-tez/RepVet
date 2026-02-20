@@ -1,0 +1,26 @@
+{
+  "ecosystem": "pypi",
+  "package": "pydna",
+  "score": 89,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Author changed from \"Björn Johansson\" to \"Björn F. Johansson\"",
+      "points": 8,
+      "confidence": "low"
+    },
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "Björn F. Johansson"
+  ],
+  "lastCommitDate": "2026-02-18T13:03:46Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2842,
+  "diagnosedAt": "2026-02-20T03:00:46.094Z"
+}

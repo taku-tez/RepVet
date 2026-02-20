@@ -1,0 +1,21 @@
+{
+  "ecosystem": "pypi",
+  "package": "jplephem",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "Brandon Rhodes"
+  ],
+  "lastCommitDate": "2026-02-01T16:50:44Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2051,
+  "diagnosedAt": "2026-02-20T03:00:36.659Z"
+}

@@ -1,0 +1,36 @@
+{
+  "ecosystem": "pypi",
+  "package": "poliastro",
+  "score": 64,
+  "riskLevel": "MEDIUM",
+  "deductions": [
+    {
+      "reason": "Author changed from \"Juan Luis Cano\" to \"Juan Luis Cano Rodríguez\"",
+      "points": 8,
+      "confidence": "low"
+    },
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    },
+    {
+      "reason": "Repository is archived (no longer maintained)",
+      "points": 15,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 2 years ago (2 years)",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "Juan Luis Cano Rodríguez"
+  ],
+  "lastCommitDate": "2023-10-14T15:30:47Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2514,
+  "diagnosedAt": "2026-02-20T03:00:30.845Z"
+}
