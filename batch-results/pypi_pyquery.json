@@ -1,0 +1,22 @@
+{
+  "ecosystem": "pypi",
+  "package": "pyquery",
+  "score": 92,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Author changed from \"Olivier Lauzanne\" to \"Gael Pasgrimaud\"",
+      "points": 8,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "Gael Pasgrimaud",
+    "Olivier Lauzanne"
+  ],
+  "lastCommitDate": "2026-02-18T21:11:35Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1323,
+  "diagnosedAt": "2026-02-20T01:15:04.942Z"
+}

@@ -1,0 +1,21 @@
+{
+  "ecosystem": "pypi",
+  "package": "kubernetes",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "Kubernetes"
+  ],
+  "lastCommitDate": "2026-02-18T03:02:22Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1343,
+  "diagnosedAt": "2026-02-20T01:15:38.626Z"
+}

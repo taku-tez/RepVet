@@ -1,0 +1,37 @@
+{
+  "ecosystem": "pypi",
+  "package": "salt",
+  "score": 84,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    },
+    {
+      "reason": "18 critical vulnerability(ies) in history",
+      "points": 8,
+      "confidence": "low"
+    },
+    {
+      "reason": "11 vulnerabilities in the past year",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "Thomas S Hatch"
+  ],
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 121,
+    "critical": 18,
+    "high": 32,
+    "recent": 11,
+    "hasUnfixed": true
+  },
+  "executionTimeMs": 4538,
+  "diagnosedAt": "2026-02-20T01:15:29.750Z"
+}

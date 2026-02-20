@@ -1,0 +1,26 @@
+{
+  "ecosystem": "pypi",
+  "package": "playwright",
+  "score": 89,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Author changed from \"Microsoft Corporation\" to \"Microsoft Corporation License-Expression: Apache-2.0\"",
+      "points": 8,
+      "confidence": "low"
+    },
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "Microsoft Corporation License-Expression: Apache-2.0"
+  ],
+  "lastCommitDate": "2026-02-11T12:58:02Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1599,
+  "diagnosedAt": "2026-02-20T01:15:12.292Z"
+}

@@ -1,0 +1,26 @@
+{
+  "ecosystem": "pypi",
+  "package": "robobrowser",
+  "score": 80,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 3 years ago (5 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "Joshua Carp"
+  ],
+  "lastCommitDate": "2020-09-10T18:41:47Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1566,
+  "diagnosedAt": "2026-02-20T01:15:16.713Z"
+}

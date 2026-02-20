@@ -1,0 +1,22 @@
+{
+  "ecosystem": "pypi",
+  "package": "podman",
+  "score": 92,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Author changed from \"Jhon Honce\" to \"Brent Baude, Urvashi Mohnani\"",
+      "points": 8,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "Brent Baude",
+    "Urvashi Mohnani"
+  ],
+  "lastCommitDate": "2026-02-19T21:10:41Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1782,
+  "diagnosedAt": "2026-02-20T01:15:37.283Z"
+}

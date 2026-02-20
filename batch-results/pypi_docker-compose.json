@@ -1,0 +1,16 @@
+{
+  "ecosystem": "pypi",
+  "package": "docker-compose",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "Docker",
+    "Inc."
+  ],
+  "lastCommitDate": "2026-02-13T09:03:05Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1919,
+  "diagnosedAt": "2026-02-20T01:15:35.501Z"
+}

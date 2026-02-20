@@ -1,0 +1,26 @@
+{
+  "ecosystem": "pypi",
+  "package": "requests-html",
+  "score": 92,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    },
+    {
+      "reason": "Last commit over 1 year ago (610 days)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "Kenneth Reitz"
+  ],
+  "lastCommitDate": "2024-06-19T14:31:39Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1832,
+  "diagnosedAt": "2026-02-20T01:15:09.376Z"
+}

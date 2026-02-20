@@ -1,0 +1,33 @@
+{
+  "ecosystem": "pypi",
+  "package": "fabric",
+  "score": 89,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Author changed from \"Christian Vest Hansen\" to \"Jeff Forcier\"",
+      "points": 8,
+      "confidence": "low"
+    },
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "Jeff Forcier"
+  ],
+  "lastCommitDate": "2025-07-20T17:33:07Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 1,
+    "critical": 0,
+    "high": 0,
+    "recent": 0,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 1723,
+  "diagnosedAt": "2026-02-20T01:15:20.243Z"
+}

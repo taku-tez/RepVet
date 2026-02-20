@@ -1,0 +1,27 @@
+{
+  "ecosystem": "pypi",
+  "package": "selenium",
+  "score": 90,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "2 high severity vulnerability(ies) in history",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "Unknown"
+  ],
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 2,
+    "critical": 0,
+    "high": 2,
+    "recent": 0,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 1317,
+  "diagnosedAt": "2026-02-20T01:15:10.693Z"
+}
