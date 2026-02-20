@@ -1,0 +1,21 @@
+{
+  "ecosystem": "pypi",
+  "package": "flit",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "Thomas Kluyver"
+  ],
+  "lastCommitDate": "2026-02-12T08:59:57Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 3153,
+  "diagnosedAt": "2026-02-20T00:00:55.788Z"
+}

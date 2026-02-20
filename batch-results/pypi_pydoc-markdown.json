@@ -1,0 +1,21 @@
+{
+  "ecosystem": "pypi",
+  "package": "pydoc-markdown",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "Niklas Rosenstein"
+  ],
+  "lastCommitDate": "2026-02-19T17:01:24Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1811,
+  "diagnosedAt": "2026-02-20T00:00:39.075Z"
+}

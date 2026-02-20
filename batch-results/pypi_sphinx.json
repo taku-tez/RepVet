@@ -1,0 +1,26 @@
+{
+  "ecosystem": "pypi",
+  "package": "sphinx",
+  "score": 89,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Author changed from \"Georg Brandl\" to \"Adam Turner\"",
+      "points": 8,
+      "confidence": "low"
+    },
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "Adam Turner"
+  ],
+  "lastCommitDate": "2026-02-15T22:46:21Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1347,
+  "diagnosedAt": "2026-02-20T00:00:33.906Z"
+}

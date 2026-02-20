@@ -1,0 +1,14 @@
+{
+  "ecosystem": "pypi",
+  "package": "yapf",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "Google Inc."
+  ],
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 949,
+  "diagnosedAt": "2026-02-20T00:00:24.212Z"
+}

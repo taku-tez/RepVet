@@ -1,0 +1,26 @@
+{
+  "ecosystem": "pypi",
+  "package": "pylint",
+  "score": 89,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Author changed from \"Sylvain Thenault\" to \"Python Code Quality Authority\"",
+      "points": 8,
+      "confidence": "low"
+    },
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "Python Code Quality Authority"
+  ],
+  "lastCommitDate": "2026-02-16T22:11:25Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1567,
+  "diagnosedAt": "2026-02-20T00:00:29.187Z"
+}

@@ -1,5 +1,5 @@
 {
-  "currentIndex": 1920,
+  "currentIndex": 1940,
   "totalPackages": 4957,
   "results": [
     {
@@ -46070,6 +46070,543 @@
       "hasMalwareHistory": false,
       "executionTimeMs": 1992,
       "diagnosedAt": "2026-02-19T23:45:55.423Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "yapf",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "Google Inc."
+      ],
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 949,
+      "diagnosedAt": "2026-02-20T00:00:24.212Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "ruff",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "\"Astral Software Inc.\""
+      ],
+      "lastCommitDate": "2026-02-20T00:00:07Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1800,
+      "diagnosedAt": "2026-02-20T00:00:26.013Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "flake8",
+      "score": 92,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Author changed from \"Tarek Ziade\" to \"Ian Stapleton Cordasco\"",
+          "points": 8,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Ian Stapleton Cordasco",
+        "Tarek Ziade"
+      ],
+      "lastCommitDate": "2025-12-22T21:54:36Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1605,
+      "diagnosedAt": "2026-02-20T00:00:27.620Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "pylint",
+      "score": 89,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Author changed from \"Sylvain Thenault\" to \"Python Code Quality Authority\"",
+          "points": 8,
+          "confidence": "low"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Python Code Quality Authority"
+      ],
+      "lastCommitDate": "2026-02-16T22:11:25Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1567,
+      "diagnosedAt": "2026-02-20T00:00:29.187Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "mypy",
+      "score": 89,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Author changed from \"zsp\" to \"Jukka Lehtosalo\"",
+          "points": 8,
+          "confidence": "low"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Jukka Lehtosalo"
+      ],
+      "lastCommitDate": "2026-02-19T23:33:55Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1451,
+      "diagnosedAt": "2026-02-20T00:00:30.639Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "pyright",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Robert Craigie"
+      ],
+      "lastCommitDate": "2026-01-08T08:07:40Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1919,
+      "diagnosedAt": "2026-02-20T00:00:32.559Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "sphinx",
+      "score": 89,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Author changed from \"Georg Brandl\" to \"Adam Turner\"",
+          "points": 8,
+          "confidence": "low"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Adam Turner"
+      ],
+      "lastCommitDate": "2026-02-15T22:46:21Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1347,
+      "diagnosedAt": "2026-02-20T00:00:33.906Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "mkdocs",
+      "score": 87,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "2 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "Tom Christie"
+      ],
+      "lastCommitDate": "2025-10-20T13:17:06Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 2,
+        "critical": 0,
+        "high": 2,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1678,
+      "diagnosedAt": "2026-02-20T00:00:35.584Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "pdoc",
+      "score": 79,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Author changed from \"Andrew Gallant\" to \"Maximilian Hils\"",
+          "points": 8,
+          "confidence": "low"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "Maximilian Hils"
+      ],
+      "lastCommitDate": "2026-02-01T08:03:51Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 1,
+        "critical": 0,
+        "high": 1,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1680,
+      "diagnosedAt": "2026-02-20T00:00:37.264Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "pydoc-markdown",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Niklas Rosenstein"
+      ],
+      "lastCommitDate": "2026-02-19T17:01:24Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1811,
+      "diagnosedAt": "2026-02-20T00:00:39.075Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "readme-renderer",
+      "score": 89,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Author changed from \"Donald Stufft\" to \"The Python Packaging Authority\"",
+          "points": 8,
+          "confidence": "low"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "The Python Packaging Authority"
+      ],
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 933,
+      "diagnosedAt": "2026-02-20T00:00:40.009Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "twine",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Donald Stufft and individual contributors"
+      ],
+      "lastCommitDate": "2026-02-12T19:53:55Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1565,
+      "diagnosedAt": "2026-02-20T00:00:41.574Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "wheel",
+      "score": 79,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Author changed from \"Daniel Holth\" to \"Alex Grönholm\"",
+          "points": 8,
+          "confidence": "low"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "2 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "Daniel Holth"
+      ],
+      "lastCommitDate": "2026-02-15T18:18:56Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 3,
+        "critical": 0,
+        "high": 2,
+        "recent": 1,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1466,
+      "diagnosedAt": "2026-02-20T00:00:43.040Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "setuptools",
+      "score": 79,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Author changed from \"Phillip J. Eby\" to \"Python Packaging Authority\"",
+          "points": 8,
+          "confidence": "low"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "5 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "Python Packaging Authority"
+      ],
+      "lastCommitDate": "2026-02-12T00:03:48Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 7,
+        "critical": 0,
+        "high": 5,
+        "recent": 2,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1583,
+      "diagnosedAt": "2026-02-20T00:00:44.624Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "poetry",
+      "score": 67,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Author changed from \"Sébastien Eustace\" to \"Arun Babu Neelicattu\"",
+          "points": 8,
+          "confidence": "low"
+        },
+        {
+          "reason": "1 critical vulnerability(ies) in history",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "3 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "Arun Babu Neelicattu",
+        "Sébastien Eustace"
+      ],
+      "lastCommitDate": "2026-02-19T10:11:44Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 6,
+        "critical": 1,
+        "high": 3,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 2026,
+      "diagnosedAt": "2026-02-20T00:00:46.651Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "pipenv",
+      "score": 82,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Author changed from \"Kenneth Reitz\" to \"Pipenv maintainer team\"",
+          "points": 8,
+          "confidence": "low"
+        },
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "Pipenv maintainer team"
+      ],
+      "lastCommitDate": "2026-02-16T10:57:06Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 2,
+        "critical": 0,
+        "high": 1,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1939,
+      "diagnosedAt": "2026-02-20T00:00:48.590Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "hatch",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Ofek Lev"
+      ],
+      "lastCommitDate": "2026-02-19T20:33:41Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1933,
+      "diagnosedAt": "2026-02-20T00:00:50.523Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "pdm",
+      "score": 79,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Author changed from \"frostming\" to \"Frost Ming\"",
+          "points": 8,
+          "confidence": "low"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "Frost Ming"
+      ],
+      "lastCommitDate": "2026-02-05T03:07:15Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 1,
+        "critical": 0,
+        "high": 1,
+        "recent": 0,
+        "hasUnfixed": true
+      },
+      "executionTimeMs": 2112,
+      "diagnosedAt": "2026-02-20T00:00:52.635Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "flit",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Thomas Kluyver"
+      ],
+      "lastCommitDate": "2026-02-12T08:59:57Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 3153,
+      "diagnosedAt": "2026-02-20T00:00:55.788Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "build",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Filipe Laíns"
+      ],
+      "lastCommitDate": "2026-02-16T19:51:03Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1848,
+      "diagnosedAt": "2026-02-20T00:00:57.636Z"
     }
   ],
   "errors": [

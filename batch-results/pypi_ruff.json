@@ -1,0 +1,15 @@
+{
+  "ecosystem": "pypi",
+  "package": "ruff",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "\"Astral Software Inc.\""
+  ],
+  "lastCommitDate": "2026-02-20T00:00:07Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1800,
+  "diagnosedAt": "2026-02-20T00:00:26.013Z"
+}

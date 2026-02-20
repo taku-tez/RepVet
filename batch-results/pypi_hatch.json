@@ -1,0 +1,21 @@
+{
+  "ecosystem": "pypi",
+  "package": "hatch",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "Ofek Lev"
+  ],
+  "lastCommitDate": "2026-02-19T20:33:41Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1933,
+  "diagnosedAt": "2026-02-20T00:00:50.523Z"
+}

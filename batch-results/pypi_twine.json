@@ -1,0 +1,21 @@
+{
+  "ecosystem": "pypi",
+  "package": "twine",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "Donald Stufft and individual contributors"
+  ],
+  "lastCommitDate": "2026-02-12T19:53:55Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1565,
+  "diagnosedAt": "2026-02-20T00:00:41.574Z"
+}

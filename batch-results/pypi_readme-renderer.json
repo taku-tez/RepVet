@@ -1,0 +1,25 @@
+{
+  "ecosystem": "pypi",
+  "package": "readme-renderer",
+  "score": 89,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Author changed from \"Donald Stufft\" to \"The Python Packaging Authority\"",
+      "points": 8,
+      "confidence": "low"
+    },
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "The Python Packaging Authority"
+  ],
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 933,
+  "diagnosedAt": "2026-02-20T00:00:40.009Z"
+}

@@ -1,0 +1,22 @@
+{
+  "ecosystem": "pypi",
+  "package": "flake8",
+  "score": 92,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Author changed from \"Tarek Ziade\" to \"Ian Stapleton Cordasco\"",
+      "points": 8,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "Ian Stapleton Cordasco",
+    "Tarek Ziade"
+  ],
+  "lastCommitDate": "2025-12-22T21:54:36Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1605,
+  "diagnosedAt": "2026-02-20T00:00:27.620Z"
+}

@@ -1,0 +1,39 @@
+{
+  "ecosystem": "pypi",
+  "package": "poetry",
+  "score": 67,
+  "riskLevel": "MEDIUM",
+  "deductions": [
+    {
+      "reason": "Author changed from \"Sébastien Eustace\" to \"Arun Babu Neelicattu\"",
+      "points": 8,
+      "confidence": "low"
+    },
+    {
+      "reason": "1 critical vulnerability(ies) in history",
+      "points": 15,
+      "confidence": "high"
+    },
+    {
+      "reason": "3 high severity vulnerability(ies) in history",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "Arun Babu Neelicattu",
+    "Sébastien Eustace"
+  ],
+  "lastCommitDate": "2026-02-19T10:11:44Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 6,
+    "critical": 1,
+    "high": 3,
+    "recent": 0,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 2026,
+  "diagnosedAt": "2026-02-20T00:00:46.651Z"
+}
