@@ -1,0 +1,22 @@
+{
+  "ecosystem": "pypi",
+  "package": "chardet",
+  "score": 92,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Author changed from \"Mark Pilgrim\" to \"Daniel Blanchard\"",
+      "points": 8,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "Daniel Blanchard",
+    "Mark Pilgrim"
+  ],
+  "lastCommitDate": "2026-01-05T19:39:45Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1391,
+  "diagnosedAt": "2026-02-20T04:30:15.226Z"
+}

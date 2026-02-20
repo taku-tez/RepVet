@@ -1,11 +1,11 @@
 {
   "ecosystem": "pypi",
-  "package": "imageio",
+  "package": "charset-normalizer",
   "score": 89,
   "riskLevel": "LOW",
   "deductions": [
     {
-      "reason": "Author changed from \"imageio contributers\" to \"Sebastian Wallkotter\"",
+      "reason": "Author changed from \"Ahmed TAHRI @Ousret\" to \"\"Ahmed R. TAHRI\"\"",
       "points": 8,
       "confidence": "low"
     },
@@ -16,11 +16,11 @@
     }
   ],
   "maintainers": [
-    "ImageIO contributors"
+    "\"Ahmed R. TAHRI\""
   ],
-  "lastCommitDate": "2025-11-04T14:29:24Z",
+  "lastCommitDate": "2026-02-03T09:39:36Z",
   "hasOwnershipTransfer": true,
   "hasMalwareHistory": false,
-  "executionTimeMs": 1311,
-  "diagnosedAt": "2026-02-20T04:30:22.055Z"
+  "executionTimeMs": 1227,
+  "diagnosedAt": "2026-02-20T04:30:16.454Z"
 }

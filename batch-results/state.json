@@ -1,5 +1,5 @@
 {
-  "currentIndex": 2260,
+  "currentIndex": 2280,
   "totalPackages": 4957,
   "results": [
     {
@@ -54270,6 +54270,585 @@
       },
       "executionTimeMs": 959,
       "diagnosedAt": "2026-02-20T04:15:40.054Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "chardet",
+      "score": 92,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Author changed from \"Mark Pilgrim\" to \"Daniel Blanchard\"",
+          "points": 8,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Daniel Blanchard",
+        "Mark Pilgrim"
+      ],
+      "lastCommitDate": "2026-01-05T19:39:45Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1391,
+      "diagnosedAt": "2026-02-20T04:30:15.226Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "charset-normalizer",
+      "score": 89,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Author changed from \"Ahmed TAHRI @Ousret\" to \"\"Ahmed R. TAHRI\"\"",
+          "points": 8,
+          "confidence": "low"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "\"Ahmed R. TAHRI\""
+      ],
+      "lastCommitDate": "2026-02-03T09:39:36Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1227,
+      "diagnosedAt": "2026-02-20T04:30:16.454Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "pillow",
+      "score": 81,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Author changed from \"Alex Clark (fork author)\" to \"\"Jeffrey A. Clark\"\"",
+          "points": 8,
+          "confidence": "low"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "14 critical vulnerability(ies) in history",
+          "points": 8,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "\"Jeffrey A. Clark\""
+      ],
+      "lastCommitDate": "2026-02-19T12:09:59Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 112,
+        "critical": 14,
+        "high": 36,
+        "recent": 3,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 3848,
+      "diagnosedAt": "2026-02-20T04:30:20.303Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "pil",
+      "score": 95,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "Secret Labs AB (PythonWare)"
+      ],
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 440,
+      "diagnosedAt": "2026-02-20T04:30:20.744Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "imageio",
+      "score": 89,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Author changed from \"imageio contributers\" to \"Sebastian Wallkotter\"",
+          "points": 8,
+          "confidence": "low"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "ImageIO contributors"
+      ],
+      "lastCommitDate": "2025-11-04T14:29:24Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1311,
+      "diagnosedAt": "2026-02-20T04:30:22.055Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "opencv-python",
+      "score": 92,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Author changed from \"Olli-Pekka Heinisuo\" to \"OpenCV Team\"",
+          "points": 8,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "OpenCV Team"
+      ],
+      "lastCommitDate": "2026-02-03T07:13:13Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 32,
+        "critical": 0,
+        "high": 23,
+        "recent": 0,
+        "hasUnfixed": true
+      },
+      "executionTimeMs": 2275,
+      "diagnosedAt": "2026-02-20T04:30:24.331Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "opencv-python-headless",
+      "score": 82,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Author changed from \"Olli-Pekka Heinisuo\" to \"OpenCV Team\"",
+          "points": 8,
+          "confidence": "low"
+        },
+        {
+          "reason": "7 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "OpenCV Team"
+      ],
+      "lastCommitDate": "2026-02-03T07:13:13Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 11,
+        "critical": 0,
+        "high": 7,
+        "recent": 0,
+        "hasUnfixed": true
+      },
+      "executionTimeMs": 1562,
+      "diagnosedAt": "2026-02-20T04:30:25.894Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "numpy",
+      "score": 72,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "1 critical vulnerability(ies) in history",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "4 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "Travis E. Oliphant et al."
+      ],
+      "lastCommitDate": "2026-02-19T13:39:10Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 16,
+        "critical": 1,
+        "high": 4,
+        "recent": 0,
+        "hasUnfixed": true
+      },
+      "executionTimeMs": 1604,
+      "diagnosedAt": "2026-02-20T04:30:27.498Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "pandas",
+      "score": 92,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Author changed from \"AQR Capital Management, LLC\" to \"The Pandas Development Team\"",
+          "points": 8,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "The Pandas Development Team"
+      ],
+      "lastCommitDate": "2026-02-19T23:04:58Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 1,
+        "critical": 0,
+        "high": 0,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1061,
+      "diagnosedAt": "2026-02-20T04:30:28.560Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "scipy",
+      "score": 90,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "Unknown"
+      ],
+      "lastCommitDate": "2026-02-20T00:56:56Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 4,
+        "critical": 0,
+        "high": 1,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1418,
+      "diagnosedAt": "2026-02-20T04:30:29.979Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "matplotlib",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "John D. Hunter",
+        "Michael Droettboom"
+      ],
+      "lastCommitDate": "2026-02-18T08:43:13Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 996,
+      "diagnosedAt": "2026-02-20T04:30:30.975Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "scikit-learn",
+      "score": 67,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Author changed from \"Fabian Pedregosa\" to \"scikit-learn developers\"",
+          "points": 8,
+          "confidence": "low"
+        },
+        {
+          "reason": "1 critical vulnerability(ies) in history",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "Unknown"
+      ],
+      "lastCommitDate": "2026-02-19T16:19:59Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 6,
+        "critical": 1,
+        "high": 1,
+        "recent": 0,
+        "hasUnfixed": true
+      },
+      "executionTimeMs": 1149,
+      "diagnosedAt": "2026-02-20T04:30:32.124Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "tensorflow",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "Google Inc."
+      ],
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 17448,
+      "diagnosedAt": "2026-02-20T04:30:49.572Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "torch",
+      "score": 75,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "4 critical vulnerability(ies) in history",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "2 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "PyTorch Team"
+      ],
+      "lastCommitDate": "2026-02-20T04:30:03Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 12,
+        "critical": 4,
+        "high": 2,
+        "recent": 4,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1402,
+      "diagnosedAt": "2026-02-20T04:30:50.974Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "keras",
+      "score": 67,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Author changed from \"Francois Chollet\" to \"Keras team\"",
+          "points": 8,
+          "confidence": "low"
+        },
+        {
+          "reason": "3 critical vulnerability(ies) in history",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "5 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "Keras team"
+      ],
+      "lastCommitDate": "2026-02-20T01:14:24Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 10,
+        "critical": 3,
+        "high": 5,
+        "recent": 8,
+        "hasUnfixed": true
+      },
+      "executionTimeMs": 1481,
+      "diagnosedAt": "2026-02-20T04:30:52.455Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "jax",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "JAX team"
+      ],
+      "lastCommitDate": "2026-02-20T04:08:48Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1630,
+      "diagnosedAt": "2026-02-20T04:30:54.086Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "transformers",
+      "score": 79,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Author changed from \"Vladimir Iakovlev\" to \"The Hugging Face team (past and future) with the help of all our contributors (https://github.com/huggingface/transformers/graphs/contributors)\"",
+          "points": 8,
+          "confidence": "low"
+        },
+        {
+          "reason": "1 critical vulnerability(ies) in history",
+          "points": 8,
+          "confidence": "low"
+        },
+        {
+          "reason": "13 vulnerabilities in the past year",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "The Hugging Face team (past",
+        "future) with the help of all our contributors (https://github.com/huggingface/transformers/graphs/contributors)"
+      ],
+      "lastCommitDate": "2026-02-20T03:23:46Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 26,
+        "critical": 1,
+        "high": 10,
+        "recent": 13,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1923,
+      "diagnosedAt": "2026-02-20T04:30:56.009Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "django",
+      "score": 87,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "18 critical vulnerability(ies) in history",
+          "points": 8,
+          "confidence": "low"
+        },
+        {
+          "reason": "19 vulnerabilities in the past year",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "Django Software Foundation"
+      ],
+      "lastCommitDate": "2026-02-19T16:33:48Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 263,
+        "critical": 18,
+        "high": 67,
+        "recent": 19,
+        "hasUnfixed": true
+      },
+      "executionTimeMs": 6479,
+      "diagnosedAt": "2026-02-20T04:31:02.490Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "flask",
+      "score": 82,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Author changed from \"Armin Ronacher\" to \"Pallets\"",
+          "points": 8,
+          "confidence": "low"
+        },
+        {
+          "reason": "3 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "Unknown"
+      ],
+      "lastCommitDate": "2026-02-20T04:00:36Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 7,
+        "critical": 0,
+        "high": 3,
+        "recent": 1,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1273,
+      "diagnosedAt": "2026-02-20T04:31:03.763Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "fastapi",
+      "score": 87,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "2 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "Sebastián Ramírez"
+      ],
+      "lastCommitDate": "2026-02-19T13:16:40Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 3,
+        "critical": 0,
+        "high": 2,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 2055,
+      "diagnosedAt": "2026-02-20T04:31:05.818Z"
     }
   ],
   "errors": [
