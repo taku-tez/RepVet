@@ -1,0 +1,31 @@
+{
+  "ecosystem": "pypi",
+  "package": "igraph",
+  "score": 84,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "High yanked version ratio (15 yanked versions)",
+      "points": 5,
+      "confidence": "medium"
+    },
+    {
+      "reason": "Author changed from \"Patrick Fuller\" to \"Tamas Nepusz\"",
+      "points": 8,
+      "confidence": "low"
+    },
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "Tamas Nepusz"
+  ],
+  "lastCommitDate": "2026-01-12T17:09:43Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2296,
+  "diagnosedAt": "2026-02-20T02:45:37.274Z"
+}

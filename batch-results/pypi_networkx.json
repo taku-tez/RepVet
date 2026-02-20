@@ -1,11 +1,11 @@
 {
   "ecosystem": "pypi",
-  "package": "imageio",
+  "package": "networkx",
   "score": 89,
   "riskLevel": "LOW",
   "deductions": [
     {
-      "reason": "Author changed from \"imageio contributers\" to \"Sebastian Wallkotter\"",
+      "reason": "Author changed from \"Aric Hagberg\" to \"NetworkX Developers\"",
       "points": 8,
       "confidence": "low"
     },
@@ -16,11 +16,11 @@
     }
   ],
   "maintainers": [
-    "ImageIO contributors"
+    "Aric Hagberg"
   ],
-  "lastCommitDate": "2025-11-04T14:29:24Z",
+  "lastCommitDate": "2026-02-18T16:45:08Z",
   "hasOwnershipTransfer": true,
   "hasMalwareHistory": false,
-  "executionTimeMs": 924,
-  "diagnosedAt": "2026-02-20T02:45:28.929Z"
+  "executionTimeMs": 2121,
+  "diagnosedAt": "2026-02-20T02:45:34.978Z"
 }

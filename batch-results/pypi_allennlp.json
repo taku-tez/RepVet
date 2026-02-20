@@ -1,0 +1,31 @@
+{
+  "ecosystem": "pypi",
+  "package": "allennlp",
+  "score": 67,
+  "riskLevel": "MEDIUM",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    },
+    {
+      "reason": "Repository is archived (no longer maintained)",
+      "points": 15,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 3 years ago (3 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "Allen Institute for Artificial Intelligence"
+  ],
+  "lastCommitDate": "2022-11-22T23:28:35Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2088,
+  "diagnosedAt": "2026-02-20T02:45:19.063Z"
+}

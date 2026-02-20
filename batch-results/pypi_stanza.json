@@ -1,11 +1,11 @@
 {
   "ecosystem": "pypi",
-  "package": "imageio",
+  "package": "stanza",
   "score": 89,
   "riskLevel": "LOW",
   "deductions": [
     {
-      "reason": "Author changed from \"imageio contributers\" to \"Sebastian Wallkotter\"",
+      "reason": "Author changed from \"Stanford NLP\" to \"Stanford Natural Language Processing Group\"",
       "points": 8,
       "confidence": "low"
     },
@@ -16,11 +16,11 @@
     }
   ],
   "maintainers": [
-    "ImageIO contributors"
+    "Stanford Natural Language Processing Group"
   ],
-  "lastCommitDate": "2025-11-04T14:29:24Z",
+  "lastCommitDate": "2026-02-19T22:28:43Z",
   "hasOwnershipTransfer": true,
   "hasMalwareHistory": false,
-  "executionTimeMs": 924,
-  "diagnosedAt": "2026-02-20T02:45:28.929Z"
+  "executionTimeMs": 1772,
+  "diagnosedAt": "2026-02-20T02:45:16.509Z"
 }

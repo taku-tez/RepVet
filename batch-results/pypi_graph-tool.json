@@ -1,6 +1,6 @@
 {
   "ecosystem": "pypi",
-  "package": "simpleitk",
+  "package": "graph-tool",
   "score": 97,
   "riskLevel": "LOW",
   "deductions": [
@@ -11,11 +11,10 @@
     }
   ],
   "maintainers": [
-    "Insight Software Consortium"
+    "Tiago de Paula Peixoto"
   ],
-  "lastCommitDate": "2026-02-07T07:00:49Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
-  "executionTimeMs": 900,
-  "diagnosedAt": "2026-02-20T02:45:31.705Z"
+  "executionTimeMs": 675,
+  "diagnosedAt": "2026-02-20T02:45:37.949Z"
 }

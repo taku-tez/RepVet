@@ -532,5 +532,17 @@
     "package": "dask-array",
     "error": "Exit code 1: {\"error\":\"Error: Package not found: dask-array (pypi)\"}\n",
     "timestamp": "2026-02-20T02:00:27.330Z"
+  },
+  {
+    "ecosystem": "pypi",
+    "package": " flair",
+    "error": "Exit code 1: {\"error\":\"Error: Package not found:  flair (pypi)\"}\n",
+    "timestamp": "2026-02-20T02:45:16.975Z"
+  },
+  {
+    "ecosystem": "pypi",
+    "package": "pygraphistry",
+    "error": "Exit code 1: {\"error\":\"Error: Package not found: pygraphistry (pypi)\"}\n",
+    "timestamp": "2026-02-20T02:45:38.420Z"
   }
 ]

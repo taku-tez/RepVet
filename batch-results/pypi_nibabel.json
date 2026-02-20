@@ -1,11 +1,11 @@
 {
   "ecosystem": "pypi",
-  "package": "imageio",
+  "package": "nibabel",
   "score": 89,
   "riskLevel": "LOW",
   "deductions": [
     {
-      "reason": "Author changed from \"imageio contributers\" to \"Sebastian Wallkotter\"",
+      "reason": "Author changed from \"Matthew Brett and Michael Hanke\" to \"Christopher Markiewicz\"",
       "points": 8,
       "confidence": "low"
     },
@@ -16,11 +16,10 @@
     }
   ],
   "maintainers": [
-    "ImageIO contributors"
+    "Christopher Markiewicz"
   ],
-  "lastCommitDate": "2025-11-04T14:29:24Z",
   "hasOwnershipTransfer": true,
   "hasMalwareHistory": false,
-  "executionTimeMs": 924,
-  "diagnosedAt": "2026-02-20T02:45:28.929Z"
+  "executionTimeMs": 1150,
+  "diagnosedAt": "2026-02-20T02:45:32.856Z"
 }
