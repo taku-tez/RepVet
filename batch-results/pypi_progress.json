@@ -1,0 +1,26 @@
+{
+  "ecosystem": "pypi",
+  "package": "progress",
+  "score": 87,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Author changed from \"Giorgos Verigakis\" to \"Georgios Verigakis\"",
+      "points": 8,
+      "confidence": "low"
+    },
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "Georgios Verigakis"
+  ],
+  "lastCommitDate": "2025-07-01T05:18:14Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1322,
+  "diagnosedAt": "2026-02-20T00:15:38.716Z"
+}

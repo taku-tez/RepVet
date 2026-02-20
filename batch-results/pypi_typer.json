@@ -1,0 +1,21 @@
+{
+  "ecosystem": "pypi",
+  "package": "typer",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "Sebastián Ramírez"
+  ],
+  "lastCommitDate": "2026-02-19T11:15:31Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 872,
+  "diagnosedAt": "2026-02-20T00:15:12.944Z"
+}

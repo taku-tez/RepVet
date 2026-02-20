@@ -1,5 +1,5 @@
 {
-  "currentIndex": 1940,
+  "currentIndex": 1960,
   "totalPackages": 4957,
   "results": [
     {
@@ -46607,6 +46607,485 @@
       "hasMalwareHistory": false,
       "executionTimeMs": 1848,
       "diagnosedAt": "2026-02-20T00:00:57.636Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "installer",
+      "score": 87,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Author changed from \"Dan Ryan and Tzu-ping Chung\" to \"Pradyun Gedam\"",
+          "points": 8,
+          "confidence": "low"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "Pradyun Gedam"
+      ],
+      "lastCommitDate": "2026-02-16T18:31:38Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1796,
+      "diagnosedAt": "2026-02-20T00:15:10.500Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "click",
+      "score": 92,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Author changed from \"Armin Ronacher\" to \"Pallets\"",
+          "points": 8,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Unknown"
+      ],
+      "lastCommitDate": "2025-12-31T06:51:28Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1572,
+      "diagnosedAt": "2026-02-20T00:15:12.072Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "typer",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Sebastián Ramírez"
+      ],
+      "lastCommitDate": "2026-02-19T11:15:31Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 872,
+      "diagnosedAt": "2026-02-20T00:15:12.944Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "argparse",
+      "score": 57,
+      "riskLevel": "HIGH",
+      "deductions": [
+        {
+          "reason": "Author changed from \"Steven Bethard\" to \"Thomas Waldmann\"",
+          "points": 8,
+          "confidence": "low"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        },
+        {
+          "reason": "Repository is archived (no longer maintained)",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 3 years ago (5 years)",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "Thomas Waldmann"
+      ],
+      "lastCommitDate": "2021-05-13T08:12:48Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1746,
+      "diagnosedAt": "2026-02-20T00:15:14.691Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "docopt",
+      "score": 95,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "Vladimir Keleshev"
+      ],
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1383,
+      "diagnosedAt": "2026-02-20T00:15:16.074Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "fire",
+      "score": 95,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "David Bieber"
+      ],
+      "lastCommitDate": "2026-02-01T08:17:46Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1806,
+      "diagnosedAt": "2026-02-20T00:15:17.880Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "plac",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Michele Simionato"
+      ],
+      "lastCommitDate": "2025-04-04T14:04:30Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2018,
+      "diagnosedAt": "2026-02-20T00:15:19.898Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "cliff",
+      "score": 89,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Author changed from \"Doug Hellmann\" to \"OpenStack\"",
+          "points": 8,
+          "confidence": "low"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "OpenStack"
+      ],
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1508,
+      "diagnosedAt": "2026-02-20T00:15:21.406Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "cmd2",
+      "score": 89,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Author changed from \"Catherine Devlin\" to \"cmd2 Contributors\"",
+          "points": 8,
+          "confidence": "low"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "cmd2 Contributors"
+      ],
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1417,
+      "diagnosedAt": "2026-02-20T00:15:22.823Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "rich",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Will McGugan"
+      ],
+      "lastCommitDate": "2026-02-19T17:26:17Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1360,
+      "diagnosedAt": "2026-02-20T00:15:24.183Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "colorama",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Jonathan Hartley"
+      ],
+      "lastCommitDate": "2025-07-09T17:06:02Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1303,
+      "diagnosedAt": "2026-02-20T00:15:25.486Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "termcolor",
+      "score": 87,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Author changed from \"Konstantin Lepa\" to \"Hugo van Kemenade\"",
+          "points": 8,
+          "confidence": "low"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "Hugo van Kemenade"
+      ],
+      "lastCommitDate": "2026-01-06T05:49:10Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2106,
+      "diagnosedAt": "2026-02-20T00:15:27.593Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "blessed",
+      "score": 89,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Author changed from \"Jeff Quast\" to \"\"Jeff Quast, Erik Rose, Avram Lubkin\"\"",
+          "points": 8,
+          "confidence": "low"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "\"Jeff Quast, Erik Rose, Avram Lubkin\""
+      ],
+      "lastCommitDate": "2026-02-07T00:03:18Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1582,
+      "diagnosedAt": "2026-02-20T00:15:29.175Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "urwid",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Ian Ward"
+      ],
+      "lastCommitDate": "2026-02-16T03:23:30Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1876,
+      "diagnosedAt": "2026-02-20T00:15:31.051Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "prompt-toolkit",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Jonathan Slenders"
+      ],
+      "lastCommitDate": "2025-11-17T08:33:22Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1624,
+      "diagnosedAt": "2026-02-20T00:15:32.675Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "questionary",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Tom Bocklisch"
+      ],
+      "lastCommitDate": "2026-02-12T12:49:01Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1550,
+      "diagnosedAt": "2026-02-20T00:15:34.225Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "tqdm",
+      "score": 82,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Author changed from \"Tqdm team\" to \"tqdm developers\"",
+          "points": 8,
+          "confidence": "low"
+        },
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "Unknown"
+      ],
+      "lastCommitDate": "2026-02-14T00:27:00Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 3,
+        "critical": 0,
+        "high": 1,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1465,
+      "diagnosedAt": "2026-02-20T00:15:35.690Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "alive-progress",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Rogério Sampaio de Almeida"
+      ],
+      "lastCommitDate": "2025-10-10T00:39:31Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1703,
+      "diagnosedAt": "2026-02-20T00:15:37.394Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "progress",
+      "score": 87,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Author changed from \"Giorgos Verigakis\" to \"Georgios Verigakis\"",
+          "points": 8,
+          "confidence": "low"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "Georgios Verigakis"
+      ],
+      "lastCommitDate": "2025-07-01T05:18:14Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1322,
+      "diagnosedAt": "2026-02-20T00:15:38.716Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "halo",
+      "score": 92,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "Last commit over 1 year ago (613 days)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "Manraj Singh"
+      ],
+      "lastCommitDate": "2024-06-16T08:11:53Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2122,
+      "diagnosedAt": "2026-02-20T00:15:40.838Z"
     }
   ],
   "errors": [

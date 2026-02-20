@@ -1,0 +1,26 @@
+{
+  "ecosystem": "pypi",
+  "package": "installer",
+  "score": 87,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Author changed from \"Dan Ryan and Tzu-ping Chung\" to \"Pradyun Gedam\"",
+      "points": 8,
+      "confidence": "low"
+    },
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "Pradyun Gedam"
+  ],
+  "lastCommitDate": "2026-02-16T18:31:38Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1796,
+  "diagnosedAt": "2026-02-20T00:15:10.500Z"
+}

@@ -1,0 +1,36 @@
+{
+  "ecosystem": "pypi",
+  "package": "argparse",
+  "score": 57,
+  "riskLevel": "HIGH",
+  "deductions": [
+    {
+      "reason": "Author changed from \"Steven Bethard\" to \"Thomas Waldmann\"",
+      "points": 8,
+      "confidence": "low"
+    },
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    },
+    {
+      "reason": "Repository is archived (no longer maintained)",
+      "points": 15,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 3 years ago (5 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "Thomas Waldmann"
+  ],
+  "lastCommitDate": "2021-05-13T08:12:48Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1746,
+  "diagnosedAt": "2026-02-20T00:15:14.691Z"
+}

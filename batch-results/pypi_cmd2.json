@@ -1,0 +1,25 @@
+{
+  "ecosystem": "pypi",
+  "package": "cmd2",
+  "score": 89,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Author changed from \"Catherine Devlin\" to \"cmd2 Contributors\"",
+      "points": 8,
+      "confidence": "low"
+    },
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "cmd2 Contributors"
+  ],
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1417,
+  "diagnosedAt": "2026-02-20T00:15:22.823Z"
+}

@@ -1,0 +1,21 @@
+{
+  "ecosystem": "pypi",
+  "package": "prompt-toolkit",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "Jonathan Slenders"
+  ],
+  "lastCommitDate": "2025-11-17T08:33:22Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1624,
+  "diagnosedAt": "2026-02-20T00:15:32.675Z"
+}

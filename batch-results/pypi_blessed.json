@@ -1,0 +1,26 @@
+{
+  "ecosystem": "pypi",
+  "package": "blessed",
+  "score": 89,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Author changed from \"Jeff Quast\" to \"\"Jeff Quast, Erik Rose, Avram Lubkin\"\"",
+      "points": 8,
+      "confidence": "low"
+    },
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "\"Jeff Quast, Erik Rose, Avram Lubkin\""
+  ],
+  "lastCommitDate": "2026-02-07T00:03:18Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1582,
+  "diagnosedAt": "2026-02-20T00:15:29.175Z"
+}

@@ -1,0 +1,26 @@
+{
+  "ecosystem": "pypi",
+  "package": "halo",
+  "score": 92,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    },
+    {
+      "reason": "Last commit over 1 year ago (613 days)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "Manraj Singh"
+  ],
+  "lastCommitDate": "2024-06-16T08:11:53Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2122,
+  "diagnosedAt": "2026-02-20T00:15:40.838Z"
+}

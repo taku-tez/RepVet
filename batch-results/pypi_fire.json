@@ -1,0 +1,21 @@
+{
+  "ecosystem": "pypi",
+  "package": "fire",
+  "score": 95,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "David Bieber"
+  ],
+  "lastCommitDate": "2026-02-01T08:17:46Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1806,
+  "diagnosedAt": "2026-02-20T00:15:17.880Z"
+}

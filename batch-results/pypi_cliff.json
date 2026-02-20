@@ -1,0 +1,25 @@
+{
+  "ecosystem": "pypi",
+  "package": "cliff",
+  "score": 89,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Author changed from \"Doug Hellmann\" to \"OpenStack\"",
+      "points": 8,
+      "confidence": "low"
+    },
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "OpenStack"
+  ],
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1508,
+  "diagnosedAt": "2026-02-20T00:15:21.406Z"
+}

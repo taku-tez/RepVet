@@ -1,0 +1,21 @@
+{
+  "ecosystem": "pypi",
+  "package": "alive-progress",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "Rogério Sampaio de Almeida"
+  ],
+  "lastCommitDate": "2025-10-10T00:39:31Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1703,
+  "diagnosedAt": "2026-02-20T00:15:37.394Z"
+}

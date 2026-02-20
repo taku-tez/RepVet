@@ -1,0 +1,21 @@
+{
+  "ecosystem": "pypi",
+  "package": "click",
+  "score": 92,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Author changed from \"Armin Ronacher\" to \"Pallets\"",
+      "points": 8,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "Unknown"
+  ],
+  "lastCommitDate": "2025-12-31T06:51:28Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1572,
+  "diagnosedAt": "2026-02-20T00:15:12.072Z"
+}

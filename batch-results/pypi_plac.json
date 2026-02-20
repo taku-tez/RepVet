@@ -1,0 +1,21 @@
+{
+  "ecosystem": "pypi",
+  "package": "plac",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "Michele Simionato"
+  ],
+  "lastCommitDate": "2025-04-04T14:04:30Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2018,
+  "diagnosedAt": "2026-02-20T00:15:19.898Z"
+}
