@@ -1,5 +1,5 @@
 {
-  "currentIndex": 2380,
+  "currentIndex": 2390,
   "totalPackages": 4957,
   "results": [
     {
@@ -57409,6 +57409,297 @@
       "hasMalwareHistory": false,
       "executionTimeMs": 877,
       "diagnosedAt": "2026-02-20T05:39:35.928Z"
+    },
+    {
+      "ecosystem": "packagist",
+      "package": "symfony/http-kernel",
+      "score": 87,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "3 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "fabpot"
+      ],
+      "lastCommitDate": "2026-02-17T13:09:04Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 7,
+        "critical": 0,
+        "high": 3,
+        "recent": 0,
+        "hasUnfixed": true
+      },
+      "executionTimeMs": 2230,
+      "diagnosedAt": "2026-02-20T05:45:06.429Z"
+    },
+    {
+      "ecosystem": "packagist",
+      "package": "symfony/http-foundation",
+      "score": 72,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "1 critical vulnerability(ies) in history",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "3 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "fabpot"
+      ],
+      "lastCommitDate": "2026-02-18T09:40:29Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 13,
+        "critical": 1,
+        "high": 3,
+        "recent": 1,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 2373,
+      "diagnosedAt": "2026-02-20T05:45:08.803Z"
+    },
+    {
+      "ecosystem": "packagist",
+      "package": "symfony/event-dispatcher",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "fabpot"
+      ],
+      "lastCommitDate": "2026-01-25T08:31:05Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1889,
+      "diagnosedAt": "2026-02-20T05:45:10.692Z"
+    },
+    {
+      "ecosystem": "packagist",
+      "package": "symfony/dependency-injection",
+      "score": 72,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "1 critical vulnerability(ies) in history",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "fabpot"
+      ],
+      "lastCommitDate": "2026-02-17T13:09:06Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 2,
+        "critical": 1,
+        "high": 1,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1925,
+      "diagnosedAt": "2026-02-20T05:45:12.617Z"
+    },
+    {
+      "ecosystem": "packagist",
+      "package": "symfony/config",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "fabpot"
+      ],
+      "lastCommitDate": "2026-01-25T08:23:53Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1451,
+      "diagnosedAt": "2026-02-20T05:45:14.069Z"
+    },
+    {
+      "ecosystem": "packagist",
+      "package": "symfony/yaml",
+      "score": 87,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "2 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "fabpot"
+      ],
+      "lastCommitDate": "2026-02-14T11:36:02Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 2,
+        "critical": 0,
+        "high": 2,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1704,
+      "diagnosedAt": "2026-02-20T05:45:15.773Z"
+    },
+    {
+      "ecosystem": "packagist",
+      "package": "symfony/expression-language",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "fabpot"
+      ],
+      "lastCommitDate": "2026-01-31T09:24:55Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2011,
+      "diagnosedAt": "2026-02-20T05:45:17.784Z"
+    },
+    {
+      "ecosystem": "packagist",
+      "package": "symfony/security",
+      "score": 42,
+      "riskLevel": "HIGH",
+      "deductions": [
+        {
+          "reason": "Package marked as abandoned",
+          "points": 10,
+          "confidence": "high"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "Repository is archived (no longer maintained)",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 1 year ago (663 days)",
+          "points": 5,
+          "confidence": "high"
+        },
+        {
+          "reason": "3 critical vulnerability(ies) in history",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "7 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "fabpot"
+      ],
+      "lastCommitDate": "2024-04-27T09:08:06Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 17,
+        "critical": 3,
+        "high": 7,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 2152,
+      "diagnosedAt": "2026-02-20T05:45:19.936Z"
+    },
+    {
+      "ecosystem": "packagist",
+      "package": "symfony/validator",
+      "score": 87,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "2 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "fabpot"
+      ],
+      "lastCommitDate": "2026-02-18T13:09:36Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 3,
+        "critical": 0,
+        "high": 2,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 2193,
+      "diagnosedAt": "2026-02-20T05:45:22.470Z"
     }
   ],
   "errors": [
@@ -58023,6 +58314,12 @@
       "package": "checkout-sdk-python",
       "error": "Exit code 1: {\"error\":\"Error: Package not found: checkout-sdk-python (pypi)\"}\n",
       "timestamp": "2026-02-20T05:39:31.155Z"
+    },
+    {
+      "ecosystem": "packagist",
+      "package": "symfony/acl",
+      "error": "Exit code 1: {\"error\":\"Error: Package not found: symfony/acl (packagist)\"}\n",
+      "timestamp": "2026-02-20T05:45:20.277Z"
     }
   ],
   "startTime": "2026-02-19T12:29:21.598Z"

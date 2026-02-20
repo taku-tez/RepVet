@@ -610,5 +610,11 @@
     "package": "checkout-sdk-python",
     "error": "Exit code 1: {\"error\":\"Error: Package not found: checkout-sdk-python (pypi)\"}\n",
     "timestamp": "2026-02-20T05:39:31.155Z"
+  },
+  {
+    "ecosystem": "packagist",
+    "package": "symfony/acl",
+    "error": "Exit code 1: {\"error\":\"Error: Package not found: symfony/acl (packagist)\"}\n",
+    "timestamp": "2026-02-20T05:45:20.277Z"
   }
 ]

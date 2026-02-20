@@ -1,0 +1,21 @@
+{
+  "ecosystem": "packagist",
+  "package": "symfony/config",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "fabpot"
+  ],
+  "lastCommitDate": "2026-01-25T08:23:53Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1451,
+  "diagnosedAt": "2026-02-20T05:45:14.069Z"
+}

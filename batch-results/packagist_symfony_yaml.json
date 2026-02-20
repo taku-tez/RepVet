@@ -1,0 +1,33 @@
+{
+  "ecosystem": "packagist",
+  "package": "symfony/yaml",
+  "score": 87,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    },
+    {
+      "reason": "2 high severity vulnerability(ies) in history",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "fabpot"
+  ],
+  "lastCommitDate": "2026-02-14T11:36:02Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 2,
+    "critical": 0,
+    "high": 2,
+    "recent": 0,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 1704,
+  "diagnosedAt": "2026-02-20T05:45:15.773Z"
+}

@@ -1,0 +1,53 @@
+{
+  "ecosystem": "packagist",
+  "package": "symfony/security",
+  "score": 42,
+  "riskLevel": "HIGH",
+  "deductions": [
+    {
+      "reason": "Package marked as abandoned",
+      "points": 10,
+      "confidence": "high"
+    },
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    },
+    {
+      "reason": "Repository is archived (no longer maintained)",
+      "points": 15,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 1 year ago (663 days)",
+      "points": 5,
+      "confidence": "high"
+    },
+    {
+      "reason": "3 critical vulnerability(ies) in history",
+      "points": 15,
+      "confidence": "high"
+    },
+    {
+      "reason": "7 high severity vulnerability(ies) in history",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "fabpot"
+  ],
+  "lastCommitDate": "2024-04-27T09:08:06Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 17,
+    "critical": 3,
+    "high": 7,
+    "recent": 0,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 2152,
+  "diagnosedAt": "2026-02-20T05:45:19.936Z"
+}
