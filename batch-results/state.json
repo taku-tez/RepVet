@@ -1,5 +1,5 @@
 {
-  "currentIndex": 2390,
+  "currentIndex": 2400,
   "totalPackages": 4957,
   "results": [
     {
@@ -57700,6 +57700,275 @@
       },
       "executionTimeMs": 2193,
       "diagnosedAt": "2026-02-20T05:45:22.470Z"
+    },
+    {
+      "ecosystem": "packagist",
+      "package": "symfony/form",
+      "score": 87,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "fabpot"
+      ],
+      "lastCommitDate": "2026-02-10T14:44:19Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 3,
+        "critical": 0,
+        "high": 1,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 2074,
+      "diagnosedAt": "2026-02-20T06:29:34.356Z"
+    },
+    {
+      "ecosystem": "packagist",
+      "package": "symfony/serializer",
+      "score": 82,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "1 critical vulnerability(ies) in history",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "fabpot"
+      ],
+      "lastCommitDate": "2026-02-17T13:09:02Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 2,
+        "critical": 1,
+        "high": 0,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 2210,
+      "diagnosedAt": "2026-02-20T06:29:36.567Z"
+    },
+    {
+      "ecosystem": "packagist",
+      "package": "symfony/property-access",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "fabpot"
+      ],
+      "lastCommitDate": "2026-01-25T08:30:32Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1638,
+      "diagnosedAt": "2026-02-20T06:29:38.205Z"
+    },
+    {
+      "ecosystem": "packagist",
+      "package": "symfony/property-info",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "fabpot"
+      ],
+      "lastCommitDate": "2026-02-13T12:39:40Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1436,
+      "diagnosedAt": "2026-02-20T06:29:39.641Z"
+    },
+    {
+      "ecosystem": "packagist",
+      "package": "symfony/cache",
+      "score": 72,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "1 critical vulnerability(ies) in history",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "fabpot"
+      ],
+      "lastCommitDate": "2026-02-14T18:11:30Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 2,
+        "critical": 1,
+        "high": 1,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1596,
+      "diagnosedAt": "2026-02-20T06:29:41.237Z"
+    },
+    {
+      "ecosystem": "packagist",
+      "package": "symfony/translation",
+      "score": 87,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "fabpot"
+      ],
+      "lastCommitDate": "2026-02-17T13:09:04Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 1,
+        "critical": 0,
+        "high": 1,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 2074,
+      "diagnosedAt": "2026-02-20T06:29:43.311Z"
+    },
+    {
+      "ecosystem": "packagist",
+      "package": "symfony/intl",
+      "score": 87,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "fabpot"
+      ],
+      "lastCommitDate": "2026-02-11T15:16:22Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 1,
+        "critical": 0,
+        "high": 1,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1693,
+      "diagnosedAt": "2026-02-20T06:29:45.005Z"
+    },
+    {
+      "ecosystem": "packagist",
+      "package": "symfony/locale",
+      "score": 57,
+      "riskLevel": "HIGH",
+      "deductions": [
+        {
+          "reason": "Package abandoned, use symfony/intl instead",
+          "points": 10,
+          "confidence": "high"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "Repository is archived (no longer maintained)",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 3 years ago (6 years)",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "fabpot"
+      ],
+      "lastCommitDate": "2019-11-13T08:41:15Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1205,
+      "diagnosedAt": "2026-02-20T06:29:46.210Z"
+    },
+    {
+      "ecosystem": "packagist",
+      "package": "symfony/asset",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "fabpot"
+      ],
+      "lastCommitDate": "2026-02-09T10:17:50Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1452,
+      "diagnosedAt": "2026-02-20T06:29:48.005Z"
     }
   ],
   "errors": [
@@ -58320,6 +58589,12 @@
       "package": "symfony/acl",
       "error": "Exit code 1: {\"error\":\"Error: Package not found: symfony/acl (packagist)\"}\n",
       "timestamp": "2026-02-20T05:45:20.277Z"
+    },
+    {
+      "ecosystem": "packagist",
+      "package": "symfony/i18n",
+      "error": "Exit code 1: {\"error\":\"Error: Package not found: symfony/i18n (packagist)\"}\n",
+      "timestamp": "2026-02-20T06:29:46.553Z"
     }
   ],
   "startTime": "2026-02-19T12:29:21.598Z"

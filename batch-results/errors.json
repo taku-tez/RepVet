@@ -616,5 +616,11 @@
     "package": "symfony/acl",
     "error": "Exit code 1: {\"error\":\"Error: Package not found: symfony/acl (packagist)\"}\n",
     "timestamp": "2026-02-20T05:45:20.277Z"
+  },
+  {
+    "ecosystem": "packagist",
+    "package": "symfony/i18n",
+    "error": "Exit code 1: {\"error\":\"Error: Package not found: symfony/i18n (packagist)\"}\n",
+    "timestamp": "2026-02-20T06:29:46.553Z"
   }
 ]

@@ -1,0 +1,36 @@
+{
+  "ecosystem": "packagist",
+  "package": "symfony/locale",
+  "score": 57,
+  "riskLevel": "HIGH",
+  "deductions": [
+    {
+      "reason": "Package abandoned, use symfony/intl instead",
+      "points": 10,
+      "confidence": "high"
+    },
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    },
+    {
+      "reason": "Repository is archived (no longer maintained)",
+      "points": 15,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 3 years ago (6 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "fabpot"
+  ],
+  "lastCommitDate": "2019-11-13T08:41:15Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1205,
+  "diagnosedAt": "2026-02-20T06:29:46.210Z"
+}

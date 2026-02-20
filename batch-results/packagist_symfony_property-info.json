@@ -1,0 +1,21 @@
+{
+  "ecosystem": "packagist",
+  "package": "symfony/property-info",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "fabpot"
+  ],
+  "lastCommitDate": "2026-02-13T12:39:40Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1436,
+  "diagnosedAt": "2026-02-20T06:29:39.641Z"
+}
