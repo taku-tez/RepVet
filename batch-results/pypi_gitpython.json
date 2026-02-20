@@ -1,0 +1,34 @@
+{
+  "ecosystem": "pypi",
+  "package": "gitpython",
+  "score": 75,
+  "riskLevel": "MEDIUM",
+  "deductions": [
+    {
+      "reason": "2 critical vulnerability(ies) in history",
+      "points": 15,
+      "confidence": "high"
+    },
+    {
+      "reason": "4 high severity vulnerability(ies) in history",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "Sebastian Thiel",
+    "Michael Trier"
+  ],
+  "lastCommitDate": "2026-02-14T15:14:45Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 10,
+    "critical": 2,
+    "high": 4,
+    "recent": 0,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 1544,
+  "diagnosedAt": "2026-02-20T01:30:15.714Z"
+}

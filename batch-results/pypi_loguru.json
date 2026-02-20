@@ -1,0 +1,28 @@
+{
+  "ecosystem": "pypi",
+  "package": "loguru",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "Delgan"
+  ],
+  "lastCommitDate": "2026-01-15T00:22:08Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 2,
+    "critical": 0,
+    "high": 0,
+    "recent": 0,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 1188,
+  "diagnosedAt": "2026-02-20T01:30:28.194Z"
+}

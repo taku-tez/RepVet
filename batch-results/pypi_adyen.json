@@ -1,0 +1,28 @@
+{
+  "ecosystem": "pypi",
+  "package": "adyen",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "Adyen"
+  ],
+  "lastCommitDate": "2026-02-18T14:47:51Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 2,
+    "critical": 0,
+    "high": 0,
+    "recent": 0,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 2011,
+  "diagnosedAt": "2026-02-20T01:30:44.102Z"
+}

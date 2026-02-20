@@ -1,0 +1,26 @@
+{
+  "ecosystem": "pypi",
+  "package": "python-json-logger",
+  "score": 89,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Author changed from \"Zakaria Zajac\" to \"Nicholas Hairs\"",
+      "points": 8,
+      "confidence": "low"
+    },
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "Zakaria Zajac"
+  ],
+  "lastCommitDate": "2025-11-01T11:01:53Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1769,
+  "diagnosedAt": "2026-02-20T01:30:31.700Z"
+}

@@ -1,0 +1,25 @@
+{
+  "ecosystem": "pypi",
+  "package": "braintree",
+  "score": 92,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "High yanked version ratio (133 yanked versions)",
+      "points": 5,
+      "confidence": "medium"
+    },
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "Braintree"
+  ],
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1167,
+  "diagnosedAt": "2026-02-20T01:30:40.284Z"
+}

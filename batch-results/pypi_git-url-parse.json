@@ -1,0 +1,38 @@
+{
+  "ecosystem": "pypi",
+  "package": "git-url-parse",
+  "score": 77,
+  "riskLevel": "MEDIUM",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    },
+    {
+      "reason": "1 high severity vulnerability(ies) in history",
+      "points": 10,
+      "confidence": "high"
+    },
+    {
+      "reason": "Has unfixed vulnerabilities",
+      "points": 8,
+      "confidence": "medium"
+    }
+  ],
+  "maintainers": [
+    "John Dewey"
+  ],
+  "lastCommitDate": "2025-10-15T01:09:52Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 1,
+    "critical": 0,
+    "high": 1,
+    "recent": 0,
+    "hasUnfixed": true
+  },
+  "executionTimeMs": 1876,
+  "diagnosedAt": "2026-02-20T01:30:25.190Z"
+}

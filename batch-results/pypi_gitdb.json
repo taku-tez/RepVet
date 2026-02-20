@@ -1,0 +1,21 @@
+{
+  "ecosystem": "pypi",
+  "package": "gitdb",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "Sebastian Thiel"
+  ],
+  "lastCommitDate": "2025-11-24T17:38:44Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1762,
+  "diagnosedAt": "2026-02-20T01:30:22.004Z"
+}

@@ -1,0 +1,26 @@
+{
+  "ecosystem": "pypi",
+  "package": "tilt",
+  "score": 80,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 3 years ago (5 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "Elias Grünewald"
+  ],
+  "lastCommitDate": "2021-01-14T20:14:29Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2335,
+  "diagnosedAt": "2026-02-20T01:30:14.169Z"
+}

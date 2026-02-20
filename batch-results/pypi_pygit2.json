@@ -1,0 +1,21 @@
+{
+  "ecosystem": "pypi",
+  "package": "pygit2",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "J. David Ibáñez"
+  ],
+  "lastCommitDate": "2026-02-10T08:47:46Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1882,
+  "diagnosedAt": "2026-02-20T01:30:17.597Z"
+}

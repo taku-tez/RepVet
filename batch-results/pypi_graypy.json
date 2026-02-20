@@ -1,0 +1,26 @@
+{
+  "ecosystem": "pypi",
+  "package": "graypy",
+  "score": 87,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    },
+    {
+      "reason": "Last commit over 2 years ago (2 years)",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "Sever Banesiu"
+  ],
+  "lastCommitDate": "2023-10-24T04:29:33Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1766,
+  "diagnosedAt": "2026-02-20T01:30:33.466Z"
+}

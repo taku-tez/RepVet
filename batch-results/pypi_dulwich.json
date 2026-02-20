@@ -1,0 +1,33 @@
+{
+  "ecosystem": "pypi",
+  "package": "dulwich",
+  "score": 82,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    },
+    {
+      "reason": "3 critical vulnerability(ies) in history",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "Jelmer Vernooij"
+  ],
+  "lastCommitDate": "2026-02-18T00:27:19Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 6,
+    "critical": 3,
+    "high": 0,
+    "recent": 0,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 2643,
+  "diagnosedAt": "2026-02-20T01:30:20.241Z"
+}
