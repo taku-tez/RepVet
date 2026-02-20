@@ -1,0 +1,26 @@
+{
+  "ecosystem": "pypi",
+  "package": "emails",
+  "score": 87,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    },
+    {
+      "reason": "Last commit over 2 years ago (2 years)",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "Sergey Lavrinenko"
+  ],
+  "lastCommitDate": "2024-01-10T17:56:14Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1722,
+  "diagnosedAt": "2026-02-20T01:45:21.060Z"
+}

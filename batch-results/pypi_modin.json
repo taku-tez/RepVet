@@ -1,0 +1,15 @@
+{
+  "ecosystem": "pypi",
+  "package": "modin",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "Unknown"
+  ],
+  "lastCommitDate": "2026-02-10T20:52:42Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1822,
+  "diagnosedAt": "2026-02-20T01:45:41.168Z"
+}

@@ -520,5 +520,11 @@
     "package": "vagrant-python",
     "error": "Exit code 1: {\"error\":\"Error: Package not found: vagrant-python (pypi)\"}\n",
     "timestamp": "2026-02-20T01:15:31.956Z"
+  },
+  {
+    "ecosystem": "pypi",
+    "package": "checkout-sdk-python",
+    "error": "Exit code 1: {\"error\":\"Error: Package not found: checkout-sdk-python (pypi)\"}\n",
+    "timestamp": "2026-02-20T01:45:08.547Z"
   }
 ]

@@ -1,0 +1,20 @@
+{
+  "ecosystem": "pypi",
+  "package": "discord-py",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "Rapptz"
+  ],
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1212,
+  "diagnosedAt": "2026-02-20T01:45:24.961Z"
+}

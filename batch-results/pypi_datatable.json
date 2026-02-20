@@ -1,0 +1,22 @@
+{
+  "ecosystem": "pypi",
+  "package": "datatable",
+  "score": 92,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Author changed from \"Pasha Stetsenko\" to \"Oleksiy Kononenko\"",
+      "points": 8,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "Oleksiy Kononenko",
+    "Pasha Stetsenko"
+  ],
+  "lastCommitDate": "2025-03-17T07:12:47Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1838,
+  "diagnosedAt": "2026-02-20T01:45:45.679Z"
+}

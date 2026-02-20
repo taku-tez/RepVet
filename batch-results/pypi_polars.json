@@ -1,0 +1,26 @@
+{
+  "ecosystem": "pypi",
+  "package": "polars",
+  "score": 89,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Author changed from \"ritchie46 <ritchie46@gmail.com>\" to \"Ritchie Vink\"",
+      "points": 8,
+      "confidence": "low"
+    },
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "Ritchie Vink"
+  ],
+  "lastCommitDate": "2026-02-19T18:55:54Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2075,
+  "diagnosedAt": "2026-02-20T01:45:37.553Z"
+}

@@ -1,0 +1,27 @@
+{
+  "ecosystem": "pypi",
+  "package": "fbchat",
+  "score": 82,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Author changed from \"Taehoon Kim\" to \"Mads Marquart\"",
+      "points": 8,
+      "confidence": "low"
+    },
+    {
+      "reason": "Last commit over 2 years ago (2 years)",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "Mads Marquart",
+    "Taehoon Kim"
+  ],
+  "lastCommitDate": "2024-02-16T16:45:35Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2120,
+  "diagnosedAt": "2026-02-20T01:45:31.235Z"
+}

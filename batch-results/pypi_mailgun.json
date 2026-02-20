@@ -1,0 +1,26 @@
+{
+  "ecosystem": "pypi",
+  "package": "mailgun",
+  "score": 87,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Author changed from \"Mailgun Inc.\" to \"Serhii Kupriienko\"",
+      "points": 8,
+      "confidence": "low"
+    },
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "diskovod"
+  ],
+  "lastCommitDate": "2026-01-23T15:27:20Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2569,
+  "diagnosedAt": "2026-02-20T01:45:14.571Z"
+}

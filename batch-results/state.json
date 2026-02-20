@@ -1,5 +1,5 @@
 {
-  "currentIndex": 2060,
+  "currentIndex": 2080,
   "totalPackages": 4957,
   "results": [
     {
@@ -49543,6 +49543,430 @@
       },
       "executionTimeMs": 2011,
       "diagnosedAt": "2026-02-20T01:30:44.102Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "twilio",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Twilio"
+      ],
+      "lastCommitDate": "2026-02-18T04:24:45Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1834,
+      "diagnosedAt": "2026-02-20T01:45:10.381Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "sendgrid",
+      "score": 92,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Author changed from \"Kane Kim\" to \"Elmer Thomas, Yamil Asusta\"",
+          "points": 8,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Elmer Thomas",
+        "Yamil Asusta"
+      ],
+      "lastCommitDate": "2025-09-19T06:20:10Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1621,
+      "diagnosedAt": "2026-02-20T01:45:12.002Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "mailgun",
+      "score": 87,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Author changed from \"Mailgun Inc.\" to \"Serhii Kupriienko\"",
+          "points": 8,
+          "confidence": "low"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "diskovod"
+      ],
+      "lastCommitDate": "2026-01-23T15:27:20Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2569,
+      "diagnosedAt": "2026-02-20T01:45:14.571Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "postmark",
+      "score": 95,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "Jonathan Kosgei"
+      ],
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 672,
+      "diagnosedAt": "2026-02-20T01:45:15.243Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "resend",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Derich Pacheco"
+      ],
+      "lastCommitDate": "2026-02-18T14:38:18Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2119,
+      "diagnosedAt": "2026-02-20T01:45:17.363Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "yagmail",
+      "score": 82,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "Last commit over 3 years ago (3 years)",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "Pascal van Kooten"
+      ],
+      "lastCommitDate": "2022-09-28T20:43:53Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1975,
+      "diagnosedAt": "2026-02-20T01:45:19.338Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "emails",
+      "score": 87,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "Last commit over 2 years ago (2 years)",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "Sergey Lavrinenko"
+      ],
+      "lastCommitDate": "2024-01-10T17:56:14Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1722,
+      "diagnosedAt": "2026-02-20T01:45:21.060Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "slack-sdk",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "Slack Technologies",
+        "LLC"
+      ],
+      "lastCommitDate": "2026-02-19T22:14:43Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2689,
+      "diagnosedAt": "2026-02-20T01:45:23.749Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "discord-py",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Rapptz"
+      ],
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1212,
+      "diagnosedAt": "2026-02-20T01:45:24.961Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "python-telegram-bot",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Leandro Toledo"
+      ],
+      "lastCommitDate": "2026-02-19T17:24:28Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1875,
+      "diagnosedAt": "2026-02-20T01:45:26.836Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "pywhatkit",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Ankit Raj Mahapatra"
+      ],
+      "lastCommitDate": "2025-04-25T12:03:54Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2278,
+      "diagnosedAt": "2026-02-20T01:45:29.115Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "fbchat",
+      "score": 82,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Author changed from \"Taehoon Kim\" to \"Mads Marquart\"",
+          "points": 8,
+          "confidence": "low"
+        },
+        {
+          "reason": "Last commit over 2 years ago (2 years)",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "Mads Marquart",
+        "Taehoon Kim"
+      ],
+      "lastCommitDate": "2024-02-16T16:45:35Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2120,
+      "diagnosedAt": "2026-02-20T01:45:31.235Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "tweepy",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "Joshua Roesslein",
+        "Harmon"
+      ],
+      "lastCommitDate": "2025-07-11T20:32:50Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 2,
+        "critical": 0,
+        "high": 0,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 2445,
+      "diagnosedAt": "2026-02-20T01:45:33.681Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "pandas",
+      "score": 92,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Author changed from \"AQR Capital Management, LLC\" to \"The Pandas Development Team\"",
+          "points": 8,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "The Pandas Development Team"
+      ],
+      "lastCommitDate": "2026-02-19T23:04:58Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 1,
+        "critical": 0,
+        "high": 0,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1795,
+      "diagnosedAt": "2026-02-20T01:45:35.477Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "polars",
+      "score": 89,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Author changed from \"ritchie46 <ritchie46@gmail.com>\" to \"Ritchie Vink\"",
+          "points": 8,
+          "confidence": "low"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Ritchie Vink"
+      ],
+      "lastCommitDate": "2026-02-19T18:55:54Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2075,
+      "diagnosedAt": "2026-02-20T01:45:37.553Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "dask",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "Unknown"
+      ],
+      "lastCommitDate": "2026-02-19T18:37:15Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 1,
+        "critical": 0,
+        "high": 0,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1793,
+      "diagnosedAt": "2026-02-20T01:45:39.346Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "modin",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "Unknown"
+      ],
+      "lastCommitDate": "2026-02-10T20:52:42Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1822,
+      "diagnosedAt": "2026-02-20T01:45:41.168Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "vaex",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Maarten A. Breddels"
+      ],
+      "lastCommitDate": "2026-02-05T19:25:07Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2672,
+      "diagnosedAt": "2026-02-20T01:45:43.841Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "datatable",
+      "score": 92,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Author changed from \"Pasha Stetsenko\" to \"Oleksiy Kononenko\"",
+          "points": 8,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Oleksiy Kononenko",
+        "Pasha Stetsenko"
+      ],
+      "lastCommitDate": "2025-03-17T07:12:47Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1838,
+      "diagnosedAt": "2026-02-20T01:45:45.679Z"
     }
   ],
   "errors": [
@@ -50067,6 +50491,12 @@
       "package": "vagrant-python",
       "error": "Exit code 1: {\"error\":\"Error: Package not found: vagrant-python (pypi)\"}\n",
       "timestamp": "2026-02-20T01:15:31.956Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "checkout-sdk-python",
+      "error": "Exit code 1: {\"error\":\"Error: Package not found: checkout-sdk-python (pypi)\"}\n",
+      "timestamp": "2026-02-20T01:45:08.547Z"
     }
   ],
   "startTime": "2026-02-19T12:29:21.598Z"

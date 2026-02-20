@@ -1,0 +1,21 @@
+{
+  "ecosystem": "pypi",
+  "package": "resend",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "Derich Pacheco"
+  ],
+  "lastCommitDate": "2026-02-18T14:38:18Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2119,
+  "diagnosedAt": "2026-02-20T01:45:17.363Z"
+}

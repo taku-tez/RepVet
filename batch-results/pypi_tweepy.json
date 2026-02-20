@@ -1,0 +1,23 @@
+{
+  "ecosystem": "pypi",
+  "package": "tweepy",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "Joshua Roesslein",
+    "Harmon"
+  ],
+  "lastCommitDate": "2025-07-11T20:32:50Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 2,
+    "critical": 0,
+    "high": 0,
+    "recent": 0,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 2445,
+  "diagnosedAt": "2026-02-20T01:45:33.681Z"
+}

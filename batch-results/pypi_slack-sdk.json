@@ -1,0 +1,16 @@
+{
+  "ecosystem": "pypi",
+  "package": "slack-sdk",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "Slack Technologies",
+    "LLC"
+  ],
+  "lastCommitDate": "2026-02-19T22:14:43Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2689,
+  "diagnosedAt": "2026-02-20T01:45:23.749Z"
+}

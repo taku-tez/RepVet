@@ -1,0 +1,21 @@
+{
+  "ecosystem": "pypi",
+  "package": "pywhatkit",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "Ankit Raj Mahapatra"
+  ],
+  "lastCommitDate": "2025-04-25T12:03:54Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2278,
+  "diagnosedAt": "2026-02-20T01:45:29.115Z"
+}

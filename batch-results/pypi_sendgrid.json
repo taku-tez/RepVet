@@ -1,0 +1,22 @@
+{
+  "ecosystem": "pypi",
+  "package": "sendgrid",
+  "score": 92,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Author changed from \"Kane Kim\" to \"Elmer Thomas, Yamil Asusta\"",
+      "points": 8,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "Elmer Thomas",
+    "Yamil Asusta"
+  ],
+  "lastCommitDate": "2025-09-19T06:20:10Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1621,
+  "diagnosedAt": "2026-02-20T01:45:12.002Z"
+}

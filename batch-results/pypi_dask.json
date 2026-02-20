@@ -1,0 +1,22 @@
+{
+  "ecosystem": "pypi",
+  "package": "dask",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "Unknown"
+  ],
+  "lastCommitDate": "2026-02-19T18:37:15Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 1,
+    "critical": 0,
+    "high": 0,
+    "recent": 0,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 1793,
+  "diagnosedAt": "2026-02-20T01:45:39.346Z"
+}
