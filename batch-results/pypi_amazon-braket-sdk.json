@@ -1,0 +1,21 @@
+{
+  "ecosystem": "pypi",
+  "package": "amazon-braket-sdk",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "Amazon Web Services"
+  ],
+  "lastCommitDate": "2026-02-18T16:17:22Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2790,
+  "diagnosedAt": "2026-02-20T03:15:23.025Z"
+}

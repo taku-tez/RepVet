@@ -550,5 +550,11 @@
     "package": "orekit",
     "error": "Exit code 1: {\"error\":\"Error: Package not found: orekit (pypi)\"}\n",
     "timestamp": "2026-02-20T03:00:31.355Z"
+  },
+  {
+    "ecosystem": "pypi",
+    "package": "cobrapy",
+    "error": "Exit code 1: {\"error\":\"Error: Package not found: cobrapy (pypi)\"}\n",
+    "timestamp": "2026-02-20T03:15:07.981Z"
   }
 ]

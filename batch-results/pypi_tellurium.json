@@ -1,0 +1,18 @@
+{
+  "ecosystem": "pypi",
+  "package": "tellurium",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "J. Kyle Medley",
+    "Kiri Choi",
+    "Matthias König",
+    "Lucian Smith",
+    "Herbert M. Sauro"
+  ],
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1631,
+  "diagnosedAt": "2026-02-20T03:15:09.612Z"
+}

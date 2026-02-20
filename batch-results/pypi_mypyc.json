@@ -1,0 +1,25 @@
+{
+  "ecosystem": "pypi",
+  "package": "mypyc",
+  "score": 84,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Author changed from \"Emma Harper Smith\" to \"Jukka Lehtosalo\"",
+      "points": 11,
+      "confidence": "medium"
+    },
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "Jukka Lehtosalo"
+  ],
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1254,
+  "diagnosedAt": "2026-02-20T03:15:37.321Z"
+}

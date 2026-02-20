@@ -1,0 +1,21 @@
+{
+  "ecosystem": "pypi",
+  "package": "pyquil",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "Rigetti Computing"
+  ],
+  "lastCommitDate": "2025-10-08T21:31:44Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2134,
+  "diagnosedAt": "2026-02-20T03:15:20.235Z"
+}

@@ -1,0 +1,22 @@
+{
+  "ecosystem": "pypi",
+  "package": "cirq",
+  "score": 92,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Author changed from \"The Cirq Developers\" to \"Google Quantum AI open-source maintainers\"",
+      "points": 8,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "Google Quantum AI open-source maintainers",
+    "The Cirq Developers"
+  ],
+  "lastCommitDate": "2026-02-20T01:39:18Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1536,
+  "diagnosedAt": "2026-02-20T03:15:15.830Z"
+}

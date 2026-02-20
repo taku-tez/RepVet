@@ -1,5 +1,5 @@
 {
-  "currentIndex": 2160,
+  "currentIndex": 2180,
   "totalPackages": 4957,
   "results": [
     {
@@ -51886,6 +51886,427 @@
       "hasMalwareHistory": false,
       "executionTimeMs": 2842,
       "diagnosedAt": "2026-02-20T03:00:46.094Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "tellurium",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "J. Kyle Medley",
+        "Kiri Choi",
+        "Matthias König",
+        "Lucian Smith",
+        "Herbert M. Sauro"
+      ],
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1631,
+      "diagnosedAt": "2026-02-20T03:15:09.612Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "libroadrunner",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "Andy Somogyi",
+        "J Kyle Medley",
+        "Lucian Smith",
+        "Ciaran Welsh",
+        "Herbert Sauro"
+      ],
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2174,
+      "diagnosedAt": "2026-02-20T03:15:11.786Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "qiskit",
+      "score": 75,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "1 critical vulnerability(ies) in history",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "Qiskit Development Team"
+      ],
+      "lastCommitDate": "2026-02-19T21:12:57Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 2,
+        "critical": 1,
+        "high": 1,
+        "recent": 2,
+        "hasUnfixed": true
+      },
+      "executionTimeMs": 2508,
+      "diagnosedAt": "2026-02-20T03:15:14.294Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "cirq",
+      "score": 92,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Author changed from \"The Cirq Developers\" to \"Google Quantum AI open-source maintainers\"",
+          "points": 8,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Google Quantum AI open-source maintainers",
+        "The Cirq Developers"
+      ],
+      "lastCommitDate": "2026-02-20T01:39:18Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1536,
+      "diagnosedAt": "2026-02-20T03:15:15.830Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "pennylane",
+      "score": 92,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Author changed from \"Xanadu Inc.\" to \"\"Xanadu Quantum Technologies Inc.\"\"",
+          "points": 8,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Unknown"
+      ],
+      "lastCommitDate": "2026-02-20T02:30:53Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2270,
+      "diagnosedAt": "2026-02-20T03:15:18.100Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "pyquil",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Rigetti Computing"
+      ],
+      "lastCommitDate": "2025-10-08T21:31:44Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2134,
+      "diagnosedAt": "2026-02-20T03:15:20.235Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "amazon-braket-sdk",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Amazon Web Services"
+      ],
+      "lastCommitDate": "2026-02-18T16:17:22Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2790,
+      "diagnosedAt": "2026-02-20T03:15:23.025Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "projectq",
+      "score": 89,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Author changed from \"Thomas Haener, Damian Steiger\" to \"ProjectQ\"",
+          "points": 8,
+          "confidence": "low"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "ProjectQ"
+      ],
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1699,
+      "diagnosedAt": "2026-02-20T03:15:24.725Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "qutip",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "Alexander Pitchford",
+        "Paul D. Nation",
+        "Robert J. Johansson",
+        "Chris Granade",
+        "Arne Grimsmo",
+        "Nathan Shammah",
+        "Shahnawaz Ahmed",
+        "Neill Lambert",
+        "Eric Giguère",
+        "Boxi Li",
+        "Jake Lishman",
+        "Simon Cross"
+      ],
+      "lastCommitDate": "2026-02-12T15:40:48Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1756,
+      "diagnosedAt": "2026-02-20T03:15:26.482Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "pycuda",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Andreas Kloeckner"
+      ],
+      "lastCommitDate": "2026-02-18T17:39:45Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1973,
+      "diagnosedAt": "2026-02-20T03:15:28.455Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "pyopencl",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Andreas Kloeckner"
+      ],
+      "lastCommitDate": "2026-01-25T22:05:03Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2518,
+      "diagnosedAt": "2026-02-20T03:15:30.973Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "numba",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "Unknown"
+      ],
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1302,
+      "diagnosedAt": "2026-02-20T03:15:32.275Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "cython",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "Robert Bradshaw",
+        "Stefan Behnel",
+        "David Woods",
+        "Greg Ewing",
+        "et al."
+      ],
+      "lastCommitDate": "2026-02-18T15:42:17Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1742,
+      "diagnosedAt": "2026-02-20T03:15:34.017Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "nuitka",
+      "score": 87,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "Kay Hayen"
+      ],
+      "lastCommitDate": "2026-02-19T09:17:53Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 1,
+        "critical": 0,
+        "high": 1,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 2049,
+      "diagnosedAt": "2026-02-20T03:15:36.066Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "mypyc",
+      "score": 84,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Author changed from \"Emma Harper Smith\" to \"Jukka Lehtosalo\"",
+          "points": 11,
+          "confidence": "medium"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "Jukka Lehtosalo"
+      ],
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1254,
+      "diagnosedAt": "2026-02-20T03:15:37.321Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "transonic",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Pierre Augier"
+      ],
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1903,
+      "diagnosedAt": "2026-02-20T03:15:39.224Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "pythran",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Serge Guelton"
+      ],
+      "lastCommitDate": "2026-02-19T23:22:02Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1664,
+      "diagnosedAt": "2026-02-20T03:15:40.888Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "mpi4py",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Lisandro Dalcin"
+      ],
+      "lastCommitDate": "2026-02-19T08:28:06Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2056,
+      "diagnosedAt": "2026-02-20T03:15:42.945Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "dask-mpi",
+      "score": 95,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "Kevin Paul"
+      ],
+      "lastCommitDate": "2026-01-19T18:56:44Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1656,
+      "diagnosedAt": "2026-02-20T03:15:44.601Z"
     }
   ],
   "errors": [
@@ -52440,6 +52861,12 @@
       "package": "orekit",
       "error": "Exit code 1: {\"error\":\"Error: Package not found: orekit (pypi)\"}\n",
       "timestamp": "2026-02-20T03:00:31.355Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "cobrapy",
+      "error": "Exit code 1: {\"error\":\"Error: Package not found: cobrapy (pypi)\"}\n",
+      "timestamp": "2026-02-20T03:15:07.981Z"
     }
   ],
   "startTime": "2026-02-19T12:29:21.598Z"

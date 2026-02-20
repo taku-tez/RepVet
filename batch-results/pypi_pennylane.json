@@ -1,0 +1,21 @@
+{
+  "ecosystem": "pypi",
+  "package": "pennylane",
+  "score": 92,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Author changed from \"Xanadu Inc.\" to \"\"Xanadu Quantum Technologies Inc.\"\"",
+      "points": 8,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "Unknown"
+  ],
+  "lastCommitDate": "2026-02-20T02:30:53Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2270,
+  "diagnosedAt": "2026-02-20T03:15:18.100Z"
+}

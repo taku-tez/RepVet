@@ -1,0 +1,26 @@
+{
+  "ecosystem": "pypi",
+  "package": "qutip",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "Alexander Pitchford",
+    "Paul D. Nation",
+    "Robert J. Johansson",
+    "Chris Granade",
+    "Arne Grimsmo",
+    "Nathan Shammah",
+    "Shahnawaz Ahmed",
+    "Neill Lambert",
+    "Eric Giguère",
+    "Boxi Li",
+    "Jake Lishman",
+    "Simon Cross"
+  ],
+  "lastCommitDate": "2026-02-12T15:40:48Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1756,
+  "diagnosedAt": "2026-02-20T03:15:26.482Z"
+}

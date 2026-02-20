@@ -1,0 +1,18 @@
+{
+  "ecosystem": "pypi",
+  "package": "libroadrunner",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "Andy Somogyi",
+    "J Kyle Medley",
+    "Lucian Smith",
+    "Ciaran Welsh",
+    "Herbert Sauro"
+  ],
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2174,
+  "diagnosedAt": "2026-02-20T03:15:11.786Z"
+}

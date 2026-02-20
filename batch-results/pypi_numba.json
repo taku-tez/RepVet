@@ -1,0 +1,14 @@
+{
+  "ecosystem": "pypi",
+  "package": "numba",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "Unknown"
+  ],
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1302,
+  "diagnosedAt": "2026-02-20T03:15:32.275Z"
+}

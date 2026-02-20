@@ -1,0 +1,21 @@
+{
+  "ecosystem": "pypi",
+  "package": "mpi4py",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "Lisandro Dalcin"
+  ],
+  "lastCommitDate": "2026-02-19T08:28:06Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2056,
+  "diagnosedAt": "2026-02-20T03:15:42.945Z"
+}

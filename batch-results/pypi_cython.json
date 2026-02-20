@@ -1,0 +1,19 @@
+{
+  "ecosystem": "pypi",
+  "package": "cython",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "Robert Bradshaw",
+    "Stefan Behnel",
+    "David Woods",
+    "Greg Ewing",
+    "et al."
+  ],
+  "lastCommitDate": "2026-02-18T15:42:17Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1742,
+  "diagnosedAt": "2026-02-20T03:15:34.017Z"
+}
