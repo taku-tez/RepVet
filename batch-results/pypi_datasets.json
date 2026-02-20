@@ -1,0 +1,21 @@
+{
+  "ecosystem": "pypi",
+  "package": "datasets",
+  "score": 92,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Author changed from \"Austin Cory Bart\" to \"HuggingFace Inc.\"",
+      "points": 8,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "HuggingFace Inc."
+  ],
+  "lastCommitDate": "2026-02-18T15:18:17Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1825,
+  "diagnosedAt": "2026-02-20T02:30:48.291Z"
+}

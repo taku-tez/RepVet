@@ -18,7 +18,7 @@
   "maintainers": [
     "PyTorch Team"
   ],
-  "lastCommitDate": "2026-02-19T23:27:35Z",
+  "lastCommitDate": "2026-02-20T02:25:01Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
   "vulnerabilityStats": {
@@ -28,6 +28,6 @@
     "recent": 4,
     "hasUnfixed": false
   },
-  "executionTimeMs": 2329,
-  "diagnosedAt": "2026-02-19T23:27:51.456Z"
+  "executionTimeMs": 1702,
+  "diagnosedAt": "2026-02-20T02:30:32.734Z"
 }

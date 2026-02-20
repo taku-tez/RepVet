@@ -1,0 +1,28 @@
+{
+  "ecosystem": "pypi",
+  "package": "ray",
+  "score": 85,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "6 critical vulnerability(ies) in history",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "Ray Team"
+  ],
+  "lastCommitDate": "2026-02-20T02:06:04Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 8,
+    "critical": 6,
+    "high": 0,
+    "recent": 4,
+    "hasUnfixed": true
+  },
+  "executionTimeMs": 1115,
+  "diagnosedAt": "2026-02-20T02:30:14.285Z"
+}

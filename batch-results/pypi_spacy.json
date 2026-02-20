@@ -1,0 +1,26 @@
+{
+  "ecosystem": "pypi",
+  "package": "spacy",
+  "score": 89,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Author changed from \"Matthew Honnibal\" to \"Explosion\"",
+      "points": 8,
+      "confidence": "low"
+    },
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "Explosion"
+  ],
+  "lastCommitDate": "2025-11-27T18:55:46Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1693,
+  "diagnosedAt": "2026-02-20T02:30:54.999Z"
+}

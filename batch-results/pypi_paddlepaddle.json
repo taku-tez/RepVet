@@ -1,0 +1,42 @@
+{
+  "ecosystem": "pypi",
+  "package": "paddlepaddle",
+  "score": 62,
+  "riskLevel": "MEDIUM",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    },
+    {
+      "reason": "17 critical vulnerability(ies) in history",
+      "points": 15,
+      "confidence": "high"
+    },
+    {
+      "reason": "20 high severity vulnerability(ies) in history",
+      "points": 10,
+      "confidence": "high"
+    },
+    {
+      "reason": "Has unfixed vulnerabilities",
+      "points": 8,
+      "confidence": "medium"
+    }
+  ],
+  "maintainers": [
+    "PaddlePaddle"
+  ],
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 56,
+    "critical": 17,
+    "high": 20,
+    "recent": 0,
+    "hasUnfixed": true
+  },
+  "executionTimeMs": 2781,
+  "diagnosedAt": "2026-02-20T02:30:40.834Z"
+}

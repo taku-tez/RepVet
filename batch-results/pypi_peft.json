@@ -1,15 +1,15 @@
 {
   "ecosystem": "pypi",
-  "package": "jax",
+  "package": "peft",
   "score": 100,
   "riskLevel": "LOW",
   "deductions": [],
   "maintainers": [
-    "JAX team"
+    "The HuggingFace team"
   ],
-  "lastCommitDate": "2026-02-20T02:09:59Z",
+  "lastCommitDate": "2026-02-19T12:36:16Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
-  "executionTimeMs": 1602,
-  "diagnosedAt": "2026-02-20T02:30:34.336Z"
+  "executionTimeMs": 1528,
+  "diagnosedAt": "2026-02-20T02:30:51.589Z"
 }

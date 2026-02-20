@@ -1,0 +1,26 @@
+{
+  "ecosystem": "pypi",
+  "package": "tokenizers",
+  "score": 89,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Author changed from \"Anthony MOI <m.anthony.moi@gmail.com>\" to \"Nicolas Patry\"",
+      "points": 8,
+      "confidence": "low"
+    },
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "Nicolas Patry"
+  ],
+  "lastCommitDate": "2026-02-19T10:20:55Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1770,
+  "diagnosedAt": "2026-02-20T02:30:50.061Z"
+}

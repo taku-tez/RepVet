@@ -1,0 +1,21 @@
+{
+  "ecosystem": "pypi",
+  "package": "optuna",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "Takuya Akiba"
+  ],
+  "lastCommitDate": "2026-02-18T05:22:43Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 969,
+  "diagnosedAt": "2026-02-20T02:30:12.672Z"
+}

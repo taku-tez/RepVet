@@ -1,5 +1,5 @@
 {
-  "currentIndex": 2100,
+  "currentIndex": 2120,
   "totalPackages": 4957,
   "results": [
     {
@@ -50472,6 +50472,496 @@
       "hasMalwareHistory": false,
       "executionTimeMs": 1841,
       "diagnosedAt": "2026-02-20T02:00:45.700Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "lightgbm",
+      "score": 82,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Author changed from \"Guolin Ke\" to \"Yu Shi\"",
+          "points": 8,
+          "confidence": "low"
+        },
+        {
+          "reason": "2 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "Unknown"
+      ],
+      "lastCommitDate": "2026-02-19T03:29:20Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 2,
+        "critical": 0,
+        "high": 2,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 2214,
+      "diagnosedAt": "2026-02-20T02:30:10.722Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "catboost",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "CatBoost Developers"
+      ],
+      "lastCommitDate": "2026-02-19T13:57:43Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 981,
+      "diagnosedAt": "2026-02-20T02:30:11.703Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "optuna",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Takuya Akiba"
+      ],
+      "lastCommitDate": "2026-02-18T05:22:43Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 969,
+      "diagnosedAt": "2026-02-20T02:30:12.672Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "hyperopt",
+      "score": 95,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "James Bergstra"
+      ],
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 498,
+      "diagnosedAt": "2026-02-20T02:30:13.170Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "ray",
+      "score": 85,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "6 critical vulnerability(ies) in history",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "Ray Team"
+      ],
+      "lastCommitDate": "2026-02-20T02:06:04Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 8,
+        "critical": 6,
+        "high": 0,
+        "recent": 4,
+        "hasUnfixed": true
+      },
+      "executionTimeMs": 1115,
+      "diagnosedAt": "2026-02-20T02:30:14.285Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "tensorflow",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "Google Inc."
+      ],
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 16745,
+      "diagnosedAt": "2026-02-20T02:30:31.031Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "torch",
+      "score": 75,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "4 critical vulnerability(ies) in history",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "2 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "PyTorch Team"
+      ],
+      "lastCommitDate": "2026-02-20T02:25:01Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 12,
+        "critical": 4,
+        "high": 2,
+        "recent": 4,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1702,
+      "diagnosedAt": "2026-02-20T02:30:32.734Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "jax",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "JAX team"
+      ],
+      "lastCommitDate": "2026-02-20T02:09:59Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1602,
+      "diagnosedAt": "2026-02-20T02:30:34.336Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "mxnet",
+      "score": 65,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Repository is archived (no longer maintained)",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 2 years ago (2 years)",
+          "points": 10,
+          "confidence": "high"
+        },
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "Unknown"
+      ],
+      "lastCommitDate": "2023-10-25T21:28:33Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 1,
+        "critical": 0,
+        "high": 1,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 2296,
+      "diagnosedAt": "2026-02-20T02:30:36.633Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "chainer",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Seiya Tokui"
+      ],
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1419,
+      "diagnosedAt": "2026-02-20T02:30:38.053Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "paddlepaddle",
+      "score": 62,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        },
+        {
+          "reason": "17 critical vulnerability(ies) in history",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "20 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        },
+        {
+          "reason": "Has unfixed vulnerabilities",
+          "points": 8,
+          "confidence": "medium"
+        }
+      ],
+      "maintainers": [
+        "PaddlePaddle"
+      ],
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 56,
+        "critical": 17,
+        "high": 20,
+        "recent": 0,
+        "hasUnfixed": true
+      },
+      "executionTimeMs": 2781,
+      "diagnosedAt": "2026-02-20T02:30:40.834Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "onnxruntime",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Microsoft Corporation"
+      ],
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 955,
+      "diagnosedAt": "2026-02-20T02:30:41.789Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "transformers",
+      "score": 79,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Author changed from \"Vladimir Iakovlev\" to \"The Hugging Face team (past and future) with the help of all our contributors (https://github.com/huggingface/transformers/graphs/contributors)\"",
+          "points": 8,
+          "confidence": "low"
+        },
+        {
+          "reason": "1 critical vulnerability(ies) in history",
+          "points": 8,
+          "confidence": "low"
+        },
+        {
+          "reason": "13 vulnerabilities in the past year",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "The Hugging Face team (past",
+        "future) with the help of all our contributors (https://github.com/huggingface/transformers/graphs/contributors)"
+      ],
+      "lastCommitDate": "2026-02-19T21:04:43Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 26,
+        "critical": 1,
+        "high": 10,
+        "recent": 13,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 2737,
+      "diagnosedAt": "2026-02-20T02:30:44.526Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "diffusers",
+      "score": 92,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Author changed from \"The HuggingFace team\" to \"The Hugging Face team (past and future) with the help of all our contributors (https://github.com/huggingface/diffusers/graphs/contributors)\"",
+          "points": 8,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "The Hugging Face team (past",
+        "future) with the help of all our contributors (https://github.com/huggingface/diffusers/graphs/contributors)"
+      ],
+      "lastCommitDate": "2026-02-19T15:35:40Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1076,
+      "diagnosedAt": "2026-02-20T02:30:45.602Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "accelerate",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "The HuggingFace team"
+      ],
+      "lastCommitDate": "2026-02-18T13:13:02Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 864,
+      "diagnosedAt": "2026-02-20T02:30:46.466Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "datasets",
+      "score": 92,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Author changed from \"Austin Cory Bart\" to \"HuggingFace Inc.\"",
+          "points": 8,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "HuggingFace Inc."
+      ],
+      "lastCommitDate": "2026-02-18T15:18:17Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1825,
+      "diagnosedAt": "2026-02-20T02:30:48.291Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "tokenizers",
+      "score": 89,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Author changed from \"Anthony MOI <m.anthony.moi@gmail.com>\" to \"Nicolas Patry\"",
+          "points": 8,
+          "confidence": "low"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Nicolas Patry"
+      ],
+      "lastCommitDate": "2026-02-19T10:20:55Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1770,
+      "diagnosedAt": "2026-02-20T02:30:50.061Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "peft",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "The HuggingFace team"
+      ],
+      "lastCommitDate": "2026-02-19T12:36:16Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1528,
+      "diagnosedAt": "2026-02-20T02:30:51.589Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "trl",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Leandro von Werra"
+      ],
+      "lastCommitDate": "2026-02-20T02:28:55Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1717,
+      "diagnosedAt": "2026-02-20T02:30:53.306Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "spacy",
+      "score": 89,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Author changed from \"Matthew Honnibal\" to \"Explosion\"",
+          "points": 8,
+          "confidence": "low"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Explosion"
+      ],
+      "lastCommitDate": "2025-11-27T18:55:46Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1693,
+      "diagnosedAt": "2026-02-20T02:30:54.999Z"
     }
   ],
   "errors": [
