@@ -1,0 +1,21 @@
+{
+  "ecosystem": "packagist",
+  "package": "symfony/templating",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "fabpot"
+  ],
+  "lastCommitDate": "2025-07-31T09:25:22Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1437,
+  "diagnosedAt": "2026-02-20T06:30:09.728Z"
+}

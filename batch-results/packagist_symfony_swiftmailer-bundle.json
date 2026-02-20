@@ -1,0 +1,36 @@
+{
+  "ecosystem": "packagist",
+  "package": "symfony/swiftmailer-bundle",
+  "score": 57,
+  "riskLevel": "HIGH",
+  "deductions": [
+    {
+      "reason": "Package abandoned, use symfony/mailer instead",
+      "points": 10,
+      "confidence": "high"
+    },
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    },
+    {
+      "reason": "Repository is archived (no longer maintained)",
+      "points": 15,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 3 years ago (4 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "fabpot"
+  ],
+  "lastCommitDate": "2022-02-06T08:09:55Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1209,
+  "diagnosedAt": "2026-02-20T06:30:20.274Z"
+}

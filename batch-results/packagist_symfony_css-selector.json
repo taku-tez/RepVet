@@ -1,0 +1,21 @@
+{
+  "ecosystem": "packagist",
+  "package": "symfony/css-selector",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "fabpot"
+  ],
+  "lastCommitDate": "2026-02-17T13:09:04Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2324,
+  "diagnosedAt": "2026-02-20T06:30:26.149Z"
+}

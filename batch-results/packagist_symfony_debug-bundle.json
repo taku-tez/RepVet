@@ -1,0 +1,21 @@
+{
+  "ecosystem": "packagist",
+  "package": "symfony/debug-bundle",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "fabpot"
+  ],
+  "lastCommitDate": "2025-12-19T08:35:24Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1410,
+  "diagnosedAt": "2026-02-20T06:30:17.854Z"
+}

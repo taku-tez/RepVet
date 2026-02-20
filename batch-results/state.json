@@ -1,5 +1,5 @@
 {
-  "currentIndex": 2400,
+  "currentIndex": 2410,
   "totalPackages": 4957,
   "results": [
     {
@@ -57969,6 +57969,262 @@
       "hasMalwareHistory": false,
       "executionTimeMs": 1452,
       "diagnosedAt": "2026-02-20T06:29:48.005Z"
+    },
+    {
+      "ecosystem": "packagist",
+      "package": "symfony/templating",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "fabpot"
+      ],
+      "lastCommitDate": "2025-07-31T09:25:22Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1437,
+      "diagnosedAt": "2026-02-20T06:30:09.728Z"
+    },
+    {
+      "ecosystem": "packagist",
+      "package": "symfony/twig-bridge",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "fabpot"
+      ],
+      "lastCommitDate": "2026-02-15T09:58:46Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 1,
+        "critical": 0,
+        "high": 0,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 3104,
+      "diagnosedAt": "2026-02-20T06:30:12.832Z"
+    },
+    {
+      "ecosystem": "packagist",
+      "package": "symfony/twig-bundle",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "fabpot"
+      ],
+      "lastCommitDate": "2026-01-25T08:22:05Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1594,
+      "diagnosedAt": "2026-02-20T06:30:14.426Z"
+    },
+    {
+      "ecosystem": "packagist",
+      "package": "symfony/web-profiler-bundle",
+      "score": 87,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "fabpot"
+      ],
+      "lastCommitDate": "2026-02-14T17:24:42Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 1,
+        "critical": 0,
+        "high": 1,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 2017,
+      "diagnosedAt": "2026-02-20T06:30:16.444Z"
+    },
+    {
+      "ecosystem": "packagist",
+      "package": "symfony/debug-bundle",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "fabpot"
+      ],
+      "lastCommitDate": "2025-12-19T08:35:24Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1410,
+      "diagnosedAt": "2026-02-20T06:30:17.854Z"
+    },
+    {
+      "ecosystem": "packagist",
+      "package": "symfony/monolog-bundle",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "fabpot"
+      ],
+      "lastCommitDate": "2026-01-20T16:12:12Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1210,
+      "diagnosedAt": "2026-02-20T06:30:19.064Z"
+    },
+    {
+      "ecosystem": "packagist",
+      "package": "symfony/swiftmailer-bundle",
+      "score": 57,
+      "riskLevel": "HIGH",
+      "deductions": [
+        {
+          "reason": "Package abandoned, use symfony/mailer instead",
+          "points": 10,
+          "confidence": "high"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "Repository is archived (no longer maintained)",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 3 years ago (4 years)",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "fabpot"
+      ],
+      "lastCommitDate": "2022-02-06T08:09:55Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1209,
+      "diagnosedAt": "2026-02-20T06:30:20.274Z"
+    },
+    {
+      "ecosystem": "packagist",
+      "package": "symfony/phpunit-bridge",
+      "score": 87,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "fabpot"
+      ],
+      "lastCommitDate": "2026-02-11T15:16:22Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 1,
+        "critical": 0,
+        "high": 1,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1625,
+      "diagnosedAt": "2026-02-20T06:30:21.899Z"
+    },
+    {
+      "ecosystem": "packagist",
+      "package": "symfony/browser-kit",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "fabpot"
+      ],
+      "lastCommitDate": "2026-01-25T08:27:20Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1926,
+      "diagnosedAt": "2026-02-20T06:30:23.825Z"
+    },
+    {
+      "ecosystem": "packagist",
+      "package": "symfony/css-selector",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "fabpot"
+      ],
+      "lastCommitDate": "2026-02-17T13:09:04Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2324,
+      "diagnosedAt": "2026-02-20T06:30:26.149Z"
     }
   ],
   "errors": [
