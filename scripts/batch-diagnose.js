@@ -236,7 +236,7 @@ const PACKAGES = {
     'docker', 'docker-compose', 'podman', 'kubernetes', 'helm', 'skaffold', 'tilt',
     'gitpython', 'pygit2', 'dulwich', 'gitdb', 'smmap', 'git-url-parse',
     'sentry-sdk', 'loguru', 'structlog', 'python-json-logger', 'graypy', 'raven',
-    'stripe', 'paypalrestsdk', 'braintree', 'squareup', 'adyen', 'checkout-sdk-python',
+    'stripe', 'paypalrestsdk', 'braintree', 'squareup', 'adyen', 'checkout-sdk',
     'twilio', 'sendgrid', 'mailgun', 'postmark', 'resend', 'yagmail', 'emails',
     'slack-sdk', 'discord-py', 'python-telegram-bot', 'pywhatkit', 'fbchat', 'tweepy',
     'pandas', 'polars', 'dask', 'modin', 'vaex', 'datatable', 'pyarrow', 'fastparquet',
