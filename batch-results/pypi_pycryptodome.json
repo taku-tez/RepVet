@@ -1,0 +1,38 @@
+{
+  "ecosystem": "pypi",
+  "package": "pycryptodome",
+  "score": 79,
+  "riskLevel": "MEDIUM",
+  "deductions": [
+    {
+      "reason": "Author changed from \"Legrandin\" to \"Helder Eijs\"",
+      "points": 8,
+      "confidence": "low"
+    },
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    },
+    {
+      "reason": "2 high severity vulnerability(ies) in history",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "Helder Eijs"
+  ],
+  "lastCommitDate": "2025-11-16T09:50:33Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 3,
+    "critical": 0,
+    "high": 2,
+    "recent": 0,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 1492,
+  "diagnosedAt": "2026-02-20T00:45:23.430Z"
+}

@@ -1,0 +1,25 @@
+{
+  "ecosystem": "pypi",
+  "package": "hashlib",
+  "score": 85,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Latest version is yanked: This was only for Python <= 2.4. LONG obsolete.",
+      "points": 10,
+      "confidence": "high"
+    },
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "Gregory P. Smith"
+  ],
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 454,
+  "diagnosedAt": "2026-02-20T00:45:29.198Z"
+}

@@ -1,0 +1,28 @@
+{
+  "ecosystem": "pypi",
+  "package": "orjson",
+  "score": 90,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "1 high severity vulnerability(ies) in history",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "Unknown"
+  ],
+  "lastCommitDate": "2026-02-02T15:11:27Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 3,
+    "critical": 0,
+    "high": 1,
+    "recent": 1,
+    "hasUnfixed": true
+  },
+  "executionTimeMs": 1864,
+  "diagnosedAt": "2026-02-20T00:45:14.547Z"
+}

@@ -1,0 +1,33 @@
+{
+  "ecosystem": "pypi",
+  "package": "cbor2",
+  "score": 87,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    },
+    {
+      "reason": "2 high severity vulnerability(ies) in history",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "Alex Grönholm"
+  ],
+  "lastCommitDate": "2026-02-16T20:20:21Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 3,
+    "critical": 0,
+    "high": 2,
+    "recent": 1,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 1679,
+  "diagnosedAt": "2026-02-20T00:45:19.989Z"
+}

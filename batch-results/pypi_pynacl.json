@@ -1,0 +1,33 @@
+{
+  "ecosystem": "pypi",
+  "package": "pynacl",
+  "score": 87,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Author changed from \"Donald Stufft\" to \"The PyNaCl developers\"",
+      "points": 8,
+      "confidence": "low"
+    },
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "The PyNaCl developers"
+  ],
+  "lastCommitDate": "2026-02-18T12:19:14Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 1,
+    "critical": 0,
+    "high": 0,
+    "recent": 1,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 1587,
+  "diagnosedAt": "2026-02-20T00:45:25.017Z"
+}

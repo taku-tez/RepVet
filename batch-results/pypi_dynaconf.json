@@ -1,0 +1,21 @@
+{
+  "ecosystem": "pypi",
+  "package": "dynaconf",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "Bruno Rocha"
+  ],
+  "lastCommitDate": "2026-02-09T15:33:22Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1318,
+  "diagnosedAt": "2026-02-20T00:45:11.304Z"
+}

@@ -484,5 +484,17 @@
     "package": "sqlite3",
     "error": "Exit code 1: {\"error\":\"Error: Package not found: sqlite3 (pypi)\"}\n",
     "timestamp": "2026-02-19T23:27:16.930Z"
+  },
+  {
+    "ecosystem": "pypi",
+    "package": "rapidjson",
+    "error": "Exit code 1: {\"error\":\"Error: Package not found: rapidjson (pypi)\"}\n",
+    "timestamp": "2026-02-20T00:45:16.501Z"
+  },
+  {
+    "ecosystem": "pypi",
+    "package": "simdjson",
+    "error": "Exit code 1: {\"error\":\"Error: Package not found: simdjson (pypi)\"}\n",
+    "timestamp": "2026-02-20T00:45:16.974Z"
   }
 ]

@@ -1,0 +1,26 @@
+{
+  "ecosystem": "pypi",
+  "package": "bcrypt",
+  "score": 89,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Author changed from \"Donald Stufft\" to \"The Python Cryptographic Authority developers\"",
+      "points": 8,
+      "confidence": "low"
+    },
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "The Python Cryptographic Authority developers"
+  ],
+  "lastCommitDate": "2026-02-19T03:52:50Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2011,
+  "diagnosedAt": "2026-02-20T00:45:27.029Z"
+}

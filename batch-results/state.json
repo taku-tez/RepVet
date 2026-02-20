@@ -1,5 +1,5 @@
 {
-  "currentIndex": 1980,
+  "currentIndex": 2000,
   "totalPackages": 4957,
   "results": [
     {
@@ -47603,6 +47603,509 @@
       "hasMalwareHistory": false,
       "executionTimeMs": 2222,
       "diagnosedAt": "2026-02-20T00:30:39.575Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "python-dotenv",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Saurabh Kumar"
+      ],
+      "lastCommitDate": "2026-01-12T13:03:34Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1477,
+      "diagnosedAt": "2026-02-20T00:45:09.986Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "dynaconf",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Bruno Rocha"
+      ],
+      "lastCommitDate": "2026-02-09T15:33:22Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1318,
+      "diagnosedAt": "2026-02-20T00:45:11.304Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "jsonschema",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Julian Berman"
+      ],
+      "lastCommitDate": "2026-02-19T02:05:16Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1377,
+      "diagnosedAt": "2026-02-20T00:45:12.682Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "orjson",
+      "score": 90,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "Unknown"
+      ],
+      "lastCommitDate": "2026-02-02T15:11:27Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 3,
+        "critical": 0,
+        "high": 1,
+        "recent": 1,
+        "hasUnfixed": true
+      },
+      "executionTimeMs": 1864,
+      "diagnosedAt": "2026-02-20T00:45:14.547Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "ujson",
+      "score": 87,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "Jonas Tarnstrom"
+      ],
+      "lastCommitDate": "2026-01-19T08:04:00Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 6,
+        "critical": 0,
+        "high": 1,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1487,
+      "diagnosedAt": "2026-02-20T00:45:16.034Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "msgspec",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "Unknown"
+      ],
+      "lastCommitDate": "2025-11-27T16:05:27Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1336,
+      "diagnosedAt": "2026-02-20T00:45:18.310Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "cbor2",
+      "score": 87,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "2 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "Alex Grönholm"
+      ],
+      "lastCommitDate": "2026-02-16T20:20:21Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 3,
+        "critical": 0,
+        "high": 2,
+        "recent": 1,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1679,
+      "diagnosedAt": "2026-02-20T00:45:19.989Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "cryptography",
+      "score": 81,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Author changed from \"Alex Gaynor, Hynek Schlawack, Donald Stufft, Laurens Van Houtven, Jean-Paul Calderone, Christian Heimes, Paul Kehrer, and individual contributors.\" to \"The Python Cryptographic Authority and individual contributors\"",
+          "points": 8,
+          "confidence": "low"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "1 critical vulnerability(ies) in history",
+          "points": 8,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "The Python Cryptographic Authority and individual contributors"
+      ],
+      "lastCommitDate": "2026-02-19T10:45:40Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 25,
+        "critical": 1,
+        "high": 10,
+        "recent": 1,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1948,
+      "diagnosedAt": "2026-02-20T00:45:21.938Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "pycryptodome",
+      "score": 79,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Author changed from \"Legrandin\" to \"Helder Eijs\"",
+          "points": 8,
+          "confidence": "low"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "2 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "Helder Eijs"
+      ],
+      "lastCommitDate": "2025-11-16T09:50:33Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 3,
+        "critical": 0,
+        "high": 2,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1492,
+      "diagnosedAt": "2026-02-20T00:45:23.430Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "pynacl",
+      "score": 87,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Author changed from \"Donald Stufft\" to \"The PyNaCl developers\"",
+          "points": 8,
+          "confidence": "low"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "The PyNaCl developers"
+      ],
+      "lastCommitDate": "2026-02-18T12:19:14Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 1,
+        "critical": 0,
+        "high": 0,
+        "recent": 1,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1587,
+      "diagnosedAt": "2026-02-20T00:45:25.017Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "bcrypt",
+      "score": 89,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Author changed from \"Donald Stufft\" to \"The Python Cryptographic Authority developers\"",
+          "points": 8,
+          "confidence": "low"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "The Python Cryptographic Authority developers"
+      ],
+      "lastCommitDate": "2026-02-19T03:52:50Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2011,
+      "diagnosedAt": "2026-02-20T00:45:27.029Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "argon2-cffi",
+      "score": 95,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "Hynek Schlawack"
+      ],
+      "lastCommitDate": "2026-02-04T08:51:32Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1715,
+      "diagnosedAt": "2026-02-20T00:45:28.744Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "hashlib",
+      "score": 85,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Latest version is yanked: This was only for Python <= 2.4. LONG obsolete.",
+          "points": 10,
+          "confidence": "high"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "Gregory P. Smith"
+      ],
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 454,
+      "diagnosedAt": "2026-02-20T00:45:29.198Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "hmac",
+      "score": 95,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "Laurence Rowe"
+      ],
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 658,
+      "diagnosedAt": "2026-02-20T00:45:29.856Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "pyjwt",
+      "score": 79,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Author changed from \"Jeff Lindsay\" to \"Jose Padilla\"",
+          "points": 8,
+          "confidence": "low"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "2 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "Jose Padilla"
+      ],
+      "lastCommitDate": "2026-02-18T16:42:37Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 5,
+        "critical": 0,
+        "high": 2,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1822,
+      "diagnosedAt": "2026-02-20T00:45:31.678Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "authlib",
+      "score": 87,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "3 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "Hsiaoming Yang"
+      ],
+      "lastCommitDate": "2026-02-17T01:14:03Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 6,
+        "critical": 0,
+        "high": 3,
+        "recent": 4,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1226,
+      "diagnosedAt": "2026-02-20T00:45:32.904Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "python-jose",
+      "score": 82,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "2 critical vulnerability(ies) in history",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "Michael Davis"
+      ],
+      "lastCommitDate": "2026-02-11T02:14:54Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 6,
+        "critical": 2,
+        "high": 0,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1906,
+      "diagnosedAt": "2026-02-20T00:45:34.810Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "jose",
+      "score": 90,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 1 year ago (630 days)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "Demian Brecht"
+      ],
+      "lastCommitDate": "2024-05-30T20:05:25Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2031,
+      "diagnosedAt": "2026-02-20T00:45:36.841Z"
     }
   ],
   "errors": [
@@ -48091,6 +48594,18 @@
       "package": "sqlite3",
       "error": "Exit code 1: {\"error\":\"Error: Package not found: sqlite3 (pypi)\"}\n",
       "timestamp": "2026-02-19T23:27:16.930Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "rapidjson",
+      "error": "Exit code 1: {\"error\":\"Error: Package not found: rapidjson (pypi)\"}\n",
+      "timestamp": "2026-02-20T00:45:16.501Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "simdjson",
+      "error": "Exit code 1: {\"error\":\"Error: Package not found: simdjson (pypi)\"}\n",
+      "timestamp": "2026-02-20T00:45:16.974Z"
     }
   ],
   "startTime": "2026-02-19T12:29:21.598Z"

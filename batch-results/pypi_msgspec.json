@@ -1,0 +1,15 @@
+{
+  "ecosystem": "pypi",
+  "package": "msgspec",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "Unknown"
+  ],
+  "lastCommitDate": "2025-11-27T16:05:27Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1336,
+  "diagnosedAt": "2026-02-20T00:45:18.310Z"
+}

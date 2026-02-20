@@ -1,0 +1,21 @@
+{
+  "ecosystem": "pypi",
+  "package": "jsonschema",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "Julian Berman"
+  ],
+  "lastCommitDate": "2026-02-19T02:05:16Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1377,
+  "diagnosedAt": "2026-02-20T00:45:12.682Z"
+}

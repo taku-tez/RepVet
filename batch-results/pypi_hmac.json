@@ -1,0 +1,20 @@
+{
+  "ecosystem": "pypi",
+  "package": "hmac",
+  "score": 95,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "Laurence Rowe"
+  ],
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 658,
+  "diagnosedAt": "2026-02-20T00:45:29.856Z"
+}

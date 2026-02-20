@@ -1,0 +1,21 @@
+{
+  "ecosystem": "pypi",
+  "package": "python-dotenv",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "Saurabh Kumar"
+  ],
+  "lastCommitDate": "2026-01-12T13:03:34Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1477,
+  "diagnosedAt": "2026-02-20T00:45:09.986Z"
+}
