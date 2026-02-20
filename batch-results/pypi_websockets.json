@@ -1,0 +1,33 @@
+{
+  "ecosystem": "pypi",
+  "package": "websockets",
+  "score": 87,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    },
+    {
+      "reason": "2 high severity vulnerability(ies) in history",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "Aymeric Augustin"
+  ],
+  "lastCommitDate": "2026-02-11T22:42:17Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 4,
+    "critical": 0,
+    "high": 2,
+    "recent": 0,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 1855,
+  "diagnosedAt": "2026-02-20T03:30:25.347Z"
+}

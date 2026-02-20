@@ -1,0 +1,21 @@
+{
+  "ecosystem": "pypi",
+  "package": "zmq",
+  "score": 95,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "Min RK"
+  ],
+  "lastCommitDate": "2026-02-02T17:08:49Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2608,
+  "diagnosedAt": "2026-02-20T03:30:15.157Z"
+}

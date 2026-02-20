@@ -1,0 +1,21 @@
+{
+  "ecosystem": "pypi",
+  "package": "aiohttp-sse",
+  "score": 95,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "Nikolay Novik"
+  ],
+  "lastCommitDate": "2026-02-01T19:34:48Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2658,
+  "diagnosedAt": "2026-02-20T03:30:29.619Z"
+}

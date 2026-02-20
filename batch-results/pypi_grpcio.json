@@ -1,0 +1,38 @@
+{
+  "ecosystem": "pypi",
+  "package": "grpcio",
+  "score": 79,
+  "riskLevel": "MEDIUM",
+  "deductions": [
+    {
+      "reason": "Author changed from \"UNKNOWN\" to \"The gRPC Authors\"",
+      "points": 8,
+      "confidence": "low"
+    },
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    },
+    {
+      "reason": "4 high severity vulnerability(ies) in history",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "The gRPC Authors"
+  ],
+  "lastCommitDate": "2026-02-20T02:13:03Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 6,
+    "critical": 0,
+    "high": 4,
+    "recent": 0,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 1848,
+  "diagnosedAt": "2026-02-20T03:30:35.497Z"
+}

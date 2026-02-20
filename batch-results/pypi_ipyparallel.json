@@ -1,0 +1,14 @@
+{
+  "ecosystem": "pypi",
+  "package": "ipyparallel",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "IPython Development Team"
+  ],
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1203,
+  "diagnosedAt": "2026-02-20T03:30:04.611Z"
+}

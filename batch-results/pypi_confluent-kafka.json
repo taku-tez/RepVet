@@ -1,0 +1,21 @@
+{
+  "ecosystem": "pypi",
+  "package": "confluent-kafka",
+  "score": 92,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Author changed from \"Confluent Inc\" to \"\"Confluent Inc.\"\"",
+      "points": 8,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "\"Confluent Inc.\""
+  ],
+  "lastCommitDate": "2026-02-20T03:18:32Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1711,
+  "diagnosedAt": "2026-02-20T03:30:21.464Z"
+}

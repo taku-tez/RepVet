@@ -1,0 +1,26 @@
+{
+  "ecosystem": "pypi",
+  "package": "kafka-python",
+  "score": 89,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Author changed from \"David Arthur\" to \"Dana Powers\"",
+      "points": 8,
+      "confidence": "low"
+    },
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "Dana Powers"
+  ],
+  "lastCommitDate": "2026-01-03T23:15:47Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1310,
+  "diagnosedAt": "2026-02-20T03:30:19.753Z"
+}

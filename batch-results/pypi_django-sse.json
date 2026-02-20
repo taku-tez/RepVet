@@ -1,0 +1,26 @@
+{
+  "ecosystem": "pypi",
+  "package": "django-sse",
+  "score": 80,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 3 years ago (6 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "Andrei Antoukh"
+  ],
+  "lastCommitDate": "2020-03-26T11:14:40Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2004,
+  "diagnosedAt": "2026-02-20T03:30:33.179Z"
+}

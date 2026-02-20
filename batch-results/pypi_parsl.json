@@ -1,0 +1,28 @@
+{
+  "ecosystem": "pypi",
+  "package": "parsl",
+  "score": 92,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Author changed from \"Yadu Nand Babuji\" to \"The Parsl Team\"",
+      "points": 8,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "The Parsl Team"
+  ],
+  "lastCommitDate": "2026-02-19T11:28:41Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 1,
+    "critical": 0,
+    "high": 0,
+    "recent": 1,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 1946,
+  "diagnosedAt": "2026-02-20T03:30:07.936Z"
+}

@@ -1,0 +1,21 @@
+{
+  "ecosystem": "pypi",
+  "package": "unidist",
+  "score": 95,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Last commit over 1 year ago (486 days)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "Unknown"
+  ],
+  "lastCommitDate": "2024-10-21T15:29:31Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2482,
+  "diagnosedAt": "2026-02-20T03:30:12.549Z"
+}

@@ -1,0 +1,26 @@
+{
+  "ecosystem": "pypi",
+  "package": "flask-sse",
+  "score": 90,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 1 year ago (622 days)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "David Baumgold"
+  ],
+  "lastCommitDate": "2024-06-07T07:16:36Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1556,
+  "diagnosedAt": "2026-02-20T03:30:31.175Z"
+}

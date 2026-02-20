@@ -1,5 +1,5 @@
 {
-  "currentIndex": 2180,
+  "currentIndex": 2200,
   "totalPackages": 4957,
   "results": [
     {
@@ -52307,6 +52307,440 @@
       "hasMalwareHistory": false,
       "executionTimeMs": 1656,
       "diagnosedAt": "2026-02-20T03:15:44.601Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "ipyparallel",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "IPython Development Team"
+      ],
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1203,
+      "diagnosedAt": "2026-02-20T03:30:04.611Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "ray",
+      "score": 85,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "6 critical vulnerability(ies) in history",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "Ray Team"
+      ],
+      "lastCommitDate": "2026-02-20T03:10:49Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 8,
+        "critical": 6,
+        "high": 0,
+        "recent": 4,
+        "hasUnfixed": true
+      },
+      "executionTimeMs": 1379,
+      "diagnosedAt": "2026-02-20T03:30:05.990Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "parsl",
+      "score": 92,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Author changed from \"Yadu Nand Babuji\" to \"The Parsl Team\"",
+          "points": 8,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "The Parsl Team"
+      ],
+      "lastCommitDate": "2026-02-19T11:28:41Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 1,
+        "critical": 0,
+        "high": 0,
+        "recent": 1,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1946,
+      "diagnosedAt": "2026-02-20T03:30:07.936Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "pycompss",
+      "score": 92,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Author changed from \"The COMPSs team\" to \"\"The COMPSs team - Workflows and Distributed Computing Group (WDC) - Barcelona Supercomputing Center (BSC)\"\"",
+          "points": 8,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "\"The COMPSs team - Workflows and Distributed Computing Group (WDC) - Barcelona Supercomputing Center (BSC)\""
+      ],
+      "lastCommitDate": "2026-01-01T22:33:40Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2129,
+      "diagnosedAt": "2026-02-20T03:30:10.066Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "unidist",
+      "score": 95,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Last commit over 1 year ago (486 days)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "Unknown"
+      ],
+      "lastCommitDate": "2024-10-21T15:29:31Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2482,
+      "diagnosedAt": "2026-02-20T03:30:12.549Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "zmq",
+      "score": 95,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "Min RK"
+      ],
+      "lastCommitDate": "2026-02-02T17:08:49Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2608,
+      "diagnosedAt": "2026-02-20T03:30:15.157Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "pyzmq",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "Brian E. Granger",
+        "Min Ragan-Kelley"
+      ],
+      "lastCommitDate": "2026-02-02T17:08:49Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1560,
+      "diagnosedAt": "2026-02-20T03:30:16.717Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "pika",
+      "score": 92,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Author changed from \"Tony Garnock-Jones\" to \"\"Gavin M. Roy\"\"",
+          "points": 8,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Unknown"
+      ],
+      "lastCommitDate": "2025-11-10T15:11:21Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1726,
+      "diagnosedAt": "2026-02-20T03:30:18.443Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "kafka-python",
+      "score": 89,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Author changed from \"David Arthur\" to \"Dana Powers\"",
+          "points": 8,
+          "confidence": "low"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Dana Powers"
+      ],
+      "lastCommitDate": "2026-01-03T23:15:47Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1310,
+      "diagnosedAt": "2026-02-20T03:30:19.753Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "confluent-kafka",
+      "score": 92,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Author changed from \"Confluent Inc\" to \"\"Confluent Inc.\"\"",
+          "points": 8,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "\"Confluent Inc.\""
+      ],
+      "lastCommitDate": "2026-02-20T03:18:32Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1711,
+      "diagnosedAt": "2026-02-20T03:30:21.464Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "aiokafka",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Andrew Svetlov"
+      ],
+      "lastCommitDate": "2026-01-31T16:42:34Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1626,
+      "diagnosedAt": "2026-02-20T03:30:23.090Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "websockets",
+      "score": 87,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "2 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "Aymeric Augustin"
+      ],
+      "lastCommitDate": "2026-02-11T22:42:17Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 4,
+        "critical": 0,
+        "high": 2,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1855,
+      "diagnosedAt": "2026-02-20T03:30:25.347Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "socketio",
+      "score": 95,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "EvgrDan"
+      ],
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1613,
+      "diagnosedAt": "2026-02-20T03:30:26.961Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "aiohttp-sse",
+      "score": 95,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "Nikolay Novik"
+      ],
+      "lastCommitDate": "2026-02-01T19:34:48Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2658,
+      "diagnosedAt": "2026-02-20T03:30:29.619Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "flask-sse",
+      "score": 90,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 1 year ago (622 days)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "David Baumgold"
+      ],
+      "lastCommitDate": "2024-06-07T07:16:36Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1556,
+      "diagnosedAt": "2026-02-20T03:30:31.175Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "django-sse",
+      "score": 80,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 3 years ago (6 years)",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "Andrei Antoukh"
+      ],
+      "lastCommitDate": "2020-03-26T11:14:40Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2004,
+      "diagnosedAt": "2026-02-20T03:30:33.179Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "grpcio",
+      "score": 79,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Author changed from \"UNKNOWN\" to \"The gRPC Authors\"",
+          "points": 8,
+          "confidence": "low"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "4 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "The gRPC Authors"
+      ],
+      "lastCommitDate": "2026-02-20T02:13:03Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 6,
+        "critical": 0,
+        "high": 4,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1848,
+      "diagnosedAt": "2026-02-20T03:30:35.497Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "protobuf",
+      "score": 87,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "4 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "protobuf@googlegroups.com"
+      ],
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 6,
+        "critical": 0,
+        "high": 4,
+        "recent": 2,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1165,
+      "diagnosedAt": "2026-02-20T03:30:36.662Z"
     }
   ],
   "errors": [
@@ -52867,6 +53301,18 @@
       "package": "cobrapy",
       "error": "Exit code 1: {\"error\":\"Error: Package not found: cobrapy (pypi)\"}\n",
       "timestamp": "2026-02-20T03:15:07.981Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "redis-py",
+      "error": "Exit code 1: {\"error\":\"Error: Package not found: redis-py (pypi)\"}\n",
+      "timestamp": "2026-02-20T03:30:23.492Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "server-sent-events",
+      "error": "Exit code 1: {\"error\":\"Error: Package not found: server-sent-events (pypi)\"}\n",
+      "timestamp": "2026-02-20T03:30:33.649Z"
     }
   ],
   "startTime": "2026-02-19T12:29:21.598Z"

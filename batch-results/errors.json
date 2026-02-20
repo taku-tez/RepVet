@@ -556,5 +556,17 @@
     "package": "cobrapy",
     "error": "Exit code 1: {\"error\":\"Error: Package not found: cobrapy (pypi)\"}\n",
     "timestamp": "2026-02-20T03:15:07.981Z"
+  },
+  {
+    "ecosystem": "pypi",
+    "package": "redis-py",
+    "error": "Exit code 1: {\"error\":\"Error: Package not found: redis-py (pypi)\"}\n",
+    "timestamp": "2026-02-20T03:30:23.492Z"
+  },
+  {
+    "ecosystem": "pypi",
+    "package": "server-sent-events",
+    "error": "Exit code 1: {\"error\":\"Error: Package not found: server-sent-events (pypi)\"}\n",
+    "timestamp": "2026-02-20T03:30:33.649Z"
   }
 ]

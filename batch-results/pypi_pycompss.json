@@ -1,0 +1,21 @@
+{
+  "ecosystem": "pypi",
+  "package": "pycompss",
+  "score": 92,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Author changed from \"The COMPSs team\" to \"\"The COMPSs team - Workflows and Distributed Computing Group (WDC) - Barcelona Supercomputing Center (BSC)\"\"",
+      "points": 8,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "\"The COMPSs team - Workflows and Distributed Computing Group (WDC) - Barcelona Supercomputing Center (BSC)\""
+  ],
+  "lastCommitDate": "2026-01-01T22:33:40Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2129,
+  "diagnosedAt": "2026-02-20T03:30:10.066Z"
+}

@@ -1,0 +1,16 @@
+{
+  "ecosystem": "pypi",
+  "package": "pyzmq",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "Brian E. Granger",
+    "Min Ragan-Kelley"
+  ],
+  "lastCommitDate": "2026-02-02T17:08:49Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1560,
+  "diagnosedAt": "2026-02-20T03:30:16.717Z"
+}
