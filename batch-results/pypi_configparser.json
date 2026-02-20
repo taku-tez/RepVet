@@ -1,0 +1,26 @@
+{
+  "ecosystem": "pypi",
+  "package": "configparser",
+  "score": 89,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Author changed from \"Åukasz Langa\" to \"\"Jason R. Coombs\"\"",
+      "points": 8,
+      "confidence": "low"
+    },
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "Łukasz Langa"
+  ],
+  "lastCommitDate": "2025-09-16T12:37:14Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2222,
+  "diagnosedAt": "2026-02-20T00:30:39.575Z"
+}

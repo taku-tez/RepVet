@@ -1,0 +1,21 @@
+{
+  "ecosystem": "pypi",
+  "package": "tomli-w",
+  "score": 95,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "Taneli Hukkinen"
+  ],
+  "lastCommitDate": "2026-01-19T17:40:02Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1755,
+  "diagnosedAt": "2026-02-20T00:30:37.352Z"
+}

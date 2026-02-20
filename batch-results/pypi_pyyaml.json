@@ -1,0 +1,33 @@
+{
+  "ecosystem": "pypi",
+  "package": "pyyaml",
+  "score": 82,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    },
+    {
+      "reason": "4 critical vulnerability(ies) in history",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "Kirill Simonov"
+  ],
+  "lastCommitDate": "2025-09-25T21:29:27Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 8,
+    "critical": 4,
+    "high": 0,
+    "recent": 0,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 1523,
+  "diagnosedAt": "2026-02-20T00:30:33.450Z"
+}

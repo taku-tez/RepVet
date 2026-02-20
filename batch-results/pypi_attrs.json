@@ -1,0 +1,21 @@
+{
+  "ecosystem": "pypi",
+  "package": "attrs",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "Hynek Schlawack"
+  ],
+  "lastCommitDate": "2026-02-10T17:59:40Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1451,
+  "diagnosedAt": "2026-02-20T00:30:11.361Z"
+}

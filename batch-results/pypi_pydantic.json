@@ -1,0 +1,28 @@
+{
+  "ecosystem": "pypi",
+  "package": "pydantic",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "Samuel Colvin"
+  ],
+  "lastCommitDate": "2026-02-19T13:38:43Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 3,
+    "critical": 0,
+    "high": 0,
+    "recent": 0,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 1595,
+  "diagnosedAt": "2026-02-20T00:30:09.909Z"
+}

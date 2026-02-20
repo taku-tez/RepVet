@@ -1,0 +1,21 @@
+{
+  "ecosystem": "pypi",
+  "package": "yaspin",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "Pavlo Dmytrenko"
+  ],
+  "lastCommitDate": "2026-02-12T12:26:23Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2372,
+  "diagnosedAt": "2026-02-20T00:30:06.708Z"
+}

@@ -1,0 +1,20 @@
+{
+  "ecosystem": "pypi",
+  "package": "templite",
+  "score": 95,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "Sam et Max"
+  ],
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1855,
+  "diagnosedAt": "2026-02-20T00:30:29.450Z"
+}

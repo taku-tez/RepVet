@@ -1,0 +1,26 @@
+{
+  "ecosystem": "pypi",
+  "package": "cerberus",
+  "score": 89,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Author changed from \"Nicola Iarocci\" to \"Frank Sachsenheim\"",
+      "points": 8,
+      "confidence": "low"
+    },
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "Nicola Iarocci"
+  ],
+  "lastCommitDate": "2026-01-01T13:12:49Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1787,
+  "diagnosedAt": "2026-02-20T00:30:16.388Z"
+}

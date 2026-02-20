@@ -1,0 +1,26 @@
+{
+  "ecosystem": "pypi",
+  "package": "django-template",
+  "score": 80,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 3 years ago (4 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "Alisson Claudino"
+  ],
+  "lastCommitDate": "2021-09-22T18:30:20Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1763,
+  "diagnosedAt": "2026-02-20T00:30:27.595Z"
+}

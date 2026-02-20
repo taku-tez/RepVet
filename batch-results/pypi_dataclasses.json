@@ -1,0 +1,26 @@
+{
+  "ecosystem": "pypi",
+  "package": "dataclasses",
+  "score": 90,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 1 year ago (588 days)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "Eric V. Smith"
+  ],
+  "lastCommitDate": "2024-07-11T16:14:35Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1546,
+  "diagnosedAt": "2026-02-20T00:30:12.908Z"
+}

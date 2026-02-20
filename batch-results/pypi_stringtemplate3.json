@@ -1,0 +1,31 @@
+{
+  "ecosystem": "pypi",
+  "package": "stringtemplate3",
+  "score": 82,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Author changed from \"Benjamin Niemann\" to \"Fredrick Eisele\"",
+      "points": 8,
+      "confidence": "low"
+    },
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 1 year ago (713 days)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "Terence Parr"
+  ],
+  "lastCommitDate": "2024-03-08T17:38:39Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2477,
+  "diagnosedAt": "2026-02-20T00:30:31.927Z"
+}

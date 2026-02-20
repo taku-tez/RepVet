@@ -1,0 +1,21 @@
+{
+  "ecosystem": "pypi",
+  "package": "chameleon",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "Malthe Borch"
+  ],
+  "lastCommitDate": "2025-06-12T14:15:21Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2507,
+  "diagnosedAt": "2026-02-20T00:30:25.831Z"
+}

@@ -1,0 +1,33 @@
+{
+  "ecosystem": "pypi",
+  "package": "jinja2",
+  "score": 82,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Author changed from \"Armin Ronacher\" to \"Pallets\"",
+      "points": 8,
+      "confidence": "low"
+    },
+    {
+      "reason": "5 high severity vulnerability(ies) in history",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "Unknown"
+  ],
+  "lastCommitDate": "2025-06-14T20:35:04Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 15,
+    "critical": 0,
+    "high": 5,
+    "recent": 1,
+    "hasUnfixed": false
+  },
+  "executionTimeMs": 1502,
+  "diagnosedAt": "2026-02-20T00:30:21.989Z"
+}
