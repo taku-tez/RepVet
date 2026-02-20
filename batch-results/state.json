@@ -1,5 +1,5 @@
 {
-  "currentIndex": 2000,
+  "currentIndex": 2020,
   "totalPackages": 4957,
   "results": [
     {
@@ -48106,6 +48106,477 @@
       "hasMalwareHistory": false,
       "executionTimeMs": 2031,
       "diagnosedAt": "2026-02-20T00:45:36.841Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "itsdangerous",
+      "score": 92,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Author changed from \"Armin Ronacher\" to \"Pallets\"",
+          "points": 8,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Unknown"
+      ],
+      "lastCommitDate": "2025-06-14T20:35:46Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1765,
+      "diagnosedAt": "2026-02-20T01:00:22.050Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "passlib",
+      "score": 95,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "Eli Collins"
+      ],
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1378,
+      "diagnosedAt": "2026-02-20T01:00:23.429Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "oauthlib",
+      "score": 92,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Author changed from \"Idan Gazit\" to \"Jonathan Huot\"",
+          "points": 8,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Jonathan Huot",
+        "The OAuthlib Community"
+      ],
+      "lastCommitDate": "2026-01-31T14:28:24Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 2,
+        "critical": 0,
+        "high": 0,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1938,
+      "diagnosedAt": "2026-02-20T01:00:25.368Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "boto3",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Amazon Web Services"
+      ],
+      "lastCommitDate": "2026-02-19T20:26:41Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1502,
+      "diagnosedAt": "2026-02-20T01:00:26.870Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "botocore",
+      "score": 89,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Author changed from \"Mitch Garnaat\" to \"Amazon Web Services\"",
+          "points": 8,
+          "confidence": "low"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Amazon Web Services"
+      ],
+      "lastCommitDate": "2026-02-19T20:22:22Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1991,
+      "diagnosedAt": "2026-02-20T01:00:28.861Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "azure-storage",
+      "score": 95,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "Microsoft Corporation"
+      ],
+      "lastCommitDate": "2026-02-20T00:52:30Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1664,
+      "diagnosedAt": "2026-02-20T01:00:30.526Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "google-cloud-storage",
+      "score": 92,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Author changed from \"Google Cloud Platform\" to \"Google LLC\"",
+          "points": 8,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Google LLC"
+      ],
+      "lastCommitDate": "2026-02-19T14:56:26Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1571,
+      "diagnosedAt": "2026-02-20T01:00:32.097Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "firebase-admin",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Firebase"
+      ],
+      "lastCommitDate": "2026-02-19T21:25:06Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1636,
+      "diagnosedAt": "2026-02-20T01:00:33.733Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "celery",
+      "score": 87,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "Ask Solem"
+      ],
+      "lastCommitDate": "2026-02-19T22:13:40Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 4,
+        "critical": 0,
+        "high": 1,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1427,
+      "diagnosedAt": "2026-02-20T01:00:35.544Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "rq",
+      "score": 89,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Author changed from \"Vincent Driessen\" to \"Selwin Ong\"",
+          "points": 8,
+          "confidence": "low"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Selwin Ong"
+      ],
+      "lastCommitDate": "2026-02-14T12:28:04Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1780,
+      "diagnosedAt": "2026-02-20T01:00:37.324Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "dramatiq",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Bogdan Popa"
+      ],
+      "lastCommitDate": "2026-02-17T12:18:14Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2166,
+      "diagnosedAt": "2026-02-20T01:00:39.491Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "huey",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Charles Leifer"
+      ],
+      "lastCommitDate": "2026-02-04T14:50:46Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1751,
+      "diagnosedAt": "2026-02-20T01:00:41.242Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "procrastinate",
+      "score": 92,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Author changed from \"PeopleDoc\" to \"Eric Lemoine, Kai Schlamp\"",
+          "points": 8,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Eric Lemoine",
+        "Kai Schlamp"
+      ],
+      "lastCommitDate": "2026-02-14T01:58:36Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1522,
+      "diagnosedAt": "2026-02-20T01:00:42.764Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "celery-redbeat",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Marc Sibson"
+      ],
+      "lastCommitDate": "2025-10-25T21:17:28Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2365,
+      "diagnosedAt": "2026-02-20T01:00:45.129Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "flower",
+      "score": 87,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "Mher Movsisyan"
+      ],
+      "lastCommitDate": "2026-02-09T23:15:18Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 2,
+        "critical": 0,
+        "high": 1,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1884,
+      "diagnosedAt": "2026-02-20T01:00:47.013Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "scrapy",
+      "score": 87,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "5 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "Scrapy developers"
+      ],
+      "lastCommitDate": "2026-02-19T10:21:59Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 17,
+        "critical": 0,
+        "high": 5,
+        "recent": 1,
+        "hasUnfixed": true
+      },
+      "executionTimeMs": 2233,
+      "diagnosedAt": "2026-02-20T01:00:49.246Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "beautifulsoup4",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Leonard Richardson"
+      ],
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 932,
+      "diagnosedAt": "2026-02-20T01:00:50.178Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "lxml",
+      "score": 90,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "lxml dev team"
+      ],
+      "lastCommitDate": "2026-01-26T12:42:05Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 11,
+        "critical": 0,
+        "high": 1,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1736,
+      "diagnosedAt": "2026-02-20T01:00:51.914Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "html5lib",
+      "score": 92,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "Last commit over 1 year ago (723 days)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "James Graham"
+      ],
+      "lastCommitDate": "2024-02-27T19:49:36Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 4,
+        "critical": 0,
+        "high": 0,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 2014,
+      "diagnosedAt": "2026-02-20T01:00:53.928Z"
     }
   ],
   "errors": [
@@ -48606,6 +49077,12 @@
       "package": "simdjson",
       "error": "Exit code 1: {\"error\":\"Error: Package not found: simdjson (pypi)\"}\n",
       "timestamp": "2026-02-20T00:45:16.974Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "supabase-py",
+      "error": "Exit code 1: {\"error\":\"Error: Package not found: supabase-py (pypi)\"}\n",
+      "timestamp": "2026-02-20T01:00:34.116Z"
     }
   ],
   "startTime": "2026-02-19T12:29:21.598Z"

@@ -1,0 +1,26 @@
+{
+  "ecosystem": "pypi",
+  "package": "botocore",
+  "score": 89,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Author changed from \"Mitch Garnaat\" to \"Amazon Web Services\"",
+      "points": 8,
+      "confidence": "low"
+    },
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "Amazon Web Services"
+  ],
+  "lastCommitDate": "2026-02-19T20:22:22Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1991,
+  "diagnosedAt": "2026-02-20T01:00:28.861Z"
+}

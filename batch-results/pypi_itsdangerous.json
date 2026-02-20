@@ -1,0 +1,21 @@
+{
+  "ecosystem": "pypi",
+  "package": "itsdangerous",
+  "score": 92,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Author changed from \"Armin Ronacher\" to \"Pallets\"",
+      "points": 8,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "Unknown"
+  ],
+  "lastCommitDate": "2025-06-14T20:35:46Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1765,
+  "diagnosedAt": "2026-02-20T01:00:22.050Z"
+}

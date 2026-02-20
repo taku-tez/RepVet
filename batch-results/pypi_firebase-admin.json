@@ -1,0 +1,21 @@
+{
+  "ecosystem": "pypi",
+  "package": "firebase-admin",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "Firebase"
+  ],
+  "lastCommitDate": "2026-02-19T21:25:06Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1636,
+  "diagnosedAt": "2026-02-20T01:00:33.733Z"
+}

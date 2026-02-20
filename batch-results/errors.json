@@ -496,5 +496,11 @@
     "package": "simdjson",
     "error": "Exit code 1: {\"error\":\"Error: Package not found: simdjson (pypi)\"}\n",
     "timestamp": "2026-02-20T00:45:16.974Z"
+  },
+  {
+    "ecosystem": "pypi",
+    "package": "supabase-py",
+    "error": "Exit code 1: {\"error\":\"Error: Package not found: supabase-py (pypi)\"}\n",
+    "timestamp": "2026-02-20T01:00:34.116Z"
   }
 ]

@@ -1,0 +1,21 @@
+{
+  "ecosystem": "pypi",
+  "package": "huey",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "Charles Leifer"
+  ],
+  "lastCommitDate": "2026-02-04T14:50:46Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1751,
+  "diagnosedAt": "2026-02-20T01:00:41.242Z"
+}

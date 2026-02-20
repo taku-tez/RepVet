@@ -1,0 +1,21 @@
+{
+  "ecosystem": "pypi",
+  "package": "google-cloud-storage",
+  "score": 92,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Author changed from \"Google Cloud Platform\" to \"Google LLC\"",
+      "points": 8,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "Google LLC"
+  ],
+  "lastCommitDate": "2026-02-19T14:56:26Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1571,
+  "diagnosedAt": "2026-02-20T01:00:32.097Z"
+}

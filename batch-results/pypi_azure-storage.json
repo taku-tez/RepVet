@@ -1,0 +1,21 @@
+{
+  "ecosystem": "pypi",
+  "package": "azure-storage",
+  "score": 95,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "Microsoft Corporation"
+  ],
+  "lastCommitDate": "2026-02-20T00:52:30Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1664,
+  "diagnosedAt": "2026-02-20T01:00:30.526Z"
+}

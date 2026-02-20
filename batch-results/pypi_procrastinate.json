@@ -1,0 +1,22 @@
+{
+  "ecosystem": "pypi",
+  "package": "procrastinate",
+  "score": 92,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Author changed from \"PeopleDoc\" to \"Eric Lemoine, Kai Schlamp\"",
+      "points": 8,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "Eric Lemoine",
+    "Kai Schlamp"
+  ],
+  "lastCommitDate": "2026-02-14T01:58:36Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1522,
+  "diagnosedAt": "2026-02-20T01:00:42.764Z"
+}

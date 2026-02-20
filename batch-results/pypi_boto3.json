@@ -1,0 +1,21 @@
+{
+  "ecosystem": "pypi",
+  "package": "boto3",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "Amazon Web Services"
+  ],
+  "lastCommitDate": "2026-02-19T20:26:41Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1502,
+  "diagnosedAt": "2026-02-20T01:00:26.870Z"
+}

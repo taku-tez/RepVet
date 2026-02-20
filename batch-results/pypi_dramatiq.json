@@ -1,0 +1,21 @@
+{
+  "ecosystem": "pypi",
+  "package": "dramatiq",
+  "score": 97,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "Bogdan Popa"
+  ],
+  "lastCommitDate": "2026-02-17T12:18:14Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2166,
+  "diagnosedAt": "2026-02-20T01:00:39.491Z"
+}

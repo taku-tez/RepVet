@@ -1,0 +1,26 @@
+{
+  "ecosystem": "pypi",
+  "package": "rq",
+  "score": 89,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Author changed from \"Vincent Driessen\" to \"Selwin Ong\"",
+      "points": 8,
+      "confidence": "low"
+    },
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    }
+  ],
+  "maintainers": [
+    "Selwin Ong"
+  ],
+  "lastCommitDate": "2026-02-14T12:28:04Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1780,
+  "diagnosedAt": "2026-02-20T01:00:37.324Z"
+}

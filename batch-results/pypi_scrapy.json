@@ -1,0 +1,33 @@
+{
+  "ecosystem": "pypi",
+  "package": "scrapy",
+  "score": 87,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    },
+    {
+      "reason": "5 high severity vulnerability(ies) in history",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "Scrapy developers"
+  ],
+  "lastCommitDate": "2026-02-19T10:21:59Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "vulnerabilityStats": {
+    "total": 17,
+    "critical": 0,
+    "high": 5,
+    "recent": 1,
+    "hasUnfixed": true
+  },
+  "executionTimeMs": 2233,
+  "diagnosedAt": "2026-02-20T01:00:49.246Z"
+}
