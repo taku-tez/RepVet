@@ -18,9 +18,9 @@
   "maintainers": [
     "The Python Cryptographic Authority developers"
   ],
-  "lastCommitDate": "2026-02-19T03:52:50Z",
+  "lastCommitDate": "2026-02-20T03:25:36Z",
   "hasOwnershipTransfer": true,
   "hasMalwareHistory": false,
-  "executionTimeMs": 2011,
-  "diagnosedAt": "2026-02-20T00:45:27.029Z"
+  "executionTimeMs": 1630,
+  "diagnosedAt": "2026-02-20T05:00:41.129Z"
 }
