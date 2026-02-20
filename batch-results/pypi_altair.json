@@ -1,11 +1,11 @@
 {
   "ecosystem": "pypi",
-  "package": "plotly",
+  "package": "altair",
   "score": 89,
   "riskLevel": "LOW",
   "deductions": [
     {
-      "reason": "Author changed from \"Chris P\" to \"Martha Cryan\"",
+      "reason": "Author changed from \"Brian E. Granger / Jake VanderPlas\" to \"Vega-Altair Contributors\"",
       "points": 8,
       "confidence": "low"
     },
@@ -16,11 +16,11 @@
     }
   ],
   "maintainers": [
-    "Chris P"
+    "Vega-Altair Contributors"
   ],
-  "lastCommitDate": "2026-02-19T19:54:54Z",
+  "lastCommitDate": "2026-02-19T08:18:29Z",
   "hasOwnershipTransfer": true,
   "hasMalwareHistory": false,
-  "executionTimeMs": 1066,
-  "diagnosedAt": "2026-02-20T02:00:32.768Z"
+  "executionTimeMs": 1595,
+  "diagnosedAt": "2026-02-20T02:00:36.342Z"
 }

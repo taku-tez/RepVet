@@ -526,5 +526,11 @@
     "package": "checkout-sdk-python",
     "error": "Exit code 1: {\"error\":\"Error: Package not found: checkout-sdk-python (pypi)\"}\n",
     "timestamp": "2026-02-20T01:45:08.547Z"
+  },
+  {
+    "ecosystem": "pypi",
+    "package": "dask-array",
+    "error": "Exit code 1: {\"error\":\"Error: Package not found: dask-array (pypi)\"}\n",
+    "timestamp": "2026-02-20T02:00:27.330Z"
   }
 ]
