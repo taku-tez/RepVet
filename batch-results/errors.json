@@ -580,5 +580,11 @@
     "package": "micromamba",
     "error": "Exit code 1: {\"error\":\"Error: Package not found: micromamba (pypi)\"}\n",
     "timestamp": "2026-02-20T04:15:31.084Z"
+  },
+  {
+    "ecosystem": "pypi",
+    "package": "supabase-py",
+    "error": "Exit code 1: {\"error\":\"Error: Package not found: supabase-py (pypi)\"}\n",
+    "timestamp": "2026-02-20T05:15:21.438Z"
   }
 ]
