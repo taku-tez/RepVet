@@ -1,0 +1,31 @@
+{
+  "ecosystem": "pypi",
+  "package": "dataclasses-json",
+  "score": 84,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Author changed from \"lidatong\" to \"Charles Li\"",
+      "points": 8,
+      "confidence": "low"
+    },
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
+      "confidence": "low"
+    },
+    {
+      "reason": "Last commit over 1 year ago (561 days)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "Charles Li"
+  ],
+  "lastCommitDate": "2024-08-08T03:21:37Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1284,
+  "diagnosedAt": "2026-02-20T03:45:17.266Z"
+}

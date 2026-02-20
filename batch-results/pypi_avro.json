@@ -1,7 +1,7 @@
 {
   "ecosystem": "pypi",
-  "package": "sqlalchemy",
-  "score": 82,
+  "package": "avro",
+  "score": 87,
   "riskLevel": "LOW",
   "deductions": [
     {
@@ -10,23 +10,23 @@
       "confidence": "low"
     },
     {
-      "reason": "3 critical vulnerability(ies) in history",
-      "points": 15,
+      "reason": "1 high severity vulnerability(ies) in history",
+      "points": 10,
       "confidence": "high"
     }
   ],
   "maintainers": [
-    "Mike Bayer"
+    "Apache Avro"
   ],
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
   "vulnerabilityStats": {
-    "total": 6,
-    "critical": 3,
-    "high": 0,
+    "total": 1,
+    "critical": 0,
+    "high": 1,
     "recent": 0,
     "hasUnfixed": false
   },
-  "executionTimeMs": 1014,
-  "diagnosedAt": "2026-02-20T03:45:25.352Z"
+  "executionTimeMs": 1464,
+  "diagnosedAt": "2026-02-20T03:45:09.574Z"
 }

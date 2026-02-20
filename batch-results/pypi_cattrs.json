@@ -1,11 +1,11 @@
 {
   "ecosystem": "pypi",
-  "package": "hypothesis",
+  "package": "cattrs",
   "score": 89,
   "riskLevel": "LOW",
   "deductions": [
     {
-      "reason": "Author changed from \"David R. MacIver\" to \"\"David R. MacIver and Zac Hatfield-Dodds\"\"",
+      "reason": "Author changed from \"Tin Tvrtković\" to \"Tin Tvrtkovic\"",
       "points": 8,
       "confidence": "low"
     },
@@ -16,11 +16,11 @@
     }
   ],
   "maintainers": [
-    "\"David R. MacIver and Zac Hatfield-Dodds\""
+    "Tin Tvrtkovic"
   ],
-  "lastCommitDate": "2026-02-16T22:59:19Z",
+  "lastCommitDate": "2026-02-18T22:09:32Z",
   "hasOwnershipTransfer": true,
   "hasMalwareHistory": false,
-  "executionTimeMs": 1432,
-  "diagnosedAt": "2026-02-20T03:45:34.463Z"
+  "executionTimeMs": 1750,
+  "diagnosedAt": "2026-02-20T03:45:20.538Z"
 }

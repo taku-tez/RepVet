@@ -1,6 +1,6 @@
 {
   "ecosystem": "pypi",
-  "package": "pydantic",
+  "package": "peewee-migrate",
   "score": 97,
   "riskLevel": "LOW",
   "deductions": [
@@ -11,18 +11,11 @@
     }
   ],
   "maintainers": [
-    "Samuel Colvin"
+    "Kirill Klenov"
   ],
-  "lastCommitDate": "2026-02-19T13:38:43Z",
+  "lastCommitDate": "2025-11-25T11:25:47Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
-  "vulnerabilityStats": {
-    "total": 3,
-    "critical": 0,
-    "high": 0,
-    "recent": 0,
-    "hasUnfixed": false
-  },
-  "executionTimeMs": 1822,
-  "diagnosedAt": "2026-02-20T03:45:15.982Z"
+  "executionTimeMs": 1800,
+  "diagnosedAt": "2026-02-20T03:45:29.048Z"
 }

@@ -1,6 +1,6 @@
 {
   "ecosystem": "pypi",
-  "package": "nose",
+  "package": "unittest",
   "score": 95,
   "riskLevel": "LOW",
   "deductions": [
@@ -11,10 +11,10 @@
     }
   ],
   "maintainers": [
-    "Jason Pellerin"
+    "Michael Foord"
   ],
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
-  "executionTimeMs": 959,
-  "diagnosedAt": "2026-02-20T03:45:33.031Z"
+  "executionTimeMs": 737,
+  "diagnosedAt": "2026-02-20T03:45:32.072Z"
 }

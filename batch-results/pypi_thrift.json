@@ -1,0 +1,25 @@
+{
+  "ecosystem": "pypi",
+  "package": "thrift",
+  "score": 87,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Author changed from \"['Thrift Developers']\" to \"Apache Thrift Developers\"",
+      "points": 8,
+      "confidence": "low"
+    },
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "Apache Thrift Developers"
+  ],
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1217,
+  "diagnosedAt": "2026-02-20T03:45:08.109Z"
+}

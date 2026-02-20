@@ -1,6 +1,6 @@
 {
   "ecosystem": "pypi",
-  "package": "nose",
+  "package": "capnproto",
   "score": 95,
   "riskLevel": "LOW",
   "deductions": [
@@ -11,10 +11,11 @@
     }
   ],
   "maintainers": [
-    "Jason Pellerin"
+    "the capnproto-pypi authors"
   ],
+  "lastCommitDate": "2026-01-26T03:00:43Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
-  "executionTimeMs": 959,
-  "diagnosedAt": "2026-02-20T03:45:33.031Z"
+  "executionTimeMs": 1425,
+  "diagnosedAt": "2026-02-20T03:45:12.550Z"
 }

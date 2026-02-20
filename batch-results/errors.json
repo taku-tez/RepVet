@@ -568,5 +568,11 @@
     "package": "server-sent-events",
     "error": "Exit code 1: {\"error\":\"Error: Package not found: server-sent-events (pypi)\"}\n",
     "timestamp": "2026-02-20T03:30:33.649Z"
+  },
+  {
+    "ecosystem": "pypi",
+    "package": "django-migrations",
+    "error": "Exit code 1: {\"error\":\"Error: Package not found: django-migrations (pypi)\"}\n",
+    "timestamp": "2026-02-20T03:45:27.248Z"
   }
 ]

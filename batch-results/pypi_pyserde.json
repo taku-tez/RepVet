@@ -1,20 +1,21 @@
 {
   "ecosystem": "pypi",
-  "package": "nose",
-  "score": 95,
+  "package": "pyserde",
+  "score": 97,
   "riskLevel": "LOW",
   "deductions": [
     {
       "reason": "Single maintainer (bus factor risk)",
-      "points": 5,
-      "confidence": "high"
+      "points": 3,
+      "confidence": "low"
     }
   ],
   "maintainers": [
-    "Jason Pellerin"
+    "yukinarit"
   ],
+  "lastCommitDate": "2026-02-17T18:33:09Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
-  "executionTimeMs": 959,
-  "diagnosedAt": "2026-02-20T03:45:33.031Z"
+  "executionTimeMs": 2002,
+  "diagnosedAt": "2026-02-20T03:45:24.338Z"
 }
