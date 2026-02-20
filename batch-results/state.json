@@ -1,5 +1,5 @@
 {
-  "currentIndex": 2240,
+  "currentIndex": 2260,
   "totalPackages": 4957,
   "results": [
     {
@@ -53711,6 +53711,565 @@
       },
       "executionTimeMs": 1474,
       "diagnosedAt": "2026-02-20T04:00:39.713Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "setuptools",
+      "score": 79,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Author changed from \"Phillip J. Eby\" to \"Python Packaging Authority\"",
+          "points": 8,
+          "confidence": "low"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "5 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "Python Packaging Authority"
+      ],
+      "lastCommitDate": "2026-02-12T00:03:48Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 7,
+        "critical": 0,
+        "high": 5,
+        "recent": 2,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1191,
+      "diagnosedAt": "2026-02-20T04:15:08.335Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "poetry",
+      "score": 67,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Author changed from \"Sébastien Eustace\" to \"Arun Babu Neelicattu\"",
+          "points": 8,
+          "confidence": "low"
+        },
+        {
+          "reason": "1 critical vulnerability(ies) in history",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "3 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "Arun Babu Neelicattu",
+        "Sébastien Eustace"
+      ],
+      "lastCommitDate": "2026-02-19T10:11:44Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 6,
+        "critical": 1,
+        "high": 3,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1601,
+      "diagnosedAt": "2026-02-20T04:15:09.936Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "pipenv",
+      "score": 82,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Author changed from \"Kenneth Reitz\" to \"Pipenv maintainer team\"",
+          "points": 8,
+          "confidence": "low"
+        },
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "Pipenv maintainer team"
+      ],
+      "lastCommitDate": "2026-02-16T10:57:06Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 2,
+        "critical": 0,
+        "high": 1,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 2123,
+      "diagnosedAt": "2026-02-20T04:15:12.060Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "hatch",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Ofek Lev"
+      ],
+      "lastCommitDate": "2026-02-19T20:33:41Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1562,
+      "diagnosedAt": "2026-02-20T04:15:13.623Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "pdm",
+      "score": 79,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Author changed from \"frostming\" to \"Frost Ming\"",
+          "points": 8,
+          "confidence": "low"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "Frost Ming"
+      ],
+      "lastCommitDate": "2026-02-05T03:07:15Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 1,
+        "critical": 0,
+        "high": 1,
+        "recent": 0,
+        "hasUnfixed": true
+      },
+      "executionTimeMs": 1927,
+      "diagnosedAt": "2026-02-20T04:15:15.551Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "flit",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Thomas Kluyver"
+      ],
+      "lastCommitDate": "2026-02-12T08:59:57Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1604,
+      "diagnosedAt": "2026-02-20T04:15:17.155Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "build",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Filipe Laíns"
+      ],
+      "lastCommitDate": "2026-02-16T19:51:03Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1346,
+      "diagnosedAt": "2026-02-20T04:15:18.501Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "installer",
+      "score": 87,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Author changed from \"Dan Ryan and Tzu-ping Chung\" to \"Pradyun Gedam\"",
+          "points": 8,
+          "confidence": "low"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "Pradyun Gedam"
+      ],
+      "lastCommitDate": "2026-02-16T18:31:38Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1798,
+      "diagnosedAt": "2026-02-20T04:15:20.300Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "pip",
+      "score": 79,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Author changed from \"The Open Planning Project\" to \"The pip developers\"",
+          "points": 8,
+          "confidence": "low"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "4 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "The pip developers"
+      ],
+      "lastCommitDate": "2026-02-13T13:05:53Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 16,
+        "critical": 0,
+        "high": 4,
+        "recent": 2,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1454,
+      "diagnosedAt": "2026-02-20T04:15:21.754Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "pip-tools",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "Vincent Driessen"
+      ],
+      "lastCommitDate": "2026-02-16T18:10:06Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1886,
+      "diagnosedAt": "2026-02-20T04:15:23.640Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "pipx",
+      "score": 89,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Author changed from \"ludbek\" to \"Chad Smith\"",
+          "points": 8,
+          "confidence": "low"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Chad Smith"
+      ],
+      "lastCommitDate": "2026-02-16T18:32:24Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2037,
+      "diagnosedAt": "2026-02-20T04:15:25.677Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "pipenv",
+      "score": 82,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Author changed from \"Kenneth Reitz\" to \"Pipenv maintainer team\"",
+          "points": 8,
+          "confidence": "low"
+        },
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "Pipenv maintainer team"
+      ],
+      "lastCommitDate": "2026-02-16T10:57:06Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 2,
+        "critical": 0,
+        "high": 1,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1136,
+      "diagnosedAt": "2026-02-20T04:15:26.813Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "conda",
+      "score": 90,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Latest version is yanked: Pip installing conda leads to broken UX; please install using miniconda or miniforge instead. See https://github.com/conda/conda/issues/11715",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "Continuum Analytics",
+        "Inc."
+      ],
+      "lastCommitDate": "2026-02-19T00:10:35Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2210,
+      "diagnosedAt": "2026-02-20T04:15:29.023Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "mamba",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Néstor Salceda"
+      ],
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1592,
+      "diagnosedAt": "2026-02-20T04:15:30.615Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "pixi",
+      "score": 72,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Author changed from \"dazzler\" to \"azuline\"",
+          "points": 8,
+          "confidence": "low"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 3 years ago (5 years)",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "azuline"
+      ],
+      "lastCommitDate": "2020-11-09T02:43:24Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2385,
+      "diagnosedAt": "2026-02-20T04:15:33.469Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "urllib3",
+      "score": 81,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Author changed from \"Andrey Petrov\" to \"Seth Michael Larson\"",
+          "points": 8,
+          "confidence": "low"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "1 critical vulnerability(ies) in history",
+          "points": 8,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Andrey Petrov"
+      ],
+      "lastCommitDate": "2026-02-17T19:32:26Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 28,
+        "critical": 1,
+        "high": 8,
+        "recent": 5,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1874,
+      "diagnosedAt": "2026-02-20T04:15:35.343Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "requests",
+      "score": 87,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "Kenneth Reitz"
+      ],
+      "lastCommitDate": "2026-02-14T00:06:59Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 12,
+        "critical": 0,
+        "high": 1,
+        "recent": 1,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1401,
+      "diagnosedAt": "2026-02-20T04:15:36.745Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "certifi",
+      "score": 87,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "2 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "Kenneth Reitz"
+      ],
+      "lastCommitDate": "2026-01-27T00:37:30Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 6,
+        "critical": 0,
+        "high": 2,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 2350,
+      "diagnosedAt": "2026-02-20T04:15:39.095Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "idna",
+      "score": 87,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "Kim Davies"
+      ],
+      "lastCommitDate": "2025-10-20T21:41:13Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 2,
+        "critical": 0,
+        "high": 1,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 959,
+      "diagnosedAt": "2026-02-20T04:15:40.054Z"
     }
   ],
   "errors": [
@@ -54289,6 +54848,12 @@
       "package": "django-migrations",
       "error": "Exit code 1: {\"error\":\"Error: Package not found: django-migrations (pypi)\"}\n",
       "timestamp": "2026-02-20T03:45:27.248Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "micromamba",
+      "error": "Exit code 1: {\"error\":\"Error: Package not found: micromamba (pypi)\"}\n",
+      "timestamp": "2026-02-20T04:15:31.084Z"
     }
   ],
   "startTime": "2026-02-19T12:29:21.598Z"

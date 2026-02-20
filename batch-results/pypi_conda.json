@@ -1,0 +1,22 @@
+{
+  "ecosystem": "pypi",
+  "package": "conda",
+  "score": 90,
+  "riskLevel": "LOW",
+  "deductions": [
+    {
+      "reason": "Latest version is yanked: Pip installing conda leads to broken UX; please install using miniconda or miniforge instead. See https://github.com/conda/conda/issues/11715",
+      "points": 10,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "Continuum Analytics",
+    "Inc."
+  ],
+  "lastCommitDate": "2026-02-19T00:10:35Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2210,
+  "diagnosedAt": "2026-02-20T04:15:29.023Z"
+}

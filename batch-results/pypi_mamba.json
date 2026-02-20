@@ -1,6 +1,6 @@
 {
   "ecosystem": "pypi",
-  "package": "hatch",
+  "package": "mamba",
   "score": 97,
   "riskLevel": "LOW",
   "deductions": [
@@ -11,11 +11,10 @@
     }
   ],
   "maintainers": [
-    "Ofek Lev"
+    "Néstor Salceda"
   ],
-  "lastCommitDate": "2026-02-19T20:33:41Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
-  "executionTimeMs": 1562,
-  "diagnosedAt": "2026-02-20T04:15:13.623Z"
+  "executionTimeMs": 1592,
+  "diagnosedAt": "2026-02-20T04:15:30.615Z"
 }

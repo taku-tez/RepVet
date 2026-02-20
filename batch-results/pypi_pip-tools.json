@@ -1,0 +1,15 @@
+{
+  "ecosystem": "pypi",
+  "package": "pip-tools",
+  "score": 100,
+  "riskLevel": "LOW",
+  "deductions": [],
+  "maintainers": [
+    "Vincent Driessen"
+  ],
+  "lastCommitDate": "2026-02-16T18:10:06Z",
+  "hasOwnershipTransfer": false,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 1886,
+  "diagnosedAt": "2026-02-20T04:15:23.640Z"
+}

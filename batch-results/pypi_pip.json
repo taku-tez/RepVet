@@ -1,11 +1,11 @@
 {
   "ecosystem": "pypi",
-  "package": "setuptools",
+  "package": "pip",
   "score": 79,
   "riskLevel": "MEDIUM",
   "deductions": [
     {
-      "reason": "Author changed from \"Phillip J. Eby\" to \"Python Packaging Authority\"",
+      "reason": "Author changed from \"The Open Planning Project\" to \"The pip developers\"",
       "points": 8,
       "confidence": "low"
     },
@@ -15,24 +15,24 @@
       "confidence": "low"
     },
     {
-      "reason": "5 high severity vulnerability(ies) in history",
+      "reason": "4 high severity vulnerability(ies) in history",
       "points": 10,
       "confidence": "high"
     }
   ],
   "maintainers": [
-    "Python Packaging Authority"
+    "The pip developers"
   ],
-  "lastCommitDate": "2026-02-12T00:03:48Z",
+  "lastCommitDate": "2026-02-13T13:05:53Z",
   "hasOwnershipTransfer": true,
   "hasMalwareHistory": false,
   "vulnerabilityStats": {
-    "total": 7,
+    "total": 16,
     "critical": 0,
-    "high": 5,
+    "high": 4,
     "recent": 2,
     "hasUnfixed": false
   },
-  "executionTimeMs": 1191,
-  "diagnosedAt": "2026-02-20T04:15:08.335Z"
+  "executionTimeMs": 1454,
+  "diagnosedAt": "2026-02-20T04:15:21.754Z"
 }

@@ -1,0 +1,31 @@
+{
+  "ecosystem": "pypi",
+  "package": "pixi",
+  "score": 72,
+  "riskLevel": "MEDIUM",
+  "deductions": [
+    {
+      "reason": "Author changed from \"dazzler\" to \"azuline\"",
+      "points": 8,
+      "confidence": "low"
+    },
+    {
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 5,
+      "confidence": "high"
+    },
+    {
+      "reason": "Last commit over 3 years ago (5 years)",
+      "points": 15,
+      "confidence": "high"
+    }
+  ],
+  "maintainers": [
+    "azuline"
+  ],
+  "lastCommitDate": "2020-11-09T02:43:24Z",
+  "hasOwnershipTransfer": true,
+  "hasMalwareHistory": false,
+  "executionTimeMs": 2385,
+  "diagnosedAt": "2026-02-20T04:15:33.469Z"
+}

@@ -1,6 +1,6 @@
 {
   "ecosystem": "pypi",
-  "package": "requests",
+  "package": "certifi",
   "score": 87,
   "riskLevel": "LOW",
   "deductions": [
@@ -10,7 +10,7 @@
       "confidence": "low"
     },
     {
-      "reason": "1 high severity vulnerability(ies) in history",
+      "reason": "2 high severity vulnerability(ies) in history",
       "points": 10,
       "confidence": "high"
     }
@@ -18,16 +18,16 @@
   "maintainers": [
     "Kenneth Reitz"
   ],
-  "lastCommitDate": "2026-02-14T00:06:59Z",
+  "lastCommitDate": "2026-01-27T00:37:30Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
   "vulnerabilityStats": {
-    "total": 12,
+    "total": 6,
     "critical": 0,
-    "high": 1,
-    "recent": 1,
+    "high": 2,
+    "recent": 0,
     "hasUnfixed": false
   },
-  "executionTimeMs": 1401,
-  "diagnosedAt": "2026-02-20T04:15:36.745Z"
+  "executionTimeMs": 2350,
+  "diagnosedAt": "2026-02-20T04:15:39.095Z"
 }

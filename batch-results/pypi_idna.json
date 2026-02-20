@@ -1,12 +1,12 @@
 {
   "ecosystem": "pypi",
-  "package": "pipenv",
-  "score": 82,
+  "package": "idna",
+  "score": 87,
   "riskLevel": "LOW",
   "deductions": [
     {
-      "reason": "Author changed from \"Kenneth Reitz\" to \"Pipenv maintainer team\"",
-      "points": 8,
+      "reason": "Single maintainer (bus factor risk)",
+      "points": 3,
       "confidence": "low"
     },
     {
@@ -16,10 +16,10 @@
     }
   ],
   "maintainers": [
-    "Pipenv maintainer team"
+    "Kim Davies"
   ],
-  "lastCommitDate": "2026-02-16T10:57:06Z",
-  "hasOwnershipTransfer": true,
+  "lastCommitDate": "2025-10-20T21:41:13Z",
+  "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
   "vulnerabilityStats": {
     "total": 2,
@@ -28,6 +28,6 @@
     "recent": 0,
     "hasUnfixed": false
   },
-  "executionTimeMs": 1136,
-  "diagnosedAt": "2026-02-20T04:15:26.813Z"
+  "executionTimeMs": 959,
+  "diagnosedAt": "2026-02-20T04:15:40.054Z"
 }

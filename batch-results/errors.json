@@ -574,5 +574,11 @@
     "package": "django-migrations",
     "error": "Exit code 1: {\"error\":\"Error: Package not found: django-migrations (pypi)\"}\n",
     "timestamp": "2026-02-20T03:45:27.248Z"
+  },
+  {
+    "ecosystem": "pypi",
+    "package": "micromamba",
+    "error": "Exit code 1: {\"error\":\"Error: Package not found: micromamba (pypi)\"}\n",
+    "timestamp": "2026-02-20T04:15:31.084Z"
   }
 ]
