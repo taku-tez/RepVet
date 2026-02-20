@@ -1,5 +1,5 @@
 {
-  "currentIndex": 2340,
+  "currentIndex": 2360,
   "totalPackages": 4957,
   "results": [
     {
@@ -56487,6 +56487,445 @@
       },
       "executionTimeMs": 1039,
       "diagnosedAt": "2026-02-20T05:15:33.951Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "playwright",
+      "score": 89,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Author changed from \"Microsoft Corporation\" to \"Microsoft Corporation License-Expression: Apache-2.0\"",
+          "points": 8,
+          "confidence": "low"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Microsoft Corporation License-Expression: Apache-2.0"
+      ],
+      "lastCommitDate": "2026-02-11T12:58:02Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1698,
+      "diagnosedAt": "2026-02-20T05:30:08.218Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "splinter",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "CobraTeam"
+      ],
+      "lastCommitDate": "2025-08-16T15:08:24Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1381,
+      "diagnosedAt": "2026-02-20T05:30:10.049Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "robobrowser",
+      "score": 80,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 3 years ago (5 years)",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "Joshua Carp"
+      ],
+      "lastCommitDate": "2020-09-10T18:41:47Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1737,
+      "diagnosedAt": "2026-02-20T05:30:12.247Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "paramiko",
+      "score": 64,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Author changed from \"Robey Pointer\" to \"Jeff Forcier\"",
+          "points": 8,
+          "confidence": "low"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "1 critical vulnerability(ies) in history",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "3 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "Jeff Forcier"
+      ],
+      "lastCommitDate": "2026-02-16T02:04:13Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 9,
+        "critical": 1,
+        "high": 3,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1372,
+      "diagnosedAt": "2026-02-20T05:30:13.620Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "fabric",
+      "score": 89,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Author changed from \"Christian Vest Hansen\" to \"Jeff Forcier\"",
+          "points": 8,
+          "confidence": "low"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Jeff Forcier"
+      ],
+      "lastCommitDate": "2025-07-20T17:33:07Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 1,
+        "critical": 0,
+        "high": 0,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1481,
+      "diagnosedAt": "2026-02-20T05:30:15.101Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "ansible",
+      "score": 84,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Author changed from \"Michael DeHaan\" to \"Ansible, Inc.\"",
+          "points": 8,
+          "confidence": "low"
+        },
+        {
+          "reason": "9 critical vulnerability(ies) in history",
+          "points": 8,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Ansible",
+        "Inc."
+      ],
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 129,
+        "critical": 9,
+        "high": 26,
+        "recent": 2,
+        "hasUnfixed": true
+      },
+      "executionTimeMs": 4403,
+      "diagnosedAt": "2026-02-20T05:30:19.504Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "salt",
+      "score": 84,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "18 critical vulnerability(ies) in history",
+          "points": 8,
+          "confidence": "low"
+        },
+        {
+          "reason": "11 vulnerabilities in the past year",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "Thomas S Hatch"
+      ],
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 121,
+        "critical": 18,
+        "high": 32,
+        "recent": 11,
+        "hasUnfixed": true
+      },
+      "executionTimeMs": 5513,
+      "diagnosedAt": "2026-02-20T05:30:25.017Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "puppet",
+      "score": 80,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 3 years ago (5 years)",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "睿瞳深邃"
+      ],
+      "lastCommitDate": "2021-03-04T16:09:57Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1035,
+      "diagnosedAt": "2026-02-20T05:30:26.052Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "chef",
+      "score": 95,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "Simon Liedtke"
+      ],
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 685,
+      "diagnosedAt": "2026-02-20T05:30:26.737Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "docker",
+      "score": 92,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Author changed from \"Joffrey F\" to \"\"Docker Inc.\"\"",
+          "points": 8,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Unknown"
+      ],
+      "lastCommitDate": "2025-11-24T13:24:54Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1660,
+      "diagnosedAt": "2026-02-20T05:30:28.860Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "docker-compose",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "Docker",
+        "Inc."
+      ],
+      "lastCommitDate": "2026-02-13T09:03:05Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2057,
+      "diagnosedAt": "2026-02-20T05:30:30.917Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "podman",
+      "score": 92,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Author changed from \"Jhon Honce\" to \"Brent Baude, Urvashi Mohnani\"",
+          "points": 8,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Brent Baude",
+        "Urvashi Mohnani"
+      ],
+      "lastCommitDate": "2026-02-20T04:28:34Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 957,
+      "diagnosedAt": "2026-02-20T05:30:31.874Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "kubernetes",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Kubernetes"
+      ],
+      "lastCommitDate": "2026-02-20T02:29:38Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1332,
+      "diagnosedAt": "2026-02-20T05:30:33.207Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "helm",
+      "score": 95,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "AnaÃ«l Verrier"
+      ],
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1420,
+      "diagnosedAt": "2026-02-20T05:30:34.627Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "skaffold",
+      "score": 95,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "Christian Fernandez"
+      ],
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 705,
+      "diagnosedAt": "2026-02-20T05:30:35.332Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "tilt",
+      "score": 80,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        },
+        {
+          "reason": "Last commit over 3 years ago (5 years)",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "Elias Grünewald"
+      ],
+      "lastCommitDate": "2021-01-14T20:14:29Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1773,
+      "diagnosedAt": "2026-02-20T05:30:37.106Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "gitpython",
+      "score": 75,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "2 critical vulnerability(ies) in history",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "4 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "Sebastian Thiel",
+        "Michael Trier"
+      ],
+      "lastCommitDate": "2026-02-14T15:14:45Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 10,
+        "critical": 2,
+        "high": 4,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1825,
+      "diagnosedAt": "2026-02-20T05:30:38.932Z"
     }
   ],
   "errors": [
@@ -57077,6 +57516,24 @@
       "package": "supabase-py",
       "error": "Exit code 1: {\"error\":\"Error: Package not found: supabase-py (pypi)\"}\n",
       "timestamp": "2026-02-20T05:15:21.438Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "puppeteer",
+      "error": "Exit code 1: {\"error\":\"Error: Package not found: puppeteer (pypi)\"}\n",
+      "timestamp": "2026-02-20T05:30:08.668Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": " mechanicalsoup",
+      "error": "Exit code 1: {\"error\":\"Error: Package not found:  mechanicalsoup (pypi)\"}\n",
+      "timestamp": "2026-02-20T05:30:10.510Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "vagrant-python",
+      "error": "Exit code 1: {\"error\":\"Error: Package not found: vagrant-python (pypi)\"}\n",
+      "timestamp": "2026-02-20T05:30:27.200Z"
     }
   ],
   "startTime": "2026-02-19T12:29:21.598Z"

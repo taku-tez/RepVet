@@ -586,5 +586,23 @@
     "package": "supabase-py",
     "error": "Exit code 1: {\"error\":\"Error: Package not found: supabase-py (pypi)\"}\n",
     "timestamp": "2026-02-20T05:15:21.438Z"
+  },
+  {
+    "ecosystem": "pypi",
+    "package": "puppeteer",
+    "error": "Exit code 1: {\"error\":\"Error: Package not found: puppeteer (pypi)\"}\n",
+    "timestamp": "2026-02-20T05:30:08.668Z"
+  },
+  {
+    "ecosystem": "pypi",
+    "package": " mechanicalsoup",
+    "error": "Exit code 1: {\"error\":\"Error: Package not found:  mechanicalsoup (pypi)\"}\n",
+    "timestamp": "2026-02-20T05:30:10.510Z"
+  },
+  {
+    "ecosystem": "pypi",
+    "package": "vagrant-python",
+    "error": "Exit code 1: {\"error\":\"Error: Package not found: vagrant-python (pypi)\"}\n",
+    "timestamp": "2026-02-20T05:30:27.200Z"
   }
 ]
