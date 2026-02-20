@@ -1054,6 +1054,63 @@ async function runBatch(batchSize = 10) {
   };
 }
 
+// RepVet自身のコード品質チェックと自動修正
+async function checkAndFixRepVet() {
+  log('🔧 Checking RepVet code quality...');
+  
+  const fixes = [];
+  
+  try {
+    // Biomeでチェック
+    try {
+      execSync('npx biome check src/ --apply', { cwd: ROOT_DIR, stdio: 'pipe' });
+      fixes.push('biome');
+      log('  ✅ Biome fixes applied');
+    } catch (e) {
+      // 修正がない場合もエラーになるので無視
+    }
+    
+    // TypeScriptコンパイルチェック
+    try {
+      execSync('npx tsc --noEmit', { cwd: ROOT_DIR, stdio: 'pipe' });
+      log('  ✅ TypeScript check passed');
+    } catch (e) {
+      log(`  ⚠️ TypeScript errors: ${e.message}`);
+      fixes.push('typescript');
+    }
+    
+    // 変更があるか確認
+    const status = execSync('git status --porcelain', { 
+      cwd: ROOT_DIR, 
+      encoding: 'utf-8',
+      stdio: ['pipe', 'pipe', 'pipe']
+    });
+    
+    if (!status.trim()) {
+      log('  ℹ️ No fixes needed');
+      return null;
+    }
+    
+    // 修正ブランチ作成
+    const branchName = `fix/auto-fix-${Date.now()}`;
+    execSync(`git checkout -b ${branchName}`, { cwd: ROOT_DIR });
+    
+    // コミット
+    execSync('git add -A', { cwd: ROOT_DIR });
+    execSync(`git commit -m "fix: auto-fix code quality issues (${fixes.join(', ')})"`, { cwd: ROOT_DIR });
+    
+    // プッシュ
+    execSync(`git push origin ${branchName}`, { cwd: ROOT_DIR });
+    
+    log(`  ✅ Created fix branch: ${branchName}`);
+    return branchName;
+    
+  } catch (err) {
+    log(`  ❌ Fix failed: ${err.message}`);
+    return null;
+  }
+}
+
 // メイン実行
 async function main() {
   const batchSize = parseInt(process.env.BATCH_SIZE || '10', 10);
@@ -1062,6 +1119,13 @@ async function main() {
   log(`📋 Batch size: ${batchSize}`);
   
   const result = await runBatch(batchSize);
+  
+  // RepVet自身のコード品質チェック
+  const fixBranch = await checkAndFixRepVet();
+  if (fixBranch) {
+    log(`🔀 Fix branch created: ${fixBranch}`);
+    log('   Create PR: gh pr create --title "fix: auto-fix code quality" --body "Automated fixes"');
+  }
   
   if (result.done) {
     log('🎉 All batches completed!');
