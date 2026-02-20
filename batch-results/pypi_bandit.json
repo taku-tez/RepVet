@@ -1,11 +1,11 @@
 {
   "ecosystem": "pypi",
-  "package": "mypy",
+  "package": "bandit",
   "score": 89,
   "riskLevel": "LOW",
   "deductions": [
     {
-      "reason": "Author changed from \"zsp\" to \"Jukka Lehtosalo\"",
+      "reason": "Author changed from \"OpenStack Security Group\" to \"PyCQA\"",
       "points": 8,
       "confidence": "low"
     },
@@ -16,11 +16,11 @@
     }
   ],
   "maintainers": [
-    "Jukka Lehtosalo"
+    "PyCQA"
   ],
-  "lastCommitDate": "2026-02-19T23:33:55Z",
+  "lastCommitDate": "2026-02-16T16:02:40Z",
   "hasOwnershipTransfer": true,
   "hasMalwareHistory": false,
-  "executionTimeMs": 1201,
-  "diagnosedAt": "2026-02-20T04:00:15.843Z"
+  "executionTimeMs": 1834,
+  "diagnosedAt": "2026-02-20T04:00:26.537Z"
 }
