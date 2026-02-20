@@ -1,11 +1,11 @@
 {
   "ecosystem": "pypi",
-  "package": "unittest2",
+  "package": "nose2",
   "score": 89,
   "riskLevel": "LOW",
   "deductions": [
     {
-      "reason": "Author changed from \"Michael Foord\" to \"Robert Collins\"",
+      "reason": "Author changed from \"Jason Pellerin\" to \"Stephen Rosen\"",
       "points": 8,
       "confidence": "low"
     },
@@ -16,10 +16,11 @@
     }
   ],
   "maintainers": [
-    "Robert Collins"
+    "Stephen Rosen"
   ],
+  "lastCommitDate": "2026-02-19T22:54:40Z",
   "hasOwnershipTransfer": true,
   "hasMalwareHistory": false,
-  "executionTimeMs": 693,
-  "diagnosedAt": "2026-02-20T04:45:30.008Z"
+  "executionTimeMs": 1995,
+  "diagnosedAt": "2026-02-20T04:45:32.489Z"
 }

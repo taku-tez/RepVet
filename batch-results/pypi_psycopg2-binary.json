@@ -1,11 +1,11 @@
 {
   "ecosystem": "pypi",
-  "package": "psycopg2",
+  "package": "psycopg2-binary",
   "score": 92,
   "riskLevel": "LOW",
   "deductions": [
     {
-      "reason": "Author changed from \"Jeroen Ruigrok van der Werven\" to \"Daniele Varrazzo\"",
+      "reason": "Author changed from \"Federico Di Gregorio\" to \"Daniele Varrazzo\"",
       "points": 8,
       "confidence": "low"
     }
@@ -17,6 +17,6 @@
   "lastCommitDate": "2026-02-02T12:30:53Z",
   "hasOwnershipTransfer": true,
   "hasMalwareHistory": false,
-  "executionTimeMs": 2092,
-  "diagnosedAt": "2026-02-20T04:45:17.467Z"
+  "executionTimeMs": 1173,
+  "diagnosedAt": "2026-02-20T04:45:18.640Z"
 }

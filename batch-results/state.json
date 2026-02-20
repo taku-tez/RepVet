@@ -1,5 +1,5 @@
 {
-  "currentIndex": 2280,
+  "currentIndex": 2300,
   "totalPackages": 4957,
   "results": [
     {
@@ -54849,6 +54849,540 @@
       },
       "executionTimeMs": 2055,
       "diagnosedAt": "2026-02-20T04:31:05.818Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "tornado",
+      "score": 90,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "4 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "Facebook"
+      ],
+      "lastCommitDate": "2026-01-23T01:16:27Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 11,
+        "critical": 0,
+        "high": 4,
+        "recent": 1,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1681,
+      "diagnosedAt": "2026-02-20T04:45:11.287Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "bottle",
+      "score": 72,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "2 critical vulnerability(ies) in history",
+          "points": 15,
+          "confidence": "high"
+        },
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "Marcel Hellkamp"
+      ],
+      "lastCommitDate": "2026-02-17T10:24:31Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 8,
+        "critical": 2,
+        "high": 1,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1252,
+      "diagnosedAt": "2026-02-20T04:45:12.540Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "cherrypy",
+      "score": 90,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "2 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "CherryPy Team"
+      ],
+      "lastCommitDate": "2026-02-16T17:43:15Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 4,
+        "critical": 0,
+        "high": 2,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1812,
+      "diagnosedAt": "2026-02-20T04:45:14.353Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "sqlalchemy",
+      "score": 82,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "3 critical vulnerability(ies) in history",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "Mike Bayer"
+      ],
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 6,
+        "critical": 3,
+        "high": 0,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1021,
+      "diagnosedAt": "2026-02-20T04:45:15.375Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "psycopg2",
+      "score": 92,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Author changed from \"Jeroen Ruigrok van der Werven\" to \"Daniele Varrazzo\"",
+          "points": 8,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Daniele Varrazzo",
+        "Federico Di Gregorio"
+      ],
+      "lastCommitDate": "2026-02-02T12:30:53Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2092,
+      "diagnosedAt": "2026-02-20T04:45:17.467Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "psycopg2-binary",
+      "score": 92,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Author changed from \"Federico Di Gregorio\" to \"Daniele Varrazzo\"",
+          "points": 8,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Daniele Varrazzo",
+        "Federico Di Gregorio"
+      ],
+      "lastCommitDate": "2026-02-02T12:30:53Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1173,
+      "diagnosedAt": "2026-02-20T04:45:18.640Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "pymongo",
+      "score": 92,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Author changed from \"10gen\" to \"The MongoDB Python Team\"",
+          "points": 8,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "The MongoDB Python Team"
+      ],
+      "lastCommitDate": "2026-02-18T21:28:02Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 3,
+        "critical": 0,
+        "high": 0,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1912,
+      "diagnosedAt": "2026-02-20T04:45:20.552Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "redis",
+      "score": 82,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Author changed from \"Andy McCurdy\" to \"\"Redis Inc.\"\"",
+          "points": 8,
+          "confidence": "low"
+        },
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "\"Redis Inc.\""
+      ],
+      "lastCommitDate": "2026-02-19T16:38:43Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 4,
+        "critical": 0,
+        "high": 1,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1229,
+      "diagnosedAt": "2026-02-20T04:45:21.781Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "pymysql",
+      "score": 74,
+      "riskLevel": "MEDIUM",
+      "deductions": [
+        {
+          "reason": "Author changed from \"David Story\" to \"Inada Naoki\"",
+          "points": 8,
+          "confidence": "low"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "1 critical vulnerability(ies) in history",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "Inada Naoki"
+      ],
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 1,
+        "critical": 1,
+        "high": 0,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 575,
+      "diagnosedAt": "2026-02-20T04:45:22.356Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "celery",
+      "score": 87,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        },
+        {
+          "reason": "1 high severity vulnerability(ies) in history",
+          "points": 10,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "Ask Solem"
+      ],
+      "lastCommitDate": "2026-02-19T22:13:40Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "vulnerabilityStats": {
+        "total": 4,
+        "critical": 0,
+        "high": 1,
+        "recent": 0,
+        "hasUnfixed": false
+      },
+      "executionTimeMs": 1098,
+      "diagnosedAt": "2026-02-20T04:45:23.454Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "rq",
+      "score": 89,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Author changed from \"Vincent Driessen\" to \"Selwin Ong\"",
+          "points": 8,
+          "confidence": "low"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Selwin Ong"
+      ],
+      "lastCommitDate": "2026-02-14T12:28:04Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 2010,
+      "diagnosedAt": "2026-02-20T04:45:25.465Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "dramatiq",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Bogdan Popa"
+      ],
+      "lastCommitDate": "2026-02-17T12:18:14Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1302,
+      "diagnosedAt": "2026-02-20T04:45:26.767Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "huey",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Charles Leifer"
+      ],
+      "lastCommitDate": "2026-02-04T14:50:46Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1620,
+      "diagnosedAt": "2026-02-20T04:45:28.387Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "pytest",
+      "score": 100,
+      "riskLevel": "LOW",
+      "deductions": [],
+      "maintainers": [
+        "Holger Krekel",
+        "Bruno Oliveira",
+        "Ronny Pfannschmidt",
+        "Floris Bruynooghe",
+        "Brianna Laugher",
+        "Florian Bruhin",
+        "Others (See AUTHORS)"
+      ],
+      "lastCommitDate": "2026-02-18T18:17:31Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 927,
+      "diagnosedAt": "2026-02-20T04:45:29.315Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "unittest2",
+      "score": 89,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Author changed from \"Michael Foord\" to \"Robert Collins\"",
+          "points": 8,
+          "confidence": "low"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Robert Collins"
+      ],
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 693,
+      "diagnosedAt": "2026-02-20T04:45:30.008Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "nose",
+      "score": 95,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 5,
+          "confidence": "high"
+        }
+      ],
+      "maintainers": [
+        "Jason Pellerin"
+      ],
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 485,
+      "diagnosedAt": "2026-02-20T04:45:30.493Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "nose2",
+      "score": 89,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Author changed from \"Jason Pellerin\" to \"Stephen Rosen\"",
+          "points": 8,
+          "confidence": "low"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Stephen Rosen"
+      ],
+      "lastCommitDate": "2026-02-19T22:54:40Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1995,
+      "diagnosedAt": "2026-02-20T04:45:32.489Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "tox",
+      "score": 89,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Author changed from \"holger krekel\" to \"Anthony Sottile\"",
+          "points": 8,
+          "confidence": "low"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Bernát Gábor"
+      ],
+      "lastCommitDate": "2026-02-20T04:41:25Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 867,
+      "diagnosedAt": "2026-02-20T04:45:33.357Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "nox",
+      "score": 97,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Alethea Katherine Flowers"
+      ],
+      "lastCommitDate": "2026-02-16T15:58:45Z",
+      "hasOwnershipTransfer": false,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1110,
+      "diagnosedAt": "2026-02-20T04:45:34.467Z"
+    },
+    {
+      "ecosystem": "pypi",
+      "package": "sphinx",
+      "score": 89,
+      "riskLevel": "LOW",
+      "deductions": [
+        {
+          "reason": "Author changed from \"Georg Brandl\" to \"Adam Turner\"",
+          "points": 8,
+          "confidence": "low"
+        },
+        {
+          "reason": "Single maintainer (bus factor risk)",
+          "points": 3,
+          "confidence": "low"
+        }
+      ],
+      "maintainers": [
+        "Adam Turner"
+      ],
+      "lastCommitDate": "2026-02-20T04:43:32Z",
+      "hasOwnershipTransfer": true,
+      "hasMalwareHistory": false,
+      "executionTimeMs": 1381,
+      "diagnosedAt": "2026-02-20T04:45:35.848Z"
     }
   ],
   "errors": [

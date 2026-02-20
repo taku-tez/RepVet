@@ -1,28 +1,28 @@
 {
   "ecosystem": "pypi",
-  "package": "tornado",
+  "package": "cherrypy",
   "score": 90,
   "riskLevel": "LOW",
   "deductions": [
     {
-      "reason": "4 high severity vulnerability(ies) in history",
+      "reason": "2 high severity vulnerability(ies) in history",
       "points": 10,
       "confidence": "high"
     }
   ],
   "maintainers": [
-    "Facebook"
+    "CherryPy Team"
   ],
-  "lastCommitDate": "2026-01-23T01:16:27Z",
+  "lastCommitDate": "2026-02-16T17:43:15Z",
   "hasOwnershipTransfer": false,
   "hasMalwareHistory": false,
   "vulnerabilityStats": {
-    "total": 11,
+    "total": 4,
     "critical": 0,
-    "high": 4,
-    "recent": 1,
+    "high": 2,
+    "recent": 0,
     "hasUnfixed": false
   },
-  "executionTimeMs": 1681,
-  "diagnosedAt": "2026-02-20T04:45:11.287Z"
+  "executionTimeMs": 1812,
+  "diagnosedAt": "2026-02-20T04:45:14.353Z"
 }
