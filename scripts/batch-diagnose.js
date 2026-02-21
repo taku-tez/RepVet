@@ -1001,12 +1001,19 @@ async function runBatch(batchSize = 10) {
       log(`    ✅ Score: ${result.score}/100 (${result.riskLevel})`);
     } catch (err) {
       log(`    ❌ Error: ${err.message}`);
-      errors.push({
-        ecosystem,
-        package: pkg,
-        error: err.message,
-        timestamp: new Date().toISOString(),
-      });
+      
+      // Package not found の場合は自動スキップ
+      if (err.message.includes('Package not found')) {
+        log(`    ⚠️ Skipping non-existent package: ${pkg}`);
+        // エラーリストに追加せず、スキップ扱い
+      } else {
+        errors.push({
+          ecosystem,
+          package: pkg,
+          error: err.message,
+          timestamp: new Date().toISOString(),
+        });
+      }
     }
   }
 
